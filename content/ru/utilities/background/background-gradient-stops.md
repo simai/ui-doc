@@ -33,12 +33,16 @@ description: "Задаёт начальный, средний и конечны�
 | `from-{значение}` | `--sf-gradient--color-1: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning`, `info` |
 | `via-{значение}` | `--sf-gradient--color-2: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning`, `info` |
 | `to-{значение}` | `--sf-gradient--color-3: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning`, `info` |
-| `from-surface-0` | `--sf-gradient--color-1: var(--sf-surface-0)` | — |
-| `via-surface-0` | `--sf-gradient--color-2: var(--sf-surface-0)` | — |
-| `to-surface-{значение}` | `--sf-gradient--color-3: var(--sf-surface-{значение})` | `0`, `1`, `2` |
-| `from-surface-1` | `--sf-gradient--color-1: var(--sf-surface-1)` | — |
-| `via-surface-1` | `--sf-gradient--color-2: var(--sf-surface-1)` | — |
-| `from-surface-2` | `--sf-gradient--color-1: var(--sf-surface-2)` | — |
+| `from-surface-0` | `--sf-gradient--color-1: var(--sf-surface-page)` | — |
+| `via-surface-0` | `--sf-gradient--color-2: var(--sf-surface-page)` | — |
+| `to-surface-0` | `--sf-gradient--color-3: var(--sf-surface-page)` | — |
+| `from-surface-{значение}` | `--sf-gradient--color-1: var(--sf-surface-{значение})` | `page`, `area`, `2` |
+| `via-surface-page` | `--sf-gradient--color-2: var(--sf-surface-page)` | — |
+| `to-surface-{значение}` | `--sf-gradient--color-3: var(--sf-surface-{значение})` | `page`, `area`, `2` |
+| `from-surface-1` | `--sf-gradient--color-1: var(--sf-surface-area)` | — |
+| `via-surface-1` | `--sf-gradient--color-2: var(--sf-surface-area)` | — |
+| `to-surface-1` | `--sf-gradient--color-3: var(--sf-surface-area)` | — |
+| `via-surface-area` | `--sf-gradient--color-2: var(--sf-surface-area)` | — |
 | `via-surface-2` | `--sf-gradient--color-2: var(--sf-surface-2)` | — |
 | `from-on-surface` | `--sf-gradient--color-1: var(--sf-on-surface)` | — |
 | `via-on-surface` | `--sf-gradient--color-2: var(--sf-on-surface)` | — |
@@ -60,8 +64,8 @@ description: "Задаёт начальный, средний и конечны�
 | `--sf-transparent` | `rgba(255,255,255,0)` |
 | `--sf-current` | `currentColor` |
 | `--sf-inherit` | `inherit` |
-| `--sf-surface-0` | `var(--sf-surface-page)` |
-| `--sf-surface-1` | `var(--sf-surface-area)` |
+| `--sf-surface-page` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
+| `--sf-surface-area` | `light-dark(var(--sf-neutral-98), var(--sf-neutral-10))` |
 | `--sf-surface-2` | `light-dark(var(--sf-neutral-95), var(--sf-neutral-15))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 | `--sf-primary` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` |

@@ -1,48 +1,32 @@
 ---
-title: "Цвет тени"
-description: "Цвет тени"
+title: "Shadow colour"
+description: "Coloured shadows leave SIMAI Framework after 2027-01-01: a shadow carries no colour. What to use instead."
 ---
 
-# Цвет тени
+# Shadow colour
 
+The `shadow-{colour}` classes (`shadow-primary`, `-secondary`, `-tertiary`, `-error`,
+`-warning`, `-success`, `-on-surface`, with `hover:` and `active:`) leave SIMAI Framework
+after **2027-01-01** with no successor: in the shadow system a shadow carries no colour.
+A coloured glow reads as focus or as a status, so focus is shown by the
+[ring](/ru/utilities/outline/ring/) and a status by the element's own colour. Until that
+date the class still colours both shadows of its own element, the ones the
+[element shadow](/en/utilities/shadows/element-shadow/) classes draw. Do not add new uses.
 
-Данные модификаторы устанавливают цвет тени элемента через специальную переменную `--sf-shadow--color`. Это позволяет
-гибко настраивать визуальное восприятие тени. Используя состояние `hover`, можно изменять цвет тени при наведении
-курсора, подчеркивая интерактивность элемента.
+## Instead of a coloured shadow
 
-## Классы
-
-| Класс              | Значение                 |
-|:-------------------|:---------------------------------------------|
-| .shadow-primary    | `--sf-shadow--color`: var(`--sf-primary`)    |
-| .shadow-secondary  | `--sf-shadow--color`: var(`--sf-secondary`)  |
-| .shadow-tertiary   | `--sf-shadow--color`: var(`--sf-tertiary`)   |
-| .shadow-error      | `--sf-shadow--color`: var(`--sf-error`)      |
-| .shadow-warning    | `--sf-shadow--color`: var(`--sf-warning`)    |
-| .shadow-success    | `--sf-shadow--color`: var(`--sf-success`)    |
-| .shadow-on-surface | `--sf-shadow--color`: var(`--sf-on-surface`) |
-
-## Описание
-
-Данные модификаторы (`shadow-{color}`) устанавливают цвет тени через переменную `--sf-shadow--color`. Это позволяет
-гибко управлять визуальным видом тени элемента. При использовании состояния `hover` можно менять цвет тени при наведении
-на элемент, что подчеркивает его интерактивность.
-
-## Синтаксис
-
-- `shadow-{color}` — задать цвет тени.
-- `hover:shadow-{color}` — задать цвет тени при наведении.
-
-## Пример использования тени
+| You needed | Use |
+| :--- | :--- |
+| mark a selected card | the `primary-container` fill or a border in the role's colour |
+| show focus | the [ring](/ru/utilities/outline/ring/) |
+| show a status (error, success) | the element's own colour: fill, border, icon |
+| lift an accent button | the place shadow `shadow-raised`, no colour |
 
 ```html
-<!-- Элемент с тенью основного цвета -->
-<div class="shadow-primary shadow-3 p-4 radius-1/3">
-    Элемент с основной тенью
-</div>
-
-<!-- При наведении тень меняет цвет на “error” -->
-<button class="shadow-secondary hover:shadow-error shadow-2 p-2 radius-1/2">
-    Наведи на меня
-</button>
+<!-- before -->
+<div class="shadow-2 shadow-primary p-4">…</div>
+<!-- after -->
+<div class="shadow-overlay p-4">…</div>
 ```
+
+Journal record: `utility-c20-coloured-shadows`.

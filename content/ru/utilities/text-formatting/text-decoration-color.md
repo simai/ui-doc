@@ -41,12 +41,12 @@ description: "Окрашивает подчёркивание и другие л
 | `decoration-inherit` | `text-decoration-color: var(--sf-inherit)` | — |
 | `decoration-current` | `text-decoration-color: var(--sf-currentColor)` | — |
 | `decoration-transparent` | `text-decoration-color: var(--sf-transparent)` | — |
-| `decoration-primary` | `text-decoration-color: var(--sf-outline-primary)` | — |
-| `decoration-secondary` | `text-decoration-color: var(--sf-outline-secondary)` | — |
-| `decoration-tertiary` | `text-decoration-color: var(--sf-outline-tertiary)` | — |
-| `decoration-error` | `text-decoration-color: var(--sf-outline-error)` | — |
-| `decoration-warning` | `text-decoration-color: var(--sf-outline-warning)` | — |
-| `decoration-success` | `text-decoration-color: var(--sf-outline-success)` | — |
+| `decoration-primary` | `text-decoration-color: var(--sf-primary-outline)` | — |
+| `decoration-secondary` | `text-decoration-color: var(--sf-secondary-outline)` | — |
+| `decoration-tertiary` | `text-decoration-color: var(--sf-tertiary-outline)` | — |
+| `decoration-error` | `text-decoration-color: var(--sf-error-outline)` | — |
+| `decoration-warning` | `text-decoration-color: var(--sf-warning-outline)` | — |
+| `decoration-success` | `text-decoration-color: var(--sf-success-outline)` | — |
 | `decoration-info` | `text-decoration-color: var(--sf-info-outline)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:decoration-inherit`.
@@ -62,12 +62,12 @@ description: "Окрашивает подчёркивание и другие л
 | `--sf-inherit` | `inherit` |
 | `--sf-currentColor` | задаётся темой |
 | `--sf-transparent` | `rgba(255,255,255,0)` |
-| `--sf-outline-primary` | `var(--sf-primary-outline)` |
-| `--sf-outline-secondary` | `var(--sf-secondary-outline)` |
-| `--sf-outline-tertiary` | `var(--sf-tertiary-outline)` |
-| `--sf-outline-error` | `var(--sf-error-outline)` |
-| `--sf-outline-warning` | `var(--sf-warning-outline)` |
-| `--sf-outline-success` | `var(--sf-success-outline)` |
+| `--sf-primary-outline` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
+| `--sf-secondary-outline` | `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` |
+| `--sf-tertiary-outline` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
+| `--sf-error-outline` | `light-dark(var(--sf-error-50), var(--sf-error-60))` |
+| `--sf-warning-outline` | `light-dark(var(--sf-warning-50), var(--sf-warning-60))` |
+| `--sf-success-outline` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
 | `--sf-info-outline` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
 
 ## Применение

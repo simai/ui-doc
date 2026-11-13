@@ -6,7 +6,7 @@ profile: reference
 
 # Рисунок
 
-:badge[sf-figure]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-figure]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
 
 Рисунок показывает картинку, видео или иллюстрацию в заданной пропорции и
 подпись под ней. Берите его, когда изображению нужна подпись или ровная рамка

@@ -24,13 +24,13 @@ description: "Окрашивает дорожку полосы прокрутк�
 |:---|:---|:---|
 | `scroll-bg-transparent` | `--sf-scroll-bg-track: var(--sf-transparent)` | — |
 | `scroll-bg-current` | `--sf-scroll-bg-track: var(--sf-current)` | — |
-| `scroll-bg-surface` | `--sf-scroll-bg-track: var(--sf-surface-transparent-overlay)` | — |
-| `scroll-bg-primary` | `--sf-scroll-bg-track: var(--sf-primary-transparent-overlay)` | — |
-| `scroll-bg-secondary` | `--sf-scroll-bg-track: var(--sf-secondary-transparent-overlay)` | — |
-| `scroll-bg-tertiary` | `--sf-scroll-bg-track: var(--sf-tertiary-transparent-overlay)` | — |
-| `scroll-bg-error` | `--sf-scroll-bg-track: var(--sf-error-transparent-overlay)` | — |
-| `scroll-bg-warning` | `--sf-scroll-bg-track: var(--sf-warning-transparent-overlay)` | — |
-| `scroll-bg-success` | `--sf-scroll-bg-track: var(--sf-success-transparent-overlay)` | — |
+| `scroll-bg-surface` | `--sf-scroll-bg-track: var(--sf-surface-container-strong)` | — |
+| `scroll-bg-primary` | `--sf-scroll-bg-track: var(--sf-primary-container-strong)` | — |
+| `scroll-bg-secondary` | `--sf-scroll-bg-track: var(--sf-secondary-container-strong)` | — |
+| `scroll-bg-tertiary` | `--sf-scroll-bg-track: var(--sf-tertiary-container-strong)` | — |
+| `scroll-bg-error` | `--sf-scroll-bg-track: var(--sf-error-container-strong)` | — |
+| `scroll-bg-warning` | `--sf-scroll-bg-track: var(--sf-warning-container-strong)` | — |
+| `scroll-bg-success` | `--sf-scroll-bg-track: var(--sf-success-container-strong)` | — |
 | `scroll-bg-info` | `--sf-scroll-bg-track: var(--sf-info-container-strong)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
@@ -45,13 +45,13 @@ description: "Окрашивает дорожку полосы прокрутк�
 |:---|:---|
 | `--sf-transparent` | `rgba(255,255,255,0)` |
 | `--sf-current` | `currentColor` |
-| `--sf-surface-transparent-overlay` | `var(--sf-surface-container-strong)` |
-| `--sf-primary-transparent-overlay` | `var(--sf-primary-container-strong)` |
-| `--sf-secondary-transparent-overlay` | `var(--sf-secondary-container-strong)` |
-| `--sf-tertiary-transparent-overlay` | `var(--sf-tertiary-container-strong)` |
-| `--sf-error-transparent-overlay` | `var(--sf-error-container-strong)` |
-| `--sf-warning-transparent-overlay` | `var(--sf-warning-container-strong)` |
-| `--sf-success-transparent-overlay` | `var(--sf-success-container-strong)` |
+| `--sf-surface-container-strong` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
+| `--sf-primary-container-strong` | `light-dark(var(--sf-primary-50--alfa-24), var(--sf-primary-90--alfa-24))` |
+| `--sf-secondary-container-strong` | `light-dark(var(--sf-secondary-50--alfa-24), var(--sf-secondary-90--alfa-24))` |
+| `--sf-tertiary-container-strong` | `light-dark(var(--sf-tertiary-50--alfa-24), var(--sf-tertiary-90--alfa-24))` |
+| `--sf-error-container-strong` | `light-dark(var(--sf-error-50--alfa-24), var(--sf-error-90--alfa-24))` |
+| `--sf-warning-container-strong` | `light-dark(var(--sf-warning-50--alfa-24), var(--sf-warning-90--alfa-24))` |
+| `--sf-success-container-strong` | `light-dark(var(--sf-success-50--alfa-24), var(--sf-success-90--alfa-24))` |
 | `--sf-info-container-strong` | `light-dark(var(--sf-info-50--alfa-24), var(--sf-info-90--alfa-24))` |
 
 ## Применение

@@ -6,7 +6,7 @@ profile: reference
 
 # Полоса прокрутки
 
-:badge[sf-scrollbar]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-scrollbar]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
 
 Компонент оформляет прокрутку области ограниченной высоты или ширины: прячет
 системную полосу и рисует поверх содержимого тонкую полосу, которую можно

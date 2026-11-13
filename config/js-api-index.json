@@ -52,6 +52,11 @@
       "page": "/ru/guide/functions/actions/copy-text/",
       "label": "Копирование текста"
     },
+    "SF.copyFeedback": {
+      "text": "Отклик копирования для своей кнопки: галочка, «Скопировано» для диктора, подсказка при отказе.",
+      "page": "/ru/guide/functions/actions/copy-text/",
+      "label": "Копирование текста"
+    },
     "SF.codeCopy": {
       "text": "Код в тексте копируется по нажатию.",
       "page": "/ru/guide/functions/actions/code-copy/",

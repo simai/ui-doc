@@ -1,0 +1,26 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> —  подпись, значение и кнопка на ступени 1/2</span></figcaption>
+      <div class="flex-1 p-2 flex flex-col gap-1">
+        <div class="flex items-cross-center gap-1/2"><span class="text-1/2 color-on-surface-variant">Заказ</span><code class="text-1/2" id="ok-order">ORD-2026-0042</code><sf-button-copy size="1/2" target="#ok-order" label="Скопировать номер заказа"></sf-button-copy></div>
+        <div class="flex items-cross-center gap-1/2"><span class="text-1/2 color-on-surface-variant">Клиент</span><code class="text-1/2" id="ok-client">cl_8f2a91c4</code><sf-button-copy size="1/2" target="#ok-client" label="Скопировать ID клиента"></sf-button-copy></div>
+      </div>
+    </figure>
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> —  текст на ступени 1/2, кнопка на ступени 1</span></figcaption>
+      <div class="flex-1 p-2 flex flex-col gap-1">
+        <div class="flex items-cross-center gap-1/2"><span class="text-1/2 color-on-surface-variant">Заказ</span><code class="text-1/2" id="bad-order">ORD-2026-0042</code><sf-button-copy target="#bad-order" label="Скопировать номер заказа"></sf-button-copy></div>
+        <div class="flex items-cross-center gap-1/2"><span class="text-1/2 color-on-surface-variant">Клиент</span><code class="text-1/2" id="bad-client">cl_8f2a91c4</code><sf-button-copy target="#bad-client" label="Скопировать ID клиента"></sf-button-copy></div>
+      </div>
+    </figure>
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> —  ступень 1: текст и кнопка size="1"</span></figcaption>
+      <div class="flex-1 p-2 flex items-cross-center gap-1/2"><span class="color-on-surface-variant">Ключ</span><code id="ok-key">demo-key-51Hq7Lr9</code><sf-button-copy target="#ok-key" label="Скопировать ключ"></sf-button-copy></div>
+    </figure>
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> —  подпись мельче значения в той же строке</span></figcaption>
+      <div class="flex-1 p-2 flex items-cross-center gap-1/2"><span class="text-1/3 color-on-surface-variant">Ключ</span><code id="bad-key">demo-key-51Hq7Lr9</code><sf-button-copy target="#bad-key" label="Скопировать ключ"></sf-button-copy></div>
+    </figure>
+  </div>
+</div>

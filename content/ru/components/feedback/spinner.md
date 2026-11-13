@@ -6,7 +6,7 @@ profile: reference
 
 # Спиннер
 
-:badge[sf-loader]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-loader]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Спиннер показывает, что операция выполняется, когда процент завершения
 неизвестен. Если процент известен, берите
@@ -196,11 +196,11 @@ whenLoader(() => SF.Loader.ready('Spinner', (Spinner) => {
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
 | `--sf-spinner-color` | Дуга, точки или комета: текущий цвет текста, если не задано. | `currentColor` |
-| `--sf-spinner-track-color` | Кольцо под дугой. | `var(--sf-surface-container)` |
+| `--sf-spinner-track-color` | Кольцо под дугой — цвет и прозрачность вместе: своей прозрачности у кольца нет. | `color-mix(in srgb, currentColor 16%, transparent)` |
 | `--sf-spinner-size` | Рамка рисунка; по умолчанию — значок кнопки того же размера. | `var(--sf-text-height-1)`; зависит от размера |
 | `--sf-spinner-stroke-width` | Толщина кольца в единицах сетки значка из 24 единиц. | `2` |
 | `--sf-spinner-gap` | Расстояние между рисунком и его словами. | `var(--sf-space-1/2)`; зависит от размера |
-| `--sf-spinner-text-color` | Слова под рисунком. | `var(--sf-on-surface)` |
+| `--sf-spinner-text-color` | Подпись под рисунком: цвет текста места, цвет текста на заливке под спиннером. | `currentColor` |
 
 ```css
 .sf-loader-container {
@@ -235,7 +235,7 @@ whenLoader(() => SF.Loader.ready('Spinner', (Spinner) => {
 | `--sf-loader-svg-width` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-spinner-size, var(--sf-text-height-1))` | `width` |
 | `--sf-loader-text-gap` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-spinner-gap, var(--sf-space-1/2))` | `gap` |
 | `--sf-loader-text-size` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-text-size-1)` | `font-size` |
-| `--sf-loader-track-color` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-spinner-track-color, var(--sf-surface-container))` | `stroke` |
+| `--sf-loader-track-color` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-spinner-track-color, color-mix(in srgb, currentColor 16%, transparent))` | `stroke` |
 
 ## См. также
 

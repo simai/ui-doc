@@ -6,7 +6,7 @@ profile: reference
 
 # Пагинация
 
-:badge[sf-pagination]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-pagination]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
 
 Пагинация делит длинный список результатов на страницы, показывает текущую и
 даёт перейти к соседней или конкретной странице. Ставьте её сразу после
@@ -204,7 +204,7 @@ profile: reference
 | `--sf-pagination-total--font-size` | не задана; задают модификаторы, например `.sf-pagination.sf-pagination--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-pagination-total--gap` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-total`: `var(--sf-space-1/3)` | `gap` |
 | `--sf-pagination-total--line-height` | не задана; задают модификаторы, например `.sf-pagination.sf-pagination--size-1/2`: `var(--sf-text-height-1/2)` | `line-height` |
-| `--sf-page-number--background-color` | `var(--sf-pagination-page-background-color, var(--sf-surface-0))` | `background-color` |
+| `--sf-page-number--background-color` | `var(--sf-pagination-page-background-color, var(--sf-surface-page))` | `background-color` |
 | `--sf-page-number--border-bottom-width` | `var(--sf-px)` | `border-bottom-width`, `border-block-end-width` |
 | `--sf-page-number--border-color` | не задана; задают модификаторы, например `.sf-page-number:not(:disabled):not(.disabled):active`: `var(--sf-primary-active)` | `border-color` |
 | `--sf-page-number--border-end-end-radius` | не задана; задают модификаторы, например `.sf-page-number--square`: `var(--sf-pagination-page-radius, var(--sf-radius--ui))` | `border-end-end-radius` |

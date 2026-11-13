@@ -6,7 +6,7 @@ profile: reference
 
 # Аватары
 
-:badge[sf-avatar]{variant=tonal scheme=primary size=1/2} :badge[1.3.6]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-avatar]{variant=tonal scheme=primary size=1/2} :badge[1.3.8]{variant=outline scheme=on-surface size=1/2}
 
 Аватар помогает быстро узнать человека, организацию или системный объект по
 фотографии, инициалам или значку. Он представляет идентичность, а не
@@ -260,8 +260,8 @@ unread" и "new". В имени всегда точное число: при `99
 | `--sf-avatar-border-color` | Цвет рамки в покое; у наведения — свой. | `transparent` |
 | `--sf-avatar-border-width` | Ширина рамки со всех сторон. | `var(--sf-px)` |
 | `--sf-avatar-radius` | Скругление углов — одинаково для круглой и квадратной формы. | `var(--sf-radius-circle)`; зависит от вида |
-| `--sf-avatar-offline-background-color` | Цвет под точкой «не в сети»: фон места, где стоит аватар, чтобы сквозь точку не просвечивали ни фото, ни инициалы. | `var(--sf-surface-place)` |
-| `--sf-avatar-offline-overlay` | Слой поверх этого цвета: цвет отключённого. Задайте `none`, чтобы точка «не в сети» была ровно цвета `--sf-avatar-offline-background-color`. | `linear-gradient(var(--sf-on-surface-disabled) 0 0)` |
+| `--sf-avatar-offline-background-color` | Цвет точки «не в сети»: приглушённый цвет текста места (с 2026-11-11; раньше это был цвет места под цветом недоступного текста, контраст ниже 3:1) поверх ближайшего непрозрачного места (--sf-surface-place-ground), поэтому сквозь точку не видны ни фото, ни инициалы — и на мягком цветном месте тоже. | `var(--sf-on-surface-variant)` |
+| `--sf-avatar-offline-overlay` | Слой поверх этого цвета, по умолчанию его нет (до 2026-11-11 здесь был цвет недоступного текста). Страница может положить сюда картинку или градиент поверх точки. | `none` |
 
 ```css
 .sf-avatar {
@@ -306,8 +306,9 @@ unread" и "new". В имени всегда точное число: при `99
 | `--sf-avatar-label-group-text--line-height` | не задана; задают модификаторы, например `.sf-avatar-label-group.sf-avatar-label-group--size-2.sf-avatar-label-group--status-icon-company .sf-avatar-label-group-text`: `var(--sf-text-height-1)` | `line-height` |
 | `--sf-avatar-label-group-title--font-size` | не задана; задают модификаторы, например `.sf-avatar-label-group--size-1 .sf-avatar-label-group-title`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-avatar-label-group-title--line-height` | не задана; задают модификаторы, например `.sf-avatar-label-group--size-1 .sf-avatar-label-group-title`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-online-indicator--background-color` | не задана; задают модификаторы, например `.sf-online-indicator--offline`: `var(--sf-avatar-offline-background-color, var(--sf-surface-place))` | `background-color` |
+| `--sf-online-indicator--background-color` | не задана; задают модификаторы, например `.sf-online-indicator--offline`: `var(--sf-avatar-offline-background-color, var(--sf-on-surface-variant))` | `background-image` |
 | `--sf-online-indicator--height` | `var(--sf-b6)` | `height` |
+| `--sf-online-indicator--ring-fill` | `color-mix(in srgb, var(--sf-surface-place-fill) 100%, var(--sf-surface-underlay) 0%)` | `outline` |
 | `--sf-online-indicator--width` | `var(--sf-b6)` | `width` |
 
 ## См. также

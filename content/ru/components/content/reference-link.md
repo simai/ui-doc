@@ -6,7 +6,7 @@ profile: reference
 
 # Справочная ссылка
 
-:badge[sf-reference-link]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-reference-link]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
 
 Справочная ссылка показывает переход вместе с коротким пояснением: путём,
 источником, идентификатором записи. Вся карточка — область нажатия. Для

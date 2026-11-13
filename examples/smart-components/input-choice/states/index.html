@@ -1,10 +1,14 @@
 <div class="flex flex-col gap-4">
   <div class="flex flex-col gap-2">
-    <sf-input-choice label="Тип сайта" name="kind-invalid" required invalid error-message="Выберите тип сайта." items='[{"value": "site", "label": "Сайт", "caption": "Страницы, разделы и меню", "icon": "language"}, {"value": "shop", "label": "Магазин", "caption": "Каталог, корзина и заказы", "icon": "storefront", "badge": "Pro"}, {"value": "docs", "label": "Документация", "caption": "Статьи с поиском и оглавлением", "icon": "menu_book"}]'></sf-input-choice>
+    <sf-input-choice layout="list" label="Доставка" name="delivery-invalid" required invalid error-message="Выберите способ доставки.">
+      <script type="application/json" data-sf-settings>{"items": [{"value": "courier", "label": "Курьером", "caption": "Привезём в удобный интервал", "price": "350 ₽", "term": "2–3 дня"}, {"value": "pickup", "label": "Пункт выдачи", "caption": "Больше 2 000 пунктов по стране", "price": "150 ₽", "term": "1–2 дня", "badge": "Выгодно"}, {"value": "post", "label": "Почтой", "caption": "В любое отделение", "price": "250 ₽", "term": "5–7 дней"}]}</script>
+    </sf-input-choice>
     <span class="text-1/2 color-on-surface-variant">invalid</span>
   </div>
   <div class="flex flex-col gap-2">
-    <sf-input-choice label="Тип сайта" name="kind-disabled" value="site" disabled items='[{"value": "site", "label": "Сайт", "caption": "Страницы, разделы и меню", "icon": "language"}, {"value": "shop", "label": "Магазин", "caption": "Каталог, корзина и заказы", "icon": "storefront", "badge": "Pro"}, {"value": "docs", "label": "Документация", "caption": "Статьи с поиском и оглавлением", "icon": "menu_book"}]'></sf-input-choice>
+    <sf-input-choice label="Тариф" name="plan-disabled" value="start" disabled>
+      <script type="application/json" data-sf-settings>{"items": [{"value": "start", "label": "Старт", "caption": "Сайт-визитка и один редактор", "price": "0 ₽", "term": "в месяц"}, {"value": "business", "label": "Бизнес", "caption": "Каталог, заказы и пять редакторов", "price": "1 900 ₽", "term": "в месяц", "badge": "Чаще берут"}, {"value": "pro", "label": "Про", "caption": "Несколько сайтов и доступ по API", "price": "4 900 ₽", "term": "в месяц"}]}</script>
+    </sf-input-choice>
     <span class="text-1/2 color-on-surface-variant">disabled</span>
   </div>
 </div>

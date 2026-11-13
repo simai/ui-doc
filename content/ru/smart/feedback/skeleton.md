@@ -120,6 +120,7 @@ region.removeAttribute('aria-busy');
 | `count` | целое число | `1` | от 1; до 20 | — |
 | `animation` | строка | `pulse` | `pulse`, `wave`, `none` | — |
 | `kind` | строка | `text` | `text`, `circle`, `square`, `rounded` | Форма заглушки: строка текста, круг, квадрат или скруглённый блок. |
+| `type` | строка | пусто | пусто, `icon` | `type="icon"` отмечает заглушку на месте значка; сочетается с любым `kind`. Это не прежнее имя `kind`, поэтому срока удаления у него нет. |
 | `items` | строка | пусто | — | — |
 
 #### Общие для всех компонентов
@@ -147,12 +148,12 @@ region.removeAttribute('aria-busy');
 | | |
 |:---|:---|
 | Тег | `<sf-skeleton>`, контракт `smart.skeleton` версии `1.1.3` |
-| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
+| Поставка | выпуск Framework `ui-7fb26d395af2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; желательна подпись или `aria-label`. |
-| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/skeleton` |
-| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-skeleton` |
+| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/skeleton` |
+| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-skeleton` |
 
 ## См. также
 

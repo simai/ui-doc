@@ -9,7 +9,7 @@ const initialize = async () => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const data = new FormData(form);
-    docara.example.log('submit', {kind: data.getAll('kind'), targets: data.getAll('targets')});
+    docara.example.log('submit', {delivery: data.getAll('delivery'), targets: data.getAll('targets')});
   });
   form.addEventListener('reset', () => docara.example.log('reset', 'значения вернулись к атрибуту value'));
 };

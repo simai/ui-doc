@@ -6,7 +6,7 @@ profile: reference
 
 # Подсветка кода
 
-:badge[sf-highlight]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-highlight]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
 
 Подсветка кода раскрашивает синтаксис в блоках `pre code` и оформляет их
 поверхностью с панелью: название языка и кнопка копирования. Берите её для

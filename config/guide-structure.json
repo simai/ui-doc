@@ -365,6 +365,11 @@
      "slug": "vertical-sizing",
      "title": "Значения вертикальных размеров",
      "order": 25
+    },
+    {
+     "slug": "horizontal-spacing",
+     "title": "Горизонтальные отступы",
+     "order": 47
     }
    ]
   },

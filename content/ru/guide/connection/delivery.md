@@ -41,18 +41,18 @@ Loader загружает по умолчанию, и читаемая для о
 Выпуск — один коммит сборки в `ui`. Его идентификатор составлен из первых 12
 знаков этого коммита:
 
-| Что | Значение для выпуска `ui-2bd5a3ab478a` |
+| Что | Значение для выпуска `ui-7fb26d395af2` |
 |:---|:---|
-| Идентификатор выпуска | `ui-2bd5a3ab478a` |
-| Полный коммит `ui` (своя копия поставки, закрепление проекта) | `2bd5a3ab478a46fcee24d2460e7792135b0bb864` |
-| Версия пакета npm `@simai-studio/ui` (адрес CDN) | `5.20261110.1541` |
-| Коммит исходников `ui-source` (`framework.lock.json` пакета) | `d25a01f9989df2ec920364a23ed76d494d91844c` |
+| Идентификатор выпуска | `ui-7fb26d395af2` |
+| Полный коммит `ui` (своя копия поставки, закрепление проекта) | `7fb26d395af28dfcaac2a5df9de254b3067dc4ae` |
+| Версия пакета npm `@simai-studio/ui` (адрес CDN) | `5.20261112.1807` |
+| Коммит исходников `ui-source` (`framework.lock.json` пакета) | `8c13bf45aecaae2c31188b729ef4765fc91bffae` |
 | Коммит сборщика `ui-builder` | `16e9a81c1f2838f7cfeebbbd19654016743c9672` |
-| Запись о выпуске | `contracts/releases/ui-2bd5a3ab478a.lock.json` в репозитории `ui`, добавлена коммитом `c4d7d46f481d15af1601ba1c937863d933ebde83` |
-| Пакет продукта `pro`, собранный для этого выпуска | Исходник — `simai/ui-pro`, коммит `dc13c0f724009847add06c25bf98a6c033c037db` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)) |
+| Запись о выпуске | `contracts/releases/ui-7fb26d395af2.lock.json` в репозитории `ui`, добавлена коммитом `4c012852f8d85530442ec813e4319905c3af1afe` |
+| Пакет продукта `pro`, собранный для этого выпуска | Исходник — `simai/ui-pro`, коммит `db490626ba74caeed832352c7bc005410ca825e2` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)) |
 
 **Идентификатор выпуска — не тег git.** Тегов у выпусков нет (в записи о
-выпуске поле `tag` равно `null`), поэтому адрес вида `simai/ui@ui-2bd5a3ab478a`
+выпуске поле `tag` равно `null`), поэтому адрес вида `simai/ui@ui-7fb26d395af2`
 не существует. Своя копия поставки берётся по полному коммиту, адрес CDN —
 по версии пакета npm этого выпуска (см. [Пакет npm](#пакет-npm)).
 
@@ -95,9 +95,9 @@ git log --diff-filter=A --format='%cs %s' -- 'contracts/releases/ui-*.lock.json'
 `simai/ui` по полному коммиту выпуска и сверяют с записью о выпуске:
 
 ```bash
-git archive --format=tar 2bd5a3ab478a46fcee24d2460e7792135b0bb864 distr | shasum -a 256
+git archive --format=tar 7fb26d395af28dfcaac2a5df9de254b3067dc4ae distr | shasum -a 256
 # равно runtime_sources.core.archive_sha256
-git rev-parse 2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr
+git rev-parse 7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr
 # равно runtime_sources.core.runtime_tree
 ```
 
@@ -117,10 +117,10 @@ git rev-parse 2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr
 Framework подключают из этого пакета: jsDelivr и unpkg отдают любой файл
 пакета по адресу с его версией.
 
-| CDN | Адрес папки `distr/` выпуска `ui-2bd5a3ab478a` |
+| CDN | Адрес папки `distr/` выпуска `ui-7fb26d395af2` |
 |:---|:---|
-| jsDelivr | `https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261110.1541/distr/` |
-| unpkg | `https://unpkg.com/@simai-studio/ui@5.20261110.1541/distr/` |
+| jsDelivr | `https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261112.1807/distr/` |
+| unpkg | `https://unpkg.com/@simai-studio/ui@5.20261112.1807/distr/` |
 
 Адрес папки становится значением `window.sfPath`, а стиль и скрипт ядра
 лежат внутри неё: `core/css/core.css` и `core/js/core.js` (см. [Порядок подключения](/ru/guide/connection/project-setup/#порядок-подключения)).
@@ -133,8 +133,8 @@ Framework подключают из этого пакета: jsDelivr и unpkg �
 файла `package.json` пакета:
 
 ```bash
-npm view @simai-studio/ui@5.20261110.1541 simai
-# { release: 'ui-2bd5a3ab478a', commit: '2bd5a3ab478a46fcee24d2460e7792135b0bb864' }
+npm view @simai-studio/ui@5.20261112.1807 simai
+# { release: 'ui-7fb26d395af2', commit: '7fb26d395af28dfcaac2a5df9de254b3067dc4ae' }
 ```
 
 **Что в пакете.** Каталог `distr/` выпуска с двумя отличиями от репозитория

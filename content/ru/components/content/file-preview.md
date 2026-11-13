@@ -6,7 +6,7 @@ profile: reference
 
 # Предпросмотр файла
 
-:badge[sf-file-preview]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-preview]{variant=tonal scheme=primary size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
 
 Предпросмотр показывает выбранный или прикреплённый файл одной строкой:
 иконку типа или миниатюру, имя, размер и действия с файлом. Берите его для

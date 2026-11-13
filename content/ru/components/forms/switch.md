@@ -6,7 +6,7 @@ profile: reference
 
 # Переключатель
 
-:badge[sf-switch]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-switch]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
 
 Переключатель включает или выключает настройку сразу после нажатия. Если
 значение уходит вместе с формой после подтверждения, берите

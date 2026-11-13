@@ -5,7 +5,7 @@ description: "Запускает действие кнопкой с подпис
 
 # Кнопки
 
-:badge[sf-button]{variant=tonal scheme=primary size=1/2} :badge[1.12.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button]{variant=tonal scheme=primary size=1/2} :badge[1.13.0]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка запускает действие: сохранить, отправить, открыть окно. Вид, цвет,
 размер, иконки и индикатор загрузки задаются атрибутами. Берите её там, где
@@ -193,6 +193,19 @@ save.addEventListener('sf-button-press', async () => {
 
 `square` убирает скругление, `rounded` делает края полностью круглыми. Без
 атрибута кнопка скруглена, как все элементы управления.
+
+### Во всю ширину
+
+`full-width` • по умолчанию нет • [справочник](#атрибуты)
+
+Кнопка занимает всю ширину контейнера, а подпись и значок стоят посередине.
+Берите её в узкой колонке: форма входа, шторка или карточка на телефоне,
+где кнопки идут друг под другом.
+
+:::example {id="smart-components/buttons/full-width" label="Во всю ширину колонки" preview=inline}
+:::
+
+Высота от этого не меняется. Без атрибута кнопка шириной по своей подписи.
 
 ### Иконки
 
@@ -535,14 +548,14 @@ menuButton.expanded = true; // aria-expanded="true" на кнопке внутр
 
 | | |
 |:---|:---|
-| Тег | `<sf-button>`, контракт `smart.button` версии `1.12.1` |
-| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
+| Тег | `<sf-button>`, контракт `smart.button` версии `1.13.0` |
+| Поставка | выпуск Framework `ui-7fb26d395af2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
 | [Документ макета](/ru/guide/layouts/building/smart-component/#декларативный-контракт) | узел `smart.button`; свойства — атрибуты из таблицы выше, кроме `root-class`, `root-style`, `cycle` |
-| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/button` |
-| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-button` |
+| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/button` |
+| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-button` |
 
 ### Для разработчика
 

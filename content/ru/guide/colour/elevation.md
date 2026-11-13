@@ -74,8 +74,10 @@ Framework таких мест четыре, и у каждого — своя т
 Утилиты ставят тень места одним классом:
 [`shadow-flat`, `shadow-raised`, `shadow-overlay`, `shadow-modal`](/ru/utilities/shadows/element-shadow/)
 и те же имена у [падающей тени](/ru/utilities/shadows/drop-shadow/).
-[`elevation-N`](/ru/utilities/shadows/elevation/) ставит тень вместе с
-поверхностью и приглушённым текстом на ней.
+Фон места ставит класс [`bg-surface-card`, `bg-surface-popup`, `bg-surface-popup-nested`](/ru/utilities/background/background-color/)
+— вместе с приглушённым текстом на нём; пишите его рядом с тенью:
+`bg-surface-popup shadow-overlay`. Прежние классы
+[`elevation-N`](/ru/utilities/shadows/elevation/) работают до 2027-01-01.
 
 В своих стилях берите тень и поверхность одного места вместе:
 
@@ -133,5 +135,5 @@ Framework таких мест четыре, и у каждого — своя т
 - [Поверхности и содержимое на них](/ru/guide/colour/colour-roles/#поверхности-и-содержимое-на-них) — роли поверхности;
 - [Контраст нейтральных ролей](/ru/guide/colour/contrast/#контраст-нейтральных-ролей) — контраст приглушённого текста на поднятых поверхностях;
 - [Высота над страницей](/ru/guide/size-and-type/borders-and-radii/#высота-над-страницей) — какая ступень для какого элемента;
-- [Тень элемента](/ru/utilities/shadows/element-shadow/) и [Высота](/ru/utilities/shadows/elevation/) — утилиты в каталоге;
+- [Тень элемента](/ru/utilities/shadows/element-shadow/) и [Цвет фона](/ru/utilities/background/background-color/) — утилиты в каталоге; прежние классы — [Высота](/ru/utilities/shadows/elevation/);
 - [Своя тема проекта](/ru/guide/colour/themes/#своя-тема-проекта) — перенастройка теней в теме проекта.

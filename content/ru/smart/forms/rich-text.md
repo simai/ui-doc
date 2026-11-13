@@ -5,7 +5,7 @@ description: "Даёт написать текст с заголовками, с
 
 # Форматированный текст
 
-:badge[sf-input-rich]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-rich]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
 
 Форматированный текст — поле формы для текста с оформлением: абзацы, заголовки
 второго–четвёртого уровня, полужирный, курсив, ссылки, списки и цитаты, с
@@ -191,7 +191,7 @@ HTML уйдёт с формой.
 | `invalid` | да/нет | нет | — | Решение страницы: вид ошибки и aria-invalid, под полем — error-message. |
 | `error-message` | строка | пусто | — | Показывается вместо подсказки, пока поле с ошибкой. |
 | `value` | строка | пусто | — | HTML из набора p, h2, h3, h4, strong, em, a[href], ul, ol, li, blockquote, br; href только https:, mailto:, tel: или путь на сайте. Очищается при задании и при правке; пустая строка, когда текста нет. |
-| `aria-label` | строка | пусто | — | Название поля для экранного диктора, если видимой подписи нет. |
+| `aria-label` | строка | пусто | — | Доступное имя поля без видимой подписи; оно называет область ввода. Видимая подпись важнее. |
 
 #### Общие для всех компонентов
 
@@ -224,13 +224,13 @@ HTML уйдёт с формой.
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-rich>`, контракт `smart.input-rich` версии `1.2.0` |
-| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
+| Тег | `<sf-input-rich>`, контракт `smart.input-rich` версии `1.3.2` |
+| Поставка | выпуск Framework `ui-7fb26d395af2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как текстовое поле; нужна подпись или `aria-label`; с клавиатуры: `Tab` ведёт на панель кнопок (одна остановка), затем в текст, а из текста — дальше из поля; `←`, `→`, `Home` и `End` переходят между кнопками панели; `Ctrl/Cmd+B` и `Ctrl/Cmd+I` включают и выключают полужирный и курсив, `Ctrl/Cmd+K` открывает поле ссылки; `Ctrl/Cmd+Z` отменяет, `Ctrl/Cmd+Shift+Z` и `Ctrl/Cmd+Y` повторяют; `Enter` в поле ссылки применяет адрес, `Esc` закрывает поле. |
-| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/input-rich` |
-| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-input-rich` |
+| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/input-rich` |
+| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-input-rich` |
 
 ## См. также
 

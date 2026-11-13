@@ -6,7 +6,7 @@ profile: reference
 
 # Группа кнопок
 
-:badge[sf-button-group]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button-group]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Группа объединяет несколько связанных кнопок в один компактный элемент: соседние
 границы сливаются, внешние углы сохраняют радиус кнопок. Берите её для близких
@@ -117,8 +117,8 @@ whenLoader(() => SF.Loader.ready('ButtonGroup', () => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-button-group` |
-| Части | `sf-button-group-count`, `sf-button-group-icon-only`, `sf-button-group-label--hidden`, `sf-button-group-plate`, `sf-button-group-segment` |
-| Модификаторы | `sf-button-group--backdrop-color`, `sf-button-group--backdrop-media`, `sf-button-group--full-width`, `sf-button-group--on-surface`, `sf-button-group--plate-raised`, `sf-button-group--primary`, `sf-button-group--radius-default`, `sf-button-group--radius-rounded`, `sf-button-group--radius-square`, `sf-button-group--secondary`, `sf-button-group--segmented` |
+| Части | `sf-button-group-count`, `sf-button-group-icon-only`, `sf-button-group-label--hidden`, `sf-button-group-narrow`, `sf-button-group-plate`, `sf-button-group-segment` |
+| Модификаторы | `sf-button-group--backdrop-color`, `sf-button-group--backdrop-media`, `sf-button-group--folded`, `sf-button-group--full-width`, `sf-button-group--on-surface`, `sf-button-group--plate-raised`, `sf-button-group--primary`, `sf-button-group--radius-default`, `sf-button-group--radius-rounded`, `sf-button-group--radius-square`, `sf-button-group--secondary`, `sf-button-group--segmented` |
 | Размеры | `sf-button-group--size-1/2`, `sf-button-group--size-1/3`, `sf-button-group--size-2`, `sf-button-group--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -134,7 +134,7 @@ whenLoader(() => SF.Loader.ready('ButtonGroup', () => {
 | `--sf-button-group-background-color` | Заливка дорожки сегментированного вида в спокойном состоянии. | `var(--sf-surface-container)`; зависит от вида |
 | `--sf-button-group-padding` | Внутренний отступ дорожки сегментированного вида со всех сторон, он же промежуток между сегментами; скругление плашки остаётся концентричным. | `var(--sf-a4)`; зависит от вида, размера |
 | `--sf-button-group-radius` | Скругление сегмента и плашки под выбранным — элемента размером с кнопку; дорожка получает его плюс отступ, поэтому углы остаются концентричными. Атрибут `radius`, если задан, важнее. | `var(--sf-button-radius, var(--sf-radius--ui))`; зависит от вида, размера |
-| `--sf-button-group-color` | Цвет подписи и иконки невыбранного сегмента в спокойном состоянии; наведение, нажатие и недоступность сохраняют свои цвета. | `var(--sf-on-surface-container--variant)`; зависит от вида |
+| `--sf-button-group-color` | Цвет подписи и иконки невыбранного сегмента в спокойном состоянии; наведение, нажатие и недоступность сохраняют свои цвета. | `var(--sf-on-surface-container-variant)`; зависит от вида |
 | `--sf-button-group-plate-background-color` | Заливка плашки под выбранным сегментом; недоступность сохраняет свою. | `var(--sf-primary)`; зависит от вида, схемы |
 | `--sf-button-group-plate-color` | Цвет подписи, иконки и числа на плашке выбранного сегмента. | `var(--sf-on-primary)`; зависит от вида, схемы |
 | `--sf-button-group-count-color` | Цвет числа в невыбранном сегменте; выбранный берёт цвет содержимого плашки. | `currentColor`; зависит от вида |

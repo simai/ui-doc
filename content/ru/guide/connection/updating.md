@@ -70,8 +70,8 @@ JavaScript и TypeScript, CSS и SCSS, Markdown, JSON. Инструмент и �
 на который проект переходит: `git checkout <build_inputs.source.commit>`. Более
 новый журнал может назвать каноническое имя, которого в целевом выпуске ещё
 нет, и `--apply` записал бы в проект имя, которое этот выпуск не знает. Для
-выпуска `ui-2bd5a3ab478a` это ревизия
-`d25a01f9989df2ec920364a23ed76d494d91844c`.
+выпуска `ui-7fb26d395af2` это ревизия
+`8c13bf45aecaae2c31188b729ef4765fc91bffae`.
 
 Инструменту нужен только Node.js: зависимостей у него нет, устанавливать
 ничего не нужно.
@@ -169,7 +169,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
   `sf-property-view` и `sf-admin-menu`; запись журнала —
   `component-larena-package-move`. В поставке `ui` их нет; на странице они
   работают, только если она объявила пакет `pro`, например
-  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/dc13c0f724009847add06c25bf98a6c033c037db/smart'}`
+  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/db490626ba74caeed832352c7bc005410ca825e2/smart'}`
   (путь — по правилу из [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), и
   подключила его сборку, квитанция которой называет выпуск Framework на
   странице. Проект без Larena берёт сборку из выпуска `simai/ui-pro` (см. [Готовая сборка пакета `pro`](/ru/guide/introduction/structure/#готовая-сборка-пакета-pro)).
@@ -281,7 +281,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
 
 ## Новые имена тегов
 
-С выпуска `ui-2bd5a3ab478a` (`@simai-studio/ui` 5.20261110.1541) часть
+С выпуска `ui-7fb26d395af2` (`@simai-studio/ui` 5.20261112.1807) часть
 смарт-компонентов называется по-новому: сначала семейство, затем уточнение
 (`sf-input-date`, а не `sf-datepicker`). Прежний тег работает до 2027-01-01:
 Loader определяет его как псевдоним нового, поэтому страницы на прежних
@@ -333,9 +333,10 @@ Framework (см. [Подтверждение изменения](/ru/pro/admin/c
 Прежнее имя работает до 2027-01-01 и показывает тень своего места, поэтому
 страницы на прежних именах не ломаются; там, где тень места отличается от
 прежнего уровня, она выглядит по-новому. Записи журнала —
-`token-c20-shadow-places`, `utility-c20-shadow-places` и
-`utility-c20-coloured-shadows`. Переименования — механическая замена,
-`sf-upgrade` переписывает их сам; цветные тени — ручная работа (см. ниже).
+`token-c20-shadow-places`, `utility-c20-shadow-places`,
+`utility-c20-elevation-former` и `utility-c20-coloured-shadows`.
+Переименования — механическая замена, `sf-upgrade` переписывает их сам; классы
+высоты и цветные тени — ручная работа (см. ниже).
 
 Классы:
 
@@ -351,9 +352,16 @@ Framework (см. [Подтверждение изменения](/ru/pro/admin/c
 | `drop-shadow-4`, `drop-shadow-5` | `drop-shadow-modal` |
 
 С префиксом `hover:` — так же (`hover:shadow-1` → `hover:shadow-raised`).
-Классы `elevation-0` … `elevation-5` остаются: каждый берёт поверхность своей
-ступени и тень своего места (1 — приподнятое, 2 и 3 — всплывающее, 4 и 5 —
-окно).
+Классы `elevation-0` … `elevation-5` тоже прежние имена (до 2027-01-01): каждый
+становится парой — фоном своего места и его тенью. `sf-upgrade` их находит, но
+не переписывает: вместо одного класса — два.
+
+| Прежний класс | Что писать |
+|:---|:---|
+| `elevation-0` | `bg-surface-page shadow-flat` |
+| `elevation-1` | `bg-surface-card shadow-raised` |
+| `elevation-2`, `elevation-3` | `bg-surface-popup shadow-overlay` |
+| `elevation-4`, `elevation-5` | `bg-surface-popup-nested shadow-modal` |
 
 Переменные:
 
@@ -579,6 +587,14 @@ Framework (см. [Подтверждение изменения](/ru/pro/admin/c
 | `--sf-tone-violet-container` | `--sf-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
 | `--sf-on-tone-violet-container` | `--sf-on-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
 | `--sf-on-surface-muted` | `--sf-on-surface-disabled` | 2027-01-01 | `token-c43-muted-is-disabled` |
+| `--sf-download-file-background-color` | `--sf-file-download-background-color` | 2027-01-01 | `token-file-download-variable-names` |
+| `--sf-download-file-border-color` | `--sf-file-download-border-color` | 2027-01-01 | `token-file-download-variable-names` |
+| `--sf-download-file-radius` | `--sf-file-download-radius` | 2027-01-01 | `token-file-download-variable-names` |
+| `--sf-download-file-padding` | `--sf-file-download-padding` | 2027-01-01 | `token-file-download-variable-names` |
+| `--sf-download-file-gap` | `--sf-file-download-gap` | 2027-01-01 | `token-file-download-variable-names` |
+| `--sf-download-file-icon-size` | `--sf-file-download-icon-size` | 2027-01-01 | `token-file-download-variable-names` |
+| `--sf-download-file-icon-color` | `--sf-file-download-icon-color` | 2027-01-01 | `token-file-download-variable-names` |
+| `--sf-spinner-track-color` | `--sf-spinner-track-color` | 2027-01-01 | `token-spinner-track-carries-alpha` |
 
 ## Связь с другими частями
 

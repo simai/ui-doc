@@ -198,7 +198,7 @@ Framework не использует, не проходит контракт `alp
   <span class="sf-doc-status-tones"><span class="sf-doc-status-swatch" style="background: var(--sf-success)" title="--sf-success"></span><span class="sf-doc-status-swatch" style="background: var(--sf-green-40)" title="--sf-green-40, светлая тема"></span><span class="sf-doc-status-swatch" style="background: var(--sf-green-80)" title="--sf-green-80, тёмная тема"></span><span class="sf-doc-status-chip" style="background: var(--sf-success-container); color: var(--sf-on-success-container)">Успех</span></span>
 
   <code>info</code>
-  <span><code>blue</code><br><span class="sf-doc-status-note"><code>sky</code> — в следующем выпуске</span></span>
+  <code>blue</code>
   <span class="sf-doc-status-tones"><span class="sf-doc-status-swatch" style="background: var(--sf-info)" title="--sf-info"></span><span class="sf-doc-status-swatch" style="background: var(--sf-blue-40)" title="--sf-blue-40, светлая тема"></span><span class="sf-doc-status-swatch" style="background: var(--sf-blue-80)" title="--sf-blue-80, тёмная тема"></span><span class="sf-doc-status-chip" style="background: var(--sf-info-container); color: var(--sf-on-info-container)">Информация</span></span>
 </div>
 ```
@@ -244,7 +244,7 @@ Framework не использует, не проходит контракт `alp
 
 Первый образец в строке — сама роль, второй и третий — тона 40 и 80 оттенка:
 в светлой теме роль совпадает со вторым, в тёмной — с третьим. Информация
-сейчас берёт `blue`; в следующем выпуске Framework она переходит на `sky`.
+берёт `blue`.
 
 Примитивы в стилях интерфейса не пишут. Компоненту, которому нужен свой цвет,
 дают имя оттенка: класс `sf-hue-{имя}` (любой статический оттенок, а также

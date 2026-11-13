@@ -6,7 +6,7 @@ profile: reference
 
 # Копирование
 
-:badge[sf-clipboard]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-clipboard]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка копирования кладёт в буфер обмена готовое значение или текст другого
 элемента: команду, ключ, код заказа. Ставьте её рядом с текстом, который
@@ -154,10 +154,20 @@ whenLoader(() => SF.Loader.ready('Copy', (Copy) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-clipboard` |
-| Части | `sf-clipboard-1`, `sf-clipboard-2`, `sf-clipboard-3`, `sf-clipboard-fallback`, `sf-clipboard-status`, `sf-clipboard-surface` |
+| Части | `sf-clipboard-1`, `sf-clipboard-2`, `sf-clipboard-3`, `sf-clipboard-fallback`, `sf-clipboard-holder`, `sf-clipboard-name`, `sf-clipboard-result`, `sf-clipboard-status`, `sf-clipboard-surface` |
 | Модификаторы | `sf-clipboard--inline`, `sf-clipboard--overlay` |
+| Размеры | `sf-clipboard--size-1`, `sf-clipboard--size-1/3`, `sf-clipboard--size-2` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид смарт-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-clipboard`); переменную без него задают только модификаторы.
+
+| Переменная | По умолчанию | Задаёт |
+|:---|:---|:---|
+| `--sf-clipboard--box` | не задана; задают модификаторы, например `.sf-clipboard--size-1/3:not(.sf-button):not(.sf-icon-button)`: `var(--sf-ui-1/3--control-height)` | `height`, `block-size`, `min-height`, `min-block-size`, `min-width`, `min-inline-size` |
+| `--sf-clipboard--icon` | не задана; задают модификаторы, например `.sf-clipboard--size-1/3:not(.sf-button):not(.sf-icon-button)`: `var(--sf-text-height-1/3)` | `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
 
 ## См. также
 

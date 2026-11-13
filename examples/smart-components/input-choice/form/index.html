@@ -1,5 +1,5 @@
 <form id="choice-form" class="flex flex-col gap-4">
-  <sf-input-choice label="Тип сайта" name="kind" required items='[{"value": "site", "label": "Сайт", "caption": "Страницы, разделы и меню", "icon": "language"}, {"value": "shop", "label": "Магазин", "caption": "Каталог, корзина и заказы", "icon": "storefront", "badge": "Pro"}, {"value": "docs", "label": "Документация", "caption": "Статьи с поиском и оглавлением", "icon": "menu_book"}]'></sf-input-choice>
+  <sf-input-choice layout="list" label="Доставка" name="delivery" required items='[{"value": "courier", "label": "Курьером", "caption": "Привезём в удобный интервал", "price": "350 ₽", "term": "2–3 дня"}, {"value": "pickup", "label": "Пункт выдачи", "caption": "Больше 2 000 пунктов по стране", "price": "150 ₽", "term": "1–2 дня"}]'></sf-input-choice>
   <sf-input-choice label="Куда сохранять копии" name="targets" multiple value="local" items='[{"value": "local", "label": "Этот сервер", "caption": "Быстро, но пропадёт вместе с сервером"}, {"value": "s3", "label": "Хранилище S3", "caption": "Отдельно от сервера"}]'></sf-input-choice>
   <div class="flex gap-2">
     <sf-button native-type="submit" text="Отправить"></sf-button>

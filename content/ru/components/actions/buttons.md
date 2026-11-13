@@ -6,7 +6,7 @@ profile: reference
 
 # Кнопки
 
-:badge[sf-button]{variant=tonal scheme=primary size=1/2} :badge[1.9.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button]{variant=tonal scheme=primary size=1/2} :badge[1.10.1]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка запускает действие на текущей странице: сохраняет изменения, отправляет
 форму или подтверждает выбор. Для перехода на другую страницу берите ссылку, для
@@ -292,9 +292,9 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 |:---|:---|
 | Блок | `sf-button` |
 | Части | `sf-button-shortcut`, `sf-button-spinner`, `sf-button-spinner--overlay`, `sf-button-state-loading`, `sf-button-text-container` |
-| Модификаторы | `sf-button--danger`, `sf-button--default`, `sf-button--full-width`, `sf-button--height-high`, `sf-button--height-highest`, `sf-button--height-low`, `sf-button--link`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--pressed`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
+| Модификаторы | `sf-button--danger`, `sf-button--default`, `sf-button--full-width`, `sf-button--height-high`, `sf-button--height-highest`, `sf-button--height-low`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--pressed`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
 | Размеры | `sf-button--size-1`, `sf-button--size-1/2`, `sf-button--size-1/3`, `sf-button--size-2`, `sf-button--size-3` |
-| Устаревшие | `sf-button--error` → `sf-button--danger`, `sf-button--ghost` → `sf-button--link` |
+| Устаревшие | `sf-button--error` → `sf-button--danger`, `sf-button--ghost` → `sf-button--link`, `sf-button--link` → `sf-button--ghost` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

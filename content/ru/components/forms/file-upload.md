@@ -6,7 +6,7 @@ profile: reference
 
 # Загрузка файлов
 
-:badge[sf-file-upload]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-upload]{variant=tonal scheme=primary size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
 
 Загрузка файлов принимает один или несколько файлов через системное окно или
 перетаскиванием и показывает список выбранных файлов с ходом передачи. Сами
@@ -232,8 +232,8 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 | `--sf-file-upload-radius` | Скругление углов области; хуки отдельных углов по-прежнему важнее. | `var(--sf-radius--surface)` |
 | `--sf-file-upload-link-color` | Цвет слов, которые открывают диалог выбора файла. | `var(--sf-primary)` |
 | `--sf-file-upload-text-color` | Цвет слов после ссылки. | `var(--sf-on-surface-variant)` |
-| `--sf-file-upload-dragged-over-background-color` | Заливка области, пока над ней держат файлы. | `var(--sf-primary-transparent-select)` |
-| `--sf-file-upload-dragged-over-border-color` | Граница области, пока над ней держат файлы. | `var(--sf-outline-primary)` |
+| `--sf-file-upload-dragged-over-background-color` | Заливка области, пока над ней держат файлы. | `var(--sf-primary-state-select)` |
+| `--sf-file-upload-dragged-over-border-color` | Граница области, пока над ней держат файлы. | `var(--sf-primary-outline)` |
 
 ```css
 .sf-file-upload {

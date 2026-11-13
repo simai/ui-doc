@@ -6,7 +6,7 @@ profile: reference
 
 # Бейджи
 
-:badge[sf-badge]{variant=tonal scheme=primary size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-badge]{variant=tonal scheme=primary size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
 
 Бейдж показывает короткий статус, категорию или счётчик рядом с объектом. Он
 дополняет основное содержимое и не заменяет кнопку, фильтр или
@@ -262,6 +262,7 @@ profile: reference
 | `--sf-badge--padding-inline-end` | `var(--sf-badge-padding-inline, var(--sf-badge--side-room))` | `padding-inline-end` |
 | `--sf-badge--padding-inline-start` | `var(--sf-badge-padding-inline, var(--sf-badge--side-room))` | `padding-inline-start` |
 | `--sf-badge--ring` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-badge-ring-color, var(--sf-badge--surface, var(--sf-surface-place)))` | `box-shadow`, `outline` |
+| `--sf-badge--ring-fill` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `color-mix(in srgb, var(--sf-surface-place-fill) 100%, var(--sf-surface-underlay) 0%)` | `box-shadow` |
 | `--sf-badge--ring-width` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-a2)` | `box-shadow`, `outline` |
 | `--sf-badge--side-room` | `var(--sf-space-1/2)` | `--sf-badge--padding-inline-end`, `--sf-badge--padding-inline-start` |
 | `--sf-badge--side-tight` | `var(--sf-ui-1/3--text-space-x)` | `--sf-badge--side-room` |

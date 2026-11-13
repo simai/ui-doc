@@ -6,7 +6,7 @@ profile: reference
 
 # Меню
 
-:badge[sf-menu]{variant=tonal scheme=primary size=1/2} :badge[1.6.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-menu]{variant=tonal scheme=primary size=1/2} :badge[1.6.2]{variant=outline scheme=on-surface size=1/2}
 
 Меню ведёт по разделам сайта, раздела или личного кабинета и раскрывает
 группы вложенных разделов. Один компонент показывается вертикально в боковой
@@ -274,7 +274,7 @@ profile: reference
 | `--sf-menu--line-border` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation.sf-menu--bordered:not(.sf-menu--horizontal):not(.sf-menu-item > .sf-menu)`: `var(--sf-menu--border-width, var(--sf-px))` | `inset-inline-start` |
 | `--sf-menu--radius` | не задана; задают модификаторы, например `.sf-menu.sf-menu--horizontal > .sf-menu-item > .sf-menu`: `var(--sf-menu-horizontal-submenu--radius, var(--sf-menu-submenu-radius, var(--sf-radius--ui)))` | `border-radius`, `--sf-menu-path--block-start`, `--sf-menu-path--block-end` |
 | `--sf-menu--row-padding` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation:not(.sf-menu--horizontal)`: `var(--sf-space-1/2)` | `--sf-menu-element--padding-inline-start`, `--sf-menu-element--padding-inline-end`, `padding-inline` |
-| `--sf-menu-element--background-color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-background-color, var(--sf-transparent))` | `background-color` |
+| `--sf-menu-element--background-color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-background-color, var(--sf-transparent))` | `background-color`, `--sf-surface-place-fill` |
 | `--sf-menu-element--border-color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-border-color, var(--sf-surface-container))` | `border-color` |
 | `--sf-menu-element--border-width` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-px)` | `padding-top`, `padding-block-start`, `padding-bottom`, `padding-block-end`, `border-top-width`, `border-block-start-width`, `border-bottom-width`, `border-block-end-width`, `border-inline-start-width`, `border-inline-end-width`, `margin-top`, `margin-block-start`, `margin-bottom`, `margin-block-end` |
 | `--sf-menu-element--color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-color, var(--sf-on-surface))` | `color` |

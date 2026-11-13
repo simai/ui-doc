@@ -104,7 +104,7 @@ For drop shadows (no spread), disable box-shadow and use `drop-shadow`:
 
 ### Shadow usage
 
-* **shadow-1** — base elevation (cards).
+* **shadow-raised** (former `shadow-1`) — a raised element, a card under the pointer.
 * **shadow-2** — hover state for shadow-1 or bordered elements.
 * **shadow-3** — FAB.
 * **shadow-4** — FAB hover.

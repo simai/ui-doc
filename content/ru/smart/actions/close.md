@@ -5,7 +5,7 @@ description: "Крестик, который закрывает окно, пан
 
 # Кнопка закрытия
 
-:badge[sf-button-close]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button-close]{variant=tonal scheme=primary size=1/2} :badge[1.3.3]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка закрытия — крестик, который закрывает окно, панель или сообщение.
 Готовую кнопку даёт [кнопка с иконкой](/ru/smart/actions/icon-buttons/#иконка)
@@ -98,13 +98,13 @@ description: "Крестик, который закрывает окно, пан
 
 | | |
 |:---|:---|
-| Тег | `<sf-button-close>`, контракт `smart.button-close` версии `1.3.2` |
-| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
+| Тег | `<sf-button-close>`, контракт `smart.button-close` версии `1.3.3` |
+| Поставка | выпуск Framework `ui-7fb26d395af2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/button-close` |
-| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-button-close` |
+| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/button-close` |
+| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-button-close` |
 
 ## См. также
 

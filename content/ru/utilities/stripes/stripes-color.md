@@ -23,7 +23,7 @@ description: "Окрашивает линии полосатого фона цв
 | `stripe-transparent` | `--sf-stripe--color: var(--sf-transparent)` | — |
 | `stripe-current` | `--sf-stripe--color: var(--sf-current)` | — |
 | `stripe-inherit` | `--sf-stripe--color: var(--sf-inherit)` | — |
-| `stripe-surface-transparent-overlay` | `--sf-stripe--color: var(--sf-surface-transparent-overlay)` | — |
+| `stripe-surface-container-strong` | `--sf-stripe--color: var(--sf-surface-container-strong)` | — |
 | `stripe-on-surface` | `--sf-stripe--color: var(--sf-on-surface)` | — |
 | `stripe-primary` | `--sf-stripe--color: var(--sf-primary)` | — |
 | `stripe-primary-container` | `--sf-stripe--color: var(--sf-primary-container)` | — |
@@ -31,6 +31,8 @@ description: "Окрашивает линии полосатого фона цв
 | `stripe-secondary-container` | `--sf-stripe--color: var(--sf-secondary-container)` | — |
 | `stripe-tertiary` | `--sf-stripe--color: var(--sf-tertiary)` | — |
 | `stripe-tertiary-container` | `--sf-stripe--color: var(--sf-tertiary-container)` | — |
+
+Прежние имена работают до 2027-01-01: `stripe-surface-transparent-overlay` → `stripe-surface-container-strong`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
@@ -45,7 +47,7 @@ description: "Окрашивает линии полосатого фона цв
 | `--sf-transparent` | `rgba(255,255,255,0)` |
 | `--sf-current` | `currentColor` |
 | `--sf-inherit` | `inherit` |
-| `--sf-surface-transparent-overlay` | `var(--sf-surface-container-strong)` |
+| `--sf-surface-container-strong` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 | `--sf-primary` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` |
 | `--sf-primary-container` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` |
@@ -59,7 +61,7 @@ description: "Окрашивает линии полосатого фона цв
 | Задача | Классы |
 | :--- | :--- |
 | Заметные линии | `stripe-on-surface`, `stripe-primary`, `stripe-secondary`, `stripe-tertiary` |
-| Тихие линии | `stripe-surface-transparent-overlay`, `stripe-primary-container`, `stripe-secondary-container`, `stripe-tertiary-container` |
+| Тихие линии | `stripe-surface-container-strong`, `stripe-primary-container`, `stripe-secondary-container`, `stripe-tertiary-container` |
 | Цвет текста | `stripe-current` |
 | Убрать линии, сохранив класс узора | `stripe-transparent` |
 

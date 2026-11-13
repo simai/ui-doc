@@ -6,7 +6,7 @@ profile: reference
 
 # Шаги
 
-:badge[sf-steps]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-steps]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Шаги показывают этапы линейного процесса — оформления заказа, публикации,
 настройки — и отмечают завершённые, текущий и будущие. Берите их для трёх и
@@ -137,7 +137,7 @@ profile: reference
 | `--sf-steps-step-color` | Подпись и номер шага в покое. | `var(--sf-on-surface-variant)` |
 | `--sf-steps-step-border-color` | Обводка шага в покое. | `var(--sf-outline-variant)` |
 | `--sf-steps-step-radius` | Скругление углов шага. | `var(--sf-radius-circle)` |
-| `--sf-steps-current-border-color` | Обводка текущего шага. | `var(--sf-outline-primary)` |
+| `--sf-steps-current-border-color` | Обводка текущего шага; по умолчанию её нет, текущий шаг — плашка primary-container (C16, component.step 1.2.0). | `var(--sf-transparent)` |
 | `--sf-steps-completed-icon-color` | Значок-галочка пройденного шага. | `var(--sf-success)` |
 
 ```css
@@ -155,13 +155,16 @@ profile: reference
 | `--sf-steps-container--background-color` | не задана; задают модификаторы, например `.sf-steps .sf-steps-container`: `transparent` | `background-color` |
 | `--sf-steps-container--gap` | не задана; задают модификаторы, например `.sf-steps.sf-steps--size-1 .sf-steps-container`: `var(--sf-space-1/4)` | `gap` |
 | `--sf-step--background-color` | `transparent` | `background-color` |
+| `--sf-step--block-size` | не задана; задают модификаторы, например `.sf-step--size-1`: `var(--sf-ui-1--control-height)` | `min-height`, `min-block-size` |
 | `--sf-step--border-color` | `var(--sf-steps-step-border-color, var(--sf-outline-variant))` | `border-color` |
 | `--sf-step--box-shadow` | не задана; задают модификаторы, например `.sf-step:not(:disabled):not(.disabled):not([aria-disabled=true]).focus-visible`: `none` | `box-shadow` |
 | `--sf-step--color` | `var(--sf-on-surface-variant)` | `color` |
 | `--sf-step--font-size` | не задана; задают модификаторы, например `.sf-step--size-1`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-step--icon-size` | не задана; задают модификаторы, например `.sf-step.sf-step--size-1/2 .sf-icon`: `var(--sf-text-height-1/2)` | `font-size`, `height`, `width` |
 | `--sf-step--line-height` | не задана; задают модификаторы, например `.sf-step--size-1`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-step--padding-bottom` | не задана; задают модификаторы, например `.sf-step--size-1`: `var(--sf-space-1/4)` | `padding-bottom` |
-| `--sf-step--padding-top` | не задана; задают модификаторы, например `.sf-step--size-1`: `var(--sf-space-1/4)` | `padding-top` |
+| `--sf-step--padding-bottom` | не задана; задают модификаторы, например `.sf-step--size-1`: `0` | `padding-bottom` |
+| `--sf-step--padding-inline` | не задана; задают модификаторы, например `.sf-step--size-1`: `var(--sf-ui-1--text-space-x)` | `padding-inline-end`, `padding-inline-start` |
+| `--sf-step--padding-top` | не задана; задают модификаторы, например `.sf-step--size-1`: `0` | `padding-top` |
 | `--sf-step-container--background-color` | не задана; задают модификаторы, например `.sf-step .sf-step-container`: `transparent` | `background-color` |
 | `--sf-step-container--color` | не задана; задают модификаторы, например `.sf-step.sf-step--stage-default .sf-step-container`: `var(--sf-steps-step-color, var(--sf-on-surface-variant))` | `color` |
 | `--sf-step-container--font-size` | не задана; задают модификаторы, например `.sf-step.sf-step--size-1 .sf-step-container`: `var(--sf-text-size-1)` | `font-size` |

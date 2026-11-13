@@ -6,7 +6,7 @@ profile: reference
 
 # Основа Admin Menu
 
-:badge[sf-admin-menu]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-admin-menu]{variant=tonal scheme=primary size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
 
 `sf-admin-menu` — оформление и поведение боковой навигации административного
 приложения: шапка, поиск, пункты с иконками, вложенные панели, компактный
@@ -138,7 +138,7 @@ whenLoader(() => SF.Loader.ready('AdminMenu', () => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-admin-menu-item--background-color` | не задана; задают модификаторы, например `.sf-admin-menu-item:not(:disabled):not(.disabled):hover`: `var(--sf-secondary-container-hover)` | `background-color` |
+| `--sf-admin-menu-item--background-color` | не задана; задают модификаторы, например `.sf-admin-menu-item:not(:disabled):not(.disabled):hover`: `var(--sf-secondary-container-hover)` | `background-color`, `--sf-surface-place-fill` |
 | `--sf-admin-menu-item--border-color` | не задана; задают модификаторы, например `.sf-admin-menu-item-segment:not(.disabled):hover .sf-admin-menu-item`: `var(--sf-transparent)` | `border-color` |
 | `--sf-admin-menu-item--border-end-end-radius` | не задана; задают модификаторы, например `.sf-admin-menu-item.segment-start`: `0` | `border-end-end-radius` |
 | `--sf-admin-menu-item--border-end-start-radius` | не задана; задают модификаторы, например `.sf-admin-menu-item.segment-middle`: `0` | `border-end-start-radius` |
@@ -148,7 +148,7 @@ whenLoader(() => SF.Loader.ready('AdminMenu', () => {
 | `--sf-admin-menu-item-container--color` | не задана; задают модификаторы, например `.sf-admin-menu-item:not(:disabled):not(.disabled):hover .sf-admin-menu-item-container`: `var(--sf-on-secondary-container)` | `color` |
 | `--sf-admin-menu-item-segment--background-color` | не задана; задают модификаторы, например `.sf-admin-menu-item-segment:not(.disabled):hover`: `var(
                     --sf-secondary-container-hover
-    )` | `background-color` |
+    )` | `background-color`, `--sf-surface-place-fill` |
 | `--sf-admin-menu-main--padding-inline-end` | не задана; задают модификаторы, например `.sf-admin-menu-main.open`: `0` | `margin-inline-end`, `padding-inline-end` |
 
 ## См. также

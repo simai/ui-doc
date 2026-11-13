@@ -295,7 +295,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 ### Прежние имена по компонентам
 
-Раздел собран из манифестов выпуска `ui-2bd5a3ab478a` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
+Раздел собран из манифестов выпуска `ui-7fb26d395af2` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
 
 #### `<sf-accordion>`
 
@@ -340,6 +340,8 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `tone="pink"` | `tone="rose"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `hue="pink"` | `hue="rose"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `tone="purple"` | `tone="violet"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `--sf-avatar-offline-background-color="var(--sf-on-surface-variant)"` | `--sf-avatar-offline-background-color="var(--sf-surface-place)"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `--sf-avatar-offline-overlay="none"` | `--sf-avatar-offline-overlay="linear-gradient(var(--sf-on-surface-disabled) 0 0)"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `heading` | `title` | работает как псевдоним | 2026-12-01 |
 
 #### `<sf-avatar-group>`
@@ -665,8 +667,16 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `appearance` | `variant` | принимается для совместимости | — |
 | событие `sf-field-reset` | `sf-field:reset` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+
+#### `<sf-input-country>`
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `fixed-country` | `multi-country="false"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `fixed-mask` | `use-country-masks="false"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `hide-code` | `show-code="false"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `eager-flags` | `lazy-flags="false"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 
 #### `<sf-input-date>`
 
@@ -703,6 +713,12 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `spell-check` | `spellcheck` | работает как псевдоним | 2026-12-01 |
 | `invalid` | `error` | работает как псевдоним | 2026-12-01 |
 
+#### `<sf-list>`
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `groups="layout"` | `groups="structure"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+
 #### `<sf-list-attention>`
 
 | Имя | Прежнее имя | Состояние | Убирается после |
@@ -715,6 +731,18 @@ id?}` значит «перестать ждать», а `wait` принимае
 |:---|:---|:---|:---|
 | `kind` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-list-item-open` | `sf-list-item-activate` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+
+#### `<sf-list-timeline>`
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `data-sf-density` | `density` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+
+#### `<sf-mail-library>`
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `groups="layout"` | `groups="structure"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 
 #### `<sf-menu>`
 
@@ -830,6 +858,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 |:---|:---|:---|:---|
 | `appearance="track"` | `appearance="segmented"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `appearance="buttons"` | `appearance="default"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `height` | `spacing` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | событие `change` | `sf-button-group-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `spacing` | `tightness` | работает как псевдоним | — |
 
@@ -838,7 +867,6 @@ id?}` значит «перестать ждать», а `wait` принимае
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
 | `kind` | `variant` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `kind` | `type` | принимается для совместимости | — |
 
 #### `<sf-slider>`
 
@@ -963,7 +991,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 | событие `sf-view-state` | `sf-data-view-state` | работает как псевдоним | — |
 | событие `sf-view-tree` | `sf-data-view-tree` | работает как псевдоним | — |
 | событие `sf-view-files-drop` | `sf-data-view-files-drop` | работает как псевдоним | — |
-| событие `sf-view-saved-view-intent` | `sf-data-view-saved-view-intent` | работает как псевдоним | — |
+| событие `sf-view-saved-view-intent` | `sf-data-view-saved-view-intent` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | событие `sf-view-list-open` | `sf-data-view-list-open` | работает как псевдоним | — |
 
 #### `<sf-view-properties>`

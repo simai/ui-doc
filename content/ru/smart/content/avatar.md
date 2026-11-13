@@ -5,7 +5,7 @@ description: "Показывает человека или организаци�
 
 # Аватар
 
-:badge[sf-avatar]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-avatar]{variant=tonal scheme=primary size=1/2} :badge[1.3.3]{variant=outline scheme=on-surface size=1/2}
 
 Аватар показывает одного человека или одну организацию: фотографию, инициалы
 или значок-заполнитель, при необходимости — состояние в сети или отметку
@@ -235,7 +235,7 @@ avatar.addEventListener('click', () => openProfile('anna'));
 | `image-alt` | строка | пусто | — | — |
 | `no-wrap` | да/нет | нет | — | — |
 | `text` | строка | пусто | — | — |
-| `hue` | строка | пусто | пусто, `auto`, `red`, `orange`, `amber`, `yellow`, `lime`, `green`, `teal`, `cyan`, `sky`, `blue`, `indigo`, `violet`, `purple`, `pink`, `brown`, `gray` | Оттенок статической палитры, которым рисуются инициалы (решение владельца C17): плашка — container оттенка, буквы — его on-container. Пусто — нейтральный вид. auto — один из восьми оттенков (pink, amber, lime, green, teal, sky, indigo, violet), выбранный по имени (heading, иначе aria-label, иначе текст) постоянным хешем, одинаковым в любом браузере и на сервере; без имени — нейтральный вид. Оттенок получают только инициалы: картинка и заглушка не меняются. --sf-avatar-background-color и --sf-avatar-color по-прежнему главнее. |
+| `hue` | строка | пусто | пусто, `auto`, `red`, `orange`, `amber`, `yellow`, `lime`, `green`, `teal`, `cyan`, `sky`, `blue`, `indigo`, `violet`, `purple`, `pink`, `brown`, `gray` | Оттенок статической палитры для инициалов: плашка — контейнер оттенка, буквы — его цвет текста. Пусто — нейтральный вид. `auto` — один из восьми оттенков (pink, amber, lime, green, teal, sky, indigo, purple), выбранный по имени (заголовок, иначе `aria-label`, иначе текст) постоянной хеш-функцией, одинаково в любом браузере и на сервере; без имени — нейтральный вид. Оттенок берут только инициалы: картинка и заглушка не меняются. `--sf-avatar-background-color` и `--sf-avatar-color` важнее. |
 | `status` | строка | `none` | `none`, `online`, `offline`, `company`, `verified` | — |
 | `heading` | строка | пусто | — | — |
 | `description` | строка | пусто | — | — |
@@ -271,13 +271,13 @@ avatar.addEventListener('click', () => openProfile('anna'));
 
 | | |
 |:---|:---|
-| Тег | `<sf-avatar>`, контракт `smart.avatar` версии `1.3.1` |
-| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
+| Тег | `<sf-avatar>`, контракт `smart.avatar` версии `1.3.3` |
+| Поставка | выпуск Framework `ui-7fb26d395af2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; желательна подпись или `aria-label`; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/avatar` |
-| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-avatar` |
+| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/avatar` |
+| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-avatar` |
 
 ## См. также
 

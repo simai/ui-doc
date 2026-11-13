@@ -6,7 +6,7 @@ profile: reference
 
 # Документ
 
-:badge[sf-doc]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-doc]{variant=tonal scheme=primary size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
 
 Компонент оформляет служебные поверхности технической документации:
 область примера, исходный код под ней, вводный абзац и фоны для показа
@@ -94,7 +94,7 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-doc-pattern-color` | не задана; задают модификаторы, например `.sf-doc-stripes`: `var(--sf-surface-1)` | `background-image` |
+| `--sf-doc-pattern-color` | не задана; задают модификаторы, например `.sf-doc-stripes`: `var(--sf-surface-area)` | `background-image` |
 
 ## См. также
 

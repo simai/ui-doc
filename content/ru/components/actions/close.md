@@ -6,7 +6,7 @@ profile: reference
 
 # Кнопка закрытия
 
-:badge[sf-close]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-close]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка закрытия закрывает окно, панель, уведомление или убирает тег. Она
 рисует крестик без иконочного шрифта, а действие выполняет нативная кнопка

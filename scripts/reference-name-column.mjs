@@ -11,6 +11,14 @@
 // minimum width: its longest name, up to NAME_CAP characters. Longer names
 // (a method with its arguments) may still break; the usual ones stay whole.
 //
+// A name longer than that breaks where its words join -- after a hyphen, a
+// colon, a dot, a slash, a bar, an opening bracket or a comma -- and never
+// between two letters: the build puts a <wbr> there (note N1 of the C10
+// acceptance, 2026-11-12: at 390 `--sf-alert-bar-error-background-color`
+// broke as `--sf-alert-bar-error-backgr|ound-color`). A first cell may say
+// what the name is before it, as the former-name tables do: «событие
+// `sf-accordion-toggle`»; the name is still the code.
+//
 // The shell stylesheet is Docara's and the site has no stylesheet of its own,
 // so, as with inline-code-wrap.mjs, the width is written after the build on
 // the header cell of the tables that need it. A table counts as a reference
@@ -33,7 +41,13 @@ const ARTICLE = /(<article class="docara-prose[^"]*"[^>]*>)([\s\S]*?)(<\/article
 const TABLE = /<table\b[\s\S]*?<\/table>/gu;
 const ROW = /<tbody\b[\s\S]*?<\/tbody>/u;
 const FIRST_CELL = /<tr\b[^>]*>\s*<td\b[^>]*>([\s\S]*?)<\/td>/gu;
-const CODE_ALONE = /^\s*<code\b[^>]*>([\s\S]*?)<\/code>\s*$/u;
+const CODE_ALONE = /^\s*(?:[^<>]{1,24}\s)?<code\b[^>]*>([\s\S]*?)<\/code>\s*$/u;
+const FIRST_CELL_REPLACE = /(<tr\b[^>]*>\s*<td\b[^>]*>)([\s\S]*?)(<\/td>)/gu;
+const JOINS = /(?<=[^\s\-:./|(,_])([\-:./|(,_]+)(?=[^\s<&\-:./|(,_])/gu;
+// The joins of a long name, outside its tags and entities.
+const joinable = (code) => code.replace(/(<[^>]*>|&[^;\s]*;)|([^<&]+)/gu, (whole, kept, plain) => (
+  kept ?? plain.replace(JOINS, '$1<wbr>')
+));
 const FIRST_HEAD = /<th(?![^>]*\bdata-name-column\b)((?:\s[^>]*)?)>/u;
 
 const text = (html) => html
@@ -50,7 +64,12 @@ const widen = (table) => {
   // ch of the cell's text is about one code character (code is monospace at
   // 85 %); 2em more holds the code's own padding and the cell's.
   const style = `min-inline-size:calc(${longest}ch + 2em)`;
-  return table.replace(FIRST_HEAD, (whole, attributes) => (
+  const marked = table.replace(ROW, (rows) => rows.replace(FIRST_CELL_REPLACE, (whole, open, cell, close) => {
+    const match = CODE_ALONE.exec(cell);
+    if (!match || text(match[1]).length <= NAME_CAP || match[1].includes('<wbr>')) return whole;
+    return open + cell.replace(match[1], joinable(match[1])) + close;
+  }));
+  return marked.replace(FIRST_HEAD, (whole, attributes) => (
     /\sstyle="/u.test(attributes)
       ? `<th${attributes.replace(/\sstyle="([^"]*)"/u, (_, value) => ` style="${value.replace(/;?\s*$/u, ';')}${style}"`)} ${MARK}>`
       : `<th${attributes} style="${style}" ${MARK}>`
