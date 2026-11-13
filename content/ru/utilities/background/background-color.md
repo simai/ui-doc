@@ -419,4 +419,4 @@ description: "Заливает элемент цветовой ролью тем
 - [Цвет текста](/ru/utilities/text-formatting/text-color/)
 - [Брендовые цвета фона](/ru/utilities/background/background-color-brand/)
 - [Цветовые роли](/ru/guide/colour/colour-roles/)
-- [Высота](/ru/utilities/shadows/elevation/)
+- [Тень элемента](/ru/utilities/shadows/element-shadow/)

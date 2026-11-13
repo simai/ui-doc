@@ -18,7 +18,10 @@
 //     Framework gap, not a page's);
 //   - the pages of the coloured shadows, a family that leaves on 2027-01-01
 //     with no successor (utilities/shadows/element-color, drop-shadow-color
-//     and their examples), for the C20 coloured-shadow record only.
+//     and their examples), for the C20 coloured-shadow record only;
+//   - the page of the elevation classes (utilities/shadows/elevation), which
+//     leave on 2027-01-01 for a pair of classes, for the C20 elevation record
+//     only: it is the page that names the way off them.
 //
 // The old forms may be named only where a reader looks for the way off them:
 // the update guide and the names guide, and the generated migration lines of
@@ -106,7 +109,7 @@ for (const record of journal?.records ?? []) {
     if (item.from === 'drop-shadow-<colour>') re = new RegExp(`(?<![A-Za-z0-9_/-])(?:hover:)?drop-shadow-${COLOURS}(?:-[a-z0-9-]+)?(?![A-Za-z0-9_/-])`, 'u');
     else if (/[*<{\s]/u.test(item.from)) continue;
     else re = item.match ? new RegExp(item.match, 'u') : word(item.from);
-    placeNames.push({name: item.from, id: record.id, re, coloured: record.id === 'utility-c20-coloured-shadows'});
+    placeNames.push({name: item.from, id: record.id, re, coloured: record.id === 'utility-c20-coloured-shadows', elevation: record.id === 'utility-c20-elevation-former'});
   }
 }
 // The component variables C16 renames (-background → -background-color), from
@@ -135,6 +138,7 @@ try {
 }
 const GENERATED = new Set(['Классы', 'Переменные']);
 const COLOURED_SHADOW_PAGES = /^(?:content\/ru\/utilities\/shadows\/(?:element-color|drop-shadow-color)\.md|examples\/utilities\/shadows\/(?:element-color|drop-shadow-color)[^/]*\/)/u;
+const ELEVATION_PAGE = 'content/ru/utilities/shadows/elevation.md';
 
 const findings = [];
 for (const path of files) {
@@ -145,8 +149,9 @@ for (const path of files) {
     if (heading) generated = enrolled.has(path) && GENERATED.has(heading[1].trim());
     if (MIGRATION_LINE.test(line)) return;
     if (!generated) {
-      for (const {name, id, re, coloured} of placeNames) {
+      for (const {name, id, re, coloured, elevation} of placeNames) {
         if (coloured && COLOURED_SHADOW_PAGES.test(path)) continue;
+        if (elevation && path === ELEVATION_PAGE) continue;
         const match = line.match(re);
         if (match) findings.push({path, line: index + 1, rule: 'c16-c20', found: match[0], why: `retired by ${id}`});
       }

@@ -42,7 +42,7 @@ Framework подбирается не на глаз, а по измеряемы�
 перестаёт проходить 4,5 : 1. Поэтому у каждого места выше страницы есть своя
 роль: `--sf-on-surface-card-variant`, `--sf-on-surface-raised-variant`,
 `--sf-on-surface-popup-variant`, `--sf-on-surface-popup-nested-variant`, — и
-класс высоты подставляет её сам ([Высота: поверхность и тень](/ru/guide/colour/elevation/)).
+класс фона места (`bg-surface-popup` и другие) подставляет её сам ([Высота: поверхность и тень](/ru/guide/colour/elevation/)).
 
 **Приглушённый текст на плашке тоже берёт свою роль.** Плашка
 `--sf-surface-container` полупрозрачна: в светлой теме она темнее фона, в

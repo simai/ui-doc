@@ -333,9 +333,10 @@ Framework (см. [Подтверждение изменения](/ru/pro/admin/c
 Прежнее имя работает до 2027-01-01 и показывает тень своего места, поэтому
 страницы на прежних именах не ломаются; там, где тень места отличается от
 прежнего уровня, она выглядит по-новому. Записи журнала —
-`token-c20-shadow-places`, `utility-c20-shadow-places` и
-`utility-c20-coloured-shadows`. Переименования — механическая замена,
-`sf-upgrade` переписывает их сам; цветные тени — ручная работа (см. ниже).
+`token-c20-shadow-places`, `utility-c20-shadow-places`,
+`utility-c20-elevation-former` и `utility-c20-coloured-shadows`.
+Переименования — механическая замена, `sf-upgrade` переписывает их сам; классы
+высоты и цветные тени — ручная работа (см. ниже).
 
 Классы:
 
@@ -351,9 +352,16 @@ Framework (см. [Подтверждение изменения](/ru/pro/admin/c
 | `drop-shadow-4`, `drop-shadow-5` | `drop-shadow-modal` |
 
 С префиксом `hover:` — так же (`hover:shadow-1` → `hover:shadow-raised`).
-Классы `elevation-0` … `elevation-5` остаются: каждый берёт поверхность своей
-ступени и тень своего места (1 — приподнятое, 2 и 3 — всплывающее, 4 и 5 —
-окно).
+Классы `elevation-0` … `elevation-5` тоже прежние имена (до 2027-01-01): каждый
+становится парой — фоном своего места и его тенью. `sf-upgrade` их находит, но
+не переписывает: вместо одного класса — два.
+
+| Прежний класс | Что писать |
+|:---|:---|
+| `elevation-0` | `bg-surface-page shadow-flat` |
+| `elevation-1` | `bg-surface-card shadow-raised` |
+| `elevation-2`, `elevation-3` | `bg-surface-popup shadow-overlay` |
+| `elevation-4`, `elevation-5` | `bg-surface-popup-nested shadow-modal` |
 
 Переменные:
 

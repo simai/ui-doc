@@ -1,50 +1,22 @@
 ---
-title: "Цвет падающей тени (drop-shadow-color)"
-description: "Цвет падающей тени (drop-shadow-color)"
+title: "Drop shadow colour"
+description: "Coloured drop shadows leave SIMAI Framework after 2027-01-01: a shadow carries no colour."
 ---
 
-# Цвет падающей тени (drop-shadow-color)
+# Drop shadow colour
 
-
-Данные модификаторы позволяют задать цвет падающей тени элемента, используя роли (переменные), без адаптивности. Можно
-также изменять цвет при наведении с помощью `hover:drop-shadow-{color}`.
-
-## Классы
-
-| Класс                   | Значение                 |
-|:------------------------|:---------------------------------------------|
-| .drop-shadow-primary    | `--sf-shadow--color`: var(`--sf-primary`)    |
-| .drop-shadow-secondary  | `--sf-shadow--color`: var(`--sf-secondary`)  |
-| .drop-shadow-tertiary   | `--sf-shadow--color`: var(`--sf-tertiary`)   |
-| .drop-shadow-error      | `--sf-shadow--color`: var(`--sf-error`)      |
-| .drop-shadow-warning    | `--sf-shadow--color`: var(`--sf-warning`)    |
-| .drop-shadow-success    | `--sf-shadow--color`: var(`--sf-success`)    |
-| .drop-shadow-on-surface | `--sf-shadow--color`: var(`--sf-on-surface`) |
-
-## Описание
-
-Модификаторы `drop-shadow-{color}` задают цвет падающей тени. При необходимости можно использовать
-`hover:drop-shadow-{color}` для изменения цвета тени при наведении курсора.
-
-- Используйте `drop-shadow-primary` или `drop-shadow-secondary` и т.д. для установки цвета падающей тени.
-- Комбинируйте с классами уровня тени, например `drop-shadow-2`, для достижения нужного эффекта.
-- Применяйте `hover:drop-shadow-error` для изменения цвета тени при наведении.
-
-## Синтаксис
-
-- `drop-shadow-{color}` — задать цвет падающей тени.
-- `hover:drop-shadow-{color}` — задать цвет падающей тени при наведении.
-
-## Пример использования
+The `drop-shadow-{colour}` classes, with `hover:`, leave SIMAI Framework after
+**2027-01-01** with no successor: in the shadow system a shadow carries no colour.
+Until that date the class still colours the shadow the
+[drop shadow](/en/utilities/shadows/drop-shadow/) classes draw. Do not add new uses:
+an icon or a logo needs only the place shadow, without colour — `drop-shadow-raised`
+or `drop-shadow-overlay` — and carries its colour itself.
 
 ```html
-<!-- Элемент с тенью и цветом тени -->
-<div class="drop-shadow-2 drop-shadow-primary p-4 radius-1/3 bg-surface">
-    Падающая тень с цветом primary
-</div>
-
-<!-- Элемент, при наведении цвет тени меняется на error -->
-<button class="drop-shadow-2 drop-shadow-success hover:drop-shadow-error p-2 radius-1/2 bg-surface-inverse color-on-surface m-top-2">
-    Наведи на меня
-</button>
+<!-- before -->
+<div class="drop-shadow-2 drop-shadow-primary">…</div>
+<!-- after -->
+<div class="drop-shadow-overlay">…</div>
 ```
+
+Journal record: `utility-c20-coloured-shadows`.
