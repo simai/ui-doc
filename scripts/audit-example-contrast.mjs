@@ -222,6 +222,9 @@ function auditFile(file, roles, findings, stats) {
         // be read against its ground. Use it on the sample only, never on a
         // plate that holds explanatory text.
         exempt: attr(attrs, 'data-contrast') === 'colour',
+        // A theme class scopes its own role values; the page under it keeps
+        // the outer theme, so a translucent plate there shows the other one.
+        forced: classes.includes('theme-light') ? 'light' : (classes.includes('theme-dark') ? 'dark' : null),
       };
       stack.push(frame);
       if (SKIP.has(tag)) skip += 1;
@@ -267,12 +270,17 @@ function auditFile(file, roles, findings, stats) {
     }
     for (const theme of ['light', 'dark']) {
       const page = parseColor(roles[theme].page.background);
-      const bgOf = (name) => name.startsWith('element:') ? roles[theme].elements[name.slice(8)].background : roles[theme].bg[name];
-      const inkOf = (name) => name.startsWith('element:') ? roles[theme].elements[name.slice(8)].color : roles[theme].color[name];
-      // Layers: every plate between the page and the text, outermost first.
+      const bgOf = (name, t) => name.startsWith('element:') ? roles[t].elements[name.slice(8)].background : roles[t].bg[name];
+      const inkOf = (name, t) => name.startsWith('element:') ? roles[t].elements[name.slice(8)].color : roles[t].color[name];
+      // Layers: every plate between the page and the text, outermost first,
+      // each in the theme that holds it.
       let ground = page;
-      for (const frame of stack) if (frame.bg && frame.bg !== 'inline-style' && bgOf(frame.bg) !== 'image') ground = over(parseColor(bgOf(frame.bg)), ground);
-      const inkColor = parseColor(ink ? inkOf(ink) : roles[theme].page.color);
+      let scope = theme;
+      for (const frame of stack) {
+        if (frame.forced) scope = frame.forced;
+        if (frame.bg && frame.bg !== 'inline-style' && bgOf(frame.bg, scope) !== 'image') ground = over(parseColor(bgOf(frame.bg, scope)), ground);
+      }
+      const inkColor = parseColor(ink ? inkOf(ink, scope) : roles[scope].page.color);
       if (!ground || !inkColor) continue;
       const value = ratio(inkColor, ground);
       if (value + 1e-6 < need) {
@@ -429,7 +437,9 @@ async function browserAudit() {
                 const large = size >= 24 || (size >= 18.66 && weight >= 700) || el.classList.contains('sf-icon') || style.fontFamily.includes('Material');
                 const need = large ? LARGE : NORMAL;
                 if (value + 1e-6 >= need) continue;
-                if (el.closest('[aria-disabled="true"], :disabled, .disabled, [disabled]')) continue;
+                // Inactive controls are exempt (WCAG 1.4.3), their labels too.
+                if (el.closest('[aria-disabled="true"], :disabled, .disabled, [disabled], [class*="--disabled"]')) continue;
+                if (el.closest('label')?.querySelector(':disabled')) continue;
                 let tag = null;
                 for (let cur = el; cur && cur !== panel; cur = cur.parentElement) {
                   const name = cur.tagName.toLowerCase();
