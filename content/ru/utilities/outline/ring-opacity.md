@@ -79,5 +79,5 @@ ring-primary`. Наведите указатель на кнопку.
 
 ## См. также
 
-- [Фокусное кольцо](/ru/utilities/outline/ring/)
+- [Кольцо выбора](/ru/utilities/outline/ring/)
 - [Внутреннее кольцо](/ru/utilities/outline/ring-inset/)

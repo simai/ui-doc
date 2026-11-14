@@ -202,7 +202,6 @@ profile: reference
 | Части | `sf-badge-anchor`, `sf-badge-anchor--round`, `sf-badge-anchor--rounded`, `sf-badge-anchor--size-1`, `sf-badge-anchor--size-1/2`, `sf-badge-anchor--size-1/3`, `sf-badge-anchor--size-2`, `sf-badge-anchor--size-3`, `sf-badge-anchor--square`, `sf-badge-anchored-text`, `sf-badge-icon-container`, `sf-badge-spinner`, `sf-badge-text`, `sf-badge-text-container` |
 | Модификаторы | `sf-badge--anchored`, `sf-badge--compact`, `sf-badge--disabled`, `sf-badge--dot`, `sf-badge--error`, `sf-badge--figure`, `sf-badge--info`, `sf-badge--line-1`, `sf-badge--line-1/2`, `sf-badge--line-2`, `sf-badge--main`, `sf-badge--neutral`, `sf-badge--on-surface`, `sf-badge--outline`, `sf-badge--primary`, `sf-badge--secondary`, `sf-badge--success`, `sf-badge--tertiary`, `sf-badge--tight`, `sf-badge--tonal`, `sf-badge--warning` |
 | Размеры | `sf-badge--size-1`, `sf-badge--size-1/2`, `sf-badge--size-1/3` |
-| Устаревшие | `sf-badge--danger` → `sf-badge--error` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

@@ -36,7 +36,7 @@ profile: reference
 Вид и схема задаются парой классов, и сочетаний четыре:
 `default primary` — главное действие, акцентная заливка;
 `default on-surface` — контрастная тёмная кнопка (в тёмной теме — светлая);
-`tonal secondary` и `tonal on-surface` — спокойная заливка, когда кнопка не
+`tonal primary` и `tonal on-surface` — спокойная заливка, когда кнопка не
 должна спорить с содержимым. Других сочетаний в CSS нет.
 
 :::example {id="components/fab/variants" label="Вид и схема"}
@@ -121,7 +121,6 @@ whenLoader(() => SF.Loader.ready('Fab', (Fab) => {
 | Блок | `sf-fab` |
 | Модификаторы | `sf-fab--default`, `sf-fab--on-surface`, `sf-fab--primary`, `sf-fab--tonal` |
 | Размеры | `sf-fab--size-1`, `sf-fab--size-2`, `sf-fab--size-3` |
-| Устаревшие | `sf-fab--secondary` → `sf-fab--primary` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

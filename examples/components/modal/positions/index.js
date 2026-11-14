@@ -1,28 +1,27 @@
 const startModalPositions = (Modal) => {
   const variants = {
-    'center': ['position: \'center\'', {position: 'center'}],
-    'left': ['position: \'left\'', {position: 'left'}],
-    'right': ['position: \'right\'', {position: 'right'}],
-    'inline-start': ['position: \'inline-start\'', {position: 'inline-start'}],
-    'inline-end': ['position: \'inline-end\'', {position: 'inline-end'}],
-    'top': ['position: \'top\'', {position: 'top'}],
-    'bottom': ['position: \'bottom\'', {position: 'bottom'}],
+    'center': ['Удалить заказ № 418?', '<p class="m-0">Заказ и его история удалятся без возможности восстановления.</p>', {position: 'center'}],
+    'inline-start': ['Фильтры', '<p class="m-0">Статус, менеджер и период заказа.</p>', {position: 'inline-start'}],
+    'inline-end': ['Анна Петрова', '<p class="m-0">Клиент с 2021 года, 12 заказов на 184 500 ₽.</p>', {position: 'inline-end'}],
+    'top': ['Плановые работы', '<p class="m-0">16 ноября с 02:00 до 04:00 оплата картой недоступна.</p>', {position: 'top'}],
+    'bottom': ['Файлы cookie', '<p class="m-0">Сайт запоминает город доставки и товары в корзине.</p>', {position: 'bottom'}],
+    'left': ['Схема зала', '<p class="m-0">Сцена всегда слева, на любом языке страницы.</p>', {position: 'left'}],
+    'right': ['Громкость', '<p class="m-0">Регулятор стоит у правого края экрана.</p>', {position: 'right'}],
   };
 
-  Object.entries(variants).forEach(([key, [label, options]]) => {
+  Object.entries(variants).forEach(([key, [title, html, options]]) => {
     const id = `modal-positions-${key}`;
     if (Modal.registry.has(id)) return;
 
-    const modal = new Modal({
+    new Modal({
       id,
       param: {
         container: '#modal-example-box',
-        title: label,
-        html: '<p class="m-0">Окно стоит у выбранного края экрана.</p>',
+        title,
+        html,
         ...options,
       },
     });
-    modal.template.querySelector('.sf-modal-close-button')?.setAttribute('aria-label', 'Закрыть окно');
   });
 };
 

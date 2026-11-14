@@ -15,7 +15,8 @@ document.querySelectorAll('[data-swiper-demo="lifecycle"]').forEach((demo) => {
 
     demo.querySelector('[data-swiper-add]').addEventListener('click', () => {
       const slide = wrapper.firstElementChild.cloneNode(true);
-      slide.querySelector('div').textContent = `Слайд ${wrapper.children.length + 1}`;
+      const titles = ['Пять идей для маленькой кухни', 'Свет в спальне: три сценария', 'Рабочее место у окна', 'Хранение в прихожей'];
+      slide.querySelector('div').textContent = titles[(wrapper.children.length - 2) % titles.length] ?? `Статья ${wrapper.children.length + 1}`;
       wrapper.append(slide);
       swiper.update();
       swiper.slideTo(wrapper.children.length - 1);

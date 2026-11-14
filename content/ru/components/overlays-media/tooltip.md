@@ -60,9 +60,10 @@ profile: reference
 
 `sf-tooltip--size-1/3`, `sf-tooltip--size-1/2`, `sf-tooltip--size-1` • [справочник](#классы)
 
-Пять ступеней — `sf-tooltip--size-1/3`, `sf-tooltip--size-1/2`,
-`sf-tooltip--size-1`, `sf-tooltip--size-2` и `sf-tooltip--size-3` — меняют
-кегль и отступы. Берите ступень триггера.
+Ступени `sf-tooltip--size-1/3`, `sf-tooltip--size-1/2`, `sf-tooltip--size-1`,
+`sf-tooltip--size-2` и `sf-tooltip--size-3` меняют кегль и отступы. Подсказке
+у кнопки, поля или значка хватает одной ступени `sf-tooltip--size-1/3`
+(текст 12/16) в любом месте: она короткая и не растёт вместе с триггером.
 
 :::example {id="components/tooltip/sizes" label="Размеры подсказки"}
 :::
@@ -71,6 +72,7 @@ profile: reference
 
 `sf-tooltip--arrow-inline-end`, `sf-tooltip--arrow-inline-start`, `sf-tooltip--arrow-none` • [справочник](#классы)
 
+Подсказке стрелка не нужна: по умолчанию ставьте `sf-tooltip--arrow-none`.
 Класс стрелки задаёт и сторону, на которой открывается подсказка: стрелка
 снизу (`sf-tooltip--arrow-bottom-*`) ставит подсказку над триггером, стрелка
 сверху (`sf-tooltip--arrow-top-*`) — под ним, `sf-tooltip--arrow-inline-end`

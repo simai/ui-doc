@@ -118,7 +118,6 @@ document.addEventListener('sf-alert-action', (event) => {
 | Блок | `sf-alert` |
 | Части | `sf-alert-buttons`, `sf-alert-content`, `sf-alert-supporting-text`, `sf-alert-text`, `sf-alert-wrap` |
 | Модификаторы | `sf-alert--default`, `sf-alert--error`, `sf-alert--flat`, `sf-alert--info`, `sf-alert--neutral`, `sf-alert--outlined`, `sf-alert--success`, `sf-alert--warning` |
-| Устаревшие | `sf-alert--clear` → `sf-alert--neutral`, `sf-alert--danger` → `sf-alert--error` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

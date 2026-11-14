@@ -120,6 +120,31 @@ ring.setAttribute('value-text', 'Файлы загружены');
 </button>
 ```
 
+### Без скрипта
+
+Кольцо, значение которого не меняется после загрузки страницы, можно
+записать классами — так его рисует и сам компонент до запуска скрипта.
+Блок `sf-progress-ring` с размером `sf-progress-ring--size-*` и статусом
+`sf-progress-ring--success`, `--warning`, `--error` или `--info` получает
+долю в переменной `--sf-progress-ring--value` (от 0 до 100). Внутри —
+`sf-progress-ring-indicator` с ролью `progressbar` и значением для экранного
+диктора и необязательный текст `sf-progress-ring-content`, скрытый от
+диктора. `sf-progress-ring--indeterminate` рисует ожидание без доли.
+
+```html
+<div class="sf-progress-ring sf-progress-ring--size-1" style="--sf-progress-ring--value: 62">
+  <span class="sf-progress-ring-indicator" role="progressbar" aria-valuemin="0"
+        aria-valuemax="100" aria-valuenow="62" aria-label="Загрузка файлов"></span>
+  <span class="sf-progress-ring-content" aria-hidden="true">62%</span>
+</div>
+```
+
+Значение классового кольца меняют сами: и переменную, и `aria-valuenow`.
+Если доля меняется, берите `<sf-progress-ring>`.
+
+:::example {id="smart-components/progress-ring/static" label="Кольцо на классах"}
+:::
+
 ### Внешний вид
 
 Открытые переменные: `--sf-progress-ring-size`,

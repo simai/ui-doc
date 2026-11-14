@@ -1,24 +1,23 @@
 const startModalSize = (Modal) => {
   const variants = {
-    'default': ['без width', {}],
-    'width': ['width: \'40rem\'', {width: '40rem'}],
-    'fullscreen': ['fullscreen: true', {fullscreen: true}],
+    'default': ['Переименовать папку', '<p class="m-0">Окно по ширине своего содержимого.</p>', {}],
+    'width': ['Новый договор', '<p class="m-0">Форма договора занимает 40rem: поля не растягиваются на весь экран.</p>', {width: '40rem'}],
+    'fullscreen': ['Договор_2026.pdf', '<p class="m-0">Документ открыт на весь экран.</p>', {fullscreen: true}],
   };
 
-  Object.entries(variants).forEach(([key, [label, options]]) => {
+  Object.entries(variants).forEach(([key, [title, html, options]]) => {
     const id = `modal-size-${key}`;
     if (Modal.registry.has(id)) return;
 
-    const modal = new Modal({
+    new Modal({
       id,
       param: {
         container: '#modal-example-box',
-        title: label,
-        html: '<p class="m-0">Ширину и высоту окна задают параметры.</p>',
+        title,
+        html,
         ...options,
       },
     });
-    modal.template.querySelector('.sf-modal-close-button')?.setAttribute('aria-label', 'Закрыть окно');
   });
 };
 

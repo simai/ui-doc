@@ -1,2 +1,4 @@
-SIMAI Framework example file.
-This local asset is used to demonstrate the download-file component.
+Памятка покупателя
+
+Заказ принимается до 18:00 и отправляется на следующий рабочий день.
+Возврат — в течение 14 дней с чеком.

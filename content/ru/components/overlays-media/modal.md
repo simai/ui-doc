@@ -76,8 +76,8 @@ profile: reference
   открыл окно.
 - Окно закрывается по Escape, щелчку по фону и кнопке закрытия. Escape
   закрывает только верхнее окно, если открыто несколько.
-- Кнопка закрытия получает английское имя «Close modal». Переименуйте её после
-  создания: `modal.template.querySelector('.sf-modal-close-button').setAttribute('aria-label', 'Закрыть окно')`.
+- Кнопка закрытия получает имя «Закрыть» на языке страницы (`lang` у
+  `<html>` или у ближайшего предка), переименовывать её не нужно.
 - `unclose: true` отключает все три способа закрытия — только для
   обязательного решения, и тогда внутри окна нужны кнопки, которые завершают
   сценарий.
@@ -173,7 +173,6 @@ document.addEventListener('modal:before-close', (event) => {
 | Блок | `sf-modal` |
 | Части | `sf-modal-close-button`, `sf-modal-close-button--inline-end`, `sf-modal-focus-guard`, `sf-modal-footer`, `sf-modal-header`, `sf-modal-header-action`, `sf-modal-header-content`, `sf-modal-hide-button`, `sf-modal-hide-button--inline-end`, `sf-modal-hide-icon`, `sf-modal-loading`, `sf-modal-spinner`, `sf-modal-surface`, `sf-modal-surface--elevated`, `sf-modal-title` |
 | Размеры | `sf-modal--size-question` |
-| Устаревшие | `sf-modal--positon-bottom` → `sf-modal--position-bottom`, `sf-modal--positon-center` → `sf-modal--position-center`, `sf-modal--positon-inline-end` → `sf-modal--position-inline-end`, `sf-modal--positon-inline-start` → `sf-modal--position-inline-start`, `sf-modal--positon-left` → `sf-modal--position-left`, `sf-modal--positon-right` → `sf-modal--position-right`, `sf-modal--positon-top` → `sf-modal--position-top` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

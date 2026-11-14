@@ -93,8 +93,8 @@ Every example labels each sample with the class it demonstrates.
 | 10 | `## См. также` | no | hand |
 
 `## Классы` groups the component's public classes: the block, its parts
-(`sf-x-…`) and modifiers (`sf-x--…`), sizes apart, and the modifiers the
-change journal keeps only for compatibility with their replacement.
+(`sf-x-…`) and modifiers (`sf-x--…`) and sizes apart. Modifiers the change journal keeps only for
+compatibility are left out (D03): the names guide lists them.
 A component that ships only a script (theme, hide-show) is enrolled with
 `"css": false`: it has no «Классы» or «Переменные».
 `## Переменные` shows what the look is built from. When the release's

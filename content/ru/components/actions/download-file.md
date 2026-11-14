@@ -127,7 +127,7 @@ const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener
 
 whenLoader(() => SF.Loader.ready('DownloadFile', (DownloadFile) => {
   const file = new DownloadFile({
-    param: {fileName: 'Отчёт.pdf', fileSize: '2.4MB', href: '/files/report.pdf', download: true},
+    param: {fileName: 'Отчёт_за_III_квартал.pdf', fileSize: '2,4 МБ', href: '/files/report-q3.pdf', download: true},
   });
   document.querySelector('#attachments').append(file.render());
 }));

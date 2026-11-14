@@ -229,9 +229,9 @@ whenLoader(() => SF.Loader.ready('Textarea', (Textarea) => {
 `2`), `type` (`bordered` или `filled`), `rows`, `required`, `disabled`,
 `readonly`, `error` (или `invalid`) с `errorMessage`, `autocomplete`,
 `inputMode`, `minLength`, `maxLength`, `spellcheck`, `wrap`, `mask` с
-`maskPattern` или `maskOptions`. Класс по умолчанию делает поле обязательным и
-ставит подпись `Label` и placeholder `placeholder`: задавайте `label`,
-`required` и `placeholder` явно.
+`maskPattern` или `maskOptions`. Без параметров поле не обязательное, без
+подписи и без подсказки внутри: задайте `label`, а `required` и
+`placeholder` — когда они нужны.
 
 ## Классы
 

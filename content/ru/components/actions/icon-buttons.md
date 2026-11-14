@@ -228,7 +228,6 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 | Части | `sf-icon-button-spinner`, `sf-icon-button-state-loading` |
 | Модификаторы | `sf-icon-button--close`, `sf-icon-button--danger`, `sf-icon-button--default`, `sf-icon-button--ghost`, `sf-icon-button--height-high`, `sf-icon-button--height-highest`, `sf-icon-button--height-low`, `sf-icon-button--icon`, `sf-icon-button--link`, `sf-icon-button--on-surface`, `sf-icon-button--on-surface-variant`, `sf-icon-button--outline`, `sf-icon-button--pressed`, `sf-icon-button--primary`, `sf-icon-button--tonal` |
 | Размеры | `sf-icon-button--size-1`, `sf-icon-button--size-1/2`, `sf-icon-button--size-1/3`, `sf-icon-button--size-2`, `sf-icon-button--size-3` |
-| Устаревшие | `sf-icon-button--error` → `sf-icon-button--danger`, `sf-icon-button--secondary` → `sf-icon-button--on-surface sf-icon-button--on-surface-variant`, `sf-icon-button--surface` → `sf-icon-button--tonal` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

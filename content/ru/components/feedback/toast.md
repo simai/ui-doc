@@ -42,8 +42,7 @@ profile: reference
 Статус задаёт цвет заливки, границы, текста и иконки: `sf-toast--neutral`,
 `sf-toast--info`, `sf-toast--success`, `sf-toast--warning`,
 `sf-toast--error` — общий словарь статусов Framework. Выбирайте статус по
-смыслу сообщения, а не по желаемому цвету. Классы `sf-toast--default` и
-`sf-toast--primary` — другие имена `neutral` и `info`.
+смыслу сообщения, а не по желаемому цвету.
 
 :::example {id="components/toast/overview" label="Статусы сообщения"}
 :::
@@ -86,8 +85,7 @@ profile: reference
 `trigger` (при закрытии по времени `trigger` равен `null`). Недоступная кнопка
 (`disabled` или `aria-disabled="true"`) событий не вызывает. На время
 удаления блок получает класс `closing` и плавно гаснет; при системной
-настройке уменьшения движения блок удаляется сразу. `data-toast-action` и
-`data-toast-close` — другие имена тех же атрибутов. Само действие выполняет
+настройке уменьшения движения блок удаляется сразу. Само действие выполняет
 приложение.
 
 :::example {id="components/toast/actions" label="Действие"}
@@ -115,8 +113,7 @@ SF.Toast.show('#toasts', {
 `actionText` и `action` (кнопка действия и её значение), `closable` (по
 умолчанию `true`), `closeLabel`, `duration`, `role` (`status` или `alert`).
 `status` принимает общие значения статуса: `neutral`, `info`, `success`,
-`warning` и `error`; прежние `default` и `primary` означают `neutral` и
-`info`, а неизвестное значение собирает нейтральное сообщение. Компонент также регистрирует класс `Toast` с
+`warning` и `error`; неизвестное значение собирает нейтральное сообщение. Компонент также регистрирует класс `Toast` с
 теми же параметрами: `SF.Loader.ready('Toast', callback)` передаёт его после
 события `sf-loader-init`.
 
@@ -175,7 +172,6 @@ handle.close();
 | Блок | `sf-toast` |
 | Части | `sf-toast-bottom`, `sf-toast-container`, `sf-toast-supporting-text`, `sf-toast-text`, `sf-toast-wrap` |
 | Модификаторы | `sf-toast--error`, `sf-toast--info`, `sf-toast--neutral`, `sf-toast--success`, `sf-toast--warning` |
-| Устаревшие | `sf-toast--default` → `sf-toast--neutral`, `sf-toast--primary` → `sf-toast--info` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

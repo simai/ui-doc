@@ -65,4 +65,4 @@ description: "Отодвигает внешний контур от рамки �
 
 - [Толщина внешней границы](/ru/utilities/outline/outline-width/)
 - [Цвет внешней границы](/ru/utilities/outline/outline-color/)
-- [Фокусное кольцо](/ru/utilities/outline/ring/)
+- [Кольцо выбора](/ru/utilities/outline/ring/)

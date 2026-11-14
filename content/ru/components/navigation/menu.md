@@ -161,7 +161,7 @@ profile: reference
 смарт-компонент [Меню](/ru/smart/navigation/menu/#группы-разделов), а эти
 классы дают им вид.
 
-:::example {id="smart-components/menu/groups" label="Группы" preview=sandbox log_console=true log_open=false}
+:::example {id="components/menu/groups" label="Группы на классах"}
 :::
 
 ## Состояния

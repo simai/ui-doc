@@ -412,7 +412,7 @@
         "sf-modal"
       ]
     },
-    "components/overlays-media/swiper.md": {
+    "components/tools/swiper.md": {
       "kind": "component",
       "component": "swiper",
       "blocks": [
@@ -429,7 +429,8 @@
     "components/tools/hide-show.md": {
       "kind": "component",
       "component": "hideShow",
-      "css": false
+      "css": false,
+      "badge": "sf-hide-show"
     },
     "components/tools/outline.md": {
       "kind": "component",
@@ -448,7 +449,8 @@
     "components/tools/theme.md": {
       "kind": "component",
       "component": "theme",
-      "css": false
+      "css": false,
+      "badge": "sf-theme-button"
     },
     "smart/actions/segmented.md": {
       "kind": "smart",
@@ -2079,6 +2081,12 @@
     "smart/navigation/settings.md": {
       "kind": "smart",
       "standard": 3
+    },
+    "utilities/layout/z-index.md": {
+      "kind": "utility",
+      "families": [
+        "z-index"
+      ]
     }
   }
 }

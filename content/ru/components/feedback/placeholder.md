@@ -32,9 +32,7 @@ profile: reference
   потомком блока и не сжимается.
 - `sf-placeholder__actions` держит одну понятную кнопку, если пользователь
   может исправить ситуацию.
-- Компонент работает без JavaScript. Части `sf-placeholder-right`,
-  `sf-placeholder-top` и `sf-placeholder-top-text` — другие имена
-  `__content`, `__header` и заголовка с пояснением.
+- Компонент работает без JavaScript.
 
 ## Варианты
 

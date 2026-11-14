@@ -489,6 +489,8 @@ const componentClasses = (component, block) => {
     }
   }
   const sorted = [...names].sort();
+  // Modifiers the change journal keeps only for compatibility are left out:
+  // a page shows only what to write today (D03); the names guide lists them.
   const sizes = sorted.filter((name) => name.startsWith(`${block}--size-`));
   const legacy = legacyModifiers(block, names);
   const modifiers = sorted.filter((name) => name.startsWith(`${block}--`) && !sizes.includes(name) && !legacy.has(name));
@@ -501,7 +503,6 @@ const componentClasses = (component, block) => {
     ...row('Части', parts),
     ...row('Модификаторы', modifiers),
     ...row('Размеры', sizes),
-    ...(legacy.size ? [`| Устаревшие | ${[...legacy].sort().map(([from, to]) => `${code(from)} → ${code(to)}`).join(', ')} |`] : []),
   ];
 };
 
@@ -688,7 +689,9 @@ for (const [page, entry] of Object.entries(settings.pages)) {
     next = setSection(next, 'component', 'Переменные', componentVariablesSection(entry.component, blocks));
   }
   if (entry.kind === 'component') {
-    next = withBadges(next, (entry.blocks ?? [entry.block])[0], passportVersion(entry.component));
+    // A script-only component has no block in its sheet: its entry names the
+    // class or tag a reader writes (`badge`), so it still gets the line (D01).
+    next = withBadges(next, entry.badge ?? (entry.blocks ?? [entry.block])[0], passportVersion(entry.component));
   }
   if (next !== current) {
     changed.push(page);

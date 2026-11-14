@@ -26,7 +26,7 @@ profile: reference
 и точками `sf-slider-dots`.
 
 - Скрипт компонента находит слайдеры по `.sf-slider` и строит их на движке
-  [Swiper](/ru/components/overlays-media/swiper/) из компонента `swiper`.
+  [движок перелистывания](/ru/components/tools/swiper/) из компонента `swiper`.
   Классы `swiper`, `swiper-wrapper` и `swiper-slide` нужны движку.
 - Стрелки — кнопки с иконкой (`sf-icon-button`) с классами
   `sf-slider-button-prev` и `sf-slider-button-next` и своими `aria-label`.
@@ -239,5 +239,5 @@ swiper?.on('slideChange', () => console.log(swiper.realIndex));
 
 ## См. также
 
-- [Swiper](/ru/components/overlays-media/swiper/)
+- [движок перелистывания](/ru/components/tools/swiper/)
 - [Slider — смарт-компонент](/ru/smart/content/slider/)

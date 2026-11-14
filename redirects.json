@@ -388,7 +388,7 @@
     },
     {
       "from": "ru/components/reference/swiper",
-      "to": "ru/components/overlays-media/swiper"
+      "to": "ru/components/tools/swiper"
     },
     {
       "from": "ru/components/reference/switch",
@@ -464,7 +464,7 @@
     },
     {
       "from": "ru/components/swiper",
-      "to": "ru/components/overlays-media/swiper"
+      "to": "ru/components/tools/swiper"
     },
     {
       "from": "ru/components/switch",
@@ -908,7 +908,7 @@
     },
     {
       "from": "ru/framework-components/reference/swiper",
-      "to": "ru/components/overlays-media/swiper"
+      "to": "ru/components/tools/swiper"
     },
     {
       "from": "ru/framework-components/reference/switch",
@@ -984,7 +984,7 @@
     },
     {
       "from": "ru/framework-components/swiper",
-      "to": "ru/components/overlays-media/swiper"
+      "to": "ru/components/tools/swiper"
     },
     {
       "from": "ru/framework-components/switch",
@@ -3889,6 +3889,14 @@
     {
       "from": "ru/smart/forms/slider",
       "to": "ru/smart/content/slider"
+    },
+    {
+      "from": "ru/components/overlays-media/swiper",
+      "to": "ru/components/tools/swiper"
+    },
+    {
+      "from": "ru/components/feedback/progress-ring",
+      "to": "ru/smart/feedback/progress-ring"
     }
   ]
 }

@@ -182,8 +182,10 @@ whenLoader(() => SF.Loader.ready('Quantity', (Quantity) => {
 `min`, `max`, `step`, `precision`, `grouping`, `locale`, `inputMode` (`soft`
 или `strict`), `allowNegative`, `allowDecimal`, `mask`, `required`,
 `disabled`, `readonly`, `decrementLabel`, `incrementLabel`, `decrementIcon`,
-`incrementIcon`. Класс по умолчанию делает поле обязательным, ставит подпись
-`Label` и английские подписи кнопок: задавайте их явно.
+`incrementIcon`. Без параметров поле не обязательное и без подписи: задайте
+`label`, а `required` — когда значение нужно. Кнопки называются «Уменьшить
+значение» и «Увеличить значение» на языке страницы; `decrementLabel` и
+`incrementLabel` уточняют, что меняется.
 
 ## Классы
 

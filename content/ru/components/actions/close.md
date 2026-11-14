@@ -8,10 +8,10 @@ profile: reference
 
 :badge[sf-close]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
-Кнопка закрытия закрывает окно, панель, уведомление или убирает тег. Она
-рисует крестик без иконочного шрифта, а действие выполняет нативная кнопка
-[с иконкой](/ru/components/actions/icon-buttons/) с модификатором
-`sf-icon-button--close`.
+Кнопка закрытия закрывает окно, панель, уведомление или убирает тег. Здесь —
+её классы для своей разметки; обычно берут смарт-компонент
+[кнопка закрытия](/ru/smart/actions/close/), который собирает ту же разметку
+сам и называет кнопку «Закрыть».
 
 ## Пример
 
@@ -24,9 +24,10 @@ profile: reference
 `button.sf-icon-button.sf-icon-button--close` → `span.sf-close` →
 `span.sf-close-icon`.
 
-- Кнопка — нативный `<button type="button">` с классами кнопки с иконкой:
-  вид, схема, размер и `sf-icon-button--close`, который окрашивает знак
-  цветом схемы.
+- Кнопка — нативный `<button type="button">` с классами
+  `sf-icon-button sf-icon-button--size-* sf-icon-button--close` (коробка и
+  размер кнопки с иконкой) и `sf-button-close` с видом и цветом:
+  `sf-button-close--ghost sf-button-close--on-surface`.
 - `sf-close` с `aria-hidden="true"` — оболочка знака с отступами;
   `sf-close-icon` внутри неё рисует крестик.
 - Размер знака `sf-close--size-*` совпадает с размером кнопки
@@ -48,10 +49,14 @@ profile: reference
 
 ### Вид
 
-Вид кнопки задают классы кнопки с иконкой. Чаще всего закрытие — лёгкое
-действие `sf-icon-button--link`; `tonal`, `outline` и `default` нужны, когда
-кнопке нужна видимая граница или заливка, `surface` — поверх изображения или
-цветного фона.
+Видов три. По умолчанию `sf-button-close--ghost`: простой крестик цвета
+окружения, при наведении под ним появляется полупрозрачное пятно формы
+соседних кнопок с иконкой; `sf-button-close--radius-rounded` делает пятно
+круглым. `sf-button-close--plain` — без пятна: при наведении темнеет только
+крестик, фокус показывает кольцо; так закрывают тег, очищают поле, убирают
+строку. `sf-button-close--media` — тёмный полупрозрачный круг с белым
+крестиком поверх фото и видео, одинаковый в обеих темах. Цвет крестика
+задаёт `sf-button-close--on-surface` или `sf-button-close--on-surface-variant`.
 
 :::example {id="components/close/appearance" label="Виды кнопки закрытия"}
 :::

@@ -1,13 +1,36 @@
 <div id="modal-example-box">
   <div sf-asset="modal" class="hidden"></div>
 
-  <div class="flex flex-wrap gap-2">
-    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-positions-center"><span class="sf-button-text-container">center</span></button>
-    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-positions-left"><span class="sf-button-text-container">left</span></button>
-    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-positions-right"><span class="sf-button-text-container">right</span></button>
-    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-positions-inline-start"><span class="sf-button-text-container">inline-start</span></button>
-    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-positions-inline-end"><span class="sf-button-text-container">inline-end</span></button>
-    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-positions-top"><span class="sf-button-text-container">top</span></button>
-    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-positions-bottom"><span class="sf-button-text-container">bottom</span></button>
+  <div class="query-container">
+    <div class="grid grid-col-1 cq-sm:grid-col-2 cq-md:grid-col-4 gap-4">
+      <div class="flex flex-col items-cross-center gap-2">
+        <div class="flex flex-1 flex-col items-cross-center content-main-center gap-2"><button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-positions-center"><span class="sf-button-text-container">Удалить заказ</span></button></div>
+        <span class="text-1/2 color-on-surface-variant">position: center</span>
+      </div>
+      <div class="flex flex-col items-cross-center gap-2">
+        <div class="flex flex-1 flex-col items-cross-center content-main-center gap-2"><button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-positions-inline-start"><span class="sf-button-text-container">Фильтры</span></button></div>
+        <span class="text-1/2 color-on-surface-variant">position: inline-start</span>
+      </div>
+      <div class="flex flex-col items-cross-center gap-2">
+        <div class="flex flex-1 flex-col items-cross-center content-main-center gap-2"><button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-positions-inline-end"><span class="sf-button-text-container">Карточка клиента</span></button></div>
+        <span class="text-1/2 color-on-surface-variant">position: inline-end</span>
+      </div>
+      <div class="flex flex-col items-cross-center gap-2">
+        <div class="flex flex-1 flex-col items-cross-center content-main-center gap-2"><button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-positions-top"><span class="sf-button-text-container">Объявление</span></button></div>
+        <span class="text-1/2 color-on-surface-variant">position: top</span>
+      </div>
+      <div class="flex flex-col items-cross-center gap-2">
+        <div class="flex flex-1 flex-col items-cross-center content-main-center gap-2"><button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-positions-bottom"><span class="sf-button-text-container">Согласие на файлы cookie</span></button></div>
+        <span class="text-1/2 color-on-surface-variant">position: bottom</span>
+      </div>
+      <div class="flex flex-col items-cross-center gap-2">
+        <div class="flex flex-1 flex-col items-cross-center content-main-center gap-2"><button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-positions-left"><span class="sf-button-text-container">Схема зала</span></button></div>
+        <span class="text-1/2 color-on-surface-variant">position: left</span>
+      </div>
+      <div class="flex flex-col items-cross-center gap-2">
+        <div class="flex flex-1 flex-col items-cross-center content-main-center gap-2"><button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-positions-right"><span class="sf-button-text-container">Шкала громкости</span></button></div>
+        <span class="text-1/2 color-on-surface-variant">position: right</span>
+      </div>
+    </div>
   </div>
 </div>
