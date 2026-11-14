@@ -38,6 +38,7 @@
             "@docs:smart-reference:check",
             "@docs:example-classes:check",
             "@docs:example-helpers:check",
+            "@docs:example-contrast:check",
             "@docs:reference-sections:check",
             "@docs:reference-pages:check",
             "@docs:layout-classes:check",
@@ -56,6 +57,8 @@
             "@php scripts/audit-smart-lessons.php",
             "@php scripts/test-recipe-edition.php"
         ],
+        "docs:example-contrast:check": "node scripts/audit-example-contrast.mjs",
+        "docs:example-contrast:roles": "node scripts/audit-example-contrast.mjs --refresh-roles",
         "docs:architecture:check": [
             "@php scripts/audit-guide-information-architecture.php",
             "@php scripts/audit-guide-redirects.php",
