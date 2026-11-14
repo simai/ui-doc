@@ -6,7 +6,7 @@ profile: reference
 
 # Количество
 
-:badge[sf-quantity]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-quantity]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Поле количества принимает число с клавиатуры или меняет его кнопками «минус» и
 «плюс» на заданный шаг. Подходит для количества товаров, мест, участников и
@@ -194,7 +194,7 @@ whenLoader(() => SF.Loader.ready('Quantity', (Quantity) => {
 | Блок | `sf-quantity` |
 | Части | `sf-quantity-count`, `sf-quantity-hint-text-wrap`, `sf-quantity-inherited`, `sf-quantity-label`, `sf-quantity-required`, `sf-quantity-row`, `sf-quantity-text`, `sf-quantity-unit`, `sf-quantity-wrap` |
 | Модификаторы | `sf-quantity--pointer-focus`, `sf-quantity--steppers-none` |
-| Размеры | `sf-quantity--size-1`, `sf-quantity--size-1/2`, `sf-quantity--size-2` |
+| Размеры | `sf-quantity--size-1`, `sf-quantity--size-1/2`, `sf-quantity--size-1/3`, `sf-quantity--size-2`, `sf-quantity--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

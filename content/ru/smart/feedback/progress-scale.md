@@ -5,7 +5,7 @@ description: "Показывает известный ход процесса ш
 
 # Шкала прогресса
 
-:badge[sf-progress-scale]{variant=tonal scheme=primary size=1/2} :badge[1.1.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-scale]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Шкала прогресса показывает известную долю выполненного десятью делениями.
 Берите её, когда точность до процента не нужна и ход удобнее читать крупными
@@ -111,7 +111,10 @@ scale.setProgress(completedSteps * 20);
 | `line` | строка | пусто | пусто, `1/2`, `1`, `2` | Высота в строку текста этого размера — для ячейки таблицы или ряда полей, чтобы строка не стала выше. |
 | `value` | число | `0` | от 0; до 100; шаблон `^(?:100\|[1-9]?[0-9])(?:\.[0-9]+)?$` | — |
 | `show-text` | да/нет | да | — | — |
-| `status` | строка | `neutral` | `neutral`, `info`, `success`, `warning`, `error` | Цвет по смыслу, например `success` или `error`. `primary` тоже принимается и значит `neutral`. |
+| `status` | строка | пусто | пусто, `neutral`, `info`, `success`, `warning`, `error` | О чём сообщает значение, по общему словарю статусов. Пусто (по умолчанию) — primary темы; neutral — серый, как у sf-dot и sf-badge; info, success, warning и error — свои роли. Прежнее слово primary ещё принимается и значит то же, что по умолчанию. С warning-at или error-at шкала берёт более серьёзное из этого статуса и порога, которого достигло значение. |
+| `warning-at` | число | — | от 0; до 100 | Порог в процентах: с этого значения компонент сам становится предупреждением (диск заполнен на 83 % при warning-at 80). Порог задаёт страница, компонент только сравнивает. Не задан — порога нет. |
+| `error-at` | число | — | от 0; до 100 | Порог в процентах: с этого значения компонент сам становится ошибкой (диск заполнен на 83 % при error-at 80). Порог задаёт страница, компонент только сравнивает. Не задан — порога нет. Если заданы оба, он выше warning-at. |
+| `meter` | да/нет | нет | — | Значение — количество в известных пределах (занятая квота, заполненный диск), а не ход задачи: role meter вместо progressbar. У meter всегда есть значение, поэтому неопределённым он не бывает. Вид не меняется. |
 | `label` | строка | пусто | — | — |
 | `value-text` | строка | пусто | — | — |
 | `aria-label` | строка | пусто | — | — |
@@ -142,13 +145,13 @@ scale.setProgress(completedSteps * 20);
 
 | | |
 |:---|:---|
-| Тег | `<sf-progress-scale>`, контракт `smart.progress-scale` версии `1.1.4` |
-| Поставка | выпуск Framework `ui-7fb26d395af2` |
+| Тег | `<sf-progress-scale>`, контракт `smart.progress-scale` версии `1.2.0` |
+| Поставка | выпуск Framework `ui-994f9db407fa` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как индикатор прогресса; нужна подпись или `aria-label`. |
-| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/progress-scale` |
-| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-progress-scale` |
+| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/progress-scale` |
+| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-progress-scale` |
 
 ## См. также
 

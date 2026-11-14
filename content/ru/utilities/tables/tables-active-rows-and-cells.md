@@ -30,10 +30,10 @@ description: "Подсвечивает выбранную строку или я
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `table-stripe` | `.table-stripe > :not(caption) > tr.table-active > :nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color) }; .table-stripe > :not(caption) > tr > .table-active:nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color) }` | — |
-| `table-stripe-col` | `.table-stripe-col > :not(caption) > tr.table-active > :nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color) }; .table-stripe-col > :not(caption) > tr > .table-active:nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color) }` | — |
-| `table-active` | `--sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); .table-active > :nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color) }` | — |
-| `table-hover` | `.table-hover > tbody > tr:hover > * { --sf-table-accent-bg: var(--sf-table-hover-bg); color: var(--sf-table-hover-color) }; .table-hover.table-stripe > tbody > tr:nth-of-type(odd):hover > * { --sf-table-accent-bg: var(--sf-surface-state-select) }` | — |
+| `table-stripe` | `.table-stripe > :not(caption) > tr.table-active > :nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }; .table-stripe > :not(caption) > tr > .table-active:nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }` | — |
+| `table-stripe-col` | `.table-stripe-col > :not(caption) > tr.table-active > :nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }; .table-stripe-col > :not(caption) > tr > .table-active:nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }` | — |
+| `table-active` | `--sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg); .table-active > :nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }` | — |
+| `table-hover` | `.table-hover > tbody > tr:hover > * { --sf-table-accent-bg: var(--sf-table-hover-bg); color: var(--sf-table-hover-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }; .table-hover.table-stripe > tbody > tr:nth-of-type(odd):hover > * { --sf-table-accent-bg: var(--sf-surface-state-select); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
@@ -47,6 +47,7 @@ description: "Подсвечивает выбранную строку или я
 |:---|:---|
 | `--sf-table-active-bg` | задаётся темой |
 | `--sf-table-active-color` | задаётся темой |
+| `--sf-surface-place-solid` | `var(--sf-surface-page)` |
 | `--sf-table-hover-bg` | задаётся темой |
 | `--sf-table-hover-color` | задаётся темой |
 | `--sf-surface-state-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |

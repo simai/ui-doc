@@ -244,12 +244,12 @@ SF.Resizer.attach(table, {
 | | |
 |:---|:---|
 | Тег | `<sf-resizer>`, контракт `smart.resizer` версии `1.1.5` |
-| Поставка | выпуск Framework `ui-7fb26d395af2` |
+| Поставка | выпуск Framework `ui-994f9db407fa` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как разделитель; желательна подпись или `aria-label`; с клавиатуры: `←`, `→`, `Home`, `End`, `PageUp`, `PageDown`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/resizer` |
-| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-resizer` |
+| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/resizer` |
+| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-resizer` |
 
 ## См. также
 

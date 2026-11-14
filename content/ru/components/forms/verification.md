@@ -6,7 +6,7 @@ profile: reference
 
 # Код подтверждения
 
-:badge[sf-verification]{variant=tonal scheme=primary size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-verification]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Код подтверждения принимает одноразовый код из сообщения или приложения и
 показывает его по отдельным ячейкам. Под ячейками лежит одно нативное поле,
@@ -151,9 +151,9 @@ document.addEventListener('verification:complete', (event) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-verification` |
-| Части | `sf-verification-cell`, `sf-verification-cells`, `sf-verification-form`, `sf-verification-form--filled`, `sf-verification-form--size-1`, `sf-verification-form--size-1/2`, `sf-verification-form--size-2`, `sf-verification-form-hint`, `sf-verification-form-label`, `sf-verification-form-wrap`, `sf-verification-input` |
-| Модификаторы | `sf-verification--filled` |
-| Размеры | `sf-verification--size-1`, `sf-verification--size-1/2`, `sf-verification--size-2` |
+| Части | `sf-verification-cell`, `sf-verification-cells`, `sf-verification-form`, `sf-verification-form--filled`, `sf-verification-form--size-1`, `sf-verification-form--size-1/2`, `sf-verification-form--size-1/3`, `sf-verification-form--size-2`, `sf-verification-form--size-3`, `sf-verification-form-hint`, `sf-verification-form-label`, `sf-verification-form-wrap`, `sf-verification-input`, `sf-verification-separator` |
+| Модификаторы | `sf-verification--filled`, `sf-verification--pointer-focus` |
+| Размеры | `sf-verification--size-1`, `sf-verification--size-1/2`, `sf-verification--size-1/3`, `sf-verification--size-2`, `sf-verification--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -190,7 +190,7 @@ document.addEventListener('verification:complete', (event) => {
 | `--sf-verification--cell-size` | `var(--sf-verification-cell-size, var(--sf-ui-1--control-height))` | `width`, `inline-size`, `height`, `block-size` |
 | `--sf-verification--font-size` | не задана; задают модификаторы, например `.sf-verification--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-verification--gap` | `var(--sf-verification-gap, var(--sf-space-1/3))` | `gap` |
-| `--sf-verification--line-height` | не задана; задают модификаторы, например `.sf-verification--size-1/2`: `var(--sf-text-height-1/2)` | `line-height` |
+| `--sf-verification--line-height` | не задана; задают модификаторы, например `.sf-verification--size-1/2`: `var(--sf-text-height-1/2)` | `line-height`, `height`, `block-size` |
 | `--sf-verification--radius` | `var(--sf-verification-radius, var(--sf-radius--ui))` | `border-radius` |
 
 ## См. также

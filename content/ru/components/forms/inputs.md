@@ -6,7 +6,7 @@ profile: reference
 
 # Текстовые поля
 
-:badge[sf-input]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input]{variant=tonal scheme=primary size=1/2} :badge[1.6.1]{variant=outline scheme=on-surface size=1/2}
 
 Текстовое поле принимает короткое значение в одну строку: имя, адрес почты,
 пароль или поисковый запрос. Для текста с переносами строк берите
@@ -271,7 +271,7 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 | `--sf-input-border-color` | Рамка поля в спокойном состоянии. | `var(--sf-outline)`; зависит от вида |
 | `--sf-input-color` | Цвет введённого текста. | `inherit` |
 | `--sf-input-radius` | Скругление углов поля. | `var(--sf-radius--ui)` |
-| `--sf-input-padding-inline` | Внутренний отступ поля до и после содержимого по строчной оси. | `var(--sf-ui-1--space-x)`; зависит от размера |
+| `--sf-input-padding-inline` | Внутренний отступ поля до и после содержимого по строчной оси. | `calc(var(--sf-space-1) - var(--sf-px))`; зависит от размера |
 | `--sf-input-padding-block` | Внутренний отступ поля над и под содержимым. | `calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px))`; зависит от размера |
 | `--sf-input-invalid-border-color` | Рамка поля при ошибке (вид с рамкой). | `var(--sf-error)` |
 
@@ -287,8 +287,11 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
+| `--sf-input--inset` | `var(--sf-space-1)` | `--sf-input--value-inset`, `--sf-input-field--padding-inline-start`, `--sf-input-field--padding-inline-end`, `--sf-field-action--inset` |
+| `--sf-input--line-radius` | `min(var(--sf-input--radius), var(--sf-ui-1--control-height) / 2)` | `--sf-input--value-inset` |
 | `--sf-input--place-variant` | не задана; задают модификаторы, например `.sf-input.sf-input--filled`: `var(--sf-place--fill-placeholder, var(--sf-on-surface-variant))` | `--sf-input-placeholder--color` |
-| `--sf-input--radius` | `var(--sf-input-radius, var(--sf-radius--ui))` | `--sf-input-field--border-end-end-radius`, `--sf-input-field--border-end-start-radius`, `--sf-input-field--border-start-end-radius`, `--sf-input-field--border-start-start-radius` |
+| `--sf-input--radius` | `var(--sf-input-radius, var(--sf-radius--ui))` | `--sf-input-field--border-end-end-radius`, `--sf-input-field--border-end-start-radius`, `--sf-input-field--border-start-end-radius`, `--sf-input-field--border-start-start-radius`, `--sf-input--line-radius` |
+| `--sf-input--value-inset` | `calc(var(--sf-input--inset) + max(calc(var(--sf-px) * 0), var(--sf-input--line-radius) - var(--sf-radius-1/2)) / 2)` | `--sf-input-field--padding-inline-start`, `--sf-input-field--padding-inline-end` |
 | `--sf-input-field--background-color` | не задана; задают модификаторы, например `.sf-input.error.sf-input--bordered .sf-input-field`: `var(--sf-transparent-for-focus)` | `background-color` |
 | `--sf-input-field--border` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-px) solid` | `border`, `border-color`, `border-bottom-color`, `border-block-end-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `--sf-input-field--line-color` |
 | `--sf-input-field--border-color` | не задана; задают модификаторы, например `.sf-input.error.sf-input--bordered .sf-input-field`: `var(--sf-input-invalid-border-color, var(--sf-error))` | `border-color`, `border-bottom-color`, `border-block-end-color`, `--sf-input-field--line-color` |

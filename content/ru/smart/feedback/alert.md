@@ -5,7 +5,7 @@ description: "Показывает постоянное сообщение в п
 
 # Уведомление
 
-:badge[sf-alert]{variant=tonal scheme=primary size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-alert]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Уведомление показывает сообщение, которое остаётся на странице, пока его не
 закроют: предупреждение перед действием, ошибку формы, итог проверки. Для
@@ -135,7 +135,7 @@ form.prepend(alert);
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
 | `status` | строка | `neutral` | `neutral`, `info`, `success`, `warning`, `error` | Цвет по смыслу: `neutral`, `info`, `success`, `warning` или `error`. `clear` и `danger` тоже принимаются и значат `neutral` и `error`. |
-| `appearance` | строка | `default` | `default`, `outlined`, `flat` | Вид уведомления: заливка, контур или плоский. |
+| `appearance` | строка | `default` | `default`, `outlined`, `flat` | Вид уведомления, один из трёх: default — рамка и заливка статуса, outlined — только рамка, flat — заливка статуса без рамки, приподнятая тенью карточки. |
 | `icon` | строка | пусто | — | Своя иконка вместо иконки по статусу; `none` скрывает иконку. |
 | `heading` | строка | пусто | — | — |
 | `supporting-text` | строка | пусто | — | Дополнительный основной текст обычного размера. |
@@ -143,6 +143,7 @@ form.prepend(alert);
 | `action` | строка | `action` | — | Стабильное значение действия, передаваемое в sf-alert-action. |
 | `secondary-action-text` | строка | пусто | — | Видимая подпись вторичного необязательного действия. |
 | `secondary-action` | строка | `secondary` | — | Стабильное значение вторичного действия, передаваемое в sf-alert-action. |
+| `actions-layout` | строка | `auto` | `auto`, `under` | Где стоят действия: auto — в строке с текстом, пока уведомление достаточно широкое, и под текстом, когда уже; under — всегда под текстом, для длинного текста. Любое другое слово — auto. |
 | `closable` | да/нет | нет | — | Отображает явно названное действие закрытия. |
 | `close-label` | строка | — | — | Доступное имя действия закрытия на языке страницы. Пусто — текст на языке страницы (по-английски «Close alert»). |
 | `aria-label` | строка | пусто | — | — |
@@ -179,13 +180,13 @@ form.prepend(alert);
 
 | | |
 |:---|:---|
-| Тег | `<sf-alert>`, контракт `smart.alert` версии `1.2.1` |
-| Поставка | выпуск Framework `ui-7fb26d395af2` |
+| Тег | `<sf-alert>`, контракт `smart.alert` версии `1.4.1` |
+| Поставка | выпуск Framework `ui-994f9db407fa` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как строка состояния; название компонент ставит сам; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/alert` |
-| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-alert` |
+| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/alert` |
+| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-alert` |
 
 ## См. также
 

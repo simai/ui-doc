@@ -5,7 +5,7 @@ description: "Открывает небольшую панель у кнопки
 
 # Всплывающая панель
 
-:badge[sf-popover]{variant=tonal scheme=primary size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-popover]{variant=tonal scheme=primary size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Всплывающая панель открывается рядом с кнопкой: фильтр, настройки поля, список
 того, что можно добавить. Она закрывается по `Escape` и нажатию снаружи и
@@ -113,10 +113,11 @@ popover.addEventListener('sf-popover-closed', () => {
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
-| `placement` | строка | `bottom-end` | `bottom-start`, `bottom-end`, `top-start`, `top-end`, `inline-start`, `inline-end` | От какого угла триггера отображается поверхность. |
+| `placement` | строка | `bottom-end` | `bottom-start`, `bottom-end`, `top-start`, `top-end`, `inline-start`, `inline-end`, `bottom`, `top`, `start`, `start-start`, `start-end`, `end`, `end-start`, `end-end` | Где стоит панель относительно кнопки: top, bottom, start или end по центру кнопки, или с -start или -end — начальным или конечным краем по краю кнопки (inline-start и inline-end — это start-start и end-start). start и end следуют направлению письма. У края окна панель сдвигается вдоль края кнопки или переходит на другую сторону. |
 | `label` | строка | пусто | — | Доступное имя поверхности. Поверхность с ролью, но без имени объявляется как безымянная. |
 | `width` | строка | пусто | — | Собственная ширина. Без неё поверхность принимает ширину самой длинной строки, и список имён получается широким и неровным. |
-| `offset` | строка | пусто | — | Зазор между кнопкой и открытой панелью, например `var(--sf-space-1/3)` или `4px`. Пусто — панель прилегает к кнопке. |
+| `offset` | строка | пусто | — | Промежуток между кнопкой и панелью: токен (var(--sf-space-1\/3)) или длина CSS. Пусто — панель касается кнопки; со стрелкой — вылет стрелки. |
+| `arrow` | да/нет | нет | — | Стрелка к кнопке, по умолчанию выключена. У неё та же тень, что у панели (тень наложения рисуется фильтром поверх панели и стрелки); со стрелкой панель сама не прокручивается, а отступ равен вылету стрелки (space 1/2), если offset не задаёт другой. |
 | `dismissible` | да/нет | да | — | Esc и нажатие снаружи закрывают её. Потребитель, который сам обрабатывает эти действия, отключает это и вызывает close(), когда решит. |
 | `surface-role` | строка | `dialog` | `dialog`, `menu`, `listbox`, `group` | Чем поверхность является для читателя: dialog, menu, listbox или group. Задаётся на sf-popover; поверхность получает role, а триггер — aria-haspopup. |
 | `unsaved` | да/нет | нет | — | — |
@@ -156,12 +157,12 @@ popover.addEventListener('sf-popover-closed', () => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-popover>`, контракт `smart.popover` версии `1.5.1` |
-| Поставка | выпуск Framework `ui-7fb26d395af2` |
+| Тег | `<sf-popover>`, контракт `smart.popover` версии `1.6.0` |
+| Поставка | выпуск Framework `ui-994f9db407fa` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
-| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/popover` |
-| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-popover` |
+| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/popover` |
+| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-popover` |
 
 ## См. также
 

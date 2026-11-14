@@ -6,7 +6,7 @@ profile: reference
 
 # Карусель
 
-:badge[sf-carousel]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-carousel]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Карусель показывает материалы по одному в области постоянной высоты: баннеры,
 новости, изображения. Она добавляет к движку

@@ -6,7 +6,7 @@ profile: reference
 
 # Календарь
 
-:badge[sf-datepicker]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-datepicker]{variant=tonal scheme=primary size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
 
 Календарь показывает дни месяца, выбранную дату или период. Поведения у
 классов нет: перелистывание, выбор даты и
@@ -120,8 +120,8 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-datepicker` |
-| Части | `sf-datepicker-another-month`, `sf-datepicker-container`, `sf-datepicker-context`, `sf-datepicker-day`, `sf-datepicker-day-date`, `sf-datepicker-day-end`, `sf-datepicker-day-info`, `sf-datepicker-day-off`, `sf-datepicker-day-selected`, `sf-datepicker-day-start`, `sf-datepicker-main`, `sf-datepicker-period`, `sf-datepicker-preset`, `sf-datepicker-presets`, `sf-datepicker-row`, `sf-datepicker-text`, `sf-datepicker-text-end`, `sf-datepicker-text-selected`, `sf-datepicker-text-start`, `sf-datepicker-time`, `sf-datepicker-time-separator`, `sf-datepicker-time-value`, `sf-datepicker-top`, `sf-datepicker-week`, `sf-datepicker-weekday`, `sf-datepicker-wrap` |
-| Модификаторы | `sf-datepicker--inline`, `sf-datepicker--presets`, `sf-datepicker--time` |
+| Части | `sf-datepicker-another-month`, `sf-datepicker-container`, `sf-datepicker-context`, `sf-datepicker-day`, `sf-datepicker-day-date`, `sf-datepicker-day-end`, `sf-datepicker-day-info`, `sf-datepicker-day-off`, `sf-datepicker-day-selected`, `sf-datepicker-day-start`, `sf-datepicker-main`, `sf-datepicker-period`, `sf-datepicker-preset`, `sf-datepicker-presets`, `sf-datepicker-ribbon`, `sf-datepicker-ribbon-month`, `sf-datepicker-ribbon-title`, `sf-datepicker-row`, `sf-datepicker-sheet-close`, `sf-datepicker-sheet-foot`, `sf-datepicker-sheet-head`, `sf-datepicker-sheet-summary`, `sf-datepicker-sheet-title`, `sf-datepicker-sheet-today`, `sf-datepicker-sheet-weekdays`, `sf-datepicker-text`, `sf-datepicker-text-end`, `sf-datepicker-text-selected`, `sf-datepicker-text-start`, `sf-datepicker-time`, `sf-datepicker-time-separator`, `sf-datepicker-time-value`, `sf-datepicker-top`, `sf-datepicker-week`, `sf-datepicker-weekday`, `sf-datepicker-weekday-off`, `sf-datepicker-wrap` |
+| Модификаторы | `sf-datepicker--inline`, `sf-datepicker--presets`, `sf-datepicker--sheet`, `sf-datepicker--time` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -139,6 +139,7 @@ profile: reference
 | `--sf-datepicker-selected-color` | Число на выбранном дне. | `var(--sf-on-primary)` |
 | `--sf-datepicker-range-background-color` | Дни внутри выбранного диапазона. | `var(--sf-primary-container)` |
 | `--sf-datepicker-weekday-color` | Названия дней недели над сеткой. | `var(--sf-on-surface-variant)` |
+| `--sf-datepicker-day-off` | Роль выходного дня в календаре: число выходного дня красным из палитры, а не ролью ошибки. День следующего или предыдущего месяца берёт её на 80 %. | `light-dark(var(--sf-red-40), var(--sf-red-80))` |
 
 ```css
 .sf-datepicker {
@@ -152,8 +153,18 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-datepicker--day-off-color` | `var(--sf-error)` | `--sf-datepicker-day-date--color`, `--sf-datepicker-day-info--color` |
+| `--sf-datepicker--background-color` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `var(--sf-surface-place, var(--sf-surface-popup))` | `background-color`, `--sf-surface-place`, `--sf-surface-place-solid`, `--sf-surface-place-ground`, `--sf-datepicker-context--background-color` |
+| `--sf-datepicker--border-bottom-left-radius` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `var(--sf-0)` | `border-end-start-radius` |
+| `--sf-datepicker--border-bottom-right-radius` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `var(--sf-0)` | `border-end-end-radius` |
+| `--sf-datepicker--border-top-left-radius` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `var(--sf-0)` | `border-start-start-radius` |
+| `--sf-datepicker--border-top-right-radius` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `var(--sf-0)` | `border-start-end-radius` |
+| `--sf-datepicker--box-shadow` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `none` | `box-shadow` |
+| `--sf-datepicker--day-off-color` | `var(--sf-datepicker-day-off, light-dark(var(--sf-red-40), var(--sf-red-80)))` | `--sf-datepicker-day-date--color`, `--sf-datepicker-day-info--color`, `--sf-datepicker-weekday--color` |
 | `--sf-datepicker--inline-size` | `calc(var(--sf-ui-1--control-height) * 7 + var(--sf-space-1))` | `width`, `inline-size` |
+| `--sf-datepicker--padding-bottom` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `var(--sf-0)` | `padding-bottom` |
+| `--sf-datepicker--padding-left` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `var(--sf-0)` | `padding-inline-start` |
+| `--sf-datepicker--padding-right` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `var(--sf-0)` | `padding-inline-end` |
+| `--sf-datepicker--padding-top` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `var(--sf-0)` | `padding-top` |
 | `--sf-datepicker-another-month--opacity` | не задана; задают модификаторы, например `.sf-datepicker-day.sf-datepicker-another-month:not(:disabled):not(.active):not(.disabled):not(.sf-datepicker-day-selected)`: `1` | `opacity` |
 | `--sf-datepicker-context--background-color` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-context`: `var(--sf-datepicker--background-color, var(--sf-datepicker-background-color, var(--sf-surface-popup)))` | `background` |
 | `--sf-datepicker-day--background-color` | не задана; задают модификаторы, например `.sf-datepicker-day`: `var(--sf-transparent)` | `background-color` |
@@ -161,6 +172,7 @@ profile: reference
 | `--sf-datepicker-day--border-end-start-radius` | не задана; задают модификаторы, например `.sf-datepicker-day.sf-datepicker-day-end:not(.sf-datepicker-day.sf-datepicker-day-start)`: `0` | `border-end-start-radius` |
 | `--sf-datepicker-day--border-start-end-radius` | не задана; задают модификаторы, например `.sf-datepicker-day.sf-datepicker-day-start:not(.sf-datepicker-day.sf-datepicker-day-end)`: `0` | `border-start-end-radius` |
 | `--sf-datepicker-day--border-start-start-radius` | не задана; задают модификаторы, например `.sf-datepicker-day.sf-datepicker-day-end:not(.sf-datepicker-day.sf-datepicker-day-start)`: `0` | `border-start-start-radius` |
+| `--sf-datepicker-day--height` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `var(--sf-ui-2--control-height)` | `height`, `block-size` |
 | `--sf-datepicker-day-date--color` | не задана; задают модификаторы, например `.sf-datepicker-day .sf-datepicker-day-date`: `var(--sf-datepicker-day-color, var(--sf-on-surface))` | `color` |
 | `--sf-datepicker-day-date--font-family` | не задана; задают модификаторы, например `.sf-datepicker-day .sf-datepicker-day-date`: `var(--sf-text--family)` | `font-family` |
 | `--sf-datepicker-day-date--font-size` | не задана; задают модификаторы, например `.sf-datepicker-day .sf-datepicker-day-date`: `var(--sf-text--size)` | `font-size` |
@@ -185,6 +197,7 @@ profile: reference
 | `--sf-datepicker-top--padding-inline-end` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-top`: `var(--sf-space-1/3)` | `padding-inline-end` |
 | `--sf-datepicker-top--padding-inline-start` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-top`: `var(--sf-space-1/3)` | `padding-inline-start` |
 | `--sf-datepicker-top--padding-top` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-top`: `var(--sf-space-1/4)` | `padding-top` |
+| `--sf-datepicker-weekday--color` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-weekday.sf-datepicker-weekday-off`: `var(--sf-datepicker--day-off-color)` | `color` |
 
 ## См. также
 

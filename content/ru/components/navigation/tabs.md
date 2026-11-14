@@ -6,7 +6,7 @@ profile: reference
 
 # Вкладки
 
-:badge[sf-tabs]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tabs]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
 
 Вкладки показывают один из нескольких связанных разделов на месте, без
 перехода на другую страницу. Пункты короткие и относятся к одному объекту;
@@ -151,8 +151,8 @@ whenLoader(() => SF.Loader.ready('Tabs', () => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-tabs` |
-| Части | `sf-tabs-count`, `sf-tabs-main-container`, `sf-tabs-more`, `sf-tabs-overflowed`, `sf-tabs-settings`, `sf-tabs-settings-handle`, `sf-tabs-settings-label`, `sf-tabs-settings-list`, `sf-tabs-settings-pin`, `sf-tabs-settings-row`, `sf-tabs-top`, `sf-tabs-top-container`, `sf-tabs-top-container--tools` |
-| Модификаторы | `sf-tabs--full`, `sf-tabs--overflow-more`, `sf-tabs--overflow-wrap`, `sf-tabs--pills`, `sf-tabs--underline`, `sf-tabs--vertical` |
+| Части | `sf-tabs-count`, `sf-tabs-errors`, `sf-tabs-main-container`, `sf-tabs-more`, `sf-tabs-more-errors`, `sf-tabs-name`, `sf-tabs-overflowed`, `sf-tabs-said`, `sf-tabs-settings`, `sf-tabs-settings-handle`, `sf-tabs-settings-label`, `sf-tabs-settings-list`, `sf-tabs-settings-pin`, `sf-tabs-settings-row`, `sf-tabs-squeezed`, `sf-tabs-top`, `sf-tabs-top-container`, `sf-tabs-top-container--tools` |
+| Модификаторы | `sf-tabs--full`, `sf-tabs--overflow-more`, `sf-tabs--overflow-wrap`, `sf-tabs--pills`, `sf-tabs--sticky`, `sf-tabs--underline`, `sf-tabs--vertical` |
 | Размеры | `sf-tabs--size-1`, `sf-tabs--size-1-2`, `sf-tabs--size-2` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -167,10 +167,12 @@ whenLoader(() => SF.Loader.ready('Tabs', () => {
 |:---|:---|:---|
 | `--sf-tabs-color` | Цвет подписи и значка вкладки в покое у видов `underline` и `full`; у выбранной вкладки — свой. | `var(--sf-on-surface)`; зависит от вида |
 | `--sf-tabs-indicator-color` | Цвет линии под выбранной вкладкой у вида `underline`. | `var(--sf-primary)`; зависит от вида |
-| `--sf-tabs-indicator-width` | Толщина линии под вкладкой у вида `underline`; высота вкладки не меняется. | `calc(var(--sf-px) * 2)`; зависит от вида, размера |
+| `--sf-tabs-indicator-width` | Толщина линии под буквами выбранной вкладки в виде underline; высота вкладки не меняется. | `calc(var(--sf-px) * 2)`; зависит от вида, размера |
 | `--sf-tabs-border-color` | Цвет разделителя под рядом вкладок; у видов `pills`, `full` и вертикальных вкладок его нет. | `var(--sf-outline-variant)`; зависит от вида |
 | `--sf-tabs-border-width` | Толщина разделителя под рядом вкладок; ряд `underline` стоит на нём. | `var(--sf-px)`; зависит от вида |
-| `--sf-tabs-gap` | Промежуток между вкладками; вкладки вида `full` остаются сомкнутыми. | `var(--sf-space-1)`; зависит от вида, размера |
+| `--sf-tabs-gap` | Промежуток между вкладками: в виде «линия» нет — вкладки стоят вплотную, между плашками --sf-space-1, между строками вертикальных вкладок --sf-space-1/4. | `var(--sf-space-0)`; зависит от вида, размера |
+| `--sf-tabs-padding-inline` | Боковой отступ вкладки в видах «линия» и vertical; у подписи его нет, поэтому линия шириной с буквы. Линия: отступ кнопки размера вкладок (--sf-ui-N--space-x, где N — размер); у первой вкладки нет отступа в начале, у последней — в конце, если строка не делится поровну (fit). Vertical: --sf-space-1, как у колонки меню. | `var(--sf-ui-1--space-x)`; зависит от вида, размера |
+| `--sf-tabs-sticky-top` | На каком расстоянии от верха окна останавливается прилипающий ряд вкладок (sticky): высота закреплённой шапки над ним. | `var(--sf-0)` |
 
 ```css
 .sf-tabs {
@@ -185,6 +187,10 @@ whenLoader(() => SF.Loader.ready('Tabs', () => {
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-tabs--focus-ink` | не задана; задают модификаторы, например `.sf-tabs-top .sf-button`: `var(--sf-on-surface)` | `--sf-focus--color` |
+| `--sf-tabs--icon-gap` | не задана; задают модификаторы, например `.sf-tabs.sf-tabs--size-1-2.sf-tabs--underline > .sf-tabs-top-container > .sf-tabs-top .sf-button`: `var(--sf-ui-1/2--text-space-x)` | `-moz-column-gap`, `column-gap` |
+| `--sf-tabs--icon-line` | не задана; задают модификаторы, например `.sf-tabs--underline.sf-tabs--size-1-2 > .sf-tabs-top-container > .sf-tabs-top .sf-icon-button`: `var(--sf-text-height-1/2)` | `width`, `inline-size` |
+| `--sf-tabs--line-drop` | не задана; задают модификаторы, например `.sf-tabs.sf-tabs--underline > .sf-tabs-top-container > .sf-tabs-top .sf-button`: `var(--sf-button--padding-bottom)` | `bottom`, `inset-block-end` |
+| `--sf-tabs--padding-inline` | не задана; задают модификаторы, например `.sf-tabs--underline > .sf-tabs-top-container > .sf-tabs-top .sf-button`: `var(--sf-tabs-padding-inline, var(--sf-ui-1--space-x))` | `--sf-button--padding-inline-start`, `--sf-button--padding-inline-end` |
 | `--sf-tabs-top--gap` | не задана; задают модификаторы, например `.sf-tabs.sf-tabs--full > .sf-tabs-top-container > .sf-tabs-top`: `0` | `gap` |
 | `--sf-tabs-top--margin` | не задана; задают модификаторы, например `.sf-tabs--underline > .sf-tabs-top-container > .sf-tabs-top`: `0 0 calc(var(--sf-tabs-border-width, var(--sf-tabs--border-width, var(--sf-px))) * -1) 0` | `margin` |
 | `--sf-tabs-top-container--border-color` | не задана; задают модификаторы, например `.sf-tabs--pills > .sf-tabs-top-container`: `transparent` | `border-color` |

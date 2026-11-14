@@ -6,7 +6,7 @@ profile: reference
 
 # Спиннер
 
-:badge[sf-loader]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-loader]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Спиннер показывает, что операция выполняется, когда процент завершения
 неизвестен. Если процент известен, берите
@@ -182,7 +182,7 @@ whenLoader(() => SF.Loader.ready('Spinner', (Spinner) => {
 | Что | Классы |
 |:---|:---|
 | Части | `sf-loader-comet`, `sf-loader-comet-segment`, `sf-loader-container`, `sf-loader-dot`, `sf-loader-dot--active`, `sf-loader-dots`, `sf-loader-ring-accent`, `sf-loader-ring-filled`, `sf-loader-svg` |
-| Модификаторы | `sf-loader--circles`, `sf-loader--infinite`, `sf-loader--loading-indicator`, `sf-loader--pixel-geometry`, `sf-loader--text` |
+| Модификаторы | `sf-loader--circles`, `sf-loader--infinite`, `sf-loader--label-hidden`, `sf-loader--loading-indicator`, `sf-loader--pixel-geometry`, `sf-loader--text` |
 | Размеры | `sf-loader--size-1`, `sf-loader--size-1/2`, `sf-loader--size-1/3`, `sf-loader--size-2`, `sf-loader--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -225,16 +225,17 @@ whenLoader(() => SF.Loader.ready('Spinner', (Spinner) => {
 | `--sf-loader--look-spin-duration` | не задана; задают модификаторы, например `:where([data-sf-spinner]:not([data-sf-spinner=""]))`: `var(--sf-loader-arc-duration)` | `animation-duration` |
 | `--sf-loader--look-track` | не задана; задают модификаторы, например `:where([data-sf-spinner]:not([data-sf-spinner=""]))`: `inline` | `display` |
 | `--sf-loader-arc-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 2)` | `--sf-loader--look-spin-duration`, `animation-duration` |
-| `--sf-loader-breath-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 3)` | `--sf-loader--look-motion-duration` |
-| `--sf-loader-comet-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 2)` | `--sf-loader--look-spin-duration` |
+| `--sf-loader-breath-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 3)` | — |
+| `--sf-loader-comet-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 2)` | — |
 | `--sf-loader-cycle-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 6)` | `--sf-loader--look-motion-duration`, `animation-duration` |
 | `--sf-loader-dot-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 3)` | `animation`, `animation-delay` |
-| `--sf-loader-spin-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 4)` | `--sf-loader--look-spin-duration` |
+| `--sf-loader-spin-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 4)` | — |
 | `--sf-loader-stroke-width` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-spinner-stroke-width, 2)` | `stroke-width` |
 | `--sf-loader-svg-height` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-spinner-size, var(--sf-text-height-1))` | `height` |
 | `--sf-loader-svg-width` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-spinner-size, var(--sf-text-height-1))` | `width` |
 | `--sf-loader-text-gap` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-spinner-gap, var(--sf-space-1/2))` | `gap` |
-| `--sf-loader-text-size` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-loader-text-line` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-text-height-1/2)` | `line-height` |
+| `--sf-loader-text-size` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-loader-track-color` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-spinner-track-color, color-mix(in srgb, currentColor 16%, transparent))` | `stroke` |
 
 ## См. также

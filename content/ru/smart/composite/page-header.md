@@ -5,7 +5,7 @@ description: "Показывает в начале страницы админи
 
 # Шапка страницы
 
-:badge[sf-header-page]{variant=tonal scheme=primary size=1/2} :badge[1.2.6]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-header-page]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
 
 Шапка страницы показывает в одной строке путь к странице, заголовок, число
 записей, звезду избранного и главные действия. Ставьте её в начало каждой
@@ -141,6 +141,7 @@ header.addEventListener('sf-page-header-toggle', async (event) => {
 | `heading` | строка | пусто | — | Заголовок страницы, рисуется четвёртой ступенью заголовков. |
 | `count` | строка | пусто | — | Сколько записей на странице, как их записало приложение (448, ~1 200); пусто — счётчик не рисуется. |
 | `level` | строка | `site` | `site`, `install` | `install` отмечает страницу, общую для всех сайтов. |
+| `expressive` | да/нет | нет | — | Украшающий уровень: подкрашенная шапка — тон primary 50 при 16 (в тёмной теме 24), сходящий вниз на нет, в скруглённом поле с отступами; шапка уже 30rem остаётся простой. По умолчанию выключено; data-sf-style="expressive" на корне или контейнере включает его для всех шапок внутри, data-sf-style="strict" снова выключает. |
 | `star` | да/нет | нет | — | Нет атрибута — звезда не рисуется; `false` (или `off`) и `true` (или `on`) рисуют её в этом состоянии. |
 
 #### Общие для всех компонентов
@@ -169,13 +170,13 @@ header.addEventListener('sf-page-header-toggle', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-header-page>`, контракт `smart.header-page` версии `1.2.6` |
-| Поставка | выпуск Framework `ui-7fb26d395af2` |
+| Тег | `<sf-header-page>`, контракт `smart.header-page` версии `1.3.2` |
+| Поставка | выпуск Framework `ui-994f9db407fa` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; название компонент ставит сам; с клавиатуры: `Tab` доходит до звезды и действий; `Enter` или `Пробел` ставят и снимают звезду. |
-| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/header-page` |
-| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-header-page` |
+| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/header-page` |
+| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-header-page` |
 
 ## См. также
 

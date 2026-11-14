@@ -71,7 +71,6 @@
       "alignItems": "center"
     },
     "sf-breadcrumbs": {
-      "flexWrap": "wrap",
       "alignItems": "center"
     },
     "sf-breadcrumbs-item": {
@@ -273,20 +272,6 @@
       "justifyContent": "center",
       "alignItems": "center"
     },
-    "sf-step": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
-    "sf-step-container": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
-    "sf-steps": {
-      "flexDirection": "column"
-    },
-    "sf-steps-container": {
-      "alignItems": "center"
-    },
     "sf-switch-container": {
       "justifyContent": "center",
       "alignItems": "center"
@@ -295,8 +280,7 @@
       "flexDirection": "column"
     },
     "sf-switch-toggler": {
-      "alignItems": "center",
-      "justifyContent": "flex-end"
+      "alignItems": "center"
     },
     "sf-tag": {
       "alignItems": "center"

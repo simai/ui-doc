@@ -6,7 +6,7 @@ profile: reference
 
 # Точка состояния
 
-:badge[sf-dot]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-dot]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
 
 Точка состояния цветом показывает, доступен ли человек или сервис, идёт ли
 работа и чем она закончилась. Она подходит для строк списка и других мест, где

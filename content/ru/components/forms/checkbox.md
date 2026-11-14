@@ -6,7 +6,7 @@ profile: reference
 
 # Флажок
 
-:badge[sf-checkbox]{variant=tonal scheme=primary size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-checkbox]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Флажок включает независимый параметр или выбирает несколько значений из
 списка. Для одного выбора из взаимоисключающих вариантов берите
@@ -193,7 +193,7 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 | `--sf-checkbox-border-width` | Толщина рамки квадрата со всех сторон. | `var(--sf-px)` |
 | `--sf-checkbox-radius` | Скругление углов квадрата. | `var(--sf-radius--ui)` |
 | `--sf-checkbox-size` | Ширина и высота квадрата. | `var(--sf-text-height-1)`; зависит от размера |
-| `--sf-checkbox-gap` | Промежуток между квадратом и подписью. | `var(--sf-ui-1--text-space-x)`; зависит от размера |
+| `--sf-checkbox-gap` | Промежуток между квадратом и подписью: промежуток в строке, --sf-space-1/2 на любом размере (12; в компактной и на телефоне 8). | `var(--sf-space-1/2)` |
 | `--sf-checkbox-checked-background-color` | Заливка и рамка квадрата, когда он отмечен, в неопределённом состоянии или нажат; у ошибки и выключенного состояния свои. | `var(--sf-primary)` |
 | `--sf-checkbox-invalid-border-color` | Рамка квадрата при ошибке. | `var(--sf-error)` |
 
@@ -209,7 +209,9 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-checkbox--gap` | не задана; задают модификаторы, например `.sf-checkbox--size-1/2`: `var(--sf-checkbox-gap, var(--sf-ui-1/2--text-space-x))` | `gap` |
+| `--sf-checkbox--duration` | `calc(var(--sf-duration-fast) * 2)` | `transition`, `transition-duration` |
+| `--sf-checkbox--easing` | `var(--sf-ease-move)` | `transition`, `transition-timing-function` |
+| `--sf-checkbox--gap` | не задана; задают модификаторы, например `.sf-checkbox--size-1/2`: `var(--sf-checkbox-gap, var(--sf-space-1/2))` | `gap` |
 | `--sf-checkbox-box--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-background-color, var(--sf-surface-place))` | `background-color` |
 | `--sf-checkbox-box--border` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-border-width, var(--sf-px)) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
 | `--sf-checkbox-box--border-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-border-color, var(--sf-outline))` | `border-color` |
@@ -230,7 +232,7 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 | `--sf-checkbox-label--color` | не задана; задают модификаторы, например `.sf-checkbox:not(.error):has(input:not(:checked)) .sf-checkbox-label`: `var(--sf-on-surface)` | `color` |
 | `--sf-checkbox-label--font-family` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `var(--sf-text--family)` | `font-family` |
 | `--sf-checkbox-label--font-size` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-label`: `var(--sf-text-size-1/2)` | `font-size` |
-| `--sf-checkbox-label--font-weight` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `var(--sf-font-weight-medium)` | `font-weight` |
+| `--sf-checkbox-label--font-weight` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-checkbox-label--line-height` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-label`: `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-checkbox-top--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-top`: `transparent` | `background-color` |
 | `--sf-checkbox-top--gap` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-top`: `var(--sf-space-1/4)` | `gap` |

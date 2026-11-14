@@ -6,7 +6,7 @@ profile: reference
 
 # Элемент дерева
 
-:badge[sf-tree-item]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tree-item]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
 
 Элемент дерева — один узел [дерева](/ru/components/navigation/tree/): строка
 с переключателем ветви, иконкой и подписью и, у ветви, группа дочерних
@@ -79,7 +79,7 @@ Enter на узле переходит по ней. Уберите ссылку 
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-tree-item-gap` | Расстояние между шевроном, значком и именем. | `var(--sf-space-1\/3)` |
+| `--sf-tree-item-gap` | Промежуток между шевроном, флажком, значком и именем; шаг уровня sf-tree следует за ним. | `var(--sf-space-1\/2)` |
 | `--sf-tree-item-name-color` | Цвет имени вне дерева; внутри дерева имя берёт цвет своей строки. | `var(--sf-primary)` |
 | `--sf-tree-item-icon-color` | Цвет шеврона и значка. | `currentColor` |
 | `--sf-tree-item-drop-background-color` | Заливка узла, на который упадёт перетаскиваемое. | `var(--sf-primary-container)` |
@@ -87,7 +87,7 @@ Enter на узле переходит по ней. Уберите ссылку 
 
 ```css
 sf-tree-item, .sf-tree-item {
-  --sf-tree-item-gap: var(--sf-space-1\/3);
+  --sf-tree-item-gap: var(--sf-space-1\/2);
 }
 ```
 

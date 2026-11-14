@@ -6,7 +6,7 @@ profile: reference
 
 # Прогресс
 
-:badge[sf-progress-bar]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-bar]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Индикатор прогресса показывает ход операции, когда долю выполненного можно
 выразить от 0 до 100 процентов. Для операции без известного процента берите
@@ -120,8 +120,8 @@ whenLoader(() => SF.Loader.ready('ProgressBar', (ProgressBar) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-progress-bar` |
-| Части | `sf-progress-bar-main`, `sf-progress-bar-progress` |
-| Модификаторы | `sf-progress-bar--error`, `sf-progress-bar--indeterminate`, `sf-progress-bar--info`, `sf-progress-bar--paused`, `sf-progress-bar--success`, `sf-progress-bar--warning` |
+| Части | `sf-progress-bar-head`, `sf-progress-bar-label`, `sf-progress-bar-main`, `sf-progress-bar-progress`, `sf-progress-bar-text` |
+| Модификаторы | `sf-progress-bar--error`, `sf-progress-bar--indeterminate`, `sf-progress-bar--info`, `sf-progress-bar--neutral`, `sf-progress-bar--paused`, `sf-progress-bar--success`, `sf-progress-bar--warning` |
 | Размеры | `sf-progress-bar--size-1`, `sf-progress-bar--size-1/2`, `sf-progress-bar--size-1/3`, `sf-progress-bar--size-2`, `sf-progress-bar--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -134,11 +134,11 @@ whenLoader(() => SF.Loader.ready('ProgressBar', (ProgressBar) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-progress-bar-fill-color` | Заполненная часть; статус задаёт свой цвет, если эта переменная не задана. | `var(--sf-primary)`; зависит от статуса |
+| `--sf-progress-bar-fill-color` | Заполненная часть; статус задаёт свой цвет, если эта переменная не задана. | `var(--sf-on-surface-variant)`; зависит от статуса |
 | `--sf-progress-bar-track-color` | Дорожка под заполненной частью. | `var(--sf-surface-container)` |
-| `--sf-progress-bar-height` | Толщина дорожки. | `var(--sf-text-size-1/5)`; зависит от размера |
-| `--sf-progress-bar-radius` | Углы дорожки и заполненной части. | `var(--sf-radius--ui)` |
-| `--sf-progress-bar-color` | Видимый процент. | `var(--sf-on-surface)` |
+| `--sf-progress-bar-height` | Толщина дорожки. | `var(--sf-a8)`; зависит от размера |
+| `--sf-progress-bar-radius` | Углы дорожки и заполненной части. | `var(--sf-radius-circle)` |
+| `--sf-progress-bar-color` | Видимый процент. | `var(--sf-on-surface-variant)` |
 | `--sf-progress-bar-gap` | Расстояние между дорожкой и процентом. | `var(--sf-space-1/3)`; зависит от размера |
 
 ```css
@@ -157,10 +157,10 @@ whenLoader(() => SF.Loader.ready('ProgressBar', (ProgressBar) => {
 | `--sf-progress-bar--gap` | не задана; задают модификаторы, например `.sf-progress-bar--size-1`: `var(--sf-progress-bar-gap, var(--sf-space-1/3))` | `gap` |
 | `--sf-progress-bar--line-height` | не задана; задают модификаторы, например `.sf-progress-bar.sf-progress-bar--size-1`: `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-progress-bar-main--background-color` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-main`: `var(--sf-progress-bar-track-color, var(--sf-surface-container))` | `background-color` |
-| `--sf-progress-bar-main--border-radius` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-main`: `var(--sf-progress-bar-radius, var(--sf-radius--ui))` | `border-radius` |
-| `--sf-progress-bar-main--height` | не задана; задают модификаторы, например `.sf-progress-bar--size-1 .sf-progress-bar-main`: `var(--sf-text-size-1/5)` | `height` |
+| `--sf-progress-bar-main--border-radius` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-main`: `var(--sf-progress-bar-radius, var(--sf-radius-circle))` | `border-radius` |
+| `--sf-progress-bar-main--height` | не задана; задают модификаторы, например `.sf-progress-bar--size-1 .sf-progress-bar-main`: `var(--sf-a8)` | `height` |
 | `--sf-progress-bar-progress--background-color` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-progress`: `var(--sf-progress-bar-fill-color, var(--sf-primary))` | `background-color` |
-| `--sf-progress-bar-progress--border-radius` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-progress`: `var(--sf-progress-bar-radius, var(--sf-radius--ui))` | `border-radius` |
+| `--sf-progress-bar-progress--border-radius` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-progress`: `var(--sf-progress-bar-radius, var(--sf-radius-circle))` | `border-radius` |
 
 ## См. также
 

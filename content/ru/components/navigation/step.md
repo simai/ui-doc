@@ -6,10 +6,11 @@ profile: reference
 
 # Шаги
 
-:badge[sf-steps]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-steps]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
-Шаги показывают этапы линейного процесса — оформления заказа, публикации,
-настройки — и отмечают завершённые, текущий и будущие. Берите их для трёх и
+Шаги показывают, где человек находится в процессе, который проходит сам, —
+оформлении заказа, публикации, настройке, — и отмечают пройденные, текущий и
+будущие этапы. Берите их для трёх и
 более этапов с постоянным порядком; для разделов без порядка подходят
 [вкладки](/ru/components/navigation/tabs/).
 
@@ -20,88 +21,96 @@ profile: reference
 
 ## Разметка
 
-Минимальную разметку показывает пример выше. Части вложены так:
-`sf-steps` → `sf-steps-container` → шаги `sf-step` и разделители между ними.
+Шаги рисует смарт-компонент [`sf-steps`](/ru/smart/navigation/steps/); на
+классах ту же разметку пишет сервер. Части вложены так: `sf-steps` →
+список `ol.sf-steps-container` → шаги `li.sf-step` → `sf-step-body` →
+метка `sf-step-marker` и `sf-step-content` с подписью `sf-step-container`.
 
-- Корень `sf-steps` с размером `sf-steps--size-{размер}` и утилитами
-  `flex flex-col`; CSS блоков не задаёт `display`, раскладку дают утилиты.
-- `sf-steps-container` с утилитами `flex items-center` выстраивает шаги в
-  строку и задаёт расстояние между ними; это список (`role="list"` и
-  `aria-label` с названием процесса).
-- Шаг `sf-step` с размером `sf-step--size-{размер}`, этапом
-  `sf-step--stage-{этап}` и утилитами `flex items-center justify-center`.
-  Подпись — в `sf-step-container`, иконка этапа `sf-icon` стоит перед ней.
-- Разделитель — иконка `sf-icon` с классом `sf-steps-separator--directional`
-  и `aria-hidden="true"`, прямой потомок контейнера: класс разворачивает
-  стрелку при письме справа налево.
-- Скрипта у компонента нет: состояние шагов задаёт приложение.
+- Корень `sf-steps` несёт вид метки (`sf-steps--marker-number` или
+  `sf-steps--marker-dot`) и раскладку (`sf-steps--layout-row`,
+  `-column` или `-count`).
+- Список — `ol` с `role="list"` и `aria-label` с названием процесса.
+- Шаг несёт своё состояние `sf-step--state-<слово>`; шаг до текущего — ещё
+  `sf-step--passed`: линия после него рисуется цветом хода. Текущему шагу —
+  `aria-current="step"`.
+- Линию между шагами рисует сам шаг, отдельных разделителей нет.
+- Метка декоративная (`aria-hidden="true"`), слово состояния повторяется в
+  `sr-only` внутри подписи.
 
 ## Варианты
 
-### Этап
+### Состояние шага
 
-`sf-step--stage-default`, `sf-step--stage-completed`, `sf-step--stage-error` • [справочник](#классы)
+`sf-step--state-done`, `-current`, `-ahead`, `-error`, `-skipped`, `-running` • [справочник](#классы)
 
-Этап задаёт цвет иконки шага: `sf-step--stage-default` — этап без отметки,
-`sf-step--stage-completed` — завершённый, иконка цветом успеха,
-`sf-step--stage-error` — этап с ошибкой, иконка цветом ошибки. Иконку
-(`check_circle`, `error`) добавляет автор; подпись у всех трёх одного цвета.
+Состояние видно по форме метки, а не только по цвету: пройденный — заливка
+с галочкой, текущий — заливка с кольцом через зазор, впереди — пустой
+контур, ошибка — цвет ошибки и «!», пропущенный — пунктир. Шаг, который
+выполняется, показывает в метке индикатор загрузки — его рисует смарт-компонент.
+Линия — 2 px основного цвета до текущего шага и тонкая линия после него.
 
-:::example {id="components/step/stages" label="Три этапа"}
+:::example {id="components/step/stages" label="Пройден, пропущен, ошибка, текущий, впереди"}
+:::
+
+### Метка
+
+`sf-steps--marker-number`, `sf-steps--marker-dot` • [справочник](#классы)
+
+По умолчанию шаги пронумерованы. Точка — для простого статуса и плотных
+карточек; формы те же: залитая, залитая с кольцом, пустая.
+
+:::example {id="components/step/markers" label="Номер и точка"}
+:::
+
+### Раскладка
+
+`sf-steps--layout-row`, `sf-steps--layout-column`, `sf-steps--layout-count` • [справочник](#классы)
+
+Строка — для трёх–шести коротких шагов. Колонка показывает под подписью
+вторую строку `sf-step-text`: дату, время, причину ошибки. Раскладка «счёт» —
+строка «Шаг 2 из 5 · Доставка» над полосой хода для узкого места;
+смарт-компонент сам выбирает раскладку по ширине (`layout="auto"`).
+
+:::example {id="components/step/state-current" label="Колонка со второй строкой"}
 :::
 
 ### Размер
 
-`sf-step--size-1`, `sf-step--size-1/2` • [справочник](#классы)
+`sf-steps--size-1/2`, `sf-step--size-1/2` • [справочник](#классы)
 
-Две ступени: `sf-step--size-1` для обычного интерфейса и `sf-step--size-1/2`
-для узкой панели или плотного экрана. Размер ставят и корню
-(`sf-steps--size-…`: расстояние и разделители), и каждому шагу (подпись,
-отступы, иконка).
+Размер 1 — по умолчанию, метка 24 px. `1/2` — для узкой панели или плотного
+экрана: метка 20 px и мелкий текст. Класс ставят и корню, и каждому шагу.
 
 :::example {id="components/step/sizes" label="Размеры 1/2 и 1"}
 :::
 
 ## Состояния
 
-### Текущий
-
-Класс `selected` выделяет текущий шаг рамкой основного цвета и тёмной
-подписью. Добавьте ему `aria-current="step"`, чтобы состояние слышал и
-экранный диктор.
-
-:::example {id="components/step/state-current" label="Обычный и текущий шаг"}
-:::
-
 ### Недоступен
 
-Класс `disabled` приглушает рамку, подпись и иконку любого этапа. Шагу-кнопке
-ставьте и класс, и атрибут `disabled`: один атрибут приглушает только рамку.
-Шагу-не-кнопке добавьте `aria-disabled="true"`.
+`sf-step--disabled` приглушает шаг; добавьте `aria-disabled="true"`.
 
 :::example {id="components/step/state-disabled" label="Недоступные шаги"}
 :::
 
-### Фокус
+### Переход к шагу
 
-Шаг-кнопка `button.sf-step` или ссылка `a.sf-step` подсвечивается при
-наведении и получает кольцо фокуса по `:focus-visible`. В примере фокус
-показан классом `focus-visible`, который CSS компонента читает наравне с
-псевдоклассом.
+Шаг, на который можно вернуться, — нативная кнопка
+`button.sf-step-body.sf-step-control`: она подсвечивается при наведении и
+получает кольцо фокуса с клавиатуры. Текущий шаг кнопкой не бывает.
 
-:::example {id="components/step/state-focus" label="Шаг-кнопка в фокусе"}
+:::example {id="components/step/state-focus" label="Пройденный шаг — кнопка"}
 :::
 
 ## Доступность
 
-- Шаги размечайте списком с `aria-label`, текущий шаг — `aria-current="step"`.
-- Завершение, ошибку и недоступность повторяйте текстом в `sr-only` внутри
-  подписи: цвет иконки и сама иконка их не сообщают.
-- Иконки и разделители скрывайте через `aria-hidden="true"`.
+- Шаги — упорядоченный список `ol` с `aria-label`; текущий шаг —
+  `aria-current="step"`.
+- Состояние повторяйте словом в `sr-only` внутри подписи: форма метки его
+  не сообщает.
 - Шаги дополняют, а не заменяют заголовок экрана и кнопки «Назад» и «Далее».
-- Для перехода по шагам делайте их нативными кнопками или ссылками; тогда
-  они получают фокус и срабатывают по Enter. Выбор шага с клавиатуры и
-  событие `sf-steps-change` даёт смарт-компонент `sf-steps`.
+- Выбор шага с клавиатуры и событие `sf-steps-change` даёт смарт-компонент
+  `sf-steps`.
 
 ## Классы
 
@@ -110,17 +119,18 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-steps` |
-| Части | `sf-steps-container`, `sf-steps-separator--directional` |
-| Размеры | `sf-steps--size-1`, `sf-steps--size-1/2` |
+| Части | `sf-steps-container`, `sf-steps-count`, `sf-steps-count-label`, `sf-steps-count-line`, `sf-steps-count-position` |
+| Модификаторы | `sf-steps--auto`, `sf-steps--layout-column`, `sf-steps--layout-count`, `sf-steps--layout-row`, `sf-steps--marker-dot`, `sf-steps--marker-number` |
+| Размеры | `sf-steps--size-1/2` |
 
 **`sf-step`**
 
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-step` |
-| Части | `sf-step-container` |
-| Модификаторы | `sf-step--stage-completed`, `sf-step--stage-default`, `sf-step--stage-error`, `sf-step--stage-running`, `sf-step--stage-skipped` |
-| Размеры | `sf-step--size-1`, `sf-step--size-1/2` |
+| Части | `sf-step-body`, `sf-step-container`, `sf-step-content`, `sf-step-control`, `sf-step-marker`, `sf-step-text` |
+| Модификаторы | `sf-step--disabled`, `sf-step--passed`, `sf-step--state-ahead`, `sf-step--state-current`, `sf-step--state-done`, `sf-step--state-error`, `sf-step--state-running`, `sf-step--state-skipped` |
+| Размеры | `sf-step--size-1/2` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -132,13 +142,13 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-steps-gap` | Расстояние между шагом и соседним разделителем. | `var(--sf-steps-container--gap)` |
-| `--sf-steps-separator-color` | Значок-разделитель между двумя шагами. | `var(--sf-on-surface-variant)` |
-| `--sf-steps-step-color` | Подпись и номер шага в покое. | `var(--sf-on-surface-variant)` |
-| `--sf-steps-step-border-color` | Обводка шага в покое. | `var(--sf-outline-variant)` |
-| `--sf-steps-step-radius` | Скругление углов шага. | `var(--sf-radius-circle)` |
-| `--sf-steps-current-border-color` | Обводка текущего шага; по умолчанию её нет, текущий шаг — плашка primary-container (C16, component.step 1.2.0). | `var(--sf-transparent)` |
-| `--sf-steps-completed-icon-color` | Значок-галочка пройденного шага. | `var(--sf-success)` |
+| `--sf-steps-gap` | Промежуток между двумя шагами в строке. | `var(--sf-space-1\/2)` |
+| `--sf-steps-separator-color` | Линия между двумя шагами после текущего. | `var(--sf-outline-variant)` |
+| `--sf-steps-step-color` | Подпись и номер шага впереди или пропущенного. | `var(--sf-on-surface-variant)` |
+| `--sf-steps-step-border-color` | Контур пустой отметки (шаг впереди или пропущенный). | `var(--sf-outline)` |
+| `--sf-steps-step-radius` | Радиус углов отметки шага. | `var(--sf-radius-circle)` |
+| `--sf-steps-current-border-color` | Кольцо отметки текущего шага (2 px через зазор 2 px). | `var(--sf-steps-completed-icon-color, var(--sf-primary))` |
+| `--sf-steps-completed-icon-color` | Цвет хода: отметки пройденных и текущего шагов и линия до текущего шага. | `var(--sf-primary)` |
 
 ```css
 .sf-steps {
@@ -152,25 +162,16 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-steps-container--background-color` | не задана; задают модификаторы, например `.sf-steps .sf-steps-container`: `transparent` | `background-color` |
-| `--sf-steps-container--gap` | не задана; задают модификаторы, например `.sf-steps.sf-steps--size-1 .sf-steps-container`: `var(--sf-space-1/4)` | `gap` |
-| `--sf-step--background-color` | `transparent` | `background-color` |
-| `--sf-step--block-size` | не задана; задают модификаторы, например `.sf-step--size-1`: `var(--sf-ui-1--control-height)` | `min-height`, `min-block-size` |
-| `--sf-step--border-color` | `var(--sf-steps-step-border-color, var(--sf-outline-variant))` | `border-color` |
-| `--sf-step--box-shadow` | не задана; задают модификаторы, например `.sf-step:not(:disabled):not(.disabled):not([aria-disabled=true]).focus-visible`: `none` | `box-shadow` |
-| `--sf-step--color` | `var(--sf-on-surface-variant)` | `color` |
-| `--sf-step--font-size` | не задана; задают модификаторы, например `.sf-step--size-1`: `var(--sf-text-size-1)` | `font-size` |
-| `--sf-step--icon-size` | не задана; задают модификаторы, например `.sf-step.sf-step--size-1/2 .sf-icon`: `var(--sf-text-height-1/2)` | `font-size`, `height`, `width` |
-| `--sf-step--line-height` | не задана; задают модификаторы, например `.sf-step--size-1`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-step--padding-bottom` | не задана; задают модификаторы, например `.sf-step--size-1`: `0` | `padding-bottom` |
-| `--sf-step--padding-inline` | не задана; задают модификаторы, например `.sf-step--size-1`: `var(--sf-ui-1--text-space-x)` | `padding-inline-end`, `padding-inline-start` |
-| `--sf-step--padding-top` | не задана; задают модификаторы, например `.sf-step--size-1`: `0` | `padding-top` |
-| `--sf-step-container--background-color` | не задана; задают модификаторы, например `.sf-step .sf-step-container`: `transparent` | `background-color` |
-| `--sf-step-container--color` | не задана; задают модификаторы, например `.sf-step.sf-step--stage-default .sf-step-container`: `var(--sf-steps-step-color, var(--sf-on-surface-variant))` | `color` |
-| `--sf-step-container--font-size` | не задана; задают модификаторы, например `.sf-step.sf-step--size-1 .sf-step-container`: `var(--sf-text-size-1)` | `font-size` |
-| `--sf-step-container--line-height` | не задана; задают модификаторы, например `.sf-step.sf-step--size-1 .sf-step-container`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-steps-container--background-color` | не задана; задают модификаторы, например `.sf-steps .sf-steps-container`: `transparent` | `background-color` |
-| `--sf-steps-container--gap` | не задана; задают модификаторы, например `.sf-steps.sf-steps--size-1 .sf-steps-container`: `var(--sf-space-1/4)` | `gap` |
+| `--sf-step--dot` | `var(--sf-a8)` | `width`, `inline-size`, `height`, `block-size`, `--sf-step--marker-reach` |
+| `--sf-step--font-size` | `var(--sf-text-size-1)` | `font-size` |
+| `--sf-step--icon` | `var(--sf-text-height-1/2)` | `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
+| `--sf-step--line-height` | `var(--sf-text-height-1)` | `line-height`, `height`, `block-size`, `margin-top`, `margin-bottom`, `margin-block`, `top`, `inset-block-start`, `bottom`, `inset-block-end` |
+| `--sf-step--marker` | `var(--sf-text-height-1)` | `width`, `inline-size`, `height`, `block-size`, `grid-template-columns`, `margin-top`, `margin-bottom`, `margin-block`, `top`, `inset-block-start`, `bottom`, `inset-block-end`, `inset-inline-start`, `--sf-step--marker-reach` |
+| `--sf-step--marker-reach` | не задана; задают модификаторы, например `.sf-steps--marker-number .sf-step`: `var(--sf-step--marker)` | `top`, `inset-block-start`, `bottom`, `inset-block-end` |
+| `--sf-step--progress` | `var(--sf-steps-completed-icon-color, var(--sf-primary))` | `border-color`, `background-color`, `outline`, `color` |
+| `--sf-step--ring` | `calc(var(--sf-px) * 2)` | `outline`, `outline-offset`, `border`, `padding-top`, `padding-bottom`, `padding-block`, `--sf-step--marker-reach` |
+| `--sf-step--small-height` | `var(--sf-text-height-1/2)` | `line-height` |
+| `--sf-step--small-size` | `var(--sf-text-size-1/2)` | `font-size` |
 
 ## См. также
 

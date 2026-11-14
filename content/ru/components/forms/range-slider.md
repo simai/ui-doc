@@ -6,7 +6,7 @@ profile: reference
 
 # Слайдер диапазона
 
-:badge[sf-range-slider]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-range-slider]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Слайдер диапазона выбирает одно значение или две границы перетаскиванием ручки
 по шкале. Подходит для приблизительной настройки цены, громкости или
@@ -165,7 +165,8 @@ slider.addEventListener('change', (event) => applyFilter(event.detail.value));
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-range-slider` |
-| Части | `sf-range-slider-base`, `sf-range-slider-handle`, `sf-range-slider-handle-lower`, `sf-range-slider-handle-upper`, `sf-range-slider-labels`, `sf-range-slider-labels--bottom`, `sf-range-slider-labels--top`, `sf-range-slider-origin`, `sf-range-slider-progress`, `sf-range-slider-progress-line`, `sf-range-slider-touch-area`, `sf-range-slider-track`, `sf-range-slider-visual` |
+| Части | `sf-range-slider-base`, `sf-range-slider-field`, `sf-range-slider-field-box`, `sf-range-slider-field-dash`, `sf-range-slider-field-input`, `sf-range-slider-field-ruler`, `sf-range-slider-field-unit`, `sf-range-slider-group`, `sf-range-slider-group--size-1`, `sf-range-slider-group--size-1/2`, `sf-range-slider-group--size-2`, `sf-range-slider-handle`, `sf-range-slider-handle--dragging`, `sf-range-slider-handle-lower`, `sf-range-slider-handle-upper`, `sf-range-slider-head`, `sf-range-slider-labels`, `sf-range-slider-labels--bottom`, `sf-range-slider-labels--merged`, `sf-range-slider-labels--top`, `sf-range-slider-line`, `sf-range-slider-name`, `sf-range-slider-origin`, `sf-range-slider-output`, `sf-range-slider-progress`, `sf-range-slider-progress-line`, `sf-range-slider-scale`, `sf-range-slider-scale-mark`, `sf-range-slider-scale-mark--end`, `sf-range-slider-scale-mark--start`, `sf-range-slider-tick`, `sf-range-slider-ticks`, `sf-range-slider-touch-area`, `sf-range-slider-track`, `sf-range-slider-track-column`, `sf-range-slider-visual` |
+| Размеры | `sf-range-slider--size-1`, `sf-range-slider--size-1/2`, `sf-range-slider--size-2` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -177,7 +178,7 @@ slider.addEventListener('change', (event) => applyFilter(event.detail.value));
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-range-slider-track-color` | Заливка дорожки вне выбранной части. | `var(--sf-surface-container)` |
+| `--sf-range-slider-track-color` | Заливка дорожки вне выбранной части. | `var(--sf-outline)` |
 | `--sf-range-slider-fill-color` | Заливка выбранной части дорожки. | `var(--sf-primary)` |
 | `--sf-range-slider-handle-color` | Круг ручки в покое; у отключённой — свой. | `var(--sf-primary)` |
 | `--sf-range-slider-handle-inner-color` | Середина полой ручки. Не задана — ручка сплошной круг; цвет рисует в ней середину. | `transparent` |
@@ -185,9 +186,23 @@ slider.addEventListener('change', (event) => applyFilter(event.detail.value));
 
 ```css
 .sf-range-slider {
-  --sf-range-slider-track-color: var(--sf-surface-container);
+  --sf-range-slider-track-color: var(--sf-outline);
 }
 ```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-range-slider`); переменную без него задают только модификаторы.
+
+| Переменная | По умолчанию | Задаёт |
+|:---|:---|:---|
+| `--sf-range-slider--hit` | не задана; задают модификаторы, например `.sf-range-slider .sf-range-slider-touch-area`: `max(var(--sf-range-slider--row, var(--sf-ui-1--control-height)), var(--sf-ui-2--control-height))` | `top`, `bottom`, `inset-block`, `left`, `right`, `inset-inline` |
+| `--sf-range-slider--label-height` | не задана; задают модификаторы, например `.sf-range-slider-group--size-1/2`: `var(--sf-text-height-1/3)` | `line-height`, `height`, `block-size` |
+| `--sf-range-slider--label-size` | не задана; задают модификаторы, например `.sf-range-slider-group--size-1/2`: `var(--sf-text-size-1/3)` | `font-size` |
+| `--sf-range-slider--row` | не задана; задают модификаторы, например `.sf-range-slider-group--size-1/2`: `var(--sf-ui-1/2--control-height)` | `min-height`, `min-block-size`, `--sf-range-slider--hit`, `height`, `block-size` |
+| `--sf-range-slider--space-x` | не задана; задают модификаторы, например `.sf-range-slider-group--size-1/2`: `var(--sf-ui-1/2--space-x)` | `padding-left`, `padding-right`, `padding-inline` |
+| `--sf-range-slider--text-height` | не задана; задают модификаторы, например `.sf-range-slider-group--size-1/2`: `var(--sf-text-height-1/2)` | `line-height` |
+| `--sf-range-slider--text-size` | не задана; задают модификаторы, например `.sf-range-slider-group--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
 
 ## См. также
 

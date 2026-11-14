@@ -5,7 +5,7 @@ description: "Строит тему SIMAI Framework из одного цвета
 
 # Генератор темы
 
-:badge[sf-theme-generator]{variant=tonal scheme=primary size=1/2} :badge[1.1.13]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-theme-generator]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Генератор темы строит тему из одного цвета: человек выбирает основной цвет и
 сразу видит восемь тональных палитр SIMAI Framework — основную, вторичную,
@@ -217,8 +217,8 @@ Apache-2.0): нужные модули лежат в исходниках SIMAI 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
 | `reset()` | объект | Вернуть собственный цвет SIMAI Framework; выбор принят. |
-| `toCSS(selector?: string)` | строка | Тема одним правилом таблицы стилей из примитивов и полупрозрачных ступеней — под заданным селектором или селектором из атрибута `selector`. |
-| `toJSON()` | объект | Объект темы (`simai.framework.theme` с `schema_version: 1`): тон и насыщенность источника и у каждой палитры её тон, насыщенность и тона. |
+| `toCSS(selector?: string)` | строка | Тема одним правилом стилей из её 64 основных цветов и 80 полупрозрачных ступеней (четыре палитры темы), под заданным селектором или атрибутом `selector`. |
+| `toJSON()` | объект | Объект темы (simai.framework.theme.v1): исходные оттенок и насыщенность, а также оттенок, насыщенность и тона четырёх палитр темы (primary, secondary, tertiary, neutral). |
 
 ### События
 
@@ -226,20 +226,20 @@ Apache-2.0): нужные модули лежат в исходниках SIMAI 
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `change` | `{ value: string, hue: number, chroma: number, theme: object, variables: object, css: string }` | Выбор изменился — перетаскивание в палитре, образец, введённое число; имя браузера, тема — в detail. |
-| `sf-theme-generator-committed` | `{ value: string, hue: number, chroma: number, theme: object, variables: object, css: string }` | Выбор принят — change палитры, образец, Enter или уход из поля, сброс: тема, которую сохраняет приложение. |
+| `change` | `{ value: string, hue: number, chroma: number, theme: object, variables: object, css: string, checks: array }` | Выбор изменился — перетаскивание в палитре, образец, введённое число; имя браузера, тема — в detail. |
+| `sf-theme-generator-committed` | `{ value: string, hue: number, chroma: number, theme: object, variables: object, css: string, checks: array }` | Выбор принят — change палитры, образец, Enter или уход из поля, сброс: тема, которую сохраняет приложение. |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-theme-generator>`, контракт `smart.theme-generator` версии `1.1.13` |
-| Поставка | выпуск Framework `ui-7fb26d395af2` |
+| Тег | `<sf-theme-generator>`, контракт `smart.theme-generator` версии `1.2.0` |
+| Поставка | выпуск Framework `ui-994f9db407fa` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/theme-generator` |
-| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-theme-generator` |
+| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/theme-generator` |
+| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-theme-generator` |
 
 ## См. также
 

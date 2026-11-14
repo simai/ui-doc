@@ -5,7 +5,7 @@ description: "Задаёт один пункт дерева: подпись, с�
 
 # Элемент дерева
 
-:badge[sf-tree-item]{variant=tonal scheme=primary size=1/2} :badge[1.1.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tree-item]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Элемент дерева — один пункт [дерева](/ru/smart/navigation/tree/): папка с
 вложенными пунктами, файл или ссылка на раздел. Пункты ставят внутрь дерева:
@@ -175,12 +175,13 @@ section.expand();
 | `href` | строка | пусто | — | — |
 | `target` | строка | пусто | — | — |
 | `rel` | строка | пусто | — | — |
-| `kind` | строка | `folder` | `folder`, `file` | Тип элемента дерева: папка или файл. |
+| `kind` | строка | пусто | `folder`, `file`, `page`, `document`, `image`, `code`, `data`, `table`, `archive`, `video`, `audio`, `link` | Что это за узел (типы файлов ядра): его значок. Пусто — с детьми папка, без детей лист, тип которого говорит расширение имени; kind folder — пустая папка. |
 | `value` | строка | пусто | — | id узла: `data-value` его строки, id, который несут его события. |
 | `disabled` | да/нет | нет | — | — |
+| `has-children` | да/нет | нет | — | Ветка, чьи дочерние элементы ещё не загружены: шеврон виден, ветка открывается, и её событие toggle — сигнал загрузить их. |
 | `open-icon` | строка | `folder_open` | — | — |
 | `closed-icon` | строка | `folder` | — | — |
-| `icon` | да/нет | да | — | false скрывает значок папки или файла. |
+| `icon` | строка | пусто | — | Имя значка узла или false — без значка; пусто — значок выбирается по виду узла, расширению имени и месту. |
 | `chevron-open-icon` | строка | `keyboard_arrow_down` | — | — |
 | `chevron-closed-icon` | строка | `chevron_right` | — | — |
 | `open-label` | строка | — | — | Имя шеврона, пока ветка закрыта. |
@@ -228,13 +229,13 @@ section.expand();
 
 | | |
 |:---|:---|
-| Тег | `<sf-tree-item>`, контракт `smart.tree-item` версии `1.1.5` |
-| Поставка | выпуск Framework `ui-7fb26d395af2` |
+| Тег | `<sf-tree-item>`, контракт `smart.tree-item` версии `1.3.1` |
+| Поставка | выпуск Framework `ui-994f9db407fa` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «строка» (сервер пишет `data-sf-skeleton="line"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как пункт дерева; нужна подпись или `aria-label`; с клавиатуры: `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/tree-item` |
-| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-tree-item` |
+| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/tree-item` |
+| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-tree-item` |
 
 ## См. также
 
