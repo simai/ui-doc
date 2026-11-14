@@ -70,6 +70,11 @@ profile: reference
 `data-mode="alphanumeric"` — латинские буквы и цифры, любое другое значение —
 все символы, кроме пробелов. Лишнее скрипт убирает при вводе и вставке.
 
+Свой алфавит без похожих знаков (без 0, O, 1 и I), перевод букв в заглавные
+и разделитель групп «3 + 3» есть у
+[смарт-поля кода](/ru/smart/forms/code-input/): атрибуты `charset`,
+`uppercase` и `groups`.
+
 :::example {id="components/verification/modes" label="Символы"}
 :::
 
