@@ -340,8 +340,13 @@ async function browserAudit() {
     const queue = [...pages];
     const jobs = Math.max(1, Number(args.jobs ?? 4));
     await Promise.all(Array.from({length: jobs}, async () => {
-    const page = await context.newPage();
+    let page = await context.newPage();
     for (let route = queue.shift(); route !== undefined; route = queue.shift()) {
+      // A page that never settles (a frame that stops answering, a feed that
+      // keeps growing) must not hold the whole run: each page has a limit.
+      let timer;
+      const limit = new Promise((resolve) => { timer = setTimeout(() => resolve('timeout'), 180000); });
+      const outcome = await Promise.race([(async () => {
       try {
         await page.goto(origin + route, {waitUntil: 'load', timeout: 60000});
         // The site follows the system scheme by default and so do its example
@@ -349,14 +354,14 @@ async function browserAudit() {
         // Example frames load as they come into view, and their components
         // fetch their sheets: scroll the page through, then wait for quiet.
         await page.evaluate(async () => {
-          for (let y = 0; y < document.body.scrollHeight; y += 700) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 60)); }
+          for (let y = 0; y < Math.min(document.body.scrollHeight, 60000); y += 700) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 60)); }
           window.scrollTo(0, 0);
         });
         await page.waitForLoadState('networkidle', {timeout: 30000}).catch(() => {});
         await page.waitForTimeout(2500);
       } catch (error) {
         report.push({route, theme, error: String(error.message).slice(0, 200)});
-        continue;
+        return;
       }
       const frames = [page.mainFrame(), ...page.frames().filter((frame) => frame !== page.mainFrame())];
       // A sandboxed example frame is transparent: it stands on the panel.
@@ -449,6 +454,13 @@ async function browserAudit() {
         }
         for (const item of found) report.push({route, theme, ...item});
         if (unstyledLeft) report.push({route, theme, unstyled: unstyledLeft});
+      }
+      })(), limit]);
+      clearTimeout(timer);
+      if (outcome === 'timeout') {
+        report.push({route, theme, error: 'timeout: page did not settle in 180 s'});
+        await page.close().catch(() => {});
+        page = await context.newPage();
       }
     }
     await page.close();
