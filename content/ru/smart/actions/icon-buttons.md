@@ -92,9 +92,11 @@ description: "Запускает действие компактной кноп�
 |:---|:---|
 | `icon` | имя иконки Material Symbols |
 | `filled` | залитый вариант той же иконки: отмеченное избранное |
-| `kind="close"` | крестик [кнопки закрытия](/ru/smart/actions/close/) того же размера вместо иконки |
 
 Свою картинку передаёт дочерний элемент со `slot="icon"`.
+
+Кнопка закрытия — отдельный компонент:
+[`<sf-button-close>`](/ru/smart/actions/close/).
 
 ### Размер
 
@@ -324,11 +326,6 @@ remove.onClick(() => deleteRow(row));
 ```js
 document.querySelector('sf-button-icon').focus();
 ```
-
-**Прежние имена.** До 2027-01-01 `appearance="link"` читается как `ghost`,
-`status="error"` — как `danger`, `appearance="surface"` рисуется как `tonal`
-с цветом `on-surface`, а `scheme="secondary"` — как `on-surface-variant`;
-новая разметка пишет текущие значения.
 
 Кнопка-переключатель сообщает своё состояние через `aria-pressed`, поэтому
 её имя не меняется при включении.

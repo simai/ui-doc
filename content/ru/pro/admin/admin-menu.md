@@ -44,10 +44,8 @@ Framework: поставляется пакетом `pro` из репозитор
   пользователя. Меню ничего не хранит и обо всём, что делает человек,
   спрашивает приложение.
 
-Порт передаётся методом `connectPort(port)`; прежний `setHostPort` — его
-псевдоним. С портом рисуется навигация порта, без него — меню из пунктов
-разметки. Прежний запрос `sf-host-port-request`, на который страница отвечала
-портом, меню отправляет при подключении до 2026-12-01.
+Порт передаётся методом `connectPort(port)`. С портом рисуется навигация
+порта, без него — меню из пунктов разметки.
 
 ### Пункты меню
 
@@ -82,8 +80,7 @@ Framework: поставляется пакетом `pro` из репозитор
 `event.detail` `{kind, query, requestId}`, где `kind` — `menu`; ответ передаётся методом
 `setSearchResults(requestId, groups)`. Ответ на запрос, который человек уже
 сменил, отбрасывается. Настройка `recent-results` (свойство `recentResults`) задаёт,
-что показывать при пустом поле, например недавно открытое. Прежние
-`sf-admin-menu-search` и `setRecentResults(groups)` работают до 2026-12-01.
+что показывать при пустом поле, например недавно открытое.
 
 Группа результатов — `{key, label, items, more}`, результат —
 `{text, subtext, icon, href}`, `more` — `{text, href}`. Результаты с адресом на
@@ -161,8 +158,7 @@ menu.addEventListener('sf-admin-menu-compact-change', ({detail}) => {
 В режиме `external` сохранение отправляет `sf-admin-menu-settings-save` с
 `{target, baseRevision, profile}`; сброс — `sf-admin-menu-reset` с
 `{kind: 'settings', target, baseRevision}`, отмена — `sf-admin-menu-settings-cancel`.
-Прежнее поле `base_revision` и прежнее имя `sf-admin-menu-settings-reset`
-приходят до 2026-12-01. `target` — уровень настроек: `user`
+`target` — уровень настроек: `user`
 для своих, `system` для общих; общие доступны при `allow-system-settings`, а
 переключение уровня отправляет `sf-admin-menu-settings-mode-change`.
 `settings-revision` и `system-settings-revision` — ревизии, против которых
@@ -217,8 +213,7 @@ profile})` фиксирует сохранение, `applySettingsError(error)` 
 Каждое намерение дублируется событием по своему глаголу — `sf-admin-menu-open`,
 `-toggle`, `-save`, `-query` и другими (список — в справочнике ниже) — с
 `{kind, intent, payload}` и полями намерения: по нему страница видит, что
-человек попросил, но отвечает только порт. Прежнее `sf-admin-menu-intent`
-приходит до 2026-12-01.
+человек попросил, но отвечает только порт.
 
 Если избранное или разделы изменились вне меню — например, звездой в шапке
 страницы, — вызовите `refresh()`: меню заново запросит `navigation.load`.

@@ -62,9 +62,6 @@ content: полужирный, курсив, код, ссылки и встро�
 - `sf-inline-editor-cancel` — `{id}` по `Escape`; исходный HTML элемента
   возвращается без изменений.
 
-Прежние имена `sf-inline-edit-input`, `sf-inline-edit-commit` и
-`sf-inline-edit-cancel` с `node_id` вместо `id` приходят следом до 2026-12-01.
-
 Сохраняйте результат `commit` через свой контракт ревизий, проверяйте Document
 и перерисовывайте страницу.
 

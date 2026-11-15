@@ -106,8 +106,7 @@ confirm.addEventListener('sf-confirm-answer', (event) => {
 :::
 
 Слова ответов задают `accept-text` и `decline-text`; без них — «Подтвердить»
-и «Отмена» на языке страницы. Прежнее имя `destructive` до 2027-01-01
-читается как `status="danger"`.
+и «Отмена» на языке страницы.
 
 ## Состояния
 
