@@ -108,8 +108,7 @@ SF.language.register('sf-resizer', 'de', {
 `sf-resizer/<storage-key>` в блок `data-sf-preferences`, а без значения у
 человека — `null` (см. [Подключение хранилища хоста](/ru/guide/smart-components/view-preferences/#подключение-хранилища-хоста)).
 
-Событие `sf-resizer-resize` приходит с `{width, phase}` (прежнее имя
-`sf-resize` приходит с тем же `detail`): `move` — во время
+Событие `sf-resizer-resize` приходит с `{width, phase}`: `move` — во время
 перетаскивания, `end` — после перетаскивания или нажатия клавиши, `reset` —
 после возврата. Если окно стало уже, сохранённая ширина возвращается в
 пределы.

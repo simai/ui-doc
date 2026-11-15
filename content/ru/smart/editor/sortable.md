@@ -75,8 +75,7 @@ description: "Даёт переставлять элементы, перенос
 ### Событие `sf-sortable-move`
 
 Когда пользователь отпускает элемент, список-получатель отправляет
-`sf-sortable-move` с `event.detail` (прежнее имя `sf-sortable-intent`
-приходит с тем же `detail`):
+`sf-sortable-move` с `event.detail`:
 
 | Поле | Содержимое |
 |:---|:---|
