@@ -1,15 +1,31 @@
-// Records one by one; with keys, ArrowLeft and ArrowRight on the page move too.
+// A record card walks the whole list (total), not one page of it: at the edge
+// of the loaded page the request carries the next index and an empty id, and
+// the page loads the next page of the list into items.
+const PAGE = 20;
+const record = (index) => ({id: String(1040 + index), title: `Заявка № ${1040 + index}`});
+const page = (number) => Array.from({length: PAGE}, (_, offset) => record(number * PAGE + offset));
+
 const initialize = async () => {
   await customElements.whenDefined('sf-pager');
   const pager = document.querySelector('#pager-counter');
-  if (pager && pager.dataset.exampleReady !== 'true') {
-    pager.dataset.exampleReady = 'true';
-    pager.items = [{"id": "1040", "title": "Заявка № 1040"}, {"id": "1041", "title": "Заявка № 1041"}, {"id": "1042", "title": "Заявка № 1042"}, {"id": "1043", "title": "Заявка № 1043"}, {"id": "1044", "title": "Заявка № 1044"}, {"id": "1045", "title": "Заявка № 1045"}, {"id": "1046", "title": "Заявка № 1046"}, {"id": "1047", "title": "Заявка № 1047"}, {"id": "1048", "title": "Заявка № 1048"}, {"id": "1049", "title": "Заявка № 1049"}, {"id": "1050", "title": "Заявка № 1050"}, {"id": "1051", "title": "Заявка № 1051"}];
-    const status = document.querySelector('#pager-counter-status');
-    pager.addEventListener('sf-pager-change', ({detail}) => {
-      if (status) status.textContent = detail.complete ? 'Пройдено до конца.' : `Открыто: ${detail.item?.title ?? '—'}.`;
-    });
-  }
+  if (!pager || pager.dataset.exampleReady === 'true') return;
+  pager.dataset.exampleReady = 'true';
+  const status = document.querySelector('#pager-counter-status');
+  let loaded = 1;
+  pager.items = page(0);
+  pager.addEventListener('sf-pager-navigate', ({detail}) => {
+    if (detail.index != null && detail.index >= pager.items.length) {
+      const wanted = Math.floor(detail.index / PAGE);
+      const more = [];
+      for (let number = loaded; number <= wanted; number += 1) more.push(...page(number));
+      loaded = wanted + 1;
+      pager.items = [...pager.items, ...more];
+      status.textContent = `Загружена страница ${loaded} списка.`;
+    }
+  });
+  pager.addEventListener('sf-pager-change', ({detail}) => {
+    status.textContent = `Открыта ${detail.item?.title ?? 'заявка'}. Загружено страниц списка: ${loaded}.`;
+  });
 };
 
 initialize();
