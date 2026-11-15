@@ -1,0 +1,12 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-4 items-cross-start">
+    <div class="flex flex-col gap-2">
+      <sf-input-code label="Код из письма" name="mail-code" length="6" groups="3"></sf-input-code>
+      <span class="text-1/2 color-on-surface-variant">groups="3" — 3 + 3</span>
+    </div>
+    <div class="flex flex-col gap-2">
+      <sf-input-code label="Код с карточки" name="card-code" length="8" groups="4" charset="23456789BCDFGHJKMNPQRTVWXY" uppercase></sf-input-code>
+      <span class="text-1/2 color-on-surface-variant">charset без 0 O 1 I и uppercase</span>
+    </div>
+  </div>
+</div>
