@@ -1,0 +1,13 @@
+<div class="query-container">
+  <div class="grid grid-col-1 gap-3">
+    <div class="flex flex-col gap-1">
+      <sf-breadcrumbs aria-label="Путь к статье" items='[{"label":"Блог","href":"#blog"},{"label":"Советы","href":"#tips"},{"label":"Как выбрать сковороду"}]'></sf-breadcrumbs>
+      <span class="text-1/2 color-on-surface-variant">current="last" — последняя крошка и есть эта страница</span>
+    </div>
+    <div class="flex flex-col gap-1">
+      <sf-breadcrumbs current="none" aria-label="Разделы над заголовком" items='[{"label":"Блог","href":"#blog"},{"label":"Советы","href":"#tips"}]'></sf-breadcrumbs>
+      <h3 class="m-0 title-5">Как выбрать сковороду</h3>
+      <span class="text-1/2 color-on-surface-variant">current="none" — только родители над заголовком, каждая крошка — ссылка</span>
+    </div>
+  </div>
+</div>

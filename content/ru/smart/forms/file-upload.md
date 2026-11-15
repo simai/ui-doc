@@ -72,6 +72,20 @@ description: "Даёт выбрать или перетащить файлы и 
 :::example {id="components/file-upload/smart-selection" label="PDF и Word"}
 :::
 
+### Ограничения
+
+`max-files`, `max-size`, `max-total-size`, `required` • [справочник](#атрибуты)
+
+`max-files` — сколько файлов самое большее держит поле, `max-size` —
+наибольший размер одного файла, `max-total-size` — всех файлов вместе;
+размеры — в байтах, `0` — без предела. Файл, который не проходит, не
+добавляется, а под полем написано почему. `required` не даёт отправить
+форму без файла: «Добавьте файл» или, при `multiple`, «Добавьте хотя бы один
+файл». Пределы назовите в тексте поля, чтобы человек знал их заранее.
+
+:::example {id="smart-components/file-upload/limits" label="До трёх файлов по 5 МБ" log="sf-file-upload-rejected" log_open=false}
+:::
+
 ### Оформление
 
 `root-class` добавляет зоне утилиты SIMAI Framework — поверхность, отступы,

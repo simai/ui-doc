@@ -67,7 +67,7 @@ description: "Показывает файл для скачивания с им�
 
 ### Файл готовит приложение
 
-`sf-file-download-download`, `state` • [справочник](#события)
+`sf-file-download-request`, `state` • [справочник](#события)
 
 Без `href` нажатие отправляет событие, и приложение собирает файл: отчёт,
 выгрузку, архив. На это время оно ставит `state="preparing"`: на месте знака
@@ -80,7 +80,7 @@ description: "Показывает файл для скачивания с им�
 :::
 
 ```js
-file.addEventListener('sf-file-download-download', async (event) => {
+file.addEventListener('sf-file-download-request', async (event) => {
   if (file.getAttribute('href')) return;
   event.preventDefault();
   file.setAttribute('state', 'preparing');

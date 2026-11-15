@@ -35,17 +35,6 @@ JavaScript.
 
 ## Варианты
 
-### Семейство
-
-`type` • [справочник](#атрибуты)
-
-`type` — семейство знаков: `outlined`, `rounded` или `sharp`. Без него
-действует семейство проекта из `SF_BOOT_CONFIG.icons.type`, а если оно не
-задано — `outlined`. Держите одно семейство во всём интерфейсе.
-
-:::example {id="smart-components/icons/families" label="outlined, rounded и sharp"}
-:::
-
 ### Толщина
 
 `weight` • по умолчанию `400` • [справочник](#атрибуты)

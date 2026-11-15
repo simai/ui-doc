@@ -15,7 +15,7 @@ function show(index) {
   rows.replaceChildren(...tabs[index].map((text, position) => {
     const row = document.createElement('label');
     row.className = 'sf-context-menu-row';
-    row.innerHTML = '<span class="sf-context-menu-row-text"></span><sf-checkbox></sf-checkbox>';
+    row.innerHTML = '<sf-checkbox></sf-checkbox><span class="sf-context-menu-row-text"></span>';
     row.querySelector('.sf-context-menu-row-text').textContent = text;
     if (index === 1 ? position === 0 : position < 4) row.querySelector('sf-checkbox').setAttribute('checked', '');
     return row;
