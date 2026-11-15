@@ -1,0 +1,11 @@
+<div class="flex flex-col items-cross-start gap-2" data-context-menu-demo="page-owned">
+  <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" id="file-menu-button" aria-expanded="false" aria-controls="file-menu-layer"><i class="sf-icon" aria-hidden="true">more_horiz</i><span class="sf-button-text-container">Файл</span></button>
+  <div id="file-menu-layer" hidden>
+    <sf-menu-context aria-label="Действия с файлом">
+      <sf-button slot="content" appearance="ghost" scheme="on-surface" size="1/2" icon-start="download" text="Скачать"></sf-button>
+      <sf-button slot="content" appearance="ghost" scheme="on-surface" size="1/2" icon-start="drive_file_rename_outline" text="Переименовать"></sf-button>
+      <sf-button slot="content" appearance="ghost" scheme="on-surface" size="1/2" icon-start="delete" text="Удалить"></sf-button>
+    </sf-menu-context>
+  </div>
+  <p class="m-0" role="status" data-menu-result>Меню скрыто.</p>
+</div>

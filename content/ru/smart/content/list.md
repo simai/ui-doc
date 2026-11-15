@@ -142,6 +142,12 @@ list.addEventListener('sf-list-open', (event) => {
 });
 ```
 
+Откройте письмо щелчком или стрелками и `Enter`: журнал покажет
+`sf-list-open`, а строка станет открытой.
+
+:::example {id="smart-components/list/open" label="Открытое письмо" preview=sandbox log="sf-list-open" log_console=true log_open=false}
+:::
+
 ### Действия строки
 
 `actions` — действия строки в одном меню на весь список,
@@ -150,6 +156,12 @@ list.addEventListener('sf-list-open', (event) => {
 `{action, scope: 'entry', ids}`. Убрать строку после удаления —
 `detach(id)`: фокус с неё переходит к соседней.
 
+Откройте «⋯» у строки или нажмите `Shift+F10` и выберите «Удалить»: страница
+уберёт строку.
+
+:::example {id="smart-components/list/actions" label="Действия с файлами" preview=sandbox log="sf-list-apply" log_console=true log_open=false}
+:::
+
 ### Переименование
 
 При `renamable` строку переименовывают на месте: `F2` или пункт меню
@@ -157,6 +169,12 @@ list.addEventListener('sf-list-open', (event) => {
 сразу и приходит событием `sf-list-rename` с `{id, text}`; отмена события
 возвращает старое. Если сохранить не удалось, верните прежнее название через
 `upsert()`.
+
+Выберите папку и нажмите `F2`: в примере пустое название не сохраняется и
+возвращается прежнее.
+
+:::example {id="smart-components/list/rename" label="Переименование папки" preview=sandbox log="sf-list-rename" log_console=true log_open=false}
+:::
 
 ### Следующая страница
 
