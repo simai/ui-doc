@@ -1,0 +1,13 @@
+<div class="flex flex-col gap-2">
+  <div class="flex"><sf-segmented id="job-state" size="1/2" aria-label="Что происходит" value="running"
+    items='[{"value":"running","label":"Идёт"},{"value":"unknown","label":"Объём неизвестен"},{"value":"partial","label":"С ошибками"},{"value":"failed","label":"Не удалось"},{"value":"done","label":"Готово"}]'></sf-segmented></div>
+  <div id="job-place" class="max-w-g8">
+    <sf-progress-run id="job" label="Импорт товаров из «Прайс_ноябрь.xlsx»" caption="Каталог «Электроника» · запущено в 14:02"
+      unit="товар|товара|товаров" cancelable pausable minimizable retryable hideable></sf-progress-run>
+  </div>
+  <p id="job-hidden" class="m-0 text-1/2 color-on-surface-variant" hidden>Карточка скрыта. Работа осталась в журнале импорта.</p>
+  <p id="job-live" class="sr-only" role="status"></p>
+  <div id="job-corner" class="job-corner" hidden>
+    <sf-progress-run id="job-notice" look="notice" label="Импорт товаров" unit="товар|товара|товаров" cancelable></sf-progress-run>
+  </div>
+</div>

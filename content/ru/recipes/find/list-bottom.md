@@ -67,7 +67,7 @@ description: "Что стоит под списком: сколько всего
 |:---|:---|:---|
 | Диапазон | строка страницы | «41–60 из 240» тихим цветом, цифры одной ширины |
 | Размер страницы | [Кнопка](/ru/smart/actions/buttons/) | `appearance="ghost"` `scheme="on-surface"` с `menu`; выбор — событие `sf-button-select`, страница возвращается на первую |
-| Переход | [Пагинация](/ru/smart/navigation/pagination/) | `appearance` по списку, `total`, `page-size`, `current`; `show-page-size="false"` — размер страницы стоит отдельной кнопкой |
+| Переход | [Пагинация](/ru/smart/navigation/pagination/) | `appearance` по списку, `total`, `page-size`, `current`; с заданным `appearance` пагинация рисует только переход — диапазон и размер страницы стоят рядом своими частями |
 | Показать ещё | [Пагинация](/ru/smart/navigation/pagination/) | `appearance="more"`; пока грузится — `show-more-busy`; событие `sf-pagination-load-more` |
 | Пусто | [Пустой раздел](/ru/smart/feedback/empty-state/) | `kind="nothing-found"`; низа нет |
 | Строка на телефоне | правило страницы | переход — отдельной строкой по центру, `flex-basis: 100%` |
@@ -109,7 +109,7 @@ description: "Что стоит под списком: сколько всего
 <!-- Рецепт SIMAI Framework «Низ списка», выпуск ui-994f9db407fa.
 Правила:
 1. Вид перехода по списку: админка — sf-pagination appearance="field"; каталог — "numbers" со ссылками ?page= от сервера; число неизвестно — "arrows" (count-known="false", has-next); курсор — "cursor"; лента — "more" отдельно по центру.
-2. Админка, одна строка: диапазон «41–60 из 240» простой строкой тихим цветом · sf-button «По 20» (appearance="ghost" scheme="on-surface" с menu) · sf-pagination у дальнего края; show-page-size="false". Промежуток gap-1/3.
+2. Админка, одна строка: диапазон «41–60 из 240» простой строкой тихим цветом · sf-button «По 20» (appearance="ghost" scheme="on-surface" с menu) · sf-pagination у дальнего края: с заданным appearance она рисует только переход. Промежуток gap-1/3.
 3. На телефоне строка админки — две: сверху диапазон и «По 20», снизу переход по центру (flex-basis: 100%).
 4. Смена размера страницы возвращает на первую. Кнопки на краях гаснут, не пропадают.
 5. Пусто — sf-empty-state, низа нет. Подгрузка — show-more-busy; ошибка подгрузки — строка с причиной и «Повторить».
@@ -117,7 +117,7 @@ description: "Что стоит под списком: сколько всего
 <div class="list-foot" data-sf-density="compact">
   <span class="list-range">41–60 из 240</span>
   <sf-button class="list-size" size="1/2" appearance="ghost" scheme="on-surface" text="По 20" icon-end="expand_more" menu='[{"id":"20","text":"По 20"},{"id":"50","text":"По 50"},{"id":"100","text":"По 100"}]'></sf-button>
-  <div class="list-nav"><sf-pagination appearance="field" size="1/2" total="240" page-size="20" current="3" show-page-size="false" aria-label="Страницы заказов"></sf-pagination></div>
+  <div class="list-nav"><sf-pagination appearance="field" size="1/2" total="240" page-size="20" current="3" aria-label="Страницы заказов"></sf-pagination></div>
 </div>
 <style>
 .list-foot { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sf-space-1\/3); }
@@ -140,11 +140,14 @@ description: "Что стоит под списком: сколько всего
 
 ## Что ещё в пути
 
-> **Появится в следующей версии.** Низ списка одной строкой — диапазон,
-> размер и переход — станет частью самого списка, и собирать его руками
-> не придётся. Кнопки «В начало · Назад» и «Далее · В конец» у поля
-> страницы получат промежуток, как у остальных кнопок; сейчас они стоят
-> вплотную.
+В таблице [Представления данных](/ru/pro/admin/table/) низ одной строкой —
+диапазон, размер и переход — рисует сама таблица. В простом списке его
+собирают из частей, как на этой странице: пагинация отвечает только за
+переход.
+
+> **Появится в следующей версии.** Кнопки «В начало · Назад» и «Далее · В
+> конец» у поля страницы получат промежуток, как у остальных кнопок;
+> сейчас они стоят вплотную.
 
 ## См. также
 

@@ -1,0 +1,43 @@
+<div class="query-container" data-sf-density="compact">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <section class="sf-card flex flex-col gap-1" aria-label="Первые шаги, загрузка">
+        <h4 class="m-0 text-1 weight-6">Первые шаги</h4>
+        <sf-progress-bar value="0" label="Первые шаги"></sf-progress-bar>
+        <sf-list data-state="loading" label="Задачи для начала" loading></sf-list>
+      </section>
+      <span class="text-1/2 color-on-surface-variant">Загрузка: строки-заготовки, полоса пустая</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <section class="sf-card flex flex-col gap-1" aria-label="Первые шаги, начало">
+        <div class="flex justify-between items-cross-baseline gap-1"><h4 class="m-0 text-1 weight-6">Первые шаги</h4><span class="text-1/2 color-on-surface-variant" aria-hidden="true">0 из 3</span></div>
+        <sf-progress-bar value="0" label="Первые шаги" value-text="0 из 3 задач"></sf-progress-bar>
+        <sf-list data-state="none" label="Задачи для начала"></sf-list>
+      </section>
+      <span class="text-1/2 color-on-surface-variant">Начало: 0 из 3, полоса пустая</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <section class="sf-card flex flex-col gap-1" aria-label="Первые шаги, всё готово">
+        <div class="flex justify-between items-cross-baseline gap-1"><h4 class="m-0 text-1 weight-6">Первые шаги</h4><span class="text-1/2 color-on-surface-variant" aria-hidden="true">3 из 3</span></div>
+        <p class="m-0 text-1/2 color-on-surface-variant">Всё готово — сайт работает.</p>
+        <sf-progress-bar value="100" status="success" label="Первые шаги" value-text="3 из 3 задач"></sf-progress-bar>
+        <div class="flex justify-end"><sf-button appearance="ghost" scheme="on-surface" text="Скрыть список"></sf-button></div>
+      </section>
+      <span class="text-1/2 color-on-surface-variant">Всё готово: успех словами и «Скрыть»; при следующем входе списка нет</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-empty-state kind="first-use" size="1/2" heading-level="4" icon="language" heading="Домен ещё не подключён" text="Подключите свой домен — сайт откроется по нему.">
+        <sf-button slot="actions" icon-start="add" text="Подключить домен"></sf-button>
+      </sf-empty-state>
+      <span class="text-1/2 color-on-surface-variant">Задача ведёт в пустой раздел: первое использование и одно действие</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-empty-state kind="error" size="1/2" heading-level="4" heading="Список задач не загрузился" text="Обновите страницу или нажмите «Повторить»."></sf-empty-state>
+      <span class="text-1/2 color-on-surface-variant">Ошибка: список не загрузился, «Повторить»</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-empty-state kind="offline" size="1/2" heading-level="4" text="Отметки не потеряются: список обновится, когда вернётся связь."></sf-empty-state>
+      <span class="text-1/2 color-on-surface-variant">Нет связи: отметки не теряются, повтор сам</span>
+    </div>
+  </div>
+</div>

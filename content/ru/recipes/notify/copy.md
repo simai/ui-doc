@@ -67,7 +67,7 @@ description: "Как дать скопировать ключ, команду, �
 
 | Что копируют | Как дать |
 |:---|:---|
-| Ключ, токен, длинный идентификатор в поле | Кнопка в конце поля, источник — поле: `target="#id"` |
+| Ключ, токен, длинный идентификатор в поле | Кнопка действием в конце поля: `sf-button-copy` в слоте `end` у `sf-input readonly`, источник — `value` с ключом целиком |
 | Команда, отрывок кода | Блок кода со своей шапкой ставит кнопку «Копировать код» сам; без шапки (`data-chrome="none"`) — кнопка над блоком с `target` |
 | Номер или ссылка в строке таблицы | Маленькая кнопка рядом со значением, источник — `value` с самим значением |
 | Несколько значений в одной карточке | Кнопка у каждого, у каждой своё имя |
@@ -80,9 +80,11 @@ description: "Как дать скопировать ключ, команду, �
 ## Состояния
 
 Кнопка копирования сама показывает «Скопировано» на месте, без
-всплывающего сообщения. Если браузер не дал доступа к буферу обмена —
-уведомление говорит, как скопировать вручную. Значение, которое копируют
-часто, стоит в поле только для чтения с действием копирования внутри.
+всплывающего сообщения. Если браузер не дал доступа к буферу обмена,
+кнопка выделяет текст и сама пишет над собой, что нажать, — как в примере
+«Отказ» выше; своего уведомления рядом не нужно. Значение, которое копируют
+часто, стоит в поле только для чтения с действием копирования в конце
+поля.
 
 :::example {id="recipes/copy/states" label="Состояния" preview=sandbox}
 :::
@@ -111,7 +113,7 @@ description: "Как дать скопировать ключ, команду, �
 | Кнопка у значения | [Кнопка копирования](/ru/smart/actions/copy-button/) | `target="#id"` — значение поля или текст элемента; `value` — сам текст |
 | Имя кнопки | [Кнопка копирования](/ru/smart/actions/copy-button/) | `label` называет, что копируется: «Скопировать API-ключ», «Скопировать номер заказа ORD-2026-0042» |
 | Значок | [Кнопка копирования](/ru/smart/actions/copy-button/) | `icon="link"` у ссылки, `icon="key"` у ключа; по умолчанию `content_copy` |
-| Поле с ключом | [Текстовые поля](/ru/components/forms/inputs/) | `input readonly`, кнопка внутри `sf-input-field` после поля |
+| Поле с ключом | [Текстовое поле](/ru/smart/forms/inputs/) | `readonly`, `default-value`; кнопка копирования в слоте `end` с `value` — встаёт действием в конце поля, без подложки |
 | Блок кода | [Подсветка кода](/ru/components/content/highlight/) | `<pre><code data-lang="bash" data-lines>`; со своей шапкой — кнопка «Копировать код» в ней, с `data-chrome="none"` — `sf-button-copy target` над блоком |
 | Таблица | [Таблицы](/ru/utilities/tables/tables-default-parameters/) | `table` с `text-1/2`; кнопка `size="1/2"` в ячейке рядом со значением — одна ступень с текстом строки |
 | Обычная кнопка | [Кнопки](/ru/smart/actions/buttons/), [Кнопки со значком](/ru/smart/actions/icon-buttons/) | `data-sf-copy="текст"` или `data-sf-copy-target="#id"`; результат — события `sf:copy-success` и `sf:copy-error` |
@@ -151,7 +153,7 @@ description: "Как дать скопировать ключ, команду, �
 1. Кнопка копирования — sf-button-copy рядом со значением; источник — target="#id" (значение поля или текст элемента) или value (сам текст), не оба сразу.
 2. Копируется значение целиком: источник — поле или полный текст, не сокращённая строка с экрана.
 3. label называет, что копируется: «Скопировать API-ключ»; в строке таблицы — со значением строки: «Скопировать номер заказа ORD-2026-0042». Никогда несколько кнопок «Копировать» подряд.
-4. Ключ в поле: input readonly, sf-button-copy target="#id" внутри sf-input-field после поля.
+4. Ключ в поле: sf-input readonly с default-value; sf-button-copy slot="end" с value — тем же ключом целиком: кнопка встаёт действием в конце поля, без подложки.
 5. Команды и код — <pre><code data-lang="…" data-lines>: в шапке блока кнопку «Копировать код» ставит сам блок, своей рядом не ставьте; без шапки (data-chrome="none") — sf-button-copy target="#id блока" над ним. Номера строк в буфер не попадают.
 6. В таблице — sf-button-copy в ячейке рядом со значением, на ступени текста строки: table text-1/2 → size="1/2"; icon="link" у ссылки. Подпись, значение и кнопка в одной строке — одна ступень: текст 1/2 → size="1/2", текст 1 → size="1".
 7. Своя кнопка копирует с атрибутом: data-sf-copy="текст" или data-sf-copy-target="#id" у <button>, sf-button или sf-button-icon; отклик тот же, события sf:copy-success {text, method} и sf:copy-error {code}.
@@ -159,13 +161,9 @@ description: "Как дать скопировать ключ, команду, �
 <div data-sf-density="compact">
   <section class="sf-card max-w-g8" aria-labelledby="key-heading">
     <h2 id="key-heading" class="m-0 text-1 weight-6">Ключ доступа к API</h2>
-    <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col max-w-sm">
-      <span class="sf-input-label flex"><span class="sf-input-text">API-ключ</span></span>
-      <span class="sf-input-field items-cross-center transition flex">
-        <input id="api-key" name="api-key" readonly value="demo-test-key-51Hq7Lr9Xc4Vb1Nm8Pz3TqA2xY6wE0rT8uI3oP5aS7dF">
-        <sf-button-copy target="#api-key" label="Скопировать API-ключ"></sf-button-copy>
-      </span>
-    </label>
+    <sf-input label="API-ключ" name="api-key" readonly root-class="max-w-sm" default-value="demo-test-key-51Hq7Lr9Xc4Vb1Nm8Pz3TqA2xY6wE0rT8uI3oP5aS7dF">
+      <sf-button-copy slot="end" value="demo-test-key-51Hq7Lr9Xc4Vb1Nm8Pz3TqA2xY6wE0rT8uI3oP5aS7dF" label="Скопировать API-ключ"></sf-button-copy>
+    </sf-input>
     <div class="flex flex-wrap items-cross-center gap-1/2">
       <code id="webhook-secret">whsec_Zq41Lk0P</code>
       <sf-button-copy target="#webhook-secret" icon="key" label="Скопировать секрет вебхука"></sf-button-copy>

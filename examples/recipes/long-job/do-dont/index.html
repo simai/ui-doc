@@ -1,0 +1,17 @@
+<div class="query-container" data-sf-density="compact">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — «с ошибками» — предупреждение, число ошибок и что сделать</span></figcaption>
+      <div class="flex flex-1 flex-col p-2">
+        <sf-progress-run label="Импорт товаров" unit="товар|товара|товаров" total="12000" value="12000" run-state="partial" errors-total="18" retryable
+          result-text="18 строк не загружены — исправьте их и повторите неудачные"></sf-progress-run>
+      </div>
+    </figure>
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — «готово» при 18 незагруженных строках: человек узнает о них от покупателей</span></figcaption>
+      <div class="flex flex-1 flex-col p-2">
+        <sf-progress-run label="Импорт товаров" unit="товар|товара|товаров" total="12000" value="12000" run-state="done" result-text="Успешно завершено"></sf-progress-run>
+      </div>
+    </figure>
+  </div>
+</div>

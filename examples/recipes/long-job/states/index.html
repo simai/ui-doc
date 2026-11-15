@@ -1,0 +1,42 @@
+<div class="query-container" data-sf-density="compact">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-progress-run data-state="queued" label="Резервная копия shop.test" caption="Запуск в 03:00"></sf-progress-run>
+      <span class="text-1/2 color-on-surface-variant">В очереди: шаги ждут, ход ещё не начался</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-progress-run data-state="unknown" label="Сборка документации" unit="файл|файла|файлов" value="1240" run-state="running" cancelable></sf-progress-run>
+      <span class="text-1/2 color-on-surface-variant">Объём неизвестен: полоса бежит, счёт идёт</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-progress-run data-state="paused" label="Рассылка «Новости ноября»" unit="письмо|письма|писем" total="8400" value="3150" run-state="paused" pausable cancelable></sf-progress-run>
+      <span class="text-1/2 color-on-surface-variant">Пауза: предупреждение и «Продолжить»</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-progress-run data-state="partial" label="Импорт товаров" unit="товар|товара|товаров" total="12000" value="12000" run-state="partial" errors-total="18" retryable hideable
+        result-text="18 строк не загружены — исправьте их и повторите неудачные"></sf-progress-run>
+      <span class="text-1/2 color-on-surface-variant">С ошибками: предупреждение, не успех; первые ошибки и отчёт</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-progress-run data-state="failed" label="Создание сайта «Посуда у дома»" run-state="failed" retryable
+        result-text="Не хватает места на диске: освободите 2 ГБ и повторите"></sf-progress-run>
+      <span class="text-1/2 color-on-surface-variant">Не удалось: причина словами и «Повторить»</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-progress-run data-state="done" label="Резервная копия shop.test" run-state="done" hideable result-text="Копия сохранена: 1,2 ГБ"></sf-progress-run>
+      <span class="text-1/2 color-on-surface-variant">Готово: итог, время шагов и «Скрыть»</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-progress-run data-state="cancelled" label="Рассылка «Новости ноября»" unit="письмо|письма|писем" total="8400" value="3150" run-state="cancelled" retryable></sf-progress-run>
+      <span class="text-1/2 color-on-surface-variant">Отменено: спокойно, «Повторить»</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-empty-state kind="no-access" size="1/2" heading-level="4" heading="Это чужая работа" text="Ход импорта видит тот, кто его запустил, и администратор."></sf-empty-state>
+      <span class="text-1/2 color-on-surface-variant">Нет доступа: вместо хода — пустое состояние</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-empty-state kind="offline" size="1/2" heading-level="4" text="Последний ход сохранён. Проверьте интернет — ход обновится сам."></sf-empty-state>
+      <span class="text-1/2 color-on-surface-variant">Нет связи: что проверить, повтор сам</span>
+    </div>
+  </div>
+</div>
