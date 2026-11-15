@@ -1,0 +1,14 @@
+<div class="query-container"><div class="grid grid-col-1 cq-md:grid-col-2 gap-4">
+  <div class="flex flex-col gap-2">
+    <sf-list-timeline now="2026-10-27T12:00:00+03:00" group="none" label="Заказ 4815">
+      <script type="application/json" data-sf-settings>{"items": [{"id": "paid", "state": "done", "time": "2026-10-25T10:12:00+03:00", "title": "Оплачен"}, {"id": "packed", "state": "done", "time": "2026-10-26T15:40:00+03:00", "title": "Собран на складе"}, {"id": "road", "state": "current", "time": "2026-10-27T09:05:00+03:00", "title": "В пути", "text": "Курьер привезёт до 18:00"}, {"id": "given", "state": "upcoming", "title": "Вручён"}]}</script>
+    </sf-list-timeline>
+    <span class="text-1/2 color-on-surface-variant">Точки: пройден, текущий, впереди</span>
+  </div>
+  <div class="flex flex-col gap-2">
+    <sf-list-timeline now="2026-10-27T12:00:00+03:00" group="none" label="Перенос сайта">
+      <script type="application/json" data-sf-settings>{"items": [{"id": "copy", "state": "done", "icon": "content_copy", "time": "2026-10-27T08:00:00+03:00", "title": "Копия файлов"}, {"id": "db", "state": "current", "status": "warning", "icon": "database", "time": "2026-10-27T11:20:00+03:00", "title": "Перенос базы", "text": "Медленнее обычного"}, {"id": "dns", "state": "upcoming", "icon": "dns", "title": "Смена адреса"}]}</script>
+    </sf-list-timeline>
+    <span class="text-1/2 color-on-surface-variant">Значки и статус warning у текущего этапа</span>
+  </div>
+</div></div>

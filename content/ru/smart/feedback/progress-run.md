@@ -28,7 +28,7 @@ description: "Долгое задание глазами человека: ша�
 Шаги передайте JSON-блоком, который печатает сервер, или свойством `steps`:
 
 ```html
-<sf-progress-run label="Создание сайта demo.test" cancelable retryable hideable>
+<sf-progress-run label="Создание сайта «Посуда у дома»" cancelable retryable hideable>
   <script type="application/json" data-sf-settings>
     {"steps": [
       {"id": "dns", "title": "Адрес", "state": "done", "duration": 1200},

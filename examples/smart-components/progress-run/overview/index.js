@@ -2,7 +2,7 @@
 // the output with chunk(), and answers Cancel, Retry and Hide. Here a timer
 // plays a job that creates a site.
 const STEPS = [
-  {id: 'dns', title: 'Адрес demo.test', state: 'waiting'},
+  {id: 'dns', title: 'Адрес сайта', state: 'waiting'},
   {id: 'files', title: 'Файлы сайта', state: 'waiting'},
   {id: 'db', title: 'База данных', state: 'waiting'},
   {id: 'ssl', title: 'Сертификат', state: 'waiting'},
@@ -21,7 +21,7 @@ const initialize = async () => {
     run.setAttribute('run-state', 'auto');
     run.removeAttribute('result-text');
     run.clear();
-    run.chunk({text: '$ create-site demo.test\n'});
+    run.chunk({text: '$ create-site shop\n'});
     let index = 0;
     const next = () => {
       if (index > 0) {

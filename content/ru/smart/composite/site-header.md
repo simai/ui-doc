@@ -54,7 +54,7 @@ SIMAI: каталогу эффектов, сайтам документации 
 - В `tools` кладут то, что нужно всегда: поиск, язык, тему, цвет. Менее
   важное — в `actions`: на узком экране оно уйдёт в панель.
 - Слот `sheet` — то, что бывает только в панели, например дерево
-  документации; сайт может заполнить его по событию `sf-site-header-opened`.
+  документации; сайт может заполнить его по событию `sf-header-site-opened`.
 
 ## Варианты
 
@@ -80,6 +80,22 @@ SIMAI: каталогу эффектов, сайтам документации 
 отражаются.
 
 :::example {id="smart-components/site-header/menu-placement" label="Кнопка меню в начале и в конце полосы" preview=sandbox}
+:::
+
+### Своя кнопка меню
+
+`data-header-site`, `aria-controls` • [справочник](#методы)
+
+Панель шапки может открывать кнопка самой страницы — например, «Каталог»
+в полосе под шапкой. Поставьте ей `data-header-site="toggle"` и
+`aria-controls` с `id` шапки: нажатие открывает и закрывает панель, а шапка
+пишет кнопке `aria-expanded`. `data-header-site="open"` только открывает
+панель, `"close"` — только закрывает.
+
+Пока такая кнопка видна на экране и стоит вне панели, шапка не рисует свою
+кнопку меню: на странице одна кнопка, которая открывает панель.
+
+:::example {id="smart-components/site-header/own-toggle" label="Своя кнопка страницы открывает панель шапки" preview=sandbox}
 :::
 
 ### Размер и прилипание
@@ -117,13 +133,13 @@ SIMAI: каталогу эффектов, сайтам документации 
 верхний слой, а страница не прокручивается, пока панель открыта.
 
 Действия `open()`, `close({reason})` и `toggle()` делают то же, что кнопка
-меню. Событие `sf-site-header-open` можно отменить — тогда панель не
-откроется; `sf-site-header-close` несёт причину: `close`, `escape`,
+меню. Событие `sf-header-site-open` можно отменить — тогда панель не
+откроется; `sf-header-site-close` несёт причину: `close`, `escape`,
 `outside`, `cancelled` или `api`.
 
 ```js
 const header = document.querySelector('sf-header-site');
-header.addEventListener('sf-site-header-opened', () => {
+header.addEventListener('sf-header-site-opened', () => {
   header.querySelector('[slot="sheet"]')?.replaceChildren(buildDocumentationTree());
 });
 ```
