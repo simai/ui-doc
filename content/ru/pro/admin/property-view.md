@@ -5,7 +5,7 @@ description: "Показывает и правит поля одного объ�
 
 # Представление свойств
 
-:badge[sf-view-properties]{variant=tonal scheme=primary size=1/2} :badge[1.13.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-view-properties]{variant=tonal scheme=primary size=1/2} :badge[1.16.2]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-view-properties>` — карточка одного объекта: поля сгруппированы в области,
 области — в разделы, а каждое поле рисуется отрисовщиком своего типа. Берите
@@ -402,7 +402,7 @@ view: {
 |:---|:---|
 | Тег | `<sf-view-properties>` |
 | Назначение | Поля одного объекта по разделам, группам и полям; каждое поле рисует набор рендереров своего типа, данные идут через отдельный порт приложения. Группа редактируется и сохраняется одной ревизией по кнопке, а значение ссылочного поля выбирается из кандидатов элемента постранично. Парный компонент к представлению данных: то показывает набор записей, этот — один объект. |
-| Контракт | `smart.view-properties`, версия `1.13.3` |
+| Контракт | `smart.view-properties`, версия `1.16.2` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -557,8 +557,8 @@ view: {
 
 ### Источник
 
-- `simai/ui-pro@787c37d6a6c6d874f8eba2b786cbb3c51f86f03c:components/src/smart/view-properties`
-- `simai/ui-pro@787c37d6a6c6d874f8eba2b786cbb3c51f86f03c:components/src/smart/view-properties/rule.js#name=cl-view-properties`
+- `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/view-properties`
+- `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/view-properties/rule.js#name=cl-view-properties`
 
 ## См. также
 

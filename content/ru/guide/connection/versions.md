@@ -30,7 +30,7 @@ Framework, а для каждого подключённого пакета пр
   "packages": {
     "pro": {
       "receipt": "<путь к квитанции пакета>",
-      "source_revision": "787c37d6a6c6d874f8eba2b786cbb3c51f86f03c",
+      "source_revision": "2ba35fabb343d85550dde2fdd7964bd801cb1fdf",
       "framework": "ui-994f9db407fa",
       "manifest_sha256": "<output.manifest_sha256 из квитанции>"
     }
