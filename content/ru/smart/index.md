@@ -33,7 +33,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Код страны](/ru/smart/forms/country-code/)
 - [Код подтверждения](/ru/smart/forms/code-input/)
 - [Цвет](/ru/smart/forms/color/)
-- [Генератор темы](/ru/smart/forms/theme-generator/)
+- [Конструктор темы](/ru/smart/forms/theme-generator/)
 - [Загрузка файлов](/ru/smart/forms/file-upload/)
 - [Поле изображения](/ru/smart/forms/image-field/)
 

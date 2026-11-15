@@ -127,7 +127,7 @@ API компонента (`SF.Input`, `SF.Tabs` и другие) описан н
 | `SF.Tab` | [Вкладка (совместимость)](/ru/components/navigation/tab/#javascript) |
 | `SF.Tabs` | [Вкладки](/ru/components/navigation/tabs/#javascript) |
 | `SF.Textarea` | [Многострочное поле](/ru/components/forms/textarea/#javascript) |
-| `SF.ThemePalette` | [Генератор темы](/ru/smart/forms/theme-generator/) |
+| `SF.ThemePalette` | [Конструктор темы](/ru/smart/forms/theme-generator/) |
 | `SF.Toast` | [Всплывающие сообщения](/ru/components/feedback/toast/#javascript) |
 | `SF.Tree` | [Дерево](/ru/components/navigation/tree/#javascript) |
 | `SF.Verification` | [Код подтверждения](/ru/components/forms/verification/#javascript) |
