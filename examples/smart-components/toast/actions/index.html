@@ -1,0 +1,16 @@
+<div class="query-container">
+  <div class="grid grid-col-1 gap-4">
+    <div class="flex flex-col gap-1 min-w-0">
+      <sf-toast status="info" icon="delete" title="Файл перемещён в корзину" action-text="Вернуть" action="undo"></sf-toast>
+      <span class="text-1/2 color-on-surface-variant">одно действие в строке с текстом</span>
+    </div>
+    <div class="flex flex-col gap-1 min-w-0">
+      <sf-toast status="success" icon="check_circle" title="Отчёт готов" supporting-text="Отчёт за ноябрь собран и лежит в разделе «Отчёты»." action-text="Открыть" action="open" actions-layout="under"></sf-toast>
+      <span class="text-1/2 color-on-surface-variant">actions-layout="under"</span>
+    </div>
+    <div class="flex flex-col gap-1 min-w-0">
+      <sf-toast status="warning" icon="warning" title="Не все письма отправлены" supporting-text="3 адреса не ответили." action-text="Повторить" action="retry" secondary-action-text="Показать адреса" secondary-action="list"></sf-toast>
+      <span class="text-1/2 color-on-surface-variant">два действия — под текстом</span>
+    </div>
+  </div>
+</div>
