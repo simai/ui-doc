@@ -1,0 +1,24 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-empty-state kind="first-use" size="1/2" heading="Сайтов пока нет" text="Создайте первый сайт — он появится в этом списке."><sf-button slot="actions" icon-start="add" text="Создать сайт"></sf-button></sf-empty-state>
+      <span class="text-1/2 color-on-surface-variant">Записей ещё нет: одно действие — создать первую</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-empty-state kind="nothing-found" size="1/2" heading="Ничего не нашлось" text="По запросу «блог 2023» сайтов нет."><sf-button slot="actions" appearance="outline" scheme="on-surface" text="Показать все"></sf-button></sf-empty-state>
+      <span class="text-1/2 color-on-surface-variant">Ничего не нашлось: что искали и как вернуть все</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <div class="flex flex-col gap-1" aria-busy="true" aria-label="Загрузка">
+        <sf-skeleton kind="text" width="60%"></sf-skeleton>
+        <sf-skeleton kind="text" width="90%"></sf-skeleton>
+        <sf-skeleton kind="text" width="75%"></sf-skeleton>
+      </div>
+      <span class="text-1/2 color-on-surface-variant">Загрузка: строки-заготовки на месте списка</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-alert status="error" heading="Список не загрузился" supporting-text="Сервер не ответил. Попробуйте ещё раз." action-text="Повторить" action="retry"></sf-alert>
+      <span class="text-1/2 color-on-surface-variant">Ошибка: что случилось и «Повторить»</span>
+    </div>
+  </div>
+</div>

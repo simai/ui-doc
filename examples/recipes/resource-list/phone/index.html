@@ -1,0 +1,8 @@
+<div class="flex flex-col gap-2" data-sf-density="compact">
+  <sf-header-page heading="Сайты" count="9">
+    <sf-button-icon slot="actions" icon="add" aria-label="Создать сайт"></sf-button-icon>
+  </sf-header-page>
+  <sf-input input-type="search" icon-start="search" placeholder="Название или домен" aria-label="Поиск по сайтам"></sf-input>
+  <sf-segmented full-width aria-label="Какие сайты показать" value="all" items='[{"value":"all","label":"Все","count":9},{"value":"problems","label":"С проблемами","count":4}]'></sf-segmented>
+  <sf-list id="phone-sites" label="Сайты"></sf-list>
+</div>
