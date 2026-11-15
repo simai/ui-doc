@@ -16,7 +16,7 @@ canvas.addEventListener('dblclick', (event) => {
   const node = findNode(element.dataset.sfCompositionId); // модель приложения
   SF.Composition.startInlineEdit(element, {content: node.data.content, nodeId: node.id, label: 'Абзац'});
 });
-document.addEventListener('sf-inline-editor-change', (event) => {
+document.addEventListener('sf-editor-inline-change', (event) => {
   saveProperty(event.detail.id, 'content', event.detail.content);
 });
 ```

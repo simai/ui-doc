@@ -52,14 +52,21 @@ content: полужирный, курсив, код, ссылки и встро�
 Вызов возвращает `{element, commit, cancel, value}`: `commit()` и `cancel()`
 завершают правку из кода, `value()` возвращает текущую модель.
 
+В примере заголовок разрешает только курсив (`marks: ['em']`) и не
+принимает ссылки (`links: false`): `Ctrl+B` и вставка ссылки ничего не
+делают. Журнал показывает события правки.
+
+:::example {id="smart-components/inline-editor/options" label="Заголовок только с курсивом" preview=sandbox log="sf-editor-inline-input sf-editor-inline-change sf-editor-inline-cancel" log_console=true log_open=false}
+:::
+
 ### События
 
 События отправляются на редактируемый элемент и всплывают до `document`:
 
-- `sf-inline-editor-input` — `{id, content}` после каждого изменения;
-- `sf-inline-editor-change` — `{id, content}` по `Enter` или при уходе
+- `sf-editor-inline-input` — `{id, content}` после каждого изменения;
+- `sf-editor-inline-change` — `{id, content}` по `Enter` или при уходе
   фокуса;
-- `sf-inline-editor-cancel` — `{id}` по `Escape`; исходный HTML элемента
+- `sf-editor-inline-cancel` — `{id}` по `Escape`; исходный HTML элемента
   возвращается без изменений.
 
 Сохраняйте результат `commit` через свой контракт ревизий, проверяйте Document
@@ -72,10 +79,12 @@ SF.Composition.startInlineEdit(element, {
   nodeId: node.id,
   label: 'Абзац',
 });
-canvas.addEventListener('sf-inline-editor-change', (event) => {
+canvas.addEventListener('sf-editor-inline-change', (event) => {
   save(event.detail.id, event.detail.content);
 });
 ```
+
+События показывает журнал примера выше.
 
 ### Встроенные компоненты
 
@@ -88,6 +97,12 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 редактор не знает, сохраняется без изменений, а во время правки на её месте
 стоит заглушка. Какие компоненты и настройки разрешены — в разделе
 [Встроенные компоненты](/ru/guide/layouts/content-and-data/structured-text/#встроенные-компоненты).
+
+Удалите клавишу `Ctrl+S` одним нажатием `Backspace` или скопируйте значок и
+вставьте его в конец абзаца: он вернётся тем же компонентом.
+
+:::example {id="smart-components/inline-editor/components" label="Клавиша и значок в абзаце" preview=sandbox log="sf-editor-inline-change" log_console=true log_open=false}
+:::
 
 ### Безопасность
 

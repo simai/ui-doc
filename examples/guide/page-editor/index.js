@@ -53,11 +53,11 @@ async function change(message, apply) {
   status.textContent = message;
 }
 
-overlay.addEventListener('sf-composition-overlay-insert', (event) => {
+overlay.addEventListener('sf-editor-overlay-insert', (event) => {
   const { parent_id: parent, slot, index, item } = event.detail;
   change('Блок добавлен.', (next) => find(next.root, parent).slots[slot].splice(index, 0, newNode(item || 'content.paragraph')));
 });
-overlay.addEventListener('sf-composition-overlay-move', (event) => {
+overlay.addEventListener('sf-editor-overlay-move', (event) => {
   const { node_id: id, parent_id: parent, slot, index } = event.detail;
   change('Блок перемещён.', (next) => {
     const node = find(next.root, id);
@@ -65,7 +65,7 @@ overlay.addEventListener('sf-composition-overlay-move', (event) => {
     find(next.root, parent).slots[slot].splice(index, 0, node);
   });
 });
-overlay.addEventListener('sf-composition-overlay-apply', (event) => {
+overlay.addEventListener('sf-editor-overlay-apply', (event) => {
   const [id] = event.detail.ids;
   if (id === model.root.id) {
     status.textContent = 'Корневую секцию удалить нельзя.';
@@ -81,7 +81,7 @@ canvas.addEventListener('dblclick', (event) => {
   event.preventDefault();
   SF.Composition.startInlineEdit(element, { content: node.data.content, nodeId: node.id, label: names[node.type] });
 });
-canvas.addEventListener('sf-inline-editor-change', (event) => {
+canvas.addEventListener('sf-editor-inline-change', (event) => {
   const { id, content } = event.detail;
   change('Текст сохранён.', (next) => { find(next.root, id).data.content = content; });
 });
