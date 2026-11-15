@@ -405,6 +405,8 @@ async function browserAudit() {
                 const el = node.parentElement;
                 if (!el || !node.textContent.trim() || seen.has(el)) continue;
                 if (el.closest('script,style,template,noscript')) continue;
+                // data-contrast="colour": a colour sample, as in the static gate.
+                if (el.closest('[data-contrast="colour"]')) continue;
                 const style = getComputedStyle(el);
                 const rect = el.getBoundingClientRect();
                 if (style.visibility === 'hidden' || style.display === 'none' || rect.width < 1 || rect.height < 1) continue;
@@ -418,6 +420,8 @@ async function browserAudit() {
                   if (s.backgroundImage !== 'none' && !/^url\(.*\.svg/.test(s.backgroundImage)) image = true;
                   // A control still in the browser's own dress has not got its sheet yet.
                   if (/^(button|input|select)$/i.test(cur.tagName) && /^rgb\((239, 239, 239|107, 107, 107)\)$/.test(s.backgroundColor)) { image = true; unstyled += 1; }
+                  // A link still in the browser's own blue has not got its utilities yet.
+                  if (cur === el && /^a$/i.test(cur.tagName) && s.color === 'rgb(0, 0, 238)') { image = true; unstyled += 1; }
                   const bg = parse(s.backgroundColor);
                   if (bg && bg.a > 0) { layers.push(bg); if (bg.a >= 1) break; }
                   if (cur === document.documentElement) break;
