@@ -1,14 +1,16 @@
-<div class="grid grid-col-1 gap-4">
-  <div class="flex flex-col gap-1">
-    <sf-slider-range aria-label="Громкость" min="0" max="100" value="40" label="none" suffix="%"></sf-slider-range>
-    <code class="text-1/2 color-on-surface-variant">label="none"</code>
-  </div>
-  <div class="flex flex-col gap-1">
-    <sf-slider-range aria-label="Громкость" min="0" max="100" value="40" label="text" suffix="%"></sf-slider-range>
-    <code class="text-1/2 color-on-surface-variant">label="text"</code>
-  </div>
-  <div class="flex flex-col gap-1">
-    <sf-slider-range aria-label="Громкость" min="0" max="100" value="40" label="tooltip" suffix="%"></sf-slider-range>
-    <code class="text-1/2 color-on-surface-variant">label="tooltip"</code>
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-3 gap-4">
+    <div class="flex flex-col gap-1 min-w-0">
+      <sf-slider-range label="Громкость" min="0" max="100" value="40" suffix="%"></sf-slider-range>
+      <span class="text-1/2 color-on-surface-variant">без value-display</span>
+    </div>
+    <div class="flex flex-col gap-1 min-w-0">
+      <sf-slider-range label="Громкость" min="0" max="100" value="40" value-display="text" suffix="%"></sf-slider-range>
+      <span class="text-1/2 color-on-surface-variant">value-display="text"</span>
+    </div>
+    <div class="flex flex-col gap-1 min-w-0">
+      <sf-slider-range label="Громкость" min="0" max="100" value="40" value-display="tooltip" suffix="%"></sf-slider-range>
+      <span class="text-1/2 color-on-surface-variant">value-display="tooltip"</span>
+    </div>
   </div>
 </div>

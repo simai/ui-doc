@@ -69,7 +69,7 @@ profile: reference
 `sf-slider-arrows` без модификатора — тихие стрелки без подложки, для
 карточек на фоне страницы. `sf-slider-arrows--plate` кладёт каждую стрелку на
 плашку всплывающего слоя с тенью, чтобы она читалась поверх любого
-изображения. `sf-slider-arrows--light` и `--dark` — прежние имена.
+изображения.
 
 :::example {id="components/slider/arrows" label="Стрелки"}
 :::
@@ -83,8 +83,6 @@ profile: reference
 `sf-slider-dots--bare` ставит в начало строки под карточками. Точки — одна
 остановка клавиши Tab: дальше по слайдам ведут стрелки, Home и End. От восьми
 слайдов вместо точек стоит счётчик «2 / 12» (`sf-slider-dots--count`).
-Модификаторы `--primary`, `--clear`, `--framed`, `--light`, `--dark` и
-`--size-1`/`--size-2` — прежние имена.
 
 :::example {id="components/slider/dots" label="Точки на плашке и под карточками"}
 :::

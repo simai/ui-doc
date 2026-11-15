@@ -1,18 +1,27 @@
-<div class="grid grid-col-1 md:grid-col-2 gap-4">
+<div class="grid grid-col-1 gap-4">
   <div class="flex flex-col gap-1">
-    <sf-slider root-class="sf-slider--content" arrows="false" dots-type="primary-dark">
-      <div slot="slide" class="radius-surface bg-primary-container p-3">Слайд 1</div>
-      <div slot="slide" class="radius-surface bg-secondary-container p-3">Слайд 2</div>
-      <div slot="slide" class="radius-surface bg-tertiary-container p-3">Слайд 3</div>
+    <sf-slider aria-label="Фотографии города, точки" arrows="false" ratio="21/9">
+      <div slot="slide" class="flex items-cross-end h-full p-3 bg-primary-container color-on-primary-container"><span class="text-2">Набережная утром</span></div>
+      <div slot="slide" class="flex items-cross-end h-full p-3 bg-secondary-container color-on-secondary-container"><span class="text-2">Старый порт</span></div>
+      <div slot="slide" class="flex items-cross-end h-full p-3 bg-tertiary-container color-on-tertiary-container"><span class="text-2">Маяк на закате</span></div>
     </sf-slider>
-    <code class="text-1/2 color-on-surface-variant">dots-type="primary-dark"</code>
+    <span class="text-1/2 color-on-surface-variant">поверх картинки: точки на плашке</span>
   </div>
   <div class="flex flex-col gap-1">
-    <sf-slider root-class="sf-slider--content" arrows="false" dots-type="primary-light">
-      <div slot="slide" class="radius-surface bg-primary-container p-3">Слайд 1</div>
-      <div slot="slide" class="radius-surface bg-secondary-container p-3">Слайд 2</div>
-      <div slot="slide" class="radius-surface bg-tertiary-container p-3">Слайд 3</div>
+    <sf-slider aria-label="Отзывы покупателей" root-class="sf-slider--content">
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 1</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4101.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 2</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4102.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 3</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4103.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 4</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4104.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 5</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4105.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 6</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4106.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 7</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4107.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 8</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4108.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 9</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4109.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 10</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4110.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 11</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4111.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 12</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4112.</span></article>
     </sf-slider>
-    <code class="text-1/2 color-on-surface-variant">dots-type="primary-light"</code>
+    <span class="text-1/2 color-on-surface-variant">двенадцать карточек: счётчик вместо точек</span>
   </div>
 </div>
