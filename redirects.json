@@ -3925,6 +3925,114 @@
     {
       "from": "ru/smart/composite/change-confirm",
       "to": "ru/smart/actions/confirm-change"
+    },
+    {
+      "from": "ru/recipes/empty-state",
+      "to": "ru/recipes/progress/empty-state"
+    },
+    {
+      "from": "ru/recipes/file-upload-progress",
+      "to": "ru/recipes/progress/file-upload-progress"
+    },
+    {
+      "from": "ru/recipes/first-paint",
+      "to": "ru/recipes/progress/first-paint"
+    },
+    {
+      "from": "ru/recipes/order-status",
+      "to": "ru/recipes/progress/order-status"
+    },
+    {
+      "from": "ru/recipes/resource-list",
+      "to": "ru/recipes/find/resource-list"
+    },
+    {
+      "from": "ru/recipes/filter-drawer",
+      "to": "ru/recipes/find/filter-drawer"
+    },
+    {
+      "from": "ru/recipes/list-toolbar",
+      "to": "ru/recipes/find/list-toolbar"
+    },
+    {
+      "from": "ru/recipes/list-bottom",
+      "to": "ru/recipes/find/list-bottom"
+    },
+    {
+      "from": "ru/recipes/choice-cards",
+      "to": "ru/recipes/find/choice-cards"
+    },
+    {
+      "from": "ru/recipes/mail-chat-list",
+      "to": "ru/recipes/find/mail-chat-list"
+    },
+    {
+      "from": "ru/recipes/report-period",
+      "to": "ru/recipes/find/report-period"
+    },
+    {
+      "from": "ru/recipes/record-card",
+      "to": "ru/recipes/edit/record-card"
+    },
+    {
+      "from": "ru/recipes/settings-form",
+      "to": "ru/recipes/edit/settings-form"
+    },
+    {
+      "from": "ru/recipes/save-and-errors",
+      "to": "ru/recipes/edit/save-and-errors"
+    },
+    {
+      "from": "ru/recipes/checkout",
+      "to": "ru/recipes/edit/checkout"
+    },
+    {
+      "from": "ru/recipes/dialog-form",
+      "to": "ru/recipes/edit/dialog-form"
+    },
+    {
+      "from": "ru/recipes/brand-theme",
+      "to": "ru/recipes/edit/brand-theme"
+    },
+    {
+      "from": "ru/recipes/delete",
+      "to": "ru/recipes/remove/delete"
+    },
+    {
+      "from": "ru/recipes/bulk-actions",
+      "to": "ru/recipes/remove/bulk-actions"
+    },
+    {
+      "from": "ru/recipes/dashboard",
+      "to": "ru/recipes/notify/dashboard"
+    },
+    {
+      "from": "ru/recipes/notifications",
+      "to": "ru/recipes/notify/notifications"
+    },
+    {
+      "from": "ru/recipes/copy",
+      "to": "ru/recipes/notify/copy"
+    },
+    {
+      "from": "ru/recipes/which-message",
+      "to": "ru/recipes/notify/which-message"
+    },
+    {
+      "from": "ru/recipes/system-bar",
+      "to": "ru/recipes/notify/system-bar"
+    },
+    {
+      "from": "ru/recipes/admin-frame",
+      "to": "ru/recipes/navigate/admin-frame"
+    },
+    {
+      "from": "ru/recipes/site-header",
+      "to": "ru/recipes/navigate/site-header"
+    },
+    {
+      "from": "ru/recipes/hero-and-promo",
+      "to": "ru/recipes/decorate/hero-and-promo"
     }
   ]
 }
