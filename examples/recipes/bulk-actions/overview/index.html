@@ -1,0 +1,24 @@
+<div class="flex flex-col gap-1" data-sf-overlay-container>
+  <div id="list-bar" class="flex flex-wrap items-cross-center gap-1">
+    <div class="grow min-w-0 max-w-g6">
+      <sf-input appearance="filled" icon-start="search" input-type="search" placeholder="Найти новость" aria-label="Поиск по новостям"></sf-input>
+    </div>
+    <sf-button icon-start="add" text="Добавить новость"></sf-button>
+  </div>
+  <div id="selection-bar" class="flex flex-wrap items-cross-center gap-1" hidden>
+    <div class="flex items-cross-center gap-1/3">
+      <span id="selected-count" class="weight-5" aria-live="polite">Выбрано 0</span>
+      <sf-button id="clear" appearance="ghost" scheme="on-surface" text="Снять выбор"></sf-button>
+    </div>
+    <div class="flex flex-wrap gap-1/3">
+      <sf-button id="publish" appearance="outline" scheme="on-surface" text="Опубликовать"></sf-button>
+      <sf-button id="unpublish" appearance="outline" scheme="on-surface" text="Снять с публикации"></sf-button>
+      <sf-button id="remove" appearance="outline" scheme="on-surface" status="danger" icon-start="delete" text="Удалить"></sf-button>
+    </div>
+  </div>
+  <sf-view-table id="news" toolbar="false" layout="table" layout-switch="false" size="1" quick-actions="edit,view" row-actions-visible="always" creatable="false" aria-label="Новости"></sf-view-table>
+  <sf-modal modal-id="delete-news" size="question" heading="Удалить новости?" show-footer="false" initial-focus="safe">
+    <sf-confirm id="delete-question" slot="content" status="danger" destructive appearance="window" question="Удалить новости?"
+      consequence="Они пропадут с сайта и из поиска. Вернуть можно в течение 30 дней из корзины." accept-text="Удалить" decline-text="Отмена"></sf-confirm>
+  </sf-modal>
+</div>

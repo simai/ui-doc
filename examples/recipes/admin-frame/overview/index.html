@@ -1,0 +1,22 @@
+<div class="frame" data-sf-density="compact">
+  <aside class="frame-side" aria-label="Разделы админки">
+    <div class="frame-brand"><span class="sf-icon" aria-hidden="true">deployed_code</span>shop.example.ru</div>
+    <sf-menu data-menu="admin" label="Разделы админки" appearance="navigation" current="pages"></sf-menu>
+  </aside>
+  <div class="frame-main">
+    <div class="frame-bar">
+      <sf-button-icon id="frame-toggle" icon="menu" appearance="ghost" scheme="on-surface" aria-label="Разделы" aria-controls="frame-drawer"></sf-button-icon>
+      <span>shop.example.ru</span>
+    </div>
+    <main class="frame-content">
+      <sf-header-page id="frame-head" heading="Страницы" count="148">
+        <sf-breadcrumbs slot="path" current="none" items='[{"label":"Сайт","href":"#site"}]'></sf-breadcrumbs>
+        <sf-button slot="actions" icon-start="add" text="Создать страницу"></sf-button>
+      </sf-header-page>
+      <sf-list id="frame-pages" label="Страницы" size="1/2"></sf-list>
+    </main>
+  </div>
+</div>
+<sf-drawer id="frame-drawer" placement="inline-start" heading="shop.example.ru" controlled size="1/2" data-sf-density="compact">
+  <div slot="content"><sf-menu data-menu="admin" label="Разделы админки" appearance="navigation" current="pages"></sf-menu></div>
+</sf-drawer>

@@ -1,0 +1,2 @@
+const SHORT = [{id: 'pages', label: 'Страницы', href: '#pages', icon: 'description'}, {id: 'orders', label: 'Заказы', href: '#orders', icon: 'shopping_bag', count: 12}, {id: 'users', label: 'Пользователи', href: '#users', icon: 'group'}];
+customElements.whenDefined('sf-menu').then(() => document.querySelectorAll('sf-menu[data-menu="short"]').forEach((m) => m.setAttribute('items', JSON.stringify(SHORT))));

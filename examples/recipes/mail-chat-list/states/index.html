@@ -1,0 +1,18 @@
+<div class="grid grid-col-1 cq-md:grid-col-2 gap-2 query-container" data-sf-density="compact">
+  <figure class="m-0 flex flex-col gap-1/2">
+    <div class="box"><sf-list label="Входящие" loading></sf-list></div>
+    <figcaption class="text-1/2 color-on-surface-variant">Первый кадр: строки — заготовка в размер данных</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <div class="box"><sf-list id="empty-list" label="Входящие" empty-text="Во входящих пусто"></sf-list></div>
+    <figcaption class="text-1/2 color-on-surface-variant">Пусто: одна строка о том, что писем нет</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <div class="box"><sf-empty-state kind="error" size="1/2" heading="Не удалось загрузить письма" text="Сервер почты не ответил. Письма на месте."></sf-empty-state></div>
+    <figcaption class="text-1/2 color-on-surface-variant">Ошибка: причина и что с письмами</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <div class="box"><sf-list id="many-list" label="Беседы" group-by="day" no-wrap has-more></sf-list></div>
+    <figcaption class="text-1/2 color-on-surface-variant">Много: закреплённое сверху, «Ждёт», «Показать ещё»</figcaption>
+  </figure>
+</div>

@@ -1,0 +1,38 @@
+<div class="grid grid-col-1 cq-lg:grid-col-2 gap-2 query-container" data-sf-density="compact">
+  <figure class="m-0 flex flex-col gap-1/2">
+    <div class="frame">
+      <div class="frame-side"><div class="flex flex-col gap-1/2 p-1/2" aria-hidden="true"><sf-skeleton size="1/2" width="70%"></sf-skeleton><sf-skeleton size="1/2" width="55%"></sf-skeleton><sf-skeleton size="1/2" width="62%"></sf-skeleton><sf-skeleton size="1/2" width="48%"></sf-skeleton></div></div>
+      <div class="frame-content"><sf-skeleton size="1/2" width="20%"></sf-skeleton><sf-skeleton size="3" width="40%"></sf-skeleton><sf-list label="Страницы" size="1/2" loading></sf-list></div>
+    </div>
+    <figcaption class="text-1/2 color-on-surface-variant">Первый кадр: столбец и шапка держат место, строки — заготовка того же размера</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <div class="frame">
+      <div class="frame-side"><sf-menu data-menu="short" label="Разделы" appearance="navigation" current="orders"></sf-menu></div>
+      <div class="frame-content">
+        <sf-header-page heading="Заказы"><sf-breadcrumbs slot="path" current="none" items='[{"label":"Магазин","href":"#shop"}]'></sf-breadcrumbs></sf-header-page>
+        <sf-empty-state kind="no-data" size="1/2" icon="shopping_bag" heading="Заказов пока нет" text="Они появятся здесь, когда покупатель оформит первый."></sf-empty-state>
+      </div>
+    </div>
+    <figcaption class="text-1/2 color-on-surface-variant">Пустой раздел: каркас на месте, в содержимом — первое использование</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <div class="frame">
+      <div class="frame-side"><sf-menu data-menu="short" label="Разделы" appearance="navigation" current="pages"></sf-menu></div>
+      <div class="frame-content">
+        <sf-header-page heading="Страницы"><sf-breadcrumbs slot="path" current="none" items='[{"label":"Сайт","href":"#site"}]'></sf-breadcrumbs></sf-header-page>
+        <sf-empty-state kind="error" size="1/2" heading="Не удалось загрузить страницы" text="Сервер не ответил. Остальные разделы работают."></sf-empty-state>
+      </div>
+    </div>
+    <figcaption class="text-1/2 color-on-surface-variant">Ошибка: меню работает, ошибка только в содержимом</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <div class="frame">
+      <div class="frame-side"><sf-menu data-menu="admin" label="Разделы" appearance="navigation" current="filters" search></sf-menu></div>
+      <div class="frame-content">
+        <sf-header-page heading="Фильтры для воды" count="36"><sf-breadcrumbs slot="path" current="none" items='[{"label":"Каталог","href":"#c"},{"label":"Оборудование для дома и дачи","href":"#c1"},{"label":"Водоснабжение","href":"#c2"},{"label":"Очистка воды","href":"#c3"},{"label":"Фильтры под мойку и магистральные","href":"#c4"}]'></sf-breadcrumbs></sf-header-page>
+      </div>
+    </div>
+    <figcaption class="text-1/2 color-on-surface-variant">Много: поиск над столбцом, длинный путь сворачивает середину в «…»</figcaption>
+  </figure>
+</div>

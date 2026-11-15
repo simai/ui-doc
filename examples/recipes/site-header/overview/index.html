@@ -1,0 +1,16 @@
+<sf-switch id="search-fail" label="Поиск недоступен"></sf-switch>
+<div class="m-top-1 radius-surface border border-outline-variant overflow-hidden">
+  <sf-header-site menu-placement="inline-end">
+    <a slot="brand" class="brand" href="#home"><span class="sf-icon" aria-hidden="true">water_pump</span>Аквабур</a>
+    <sf-menu id="shop-menu" label="Разделы магазина" orientation="horizontal" appearance="navigation" collapse="none" current="catalog"></sf-menu>
+    <span slot="tools" class="flex items-cross-center gap-1/3">
+      <sf-button-icon id="search-open" icon="search" appearance="ghost" scheme="on-surface" aria-label="Поиск"></sf-button-icon>
+      <span class="hidden sm:inline-flex"><sf-language languages="ru en" mode="menu" label="Язык сайта" apply="none"></sf-language></span>
+      <sf-button-icon theme-cycle appearance="ghost" scheme="on-surface"></sf-button-icon>
+      <sf-button-icon icon="shopping_cart" appearance="ghost" scheme="on-surface" aria-label="Корзина" badge-count="2" badge-label="товара в корзине"></sf-button-icon>
+    </span>
+    <div slot="actions" class="sm:hidden"><sf-language languages="ru en" mode="menu" label="Язык сайта" apply="none"></sf-language></div>
+  </sf-header-site>
+  <p class="m-0 p-2 text-1/2 color-on-surface-variant">Каталог · 1 240 товаров</p>
+</div>
+<sf-search id="shop-search" label="Поиск по магазину" placeholder="Найти насос, фильтр или статью"></sf-search>

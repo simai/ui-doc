@@ -1,0 +1,11 @@
+<div class="flex flex-col gap-1">
+  <sf-alert status="error" heading="Не сохранено: 3 ошибки" action-text="К первой ошибке" action="first"></sf-alert>
+  <sf-tabs aria-label="Разделы записи" items='[{"id":"main","label":"Основное","errors":1},{"id":"seo","label":"Поиск","errors":2},{"id":"access","label":"Доступ"}]'>
+    <div slot="panel-0" class="flex flex-col gap-1 p-top-1">
+      <sf-input label="Адрес страницы" invalid error-message="Только латинские буквы, цифры и дефис." default-value="осенняя распродажа"></sf-input>
+    </div>
+    <div slot="panel-1" class="flex flex-col gap-1 p-top-1"><sf-input label="Описание для поиска"></sf-input></div>
+    <div slot="panel-2" class="flex flex-col gap-1 p-top-1"><sf-input label="Кто видит" default-value="Все посетители"></sf-input></div>
+  </sf-tabs>
+  <div class="flex flex-wrap gap-1/3 m-top-1"><sf-button text="Сохранить"></sf-button><sf-button appearance="ghost" scheme="on-surface" text="Отмена"></sf-button></div>
+</div>

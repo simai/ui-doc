@@ -1,0 +1,22 @@
+<div class="flex flex-col gap-2" data-sf-density="compact">
+  <div class="flex"><sf-segmented id="speed" size="1/2" aria-label="Скорость сети" value="fast"
+    items='[{"value":"first","label":"Первый кадр"},{"value":"fast","label":"Быстро"},{"value":"slow","label":"Медленно"},{"value":"error","label":"Ошибка"},{"value":"empty","label":"Пусто"}]'></sf-segmented></div>
+  <div class="query-container">
+    <div class="flex flex-col cq-md:flex-row gap-2">
+      <nav class="shell-menu" aria-label="Разделы админки">
+        <sf-menu id="admin-menu" label="Разделы админки" appearance="navigation" current="news"></sf-menu>
+      </nav>
+      <div class="grow min-w-0 flex flex-col gap-1">
+        <div class="flex flex-wrap items-cross-center content-main-between gap-1">
+          <h3 class="m-0 text-2 weight-5">Новости</h3>
+          <div class="flex flex-wrap gap-1/3">
+            <sf-button id="refresh" appearance="outline" scheme="on-surface" icon-start="refresh" text="Обновить"></sf-button>
+            <sf-button icon-start="add" text="Добавить новость"></sf-button>
+          </div>
+        </div>
+        <div id="tiles" class="grid grid-col-1 cq-sm:grid-col-3 gap-1"></div>
+        <div id="list-place"><sf-list id="news" label="Новости" size="1"></sf-list></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+.hero { position: relative; overflow: hidden; padding: var(--sf-space-3) var(--sf-space-1); border: var(--sf-px) solid var(--sf-outline-variant); border-radius: var(--sf-radius--surface); background: var(--sf-surface-page); }
+.hero-in { display: flex; flex-direction: column; align-items: center; gap: var(--sf-space-1\/2); max-inline-size: 44rem; margin: 0 auto; text-align: center; }
+.hero-eyebrow { margin: 0; color: var(--sf-primary); font-size: var(--sf-text-size-1\/2); line-height: var(--sf-text-height-1\/2); font-weight: var(--sf-font-weight-medium); }
+.hero-title { margin: 0; font-weight: var(--sf-font-weight-medium); text-wrap: balance; }
+.hero-lead { margin: 0; color: var(--sf-on-surface-variant); }

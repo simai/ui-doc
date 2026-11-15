@@ -1,0 +1,2 @@
+const SHOP = [{id: 'catalog', label: 'Каталог', href: '#catalog'}, {id: 'delivery', label: 'Доставка', href: '#delivery'}, {id: 'service', label: 'Сервис', href: '#service'}, {id: 'about', label: 'О компании', href: '#about'}, {id: 'contacts', label: 'Контакты', href: '#contacts'}];
+customElements.whenDefined('sf-menu').then(() => document.querySelectorAll('sf-menu[data-menu="shop"]').forEach((m) => m.setAttribute('items', JSON.stringify(SHOP))));

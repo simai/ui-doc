@@ -1,0 +1,7 @@
+.upload-corner {
+  position: fixed;
+  inset-block-end: var(--sf-space-1);
+  inset-inline-end: var(--sf-space-1);
+  inline-size: min(var(--sf-g1), calc(100% - var(--sf-space-2)));
+  z-index: 2;
+}

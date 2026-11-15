@@ -1,0 +1,2 @@
+.photo { aspect-ratio: 16 / 9; border-radius: var(--sf-radius--surface); background: var(--sf-surface-container); }
+.promo { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--sf-space-1); padding: var(--sf-space-1); border-radius: var(--sf-radius--surface); background: var(--sf-primary-container); color: var(--sf-on-primary-container); }

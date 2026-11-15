@@ -1,0 +1,18 @@
+<div class="grid grid-col-1 cq-md:grid-col-2 gap-2 query-container">
+  <figure class="m-0 flex flex-col gap-1/2">
+    <div class="flex flex-col gap-1/4" aria-busy="true"><sf-skeleton size="1/2" width="20%"></sf-skeleton><sf-skeleton kind="rounded" height="b6" width="100%"></sf-skeleton></div>
+    <figcaption class="text-1/2 color-on-surface-variant">Загрузка: варианты зависят от адреса, заготовка в размер строк</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <sf-alert status="warning" heading="Доставка в Анадырь недоступна" supporting-text="Заберите заказ в пункте выдачи в другом городе или напишите нам — подберём перевозчика."></sf-alert>
+    <figcaption class="text-1/2 color-on-surface-variant">Нет вариантов: причина и что сделать</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <sf-input-choice label="Оплата" layout="list" required invalid error-message="Выберите способ оплаты." items='[{"value":"card","label":"Картой онлайн","caption":"Мир, Visa, Mastercard","icon":"credit_card"},{"value":"sbp","label":"СБП","caption":"По QR-коду из приложения банка","icon":"qr_code_2"}]'></sf-input-choice>
+    <figcaption class="text-1/2 color-on-surface-variant">Ошибка: обязательная группа не выбрана, текст ошибки заменяет пояснение</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <sf-input-choice label="Доставка" layout="list" value="courier" items='[{"value":"courier","label":"Курьером","caption":"Привезём в удобный интервал, позвоним за час","price":"350 ₽","term":"2–3 дня"},{"value":"post","label":"Почта России","caption":"Временно недоступна для насосов тяжелее 20 кг","disabled":true}]'></sf-input-choice>
+    <figcaption class="text-1/2 color-on-surface-variant">Недоступный вариант: бледный, причина в пояснении</figcaption>
+  </figure>
+</div>

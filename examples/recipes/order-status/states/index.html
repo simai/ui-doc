@@ -1,0 +1,25 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-skeleton kind="text" count="4" width="12rem"></sf-skeleton>
+      <sf-list-timeline loading label="История"></sf-list-timeline>
+      <span class="text-1/2 color-on-surface-variant">Загрузка: скелет на месте этапов и истории</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-empty-state kind="error" size="1/2" heading="Не удалось загрузить заказ" text="Проверьте связь и повторите."></sf-empty-state>
+      <span class="text-1/2 color-on-surface-variant">Ошибка загрузки</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-list-timeline id="history-empty" label="История" empty-text="Пока ничего не происходило"></sf-list-timeline>
+      <span class="text-1/2 color-on-surface-variant">Пусто: истории ещё нет</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-list-timeline id="history-many" now="2026-11-14T15:00:00+03:00" collapse="3" has-more label="История"></sf-list-timeline>
+      <span class="text-1/2 color-on-surface-variant">Много: серия правок свёрнута, дальше — по запросу</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-empty-state kind="no-access" size="1/2" heading="Заказ оформлен на другой номер" text="Войдите с номером, на который оформлен заказ."></sf-empty-state>
+      <span class="text-1/2 color-on-surface-variant">Нет доступа</span>
+    </div>
+  </div>
+</div>
