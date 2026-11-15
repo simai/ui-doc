@@ -1,17 +1,17 @@
 <div class="grid grid-col-1 md:grid-col-2 gap-4">
   <div class="flex flex-col gap-1">
-    <sf-slider root-class="sf-slider--content">
-      <div slot="slide" class="radius-surface bg-primary-container p-3">Карточка 1</div>
-      <div slot="slide" class="radius-surface bg-secondary-container p-3">Карточка 2</div>
-      <div slot="slide" class="radius-surface bg-tertiary-container p-3">Карточка 3</div>
+    <sf-slider aria-label="Условия магазина" root-class="sf-slider--content">
+      <article slot="slide" class="radius-surface bg-primary-container p-2"><h3>Доставка за день</h3><p>Заказы до 14:00 привозим в тот же день по Москве.</p></article>
+      <article slot="slide" class="radius-surface bg-secondary-container p-2"><h3>Возврат 30 дней</h3><p>Товар без следов носки можно вернуть в любом пункте выдачи.</p></article>
+      <article slot="slide" class="radius-surface bg-tertiary-container p-2"><h3>Оплата частями</h3><p>Четыре платежа раз в две недели, без переплаты.</p></article>
     </sf-slider>
     <code class="text-1/2 color-on-surface-variant">без loop</code>
   </div>
   <div class="flex flex-col gap-1">
-    <sf-slider root-class="sf-slider--content" loop="true">
-      <div slot="slide" class="radius-surface bg-primary-container p-3">Карточка 1</div>
-      <div slot="slide" class="radius-surface bg-secondary-container p-3">Карточка 2</div>
-      <div slot="slide" class="radius-surface bg-tertiary-container p-3">Карточка 3</div>
+    <sf-slider aria-label="Условия магазина" root-class="sf-slider--content" loop="true">
+      <article slot="slide" class="radius-surface bg-primary-container p-2"><h3>Доставка за день</h3><p>Заказы до 14:00 привозим в тот же день по Москве.</p></article>
+      <article slot="slide" class="radius-surface bg-secondary-container p-2"><h3>Возврат 30 дней</h3><p>Товар без следов носки можно вернуть в любом пункте выдачи.</p></article>
+      <article slot="slide" class="radius-surface bg-tertiary-container p-2"><h3>Оплата частями</h3><p>Четыре платежа раз в две недели, без переплаты.</p></article>
     </sf-slider>
     <code class="text-1/2 color-on-surface-variant">loop="true"</code>
   </div>

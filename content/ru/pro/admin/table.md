@@ -59,7 +59,7 @@ Larena — лицензия Larena). В пакет входят ещё
 стабильный `key`, у строки — стабильный `id`.
 
 Колонка с `sortable: true` получает сортировку по нажатию на заголовок.
-Таблица строки не переставляет: она отправляет `sf-table-sort-change` с
+Таблица строки не переставляет: она отправляет `sf-view-table-sort-change` с
 `{key, direction}` (`asc`, `desc` или `null`), приложение загружает
 отсортированные данные и показывает текущую сортировку через
 `setSort(key, direction)`.
@@ -70,7 +70,7 @@ Larena — лицензия Larena). В пакет входят ещё
 `loading`, `populated`, `empty`, `error`. По умолчанию `auto`: есть строки —
 таблица заполнена, нет — пуста. Повторная загрузка поверх уже показанных
 строк оставляет их на месте притушенными. В состоянии `error` таблица
-показывает кнопку повтора; нажатие отправляет `sf-table-retry`. Тексты
+показывает кнопку повтора; нажатие отправляет `sf-view-table-refresh`. Тексты
 состояний задают `loading-text`, `empty-text`, `error-text` и `retry-text`;
 без них компонент берёт тексты на языке страницы. `loading-text` на экране не
 виден: пока стоит скелетон, его объявляет экранный диктор.
@@ -104,10 +104,10 @@ Larena — лицензия Larena). В пакет входят ещё
 
 ### Поиск и фильтр
 
-Поиск отправляет `sf-table-search-change` со строкой запроса в
+Поиск отправляет `sf-view-table-search-change` со строкой запроса в
 `event.detail.search` после паузы ввода. `setFilterFields(fields)` передаёт
 разрешённые поля и операторы фильтра; применение фильтра отправляет
-`sf-table-filter-change`, в `event.detail` — шаблон (`templateKey`,
+`sf-view-table-filter-change`, в `event.detail` — шаблон (`templateKey`,
 `templateLabel`), значения `values` и метки `tags`. `getFilterPayload()`
 возвращает тот же объект в любой момент.
 
@@ -127,7 +127,7 @@ Larena — лицензия Larena). В пакет входят ещё
 ### Действия и создание
 
 Действие над строкой или над выбранными строками отправляет
-`sf-table-apply` с `{action, scope, ids, revisions}`: `scope` — `entry` для
+`sf-view-table-apply` с `{action, scope, ids, revisions}`: `scope` — `entry` для
 одной строки и `selection` для выбранных, `revisions` — ревизии записей по их
 идентификаторам. Встроенные действия
 строки — `view` (глаз), `edit` (карандаш) и `delete` — представление берёт из
@@ -136,11 +136,11 @@ Larena — лицензия Larena). В пакет входят ещё
 задаёт массовые действия; пока ничего не выбрано, они выключены.
 `getSelectedRecordIds()` возвращает выбранные идентификаторы.
 
-Кнопка «Создать» отправляет `sf-table-create` с `{item: null}`;
+Кнопка «Создать» отправляет `sf-view-table-create` с `{item: null}`;
 `setCreateItems([{id, name}])` добавляет ей меню, и выбор пункта приходит
 как `{item: id}`. `setToolbarActions(items)` добавляет собственные действия
 в меню панели инструментов; выбор отправляет отменяемое
-`sf-table-toolbar-action` с `{action, href}`, и без `preventDefault()`
+`sf-view-table-toolbar-action` с `{action, href}`, и без `preventDefault()`
 компонент переходит по `href` того же сайта.
 
 В `<sf-view>` кнопку «Создать» показывает возможность `create-record`
@@ -205,8 +205,8 @@ Larena — лицензия Larena). В пакет входят ещё
 записей, которые перечисляют их в `actions`.
 
 `<sf-view-table>` дерево только рисует: строки с `__tree` пишет
-`<sf-view>`. Нажатие на кнопку узла отправляет `sf-table-expand`
-с `{id, expanded}`, строка «Показать ещё» — `sf-table-load-more` с
+`<sf-view>`. Нажатие на кнопку узла отправляет `sf-view-table-expand`
+с `{id, expanded}`, строка «Показать ещё» — `sf-view-table-load-more` с
 `{direction, parent, cursor}`; на оба отвечает представление. Намерения дерева, которые
 оно поднимает, приходят событием `sf-data-view-tree` с
 `{intent, payload}`. Своими методами `expandNode(id)`, `collapseNode(id)`,
@@ -233,18 +233,18 @@ Larena — лицензия Larena). В пакет входят ещё
 Перетаскивание заголовков устроено на `SF.Sortable.attach` (см. [Колонки таблицы](/ru/smart/editor/sortable/#колонки-таблицы-sf-sortable-attach)):
 скрипт `sf-sortable` таблица подгружает сама при первом перетаскивании. Каждое
 изменение ширины или порядка приходит приложению событием
-`sf-table-save` с `kind: 'columns'`, как описано ниже.
+`sf-view-table-save` с `kind: 'columns'`, как описано ниже.
 
 ### Перетаскивание строк и файлов
 
 - `drag-rows` — строки можно вытащить из таблицы как записи: запись строки
   или все выбранные, если строка среди них. Начало перетаскивания сообщает
-  `sf-table-rows-drag` с `{ids, source}`. Принимает их, например,
+  `sf-view-table-rows-drag` с `{ids, source}`. Принимает их, например,
   [дерево](/ru/smart/navigation/tree/) с `accept-records` — так
   записи раскладывают по папкам.
 - `row-reorder` — строки можно переставить, перетаскивая их внутри списка.
   Во время перетаскивания отмечено место, куда встанет строка; после
-  отпускания приходит `sf-table-move` с `{ids, before, order}`:
+  отпускания приходит `sf-view-table-move` с `{ids, before, order}`:
   перемещённые идентификаторы, строка, перед которой они встали (`null` —
   в конце), и весь новый порядок. Если порядок не изменился, события нет.
   Порядок сохраняет приложение; в `<sf-view>` — через порт хоста
@@ -271,7 +271,7 @@ table.setRows([
 ]);
 ```
 
-Нажатие флажка отправляет `sf-table-cell-set` с `{id, key, value, revision}`;
+Нажатие флажка отправляет `sf-view-table-cell-set` с `{id, key, value, revision}`;
 пока приложение отвечает, флажок выключен. Таблица сама значение не
 сохраняет: строку перерисовывает то, что ответило приложение. В
 `<sf-view>` запись в ячейке идёт через порт хоста
@@ -370,7 +370,7 @@ table.setRows([
 ### Шаблоны и настройки колонок
 
 Ширина, порядок, видимость и закрепление колонок — настройки представления.
-Их изменение отправляет `sf-table-save` с `kind: 'columns'`, `reason`,
+Их изменение отправляет `sf-view-table-save` с `kind: 'columns'`, `reason`,
 `tableSettingsKey` и полными настройками `columnSettings`. Отдельная таблица
 отдаёт их приложению, и оно при следующей загрузке применяет их через
 `setTableSettings(settings)`. В `<sf-view>` то же изменение всегда
@@ -400,9 +400,9 @@ table.setRows([
 ревизии; значения по умолчанию определяет хост. Где при этом хранится раскладка — в
 [Персональный вид → Раскладка таблицы](/ru/guide/smart-components/view-preferences/#раскладка-таблицы-предпочтение-и-слой-порта).
 Сохранённые представления передаёт `setTemplates(templates)`; изменения на
-вкладке «Шаблоны» приходят событиями `sf-table-template-save`,
-`sf-table-template-select` (`{key}`) и `sf-table-template-delete` (`{key}`,
-по одному на шаблон). `sf-table-template-save` несёт один шаблон из формы
+вкладке «Шаблоны» приходят событиями `sf-view-table-template-save`,
+`sf-view-table-template-select` (`{key}`) и `sf-view-table-template-delete` (`{key}`,
+по одному на шаблон). `sf-view-table-template-save` несёт один шаблон из формы
 или массив шаблонов, если «Применить» на вкладке «Шаблоны» изменило
 несколько (порядок, закрепление, выбор по умолчанию); `<sf-view>`
 сохраняет каждый шаблон с `key` отдельным намерением `view.save`.
@@ -578,7 +578,7 @@ document.querySelector('sf-view').setHostPort(host);
 | флажок в ячейке (возможность `inline-edit`) | `record.set` |
 | перетаскивание строк внутри плоского списка (возможность `row-reorder`) | `record.reorder` |
 
-Действие строки (`sf-table-apply`), которого нет в списке `actions`
+Действие строки (`sf-view-table-apply`), которого нет в списке `actions`
 записи, до хоста не доходит: представление отвечает себе отказом
 `action-not-allowed`. Массовое действие над выбранными записями
 (`sf-action-apply` из панели выбора) всегда идёт в `bulk.apply_selected`, даже
@@ -650,7 +650,7 @@ document.querySelector('sf-view').setHostPort(host);
 |:---|:---|
 | `sf-data-view-state` | `{state, message, instance_id}`: `state` — `loading`, `populated`, `empty` или `error`; `message` — текст для экранного диктора: о загрузке, ошибке или уведомлении хоста |
 | `sf-data-view-answer` | ответ хоста на любое намерение: `{intent, answer, reason, message, data, sequence, effects, instance_id}` — поля, которых не было в ответе, отсутствуют |
-| `sf-table-column-settings-reset` | `{target: 'personal', tableSettingsKey}`; представление отвечает на него `resetColumnSettings()` |
+| `sf-view-table-column-settings-reset` | `{target: 'personal', tableSettingsKey}`; представление отвечает на него `resetColumnSettings()` |
 
 ### Пример: связь с приложением
 
@@ -759,7 +759,7 @@ const page = await api.listProjects({sort: table.getSort()});
 table.setTableData({columns: page.columns, rows: page.rows});
 table.setDataState('auto');
 
-table.addEventListener('sf-table-apply', async (event) => {
+table.addEventListener('sf-view-table-apply', async (event) => {
   const {action, ids, revisions} = event.detail;
   await api.runAction(action, ids, revisions);
 });
