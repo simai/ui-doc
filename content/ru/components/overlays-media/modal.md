@@ -155,10 +155,7 @@ const modal = new Modal({
 `modal:before-open` и `modal:before-close` — до перехода, их отменяет
 `preventDefault()` на блоке; `modal:after-open` и `modal:after-close` — после;
 `modal:before-content-upload` и `modal:after-content-upload` — вокруг загрузки
-содержимого. `detail` несёт `modal`, `id` и `isOpen`. События
-`SFModalBeforeOpenWindow`, `SFModalAfterOpenWindow`,
-`SFModalBeforeCloseWindow` и `SFModalAfterCloseWindow` — другие имена тех же
-событий.
+содержимого. `detail` несёт `modal`, `id` и `isOpen`.
 
 ```js
 document.addEventListener('modal:before-close', (event) => {

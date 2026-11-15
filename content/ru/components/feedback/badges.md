@@ -55,7 +55,7 @@ profile: reference
 `sf-badge--secondary`, `sf-badge--tertiary`, `sf-badge--on-surface` и статусы
 `sf-badge--info`, `sf-badge--success`, `sf-badge--warning`, `sf-badge--error`.
 Статус выбирайте по смыслу, а не по желаемому цвету. У `on-surface` нет
-тонального вида. `sf-badge--danger` — другое имя `error`.
+тонального вида.
 
 :::example {id="components/badges/overview" label="Цвета бейджа в каждом виде"}
 :::
