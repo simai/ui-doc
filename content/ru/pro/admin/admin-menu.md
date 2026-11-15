@@ -86,6 +86,12 @@ Framework: поставляется пакетом `pro` из репозитор
 `{text, subtext, icon, href}`, `more` — `{text, href}`. Результаты с адресом на
 другом сайте меню не показывает.
 
+Наберите в поиске «роль» — найдётся раздел «Роли», — или «1042»: заказ
+придёт ответом страницы на `sf-admin-menu-query`.
+
+:::example {id="smart-components/admin-menu/search" label="Поиск по разделам и заказам" preview=sandbox log="sf-admin-menu-query" log_console=true log_open=false}
+:::
+
 ### Компактный режим
 
 `collapsible` добавляет кнопку, которая сворачивает меню до узкой колонки
@@ -99,6 +105,12 @@ Framework: поставляется пакетом `pro` из репозитор
 верхний угол точкой размером 8px, а число остаётся в имени пункта. Как точка и
 число ведут себя на якоре, описано в разделе
 [Бейдж на якоре](/ru/components/feedback/badges/#бейдж-на-якоре).
+
+Меню в примере открыто свёрнутым: наведите указатель на значок, чтобы
+увидеть подпись, и разверните меню кнопкой свёртывания.
+
+:::example {id="smart-components/admin-menu/compact" label="Свёрнутое меню и счётчик точкой"}
+:::
 
 ### Меню в колонке с ручкой ширины
 
@@ -144,6 +156,12 @@ menu.addEventListener('sf-admin-menu-compact-change', ({detail}) => {
   handle.toggleAttribute('disabled', detail.compact);
 });
 ```
+
+В примере ручка стоит у правого края меню; пока меню свёрнуто, ручка
+выключена.
+
+:::example {id="smart-components/admin-menu/column" label="Колонка меню с ручкой ширины" preview=sandbox log="sf-admin-menu-compact-change" log_console=true log_open=false}
+:::
 
 ### Настройки пунктов
 
