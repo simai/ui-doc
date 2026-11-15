@@ -29,7 +29,7 @@
 
   const skeletonTiles = () => {
     tiles.setAttribute('aria-busy', 'true');
-    tiles.innerHTML = TILES.map(() => '<div class="news-tile" aria-hidden="true"><sf-skeleton kind="text" size="2" width="40%"></sf-skeleton><sf-skeleton kind="text" size="1/2" width="70%"></sf-skeleton></div>').join('');
+    tiles.innerHTML = TILES.map(() => '<sf-skeleton kind="rounded" width="100%" height="var(--sf-e1)" aria-hidden="true"></sf-skeleton>').join('');
   };
   const realTiles = () => {
     tiles.removeAttribute('aria-busy');

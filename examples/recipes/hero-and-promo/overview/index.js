@@ -1,7 +1,7 @@
 Promise.all(['sf-button', 'sf-button-close'].map((t) => customElements.whenDefined(t))).then(() => {
   const hero = document.getElementById('hero');
   document.getElementById('hero-strict').addEventListener('change', (event) => {
-    hero.classList.toggle('is-expressive', !event.target.checked);
+    hero.dataset.sfStyle = event.target.checked ? 'strict' : 'expressive';
   });
   document.querySelector('.promo-close').addEventListener('click', (event) => {
     event.currentTarget.closest('.promo').hidden = true;
