@@ -101,9 +101,9 @@ description: "Показывает в начале страницы админи
 
 ### Избранное
 
-`star`, событие `sf-page-header-toggle` • [справочник](#атрибуты)
+`star`, событие `sf-header-page-toggle` • [справочник](#атрибуты)
 
-Нажатие на звезду отправляет отменяемое событие `sf-page-header-toggle` с
+Нажатие на звезду отправляет отменяемое событие `sf-header-page-toggle` с
 `event.detail.on` — состоянием, которое просит пользователь. Если событие не отменено,
 компонент сам переключает `star`. Если состояние хранит сервер, отмените
 событие, дождитесь ответа и задайте `star` по нему: так звезда не покажет
@@ -111,7 +111,7 @@ description: "Показывает в начале страницы админи
 
 ```js
 const header = document.querySelector('sf-header-page');
-header.addEventListener('sf-page-header-toggle', async (event) => {
+header.addEventListener('sf-header-page-toggle', async (event) => {
   event.preventDefault();
   const saved = await saveFavourite(event.detail.on);
   header.setAttribute('star', saved ? 'on' : 'off');

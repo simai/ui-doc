@@ -409,13 +409,26 @@ const aliasOf = (text, declared) => {
   return match && Object.hasOwn(declared ?? {}, match[1]) ? match[1] : null;
 };
 const aliasUntil = (text) => /until (\d{4}-\d{2}-\d{2})/u.exec(String(text ?? ''))?.[1] ?? '—';
+// A boolean that was on by default and switched off by the string "false" has
+// a presence form of the opposite sense: «Deprecated until 2027-01-01 (…): …
+// Write fixed-mask instead; use-country-masks="false" keeps working …». The
+// old attribute leaves the page for the names guide, written with its value.
+const PRESENCE_PROSE = /^Deprecated until \d{4}-\d{2}-\d{2}\b.*?\bWrite `?([A-Za-z][\w-]*)`? instead; `?([A-Za-z][\w-]*="false")`? keeps working/su;
+const presenceOf = (name, text, declared) => {
+  const match = PRESENCE_PROSE.exec(String(text ?? ''));
+  return match && match[2] === `${name}="false"` && Object.hasOwn(declared ?? {}, match[1]) ? match : null;
+};
 const proseAliases = (manifest) => {
   const properties = manifest.inputs?.properties ?? {};
   const pick = (entries, declared, field) => entries
     .map(([name, entry]) => [name, aliasOf(entry?.[field], declared), aliasUntil(entry?.[field])])
     .filter(([name, target]) => target && target !== name);
+  const presence = Object.entries(properties)
+    .map(([name, entry]) => [name, presenceOf(name, entry?.description, properties), aliasUntil(entry?.description)])
+    .filter(([, match]) => match)
+    .map(([name, match, until]) => [name, match[1], until, match[2]]);
   return {
-    inputs: pick(Object.entries(properties), properties, 'description'),
+    inputs: [...pick(Object.entries(properties), properties, 'description'), ...presence],
     methods: pick(Object.entries(manifest.methods ?? {}), manifest.methods, 'summary'),
     events: pick(Object.entries(manifest.events ?? {}).filter(([, event]) => !event.alias_of), manifest.events, 'summary'),
   };
@@ -472,8 +485,10 @@ const collectLegacy = (folder, manifest) => {
     if (event.alias_of) rows.add(`| событие ${code(event.alias_of)} | ${code(name)} | ${eventStage(name)} |`);
   }
   const prose = proseAliases(manifest);
-  for (const [name, target, until] of prose.inputs) {
-    if (!legacyNames.has(name) && !unlisted.includes(name)) rows.add(`| ${code(target)} | ${code(name)} | работает как псевдоним | ${until} |`);
+  for (const [name, target, until, written] of prose.inputs) {
+    // The journal may already name the old spelling with its value.
+    if (written && [...rows].some((row) => row.includes(`| ${code(written)} |`))) continue;
+    if (!legacyNames.has(name) && !unlisted.includes(name)) rows.add(`| ${code(target)} | ${code(written ?? name)} | работает как псевдоним | ${until} |`);
   }
   for (const [name, target, until] of prose.methods) rows.add(`| метод ${code(`${target}()`)} | ${code(`${name}()`)} | работает как псевдоним | ${until} |`);
   for (const [name, target, until] of prose.events) rows.add(`| событие ${code(target)} | ${code(name)} | работает как псевдоним | ${until} |`);

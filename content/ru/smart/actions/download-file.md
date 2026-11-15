@@ -100,6 +100,22 @@ file.addEventListener('sf-file-download-request', async (event) => {
 | `href` | адрес файла; у кнопки без адреса — пустая строка |
 | `fileName` | имя файла |
 
+#### Долгая подготовка
+
+`value`, `cancelable`, `sf-file-download-cancel` • [справочник](#атрибуты)
+
+Если файл готовится долго, сообщайте, сколько уже готово: `value` — доля в
+процентах от 0 до 100. На месте знака рисуется кольцо, рядом — «Готовим…
+45 %». Без `value` крутится индикатор и стоит «Готовим файл…».
+
+`cancelable` ставит рядом со строкой «Отменить», пока файл готовится. Нажатие
+присылает событие `sf-file-download-cancel`: приложение останавливает работу,
+а строка сразу снова готова. Если приложение отменяет это событие, оно само
+возвращает `state="ready"`.
+
+:::example {id="smart-components/download-file/progress" label="Долгая подготовка" preview=sandbox log_console=true log_open=false}
+:::
+
 ## Внешний вид
 
 ### Размер
@@ -112,6 +128,17 @@ file.addEventListener('sf-file-download-request', async (event) => {
 ступени.
 
 :::example {id="smart-components/download-file/sizes" label="Размеры" preview=inline}
+:::
+
+### Во всю ширину
+
+`full-width` • [справочник](#атрибуты)
+
+Без атрибута строка шириной со свой текст, но не шире контейнера.
+`full-width` растягивает её на всю ширину контейнера — так файлы в списке
+вложений стоят ровной колонкой одной ширины.
+
+:::example {id="smart-components/download-file/full-width" label="Во всю ширину" preview=sandbox}
 :::
 
 ### Тип файла
