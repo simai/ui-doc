@@ -5,7 +5,7 @@ description: "Даёт найти и выбрать людей или объек
 
 # Выбор из поиска
 
-:badge[sf-input-lookup]{variant=tonal scheme=primary size=1/2} :badge[1.11.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-lookup]{variant=outline scheme=on-surface size=1/2} :badge[1.11.0]{variant=outline scheme=on-surface size=1/2}
 
 Выбор из поиска даёт выбрать людей или объекты по имени: человек набирает
 имя, видит строки с аватаром, именем и подписью и выбирает одно значение или

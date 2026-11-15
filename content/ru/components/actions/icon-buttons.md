@@ -6,7 +6,7 @@ profile: reference
 
 # Кнопки с иконкой
 
-:badge[sf-icon-button]{variant=tonal scheme=primary size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-icon-button]{variant=outline scheme=on-surface size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка с иконкой запускает действие без видимой подписи: редактировать,
 удалить, открыть настройки. Берите её, когда иконка общепринята и места мало;

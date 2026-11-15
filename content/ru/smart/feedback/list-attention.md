@@ -5,7 +5,7 @@ description: "Список проблем, которым нужен челов�
 
 # Требует внимания
 
-:badge[sf-list-attention]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-attention]{variant=outline scheme=on-surface size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
 
 Список проблем, которые ждут человека, на обзорном экране: здоровье сервера,
 проверки сайта, ошибки импорта и переноса, готовность к обновлению,

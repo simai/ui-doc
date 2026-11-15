@@ -5,7 +5,7 @@ description: "Даёт выбрать одно изображение: мини�
 
 # Поле изображения
 
-:badge[sf-input-image]{variant=tonal scheme=primary size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-image]{variant=outline scheme=on-surface size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
 
 Поле изображения принимает одно изображение в форме: логотип, обложку,
 картинку в блоке. Оно показывает миниатюру с именем и размером файла, кнопки

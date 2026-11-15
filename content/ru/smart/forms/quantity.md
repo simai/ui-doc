@@ -5,7 +5,7 @@ description: "Даёт набрать число или поменять его 
 
 # Количество
 
-:badge[sf-input-quantity]{variant=tonal scheme=primary size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-quantity]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Количество — поле для небольшого числа, которое удобно менять по шагу:
 товаров в корзине, гостей, записей на странице. Число можно набрать или

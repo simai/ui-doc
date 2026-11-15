@@ -5,7 +5,7 @@ description: "Показывает известный ход процесса с
 
 # Прогресс
 
-:badge[sf-progress-bar]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-bar]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Прогресс показывает ход процесса, у которого известна доля выполненного:
 загрузка файла, импорт, проверка. Когда доля неизвестна, берите

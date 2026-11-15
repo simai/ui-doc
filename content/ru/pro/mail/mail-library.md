@@ -5,7 +5,7 @@ description: "Блоки, которые можно добавить в пись
 
 # Библиотека блоков письма
 
-:badge[sf-mail-library]{variant=tonal scheme=primary size=1/2} :badge[1.0.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-library]{variant=outline scheme=on-surface size=1/2} :badge[1.0.5]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-mail-library>` — блоки, которые можно добавить в письмо, по группам
 назначения, с чипами категорий, поиском по названию и описанию и вариантами шапки

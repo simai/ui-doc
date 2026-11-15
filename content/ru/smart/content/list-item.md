@@ -5,7 +5,7 @@ description: "Вариант выпадающего списка и общая �
 
 # Строка списка
 
-:badge[sf-list-item]{variant=tonal scheme=primary size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-item]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
 
 Строка списка задаёт один вариант [выпадающего
 списка](/ru/smart/navigation/dropdown/): значение, подпись и вид строки —

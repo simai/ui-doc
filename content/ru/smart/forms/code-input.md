@@ -5,7 +5,7 @@ description: "Принимает одноразовый код из сообще
 
 # Код подтверждения
 
-:badge[sf-input-code]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-code]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Код подтверждения — поле для одноразового кода из сообщения,
 приложения-генератора или письма: код показан по ячейкам, а с формой уходит

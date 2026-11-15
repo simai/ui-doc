@@ -5,7 +5,7 @@ description: "Знак «?» рядом с подписью: по нажатию
 
 # Подсказка «?»
 
-:badge[sf-help-mark]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-help-mark]{variant=outline scheme=on-surface size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Подсказка «?» стоит рядом с подписью и открывает короткое пояснение: что
 значит поле или настройка. Подпись, которая появляется при наведении на кнопку-иконку, собирайте на

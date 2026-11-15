@@ -6,7 +6,7 @@ profile: reference
 
 # Скелетон
 
-:badge[sf-skeleton]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-skeleton]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Скелетон заранее занимает место загружаемого содержимого и повторяет его
 форму: строки текста, аватар, изображение. При замене интерфейс не смещается.

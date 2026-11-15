@@ -6,7 +6,7 @@ profile: reference
 
 # Контекстное меню
 
-:badge[sf-context-menu]{variant=tonal scheme=primary size=1/2} :badge[1.11.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-context-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.11.0]{variant=outline scheme=on-surface size=1/2}
 
 Контекстное меню — приподнятая панель с коротким списком действий над
 выбранным объектом: строкой таблицы, файлом, карточкой. Ширина панели

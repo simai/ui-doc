@@ -6,7 +6,7 @@ profile: reference
 
 # Флаг
 
-:badge[sf-flag]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-flag]{variant=outline scheme=on-surface size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
 
 Флаг показывает страну картинкой: в телефонном поле, списке стран, рядом с
 ценой или адресом. Берите его вместо флага-эмодзи: эмодзи рисует системный

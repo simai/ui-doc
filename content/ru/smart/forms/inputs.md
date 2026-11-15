@@ -5,7 +5,7 @@ description: "Принимает одну строку — имя, почту, �
 
 # Текстовое поле
 
-:badge[sf-input]{variant=tonal scheme=primary size=1/2} :badge[1.9.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input]{variant=outline scheme=on-surface size=1/2} :badge[1.9.1]{variant=outline scheme=on-surface size=1/2}
 
 Текстовое поле принимает одну строку — имя, почту, пароль, телефон, адрес
 сайта или поисковый запрос — вместе с подписью, подсказкой и сообщением об

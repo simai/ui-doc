@@ -5,7 +5,7 @@ description: "Показывает набор материалов слайде�
 
 # Галерея
 
-:badge[sf-gallery]{variant=tonal scheme=primary size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-gallery]{variant=outline scheme=on-surface size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
 
 Галерея показывает упорядоченный набор материалов — изображения, карточки,
 макеты — слайдером на странице и в окне на весь экран, и оба вида держат одно

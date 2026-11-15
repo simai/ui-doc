@@ -5,7 +5,7 @@ description: "Выбирает цвет системной палитрой ил
 
 # Цвет
 
-:badge[sf-input-color]{variant=tonal scheme=primary size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-color]{variant=outline scheme=on-surface size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
 
 Поле цвета даёт выбрать цвет: образец открывает системную палитру, рядом стоят
 цвета, которые у продукта уже есть, а кнопка возврата снимает выбор, и снова

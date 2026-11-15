@@ -5,7 +5,7 @@ description: "Поле формы, где один вариант или нес�
 
 # Выбор карточками
 
-:badge[sf-input-choice]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-choice]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Поле формы, в котором человек выбирает один вариант или несколько из
 карточек: у каждой название, пояснение, а если нужно — цена со сроком,

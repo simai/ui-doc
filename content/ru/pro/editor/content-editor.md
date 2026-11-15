@@ -5,7 +5,7 @@ description: "Страница набирается одним потоком: �
 
 # Редактор содержимого
 
-:badge[sf-editor-content]{variant=tonal scheme=primary size=1/2} :badge[1.4.8]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-editor-content]{variant=outline scheme=on-surface size=1/2} :badge[1.4.8]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-editor-content>` — режим «Содержимое» редактора страниц SIMAI: страница
 набирается одним потоком, как в обычном текстовом редакторе. Элемент ничего не

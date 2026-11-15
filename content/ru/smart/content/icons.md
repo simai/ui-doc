@@ -5,7 +5,7 @@ description: "Выводит символ Material Symbols, для которо�
 
 # Иконки
 
-:badge[sf-icon]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-icon]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Иконка выводит один символ Material Symbols по имени, а загружается только
 нужная часть шрифта. Размер, семейство, заливка и толщина задаются атрибутами

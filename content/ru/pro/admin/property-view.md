@@ -5,7 +5,7 @@ description: "Показывает и правит поля одного объ�
 
 # Представление свойств
 
-:badge[sf-view-properties]{variant=tonal scheme=primary size=1/2} :badge[1.13.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-view-properties]{variant=outline scheme=on-surface size=1/2} :badge[1.13.3]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-view-properties>` — карточка одного объекта: поля сгруппированы в области,
 области — в разделы, а каждое поле рисуется отрисовщиком своего типа. Берите

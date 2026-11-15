@@ -5,7 +5,7 @@ description: "Показывает в начале страницы админи
 
 # Шапка страницы
 
-:badge[sf-header-page]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-header-page]{variant=outline scheme=on-surface size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
 
 Шапка страницы показывает в одной строке путь к странице, заголовок, число
 записей, звезду избранного и главные действия. Ставьте её в начало каждой

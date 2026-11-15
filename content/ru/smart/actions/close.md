@@ -5,7 +5,7 @@ description: "Крестик, который закрывает окно, пан
 
 # Кнопка закрытия
 
-:badge[sf-button-close]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button-close]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка закрытия — крестик, который закрывает окно, панель или сообщение.
 Готовую кнопку даёт [кнопка с иконкой](/ru/smart/actions/icon-buttons/#иконка)

@@ -5,7 +5,7 @@ description: "Выбирает ровно одно значение из нес�
 
 # Сегментный переключатель
 
-:badge[sf-segmented]{variant=tonal scheme=primary size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-segmented]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Сегментный переключатель даёт выбрать ровно одно значение из нескольких и
 сразу его применяет: период отчёта, вид списка, фильтр, тему оформления. У

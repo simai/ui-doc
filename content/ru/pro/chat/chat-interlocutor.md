@@ -5,7 +5,7 @@ description: "Кнопка с именем текущего собеседник
 
 # Выбор собеседника
 
-:badge[sf-chat-interlocutor]{variant=tonal scheme=primary size=1/2} :badge[1.0.8]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-interlocutor]{variant=outline scheme=on-surface size=1/2} :badge[1.0.8]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-interlocutor>` показывает, с кем разговор, и даёт выбрать другого
 собеседника. Список собеседников — серверный: элемент только показывает его и

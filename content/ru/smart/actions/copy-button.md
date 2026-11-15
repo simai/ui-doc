@@ -5,7 +5,7 @@ description: "Копирует значение или текст элемент
 
 # Кнопка копирования
 
-:badge[sf-button-copy]{variant=tonal scheme=primary size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button-copy]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка копирования кладёт в буфер обмена значение — ключ, команду, ссылку —
 и показывает, что всё получилось: значок на миг становится галочкой, а

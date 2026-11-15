@@ -5,7 +5,7 @@ description: "Задаёт один пункт дерева: подпись, с�
 
 # Элемент дерева
 
-:badge[sf-tree-item]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tree-item]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Элемент дерева — один пункт [дерева](/ru/smart/navigation/tree/): папка с
 вложенными пунктами, файл или ссылка на раздел. Пункты ставят внутрь дерева:

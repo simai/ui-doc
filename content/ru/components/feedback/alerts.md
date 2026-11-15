@@ -6,7 +6,7 @@ profile: reference
 
 # Уведомления
 
-:badge[sf-alert]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-alert]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Уведомление сообщает о состоянии этой страницы или её раздела: подсказку,
 предупреждение, ошибку или подтверждение результата. Оно стоит в потоке

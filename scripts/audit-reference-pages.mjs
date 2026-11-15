@@ -91,7 +91,7 @@ for (const [page, entry] of Object.entries(settings.pages)) {
   if (!/^description:\s*\S/mu.test(front)) add('description_missing');
   const smart = entry.kind === 'smart';
   // The generated version line: tag and version badges, nothing else.
-  const versionLine = /^(# .+\n)\n(:badge\[sf-[a-z0-9-]+\]\{variant=tonal scheme=primary size=1\/2\} :badge\[\d+\.\d+\.\d+\]\{variant=outline scheme=on-surface size=1\/2\}( |$))+\n/mu;
+  const versionLine = /^(# .+\n)\n(:badge\[sf-[a-z0-9-]+\]\{variant=outline scheme=on-surface size=1\/2\} :badge\[\d+\.\d+\.\d+\]\{variant=outline scheme=on-surface size=1\/2\}( |$))+\n/mu;
   // A class page carries the same line from its passport (D01, 2026-11-10).
   const versioned = smart || (entry.kind === 'component' && (entry.badge ?? (entry.blocks ?? [entry.block])[0] ?? '').startsWith('sf-'));
   if (versioned && !versionLine.test(text)) add('version_badges_missing');

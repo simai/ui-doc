@@ -5,7 +5,7 @@ description: "Показывает ожидание, длительность к
 
 # Спиннер
 
-:badge[sf-spinner]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-spinner]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Спиннер показывает, что работа идёт, но сколько ещё ждать — неизвестно: запрос
 к серверу, подготовка отчёта. Если доля выполненного известна, берите

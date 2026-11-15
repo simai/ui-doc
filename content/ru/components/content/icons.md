@@ -6,7 +6,7 @@ profile: reference
 
 # Иконки
 
-:badge[sf-icon]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-icon]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Иконка выводит символ шрифта Material Symbols по его имени и согласует
 размер, начертание и форму со шкалами Framework. Берите её, чтобы подкрепить

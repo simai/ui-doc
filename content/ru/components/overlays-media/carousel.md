@@ -6,7 +6,7 @@ profile: reference
 
 # Карусель
 
-:badge[sf-carousel]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-carousel]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 `sf-carousel` — прежнее имя [слайдера контента](/ru/components/overlays-media/slider/).
 Во Framework теперь один слайдер: `sf-slider`. Карусель работает до

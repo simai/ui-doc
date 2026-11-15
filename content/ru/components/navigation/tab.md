@@ -6,7 +6,7 @@ profile: reference
 
 # Вкладка (совместимость)
 
-:badge[sf-tab]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tab]{variant=outline scheme=on-surface size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
 
 `sf-tab` переключает секции содержимого по списку пунктов `ul`, у каждого из
 которых два представления — обычное и активное. Компонент нужен для

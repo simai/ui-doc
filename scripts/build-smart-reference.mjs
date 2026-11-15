@@ -862,7 +862,7 @@ const withBadges = (text, entries) => {
   const title = text.match(/^# .+\n/mu);
   if (!title) return text;
   const at = title.index + title[0].length;
-  const badges = entries.map(([, {manifest}]) => `:badge[${manifest.custom_element}]{variant=tonal scheme=primary size=1/2}`
+  const badges = entries.map(([, {manifest}]) => `:badge[${manifest.custom_element}]{variant=outline scheme=on-surface size=1/2}`
     + ` :badge[${manifest.version}]{variant=outline scheme=on-surface size=1/2}`).join(' ');
   return `${text.slice(0, at)}\n${badges}\n${text.slice(at).replace(BADGE_LINE, '\n')}`;
 };

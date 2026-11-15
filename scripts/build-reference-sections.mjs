@@ -660,7 +660,7 @@ const withBadges = (text, block, version) => {
   const title = text.match(/^# .+\n/mu);
   if (!title || !version || !block?.startsWith('sf-')) return text;
   const at = title.index + title[0].length;
-  const line = `:badge[${block}]{variant=tonal scheme=primary size=1/2} :badge[${version}]{variant=outline scheme=on-surface size=1/2}`;
+  const line = `:badge[${block}]{variant=outline scheme=on-surface size=1/2} :badge[${version}]{variant=outline scheme=on-surface size=1/2}`;
   return `${text.slice(0, at)}\n${line}\n${text.slice(at).replace(BADGE_LINE, '\n')}`;
 };
 

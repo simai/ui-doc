@@ -5,7 +5,7 @@ description: "Рисует поверхность короткой подска�
 
 # Подсказка
 
-:badge[sf-tooltip]{variant=tonal scheme=primary size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tooltip]{variant=outline scheme=on-surface size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
 
 Подсказка показывает короткий текст рядом с элементом: значение ручки
 слайдера, пояснение к числу, сочетание клавиш. Сама она не следит, на что
