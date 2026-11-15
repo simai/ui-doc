@@ -31,5 +31,4 @@ profile: reference
 - **[Выпадающий список](/ru/components/navigation/dropdown/)** — выбор значения или действия из скрытого списка.
 - **[Контекстное меню](/ru/components/navigation/context-menu/)** — действия, связанные с выбранным объектом или областью.
 - **[Дерево](/ru/components/navigation/tree/)** — навигация по вложенной иерархии.
-- **[Элемент дерева](/ru/components/navigation/tree-item/)** — отдельный узел иерархической навигации.
 - **[Шаги](/ru/components/navigation/step/)** — последовательность этапов и текущий прогресс пользователя.

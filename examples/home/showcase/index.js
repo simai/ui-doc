@@ -11,7 +11,7 @@ const open = {
     await import('./chat.js');
   },
   async editor(panel) {
-    panel.innerHTML = '<div class="showcase__frame showcase__frame--scroll"><sf-content-editor id="showcase-editor"></sf-content-editor></div>';
+    panel.innerHTML = '<div class="showcase__frame showcase__frame--scroll"><sf-editor-content id="showcase-editor"></sf-editor-content></div>';
     await import('./editor.js');
   },
 };

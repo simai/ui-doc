@@ -590,9 +590,15 @@ const publicVariablesSection = (entry) => {
 const componentVariablesSection = (component, blocks) => {
   // A component's public variables may sit on a part rather than on its block
   // (the modal's on .sf-modal-surface): the contract names the component.
-  const offered = publicContract.components.filter((item) => blocks.includes(item.selector.replace(/^\./u, '')) || item.component === component);
+  // A selector may name the tag and the class together ("sf-tree-item,
+  // .sf-tree-item"); a page that folds a second block (the tree and its
+  // node) offers that block's variables too.
+  const selects = (item) => item.selector.split(',').map((part) => part.trim().replace(/^\./u, ''));
+  const offered = publicContract.components.filter((item) => selects(item).some((name) => blocks.includes(name)) || item.component === component);
   const publicNames = new Set(offered.flatMap((item) => item.variables.map((variable) => variable.name)));
-  const variables = blocks.flatMap((item) => componentVariables(component, item)).filter(({name}) => !publicNames.has(name));
+  const seen = new Set();
+  const variables = blocks.flatMap((item) => componentVariables(component, item))
+    .filter(({name}) => !publicNames.has(name) && !seen.has(name) && seen.add(name));
   if (offered.length) {
     return [
       '### Настройка',

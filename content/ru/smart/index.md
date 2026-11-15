@@ -16,6 +16,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Скачивание файла](/ru/smart/actions/download-file/)
 - [Кнопка копирования](/ru/smart/actions/copy-button/)
 - [Подтверждение](/ru/smart/actions/confirm/)
+- [Подтверждение изменения](/ru/smart/actions/confirm-change/)
 
 ## Формы и ввод
 
@@ -33,7 +34,6 @@ description: "Смарт-компоненты по задачам интерфе
 - [Код страны](/ru/smart/forms/country-code/)
 - [Код подтверждения](/ru/smart/forms/code-input/)
 - [Цвет](/ru/smart/forms/color/)
-- [Конструктор темы](/ru/smart/forms/theme-generator/)
 - [Загрузка файлов](/ru/smart/forms/file-upload/)
 - [Поле изображения](/ru/smart/forms/image-field/)
 
@@ -47,7 +47,6 @@ description: "Смарт-компоненты по задачам интерфе
 - [Вкладки](/ru/smart/navigation/tabs/)
 - [Шаги](/ru/smart/navigation/steps/)
 - [Дерево](/ru/smart/navigation/tree/)
-- [Элемент дерева](/ru/smart/navigation/tree-item/)
 - [Выпадающий список](/ru/smart/navigation/dropdown/)
 - [Контекстное меню](/ru/smart/navigation/context-menu/)
 - [Настройки](/ru/smart/navigation/settings/)

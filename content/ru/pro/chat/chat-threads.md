@@ -30,7 +30,7 @@ Framework: поставляется пакетом `pro` из репозитор
   `caption` — строка под названием (с кем разговор или последнее сообщение),
   `unread` — число непрочитанных, `avatar` — `{image_url, text}`.
 - `selected` называет открытый разговор. Список сам его не меняет: после
-  `sf-thread-list-select` приложение открывает разговор и задаёт
+  `sf-chat-threads-open` приложение открывает разговор и задаёт
   `selected`.
 - Слот `footer` — место под списком.
 
@@ -70,24 +70,24 @@ Framework: поставляется пакетом `pro` из репозитор
 меняют список; `setStatus()` показывает фразу вместо списка — например,
 ошибку. Всё, что делает человек, приходит событиями:
 
-- `sf-thread-list-select` — `{id}`, разговор открыли;
-- `sf-thread-list-create` — новый разговор;
-- `sf-thread-list-rename` — `{id, title}`, разговор переименовали на месте;
-- `sf-thread-list-archive` и `sf-thread-list-unarchive` — `{id}`;
-- `sf-thread-list-action` — `{id, action}`, одно из своих действий
+- `sf-chat-threads-open` — `{id}`, человек открывает разговор;
+- `sf-chat-threads-create` — новый разговор;
+- `sf-chat-threads-rename` — `{id, title}`, разговор переименовали на месте;
+- `sf-chat-threads-archive` и `sf-chat-threads-restore` — `{ids, id}`;
+- `sf-chat-threads-apply` — `{action, id}`, одно из своих действий
   приложения из свойства `actions`;
-- `sf-thread-list-load-more` — показался конец списка при `has-more`;
+- `sf-chat-threads-load-more` — показался конец списка при `has-more`;
   если страница не загрузилась, вызовите `moreFailed()`;
-- `sf-thread-list-view` — `{archived}`, переход в архив и обратно.
+- `sf-chat-threads-toggle` — `{archived}`, переход в архив и обратно.
 
 ```js
 const list = document.querySelector('sf-chat-threads');
 list.setThreads(await api.threads(), {hasMore: true});
-list.addEventListener('sf-thread-list-select', (event) => {
+list.addEventListener('sf-chat-threads-open', (event) => {
   openConversation(event.detail.id);
   list.selected = event.detail.id;
 });
-list.addEventListener('sf-thread-list-load-more', async () => {
+list.addEventListener('sf-chat-threads-load-more', async () => {
   try {
     const page = await api.threads({after: cursor});
     list.appendThreads(page.items, {hasMore: page.hasMore});
@@ -106,18 +106,16 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 приглушённым цветом по названию разговора (`sf-avatar` `hue="auto"`, см.
 [Цвет инициалов](/ru/smart/content/avatar/#цвет-инициалов)): у одного
 названия цвет всегда один.
-`activity` (`running`, `waiting`, `done`, `stopped`, `failed`) is where the work in the
-conversation is: a compact `sf-badge` in the row, its word the accessible name.
-A pinned conversation (`pinned: true`, Mirai24 API v1.1) leads the list under its own
-heading «Закреплённые» (`pinned`) and carries a quiet «Закреплён» line
-(`pinned-text`); without groups (`group-by="none"`) the pinned ones simply lead.
-Pinning and unpinning are the host's row actions: it offers them in `actions`
-(`{id: "pin", text: "Закрепить"}`), hears them as `sf-thread-list-apply` and
-gives the list the entry with `pinned` changed.
-The list keeps only the conversations of the shown view: with `archived` the
-archived ones, without it the rest. A title is cut at 120 characters when renamed.
-The 1.0 spellings `updated_at` and `avatar.image_url` are read until 2026-12-01 and
-noted in `SF.deprecations`.
+`activity` (`running`, `waiting`, `done`, `stopped`, `failed`) — где сейчас
+работа в разговоре: маленький `sf-badge` в строке, его слово — доступное имя.
+Закреплённый разговор (`pinned: true`) стоит первым под своим заголовком
+«Закреплённые» (`pinned`) и несёт тихую строку «Закреплён» (`pinned-text`); без
+групп (`group-by="none"`) закреплённые просто идут первыми. Закрепляет и
+открепляет приложение своими действиями строки: оно предлагает их в `actions`
+(`{id: "pin", text: "Закрепить"}`), получает `sf-chat-threads-apply` и
+передаёт списку запись с изменённым `pinned`.
+Список держит только разговоры показанного вида: с `archived` — архивные, без
+него — остальные. Название при переименовании обрезается до 120 знаков.
 
 ## Доступность
 

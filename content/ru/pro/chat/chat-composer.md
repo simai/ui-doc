@@ -184,4 +184,4 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 - [Сообщение чата](/ru/pro/chat/chat-message/) — одно сообщение ленты.
 - [Окно чата](/ru/pro/chat/chat-window/) — окно целиком на порте хоста.
-- [Лента сообщений](/ru/pro/chat/message-log/) — лента, в которую встаёт сообщение.
+- [Лента](/ru/smart/content/list-feed/) — лента, в которую встаёт сообщение.

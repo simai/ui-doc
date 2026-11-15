@@ -153,5 +153,5 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 ## См. также
 
 - [Окно чата](/ru/pro/chat/chat-window/) — где стоит выбор собеседника.
-- [Список разговоров](/ru/pro/chat/thread-list/) — разговоры человека.
+- [Список разговоров](/ru/pro/chat/chat-threads/) — разговоры человека.
 - [Контекстное меню](/ru/smart/navigation/context-menu/) — меню, которым открывается список.

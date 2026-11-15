@@ -220,7 +220,5 @@ feed.addEventListener('sf-list-feed-load-more', async (event) => {
 ## См. также
 
 - [Список](/ru/smart/content/list/) — список, с которым что-то делают.
-- [Лента сообщений](/ru/pro/chat/message-log/) — лента сообщений чата в пакете
-  Pro.
 - [Положение чтения](/ru/guide/functions/screen/reading-position/) — `SF.readingPosition`,
   правило, на котором построена лента.

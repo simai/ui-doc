@@ -41,7 +41,6 @@
         "dropdown",
         "context-menu",
         "tree",
-        "tree-item",
         "step"
       ]
     },
@@ -116,7 +115,8 @@
         "close",
         "download-file",
         "copy-button",
-        "confirm"
+        "confirm",
+        "confirm-change"
       ]
     },
     "forms": {
@@ -137,8 +137,7 @@
         "code-input",
         "file-upload",
         "image-field",
-        "color",
-        "theme-generator"
+        "color"
       ]
     },
     "navigation": {
@@ -152,7 +151,6 @@
         "tabs",
         "steps",
         "tree",
-        "tree-item",
         "dropdown",
         "context-menu",
         "settings",
@@ -232,15 +230,14 @@
       "items": [
         "admin-menu",
         "property-view",
-        "table",
-        "change-confirm"
+        "table"
       ]
     },
     "chat": {
       "title": "Чат",
       "items": [
         "chat-window",
-        "thread-list",
+        "chat-threads",
         "message-log",
         "chat-composer",
         "chat-message",
@@ -261,7 +258,7 @@
       "title": "Редактор страниц",
       "items": [
         "editor",
-        "content-editor",
+        "editor-content",
         "blocks"
       ]
     }

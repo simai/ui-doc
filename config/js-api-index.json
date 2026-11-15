@@ -347,8 +347,8 @@
       "label": "Поля по типу свойства"
     },
     "SF.ThemePalette": {
-      "page": "/ru/smart/forms/theme-generator/",
-      "label": "Конструктор темы"
+      "page": "/ru/smart/forms/color/#тема-в-коде",
+      "label": "Цвет: тема в коде"
     }
   }
 }

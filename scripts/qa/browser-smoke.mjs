@@ -49,7 +49,6 @@ export const SMOKE_PAGES = [
   '/ru/smart/overlays/drawer/',
   '/ru/smart/overlays/modal/',
   '/ru/pro/admin/table/',
-  '/ru/smart/forms/theme-generator/',
   '/ru/utilities/',
   '/ru/utilities/tables/',
   // English shows the Russian original with a notice until a translation is

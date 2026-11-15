@@ -67,7 +67,7 @@ editor.addEventListener('change', (event) => save(event.detail.document));
 
 `parameters` — где правятся параметры выбранного блока, кроме быстрых:
 `popover` (по умолчанию: всплывающее окно из панели над блоком) или `host`
-(приложение рисует их само по событию `sf-content-editor-params`, как панель
+(приложение рисует их само по событию `sf-editor-content-params`, как панель
 «Свойства» редактора страниц).
 
 `sources` — откуда показывать сохранённые картинки и файлы: `{значение: адрес}`.
@@ -105,7 +105,7 @@ editor.addEventListener('change', (event) => save(event.detail.document));
 Esc в поле выбирает его блок. Стрелки выбирают соседний, Shift расширяет
 выбор, ⌥↑ ⌥↓ двигают, Enter возвращает к набору, Backspace удаляет, ⌘D
 дублирует, ⌘C и ⌘X копируют блоки целиком, ⌘A выбирает все. Esc при
-выбранных блоках снимает выбор и отправляет `sf-content-editor-leave`:
+выбранных блоках снимает выбор и отправляет `sf-editor-content-leave`:
 редактор страниц по нему возвращается к макету.
 
 ### Поле слева и меню блока
@@ -140,7 +140,7 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 
 Блок выбирается Esc, щелчком в поле слева или по блоку без текста (картинка,
 линия). Выбор показывает панель над блоком и отправляет
-`sf-content-editor-params` с полями для панели приложения; приложение пишет
+`sf-editor-content-params` с полями для панели приложения; приложение пишет
 значение действием `set-parameter`. В документ записывается только значение,
 отличное от значения по умолчанию. Картинка без описания (`alt`) приходит с
 предупреждением.
@@ -151,7 +151,7 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 выбрать файл; «Ссылка» превращает зону в поле адреса. Файл, брошенный в любое
 место редактора, становится картинкой на линии броска; вставленный из буфера —
 на месте курсора. Картинка видна сразу, с полосой загрузки, а сам файл уходит
-приложению событием `sf-content-editor-file` `{file, block, type}`. Приложение
+приложению событием `sf-editor-content-file` `{file, block, type}`. Приложение
 отвечает действием `answer-file`: `{block, value, href}` — файл сохранён,
 `{block, reason}` — блок показывает причину и «Повторить», `{block, progress}`
 двигает полосу. Сам редактор файлы никуда не загружает.
@@ -174,10 +174,10 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 | Событие | Когда | `detail` |
 |:---|:---|:---|
 | `change` | любое изменение документа | `{document, reason}` |
-| `sf-content-editor-select` | выбор блоков изменился | `{ids}` |
-| `sf-content-editor-leave` | Esc при выбранных блоках | `{}` |
-| `sf-content-editor-params` | выбран один блок или нажато «Параметры…» | `{id, type, kind, label, fields, open}` |
-| `sf-content-editor-file` | картинку или файл бросили, вставили или выбрали | `{file, block, type}` |
+| `sf-editor-content-select` | выбор блоков изменился | `{ids}` |
+| `sf-editor-content-leave` | Esc при выбранных блоках | `{}` |
+| `sf-editor-content-params` | выбран один блок или нажато «Параметры…» | `{id, type, kind, label, fields, open}` |
+| `sf-editor-content-file` | картинку или файл бросили, вставили или выбрали | `{file, block, type}` |
 
 `reason`: `typing`, `split`, `merge`, `insert`, `convert`, `remove`, `move`,
 `duplicate`, `paste`, `params`, `table`, `row`, `history`, `file`.
@@ -191,7 +191,7 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 | `insert {kind, after}` | делает блок вида после блока или в конце | `applied`; `refused unknown` |
 | `undo`, `redo` | шаг истории | `applied`; `refused empty` |
 | `set-parameter {id, key, value}` | пишет параметр блока из панели приложения | `applied`; `refused unknown`, `invalid` |
-| `answer-file {block, value, href, reason, progress}` | ответ на `sf-content-editor-file` | `applied`; `refused unknown` |
+| `answer-file {block, value, href, reason, progress}` | ответ на `sf-editor-content-file` | `applied`; `refused unknown` |
 
 ## Доступность
 
