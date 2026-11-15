@@ -5,7 +5,7 @@ description: "Делает элемент прозрачным для мыши �
 
 # События указателя
 
-Классы `pointer-event-none` и `pointer-event-auto` задают свойство
+Классы `pointer-events-none` и `pointer-events-auto` задают свойство
 `pointer-events`: элемент либо пропускает щелчки, наведение и касания к тому,
 что лежит под ним, либо принимает их сам. Берите их для декоративных слоёв
 поверх кнопок и ссылок.
@@ -13,7 +13,7 @@ description: "Делает элемент прозрачным для мыши �
 ## Пример
 
 Над каждой кнопкой лежит полупрозрачный слой. Наведите указатель: слой с
-`pointer-event-none` пропускает его к кнопке, слой с `pointer-event-auto`
+`pointer-events-none` пропускает его к кнопке, слой с `pointer-events-auto`
 перехватывает.
 
 :::example {id="utilities/forms/pointer-events" label="Слой поверх кнопки"}
@@ -38,21 +38,23 @@ description: "Делает элемент прозрачным для мыши �
 ```html
 <div class="relative">
   <a href="/catalog/">Каталог</a>
-  <div class="absolute inset-0 pointer-event-none bg-primary-container-strong"></div>
+  <div class="absolute inset-0 pointer-events-none bg-primary-container-strong"></div>
 </div>
 ```
 
-`pointer-event-none` наследуется. Чтобы внутри такого блока снова принимал
-указатель один элемент, поставьте ему `pointer-event-auto`.
+`pointer-events-none` наследуется. Чтобы внутри такого блока снова принимал
+указатель один элемент, поставьте ему `pointer-events-auto`.
 
-Название класса — `pointer-event-*`, в единственном числе.
+Классы в таблице выше записаны как `pointer-event-none` и `pointer-event-auto`;
+Loader переводит в них `pointer-events-none` и `pointer-events-auto`, поэтому
+работают оба написания. Пишите `pointer-events-*`, как в CSS.
 
 ## Ограничения
 
 - Класс не делает элемент недоступным: на него по-прежнему можно перейти
   клавишей Tab и нажать Enter. Для недоступной кнопки используйте атрибут
   `disabled`, для блока — `inert`.
-- С `pointer-event-none` у элемента не срабатывают и `hover:`-классы, и вид
+- С `pointer-events-none` у элемента не срабатывают и `hover:`-классы, и вид
   курсора `cursor-*`.
 - Префиксов ширины экрана и состояния у семейства нет.
 

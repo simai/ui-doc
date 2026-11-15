@@ -3,17 +3,17 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "8c13bf45aecaae2c31188b729ef4765fc91bffae",
-    "core_revision": "7fb26d395af28dfcaac2a5df9de254b3067dc4ae",
+    "source_revision": "09cf1b0f4e22af6f1d48d8ffdef496ba07f0d894",
+    "core_revision": "994f9db407fa5523feeafd1b8cb859fad34fa9c3",
     "source_files": {
       "src/component/menu/js/_menu.js": "d899ff8bb6d7229183a20fdc06ab10d8d65bfcc8dbe30f7e680cbf0294a7e650",
-      "src/component/menu/scss/_css__menu.scss": "4c9e10dc95e7b12a7885f04386fb9cc77afdc3c3fe5628bf51553c7eb0edb856",
-      "src/component/menu/scss/_css__menu_compact.scss": "9880146b8fdabd0237f065b9e12f71ec38a66f4215925796f1333077093bdb58",
-      "src/component/menu/docs/docs.md": "424ccde78d582000719445d632f7c3fcee1ed9a9421d414c8a9ff19b7b7b6a7c"
+      "src/component/menu/scss/_css__menu.scss": "10cdfe28659d3260765239fc5b0720f4878c211d172d7165b75c04c78198d329",
+      "src/component/menu/scss/_css__menu_compact.scss": "3725090d51ae815c1f3cd6852b2f588c25e0b13ac2c385b654aee98e4e30e0d3",
+      "src/component/menu/docs/docs.md": "15a80c44352803c04a02a6d9b4690a3eea0e7ee6e37017ebbeaab7173e599cfa"
     },
     "generated_files": {
-      "distr/component/menu/css/menu.css": "71fb0d586bdfa9f15eeedfea25b9c7d9d82f69ab353376b79d1b1dbdf35ef85b",
-      "distr/component/menu/js/menu.js": "f04c28caca1d5bf4586837d069c8ea2a900395c869d954078a483c765c335bdf"
+      "distr/component/menu/css/menu.css": "c2d7450783aef049795605d054f2c1586e6ccbdb491facf3cc05e9bff9b51722",
+      "distr/component/menu/js/menu.js": "54ea5beb2e19021e8881d80b9a2cd3d5b688a7360e3615ef9e24ee9146a8f4a5"
     }
   },
   "source_files": [
@@ -42,7 +42,7 @@
       "inset-inline-start: 100%"
     ],
     "src/component/menu/scss/_css__menu_compact.scss": [
-      ".sf-menu.sf-menu--compact",
+      ".sf-menu:is(.sf-menu--rail, .sf-menu--compact)",
       ".sf-menu-element-wrap > .sf-badge"
     ]
   },
@@ -51,7 +51,7 @@
       ".sf-menu.sf-menu--horizontal",
       ".sf-menu.sf-menu--documentation-tree",
       "inset-inline-start: 100%",
-      ".sf-menu.sf-menu--compact"
+      ".sf-menu.sf-menu--rail"
     ],
     "distr/component/menu/js/menu.js": [
       "closeHorizontalSiblings",
@@ -76,7 +76,7 @@
     "Пробел",
     "Escape",
     "направление раскрытия",
-    "sf-menu--compact"
+    "sf-menu--rail"
   ],
   "examples": {
     "components/menu/overview": [
@@ -96,7 +96,7 @@
       "disabled"
     ],
     "components/menu/compact": [
-      "sf-menu sf-menu--compact",
+      "sf-menu sf-menu--rail",
       "class=\"sf-badge\" data-count=\"3\""
     ]
   }

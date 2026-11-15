@@ -6,7 +6,7 @@ profile: reference
 
 # Кнопки
 
-:badge[sf-button]{variant=tonal scheme=primary size=1/2} :badge[1.10.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button]{variant=tonal scheme=primary size=1/2} :badge[1.12.0]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка запускает действие на текущей странице: сохраняет изменения, отправляет
 форму или подтверждает выбор. Для перехода на другую страницу берите ссылку, для
@@ -53,10 +53,13 @@ profile: reference
 ### Вид
 
 Вид задаёт вес действия классом `sf-button--{вид}`: `default` — главное
-действие экрана, обычно одно; `tonal` — важное, но не главное; `outline` —
-второстепенное, например «Отмена»; `ghost` — самое лёгкое, в строке таблицы или
-рядом с текстом. `surface` нужен на цветном фоне или поверх изображения: его
-заливка и граница — полупрозрачные ступени
+действие экрана, обычно одно; `tonal` — важное, но не главное, с мягкой
+заливкой; `outline` — второе весомое действие в нейтральной схеме
+`on-surface`, например «Экспорт», «Фильтры» или «Назад»; `ghost` — самое
+лёгкое, в строке таблицы, в карточке или рядом с текстом. «Отмена» — это всегда
+тихая `ghost on-surface`, а не `outline`. `outline primary` нужен только для
+второго призыва в первом экране сайта. `surface` нужен на цветном фоне или
+поверх изображения: его заливка и граница — полупрозрачные ступени
 [нейтральной шкалы](/ru/guide/colour/palettes/), поэтому одна
 запись верна в обеих темах и на любом фоне.
 
@@ -67,8 +70,9 @@ profile: reference
 
 Схема задаёт цвет классом `sf-button--{схема}`: `primary` — акцентное действие,
 `on-surface` — нейтральное, `danger` — необратимое или опасное, например
-«Удалить»; оно рисуется красным цветом ошибки. `secondary` есть только у
-вида `tonal`; прочерк в таблице — сочетание, которого нет.
+«Удалить»; оно рисуется красным цветом ошибки. Из рамок цветная только у
+`outline danger`, у остальных схем рамка общая серая. Схема `secondary` есть у
+каждого вида.
 
 :::example {id="components/buttons/schemes" label="Сочетания вида и схемы"}
 :::
@@ -81,6 +85,21 @@ profile: reference
 Вторичная палитра почти нейтральна, и рядом с `tonal on-surface` кнопка
 `tonal secondary` выглядит так же серой. Для мягкой цветной кнопки берите
 `tonal primary`.
+
+### Кнопка с меню
+
+Разделённая кнопка — основное действие и стрелка с меню других способов
+сделать то же самое. Обёртка `<span class="sf-button-split">` держит
+`.sf-button` (действие) и квадратную `.sf-icon-button` того же размера с
+иконкой `expand_more`. Стрелке нужны `aria-haspopup="menu"`, `aria-expanded`
+и подпись `aria-label`. Части стоят вплотную: внутренние углы прямые, между
+ними линия в 1 px. Бывает в двух видах: главная `default primary` и обычная
+`outline on-surface`. `sf-button-split--full-width` вместе с кнопкой на всю
+ширину растягивает её на строку. В смарт-компоненте это
+`<sf-button menu split>`.
+
+:::example {id="components/buttons/split" label="Разделённая кнопка"}
+:::
 
 ### Размер
 
@@ -291,10 +310,9 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-button` |
-| Части | `sf-button-shortcut`, `sf-button-spinner`, `sf-button-spinner--overlay`, `sf-button-state-loading`, `sf-button-text-container` |
+| Части | `sf-button-shortcut`, `sf-button-spinner`, `sf-button-spinner--overlay`, `sf-button-split`, `sf-button-split--full-width`, `sf-button-state-loading`, `sf-button-text-container` |
 | Модификаторы | `sf-button--danger`, `sf-button--default`, `sf-button--full-width`, `sf-button--height-high`, `sf-button--height-highest`, `sf-button--height-low`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--pressed`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
 | Размеры | `sf-button--size-1`, `sf-button--size-1/2`, `sf-button--size-1/3`, `sf-button--size-2`, `sf-button--size-3` |
-| Устаревшие | `sf-button--error` → `sf-button--danger`, `sf-button--ghost` → `sf-button--link`, `sf-button--link` → `sf-button--ghost` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

@@ -20,8 +20,8 @@ description: "Закрашивает каждую вторую строку ил
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `table-stripe` (`.table-stripe > tbody > tr:nth-of-type(odd) > *`) | `--sf-table-accent-bg: var(--sf-table-stripe-bg); color: var(--sf-table-stripe-color)` | — |
-| `table-stripe-col` (`.table-stripe-col > :not(caption) > tr > :nth-child(2n)`) | `--sf-table-accent-bg: var(--sf-table-stripe-bg); color: var(--sf-table-stripe-color)` | — |
+| `table-stripe` (`.table-stripe > tbody > tr:nth-of-type(odd) > *`) | `--sf-table-accent-bg: var(--sf-table-stripe-bg); color: var(--sf-table-stripe-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg)` | — |
+| `table-stripe-col` (`.table-stripe-col > :not(caption) > tr > :nth-child(2n)`) | `--sf-table-accent-bg: var(--sf-table-stripe-bg); color: var(--sf-table-stripe-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
@@ -35,6 +35,7 @@ description: "Закрашивает каждую вторую строку ил
 |:---|:---|
 | `--sf-table-stripe-bg` | задаётся темой |
 | `--sf-table-stripe-color` | задаётся темой |
+| `--sf-surface-place-solid` | `var(--sf-surface-page)` |
 
 ## Применение
 

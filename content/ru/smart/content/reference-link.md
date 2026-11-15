@@ -5,7 +5,7 @@ description: "Ведёт на реальный адрес и показывае�
 
 # Справочная ссылка
 
-:badge[sf-reference-link]{variant=tonal scheme=primary size=1/2} :badge[1.0.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-reference-link]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
 
 Справочная ссылка ведёт на реальный адрес и показывает рядом короткую справку:
 путь, источник, номер документа. Берите её, когда читателю важно видеть, куда
@@ -128,7 +128,7 @@ JavaScript.
 | `size` | строка | пусто | пусто, `1/2`, `1`, `2` | Размер ссылки рядом с полями или в ячейке таблицы, например `1`. Пусто — отступы карточки. |
 | `target` | строка | `_self` | — | Где открыть ссылку, например `_blank` — в новой вкладке. Тогда скажите об этом в подписи. |
 | `text` | строка | пусто | — | Компактный маршрут, источник или ссылка рядом с подписью. |
-| `aria-label` | строка | пусто | — | — |
+| `aria-label` | строка | пусто | — | Доступное имя ссылки вместо видимой подписи — для подписи, которой вне контекста нужно больше слов. Пусто — имя даёт подпись. |
 
 #### Общие для всех компонентов
 
@@ -154,13 +154,13 @@ JavaScript.
 
 | | |
 |:---|:---|
-| Тег | `<sf-reference-link>`, контракт `smart.reference-link` версии `1.0.5` |
-| Поставка | выпуск Framework `ui-7fb26d395af2` |
+| Тег | `<sf-reference-link>`, контракт `smart.reference-link` версии `1.1.0` |
+| Поставка | выпуск Framework `ui-994f9db407fa` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как ссылка; желательна подпись или `aria-label`; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/reference-link` |
-| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-reference-link` |
+| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/reference-link` |
+| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-reference-link` |
 
 ## См. также
 

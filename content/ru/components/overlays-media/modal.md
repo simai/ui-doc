@@ -6,7 +6,7 @@ profile: reference
 
 # Модальное окно
 
-:badge[sf-modal]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-modal]{variant=tonal scheme=primary size=1/2} :badge[1.3.3]{variant=outline scheme=on-surface size=1/2}
 
 Модальное окно переводит пользователя к одной важной задаче поверх страницы:
 подтвердить действие, заполнить короткую форму. Страница за окном недоступна,
@@ -76,8 +76,8 @@ profile: reference
   открыл окно.
 - Окно закрывается по Escape, щелчку по фону и кнопке закрытия. Escape
   закрывает только верхнее окно, если открыто несколько.
-- Кнопка закрытия получает английское имя «Close modal». Переименуйте её после
-  создания: `modal.template.querySelector('.sf-modal-close-button').setAttribute('aria-label', 'Закрыть окно')`.
+- Кнопка закрытия получает имя «Закрыть» на языке страницы (`lang` у
+  `<html>` или у ближайшего предка), переименовывать её не нужно.
 - `unclose: true` отключает все три способа закрытия — только для
   обязательного решения, и тогда внутри окна нужны кнопки, которые завершают
   сценарий.
@@ -173,7 +173,6 @@ document.addEventListener('modal:before-close', (event) => {
 | Блок | `sf-modal` |
 | Части | `sf-modal-close-button`, `sf-modal-close-button--inline-end`, `sf-modal-focus-guard`, `sf-modal-footer`, `sf-modal-header`, `sf-modal-header-action`, `sf-modal-header-content`, `sf-modal-hide-button`, `sf-modal-hide-button--inline-end`, `sf-modal-hide-icon`, `sf-modal-loading`, `sf-modal-spinner`, `sf-modal-surface`, `sf-modal-surface--elevated`, `sf-modal-title` |
 | Размеры | `sf-modal--size-question` |
-| Устаревшие | `sf-modal--positon-bottom` → `sf-modal--position-bottom`, `sf-modal--positon-center` → `sf-modal--position-center`, `sf-modal--positon-inline-end` → `sf-modal--position-inline-end`, `sf-modal--positon-inline-start` → `sf-modal--position-inline-start`, `sf-modal--positon-left` → `sf-modal--position-left`, `sf-modal--positon-right` → `sf-modal--position-right`, `sf-modal--positon-top` → `sf-modal--position-top` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -192,7 +191,7 @@ document.addEventListener('modal:before-close', (event) => {
 | `--sf-modal-padding-inline` | Отступ внутри панели до и после содержимого; атрибут `surface-padding` окна важнее. | `var(--sf-space-3)` |
 | `--sf-modal-padding-block` | Отступ внутри панели сверху и снизу от содержимого; атрибут `surface-padding` окна важнее. | `var(--sf-space-3)` |
 | `--sf-modal-gap` | Промежуток между шапкой, телом и подвалом. | `var(--sf-space-1)` |
-| `--sf-modal-footer-gap` | Расстояние между действиями подвала, которые стоят в конце. | `var(--sf-space-1/2)` |
+| `--sf-modal-footer-gap` | Расстояние между действиями подвала, которые стоят в конце. | `var(--sf-space-1/3)` |
 
 ```css
 .sf-modal-surface {
@@ -207,9 +206,12 @@ document.addEventListener('modal:before-close', (event) => {
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-modal--body-outset` | не задана; задают модификаторы, например `[data-sf-modal-surface]`: `0` | `margin-left`, `margin-right`, `margin-inline` |
-| `--sf-modal--padding-end` | не задана; задают модификаторы, например `.sf-modal--size-question [data-sf-modal-surface]`: `calc(var(--sf-modal--question-block) - var(--sf-space-1/4))` | `padding-bottom`, `padding-block-end`, `--sf-modal-surface-padding` |
-| `--sf-modal--question-block` | не задана; задают модификаторы, например `.sf-modal--size-question`: `var(--sf-modal-padding-block, var(--sf-space-3))` | `--sf-modal--padding-end`, `--sf-modal-surface-padding` |
-| `--sf-modal--question-inline` | не задана; задают модификаторы, например `.sf-modal--size-question`: `var(--sf-modal-padding-inline, var(--sf-space-3))` | `--sf-modal-surface-padding` |
+| `--sf-modal--frame` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-space-2)` | `--sf-modal--frame-block`, `--sf-modal--frame-inline`, `--sf-modal-surface-padding`, `padding-bottom`, `padding-block-end`, `padding-top`, `padding-block`, `padding-inline-end`, `padding-inline-start`, `padding-inline`, `--sf-modal--body-outset`, `--sf-modal--question-block`, `--sf-modal--question-inline`, `--sf-modal--padding-end`, `padding` |
+| `--sf-modal--frame-block` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-padding-block, calc(var(--sf-modal--frame) - var(--sf-modal-surface-border-width)))` | `--sf-modal-surface-padding`, `--sf-modal--question-block` |
+| `--sf-modal--frame-inline` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-padding-inline, calc(var(--sf-modal--frame) - var(--sf-modal-surface-border-width)))` | `--sf-modal-surface-padding`, `--sf-modal--body-outset`, `--sf-modal--question-inline`, `padding` |
+| `--sf-modal--padding-end` | не задана; задают модификаторы, например `.sf-modal--size-question [data-sf-modal-surface]`: `max(0px, calc(var(--sf-modal--question-block) - var(--sf-space-1/4)))` | `padding-bottom`, `padding-block-end`, `--sf-modal-surface-padding` |
+| `--sf-modal--question-block` | не задана; задают модификаторы, например `.sf-modal--size-question [data-sf-modal-surface]`: `var(--sf-modal--frame-block)` | `--sf-modal--padding-end`, `--sf-modal-surface-padding` |
+| `--sf-modal--question-inline` | не задана; задают модификаторы, например `.sf-modal--size-question [data-sf-modal-surface]`: `var(--sf-modal--frame-inline)` | `--sf-modal-surface-padding` |
 | `--sf-modal-close-right` | не задана; задают модификаторы, например `.sf-modal-close-button`: `var(--sf-space-1/3)` | `inset-inline-end` |
 | `--sf-modal-close-top` | не задана; задают модификаторы, например `.sf-modal-close-button`: `var(--sf-space-1/3)` | `top` |
 | `--sf-modal-header-gap` | не задана; задают модификаторы, например `.sf-modal-header`: `var(--sf-space-1)` | `gap` |
@@ -221,9 +223,9 @@ document.addEventListener('modal:before-close', (event) => {
 | `--sf-modal-surface-bg` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-background-color, var(--sf-surface-area))` | `background-color`, `--sf-surface-place`, `--sf-surface-place-solid`, `--sf-surface-place-ground` |
 | `--sf-modal-surface-border-color` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-border-color, var(--sf-outline-variant, transparent))` | `border` |
 | `--sf-modal-surface-border-style` | не задана; задают модификаторы, например `.sf-modal-surface`: `solid` | `border` |
-| `--sf-modal-surface-border-width` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-border-width, var(--sf-border-width, var(--sf-px)))` | `border` |
+| `--sf-modal-surface-border-width` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-border-width, var(--sf-border-width, var(--sf-px)))` | `--sf-modal--frame-block`, `--sf-modal--frame-inline`, `border` |
 | `--sf-modal-surface-gap` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-gap, var(--sf-space-1))` | `gap` |
-| `--sf-modal-surface-padding` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-padding-block, var(--sf-space-3)) var(--sf-modal-padding-inline, var(--sf-space-3))` | `padding` |
+| `--sf-modal-surface-padding` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal--frame-block) var(--sf-modal--frame-inline)` | `padding` |
 | `--sf-modal-surface-radius` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-radius, var(--sf-radius--surface))` | `border-radius` |
 | `--sf-modal-surface-shadow` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-shadow-flat)` | `box-shadow` |
 

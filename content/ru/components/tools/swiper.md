@@ -1,12 +1,12 @@
 ---
-title: "Swiper"
+title: "Движок перелистывания"
 description: "Перелистывает ряд слайдов по кнопкам и клавишам — движок для карусели и галерей."
 profile: reference
 ---
 
-# Swiper
+# Движок перелистывания
 
-Swiper — движок перелистывания Framework: он сдвигает ряд слайдов по кнопкам,
+Движок перелистывания Framework (Swiper) сдвигает ряд слайдов по кнопкам,
 клавишам и вызовам из скрипта. Движок не оформляет слайды и не выбирает
 поведение за проект. Для готовых переключателей, пагинации и автопрокрутки
 берите [карусель](/ru/components/overlays-media/carousel/).
@@ -110,7 +110,7 @@ swiper.on('slideChange', (instance) => console.log(instance.activeIndex));
 | Что | Классы |
 |:---|:---|
 | Блок | `swiper` |
-| Части | `swiper-button-disabled`, `swiper-slide`, `swiper-wrapper` |
+| Части | `swiper-button-disabled`, `swiper-dragging`, `swiper-slide`, `swiper-touch`, `swiper-wrapper` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

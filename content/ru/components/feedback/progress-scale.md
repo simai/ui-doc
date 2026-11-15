@@ -6,12 +6,14 @@ profile: reference
 
 # Шкала прогресса
 
-:badge[sf-progress-scale]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-scale]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Шкала делит ход операции на десять участков, по одному на каждые десять
 процентов. Она наглядна там, где обычная полоса выглядит слишком абстрактно:
 заполнение профиля, шаги настройки. Если значение меняется плавно, берите
-[индикатор прогресса](/ru/components/feedback/progress-bar/).
+[индикатор прогресса](/ru/components/feedback/progress-bar/). Шкалу с другим
+числом участков — от 2 до 10, например «4 из 5» — рисует
+[смарт-шкала](/ru/smart/feedback/progress-scale/).
 
 ## Пример
 
@@ -26,7 +28,9 @@ profile: reference
 подпись `sf-progress-scale-text` с числом процентов.
 
 - Значение задаёт `data-value` от 0 до 100. Участки заполняются с округлением
-  вверх до десятка: 31 % заполняет четыре участка.
+  вниз до десятка: 31 % заполняет три участка, а четвёртый — только с 40 %.
+- `data-meter="true"` делает шкалу шкалой количества (`role="meter"`), а не
+  хода операции.
 - Размер задаёт `data-size`, статус — `data-tone`. Скрипт ставит по ним классы
   `sf-progress-scale--size-*`, `sf-progress-scale--<статус>` и
   `sf-progress-scale--<десяток>` и снимает остальные, поэтому эти классы руками
@@ -39,9 +43,9 @@ profile: reference
 
 ### Статус
 
-Статус задаёт цвет заполненных участков. `data-tone` принимает `info`, `success`,
-`warning` и `error`; без него или с `primary` участки остаются цвета по
-умолчанию.
+Статус задаёт цвет заполненных участков. Без атрибута участки основного цвета
+темы. `data-tone` принимает `neutral` (серый), `info`, `success`, `warning` и
+`error`.
 
 :::example {id="components/progress-scale/status" label="Статусы шкалы"}
 :::
@@ -114,7 +118,7 @@ whenLoader(() => SF.Loader.ready('ProgressScale', (ProgressScale) => {
 |:---|:---|
 | Блок | `sf-progress-scale` |
 | Части | `sf-progress-scale-block`, `sf-progress-scale-container`, `sf-progress-scale-text` |
-| Модификаторы | `sf-progress-scale--10`, `sf-progress-scale--100`, `sf-progress-scale--20`, `sf-progress-scale--30`, `sf-progress-scale--40`, `sf-progress-scale--50`, `sf-progress-scale--60`, `sf-progress-scale--70`, `sf-progress-scale--80`, `sf-progress-scale--90`, `sf-progress-scale--error`, `sf-progress-scale--info`, `sf-progress-scale--line-1`, `sf-progress-scale--line-1/2`, `sf-progress-scale--line-2`, `sf-progress-scale--success`, `sf-progress-scale--warning` |
+| Модификаторы | `sf-progress-scale--10`, `sf-progress-scale--100`, `sf-progress-scale--20`, `sf-progress-scale--30`, `sf-progress-scale--40`, `sf-progress-scale--50`, `sf-progress-scale--60`, `sf-progress-scale--70`, `sf-progress-scale--80`, `sf-progress-scale--90`, `sf-progress-scale--error`, `sf-progress-scale--info`, `sf-progress-scale--line-1`, `sf-progress-scale--line-1/2`, `sf-progress-scale--line-2`, `sf-progress-scale--neutral`, `sf-progress-scale--success`, `sf-progress-scale--warning` |
 | Размеры | `sf-progress-scale--size-1`, `sf-progress-scale--size-1/2`, `sf-progress-scale--size-1/3`, `sf-progress-scale--size-2`, `sf-progress-scale--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -127,10 +131,10 @@ whenLoader(() => SF.Loader.ready('ProgressScale', (ProgressScale) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-progress-scale-fill-color` | Заполненные сегменты; статус задаёт свой цвет, если эта переменная не задана. | `var(--sf-primary)`; зависит от статуса |
+| `--sf-progress-scale-fill-color` | Заполненные сегменты; статус задаёт свой цвет, если эта переменная не задана. | `var(--sf-on-surface-variant)`; зависит от статуса |
 | `--sf-progress-scale-track-color` | Ещё не заполненные сегменты. | `var(--sf-surface-container)` |
-| `--sf-progress-scale-segment-gap` | Расстояние между десятью сегментами. | `var(--sf-a1)` |
-| `--sf-progress-scale-radius` | Углы ряда сегментов. | `var(--sf-radius--ui)` |
+| `--sf-progress-scale-segment-gap` | Расстояние между десятью сегментами. | `var(--sf-a2)` |
+| `--sf-progress-scale-radius` | Углы каждого сегмента. | `var(--sf-radius-1/3)` |
 | `--sf-progress-scale-color` | Видимый процент. | `var(--sf-on-surface-variant)` |
 | `--sf-progress-scale-gap` | Расстояние между сегментами и процентом. | `var(--sf-space-1/4)`; зависит от размера |
 
@@ -146,11 +150,11 @@ whenLoader(() => SF.Loader.ready('ProgressScale', (ProgressScale) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-progress-scale--fill-color` | `var(--sf-progress-scale-fill-color, var(--sf-primary))` | `background-color` |
+| `--sf-progress-scale--fill-color` | `var(--sf-progress-scale-fill-color, var(--sf-on-surface-variant))` | `background-color` |
 | `--sf-progress-scale--font-size` | не задана; задают модификаторы, например `.sf-progress-scale--size-1/3`: `var(--sf-text-size-1/4)` | `font-size` |
 | `--sf-progress-scale--gap` | не задана; задают модификаторы, например `.sf-progress-scale--size-1/3`: `var(--sf-progress-scale-gap, var(--sf-space-1/4))` | `gap` |
 | `--sf-progress-scale--line-height` | не задана; задают модификаторы, например `.sf-progress-scale--size-1/3`: `var(--sf-text-height-1/4)` | `line-height` |
-| `--sf-progress-scale-container--height` | не задана; задают модификаторы, например `.sf-progress-scale--size-1/3 .sf-progress-scale-container`: `var(--sf-text-size-1/7)` | `height` |
+| `--sf-progress-scale-container--height` | не задана; задают модификаторы, например `.sf-progress-scale--size-1/3 .sf-progress-scale-container`: `var(--sf-a4)` | `height` |
 
 ## См. также
 

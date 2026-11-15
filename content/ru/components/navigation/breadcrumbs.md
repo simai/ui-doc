@@ -6,7 +6,7 @@ profile: reference
 
 # Хлебные крошки
 
-:badge[sf-breadcrumbs]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-breadcrumbs]{variant=tonal scheme=primary size=1/2} :badge[1.1.4]{variant=outline scheme=on-surface size=1/2}
 
 Хлебные крошки показывают путь от главной страницы до текущей и дают перейти
 на любой родительский уровень. Это вторичная навигация: она дополняет
@@ -40,10 +40,12 @@ profile: reference
 
 `sf-breadcrumbs-item--link` • [справочник](#классы)
 
-Ссылка (`sf-breadcrumbs-item--link`) окрашена основным цветом. Пункт без
-модификатора — приглушённый текст: так показывают уровень, у которого нет
-своей страницы. Текущая страница с `aria-current="page"` набрана основным
-цветом текста и средним начертанием. Разделитель отражается при письме справа
+Ссылка (`sf-breadcrumbs-item--link`) — серая, приглушённым цветом текста;
+под указателем она темнеет до основного цвета текста. Пункт без модификатора —
+такой же приглушённый текст, но не ссылка: так показывают уровень, у которого
+нет своей страницы. Текущая страница с `aria-current="page"` набрана основным
+цветом текста и средним начертанием. Разделитель `sf-breadcrumbs-item--separator`
+стоит между пунктами, никогда в начале строки, и отражается при письме справа
 налево.
 
 :::example {id="components/breadcrumbs/items" label="Вид пункта"}
@@ -60,27 +62,34 @@ profile: reference
 
 ### Длинный путь
 
-Если пунктов больше `data-max-items` (по умолчанию 4), скрипт сворачивает
-середину пути в кнопку с многоточием; `data-expand-label` задаёт её
-доступное имя (без него — имя на языке страницы, по-русски «Показать скрытые крошки»). Нажатие
-раскрывает весь путь. Значения меньше 3 выключают сворачивание.
+Путь стоит в одну строку и сворачивается, только когда ему не хватает места,
+на любой ширине: середина уходит в кнопку «…», затем первая крошка. Родитель и
+текущая страница остаются, а за «…» прячутся хотя бы две крошки. Если и тогда
+название обрезано короче трёх букв, в «…» уходит и родитель. Путь, который
+помещается, остаётся целым и на телефоне.
+
+`data-max-items="4"` добавляет предел по числу пунктов; по умолчанию предела
+нет. `data-expand-label` задаёт доступное имя кнопки «…» (без него — «Показать
+скрытые крошки»). Нажатие раскрывает путь на месте и переводит фокус на первую
+открывшуюся крошку.
 
 :::example {id="components/breadcrumbs/long-path" label="Свёрнутая середина пути"}
 :::
 
 ### Длинные подписи
 
-Когда путь нельзя сокращать, задайте `data-max-items="0"`. Пункты переносятся
-на следующую строку, длинная подпись переносится внутри пункта, и страница не
-получает горизонтальной прокрутки.
+Текущая страница занимает остаток строки и переносится по словам, а предки
+сжимаются и обрезаются многоточием; полное название обрезанного предка видно
+в подсказке. На телефоне (уже 60rem) путь не переносится: что не помещается и
+после свёртки, обрезается многоточием, сначала более длинное из двух названий.
 
-:::example {id="components/breadcrumbs/long-labels" label="Перенос длинного пути"}
+:::example {id="components/breadcrumbs/long-labels" label="Длинные названия"}
 :::
 
 ## Состояния
 
-Наведение и нажатие окрашивают ссылку и её иконку цветами `--sf-primary-hover`
-и `--sf-primary-active`; эти состояния компонент показывает сам.
+Наведение и нажатие окрашивают ссылку и её иконку основным цветом текста
+`--sf-on-surface`; эти состояния компонент показывает сам.
 
 ### Фокус
 
@@ -142,8 +151,8 @@ document.querySelector('.sf-breadcrumbs').addEventListener('sf-breadcrumb-click'
 |:---|:---|:---|
 | `--sf-breadcrumbs-gap` | Расстояние между крошками и разделителями. | `var(--sf-space-1/3)` |
 | `--sf-breadcrumbs-color` | Крошка, которая не ссылка и не текущая страница. | `var(--sf-on-surface-variant)` |
-| `--sf-breadcrumbs-link-color` | Крошка-ссылка на свою страницу в покое. | `var(--sf-primary)` |
-| `--sf-breadcrumbs-link-hover-color` | Крошка-ссылка под указателем. | `var(--sf-primary-hover)` |
+| `--sf-breadcrumbs-link-color` | Крошка-ссылка на свою страницу в покое (серая). | `var(--sf-on-surface-variant)` |
+| `--sf-breadcrumbs-link-hover-color` | Крошка-ссылка под указателем или при нажатии. | `var(--sf-on-surface)` |
 | `--sf-breadcrumbs-current-color` | Крошка текущей страницы. | `var(--sf-on-surface)` |
 | `--sf-breadcrumbs-separator-color` | Значок-разделитель между двумя крошками. | `var(--sf-on-surface-variant)` |
 
@@ -159,15 +168,18 @@ document.querySelector('.sf-breadcrumbs').addEventListener('sf-breadcrumb-click'
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
+| `--sf-breadcrumbs--target` | `var(--sf-ui-1/3--control-height)` | `min-height`, `min-block-size`, `min-width`, `min-inline-size`, `padding-top`, `padding-bottom`, `padding-block` |
+| `--sf-breadcrumbs--text-height` | `var(--sf-text-height-1)` | `--sf-breadcrumbs-item-container--line-height`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `padding-top`, `padding-bottom`, `padding-block` |
+| `--sf-breadcrumbs--text-size` | `var(--sf-text-size-1)` | `--sf-breadcrumbs-item-container--font-size` |
 | `--sf-breadcrumbs-item--background-color` | не задана; задают модификаторы, например `.sf-breadcrumbs-item`: `transparent` | `background-color` |
 | `--sf-breadcrumbs-item--box-shadow` | не задана; задают модификаторы, например `.sf-breadcrumbs-item`: `none` | `box-shadow` |
 | `--sf-breadcrumbs-item-container--background-color` | не задана; задают модификаторы, например `.sf-breadcrumbs-item .sf-breadcrumbs-item-container`: `transparent` | `background-color` |
 | `--sf-breadcrumbs-item-container--color` | не задана; задают модификаторы, например `.sf-breadcrumbs-item .sf-breadcrumbs-item-container`: `var(--sf-breadcrumbs-color, var(--sf-on-surface-variant))` | `color` |
 | `--sf-breadcrumbs-item-container--font-family` | не задана; задают модификаторы, например `.sf-breadcrumbs-item .sf-breadcrumbs-item-container`: `var(--sf-text--family)` | `font-family` |
-| `--sf-breadcrumbs-item-container--font-size` | не задана; задают модификаторы, например `.sf-breadcrumbs-item .sf-breadcrumbs-item-container`: `var(--sf-text-size-1/2)` | `font-size` |
+| `--sf-breadcrumbs-item-container--font-size` | не задана; задают модификаторы, например `.sf-breadcrumbs-item .sf-breadcrumbs-item-container`: `var(--sf-breadcrumbs--text-size, var(--sf-text-size-1/2))` | `font-size` |
 | `--sf-breadcrumbs-item-container--font-weight` | не задана; задают модификаторы, например `.sf-breadcrumbs-item .sf-breadcrumbs-item-container`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-breadcrumbs-item-container--gap` | не задана; задают модификаторы, например `.sf-breadcrumbs-item .sf-breadcrumbs-item-container`: `var(--sf-space-1/4)` | `gap` |
-| `--sf-breadcrumbs-item-container--line-height` | не задана; задают модификаторы, например `.sf-breadcrumbs-item .sf-breadcrumbs-item-container`: `var(--sf-text-height-1/2)` | `line-height` |
+| `--sf-breadcrumbs-item-container--line-height` | не задана; задают модификаторы, например `.sf-breadcrumbs-item .sf-breadcrumbs-item-container`: `var(--sf-breadcrumbs--text-height, var(--sf-text-height-1/2))` | `line-height` |
 
 ## См. также
 

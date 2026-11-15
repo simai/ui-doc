@@ -5,7 +5,7 @@ description: "Показывает путь от корня сайта до те
 
 # Хлебные крошки
 
-:badge[sf-breadcrumbs]{variant=tonal scheme=primary size=1/2} :badge[1.1.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-breadcrumbs]{variant=tonal scheme=primary size=1/2} :badge[1.2.4]{variant=outline scheme=on-surface size=1/2}
 
 Хлебные крошки показывают, где в иерархии сайта находится страница: ссылки на
 разделы выше и название текущей страницы в конце; длинный путь сворачивается
@@ -117,6 +117,8 @@ crumbs.onItemClick((item) => {
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
+| `current` | строка | `last` | `last`, `none` | Какая крошка — эта страница. last — крошка, которая говорит current, иначе последняя, если она не говорит current: false. none — цепочка родителей над заголовком страницы, каждая крошка с адресом — ссылка. В слоте path у sf-header-page по умолчанию none. |
+| `siblings` | да/нет | нет | — | Предлагать соседей крошки (items[].siblings) меню из кнопки после неё. По умолчанию выключено. |
 | `separator-icon` | строка | `chevron_right` | — | — |
 | `home-icon` | строка | `home` | — | — |
 | `home-label` | строка | пусто | — | — |
@@ -126,8 +128,8 @@ crumbs.onItemClick((item) => {
 | `separator-class` | строка | пусто | — | — |
 | `container-class` | строка | пусто | — | — |
 | `expand-label` | строка | — | — | Пусто — текст на языке страницы (по-английски «Show hidden breadcrumbs»). |
-| `expand-on-ellipsis` | да/нет | да | — | — |
-| `max-items` | целое число | `4` | от 0 | — |
+| `expand-on-ellipsis` | да/нет | да | — | Открывает ли нажатие на «…» скрытые крошки меню рядом. false — страница сама обрабатывает sf-breadcrumbs-press. |
+| `max-items` | целое число | `0` | от 0 | Сколько крошек показывать (3 и больше): начало, «…» и конец. 0 по умолчанию — без предела; цепочка сворачивается, только когда не помещается в одну строку. |
 | `aria-label` | строка | пусто | — | Пусто — текст на языке страницы (по-английски «Breadcrumb»). |
 | `items` | список | `[]` | — | — |
 
@@ -146,7 +148,7 @@ crumbs.onItemClick((item) => {
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
 | `getCapturedItems()` | список: объект | Читает захваченные дочерние sf-breadcrumbs-item в простые объекты пунктов (label, href, icon, current, active, disabled, ellipsis, target, rel, itemClass, containerClass, ariaLabel, value, hiddenItems). |
-| `getDisplayItems(items?: array)` | список: объект | Возвращает пункты в том виде, в каком они показаны: если их больше max-items (не меньше 3) и многоточие не раскрыто, середина заменяется одним пунктом-многоточием со скрытыми пунктами; все пункты переиндексируются, и текущим может быть только последний. |
+| `getDisplayItems(items?: array)` | список: объект | Возвращает пункты так, как они показаны: пока многоточие закрыто, свёрнутые крошки — по пределу max-items и по месту — заменены одним пунктом-многоточием, который их держит; все пункты перенумерованы, текущий — не больше одного. |
 | `setState(nextState?: object)` | объект | Записывает каждый ключ как атрибут тега (camelCase в kebab-case): массивы — как JSON, true — как пустой атрибут, false/null/undefined удаляют его. Возвращает тег. |
 | `onItemClick(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик sf-breadcrumbs-press; обработчик получает (item, detail, event). Возвращает тег. |
 
@@ -162,13 +164,13 @@ crumbs.onItemClick((item) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-breadcrumbs>`, контракт `smart.breadcrumbs` версии `1.1.7` |
-| Поставка | выпуск Framework `ui-7fb26d395af2` |
+| Тег | `<sf-breadcrumbs>`, контракт `smart.breadcrumbs` версии `1.2.4` |
+| Поставка | выпуск Framework `ui-994f9db407fa` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «строка» (сервер пишет `data-sf-skeleton="line"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как навигация; нужна подпись или `aria-label`; с клавиатуры: `Tab`; `Enter` на ссылках; `Enter` или `Пробел` на кнопке «…». |
-| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/breadcrumbs` |
-| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-breadcrumbs` |
+| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/breadcrumbs` |
+| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-breadcrumbs` |
 
 ## См. также
 

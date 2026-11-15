@@ -5,7 +5,7 @@ description: "Даёт выбрать или перетащить файлы и 
 
 # Загрузка файлов
 
-:badge[sf-file-upload]{variant=tonal scheme=primary size=1/2} :badge[1.1.9]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-upload]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
 
 Загрузка файлов даёт выбрать файлы в системном окне или перетащить их и
 показывает список выбранных файлов с прогрессом и состоянием передачи. Сами
@@ -273,6 +273,7 @@ async function store(item) {
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
+| `name` | строка | пусто | — | Имя в форме, под которым отправляются файлы: по записи на файл — File выбранного, сохранённый id (value) отправленного. |
 | `size` | строка | `1` | `1/2`, `1`, `2` | — |
 | `icon` | строка | `upload_file` | — | — |
 | `link-text` | строка | — | — | Пусто — текст на языке страницы (по-английски «Click to upload»). |
@@ -281,9 +282,16 @@ async function store(item) {
 | `supporting-text` | строка | пусто | — | Вспомогательная строка; по умолчанию берётся из formats. |
 | `accept` | строка | пусто | — | — |
 | `multiple` | да/нет | нет | — | — |
+| `max-size` | число | `0` | — | Наибольший размер файла в байтах; 0 — без предела. Больший файл не добавляется, об этом говорится под областью (причина size). |
+| `min-size` | число | `0` | — | Наименьший размер файла в байтах; 0 — без предела (причина min-size). Пустой файл не добавляется никогда (причина empty). |
+| `max-files` | число | `0` | — | Сколько файлов самое большее держит область для нескольких файлов; 0 — без предела (причина count). Область для одного файла держит один и заменяет его. |
+| `max-total-size` | число | `0` | — | Все файлы списка вместе в байтах; 0 — без предела (причина total). |
 | `disabled` | да/нет | нет | — | — |
+| `required` | да/нет | нет | — | Без файла форма не отправляется: value-missing «Добавьте файл» (при multiple — «Добавьте хотя бы один файл»), и браузер показывает на область. |
 | `aria-label` | строка | пусто | — | — |
-| `items` | список | `[]` | — | Файлы и их загрузки, записанные приложением: состояние каждой записи (process, done, error) и прогресс 0–100 — это её поток. |
+| `items` | список | `[]` | — | Файлы и их загрузка: выбор или перетаскивание ставит каждый файл в ready (выбран, не отправлен); приложение или загрузчик переводит его в process с progress 0–100, затем в done или error. Каждая запись в process — поток. |
+| `uploader` | объект | `null` | — | Передача файла страницей, свойство: async-функция (file, {signal, onProgress, item}), отвечающая сохранённым значением ({value, href} или id). С ней компонент отправляет каждый файл списка (ready или повторный) и сам ведёт строку: process с долей от onProgress(done, total), done со значением, error с сообщением и причиной брошенной ошибки. «Удалить» прерывает передачу через signal. Без неё приложение ведёт строки через items и отвечает на retry. |
+| `value` | список | `[]` | — | Файлы, которые получает форма, в форме sf-input-image: {label, mime, size, file} для выбранного файла, отправляемого с формой, {value, label, mime, size, href} для сохранённого. Если задано, сохранённые файлы стоят готовыми строками; атрибут принимает список в JSON или адреса через запятую. |
 
 #### Общие для всех компонентов
 
@@ -321,8 +329,8 @@ async function store(item) {
 | `sf-file-upload-attach` | `{ files: array, source: "input" \| "drop", multiple: boolean }` | Выбраны файлы для загрузки. |
 | `sf-file-upload-attached` | `{ id: any, item: object, index: number, items: array, source: string, multiple: boolean }` | Файл попал в список. |
 | `sf-file-upload-detach` | `{ id: any, item: object, index: number, items: array }` | Файл убран из списка. |
-| `sf-file-upload-rejected` | `{ files: array, accept: string, source: string }` | Перетащенные файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил. |
-| `sf-file-upload-retry` | `{ id: any, item: object, index: number, items: array }` | Файл с ошибкой отправлен снова. |
+| `sf-file-upload-rejected` | `{ files: array, rejected: array, accept: string, source: string }` | Файлы, которые выбор или перетаскивание не взяли, — у каждого причина и сообщение: тип, которого нет в accept (и при выборе, и при перетаскивании), второй файл в области для одного файла, файл, который уже есть в списке. Те же слова показываются под областью. Прежнее имя sf-file-upload:reject приходит с тем же detail до 2026-12-01. |
+| `sf-file-upload-retry` | `{ id: any, item: object, index: number, items: array }` | Файл с ошибкой отправлен снова: строка опять в работе, progress равен null (полоса идёт без числа), пока передача не сообщит долю; загрузчик отправляет файл ещё раз, страница без загрузчика отвечает на это событие. Прежнее имя sf-file-upload:retry приходит с тем же detail до 2026-12-01. |
 | `sf-file-upload-begun` | `{ id: any, item: object }` | Запись перешла в process — выбрана, перетащена или отправлена снова: начался её поток загрузки. |
 | `sf-file-upload-chunk` | `{ id: any, done: number, total: number, item: object }` | Приложение сдвинуло прогресс записи, пока она в process: `{id, done, total}` с total 100. |
 | `sf-file-upload-completed` | `{ id: any, item: object, index: number, items: array }` | Файл загружен. |
@@ -334,13 +342,13 @@ async function store(item) {
 
 | | |
 |:---|:---|
-| Тег | `<sf-file-upload>`, контракт `smart.file-upload` версии `1.1.9` |
-| Поставка | выпуск Framework `ui-7fb26d395af2` |
+| Тег | `<sf-file-upload>`, контракт `smart.file-upload` версии `1.2.2` |
+| Поставка | выпуск Framework `ui-994f9db407fa` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/file-upload` |
-| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-file-upload` |
+| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/file-upload` |
+| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-file-upload` |
 
 ## См. также
 

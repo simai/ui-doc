@@ -86,7 +86,6 @@
         "modal",
         "tooltip",
         "carousel",
-        "swiper",
         "slider"
       ]
     },
@@ -96,7 +95,8 @@
         "scrollbar",
         "hide-show",
         "outline",
-        "theme"
+        "theme",
+        "swiper"
       ]
     },
     "internal": {

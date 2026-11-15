@@ -6,12 +6,14 @@ profile: reference
 
 # Количество
 
-:badge[sf-quantity]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-quantity]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Поле количества принимает число с клавиатуры или меняет его кнопками «минус» и
 «плюс» на заданный шаг. Подходит для количества товаров, мест, участников и
 других ограниченных числовых величин; для произвольного текста берите
 [текстовое поле](/ru/components/forms/inputs/).
+Простое числовое поле без кнопок, с единицей в поле, — у
+[смарт-поля количества](/ru/smart/forms/quantity/) (`steppers="none"`).
 
 ## Пример
 
@@ -182,8 +184,10 @@ whenLoader(() => SF.Loader.ready('Quantity', (Quantity) => {
 `min`, `max`, `step`, `precision`, `grouping`, `locale`, `inputMode` (`soft`
 или `strict`), `allowNegative`, `allowDecimal`, `mask`, `required`,
 `disabled`, `readonly`, `decrementLabel`, `incrementLabel`, `decrementIcon`,
-`incrementIcon`. Класс по умолчанию делает поле обязательным, ставит подпись
-`Label` и английские подписи кнопок: задавайте их явно.
+`incrementIcon`. Без параметров поле не обязательное и без подписи: задайте
+`label`, а `required` — когда значение нужно. Кнопки называются «Уменьшить
+значение» и «Увеличить значение» на языке страницы; `decrementLabel` и
+`incrementLabel` уточняют, что меняется.
 
 ## Классы
 
@@ -192,7 +196,7 @@ whenLoader(() => SF.Loader.ready('Quantity', (Quantity) => {
 | Блок | `sf-quantity` |
 | Части | `sf-quantity-count`, `sf-quantity-hint-text-wrap`, `sf-quantity-inherited`, `sf-quantity-label`, `sf-quantity-required`, `sf-quantity-row`, `sf-quantity-text`, `sf-quantity-unit`, `sf-quantity-wrap` |
 | Модификаторы | `sf-quantity--pointer-focus`, `sf-quantity--steppers-none` |
-| Размеры | `sf-quantity--size-1`, `sf-quantity--size-1/2`, `sf-quantity--size-2` |
+| Размеры | `sf-quantity--size-1`, `sf-quantity--size-1/2`, `sf-quantity--size-1/3`, `sf-quantity--size-2`, `sf-quantity--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

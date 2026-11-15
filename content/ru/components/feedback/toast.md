@@ -6,7 +6,7 @@ profile: reference
 
 # Всплывающие сообщения
 
-:badge[sf-toast]{variant=tonal scheme=primary size=1/2} :badge[1.2.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-toast]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Всплывающее сообщение коротко сообщает результат действия поверх интерфейса
 и не блокирует дальнейшую работу. Для постоянного текста внутри страницы
@@ -42,8 +42,7 @@ profile: reference
 Статус задаёт цвет заливки, границы, текста и иконки: `sf-toast--neutral`,
 `sf-toast--info`, `sf-toast--success`, `sf-toast--warning`,
 `sf-toast--error` — общий словарь статусов Framework. Выбирайте статус по
-смыслу сообщения, а не по желаемому цвету. Классы `sf-toast--default` и
-`sf-toast--primary` — другие имена `neutral` и `info`.
+смыслу сообщения, а не по желаемому цвету.
 
 :::example {id="components/toast/overview" label="Статусы сообщения"}
 :::
@@ -86,8 +85,7 @@ profile: reference
 `trigger` (при закрытии по времени `trigger` равен `null`). Недоступная кнопка
 (`disabled` или `aria-disabled="true"`) событий не вызывает. На время
 удаления блок получает класс `closing` и плавно гаснет; при системной
-настройке уменьшения движения блок удаляется сразу. `data-toast-action` и
-`data-toast-close` — другие имена тех же атрибутов. Само действие выполняет
+настройке уменьшения движения блок удаляется сразу. Само действие выполняет
 приложение.
 
 :::example {id="components/toast/actions" label="Действие"}
@@ -115,8 +113,7 @@ SF.Toast.show('#toasts', {
 `actionText` и `action` (кнопка действия и её значение), `closable` (по
 умолчанию `true`), `closeLabel`, `duration`, `role` (`status` или `alert`).
 `status` принимает общие значения статуса: `neutral`, `info`, `success`,
-`warning` и `error`; прежние `default` и `primary` означают `neutral` и
-`info`, а неизвестное значение собирает нейтральное сообщение. Компонент также регистрирует класс `Toast` с
+`warning` и `error`; неизвестное значение собирает нейтральное сообщение. Компонент также регистрирует класс `Toast` с
 теми же параметрами: `SF.Loader.ready('Toast', callback)` передаёт его после
 события `sf-loader-init`.
 
@@ -174,8 +171,7 @@ handle.close();
 |:---|:---|
 | Блок | `sf-toast` |
 | Части | `sf-toast-bottom`, `sf-toast-container`, `sf-toast-supporting-text`, `sf-toast-text`, `sf-toast-wrap` |
-| Модификаторы | `sf-toast--error`, `sf-toast--info`, `sf-toast--neutral`, `sf-toast--success`, `sf-toast--warning` |
-| Устаревшие | `sf-toast--default` → `sf-toast--neutral`, `sf-toast--primary` → `sf-toast--info` |
+| Модификаторы | `sf-toast--actions-under`, `sf-toast--error`, `sf-toast--info`, `sf-toast--neutral`, `sf-toast--success`, `sf-toast--warning` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -192,7 +188,7 @@ handle.close();
 | `--sf-toast-border-color` | Цвет рамки. | `var(--sf-outline-variant)` |
 | `--sf-toast-border-width` | Ширина рамки со всех сторон. | `var(--sf-px)` |
 | `--sf-toast-radius` | Скругление углов. | `var(--sf-radius--surface)` |
-| `--sf-toast-padding-inline` | Отступ до и после содержимого по строчной оси. | `var(--sf-space-1)` |
+| `--sf-toast-padding-inline` | Отступ до и после содержимого по строчной оси. | `calc(var(--sf-space-1) - var(--sf-toast-border-width, var(--sf-px)))` |
 | `--sf-toast-padding-block` | Отступ над и под содержимым: первая строка стоит в рамке низкого элемента управления. | `var(--sf-space-1/2)` |
 | `--sf-toast-gap` | Промежуток между значком, текстом и кнопкой закрытия. | `var(--sf-space-1/2)` |
 
@@ -209,8 +205,8 @@ handle.close();
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-toast--background-color` | не задана; задают модификаторы, например `.sf-toast--neutral`: `var(--sf-toast-background-color, var(--sf-surface-container))` | `background-image` |
-| `--sf-toast--content-color` | не задана; задают модификаторы, например `.sf-toast--neutral`: `var(--sf-toast-color, var(--sf-on-surface))` | `color` |
-| `--sf-toast--lead` | `var(--sf-ui-1--space-y-tightness-low)` | `margin-top`, `margin-block-start`, `margin-inline-end`, `padding-top`, `padding-bottom`, `padding-block` |
+| `--sf-toast--content-color` | не задана; задают модификаторы, например `.sf-toast--neutral`: `var(--sf-toast-color, var(--sf-on-surface))` | `color`, `--sf-close-icon--background-color` |
+| `--sf-toast--lead` | `var(--sf-ui-1--space-y-tightness-low)` | `margin-top`, `margin-block-start`, `margin-inline-end`, `padding-top`, `padding-bottom`, `padding-block`, `padding-block-end` |
 | `--sf-toast-bottom--background-color` | не задана; задают модификаторы, например `.sf-toast .sf-toast-bottom`: `transparent` | `background-color` |
 | `--sf-toast-container--background-color` | не задана; задают модификаторы, например `.sf-toast .sf-toast-container`: `transparent` | `background-color` |
 | `--sf-toast-container--gap` | не задана; задают модификаторы, например `.sf-toast .sf-toast-container`: `var(--sf-space-1/2)` | `gap` |

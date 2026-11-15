@@ -124,7 +124,7 @@ description: "Окрашивает текст цветовой ролью тем
 | `--sf-on-info-container-graphic` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
 | `--sf-current` | `currentColor` |
 | `--sf-inherit` | `inherit` |
-| `--sf-surface-disabled` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` |
+| `--sf-surface-disabled` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
 | `--sf-hue` | задаётся темой |
 | `--sf-on-hue` | задаётся темой |
 | `--sf-on-hue-container` | задаётся темой |

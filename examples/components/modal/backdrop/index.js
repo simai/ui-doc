@@ -1,25 +1,24 @@
 const startModalBackdrop = (Modal) => {
   const variants = {
-    'default': ['overlay: true', {}],
-    'blur': ['blur: true', {blur: true}],
-    'blur-large': ['blur: \'large\'', {blur: 'large'}],
-    'none': ['overlay: false', {overlay: false}],
+    'default': ['Оплатить счёт № 418?', '<p class="m-0">С карты спишется 12 400 ₽.</p>', {}],
+    'blur': ['Вход в кабинет', '<p class="m-0">Страница за окном видна, но приглушена.</p>', {blur: true}],
+    'blur-large': ['Как оформить заказ', '<p class="m-0">Страница за окном сильно размыта и не отвлекает.</p>', {blur: 'large'}],
+    'none': ['Как заполнить ИНН', '<p class="m-0">ИНН организации — 10 цифр, ИП — 12 цифр.</p>', {overlay: false}],
   };
 
-  Object.entries(variants).forEach(([key, [label, options]]) => {
+  Object.entries(variants).forEach(([key, [title, html, options]]) => {
     const id = `modal-backdrop-${key}`;
     if (Modal.registry.has(id)) return;
 
-    const modal = new Modal({
+    new Modal({
       id,
       param: {
         container: '#modal-example-box',
-        title: label,
-        html: '<p class="m-0">Фон за окном отделяет его от страницы.</p>',
+        title,
+        html,
         ...options,
       },
     });
-    modal.template.querySelector('.sf-modal-close-button')?.setAttribute('aria-label', 'Закрыть окно');
   });
 };
 

@@ -1,7 +1,7 @@
 const startModalExample = (Modal) => {
   if (Modal.registry.has('modal-example')) return;
 
-  const modal = new Modal({
+  new Modal({
     id: 'modal-example',
     param: {
       container: '#modal-example-box',
@@ -22,7 +22,6 @@ const startModalExample = (Modal) => {
     },
   });
 
-  modal.template.querySelector('.sf-modal-close-button')?.setAttribute('aria-label', 'Закрыть окно');
 };
 
 if (window.SF?.Loader) {

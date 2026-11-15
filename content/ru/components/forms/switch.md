@@ -6,7 +6,7 @@ profile: reference
 
 # Переключатель
 
-:badge[sf-switch]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-switch]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Переключатель включает или выключает настройку сразу после нажатия. Если
 значение уходит вместе с формой после подтверждения, берите
@@ -194,7 +194,7 @@ input, класс из `attrs.class` — на оболочку.
 | `--sf-switch-border-width` | Толщина рамки дорожки; место ползунка отсчитывается от внешнего края, поэтому он остаётся на месте. | `var(--sf-px)` |
 | `--sf-switch-radius` | Скругление углов дорожки. | `var(--sf-radius-circle)` |
 | `--sf-switch-color` | Цвет подписи; у недоступного — свой. | `var(--sf-on-surface)` |
-| `--sf-switch-gap` | Промежуток между дорожкой и подписью. | `var(--sf-ui-1--text-space-x)`; зависит от размера |
+| `--sf-switch-gap` | Промежуток между дорожкой и подписью: промежуток в строке, --sf-space-1/2 на любом размере (12; в компактной и на телефоне 8). | `var(--sf-space-1/2)` |
 
 ```css
 .sf-switch {
@@ -208,14 +208,16 @@ input, класс из `attrs.class` — на оболочку.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-switch--duration` | `var(--sf-duration-normal)` | `transition` |
-| `--sf-switch--gap` | не задана; задают модификаторы, например `.sf-switch--size-1/2`: `var(--sf-switch-gap, var(--sf-ui-1/2--text-space-x))` | `gap` |
+| `--sf-switch--duration` | `calc(var(--sf-duration-fast) * 2)` | `transition` |
+| `--sf-switch--easing` | `var(--sf-ease-move)` | `transition` |
+| `--sf-switch--gap` | не задана; задают модификаторы, например `.sf-switch--size-1/2`: `var(--sf-switch-gap, var(--sf-space-1/2))` | `gap` |
 | `--sf-switch--ratio` | `2` | `--sf-switch-toggler--width`, `--sf-switch-inner--travel` |
 | `--sf-switch--seat` | `var(--sf-a2)` | `--sf-switch-toggler--padding-bottom`, `--sf-switch-toggler--padding-inline-end`, `--sf-switch-toggler--padding-inline-start`, `--sf-switch-toggler--padding-top`, `--sf-switch-inner--height`, `--sf-switch-inner--width` |
 | `--sf-switch--track-height` | не задана; задают модификаторы, например `.sf-switch.sf-switch--size-1/2`: `var(--sf-text-height-1/2)` | `--sf-switch-toggler--height`, `--sf-switch-toggler--width`, `--sf-switch-inner--height`, `--sf-switch-inner--width`, `--sf-switch-inner--travel` |
 | `--sf-switch-container--background-color` | не задана; задают модификаторы, например `.sf-switch .sf-switch-container`: `transparent` | `background-color` |
 | `--sf-switch-container--color` | не задана; задают модификаторы, например `.sf-switch .sf-switch-container`: `var(--sf-switch-color, var(--sf-on-surface))` | `color` |
 | `--sf-switch-container--font-size` | не задана; задают модификаторы, например `.sf-switch.sf-switch--size-1/2 .sf-switch-container`: `var(--sf-text-size-1/2)` | `font-size` |
+| `--sf-switch-container--font-weight` | не задана; задают модификаторы, например `.sf-switch .sf-switch-container`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-switch-container--gap` | не задана; задают модификаторы, например `.sf-switch .sf-switch-container`: `var(--sf-a0)` | `gap` |
 | `--sf-switch-container--line-height` | не задана; задают модификаторы, например `.sf-switch.sf-switch--size-1/2 .sf-switch-container`: `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-switch-container-wrap--background-color` | не задана; задают модификаторы, например `.sf-switch .sf-switch-container-wrap`: `transparent` | `background-color` |

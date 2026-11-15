@@ -6,11 +6,15 @@ profile: reference
 
 # Заполнитель
 
-:badge[sf-placeholder]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-placeholder]{variant=tonal scheme=primary size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
 
 Заполнитель объясняет пустое состояние: данных нет, поиск ничего не нашёл или
 раздел не заполнен. Для ожидания данных берите
 [скелетон](/ru/components/feedback/skeleton/), а не пустое состояние.
+Состояние «готовится» — индикатор загрузки или кольцо с процентом в круге
+значка — и готовые причины с кнопками рисует
+[смарт-компонент «Пустое состояние»](/ru/smart/feedback/empty-state/)
+(`kind="processing"`, `value`).
 
 ## Пример
 
@@ -32,9 +36,7 @@ profile: reference
   потомком блока и не сжимается.
 - `sf-placeholder__actions` держит одну понятную кнопку, если пользователь
   может исправить ситуацию.
-- Компонент работает без JavaScript. Части `sf-placeholder-right`,
-  `sf-placeholder-top` и `sf-placeholder-top-text` — другие имена
-  `__content`, `__header` и заголовка с пояснением.
+- Компонент работает без JavaScript.
 
 ## Варианты
 
@@ -81,7 +83,7 @@ profile: reference
 | `--sf-placeholder--background-color` | `var(--sf-transparent)` | `background-color` |
 | `--sf-placeholder--color` | `var(--sf-on-surface)` | `color` |
 | `--sf-placeholder--gap` | `var(--sf-space-1)` | `gap` |
-| `--sf-placeholder-actions--gap` | `var(--sf-space-1/2)` | `gap` |
+| `--sf-placeholder-actions--gap` | `var(--sf-space-1/3)` | `gap` |
 | `--sf-placeholder-content--gap` | `var(--sf-placeholder-right--gap, var(--sf-space-1))` | `gap` |
 | `--sf-placeholder-header--gap` | `var(--sf-placeholder-top--gap, var(--sf-space-1/3))` | `gap` |
 

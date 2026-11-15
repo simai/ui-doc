@@ -6,11 +6,13 @@ profile: reference
 
 # Уведомления
 
-:badge[sf-alert]{variant=tonal scheme=primary size=1/2} :badge[1.1.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-alert]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
-Уведомление выделяет важную информацию в потоке страницы: подсказку,
-предупреждение, ошибку или подтверждение результата. Для краткого сообщения
-поверх интерфейса берите [всплывающее сообщение](/ru/components/feedback/toast/).
+Уведомление сообщает о состоянии этой страницы или её раздела: подсказку,
+предупреждение, ошибку или подтверждение результата. Оно стоит в потоке
+страницы. Состояние всего продукта показывает [полоса уведомления](/ru/smart/feedback/alert-bar/), короткий
+ответ на действие — [всплывающее сообщение](/ru/components/feedback/toast/),
+а вопрос с выбором — [окно подтверждения](/ru/smart/actions/confirm/).
 
 ## Пример
 
@@ -57,6 +59,33 @@ profile: reference
 окружающий контейнер. В одном сценарии держите один вид.
 
 :::example {id="components/alerts/appearance" label="Вид"}
+:::
+
+### Действия
+
+Кнопки действий — серые тональные `sf-button--tonal sf-button--on-surface`
+размера `1` с низкой высотой `sf-button--height-low`; вторая — тихая
+`sf-button--ghost sf-button--on-surface` той же высоты. Плашка кнопки одна на
+любом статусе. Кнопка закрытия — `sf-icon-button--close` той же низкой высоты
+с `sf-close--size-1`: крестик 16 px полупрозрачного цвета текста, одинаковый на
+любом статусе.
+
+Пока уведомление достаточно широкое, кнопки стоят в строке с текстом: одна —
+от ширины 36rem (576 px), две — от 48rem (768 px). На более узком уведомлении
+они переходят под текст. `sf-alert--actions-under` держит их под текстом на
+любой ширине — так лучше для длинного текста.
+
+:::example {id="components/alerts/actions-layout" label="Где стоят кнопки"}
+:::
+
+### Пояснение перед действием
+
+Пояснение перед действием — обычное уведомление `sf-alert--info
+sf-alert--outlined`: только граница, без кнопки закрытия и без действий.
+Ссылка в тексте ведёт только на справку («Узнать больше») и берёт цвет текста
+уведомления; всё остальное — кнопки в `sf-alert-buttons`.
+
+:::example {id="components/alerts/callout" label="Пояснение перед действием"}
 :::
 
 ### Состав
@@ -117,8 +146,7 @@ document.addEventListener('sf-alert-action', (event) => {
 |:---|:---|
 | Блок | `sf-alert` |
 | Части | `sf-alert-buttons`, `sf-alert-content`, `sf-alert-supporting-text`, `sf-alert-text`, `sf-alert-wrap` |
-| Модификаторы | `sf-alert--default`, `sf-alert--error`, `sf-alert--flat`, `sf-alert--info`, `sf-alert--neutral`, `sf-alert--outlined`, `sf-alert--success`, `sf-alert--warning` |
-| Устаревшие | `sf-alert--clear` → `sf-alert--neutral`, `sf-alert--danger` → `sf-alert--error` |
+| Модификаторы | `sf-alert--actions-under`, `sf-alert--default`, `sf-alert--error`, `sf-alert--flat`, `sf-alert--info`, `sf-alert--neutral`, `sf-alert--outlined`, `sf-alert--success`, `sf-alert--warning` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -135,7 +163,7 @@ document.addEventListener('sf-alert-action', (event) => {
 | `--sf-alert-color` | Цвет текста. | `var(--sf-on-surface)`; зависит от вида, статуса |
 | `--sf-alert-border-width` | Ширина рамки со всех сторон. | `var(--sf-px)` |
 | `--sf-alert-radius` | Скругление углов. | `var(--sf-radius--surface)` |
-| `--sf-alert-padding-inline` | Отступ до и после содержимого по строчной оси. | `var(--sf-space-1)` |
+| `--sf-alert-padding-inline` | Отступ до и после содержимого по строчной оси. | `calc(var(--sf-space-1) - var(--sf-alert-border-width, var(--sf-px)))` |
 | `--sf-alert-padding-block` | Отступ над и под содержимым: первая строка стоит в рамке низкого элемента управления. | `var(--sf-space-1/2)` |
 | `--sf-alert-gap` | Промежуток между иконкой, текстом и кнопками. | `var(--sf-space-1/2)` |
 
@@ -153,8 +181,8 @@ document.addEventListener('sf-alert-action', (event) => {
 |:---|:---|:---|
 | `--sf-alert--background-color` | не задана; задают модификаторы, например `.sf-alert.sf-alert--neutral.sf-alert--default`: `var(--sf-alert-background-color, var(--sf-surface-container))` | `background-color` |
 | `--sf-alert--border-color` | не задана; задают модификаторы, например `.sf-alert.sf-alert--neutral.sf-alert--default`: `var(--sf-alert-border-color, var(--sf-outline))` | `border-color` |
-| `--sf-alert--color` | `var(--sf-alert-color, var(--sf-on-surface))` | `color`, `--sf-alert-supporting-text--color`, `--sf-alert-text--color` |
-| `--sf-alert--lead` | `var(--sf-ui-1--space-y-tightness-low)` | `padding-top`, `padding-bottom`, `padding-block`, `margin-top`, `margin-block-start`, `margin-inline-end` |
+| `--sf-alert--color` | `var(--sf-alert-color, var(--sf-on-surface))` | `color`, `--sf-alert-supporting-text--color`, `--sf-alert-text--color`, `--sf-close-icon--background-color` |
+| `--sf-alert--lead` | `var(--sf-ui-1--space-y-tightness-low)` | `padding-top`, `padding-bottom`, `padding-block`, `padding-block-end`, `margin-top`, `margin-block-start`, `margin-inline-end` |
 | `--sf-alert--opacity` | не задана; задают модификаторы, например `.sf-alert.closing`: `0` | `opacity` |
 | `--sf-alert-buttons--background-color` | не задана; задают модификаторы, например `.sf-alert .sf-alert-buttons`: `transparent` | `background-color` |
 | `--sf-alert-buttons--gap` | не задана; задают модификаторы, например `.sf-alert .sf-alert-buttons`: `var(--sf-space-1/3)` | `gap` |

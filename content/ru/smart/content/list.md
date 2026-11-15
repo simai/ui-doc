@@ -5,7 +5,7 @@ description: "Список, с которым работают: строки и�
 
 # Список
 
-:badge[sf-list]{variant=tonal scheme=primary size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list]{variant=tonal scheme=primary size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
 
 Список — для того, с чем что-то делают: беседы, письма, шаблоны, файлы,
 участники, версии. Строки строятся из данных — название и тихая вторая строка;
@@ -69,6 +69,29 @@ disabled?, actions?}`: `text` — название, `supporting` — втора�
 структуре страницы (по умолчанию `3`).
 
 :::example {id="smart-components/list/group-key" label="Файлы по группам"}
+:::
+
+### Заголовок группы
+
+`sf-group-heading` • классы, без скрипта
+
+Заголовок группы рисуют сам список, хронология, панель уведомлений и лента
+переписки. Своей страницы у него нет: он живёт только внутри списка. В своей
+разметке без скрипта берите классы:
+
+- `sf-group-heading` — слова группы размером текста строк, полужирные, рядом
+  может стоять тихая дата `sf-group-heading-date`; над заголовком отступ, над
+  первым — нет;
+- `sf-group-heading--size-1/2` и `sf-group-heading--size-2` — для списка
+  другой ступени: слова размером его строк, дата на ступень меньше;
+- `sf-group-heading--sticky` — заголовок остаётся на виду, пока список
+  прокручивается;
+- `sf-group-heading--divider` — разделитель дней в переписке: слова по центру
+  между двумя тонкими линиями, у разметки `role="separator"`.
+
+Заголовку дайте `role="heading"` и `aria-level` по месту на странице.
+
+:::example {id="smart-components/list/group-heading" label="Заголовок группы на классах"}
 :::
 
 ### Размер
@@ -236,13 +259,13 @@ list.addEventListener('sf-list-open', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list>`, контракт `smart.list` версии `1.5.1` |
-| Поставка | выпуск Framework `ui-7fb26d395af2` |
+| Тег | `<sf-list>`, контракт `smart.list` версии `1.9.0` |
+| Поставка | выпуск Framework `ui-994f9db407fa` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`); пока ждёт данные, компонент показывает свою. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как список; название компонент ставит сам; с клавиатуры: `Tab`, `↑`, `↓`, `Home`, `End`, `Enter`, `F2`, `Shift+F10`, `клавиша меню`. |
-| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/list` |
-| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-list` |
+| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/list` |
+| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-list` |
 
 ## См. также
 

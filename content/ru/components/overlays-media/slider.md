@@ -6,7 +6,7 @@ profile: reference
 
 # Слайдер контента
 
-:badge[sf-slider]{variant=tonal scheme=primary size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-slider]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Слайдер контента показывает изображения, карточки или другие равноправные
 слайды по одному и листает их стрелками и точками.
@@ -26,7 +26,7 @@ profile: reference
 и точками `sf-slider-dots`.
 
 - Скрипт компонента находит слайдеры по `.sf-slider` и строит их на движке
-  [Swiper](/ru/components/overlays-media/swiper/) из компонента `swiper`.
+  [движок перелистывания](/ru/components/tools/swiper/) из компонента `swiper`.
   Классы `swiper`, `swiper-wrapper` и `swiper-slide` нужны движку.
 - Стрелки — кнопки с иконкой (`sf-icon-button`) с классами
   `sf-slider-button-prev` и `sf-slider-button-next` и своими `aria-label`.
@@ -36,9 +36,16 @@ profile: reference
   или клавишами (см. JavaScript): перетаскивания жестом движок не знает.
 - Слайды, которых не видно, скрипт делает недоступными (`inert`): ссылки и
   кнопки внутри них не получают фокус.
-- В CSS есть классы ленты миниатюр `sf-slider-thumbnails` и
-  `sf-slider-thumbnail`, но движок выпуска не связывает миниатюры со
-  слайдами: нажатие на миниатюру слайд не меняет.
+- Миниатюры `sf-slider-thumbnail` в ленте `sf-slider-thumbnails` — кнопки:
+  имя каждой берётся из `alt` картинки, показанная отмечена `aria-current`.
+  Лента — одна остановка клавиши Tab, стрелки, Home и End листают слайды.
+  Готовую галерею с миниатюрами рисует [смарт-слайдер](/ru/smart/content/slider/).
+- `data-ratio` (`16/9`, `4/3`, `3/2`, `1/1`, `21/9`) держит ленту со
+  слайдами-картинками в этой пропорции.
+- `data-autoplay` листает слайды сам, только если рядом показана кнопка паузы
+  `sf-slider-rotation`; без неё слайдер не листается. Автопрокрутка встаёт,
+  пока фокус внутри слайдера, и не включается при настройке «уменьшить
+  движение». Подписи кнопки задают `data-pause-label` и `data-play-label`.
 
 ## Варианты
 
@@ -47,50 +54,39 @@ profile: reference
 `sf-slider--content` • [справочник](#классы)
 
 Без модификатора стрелки и точки лежат поверх слайдов — для изображений и
-другой медиа. `sf-slider--content` переносит их под слайды и оставляет слайдам
-естественную высоту — для карточек с текстом и действиями.
+другой медиа. `sf-slider--content` переносит их одной строкой под слайды и
+оставляет слайдам естественную высоту — для карточек с текстом и действиями.
+Следующая карточка при этом выглядывает из-за края: видно 1,15 карточки, от
+ширины `sm` — 2,2, если число не задано через `data-slides-per-view`.
 
 :::example {id="components/slider/content" label="Положение навигации"}
 :::
 
 ### Стрелки
 
-`sf-slider-arrows` без модификатора — стрелки без подложки. `--light` и
-`--dark` добавляют размытый фон и тень, чтобы стрелки читались поверх любого
-изображения: `--light` со светлыми кнопками, `--dark` с тёмными.
+`sf-slider-arrows`, `sf-slider-arrows--plate` • [справочник](#классы)
+
+`sf-slider-arrows` без модификатора — тихие стрелки без подложки, для
+карточек на фоне страницы. `sf-slider-arrows--plate` кладёт каждую стрелку на
+плашку всплывающего слоя с тенью, чтобы она читалась поверх любого
+изображения. `sf-slider-arrows--light` и `--dark` — прежние имена.
 
 :::example {id="components/slider/arrows" label="Стрелки"}
 :::
 
-### Цвет точек
+### Точки и счётчик
 
-`sf-slider-dots--primary`, `sf-slider-dots--clear` • [справочник](#классы)
+`sf-slider-dots--plate`, `sf-slider-dots--bare` • [справочник](#классы)
 
-`sf-slider-dots--primary` красит точки основным цветом — для слайдера на фоне
-страницы. `sf-slider-dots--clear` — нейтральным цветом текста.
+Точки — 8 px, текущая вытянута в полоску 24 × 8 основного цвета.
+`sf-slider-dots--plate` кладёт их на плашку поверх картинки,
+`sf-slider-dots--bare` ставит в начало строки под карточками. Точки — одна
+остановка клавиши Tab: дальше по слайдам ведут стрелки, Home и End. От восьми
+слайдов вместо точек стоит счётчик «2 / 12» (`sf-slider-dots--count`).
+Модификаторы `--primary`, `--clear`, `--framed`, `--light`, `--dark` и
+`--size-1`/`--size-2` — прежние имена.
 
-:::example {id="components/slider/dots" label="Основные и нейтральные точки"}
-:::
-
-### Подложка точек
-
-`sf-slider-dots--framed` • [справочник](#классы)
-
-`sf-slider-dots--framed` кладёт точки на подложку со скруглением; `--light` и
-`--dark` выбирают светлую или тёмную подложку. Подложка нужна точкам поверх
-изображения.
-
-:::example {id="components/slider/dots-framed" label="Подложка точек"}
-:::
-
-### Размер точек
-
-`sf-slider-dots--size-1`, `sf-slider-dots--size-2` • [справочник](#классы)
-
-Две ступени — `sf-slider-dots--size-1` и `sf-slider-dots--size-2`. Область
-нажатия у точки больше самой точки.
-
-:::example {id="components/slider/dots-sizes" label="Размеры точек"}
+:::example {id="components/slider/dots" label="Точки на плашке и под карточками"}
 :::
 
 ### Повтор
@@ -179,7 +175,7 @@ swiper?.on('slideChange', () => console.log(swiper.realIndex));
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-slider` |
-| Части | `sf-slider-arrows`, `sf-slider-arrows--dark`, `sf-slider-arrows--light`, `sf-slider-button-next`, `sf-slider-button-prev`, `sf-slider-controls`, `sf-slider-dots`, `sf-slider-dots--clear`, `sf-slider-dots--dark`, `sf-slider-dots--framed`, `sf-slider-dots--light`, `sf-slider-dots--primary`, `sf-slider-dots--size-1`, `sf-slider-dots--size-2`, `sf-slider-dots-dot`, `sf-slider-main`, `sf-slider-pagination`, `sf-slider-slide`, `sf-slider-thumbnail`, `sf-slider-thumbnails` |
+| Части | `sf-slider-arrows`, `sf-slider-arrows--dark`, `sf-slider-arrows--light`, `sf-slider-arrows--plate`, `sf-slider-button-next`, `sf-slider-button-prev`, `sf-slider-controls`, `sf-slider-dots`, `sf-slider-dots--bare`, `sf-slider-dots--clear`, `sf-slider-dots--count`, `sf-slider-dots--dark`, `sf-slider-dots--framed`, `sf-slider-dots--light`, `sf-slider-dots--plate`, `sf-slider-dots--primary`, `sf-slider-dots--size-1`, `sf-slider-dots--size-2`, `sf-slider-dots-dot`, `sf-slider-main`, `sf-slider-pagination`, `sf-slider-rotation-place`, `sf-slider-slide`, `sf-slider-thumbnail`, `sf-slider-thumbnails` |
 | Модификаторы | `sf-slider--content` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -211,7 +207,8 @@ swiper?.on('slideChange', () => console.log(swiper.realIndex));
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-slider--duration` | `var(--sf-duration-normal)` | — |
-| `--sf-slider--space-between` | `var(--sf-space-1)` | — |
+| `--sf-slider--ratio` | не задана; задают модификаторы, например `.sf-slider[data-ratio="16/9"]`: `16 / 9` | `aspect-ratio` |
+| `--sf-slider--space-between` | `var(--sf-space-1/2)` | — |
 | `--sf-slider-arrows--backdrop-filter` | не задана; задают модификаторы, например `.sf-slider-arrows--light`: `var(--sf-ui-blur-medium)` | `backdrop-filter` |
 | `--sf-slider-arrows--box-shadow` | не задана; задают модификаторы, например `.sf-slider-arrows--light`: `var(--sf-shadow-raised)` | `box-shadow` |
 | `--sf-slider-dots--backdrop-filter` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--clear.sf-slider-dots--framed.sf-slider-dots--dark`: `var(--sf-ui-blur-medium)` | `backdrop-filter` |
@@ -226,6 +223,8 @@ swiper?.on('slideChange', () => console.log(swiper.realIndex));
 | `--sf-slider-dots--padding-inline-end` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-ui-1--space-y)` | `padding-inline-end` |
 | `--sf-slider-dots--padding-inline-start` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-ui-1--space-y)` | `padding-inline-start` |
 | `--sf-slider-dots--padding-top` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-ui-1--space-y)` | `padding-top` |
+| `--sf-slider-dots-dot--active-color` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--plate`: `var(--sf-primary)` | `--sf-slider-dots-dot--background-color`, `color` |
+| `--sf-slider-dots-dot--active-width` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-c2)` | `width` |
 | `--sf-slider-dots-dot--background-color` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `transparent` | `background-color` |
 | `--sf-slider-dots-dot--border-end-end-radius` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `var(--sf-radius-circle)` | `border-end-end-radius` |
 | `--sf-slider-dots-dot--border-end-start-radius` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `var(--sf-radius-circle)` | `border-end-start-radius` |
@@ -233,11 +232,11 @@ swiper?.on('slideChange', () => console.log(swiper.realIndex));
 | `--sf-slider-dots-dot--border-start-start-radius` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `var(--sf-radius-circle)` | `border-start-start-radius` |
 | `--sf-slider-dots-dot--color` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-on-surface)` | `color`, `--sf-slider-dots-dot--background-color` |
 | `--sf-slider-dots-dot--height` | не задана; задают модификаторы, например `.sf-slider-dots--size-1`: `var(--sf-a8)` | `padding-top`, `padding-bottom`, `height` |
-| `--sf-slider-dots-dot--target-size` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-ui-1/3--control-height)` | `gap`, `padding-inline-start`, `padding-top`, `padding-inline-end`, `padding-bottom`, `width`, `height` |
+| `--sf-slider-dots-dot--target-size` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-ui-1/3--control-height)` | `gap`, `padding-inline-start`, `padding-top`, `padding-inline-end`, `padding-bottom`, `width`, `height`, `min-height`, `min-block-size` |
 | `--sf-slider-dots-dot--width` | не задана; задают модификаторы, например `.sf-slider-dots--size-1`: `var(--sf-a8)` | `gap`, `padding-inline-start`, `padding-inline-end`, `width` |
 | `--sf-slider-thumbnails--space-between` | `var(--sf-space-1/2)` | — |
 
 ## См. также
 
-- [Swiper](/ru/components/overlays-media/swiper/)
-- [Slider — смарт-компонент](/ru/smart/content/slider/)
+- [движок перелистывания](/ru/components/tools/swiper/)
+- [Смарт-слайдер](/ru/smart/content/slider/)

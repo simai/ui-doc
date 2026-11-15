@@ -5,7 +5,7 @@ description: "Короткая история событий на вертика
 
 # Хронология
 
-:badge[sf-list-timeline]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-timeline]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Короткая история, которую читают сверху: последние действия на сервере,
 журнал аудита, история записи, страница уведомлений, история заданий.
@@ -67,6 +67,8 @@ description: "Короткая история событий на вертика
 «Вчера», день недели в пределах недели, дальше дата. `none` — один список;
 тогда `label` даёт ему имя для экранного диктора. `heading-level` — уровень
 заголовков дней в структуре страницы, по умолчанию `3`.
+Заголовок дня — общий [заголовок группы](/ru/smart/content/list/#заголовок-группы)
+списков; его классы для своей разметки описаны там.
 
 :::example {id="smart-components/list-timeline/group" label="По дням и одним списком" preview=sandbox}
 :::
@@ -216,13 +218,13 @@ timeline.addEventListener('sf-list-timeline-load-more', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list-timeline>`, контракт `smart.list-timeline` версии `1.1.1` |
-| Поставка | выпуск Framework `ui-7fb26d395af2` |
+| Тег | `<sf-list-timeline>`, контракт `smart.list-timeline` версии `1.3.0` |
+| Поставка | выпуск Framework `ui-994f9db407fa` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как список; желательна подпись или `aria-label`; с клавиатуры: `Tab` проходит по ссылкам заголовков, по каждому `sf-time` с его подсказкой, по строкам «Ещё N» и кнопке «Показать ещё» по порядку; `Enter` открывает ссылку, `Enter` или `Пробел` нажимают кнопку; `Escape` прячет подсказку времени. |
-| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/list-timeline` |
-| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-list-timeline` |
+| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/list-timeline` |
+| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-list-timeline` |
 
 ## См. также
 

@@ -6,7 +6,7 @@ profile: reference
 
 # Прогресс
 
-:badge[sf-progress-bar]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-bar]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Индикатор прогресса показывает ход операции, когда долю выполненного можно
 выразить от 0 до 100 процентов. Для операции без известного процента берите
@@ -30,6 +30,11 @@ profile: reference
   ровно на свою ширину.
 - Число процентов скрипт выводит сам в `sf-progress-bar-text`, если задано
   положение значения. Писать его в разметке не нужно.
+- Дорожка у всех полос одна — нейтральная заливка места, концы скруглены на
+  любой толщине.
+- `data-meter="true"` превращает полосу в шкалу количества (`role="meter"`):
+  занятое место в хранилище, израсходованная квота. У шкалы всегда есть
+  значение.
 - Имя полосы задаёт `data-label`; `data-value-text` заменяет число в
   объявлении экранного диктора, например «3 файла из 5».
 
@@ -37,9 +42,9 @@ profile: reference
 
 ### Статус
 
-Статус задаёт цвет заполнения. Атрибут `data-tone` принимает `info`,
-`success`, `warning` и `error`; без него или с `primary` заполнение остаётся
-цвета по умолчанию. Скрипт ставит по атрибуту класс `sf-progress-bar--<статус>`
+Статус задаёт цвет заполнения. Без атрибута заполнение основного цвета темы.
+Атрибут `data-tone` принимает `neutral` (серый, как у точки и бейджа), `info`,
+`success`, `warning` и `error`. Скрипт ставит по атрибуту класс `sf-progress-bar--<статус>`
 и снимает остальные, поэтому статус задают атрибутом, а не классом.
 
 :::example {id="components/progress-bar/status" label="Статусы прогресса"}
@@ -59,9 +64,10 @@ profile: reference
 
 ### Положение значения
 
-Атрибут `data-position` задаёт, где стоит число процентов: `none` — только
-полоса, `right` — справа от полосы (`inline-end` — то же самое), `bottom` —
-под полосой у её конца. Число показывайте, когда точное значение важно
+Атрибут `data-position` задаёт, где стоит текст: `top` — название в начале и
+число в конце одной строкой над полосой, `inline-end` — число в конце строки
+полосы, `none` — только полоса. Внутри дорожки текста нет. Прежние значения
+`right` и `bottom` работают до 2027-01-01 как `inline-end` и `top`. Число показывайте, когда точное значение важно
 пользователю.
 
 :::example {id="components/progress-bar/position" label="Положение значения"}
@@ -106,7 +112,7 @@ const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener
 
 whenLoader(() => SF.Loader.ready('ProgressBar', (ProgressBar) => {
   const bar = new ProgressBar({
-    param: {value: 40, size: '1', textPosition: 'right', label: 'Загрузка отчёта'},
+    param: {value: 40, size: '1', textPosition: 'inline-end', label: 'Загрузка отчёта'},
   });
   document.querySelector('#report').append(bar.render());
 }));
@@ -120,8 +126,8 @@ whenLoader(() => SF.Loader.ready('ProgressBar', (ProgressBar) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-progress-bar` |
-| Части | `sf-progress-bar-main`, `sf-progress-bar-progress` |
-| Модификаторы | `sf-progress-bar--error`, `sf-progress-bar--indeterminate`, `sf-progress-bar--info`, `sf-progress-bar--paused`, `sf-progress-bar--success`, `sf-progress-bar--warning` |
+| Части | `sf-progress-bar-head`, `sf-progress-bar-label`, `sf-progress-bar-main`, `sf-progress-bar-progress`, `sf-progress-bar-text` |
+| Модификаторы | `sf-progress-bar--error`, `sf-progress-bar--indeterminate`, `sf-progress-bar--info`, `sf-progress-bar--neutral`, `sf-progress-bar--paused`, `sf-progress-bar--success`, `sf-progress-bar--warning` |
 | Размеры | `sf-progress-bar--size-1`, `sf-progress-bar--size-1/2`, `sf-progress-bar--size-1/3`, `sf-progress-bar--size-2`, `sf-progress-bar--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -134,11 +140,11 @@ whenLoader(() => SF.Loader.ready('ProgressBar', (ProgressBar) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-progress-bar-fill-color` | Заполненная часть; статус задаёт свой цвет, если эта переменная не задана. | `var(--sf-primary)`; зависит от статуса |
+| `--sf-progress-bar-fill-color` | Заполненная часть; статус задаёт свой цвет, если эта переменная не задана. | `var(--sf-on-surface-variant)`; зависит от статуса |
 | `--sf-progress-bar-track-color` | Дорожка под заполненной частью. | `var(--sf-surface-container)` |
-| `--sf-progress-bar-height` | Толщина дорожки. | `var(--sf-text-size-1/5)`; зависит от размера |
-| `--sf-progress-bar-radius` | Углы дорожки и заполненной части. | `var(--sf-radius--ui)` |
-| `--sf-progress-bar-color` | Видимый процент. | `var(--sf-on-surface)` |
+| `--sf-progress-bar-height` | Толщина дорожки. | `var(--sf-a8)`; зависит от размера |
+| `--sf-progress-bar-radius` | Углы дорожки и заполненной части. | `var(--sf-radius-circle)` |
+| `--sf-progress-bar-color` | Видимый процент. | `var(--sf-on-surface-variant)` |
 | `--sf-progress-bar-gap` | Расстояние между дорожкой и процентом. | `var(--sf-space-1/3)`; зависит от размера |
 
 ```css
@@ -157,10 +163,10 @@ whenLoader(() => SF.Loader.ready('ProgressBar', (ProgressBar) => {
 | `--sf-progress-bar--gap` | не задана; задают модификаторы, например `.sf-progress-bar--size-1`: `var(--sf-progress-bar-gap, var(--sf-space-1/3))` | `gap` |
 | `--sf-progress-bar--line-height` | не задана; задают модификаторы, например `.sf-progress-bar.sf-progress-bar--size-1`: `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-progress-bar-main--background-color` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-main`: `var(--sf-progress-bar-track-color, var(--sf-surface-container))` | `background-color` |
-| `--sf-progress-bar-main--border-radius` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-main`: `var(--sf-progress-bar-radius, var(--sf-radius--ui))` | `border-radius` |
-| `--sf-progress-bar-main--height` | не задана; задают модификаторы, например `.sf-progress-bar--size-1 .sf-progress-bar-main`: `var(--sf-text-size-1/5)` | `height` |
+| `--sf-progress-bar-main--border-radius` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-main`: `var(--sf-progress-bar-radius, var(--sf-radius-circle))` | `border-radius` |
+| `--sf-progress-bar-main--height` | не задана; задают модификаторы, например `.sf-progress-bar--size-1 .sf-progress-bar-main`: `var(--sf-a8)` | `height` |
 | `--sf-progress-bar-progress--background-color` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-progress`: `var(--sf-progress-bar-fill-color, var(--sf-primary))` | `background-color` |
-| `--sf-progress-bar-progress--border-radius` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-progress`: `var(--sf-progress-bar-radius, var(--sf-radius--ui))` | `border-radius` |
+| `--sf-progress-bar-progress--border-radius` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-progress`: `var(--sf-progress-bar-radius, var(--sf-radius-circle))` | `border-radius` |
 
 ## См. также
 

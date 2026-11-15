@@ -6,7 +6,7 @@ profile: reference
 
 # Разделитель
 
-:badge[sf-divider]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-divider]{variant=tonal scheme=primary size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
 
 Разделитель отделяет соседние части содержимого или действий линией. Для
 простой границы между разделами достаточно `<hr>`; компонент нужен, когда
@@ -120,7 +120,7 @@ profile: reference
 | `--sf-divider--gap` | `var(--sf-space-1)` | `gap` |
 | `--sf-divider--length` | `var(--sf-d0)` | `min-height`, `min-block-size` |
 | `--sf-divider--thickness` | `var(--sf-px)` | `height`, `block-size`, `width`, `inline-size`, `border-top`, `border-bottom`, `border-block`, `border`, `border-inline-end-width` |
-| `--sf-divider-buttons--gap` | не задана; задают модификаторы, например `.sf-divider-buttons`: `var(--sf-space-1/2)` | `gap` |
+| `--sf-divider-buttons--gap` | не задана; задают модификаторы, например `.sf-divider-buttons`: `var(--sf-space-1/3)` | `gap` |
 | `--sf-divider-content--background-color` | `var(--sf-transparent)` | `background-color` |
 | `--sf-divider-content--color` | `var(--sf-on-surface)` | `color` |
 | `--sf-divider-content--font-size` | `var(--sf-text--size)` | `font-size` |

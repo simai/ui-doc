@@ -59,7 +59,7 @@ description: "Красит текст-подсказку в пустом пол�
 | `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
 | `--sf-on-surface-inverse` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-10))` |
 | `--sf-on-surface-inverse-fixed` | `var(--sf-neutral-90)` |
-| `--sf-surface-disabled` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` |
+| `--sf-surface-disabled` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
 | `--sf-on-surface-disabled` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
 | `--sf-primary` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` |
 | `--sf-on-primary` | `light-dark(var(--sf-white), var(--sf-primary-20))` |

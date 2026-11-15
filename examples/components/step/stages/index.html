@@ -1,14 +1,9 @@
-<div class="flex flex-wrap gap-4">
-  <div class="flex flex-col gap-1">
-    <div class="sf-steps sf-steps--size-1 flex flex-col"><div class="sf-steps-container flex items-center" role="list" aria-label="Обычный этап"><div class="sf-step sf-step--size-1 sf-step--stage-default flex items-center justify-center" role="listitem"><span class="sf-step-container">Оплата<span class="sr-only">, не начато</span></span></div></div></div>
-    <code class="text-1/2 color-on-surface-variant">sf-step--stage-default</code>
-  </div>
-  <div class="flex flex-col gap-1">
-    <div class="sf-steps sf-steps--size-1 flex flex-col"><div class="sf-steps-container flex items-center" role="list" aria-label="Завершённый этап"><div class="sf-step sf-step--size-1 sf-step--stage-completed flex items-center justify-center" role="listitem"><i class="sf-icon" aria-hidden="true">check_circle</i><span class="sf-step-container">Корзина<span class="sr-only">, завершено</span></span></div></div></div>
-    <code class="text-1/2 color-on-surface-variant">sf-step--stage-completed</code>
-  </div>
-  <div class="flex flex-col gap-1">
-    <div class="sf-steps sf-steps--size-1 flex flex-col"><div class="sf-steps-container flex items-center" role="list" aria-label="Этап с ошибкой"><div class="sf-step sf-step--size-1 sf-step--stage-error flex items-center justify-center" role="listitem"><i class="sf-icon" aria-hidden="true">error</i><span class="sf-step-container">Проверка<span class="sr-only">, ошибка</span></span></div></div></div>
-    <code class="text-1/2 color-on-surface-variant">sf-step--stage-error</code>
-  </div>
+<div class="sf-steps sf-steps--marker-number sf-steps--layout-row">
+  <ol class="sf-steps-container" role="list" aria-label="Публикация статьи">
+    <li class="sf-step sf-step--state-done sf-step--passed" data-step-index="0"><span class="sf-step-body"><span class="sf-step-marker" aria-hidden="true"><i class="sf-icon">check</i></span><span class="sf-step-content"><span class="sf-step-container">Текст</span><span class="sr-only">, пройден</span></span></span></li>
+    <li class="sf-step sf-step--state-skipped sf-step--passed" data-step-index="1"><span class="sf-step-body"><span class="sf-step-marker" aria-hidden="true">2</span><span class="sf-step-content"><span class="sf-step-container">Обложка</span><span class="sr-only">, пропущен</span></span></span></li>
+    <li class="sf-step sf-step--state-error sf-step--passed" data-step-index="2"><span class="sf-step-body"><span class="sf-step-marker" aria-hidden="true"><i class="sf-icon">priority_high</i></span><span class="sf-step-content"><span class="sf-step-container">Проверка</span><span class="sr-only">, ошибка</span></span></span></li>
+    <li class="sf-step sf-step--state-current" data-step-index="3" aria-current="step"><span class="sf-step-body"><span class="sf-step-marker" aria-hidden="true">4</span><span class="sf-step-content"><span class="sf-step-container">Публикация</span><span class="sr-only">, текущий</span></span></span></li>
+    <li class="sf-step sf-step--state-ahead" data-step-index="4"><span class="sf-step-body"><span class="sf-step-marker" aria-hidden="true">5</span><span class="sf-step-content"><span class="sf-step-container">Рассылка</span><span class="sr-only">, не начат</span></span></span></li>
+  </ol>
 </div>

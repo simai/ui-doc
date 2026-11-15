@@ -6,7 +6,7 @@ profile: reference
 
 # Скачивание файла
 
-:badge[sf-download-file]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-download-file]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Компонент оформляет ссылку на файл как отдельное действие: иконка
 скачивания, название и размер в одной строке. Берите его для вложений,
@@ -50,6 +50,20 @@ profile: reference
 
 :::example {id="components/download-file/sizes" label="Размеры строки скачивания"}
 :::
+
+### Ширина
+
+Строка скачивания шириной в свой текст, но не шире контейнера.
+`sf-download-file--full-width` растягивает её на всю ширину контейнера.
+Название файла не обрезается: оно переносится по пробелам, а тип и размер
+уходят под название, когда им не хватает места в строке. На телефоне они
+всегда стоят под названием.
+
+:::example {id="components/download-file/width" label="Ширина строки"}
+:::
+
+Подготовка файла с кольцом прогресса, ошибка с кнопкой «Повторить» и готовый
+файл рядом с кнопкой — у [смарт-компонента](/ru/smart/actions/download-file/).
 
 ## Состояния
 
@@ -127,7 +141,7 @@ const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener
 
 whenLoader(() => SF.Loader.ready('DownloadFile', (DownloadFile) => {
   const file = new DownloadFile({
-    param: {fileName: 'Отчёт.pdf', fileSize: '2.4MB', href: '/files/report.pdf', download: true},
+    param: {fileName: 'Отчёт_за_III_квартал.pdf', fileSize: '2,4 МБ', href: '/files/report-q3.pdf', download: true},
   });
   document.querySelector('#attachments').append(file.render());
 }));
@@ -138,8 +152,8 @@ whenLoader(() => SF.Loader.ready('DownloadFile', (DownloadFile) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-download-file` |
-| Части | `sf-download-file-container`, `sf-download-file-file-name`, `sf-download-file-file-size`, `sf-download-file-wrap`, `sf-download-file__body`, `sf-download-file__icon`, `sf-download-file__main`, `sf-download-file__meta`, `sf-download-file__name`, `sf-download-file__size`, `sf-download-file__spinner`, `sf-download-file__stack`, `sf-download-file__tab`, `sf-download-file__tab-words`, `sf-download-file__type` |
-| Модификаторы | `sf-download-file--preparing` |
+| Части | `sf-download-file-container`, `sf-download-file-file-name`, `sf-download-file-file-size`, `sf-download-file-wrap`, `sf-download-file__body`, `sf-download-file__end`, `sf-download-file__icon`, `sf-download-file__line`, `sf-download-file__live`, `sf-download-file__main`, `sf-download-file__meta`, `sf-download-file__name`, `sf-download-file__reason`, `sf-download-file__ring`, `sf-download-file__said`, `sf-download-file__size`, `sf-download-file__spinner`, `sf-download-file__stack`, `sf-download-file__stack--full-width`, `sf-download-file__status`, `sf-download-file__tab`, `sf-download-file__tab-words`, `sf-download-file__text`, `sf-download-file__tip`, `sf-download-file__type` |
+| Модификаторы | `sf-download-file--error`, `sf-download-file--full-width`, `sf-download-file--narrow`, `sf-download-file--offer`, `sf-download-file--preparing`, `sf-download-file--retry-icon` |
 | Размеры | `sf-download-file--size-1/2`, `sf-download-file--size-1/3`, `sf-download-file--size-2`, `sf-download-file--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -172,13 +186,19 @@ whenLoader(() => SF.Loader.ready('DownloadFile', (DownloadFile) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
+| `--sf-download-file--accent` | `var(--sf-primary)` | `color` |
 | `--sf-download-file--background-color` | `var(--sf-file-download-background-color, var(--sf-download-file-background-color, transparent))` | `background-color` |
 | `--sf-download-file--border-color` | `var(--sf-file-download-border-color, var(--sf-download-file-border-color, var(--sf-outline-variant)))` | `border` |
 | `--sf-download-file--border-width` | `var(--sf-px)` | `padding` |
+| `--sf-download-file--end-inset` | `var(--sf-ui-1--space-y-tightness-low)` | `margin-top`, `margin-bottom`, `margin-block`, `margin-inline-start` |
+| `--sf-download-file--error-gap` | `var(--sf-space-1/2)` | `grid-column-gap`, `-moz-column-gap`, `column-gap` |
+| `--sf-download-file--error-padding` | `var(--sf-space-1/2)` | `padding` |
 | `--sf-download-file--gap` | `var(--sf-ui-1--text-space-x)` | `gap` |
-| `--sf-download-file--icon-size` | `var(--sf-text-height-1)` | `--sf-loader-svg-width`, `--sf-loader-svg-height`, `width`, `inline-size`, `height`, `block-size`, `font-size`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
-| `--sf-download-file--padding-block` | `var(--sf-ui-1--space-y-tightness-default)` | `padding` |
-| `--sf-download-file--padding-inline` | `var(--sf-ui-1--space-x)` | `padding` |
+| `--sf-download-file--icon-size` | `var(--sf-text-height-1)` | `--sf-loader-svg-width`, `--sf-loader-svg-height`, `width`, `inline-size`, `height`, `block-size`, `--sf-progress-ring--step-size`, `font-size`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
+| `--sf-download-file--note-height` | `var(--sf-text-height-1/2)` | `line-height` |
+| `--sf-download-file--note-size` | `var(--sf-text-size-1/2)` | `font-size` |
+| `--sf-download-file--padding-block` | `var(--sf-ui-1--space-y-tightness-default)` | `padding`, `margin-inline-start` |
+| `--sf-download-file--padding-inline` | `var(--sf-ui-1--space-x)` | `padding`, `margin-inline-start` |
 | `--sf-download-file--text-height` | `var(--sf-text-height-1)` | `line-height`, `--sf-download-file--icon-size` |
 | `--sf-download-file--text-size` | `var(--sf-text-size-1)` | `font-size` |
 

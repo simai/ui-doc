@@ -48,5 +48,5 @@ description: "Переносит кольцо внутрь элемента, ч�
 
 ## См. также
 
-- [Фокусное кольцо](/ru/utilities/outline/ring/)
+- [Кольцо выбора](/ru/utilities/outline/ring/)
 - [Переполнение](/ru/utilities/layout/overflow/)

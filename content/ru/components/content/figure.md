@@ -6,7 +6,7 @@ profile: reference
 
 # Рисунок
 
-:badge[sf-figure]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-figure]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Рисунок показывает картинку, видео или иллюстрацию в заданной пропорции и
 подпись под ней. Берите его, когда изображению нужна подпись или ровная рамка
@@ -54,6 +54,21 @@ profile: reference
 :::example {id="components/figure/contain" label="Заполнение и вписывание"}
 :::
 
+### Подпись поверх картинки
+
+`sf-figure--caption-over`, `sf-figure--caption-plate` • [справочник](#классы)
+
+По умолчанию подпись стоит под картинкой, и на снимке ничего не лежит.
+Чтобы положить подпись на картинку, есть два вида.
+`sf-figure--caption-over` — белый текст у нижнего края на мягком затемнении,
+которое плавно сходит на нет кверху. `sf-figure--caption-plate` — ровная
+тёмная полоса под текстом, для длинной подписи и пёстрого снимка. Оба вида
+держат контраст 4.5:1 на светлых и тёмных снимках в обеих темах. Подпись выше
+картинки растягивает рисунок, а не вылезает на страницу.
+
+:::example {id="components/figure/caption-over" label="Подпись поверх картинки"}
+:::
+
 ## Доступность
 
 Подпись связана с картинкой родной разметкой `figure` и `figcaption`. В
@@ -64,7 +79,7 @@ profile: reference
 |:---|:---|
 | Блок | `sf-figure` |
 | Части | `sf-figure-caption`, `sf-figure-media` |
-| Модификаторы | `sf-figure--contain`, `sf-figure--ratio-16x9`, `sf-figure--ratio-1x1`, `sf-figure--ratio-21x9`, `sf-figure--ratio-3x2`, `sf-figure--ratio-4x3` |
+| Модификаторы | `sf-figure--caption-over`, `sf-figure--caption-plate`, `sf-figure--contain`, `sf-figure--expressive`, `sf-figure--ratio-16x9`, `sf-figure--ratio-1x1`, `sf-figure--ratio-21x9`, `sf-figure--ratio-3x2`, `sf-figure--ratio-4x3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -95,4 +110,6 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
+| `--sf-figure--on` | не задана; задают модификаторы, например `.sf-figure-media:not(:has(> img))`: `var(--sf-style--expressive, 0)` | `background-size` |
+| `--sf-figure--ramp` | не задана; задают модификаторы, например `.sf-figure.sf-figure--caption-over > .sf-figure-caption`: `calc(var(--sf-space-4) * 4)` | `padding-top`, `padding-block-start`, `background-image` |
 | `--sf-figure--ratio` | не задана; задают модификаторы, например `.sf-figure--ratio-1x1`: `1 / 1` | `aspect-ratio` |

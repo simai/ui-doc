@@ -6,7 +6,7 @@ profile: reference
 
 # Полоса прокрутки
 
-:badge[sf-scrollbar]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-scrollbar]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Компонент оформляет прокрутку области ограниченной высоты или ширины: прячет
 системную полосу и рисует поверх содержимого тонкую полосу, которую можно
@@ -59,7 +59,7 @@ profile: reference
   Page Up и Page Down, Home и End.
 - Ползунок получает `role="scrollbar"`, `aria-controls` на область,
   `aria-orientation` и `aria-valuenow` от 0 до 100. Имя он берёт у области;
-  без имени области ползунок называется английским «Scroll». В порядок
+  без имени области ползунок называется «Прокрутка» на языке страницы. В порядок
   фокуса ползунок не входит: клавиатурная остановка — сама область.
 - В режиме `hidden` пользователь не видит, что область прокручивается:
   оставляйте видимый край обрезанного содержимого.
@@ -90,6 +90,9 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
+| `--sf-scrollbar--fade-direction` | не задана; задают модификаторы, например `.sf-scrollbar__viewport`: `to bottom` | `mask-image` |
+| `--sf-scrollbar--fade-end` | не задана; задают модификаторы, например `.sf-scrollbar__viewport`: `0px` | `mask-image` |
+| `--sf-scrollbar--fade-start` | не задана; задают модификаторы, например `.sf-scrollbar__viewport`: `0px` | `mask-image` |
 | `--sf-scrollbar-active-size` | `var(--sf-a6)` | `width`, `inline-size`, `height`, `block-size` |
 | `--sf-scrollbar-hit-size` | `var(--sf-b6)` | `width`, `inline-size`, `height`, `block-size` |
 | `--sf-scrollbar-keyboard-step` | `var(--sf-d0)` | — |

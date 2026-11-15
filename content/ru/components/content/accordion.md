@@ -6,7 +6,7 @@ profile: reference
 
 # Аккордеон
 
-:badge[sf-accordion]{variant=tonal scheme=primary size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-accordion]{variant=tonal scheme=primary size=1/2} :badge[1.0.5]{variant=outline scheme=on-surface size=1/2}
 
 Аккордеон раскрывает и скрывает разделы содержимого под их заголовками.
 Берите его, чтобы сократить длинную страницу с независимыми разделами —
@@ -176,8 +176,8 @@ profile: reference
 | `--sf-accordion-border-width` | Толщина этой рамки и линии, а также разделителя под шапкой открытой секции. | `var(--sf-px)`; зависит от вида |
 | `--sf-accordion-radius` | Скругление углов секции; секция в виде flush остаётся прямоугольной. | `var(--sf-radius--surface)`; зависит от вида |
 | `--sf-accordion-title-color` | Цвет заголовка секции в её шапке. | `var(--sf-on-surface)` |
-| `--sf-accordion-content-color` | Цвет текста содержимого секции. | `var(--sf-on-surface-variant)` |
-| `--sf-accordion-icon-color` | Цвет метки (шеврона или плюса и минуса) и значка перед заголовком; у недоступной секции свой. | `var(--sf-on-surface-variant)` |
+| `--sf-accordion-content-color` | Цвет текста содержимого секции. | `var(--sf-on-surface)` |
+| `--sf-accordion-icon-color` | Цвет метки (шеврона или плюса и минуса) и значка перед заголовком; у недоступной секции свой. | `var(--sf-on-surface-icon)` |
 | `--sf-accordion-divider-color` | Цвет линии под шапкой открытой секции и под шапкой единственной секции. | `var(--sf-outline-variant)` |
 
 ```css
@@ -194,15 +194,16 @@ profile: reference
 |:---|:---|:---|
 | `--sf-accordion--background-color` | `var(--sf-accordion-background-color, var(--sf-surface-container))` | `background-color` |
 | `--sf-accordion--border-color` | `var(--sf-accordion-border-color, var(--sf-outline-variant))` | `border`, `border-bottom`, `border-block-end` |
-| `--sf-accordion--border-width` | `var(--sf-accordion-border-width, var(--sf-px))` | `border`, `border-bottom`, `border-block-end`, `height` |
-| `--sf-accordion--content-padding` | `var(--sf-space-3)` | `padding` |
+| `--sf-accordion--border-width` | `var(--sf-accordion-border-width, var(--sf-px))` | `--sf-accordion--frame-block`, `border`, `border-bottom`, `border-block-end`, `height` |
+| `--sf-accordion--content-padding` | `var(--sf-accordion--trigger-padding-inline)` | `padding` |
+| `--sf-accordion--frame-block` | не задана; задают модификаторы, например `.sf-accordion.sf-accordion--outline`: `calc(var(--sf-accordion--border-width) * 2)` | `min-height`, `min-block-size`, `padding` |
 | `--sf-accordion--icon-size` | `var(--sf-text-height-1)` | `font-size`, `height`, `width` |
 | `--sf-accordion--radius` | `var(--sf-accordion-radius, var(--sf-radius--surface))` | `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
-| `--sf-accordion--text-height` | `var(--sf-text--height)` | `line-height` |
+| `--sf-accordion--text-height` | `var(--sf-text--height)` | `--sf-accordion--trigger-padding-block`, `line-height` |
 | `--sf-accordion--text-size` | `var(--sf-text--size)` | `font-size` |
-| `--sf-accordion--trigger-min-block-size` | `auto` | `min-height`, `min-block-size` |
-| `--sf-accordion--trigger-padding-block` | `var(--sf-space-2)` | `padding` |
-| `--sf-accordion--trigger-padding-inline` | `var(--sf-space-3)` | `padding` |
+| `--sf-accordion--trigger-min-block-size` | `var(--sf-ui-3--control-height)` | `min-height`, `min-block-size` |
+| `--sf-accordion--trigger-padding-block` | `max(calc(var(--sf-px) * 0), calc((var(--sf-ui-3--control-height) - var(--sf-accordion--text-height)) / 2))` | `padding` |
+| `--sf-accordion--trigger-padding-inline` | `var(--sf-space-3)` | `--sf-accordion--content-padding`, `padding` |
 
 ## См. также
 

@@ -1,6 +1,6 @@
 ---
 title: "Параметры по умолчанию для таблиц"
-description: "Оформляет таблицу классом table: ширина, отступы ячеек, линии под строками и переменные цвета; table-sm делает её плотнее."
+description: "Оформляет таблицу классом table: ширина, отступы ячеек, линии под строками и переменные цвета; table-sm уменьшает отступы ячеек."
 ---
 
 # Параметры по умолчанию для таблиц
@@ -19,9 +19,12 @@ description: "Оформляет таблицу классом table: ширин
 :::example {id="utilities/tables/tables-default-parameters" label="Таблица без класса и с table"}
 :::
 
-### Компактная таблица
+### Меньшие отступы в ячейках
 
-`table-sm` уменьшает отступы ячеек с 8px до 4px.
+`table-sm` уменьшает отступы ячеек с 8px до 4px. Это не плотность
+интерфейса: компактную плотность задаёт область страницы
+([Плотность](/ru/guide/size-and-type/density/)), а `table-sm` меняет только
+отступы этой таблицы.
 
 :::example {id="utilities/tables/tables-default-parameters-small" label="table и table table-sm"}
 :::
@@ -30,9 +33,9 @@ description: "Оформляет таблицу классом table: ширин
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `table` | `--sf-table-color: var(--sf-on-surface); --sf-table-border-color: var(--sf-outline-variant); --sf-table-accent-bg: var(--sf-transparent); --sf-table-stripe-color: var(--sf-on-surface); --sf-table-stripe-bg: var(--sf-surface-state-hover); --sf-table-active-color: var(--sf-on-surface); --sf-table-active-bg: var(--sf-surface-state-select); --sf-table-hover-color: var(--sf-on-surface); --sf-table-hover-bg: var(--sf-surface-state-hover); width: 100%; inline-size: 100%; margin-bottom: var(--sf-b6); -webkit-margin-after: var(--sf-b6); margin-block-end: var(--sf-b6); color: var(--sf-table-color); vertical-align: top; border-color: var(--sf-table-border-color); text-align: start; .table > :not(caption) > * > * { padding: var(--sf-a8) var(--sf-a8); border-bottom-width: var(--sf-px); border-block-end-width: var(--sf-px); background-image: linear-gradient(var(--sf-table-accent-bg), var(--sf-table-accent-bg)) }; .table > tbody { vertical-align: inherit }; .table > thead { vertical-align: bottom }; .table > thead > tr > th { font-weight: var(--sf-font-weight-bold); text-align: start }; .table > tbody > tr > th[scope=row] { font-weight: var(--sf-font-weight-bold); text-align: start }; .table > caption { padding-top: var(--sf-space-1/2); padding-bottom: var(--sf-space-1/2); padding-block: var(--sf-space-1/2); color: var(--sf-on-surface-variant); font-size: var(--sf-text-size-1/2); line-height: var(--sf-text-height-1/2); text-align: start }; .table .table-numeric { font-feature-settings: "tnum"; font-variant-numeric: tabular-nums; text-align: end }` | — |
-| `table-sm` (`.table-sm > :not(caption) > * > *`) | `padding: var(--sf-a4) var(--sf-a4)` | — |
-| `table-small` (`.table-small > :not(caption) > * > *`) | `padding: var(--sf-a4) var(--sf-a4)` | — |
+| `table` | `--sf-table-color: var(--sf-on-surface); --sf-table-border-color: var(--sf-outline-variant); --sf-table-accent-bg: var(--sf-transparent); --sf-table-stripe-color: var(--sf-on-surface); --sf-table-stripe-bg: var(--sf-surface-state-hover); --sf-table-active-color: var(--sf-on-surface); --sf-table-active-bg: var(--sf-surface-state-select); --sf-table-hover-color: var(--sf-on-surface); --sf-table-hover-bg: var(--sf-surface-state-hover); width: 100%; inline-size: 100%; margin-bottom: var(--sf-b6); -webkit-margin-after: var(--sf-b6); margin-block-end: var(--sf-b6); color: var(--sf-table-color); vertical-align: top; border-color: var(--sf-table-border-color); text-align: start; .table > :not(caption) > * > * { padding: calc((var(--sf-ui-1--control-height) - var(--sf-text-height-1) - var(--sf-px)) / 2) calc(var(--sf-space-1) / 2); border-bottom-width: var(--sf-px); border-block-end-width: var(--sf-px); background-image: linear-gradient(var(--sf-table-accent-bg), var(--sf-table-accent-bg)) }; .table > :not(caption) > * > :where(:first-child) { padding-inline-start: var(--sf-space-1) }; .table > :not(caption) > * > :where(:last-child) { padding-inline-end: var(--sf-space-1) }; .table > tbody { vertical-align: inherit }; .table > thead { vertical-align: bottom }; .table > thead > tr > th { font-weight: var(--sf-font-weight-bold); text-align: start }; .table > tbody > tr > th[scope=row] { font-weight: var(--sf-font-weight-bold); text-align: start }; .table > caption { padding-top: var(--sf-space-1/2); padding-bottom: var(--sf-space-1/2); padding-block: var(--sf-space-1/2); color: var(--sf-on-surface-variant); font-size: var(--sf-text-size-1/2); line-height: var(--sf-text-height-1/2); text-align: start }; .table > caption.sr-only { padding: 0 }; .table .table-numeric { font-feature-settings: "tnum"; font-variant-numeric: tabular-nums; text-align: end }` | — |
+| `table-sm` | `.table-sm > :not(caption) > * > * { padding: calc((var(--sf-ui-1/2--control-height) - var(--sf-text-height-1) - var(--sf-px)) / 2) calc(var(--sf-space-1/2) / 2) }; .table-sm > :not(caption) > * > :where(:first-child) { padding-inline-start: max(var(--sf-space-1/2), var(--sf-b2)) }; .table-sm > :not(caption) > * > :where(:last-child) { padding-inline-end: max(var(--sf-space-1/2), var(--sf-b2)) }` | — |
+| `table-small` | `.table-small > :not(caption) > * > * { padding: calc((var(--sf-ui-1/2--control-height) - var(--sf-text-height-1) - var(--sf-px)) / 2) calc(var(--sf-space-1/2) / 2) }; .table-small > :not(caption) > * > :where(:first-child) { padding-inline-start: max(var(--sf-space-1/2), var(--sf-b2)) }; .table-small > :not(caption) > * > :where(:last-child) { padding-inline-end: max(var(--sf-space-1/2), var(--sf-b2)) }` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
@@ -50,14 +53,17 @@ description: "Оформляет таблицу классом table: ширин
 | `--sf-surface-state-hover` | `light-dark(var(--sf-neutral-50--alfa-4), var(--sf-neutral-90--alfa-4))` |
 | `--sf-surface-state-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
 | `--sf-b6` | `1rem` |
-| `--sf-a8` | `0.5rem` |
+| `--sf-ui-1--control-height` | `calc(var(--sf-text--height-1) + 2 * var(--sf-ui-1--space-y-tightness-default))` |
+| `--sf-text-height-1` | `var(--sf-text--height-1)` |
 | `--sf-px` | `1px` |
+| `--sf-space-1` | `var(--sf-b2); от ширины lg: var(--sf-b6)` |
 | `--sf-font-weight-bold` | `700` |
 | `--sf-space-1/2` | `0.5rem; от ширины lg: 0.75rem` |
 | `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
 | `--sf-text-size-1/2` | `var(--sf-text--size-1\/2)` |
 | `--sf-text-height-1/2` | `var(--sf-text--height-1\/2)` |
-| `--sf-a4` | `0.25rem` |
+| `--sf-ui-1/2--control-height` | `calc(var(--sf-text--height-1\/2) + 2 * var(--sf-ui-1\/2--space-y-tightness-default))` |
+| `--sf-b2` | `0.75rem` |
 
 В CSS косую черту в имени экранируют: `var(--sf-space-1\/2)`.
 
@@ -93,8 +99,7 @@ description: "Оформляет таблицу классом table: ширин
 Переменную задают на таблице, чтобы перекрасить её одну, или в теме проекта —
 для всех таблиц.
 
-`table-small` — второе имя `table-sm`; в разметке пишите `table-sm`. Отступ под
-таблицей убирает `m-bottom-0`.
+Отступ под таблицей убирает `m-bottom-0`.
 
 ## Ограничения
 

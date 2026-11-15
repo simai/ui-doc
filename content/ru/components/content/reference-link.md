@@ -6,7 +6,7 @@ profile: reference
 
 # Справочная ссылка
 
-:badge[sf-reference-link]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-reference-link]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
 
 Справочная ссылка показывает переход вместе с коротким пояснением: путём,
 источником, идентификатором записи. Вся карточка — область нажатия. Для
@@ -138,13 +138,15 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
+| `--sf-reference-link--accent` | `var(--sf-primary)` | `color` |
 | `--sf-reference-link--background-color` | `var(--sf-reference-link-background-color, transparent)` | `background-color` |
 | `--sf-reference-link--border-color` | `var(--sf-reference-link-border-color, var(--sf-outline-variant))` | `border` |
 | `--sf-reference-link--font-size` | не задана; задают модификаторы, например `.sf-reference-link.sf-reference-link--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-reference-link--gap` | `var(--sf-space-1)` | `gap` |
 | `--sf-reference-link--line-height` | не задана; задают модификаторы, например `.sf-reference-link.sf-reference-link--size-1/2`: `var(--sf-text-height-1/2)` | `line-height`, `height`, `block-size`, `width`, `inline-size`, `font-size`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
-| `--sf-reference-link--main-gap` | не задана; задают модификаторы, например `.sf-reference-link.sf-reference-link--size-1/2`: `var(--sf-ui-1/2--text-space-x)` | `gap` |
-| `--sf-reference-link--padding-block` | `var(--sf-space-1)` | `padding-top`, `padding-bottom`, `padding-block` |
+| `--sf-reference-link--link` | `var(--sf-link)` | `color` |
+| `--sf-reference-link--main-gap` | не задана; задают модификаторы, например `.sf-reference-link.sf-reference-link--line-1/2`: `var(--sf-space-1/4)` | `gap` |
+| `--sf-reference-link--padding-block` | `calc((var(--sf-ui-3--control-height) - var(--sf-text-height-1)) / 2 - var(--sf-px))` | `padding-top`, `padding-bottom`, `padding-block` |
 | `--sf-reference-link--padding-inline` | `var(--sf-space-1)` | `padding-left`, `padding-right`, `padding-inline` |
 
 ## См. также

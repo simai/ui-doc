@@ -1,19 +1,17 @@
 ---
-title: "Фокусное кольцо"
+title: "Кольцо выбора"
 description: "Рисует кольцо вокруг элемента тенью, не меняя его размер, и задаёт толщину и цвет кольца."
 ---
 
-# Фокусное кольцо
+# Кольцо выбора
 
 Классы `ring-{n}` рисуют сплошное кольцо вокруг элемента свойством
 `box-shadow`, классы `ring-{цвет}` задают его цвет. Кольцо не занимает места
-и не сдвигает соседей. Берите его для выделения выбранного элемента и для
-фокуса с клавиатуры — с префиксом `focus-visible:`.
+и не сдвигает соседей. Берите его, чтобы выделить выбранный элемент:
+тариф, карточку, образец цвета.
 
-Компоненты Framework рисуют фокус контуром из токенов `--sf-focus--*`, см.
-[Фокус](/ru/guide/size-and-type/focus/). Кольцо на утилитах — для
-собственной разметки проекта; рядом с компонентами Framework берите токены,
-чтобы фокус выглядел одинаково.
+Фокус с клавиатуры этими классами не рисуют: Framework рисует его сам,
+одинаково на всех элементах (см. [Фокус](/ru/guide/size-and-type/focus/)).
 
 ## Пример
 
@@ -33,10 +31,10 @@ description: "Рисует кольцо вокруг элемента тенью
 
 ### Состояния
 
-Префикс показывает кольцо только в состоянии. Переведите фокус на первую
-кнопку клавишей Tab, наведите указатель на вторую.
+Кольцо без префикса отмечает выбранный элемент; префикс `hover:` показывает
+кольцо только под указателем. Наведите указатель на вторую карточку.
 
-:::example {id="utilities/outline/ring-states" label="focus-visible: и hover:"}
+:::example {id="utilities/outline/ring-states" label="Выбор и hover:"}
 :::
 
 ## Классы
@@ -85,7 +83,7 @@ description: "Рисует кольцо вокруг элемента тенью
 | `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
 | `--sf-surface-area` | `light-dark(var(--sf-neutral-98), var(--sf-neutral-10))` |
 | `--sf-surface-page` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
-| `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
+| `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` |
 | `--sf-surface-veil` | `light-dark(var(--sf-black--alfa-8), var(--sf-white--alfa-8))` |
 | `--sf-surface-container-strong` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
 | `--sf-surface-inverse` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-90))` |
@@ -134,7 +132,6 @@ description: "Рисует кольцо вокруг элемента тенью
 Ставьте толщину и цвет вместе: без класса цвета кольцо не рисуется.
 
 ```html
-<button class="focus-visible:ring-2 focus-visible:ring-primary">Сохранить</button>
 <div class="ring-2 ring-primary radius-surface">Выбранный тариф</div>
 ```
 
@@ -142,9 +139,8 @@ description: "Рисует кольцо вокруг элемента тенью
 
 | Префикс | Когда срабатывает |
 | :--- | :--- |
-| `focus-visible:` | при фокусе с клавиатуры — для фокуса берите его |
-| `focus:` | при любом фокусе, в том числе после щелчка мышью |
 | `hover:` | при наведении указателя |
+| `focus-visible:`, `focus:` | при фокусе; фокус Framework рисует сам, кольцо поверх него не ставьте |
 
 ### Кольцо и тень
 

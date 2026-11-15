@@ -6,11 +6,25 @@ profile: reference
 
 # Пагинация
 
-:badge[sf-pagination]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-pagination]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Пагинация делит длинный список результатов на страницы, показывает текущую и
 даёт перейти к соседней или конкретной странице. Ставьте её сразу после
 списка, которым она управляет.
+
+Классы рисуют строку номеров и поле номера страницы. Готовые виды целиком —
+у [смарт-пагинации](/ru/smart/navigation/pagination/) (атрибут
+`appearance`):
+
+| Вид | Как выглядит | Где |
+|:---|:---|:---|
+| `field` | `⇤ ‹ [3] из 12 › ⇥` | плотная таблица |
+| `numbers` | `‹ 1 … 4 [5] 6 … 12 ›` | сайт, каталог, результаты поиска |
+| `arrows` | `‹ Назад · Страница 3 · Далее ›` | число страниц неизвестно или примерно |
+| `cursor` | `В начало · Дальше ›` | список без номеров и без последней страницы |
+| `more` | `Показать ещё 20` | лента, выбор в окне |
+
+Там же счётчик «41–60 из 240» и выбор «По 20 ▾».
 
 ## Пример
 
@@ -139,7 +153,8 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-pagination` |
-| Части | `sf-pagination-actions`, `sf-pagination-actions-count`, `sf-pagination-actions-separator`, `sf-pagination-bottom`, `sf-pagination-container`, `sf-pagination-count`, `sf-pagination-direction`, `sf-pagination-item`, `sf-pagination-left`, `sf-pagination-list`, `sf-pagination-main`, `sf-pagination-marked`, `sf-pagination-marked-text`, `sf-pagination-more`, `sf-pagination-page-field`, `sf-pagination-page-input`, `sf-pagination-pages-label`, `sf-pagination-top`, `sf-pagination-total` |
+| Части | `sf-pagination-actions`, `sf-pagination-actions-count`, `sf-pagination-actions-separator`, `sf-pagination-bottom`, `sf-pagination-container`, `sf-pagination-count`, `sf-pagination-direction`, `sf-pagination-gap`, `sf-pagination-item`, `sf-pagination-item-field`, `sf-pagination-left`, `sf-pagination-link`, `sf-pagination-list`, `sf-pagination-main`, `sf-pagination-marked`, `sf-pagination-marked-text`, `sf-pagination-more`, `sf-pagination-of`, `sf-pagination-page`, `sf-pagination-page-field`, `sf-pagination-page-input`, `sf-pagination-pages-label`, `sf-pagination-place`, `sf-pagination-progress`, `sf-pagination-range`, `sf-pagination-shown`, `sf-pagination-slot`, `sf-pagination-top`, `sf-pagination-total` |
+| Модификаторы | `sf-pagination--footer`, `sf-pagination--more` |
 | Размеры | `sf-pagination--size-1/2` |
 
 **`sf-page-number`**
@@ -158,8 +173,12 @@ profile: reference
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-pagination--block-size` | `calc(2 * var(--sf-pagination--padding-block) + var(--sf-pagination--control-height) + var(--sf-px))` | `min-height`, `min-block-size` |
-| `--sf-pagination--control-height` | `var(--sf-ui-1--control-height)` | `--sf-pagination--block-size` |
+| `--sf-pagination--control-height` | `var(--sf-ui-1--control-height)` | `--sf-pagination--block-size`, `width`, `inline-size`, `height`, `block-size`, `min-width`, `min-inline-size` |
+| `--sf-pagination--digits` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-slot`: `2` | `width`, `inline-size` |
 | `--sf-pagination--padding-block` | `var(--sf-space-1)` | `--sf-pagination--block-size`, `--sf-pagination-main--padding-bottom`, `--sf-pagination-main--padding-top` |
+| `--sf-pagination--space-x` | `var(--sf-ui-1--space-x)` | `width`, `inline-size` |
+| `--sf-pagination--text-height` | `var(--sf-text-height-1)` | `line-height` |
+| `--sf-pagination--text-size` | `var(--sf-text-size-1)` | `font-size` |
 | `--sf-pagination-actions--background-color` | не задана; задают модификаторы, например `.sf-pagination-actions`: `var(--sf-surface-raised)` | `background-color` |
 | `--sf-pagination-actions--border-color` | не задана; задают модификаторы, например `.sf-pagination-actions`: `var(--sf-outline-variant)` | `border-top`, `border-block-start` |
 | `--sf-pagination-actions--gap` | не задана; задают модификаторы, например `.sf-pagination-actions`: `var(--sf-space-1)` | `gap` |

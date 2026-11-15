@@ -5,7 +5,7 @@ description: "Показывает последовательность слай
 
 # Слайдер контента
 
-:badge[sf-slider]{variant=tonal scheme=primary size=1/2} :badge[1.1.11]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-slider]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Слайдер контента показывает слайды по одному: их листают стрелками, точками,
 миниатюрами или жестом. Берите его для материалов, которые смотрят по очереди;
@@ -163,10 +163,10 @@ slider.slideNext();
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
-| `button-type` | строка | `primary` | — | — |
+| `button-type` | строка | `secondary` | — | Вид стрелок: secondary (по умолчанию — тихие серые кнопки-иконки: листание не главное действие; поверх картинки они стоят на всплывающих плашках с тенью наложения, под карточками — tonal on-surface), primary (залитые primary), dark (залитые on-surface), light (ghost on-surface). |
 | `button-size` | строка | `1` | `1/3`, `1/2`, `1`, `2`, `3` | Размер кнопок со стрелками — размер `sf-icon-button`. |
 | `dots` | да/нет | да | — | — |
-| `dots-type` | строка | `primary-dark` | `primary-dark`, `primary-light`, `primary`, `light`, `dark`, `clear` | Цвета точек: `primary-dark` (по умолчанию), `primary-light`, `primary` (как `primary-dark`), `light`, `dark`, `clear` (как `light`). |
+| `dots-type` | строка | `primary-container` | `primary-container`, `primary`, `surface-container`, `surface-inverse`, `primary-dark`, `primary-light`, `light`, `dark`, `clear` | Подложка точек по роли цвета. Не задано: поверх картинки — всплывающая плашка с тенью наложения, под карточками — без подложки; точки 8 px, текущая — плашка 24 × 8, а с восьми слайдов вместо точек стоит счётчик «2 / 12». Задано: primary-container (подложка primary-container с точками on-primary-container), primary (подложка primary с точками on-primary), surface-container (приподнятая нейтральная подложка с точками on-surface), surface-inverse (обратная подложка с точками on-surface-inverse). Прежние слова до 2027-01-01: primary-dark — primary-container, primary-light — primary, light и clear — surface-container, dark — surface-inverse. |
 | `dots-size` | строка | `2` | `1`, `2` | Ступень размера точек. |
 | `thumbs` | да/нет | нет | — | — |
 | `thumbs-class` | строка | пусто | — | — |
@@ -176,6 +176,8 @@ slider.slideNext();
 | `space-between` | число | `12` | — | — |
 | `speed` | число | `450` | — | — |
 | `slide-class` | строка | пусто | — | — |
+| `ratio` | строка | `16/9` | `16/9`, `4/3`, `3/2`, `1/1`, `21/9`, `auto` | Рамка слайдера картинок: блок слайдов держит это соотношение с первого кадра, до прихода кода, чтобы страница не прыгала. auto — собственная высота слайдов. Слайдер карточек (root-class sf-slider--content) берёт высоту карточек и его не учитывает. |
+| `aria-label` | строка | пусто | — | — |
 
 #### Общие для всех компонентов
 
@@ -208,13 +210,13 @@ slider.slideNext();
 
 | | |
 |:---|:---|
-| Тег | `<sf-slider>`, контракт `smart.slider` версии `1.1.11` |
-| Поставка | выпуск Framework `ui-7fb26d395af2` |
+| Тег | `<sf-slider>`, контракт `smart.slider` версии `1.3.0` |
+| Поставка | выпуск Framework `ui-994f9db407fa` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
-| Доступность | Своей роли для экранного диктора нет; желательна подпись или `aria-label`; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/slider` |
-| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-slider` |
+| Доступность | Читается как область страницы; желательна подпись или `aria-label`; с клавиатуры: `Tab`. |
+| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/slider` |
+| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-slider` |
 
 ## См. также
 
