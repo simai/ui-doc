@@ -5,7 +5,7 @@ description: "Принимает телефон с выбором страны: 
 
 # Код страны
 
-:badge[sf-input-country]{variant=tonal scheme=primary size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-country]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Код страны — телефонное поле с кнопкой выбора страны: флаг и код страны стоят
 перед номером, а маска подстраивается под выбранную страну. Для телефона без
@@ -70,6 +70,20 @@ description: "Принимает телефон с выбором страны: 
 сервера.
 
 :::example {id="smart-components/country-code/masks" label="Маска"}
+:::
+
+### Часто выбирают
+
+`preferred` • [справочник](#атрибуты)
+
+`preferred` ставит вверху списка группу «Часто выбирают»: страны кодами
+ISO через запятую, например `RU,KZ,BY`. Первыми в группе идут до двух
+последних выборов человека, всего в ней не больше шести строк. Без
+`preferred` группы нет: список стран идёт по алфавиту, и язык страницы
+группу не добавляет. Пустое значение `preferred=""` показывает в группе
+только последние выборы.
+
+:::example {id="smart-components/country-code/preferred" label="Группа «Часто выбирают»" preview=sandbox}
 :::
 
 ### Свой список стран
