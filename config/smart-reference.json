@@ -40,9 +40,7 @@
     "message-log": "Dated alias of sf-list-feed until 2027-01-01: the page is a short note that points to the feed (D10, register RG-S2-52); the name table lives in the «Прежние имена» guide.",
     "theme-generator": "Leaving until 2027-01-01 (C84): sf-input-color variant=\"brand\" and variant=\"theme\" replace it; its page folded into smart/forms/color.md (DEV decision 2026-11-15), the old address redirects there. Its former names stay in the «Прежние имена» guide.",
     "wizard": "New in ui-b58b5dec35e4 (sf-wizard); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands.",
-    "wizard-step": "New in ui-b58b5dec35e4 (sf-wizard-step); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands.",
-    "time": "New in ui-7f1d29b02919 (sf-time, C40); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands.",
-    "change": "New in ui-7f1d29b02919 (sf-change, C40); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands."
+    "wizard-step": "New in ui-b58b5dec35e4 (sf-wizard-step); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands."
   },
   "suppress": {
     "popover": {

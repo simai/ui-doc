@@ -555,6 +555,14 @@
       "kind": "smart",
       "standard": 3
     },
+    "smart/content/time.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/content/change.md": {
+      "kind": "smart",
+      "standard": 3
+    },
     "smart/content/list-description.md": {
       "kind": "smart",
       "standard": 3

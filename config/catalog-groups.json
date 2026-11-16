@@ -190,6 +190,8 @@
         "tile-metric",
         "list-description",
         "list-timeline",
+        "time",
+        "change",
         "gallery",
         "file-preview",
         "reference-link",
