@@ -152,6 +152,20 @@ description: "Выбирает одно или несколько значени
 :::example {id="smart-components/dropdown/state-required" label="Обязательное поле в форме"}
 :::
 
+### Ошибка
+
+`invalid`, `error-message` • [справочник](#атрибуты)
+
+Ошибка выглядит так же, как у [поля ввода](/ru/smart/forms/inputs/#ошибка):
+рамка цвета ошибки (у поля с заливкой — подложка), а под полем сообщение
+в стиле сообщения поля. Значка ошибки нет. Ошибку ставит и снимает страница:
+атрибутами `invalid` и `error-message` или методом `setError({message})`,
+пустое сообщение снимает её. Нажмите «Сохранить» без статуса, затем
+выберите статус — ошибка уйдёт.
+
+:::example {id="smart-components/dropdown/state-error" label="Статус с ошибкой" preview=sandbox log_console=true log_open=false}
+:::
+
 ## Поведение
 
 ### Значение и событие

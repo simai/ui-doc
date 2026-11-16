@@ -19,6 +19,10 @@ description: "Ведёт на соседнюю страницу или шаг п
 :::example {id="smart-components/pager/overview" label="Две карточки внизу" preview=sandbox log="sf-pager-navigate sf-pager-change" log_console=true log_open=false}
 :::
 
+Карточки в примерах этой страницы ведут на страницы документации. Примеры
+отменяют переход, чтобы остаться на месте, а журнал показывает запрос
+`sf-pager-navigate`.
+
 ## Разметка
 
 Листалка принимает одну из двух форм входа:
