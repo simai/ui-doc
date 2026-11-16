@@ -1,0 +1,11 @@
+<div id="cart" class="flex flex-col gap-1 max-w-g8">
+  <h3 id="cart-heading" class="m-0 text-2 weight-5" tabindex="-1">Корзина</h3>
+  <div class="flex flex-wrap items-cross-center gap-1 p-y-1/2 border-bottom-1 border-bottom-solid border-outline-variant">
+    <sf-checkbox id="cart-all" label="Выбрать все"></sf-checkbox>
+    <span class="grow"></span>
+    <sf-button id="cart-delete" size="1/2" appearance="ghost" scheme="on-surface" icon-start="delete" text="Удалить выбранные" disabled></sf-button>
+  </div>
+  <div id="cart-groups" class="flex flex-col gap-1"></div>
+  <sf-empty-state id="cart-empty" kind="no-data" size="1/2" heading="Корзина пуста" text="Добавьте товары из каталога — они появятся здесь" hidden></sf-empty-state>
+  <div id="cart-summary" class="flex content-main-between gap-1 weight-5" role="status"></div>
+</div>
