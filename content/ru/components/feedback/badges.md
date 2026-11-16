@@ -180,7 +180,7 @@ profile: reference
 [Иконки](/ru/smart/content/icons/) и
 [Кнопки с иконкой](/ru/smart/actions/icon-buttons/) рисуют такой бейдж
 по входам `badge-count`, `badge-dot`, `badge-cap` и `badge-label`. В
-компактном [меню](/ru/components/navigation/menu/#счётчик-и-компактное-меню)
+[меню-рейке](/ru/components/navigation/menu/#счётчик-и-рейка)
 счётчик строки переходит на её иконку.
 
 ## Доступность

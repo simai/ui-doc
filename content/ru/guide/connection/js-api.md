@@ -102,7 +102,7 @@ API компонента (`SF.Input`, `SF.Tabs` и другие) описан н
 | `SF.AdminMenu` | [Основа Admin Menu](/ru/components/internal/admin-menu/#javascript) |
 | `SF.AnchoredBadge` | [Бейджи](/ru/components/feedback/badges/#бейдж-на-якоре) |
 | `SF.ButtonGroup` | [Группа кнопок](/ru/components/actions/button-group/#javascript) |
-| `SF.Carousel` | [Карусель](/ru/components/overlays-media/carousel/#javascript) |
+| `SF.Carousel` | [Карусель](/ru/components/overlays-media/carousel/) |
 | `SF.Checkbox` | [Флажок](/ru/components/forms/checkbox/#javascript) |
 | `SF.Clipboard` | [Копирование](/ru/components/actions/clipboard/#javascript) |
 | `SF.CompositionOverlay` | [Оверлей редактора](/ru/smart/editor/composition-overlay/#методы) |

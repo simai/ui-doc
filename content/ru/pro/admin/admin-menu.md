@@ -5,7 +5,7 @@ description: "Даёт административному приложению �
 
 # Меню администратора
 
-:badge[sf-admin-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.9.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-admin-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.11.2]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-admin-menu>` — боковая навигация административного приложения: вложенные
 разделы, поиск, компактный режим и настройка порядка и видимости пунктов.
@@ -285,7 +285,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 |:---|:---|
 | Тег | `<sf-admin-menu>` |
 | Назначение | Вложенная навигация администратора с поиском, компактным режимом и редактируемыми личными или системными настройками. |
-| Контракт | `smart.admin-menu`, версия `1.9.1` |
+| Контракт | `smart.admin-menu`, версия `1.11.2` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -386,8 +386,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### Источник
 
-- `simai/ui-pro@787c37d6a6c6d874f8eba2b786cbb3c51f86f03c:components/src/smart/admin-menu`
-- `simai/ui-pro@787c37d6a6c6d874f8eba2b786cbb3c51f86f03c:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
+- `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/admin-menu`
+- `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
 
 ## См. также
 

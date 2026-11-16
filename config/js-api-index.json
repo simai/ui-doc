@@ -235,7 +235,7 @@
       "label": "Группа кнопок"
     },
     "SF.Carousel": {
-      "page": "/ru/components/overlays-media/carousel/#javascript",
+      "page": "/ru/components/overlays-media/carousel/",
       "label": "Карусель"
     },
     "SF.Checkbox": {
