@@ -58,6 +58,18 @@ profile: reference
 :::example {id="components/file-preview/surface" label="Поверхность"}
 :::
 
+### Компактный вид
+
+`sf-file-preview--compact` • [справочник](#классы)
+
+Компактный вид оставляет от строки один держатель с типом файла
+`sf-file-preview-extension` — для плотной сетки вложений или поля ввода.
+Имени на экране нет, поэтому держатель получает `role="img"` и имя файла в
+`aria-label`.
+
+:::example {id="components/file-preview/compact" label="Компактные превью трёх файлов"}
+:::
+
 ## Состояния
 
 ### Недоступен
@@ -67,6 +79,28 @@ profile: reference
 блокирует.
 
 :::example {id="components/file-preview/disabled" label="Недоступный файл"}
+:::
+
+### Загрузка
+
+Пока файл отправляется, под именем стоит
+[прогресс](/ru/components/feedback/progress-bar/) `sf-file-preview-progress`
+с долей в процентах, строка получает `aria-busy="true"`, а среди действий
+остаётся одно — отменить загрузку.
+
+:::example {id="components/file-preview/uploading" label="Файл загружается"}
+:::
+
+### Ошибка
+
+`sf-file-preview--error` • [справочник](#классы)
+
+Файл не загрузился: строка получает `sf-file-preview--error`, под именем —
+причина в `sf-file-preview-error`, среди действий — «Повторить»
+(`sf-file-preview-retry`) и «Удалить». Причину пишите словами: цвет сам по
+себе её не объясняет.
+
+:::example {id="components/file-preview/error" label="Файл не загрузился"}
 :::
 
 ## Доступность
