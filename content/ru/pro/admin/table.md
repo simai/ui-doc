@@ -83,8 +83,8 @@ Larena — лицензия Larena). В пакет входят ещё
 «Создать», `row-actions` — только колонку действий строки (кнопка «Создать»
 остаётся). Встроенную пагинацию включает `pagin`; `pagination-total`,
 `pagination-page-size` и `page-sizes` задают общее число записей, размер
-страницы и выбор размеров. Её события `sf-page-change`,
-`sf-page-size-change` и `sf-show-more` приходят от
+страницы и выбор размеров. Её события `sf-pagination-change`,
+`sf-pagination-size-change` и `sf-pagination-load-more` приходят от
 [Пагинация](/ru/smart/navigation/pagination/).
 `vertical-scroll="page"` отдаёт прокрутку странице вместо самой таблицы,
 `context-menu-columns` (от 1 до 4) делит меню настроек на колонки.
@@ -581,7 +581,7 @@ document.querySelector('sf-view').setHostPort(host);
 Действие строки (`sf-view-table-apply`), которого нет в списке `actions`
 записи, до хоста не доходит: представление отвечает себе отказом
 `action-not-allowed`. Массовое действие над выбранными записями
-(`sf-action-apply` из панели выбора) всегда идёт в `bulk.apply_selected`, даже
+(`sf-pagination-apply` из панели выбора) всегда идёт в `bulk.apply_selected`, даже
 если выбрана одна запись, и может иметь свой идентификатор, например
 `bulk_delete`, которого нет в `actions` записей: право на него проверяет хост.
 Представление только проверяет, что каждая выбранная запись есть в текущем
