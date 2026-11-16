@@ -52,23 +52,24 @@ SF.RuleLoader['buttons'] = {
 **Смарт-компонент** — объект с тегами и зависимостями:
 
 ```js
-SF.RuleLoader['cl-datepicker'] = {
-  tags: ['sf-datepicker'],
+SF.RuleLoader['cl-input-date'] = {
+  tags: ['sf-input-date'],
   type: 'smart',
   mode: 'smart',
   js: true,
   relation: [
     { name: 'datepicker' },
-    { name: 'cl-inputs' },
-    { name: 'cl-buttons' },
-    { name: 'cl-icon-buttons' },
-    { name: 'cl-icons' },
+    { name: 'cl-input' },
+    { name: 'cl-button' },
+    { name: 'cl-button-icon' },
+    { name: 'cl-icon' },
+    { name: 'cl-drawer', lazy: true },
   ],
 };
 ```
 
 Имя правила смарт-компонента начинается с `cl-`, папка в поставке — без него:
-`cl-datepicker` → `smart/datepicker/`. Это внутреннее имя: в разметке и коде
+`cl-input-date` → `smart/input-date/`. Это внутреннее имя: в разметке и коде
 проекта используется только тег `<sf-input-date>`.
 
 Полный список правил выпуска — `distr/rule/rule.json`: имя, теги, вид и
@@ -93,7 +94,7 @@ SF.RuleLoader['cl-datepicker'] = {
 |:---|:---|
 | Утилита `gap/md` | `<sfPath>/utility/gap/md/css/md.min.css` |
 | Компонент `buttons` | `<sfPath>/component/buttons/css/buttons.min.css` и `…/js/buttons.min.js` |
-| Smart `cl-datepicker` | `<sfPath>/smart/datepicker/js/datepicker.min.js` |
+| Smart `cl-input-date` | `<sfPath>/smart/input-date/js/input-date.min.js` |
 | Smart `cl-catalog` из пакета `shop` | `<base>/catalog/js/catalog.min.js`, где `<base>` — каталог пакета (см. [Пакеты компонентов](#пакеты-компонентов)) |
 
 В таблице — адреса сжатых файлов, которые Loader берёт по умолчанию; в режиме
@@ -120,7 +121,7 @@ SF.RuleLoader['cl-datepicker'] = {
 ```js
 relation: [
   { name: "cl-checkbox" },
-  { name: "cl-datepicker", lazy: true },
+  { name: "cl-input-date", lazy: true },
   { name: "cl-modal", lazy: true },
 ],
 ```
@@ -128,9 +129,9 @@ relation: [
 Компонент не ждёт отложенную зависимость, и первый показ страницы её тоже не
 ждёт. Loader загружает её после `sf-loader-ready`, когда браузер свободен,
 по нескольку за раз, а сразу — если её попросили:
-`SF.Loader.ensurePlugin('cl-datepicker')` или её элемент появился в
+`SF.Loader.ensurePlugin('cl-input-date')` или её элемент появился в
 разметке. Код, который создаёт такой элемент и сразу обращается к нему,
-сначала ждёт `customElements.whenDefined('sf-datepicker')`.
+сначала ждёт `customElements.whenDefined('sf-input-date')`.
 
 ## Что происходит при открытии страницы
 
@@ -329,7 +330,7 @@ npm `@simai-studio/ui`, с которого страница подключае�
 | `SF.Loader.theme` (`light` или `dark` — тема на странице) и `SF.Loader.themePreference` (`system`, `light` или `dark` — выбор человека) | Вместе с `SF.Loader`; значения появляются, когда Loader выбрал тему при запуске | Событие `sf-theme-change`: первое приходит при запуске |
 | `SF.smart` (`SfBaseElement`, `html`, `nothing` и помощники) | Вместе с базой смарт-компонентов: с первым смарт-элементом на странице или после `await SF.loadSmartBase()`. На странице без смарт-элементов его нет | `await SF.loadSmartBase()` после `sf-loader-init` |
 | Объекты компонентов на классах: `SF.Input`, `SF.Toast`, `SF.Tabs` и другие | Только после того, как Loader загрузил компонент по его разметке на странице. Без разметки компонента объекта нет | После `sf-loader-init`: `SF.Loader.ready('Inputs', () => SF.Input.setState(…))`. Функция вызывается сразу, если компонент уже загружен, иначе после его регистрации, когда объект `SF.<Имя>` уже назначен. Первый аргумент — имя компонента в реестре (`Inputs`, `Modal`); оно может отличаться от имени объекта (`SF.Input`) |
-| Смарт-элемент на странице | После загрузки и регистрации его тега | `await SF.createAsync('datepicker')` для нового элемента; для элемента в разметке — `await SF.whenDefined('sf-datepicker')`, затем `await element.whenRendered()` (см. [Ожидание готовности](/ru/guide/smart-components/page/#ожидание-готовности)) |
+| Смарт-элемент на странице | После загрузки и регистрации его тега | `await SF.createAsync('input-date')` для нового элемента; для элемента в разметке — `await SF.whenDefined('sf-input-date')`, затем `await element.whenRendered()` (см. [Ожидание готовности](/ru/guide/smart-components/page/#ожидание-готовности)) |
 
 Пример ждёт Loader и базу смарт-компонентов. Он работает в любой момент: до
 и после `sf-loader-init`.

@@ -97,7 +97,7 @@ SIMAI Framework; все смарт-компоненты переведены в 
 | `keys` для клавиатуры у детали | `keyboard`; `keys` — только данные сборки |
 | побочные эффекты в свободной форме | `side-effects` |
 | `announces` на верхнем уровне | `accessibility.announces` |
-| `security`, `ownership`, `presentation`, `ai_guidance` | остаются как есть до следующей версии стандарта |
+| `security`, `ownership`, `presentation`, `ai_guidance` | остаются как есть |
 
 С папкой вида 1.4 `smart.manifest.json` никто не пишет: его вместе с
 `rule.js`, `aliases.json`, `meta.mjs`, файлами Студии и `probe.json`

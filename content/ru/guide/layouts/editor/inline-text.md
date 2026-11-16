@@ -10,7 +10,7 @@ description: "Заголовки и абзацы правятся прямо н�
 массив `content`**, который можно сразу записать в узел.
 
 ```js
-await customElements.whenDefined('sf-inline-editor');
+await customElements.whenDefined('sf-editor-inline');
 canvas.addEventListener('dblclick', (event) => {
   const element = event.target.closest('[data-sf-composition-id]');
   const node = findNode(element.dataset.sfCompositionId); // модель приложения

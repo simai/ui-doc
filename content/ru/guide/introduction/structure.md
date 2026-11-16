@@ -62,8 +62,8 @@ git: в адресах и закреплении проекта использу
 `sf-thread-list`, `sf-message-log`, `sf-chat-message`, `sf-chat-composer`,
 `sf-chat-interlocutor`, части редактора писем `sf-mail-*` и
 `sf-content-editor` (описаны в справочнике
-смарт-компонентов). `sf-change-confirm` с выпуска `ui-994f9db407fa` входит в
-сам Framework под именем `sf-confirm-change`. Его исходник —
+смарт-компонентов). Подтверждение изменения `sf-confirm-change` входит в сам
+Framework. Исходник пакета —
 папка `components` открытого репозитория `simai/ui-pro`. Лицензия пакета —
 PolyForm Small Business 1.0.0 или PolyForm Noncommercial 1.0.0 на выбор, по
 запросу — коммерческая лицензия SIMAI; в составе Larena пакет используется по

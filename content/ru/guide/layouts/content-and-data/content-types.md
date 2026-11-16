@@ -52,7 +52,7 @@ v1, те же id, проверка, канонический вид и отпе�
 | `content.divider` | | | | компонент [разделитель](/ru/components/content/content-divider/) |
 | `content.table` | `rows` (ячейки — текст), `caption` | `header` (row, column, both, none), `align` | | утилита `table-frame` |
 | `content.figure` | `src`, `alt`, `width`, `height`, `caption` | `ratio` (auto, 1/1, 4/3, 3/2, 16/9, 21/9), `fit` (cover, contain) | | компонент [рисунок](/ru/components/content/figure/) |
-| `content.file` | `href`, `label`, `mime`, `size` (байты), `value` (ключ хранилища) | | | строка [`sf-download-file`](/ru/smart/actions/download-file/): значок по типу, название, размер |
+| `content.file` | `href`, `label`, `mime`, `size` (байты), `value` (ключ хранилища) | | | строка [`sf-file-download`](/ru/smart/actions/download-file/): значок по типу, название, размер |
 | `content.alert` | `title` (текст) | `status` (neutral, info, success, warning, error), `appearance` (default, outlined, flat) | `default` | классы `sf-alert` |
 | `content.details` | `summary` (текст) | `open`, `layout` (surface, lines) | `default` | `details`: раскрывается без скрипта |
 | `content.tabs` | `label` | | `tabs`: `content.tab` | компонент `tabs` |
@@ -79,7 +79,7 @@ v1, те же id, проверка, канонический вид и отпе�
 - В макете не больше одного `content.outlet` (`outlet_duplicate`); этот тип
   разрешён только в макете.
 - `content.html` — явный выход для готовой разметки. При выводе её чистит
-  одно правило html@1, общее с `sf-rich-text`: `p h2 h3 h4 strong em a[href]
+  одно правило html@1, общее с `sf-input-rich`: `p h2 h3 h4 strong em a[href]
   ul ol li blockquote br` и никаких атрибутов, кроме безопасного `href`.
   Ключ — `markup`: ключ `html` в документе запрещён везде. Конвертер сам
   такой блок не создаёт — только по прямой просьбе автора.
