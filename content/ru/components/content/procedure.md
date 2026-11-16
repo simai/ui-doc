@@ -61,6 +61,9 @@ profile: reference
 ролью, `sf-procedure-step--current` обводит текущий. Без этих классов все
 маркеры нейтральные.
 
+:::example {id="components/procedure/states" label="Выполненный, текущий и следующий шаг"}
+:::
+
 ## Доступность
 
 Текущий шаг отмечайте ещё и `aria-current="step"`: цвет сам по себе ничего
