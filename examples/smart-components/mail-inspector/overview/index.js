@@ -85,10 +85,10 @@ Object.assign(element, {
           "label": "Изображение",
           "value": {
             "value": "a1",
-            "label": "cover.png",
-            "mime": "image/png",
-            "size": 2048,
-            "href": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            "label": "cover-01-16x9.svg",
+            "mime": "image/svg+xml",
+            "size": 337,
+            "href": "assets/cover-01-16x9.svg"
           },
           "accept": ".png,.jpg,.jpeg,image/png,image/jpeg",
           "choices": [
@@ -105,10 +105,10 @@ Object.assign(element, {
           "label": "Логотип",
           "value": {
             "value": "a1",
-            "label": "cover.png",
-            "mime": "image/png",
-            "size": 2048,
-            "href": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            "label": "cover-01-16x9.svg",
+            "mime": "image/svg+xml",
+            "size": 337,
+            "href": "assets/cover-01-16x9.svg"
           },
           "required": true,
           "accept": ".png,.jpg,.jpeg,image/png,image/jpeg"
