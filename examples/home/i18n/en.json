@@ -3,8 +3,7 @@
   "language": "en",
   "note": "English text of the home page demos (examples/home/admin and examples/home/showcase). scripts/export-live-demonstrations.php publishes an English copy under /demos/home/en/ and fails when a Russian string is left without a translation. A string is matched whole: a JSON value, a part of a JavaScript literal between ${…}, an HTML text or attribute part.",
   "keep": [
-    "Русский",
-    "Українська"
+    "Русский"
   ],
   "values": {
     "admin/assets/data/navigation.json": {
