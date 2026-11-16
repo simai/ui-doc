@@ -254,5 +254,5 @@ panel.sections = [
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | Доступность | Роль `form`; название компонент ставит сам; с клавиатуры: `Tab`, `Esc`, `Enter`, `Пробел`, `Alt+ArrowUp`, `Alt+ArrowDown`, `Shift+F10`. |
-| Источник | `simai/ui-pro@787c37d6a6c6d874f8eba2b786cbb3c51f86f03c:components/src/smart/mail-inspector` |
-| Правило классов | `simai/ui-pro@787c37d6a6c6d874f8eba2b786cbb3c51f86f03c:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector` |
+| Источник | `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-inspector` |
+| Правило классов | `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector` |
