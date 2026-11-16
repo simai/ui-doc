@@ -1,0 +1,12 @@
+<div class="flex flex-col gap-2" data-language-file-demo>
+  <div class="flex flex-wrap items-cross-center gap-1">
+    <span id="language-file-label" class="text-1/2 color-on-surface-variant">Язык примера</span>
+    <sf-segmented aria-labelledby="language-file-label" name="language" value="kk" items='[{"value":"ru","label":"Русский"},{"value":"en","label":"English"},{"value":"kk","label":"Қазақша"}]' data-language-choice></sf-segmented>
+  </div>
+  <sf-empty-state kind="nothing-found" size="1/2" layout="inline"></sf-empty-state>
+  <sf-pagination current="3" total="240" page-size="20" top="false"></sf-pagination>
+  <div class="flex flex-wrap items-cross-center gap-1">
+    <sf-checkbox label="Заменить одно слово: «Келесі бет» → «Әрі қарай»" data-one-word></sf-checkbox>
+  </div>
+  <p class="m-0 text-1/2 color-on-surface-variant" role="status" data-language-file-result></p>
+</div>

@@ -35,6 +35,7 @@ description: "Эта часть описывает все величины SIMAI
 - [Фокус](/ru/guide/size-and-type/focus/)
 - [Направление текста](/ru/guide/size-and-type/directions/)
 - [Язык интерфейса](/ru/guide/size-and-type/language/) и памятка
-  [«Языки»](/ru/guide/size-and-type/languages/)
+  [«Языки»](/ru/guide/size-and-type/languages/), [Стандарт файла языка](/ru/guide/size-and-type/language-file/)
+  — свой язык и одно слово
 - [Геометрия: стандарт и проверка](/ru/guide/size-and-type/geometry/)
 - [Движение](/ru/guide/size-and-type/motion/) — длительности и кривые переходов
