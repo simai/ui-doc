@@ -5,7 +5,7 @@ description: "Выбирает, создаёт, переименовывает, 
 
 # Выбор профиля
 
-:badge[sf-profile-picker]{variant=outline scheme=on-surface size=1/2} :badge[1.4.6]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-profile-picker]{variant=outline scheme=on-surface size=1/2} :badge[1.8.3]{variant=outline scheme=on-surface size=1/2}
 
 Выбор профиля даёт одно место для работы с профилями: профилями меню, видами
 записи и всем, у чего есть профили. В свёрнутом виде это кнопка, похожая на
@@ -116,7 +116,7 @@ picker.addEventListener('sf-profile-picker-select', (event) => openProfile(event
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
 | `label` | строка | — | — | Как здесь называется профиль («Профиль», «Вид»); без значения — «Профиль» на языке страницы. |
-| `size` | строка | `1/2` | `1/2`, `1` | — |
+| `size` | строка | `1` | `1/2`, `1` | Ступень открывающего элемента, строк и панели: `1` по умолчанию, поэтому компактная админка получает меньшую ступень от `data-sf-density`, а телефон — от лестницы (C22: без ручного `1/2` ради компактности); `1/2` всё ещё рисуется, если его задать. |
 | `resettable` | да/нет | нет | — | Показывает внизу «Сбросить к стандартному». |
 | `message` | строка | пусто | — | Почему приложение отказало в последнем действии; показывается в панели. |
 | `disabled` | да/нет | нет | — | — |
@@ -158,13 +158,13 @@ picker.addEventListener('sf-profile-picker-select', (event) => openProfile(event
 
 | | |
 |:---|:---|
-| Тег | `<sf-profile-picker>`, контракт `smart.profile-picker` версии `1.4.6` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-profile-picker>`, контракт `smart.profile-picker` версии `1.8.3` |
+| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как меню; желательна подпись или `aria-label`; с клавиатуры: `↑`, `↓`, `Home`, `End`, `Enter`, `Пробел`, `F2`, `Delete`, `Esc`. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/profile-picker` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-profile-picker` |
+| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/profile-picker` |
+| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-profile-picker` |
 
 ## См. также
 

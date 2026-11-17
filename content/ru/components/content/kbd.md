@@ -6,7 +6,7 @@ profile: reference
 
 # Клавиши
 
-:badge[sf-kbd]{variant=outline scheme=on-surface size=1/2} :badge[1.3.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-kbd]{variant=outline scheme=on-surface size=1/2} :badge[1.7.0]{variant=outline scheme=on-surface size=1/2}
 
 Показывает, какую клавишу или сочетание нажать, так, что это читается как
 надпись на клавише: «нажмите `Ctrl` + `S`». Берите его в инструкциях, подсказках и справке по
@@ -93,7 +93,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-kbd` |
-| Части | `sf-kbd-join` |
+| Части | `sf-kbd-join`, `sf-kbd-spoken` |
 | Модификаторы | `sf-kbd--group`, `sf-kbd--square` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.

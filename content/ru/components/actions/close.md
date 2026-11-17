@@ -6,7 +6,7 @@ profile: reference
 
 # Кнопка закрытия
 
-:badge[sf-close]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-close]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка закрытия закрывает окно, панель, уведомление или убирает тег. Здесь —
 её классы для своей разметки; обычно берут смарт-компонент

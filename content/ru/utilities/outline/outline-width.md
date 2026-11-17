@@ -34,11 +34,11 @@ outline-offset-2`.
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `outline-1` | `outline-width: var(--sf-a1)` | — |
-| `outline-2` | `outline-width: var(--sf-a2)` | — |
-| `outline-3` | `outline-width: var(--sf-a3)` | — |
-| `outline-4` | `outline-width: var(--sf-a4)` | — |
-| `outline-0` | `outline-width: var(--sf-0)` | — |
+| `outline-1` | `outline-width: var(--sf-line--border); :where(.outline-1) { outline-style: solid }` | — |
+| `outline-2` | `outline-width: var(--sf-line--indicator); :where(.outline-2) { outline-style: solid }` | — |
+| `outline-3` | `outline-width: var(--sf-a3); :where(.outline-3) { outline-style: solid }` | — |
+| `outline-4` | `outline-width: var(--sf-a4); :where(.outline-4) { outline-style: solid }` | — |
+| `outline-0` | `outline-width: var(--sf-0); :where(.outline-0) { outline-style: solid }` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `focus-visible:`, `focus:`. Например: `focus-visible:outline-1`.
 
@@ -50,8 +50,8 @@ outline-offset-2`.
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
-| `--sf-a1` | `0.0625rem` |
-| `--sf-a2` | `0.125rem` |
+| `--sf-line--border` | `var(--sf-px)` |
+| `--sf-line--indicator` | `calc(2 * var(--sf-px))` |
 | `--sf-a3` | `0.1875rem` |
 | `--sf-a4` | `0.25rem` |
 | `--sf-0` | `0` |

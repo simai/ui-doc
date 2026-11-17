@@ -22,37 +22,21 @@ ring-primary`. Наведите указатель на кнопку.
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `ring-opacity-1` | `--sf-ring--alfa: var(--sf-opacity-10, 0.1)` | — |
-| `ring-opacity-2` | `--sf-ring--alfa: var(--sf-opacity-20, 0.2)` | — |
-| `ring-opacity-3` | `--sf-ring--alfa: var(--sf-opacity-30, 0.3)` | — |
-| `ring-opacity-4` | `--sf-ring--alfa: var(--sf-opacity-40, 0.4)` | — |
-| `ring-opacity-5` | `--sf-ring--alfa: var(--sf-opacity-50, 0.5)` | — |
-| `ring-opacity-6` | `--sf-ring--alfa: var(--sf-opacity-60, 0.6)` | — |
-| `ring-opacity-7` | `--sf-ring--alfa: var(--sf-opacity-70, 0.7)` | — |
-| `ring-opacity-8` | `--sf-ring--alfa: var(--sf-opacity-80, 0.8)` | — |
-| `ring-opacity-9` | `--sf-ring--alfa: var(--sf-opacity-90, 0.9)` | — |
-| `ring-opacity-full` | `--sf-ring--alfa: 1` | — |
-| `ring-opacity-0` | `--sf-ring--alfa: 0` | — |
+| `ring-opacity-1` | `--sf-ring--alpha: 0.1` | — |
+| `ring-opacity-2` | `--sf-ring--alpha: 0.2` | — |
+| `ring-opacity-3` | `--sf-ring--alpha: 0.3` | — |
+| `ring-opacity-4` | `--sf-ring--alpha: 0.4` | — |
+| `ring-opacity-5` | `--sf-ring--alpha: 0.5` | — |
+| `ring-opacity-6` | `--sf-ring--alpha: 0.6` | — |
+| `ring-opacity-7` | `--sf-ring--alpha: 0.7` | — |
+| `ring-opacity-8` | `--sf-ring--alpha: 0.8` | — |
+| `ring-opacity-9` | `--sf-ring--alpha: 0.9` | — |
+| `ring-opacity-full` | `--sf-ring--alpha: 1` | — |
+| `ring-opacity-0` | `--sf-ring--alpha: 0` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `focus-visible:`, `focus:`, `hover:`. Например: `focus-visible:ring-opacity-1`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
-
-## Переменные
-
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
-
-| Переменная | Значение по умолчанию |
-|:---|:---|
-| `--sf-opacity-10` | `10%` |
-| `--sf-opacity-20` | `20%` |
-| `--sf-opacity-30` | `30%` |
-| `--sf-opacity-40` | `40%` |
-| `--sf-opacity-50` | `50%` |
-| `--sf-opacity-60` | `60%` |
-| `--sf-opacity-70` | `70%` |
-| `--sf-opacity-80` | `80%` |
-| `--sf-opacity-90` | `90%` |
 
 ## Применение
 

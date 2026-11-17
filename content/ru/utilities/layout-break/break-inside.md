@@ -26,9 +26,9 @@ description: "Разрешает или запрещает делить элем
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `break-inside-auto` | `page-break-inside: auto; -webkit-column-break-inside: auto; -moz-column-break-inside: auto; break-inside: auto` | — |
-| `break-inside-avoid` | `page-break-inside: avoid; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; break-inside: avoid` | — |
-| `break-inside-avoid-page` | `page-break-inside: avoid; break-inside: avoid-page` | — |
+| `break-inside-auto` | `-webkit-column-break-inside: auto; -moz-column-break-inside: auto; break-inside: auto` | — |
+| `break-inside-avoid` | `-webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; break-inside: avoid` | — |
+| `break-inside-avoid-page` | `break-inside: avoid-page` | — |
 | `break-inside-avoid-column` | `-webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; break-inside: avoid-column` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:break-inside-auto`.

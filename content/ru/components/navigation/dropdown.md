@@ -6,7 +6,7 @@ profile: reference
 
 # Выпадающий список
 
-:badge[sf-dropdown]{variant=outline scheme=on-surface size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-dropdown]{variant=outline scheme=on-surface size=1/2} :badge[1.16.1]{variant=outline scheme=on-surface size=1/2}
 
 Выпадающий список экономит место и даёт выбрать одно или несколько значений
 из набора вариантов; видимая подпись пункта отделена от его машинного
@@ -216,7 +216,7 @@ document.querySelector('.sf-dropdown').addEventListener('change', (event) => {
 | Блок | `sf-dropdown` |
 | Части | `sf-dropdown-field`, `sf-dropdown-field-visual`, `sf-dropdown-label`, `sf-dropdown-message`, `sf-dropdown-placeholder`, `sf-dropdown-required`, `sf-dropdown-tag-container`, `sf-dropdown-text`, `sf-dropdown-trigger`, `sf-dropdown-value` |
 | Модификаторы | `sf-dropdown--filled`, `sf-dropdown--outlined`, `sf-dropdown--tag`, `sf-dropdown--text` |
-| Размеры | `sf-dropdown--size-1`, `sf-dropdown--size-1/2`, `sf-dropdown--size-2` |
+| Размеры | `sf-dropdown--size-1`, `sf-dropdown--size-1/2`, `sf-dropdown--size-1/3`, `sf-dropdown--size-2`, `sf-dropdown--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -226,12 +226,14 @@ document.querySelector('.sf-dropdown').addEventListener('change', (event) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-dropdown--inset` | `var(--sf-space-1)` | `--sf-field-action--inset`, `--sf-dropdown--value-inset`, `--sf-dropdown-field--padding-inline-end`, `--sf-dropdown-field--padding-inline-start`, `--sf-list-item--padding-inline-start` |
-| `--sf-dropdown--line-radius` | `min(var(--sf-dropdown-radius, var(--sf-dropdown--radius, var(--sf-radius--ui))), var(--sf-ui-1--control-height) / 2)` | `--sf-dropdown--value-inset`, `--sf-dropdown--tag-radius`, `--sf-list-item--padding-inline-start` |
+| `--sf-dropdown--inset` | `var(--sf-space-1)` | `--sf-field-action--inset`, `--sf-dropdown--value-inset`, `--sf-dropdown-field--padding-inline-end`, `--sf-dropdown-field--padding-inline-start`, `--sf-list-item--padding-inline-start`, `--sf-dropdown--search-padding` |
+| `--sf-dropdown--line-radius` | `min(var(--sf-dropdown-radius, var(--sf-dropdown--radius, var(--sf-radius--ui))), var(--sf-ui-1--control-height) / 2)` | `--sf-dropdown--value-inset`, `--sf-dropdown--tag-radius`, `--sf-list-item--padding-inline-start`, `--sf-dropdown--search-padding` |
+| `--sf-dropdown--search-padding` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown .sf-list > .sf-list-search`: `calc(var(--sf-dropdown--inset, var(--sf-space-1)) - var(--sf-space-1/4) + max(calc(var(--sf-px) * 0), var(--sf-dropdown--line-radius, var(--sf-radius-1/2)) - var(--sf-radius-1/2)) / 2)` | `padding-left`, `padding-right`, `padding-inline` |
+| `--sf-dropdown--tag-picture` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--tag .sf-dropdown-tag-container .sf-tag.sf-tag--inline.sf-tag--inline > .sf-avatar`: `max(var(--sf-b6), calc(var(--sf-dropdown-tag-line--box) - 2 * var(--sf-space-1/4)))` | `--sf-avatar--height`, `--sf-avatar--width`, `--sf-avatar--line-height` |
 | `--sf-dropdown--tag-radius` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-tag-container`: `var(--sf-tag-radius, max(var(--sf-radius-1/2), var(--sf-dropdown--line-radius) - var(--sf-space-1/4)))` | `--sf-tag--border-top-left-radius`, `--sf-tag--border-top-right-radius`, `--sf-tag--border-bottom-left-radius`, `--sf-tag--border-bottom-right-radius` |
 | `--sf-dropdown--value-inset` | `calc(var(--sf-dropdown--inset) + max(calc(var(--sf-px) * 0), var(--sf-dropdown--line-radius) - var(--sf-radius-1/2)) / 2)` | `--sf-dropdown-field--padding-inline-start` |
 | `--sf-dropdown-field--background-color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--outlined.sf-dropdown--text:not(:has(> .sf-dropdown-field > :disabled)) .sf-dropdown-field`: `var(--sf-dropdown-background-color, var(--sf-transparent))` | `background-color` |
-| `--sf-dropdown-field--border` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-field`: `var(--sf-px) solid` | `border`, `border-color`, `border-bottom-color`, `border-block-end-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
+| `--sf-dropdown-field--border` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-field`: `var(--sf-px) solid` | `border`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-color`, `border-bottom-color`, `border-block-end-color` |
 | `--sf-dropdown-field--border-color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--outlined.sf-dropdown--text:not(:has(> .sf-dropdown-field > :disabled)) .sf-dropdown-field`: `var(--sf-dropdown-border-color, var(--sf-outline))` | `border-color`, `border-bottom-color`, `border-block-end-color` |
 | `--sf-dropdown-field--gap` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1/2 .sf-dropdown-field`: `var(--sf-space-1/4)` | `gap` |
 | `--sf-dropdown-field--line-color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--filled.sf-dropdown--text:not(:has(> .sf-dropdown-field > :disabled)) .sf-dropdown-field`: `var(--sf-dropdown-border-color, var(--sf-outline))` | `border-bottom-color`, `border-block-end-color` |
@@ -255,15 +257,15 @@ document.querySelector('.sf-dropdown').addEventListener('change', (event) => {
 | `--sf-dropdown-placeholder--font-family` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--text .sf-dropdown-field input::-webkit-input-placeholder`: `var(--sf-text--family)` | `font-family` |
 | `--sf-dropdown-placeholder--font-size` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1.sf-dropdown--outlined.sf-dropdown--text .sf-dropdown-field input::-webkit-input-placeholder`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-dropdown-placeholder--line-height` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1.sf-dropdown--outlined.sf-dropdown--text .sf-dropdown-field input::-webkit-input-placeholder`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-dropdown-required--color` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-required`: `var(--sf-error)` | `color` |
+| `--sf-dropdown-required--color` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-required`: `var(--sf-on-surface)` | `color` |
 | `--sf-dropdown-required--font-family` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-required`: `var(--sf-text--family)` | `font-family` |
 | `--sf-dropdown-required--font-size` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1 .sf-dropdown-required`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-dropdown-required--font-weight` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-required`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-dropdown-required--line-height` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1 .sf-dropdown-required`: `var(--sf-text-height-1/2)` | `line-height` |
-| `--sf-dropdown-tag-container--gap` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--tag .sf-dropdown-tag-container`: `var(--sf-space-1/4)` | `gap` |
-| `--sf-dropdown-tag-line--box` | `var(--sf-dropdown-tag-line--height)` | `--sf-tag--line`, `height`, `block-size`, `width`, `inline-size`, `margin-top`, `margin-bottom`, `margin-block`, `max-height`, `max-block-size`, `--sf-flag--size`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `--sf-avatar--height`, `--sf-avatar--width`, `--sf-avatar--font-size`, `--sf-avatar--line-height`, `--sf-tag-color-icon--height`, `--sf-tag-color-icon--width` |
+| `--sf-dropdown-tag-container--gap` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--tag .sf-dropdown-tag-container`: `var(--sf-gap--tags)` | `gap` |
+| `--sf-dropdown-tag-line--box` | `var(--sf-dropdown-tag-line--height)` | `--sf-tag--line`, `--sf-dropdown--tag-picture`, `height`, `block-size`, `width`, `inline-size`, `margin-top`, `margin-bottom`, `margin-block`, `max-height`, `max-block-size`, `--sf-flag--size`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `--sf-avatar--height`, `--sf-avatar--width`, `--sf-avatar--font-size`, `--sf-avatar--line-height`, `--sf-tag-color-icon--height`, `--sf-tag-color-icon--width` |
 | `--sf-dropdown-tag-line--height` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1/2`: `var(--sf-text-height-1/2)` | `--sf-dropdown-tag-line--box` |
-| `--sf-dropdown-text--color` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-text`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-dropdown-text--color` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-text`: `var(--sf-on-surface)` | `color` |
 | `--sf-dropdown-text--font-family` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-text`: `var(--sf-text--family)` | `font-family` |
 | `--sf-dropdown-text--font-size` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1 .sf-dropdown-text`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-dropdown-text--font-weight` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-text`: `var(--sf-font-weight-regular)` | `font-weight` |

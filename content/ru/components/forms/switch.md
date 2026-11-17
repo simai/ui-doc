@@ -6,7 +6,7 @@ profile: reference
 
 # Переключатель
 
-:badge[sf-switch]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-switch]{variant=outline scheme=on-surface size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
 
 Переключатель включает или выключает настройку сразу после нажатия. Если
 значение уходит вместе с формой после подтверждения, берите
@@ -233,8 +233,8 @@ input, класс из `attrs.class` — на оболочку.
 | `--sf-switch-inner--height` | не задана; задают модификаторы, например `.sf-switch .sf-switch-inner`: `calc(var(--sf-switch--track-height) - 2 * var(--sf-switch--seat))` | `height`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
 | `--sf-switch-inner--travel` | не задана; задают модификаторы, например `.sf-switch .sf-switch-inner`: `0px` | `transform` |
 | `--sf-switch-inner--width` | не задана; задают модификаторы, например `.sf-switch .sf-switch-inner`: `calc(var(--sf-switch--track-height) - 2 * var(--sf-switch--seat))` | `width` |
-| `--sf-switch-toggler--background-color` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch-background-color, var(--sf-surface-place))` | `background-color`, `--sf-icon--color` |
-| `--sf-switch-toggler--border` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-style`, `border-width`, `--sf-switch-toggler--padding-bottom`, `--sf-switch-toggler--padding-inline-end`, `--sf-switch-toggler--padding-inline-start`, `--sf-switch-toggler--padding-top` |
+| `--sf-switch-toggler--background-color` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch-background-color, var(--sf-surface-place))` | `--sf-icon--color`, `background-color` |
+| `--sf-switch-toggler--border` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-px) solid` | `border`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-style`, `border-width`, `--sf-switch-toggler--padding-bottom`, `--sf-switch-toggler--padding-inline-end`, `--sf-switch-toggler--padding-inline-start`, `--sf-switch-toggler--padding-top`, `border-color` |
 | `--sf-switch-toggler--border-color` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-switch-toggler--border-end-end-radius` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch-radius, var(--sf-radius-circle))` | `border-end-end-radius` |
 | `--sf-switch-toggler--border-end-start-radius` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch-radius, var(--sf-radius-circle))` | `border-end-start-radius` |

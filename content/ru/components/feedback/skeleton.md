@@ -6,7 +6,7 @@ profile: reference
 
 # Скелетон
 
-:badge[sf-skeleton]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-skeleton]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Скелетон заранее занимает место загружаемого содержимого и повторяет его
 форму: строки текста, аватар, изображение. При замене интерфейс не смещается.
@@ -157,6 +157,7 @@ Framework вроде `d2`), `animation` (`pulse` — по умолчанию, `w
 | `--sf-skeleton-text--bar` | не задана; задают модификаторы, например `.sf-skeleton-text`: `calc(var(--sf-skeleton-text--height) * 0.727)` | `height`, `block-size`, `margin-top`, `margin-bottom`, `margin-block` |
 | `--sf-skeleton-text--box` | не задана; задают модификаторы, например `.sf-skeleton-text--size-1`: `var(--sf-ui-1--control-height)` | `width`, `inline-size`, `height`, `block-size` |
 | `--sf-skeleton-text--height` | не задана; задают модификаторы, например `.sf-skeleton-text--size-1`: `var(--sf-text-size-1)` | `--sf-skeleton-text--bar`, `height`, `block-size`, `margin-top`, `margin-bottom`, `margin-block`, `width`, `inline-size` |
+| `--sf-skeleton-text--icon` | не задана; задают модификаторы, например `.sf-skeleton-text--size-1`: `var(--sf-text-height-1)` | `width`, `inline-size`, `height`, `block-size` |
 | `--sf-skeleton-text--line` | не задана; задают модификаторы, например `.sf-skeleton-text--size-1`: `var(--sf-text-height-1)` | `margin-top`, `margin-bottom`, `margin-block` |
 
 ## См. также

@@ -5,7 +5,7 @@ description: "Показывает ожидание, длительность к
 
 # Спиннер
 
-:badge[sf-spinner]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-spinner]{variant=outline scheme=on-surface size=1/2} :badge[1.5.2]{variant=outline scheme=on-surface size=1/2}
 
 Спиннер показывает, что работа идёт, но сколько ещё ждать — неизвестно: запрос
 к серверу, подготовка отчёта. Если доля выполненного известна, берите
@@ -209,11 +209,8 @@ report.append(spinner);
 | `delay` | целое число | `1000` | от 0 | Сколько миллисекунд ждать, прежде чем показать индикатор: ожидание короче ничего не показывает. 0 — показывать сразу. Пишется как data-delay; без атрибута действует 1 с из стилей. |
 | `label-hidden` | да/нет | нет | — | Подпись произносится, но не показывается: остаётся именем индикатора для экранного диктора (и тем, что говорит announce), а на странице видно только кольцо. label="" берёт слова из обоих. |
 | `kind` | строка | пусто | пусто, `arc` | Один вид — дуга. breathing, comet и dots — прежние значения до 2027-01-01 и рисуют дугу; так же и data-sf-spinner страницы. |
-| `dots` | целое число | `8` | от 1; шаблон `^(?:[3-9]\|[12][0-9]\|3[0-2])$` | — |
-| `filled` | целое число | `3` | от 0; шаблон `^(?:[1-9]\|[12][0-9]\|3[0-2])$` | — |
 | `infinite` | да/нет | нет | — | — |
 | `announce` | да/нет | нет | — | — |
-| `direction` | строка | `clockwise` | `clockwise`, `counterclockwise` | — |
 
 #### Общие для всех компонентов
 
@@ -240,13 +237,13 @@ report.append(spinner);
 
 | | |
 |:---|:---|
-| Тег | `<sf-spinner>`, контракт `smart.spinner` версии `1.4.0` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-spinner>`, контракт `smart.spinner` версии `1.5.2` |
+| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как строка состояния; желательна подпись или `aria-label`. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/spinner` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-spinner` |
+| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/spinner` |
+| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-spinner` |
 
 ## См. также
 

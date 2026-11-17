@@ -37,15 +37,17 @@ description: "Задаёт элементу постоянную пропорц�
 | Класс | CSS | Значения |
 |:---|:---|:---|
 | `aspect-1x1` | `aspect-ratio: 1 / 1` | — |
+| `aspect-4x3` | `aspect-ratio: 4 / 3` | — |
+| `aspect-3x2` | `aspect-ratio: 3 / 2` | — |
+| `aspect-16x9` | `aspect-ratio: 16 / 9` | — |
+| `aspect-21x9` | `aspect-ratio: 21 / 9` | — |
+| `aspect-3x4` | `aspect-ratio: 3 / 4` | — |
+| `aspect-auto` | `aspect-ratio: auto` | — |
 | `aspect-1x2` | `aspect-ratio: 1 / 2` | — |
 | `aspect-2x1` | `aspect-ratio: 2 / 1` | — |
 | `aspect-2x3` | `aspect-ratio: 2 / 3` | — |
 | `aspect-3x1` | `aspect-ratio: 3 / 1` | — |
-| `aspect-3x2` | `aspect-ratio: 3 / 2` | — |
-| `aspect-3x4` | `aspect-ratio: 3 / 4` | — |
 | `aspect-4x1` | `aspect-ratio: 4 / 1` | — |
-| `aspect-4x3` | `aspect-ratio: 4 / 3` | — |
-| `aspect-16x9` | `aspect-ratio: 16 / 9` | — |
 | `aspect-9x16` | `aspect-ratio: 9 / 16` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:aspect-1x1`.

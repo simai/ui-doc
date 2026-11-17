@@ -23,7 +23,9 @@ description: "Делает элемент прозрачным для мыши �
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
+| `pointer-events-none` | `pointer-events: none` | — |
 | `pointer-event-none` | `pointer-events: none` | — |
+| `pointer-events-auto` | `pointer-events: auto` | — |
 | `pointer-event-auto` | `pointer-events: auto` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.

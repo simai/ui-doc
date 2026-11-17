@@ -371,7 +371,7 @@ set.renderCellField(status, 'live');
 | `text` | Текст | — | `placeholder`, `required`, `readonly` | есть | есть | текстовый | своё |
 | `html` | Форматированный текст | — | `placeholder`, `required`, `readonly` | есть | есть | своё | текстовый |
 | `integer` | Целое число | `stepper` — Кнопками «−» и «+» | `unit`, `min`, `max`, `step`, `required`, `readonly` | есть | есть | своё | своё |
-| `number` | Число | `scale` — Шкала 0–100, `stepper` — Кнопками «−» и «+» | `unit`, `min`, `max`, `step`, `precision`, `required`, `readonly` | есть | есть | своё | своё |
+| `number` | Число | `scale` — Шкала 0–100, `meter` — Доля предела, `stepper` — Кнопками «−» и «+» | `unit`, `min`, `max`, `step`, `precision`, `required`, `readonly` | есть | есть | своё | своё |
 | `date` | Дата | — | `required`, `readonly` | есть | есть | своё | своё |
 | `datetime` | Дата и время | — | `min`, `max`, `step`, `required`, `readonly` | есть | есть | своё | своё |
 | `time` | Время | — | `min`, `max`, `step`, `required`, `readonly` | есть | есть | своё | текстовый |

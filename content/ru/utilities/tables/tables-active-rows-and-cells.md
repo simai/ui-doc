@@ -30,10 +30,10 @@ description: "Подсвечивает выбранную строку или я
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `table-stripe` | `.table-stripe > :not(caption) > tr.table-active > :nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }; .table-stripe > :not(caption) > tr > .table-active:nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }` | — |
-| `table-stripe-col` | `.table-stripe-col > :not(caption) > tr.table-active > :nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }; .table-stripe-col > :not(caption) > tr > .table-active:nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }` | — |
-| `table-active` | `--sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg); .table-active > :nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }` | — |
-| `table-hover` | `.table-hover > tbody > tr:hover > * { --sf-table-accent-bg: var(--sf-table-hover-bg); color: var(--sf-table-hover-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }; .table-hover.table-stripe > tbody > tr:nth-of-type(odd):hover > * { --sf-table-accent-bg: var(--sf-surface-state-select); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }` | — |
+| `table-stripe` | `.table-stripe > :not(caption) > tr.table-active > :nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }; .table-stripe > :not(caption) > tr > .table-active:nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }; .table-stripe > tbody > tr.table-active:nth-of-type(odd) > :nth-child(n) { --sf-table-accent-bg: var(--sf-surface-state-active); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }` | — |
+| `table-stripe-col` | `.table-stripe-col > :not(caption) > tr.table-active > :nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }; .table-stripe-col > :not(caption) > tr > .table-active:nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }; .table-stripe-col > :not(caption) > tr.table-active > :nth-child(2n) { --sf-table-accent-bg: var(--sf-surface-state-active); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }` | — |
+| `table-active` | `--sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg); .table-active > :nth-child(n) { --sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }; tr.table-active > :first-child { box-shadow: inset calc(var(--sf-px) * 2) 0 0 var(--sf-primary) }` | — |
+| `table-hover` | `.table-hover > tbody > tr:hover > * { --sf-table-accent-bg: var(--sf-table-hover-bg); color: var(--sf-table-hover-color); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }; .table-hover.table-stripe > tbody > tr:nth-of-type(odd):hover > * { --sf-table-accent-bg: var(--sf-surface-state-active); --sf-surface-underlay: var(--sf-surface-place-solid); --sf-surface-place-fill: var(--sf-table-accent-bg) }` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
@@ -48,9 +48,11 @@ description: "Подсвечивает выбранную строку или я
 | `--sf-table-active-bg` | задаётся темой |
 | `--sf-table-active-color` | задаётся темой |
 | `--sf-surface-place-solid` | `var(--sf-surface-page)` |
+| `--sf-surface-state-active` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` |
+| `--sf-px` | `1px` |
+| `--sf-primary` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` |
 | `--sf-table-hover-bg` | задаётся темой |
 | `--sf-table-hover-color` | задаётся темой |
-| `--sf-surface-state-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
 
 ## Применение
 

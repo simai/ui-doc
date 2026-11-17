@@ -5,7 +5,7 @@ description: "Даёт переставлять элементы, перенос
 
 # Перетаскивание
 
-:badge[sf-sortable]{variant=outline scheme=on-surface size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-sortable]{variant=outline scheme=on-surface size=1/2} :badge[1.5.2]{variant=outline scheme=on-surface size=1/2}
 
 Перетаскивание даёт переставлять элементы списка, переносить их в другие
 списки той же группы и копировать из библиотеки — мышью, пером, касанием и
@@ -247,13 +247,13 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 
 | | |
 |:---|:---|
-| Тег | `<sf-sortable>`, контракт `smart.sortable` версии `1.2.3` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-sortable>`, контракт `smart.sortable` версии `1.5.2` |
+| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; желательна подпись или `aria-label`; с клавиатуры: `Пробел`, `Enter`, `↑`, `↓`, `←`, `→`, `Esc`, `Tab`, `+`, `Home`, `End`. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/sortable` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-sortable` |
+| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/sortable` |
+| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-sortable` |
 
 ## См. также
 

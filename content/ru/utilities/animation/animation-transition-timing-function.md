@@ -21,6 +21,9 @@ description: "Задаёт, как переход набирает и сбрас
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
+| `ease-enter` | `transition-timing-function: var(--sf-ease-enter)` | — |
+| `ease-exit` | `transition-timing-function: var(--sf-ease-exit)` | — |
+| `ease-move` | `transition-timing-function: var(--sf-ease-move)` | — |
 | `ease-linear` | `transition-timing-function: linear` | — |
 | `ease-in` | `transition-timing-function: cubic-bezier(0.4, 0, 1, 1)` | — |
 | `ease-out` | `transition-timing-function: cubic-bezier(0, 0, 0.2, 1)` | — |
@@ -29,6 +32,16 @@ description: "Задаёт, как переход набирает и сбрас
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-ease-enter` | `cubic-bezier(.19, 1, .22, 1)` |
+| `--sf-ease-exit` | `cubic-bezier(.65, 0, .4, 1)` |
+| `--sf-ease-move` | `cubic-bezier(.65, 0, .35, 1)` |
 
 ## Применение
 

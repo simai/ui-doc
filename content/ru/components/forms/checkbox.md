@@ -6,7 +6,7 @@ profile: reference
 
 # Флажок
 
-:badge[sf-checkbox]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-checkbox]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Флажок включает независимый параметр или выбирает несколько значений из
 списка. Для одного выбора из взаимоисключающих вариантов берите
@@ -213,7 +213,7 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 | `--sf-checkbox--easing` | `var(--sf-ease-move)` | `transition`, `transition-timing-function` |
 | `--sf-checkbox--gap` | не задана; задают модификаторы, например `.sf-checkbox--size-1/2`: `var(--sf-checkbox-gap, var(--sf-space-1/2))` | `gap` |
 | `--sf-checkbox-box--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-background-color, var(--sf-surface-place))` | `background-color` |
-| `--sf-checkbox-box--border` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-border-width, var(--sf-px)) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
+| `--sf-checkbox-box--border` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-border-width, var(--sf-px)) solid` | `border`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-color` |
 | `--sf-checkbox-box--border-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-checkbox-box--border-end-end-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-radius, var(--sf-radius--ui))` | `border-end-end-radius` |
 | `--sf-checkbox-box--border-end-start-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-radius, var(--sf-radius--ui))` | `border-end-start-radius` |
@@ -229,7 +229,7 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 | `--sf-checkbox-description--font-weight` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-description`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-checkbox-description--line-height` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-description`: `var(--sf-text-height-1/3)` | `line-height` |
 | `--sf-checkbox-label--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `transparent` | `background-color` |
-| `--sf-checkbox-label--color` | не задана; задают модификаторы, например `.sf-checkbox:not(.error):has(input:not(:checked)) .sf-checkbox-label`: `var(--sf-on-surface)` | `color` |
+| `--sf-checkbox-label--color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `var(--sf-on-surface)` | `color` |
 | `--sf-checkbox-label--font-family` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `var(--sf-text--family)` | `font-family` |
 | `--sf-checkbox-label--font-size` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-label`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-checkbox-label--font-weight` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `var(--sf-font-weight-regular)` | `font-weight` |

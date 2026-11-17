@@ -349,6 +349,20 @@
     "SF.ThemePalette": {
       "page": "/ru/smart/forms/color/#тема-в-коде",
       "label": "Цвет: тема в коде"
+    },
+    "SF.displaySettings": {
+      "text": "Размер текста, цветовая схема, интервалы и движение, которые человек выбрал для сайта.",
+      "page": "/ru/guide/functions/person/display-settings/",
+      "label": "Настройки отображения"
+    },
+    "SF.menu": {
+      "text": "Открывает одно меню действий страницы у кнопки или в точке и отвечает выбранной строкой.",
+      "page": "/ru/smart/navigation/context-menu/#одно-меню-страницы",
+      "label": "Контекстное меню"
+    },
+    "SF.Gallery": {
+      "page": "/ru/smart/content/gallery/#просмотр-без-галереи",
+      "label": "Галерея"
     }
   }
 }

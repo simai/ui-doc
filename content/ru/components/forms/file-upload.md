@@ -6,7 +6,7 @@ profile: reference
 
 # Загрузка файлов
 
-:badge[sf-file-upload]{variant=outline scheme=on-surface size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-upload]{variant=outline scheme=on-surface size=1/2} :badge[1.7.1]{variant=outline scheme=on-surface size=1/2}
 
 Загрузка файлов принимает один или несколько файлов через системное окно или
 перетаскиванием и показывает список выбранных файлов с ходом передачи. Сами
@@ -205,8 +205,8 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-file-upload` |
-| Части | `sf-file-upload-block`, `sf-file-upload-block-text`, `sf-file-upload-bottom`, `sf-file-upload-files`, `sf-file-upload-link`, `sf-file-upload-message`, `sf-file-upload-text` |
-| Размеры | `sf-file-upload--size-1`, `sf-file-upload--size-1/2`, `sf-file-upload--size-2` |
+| Части | `sf-file-upload-block`, `sf-file-upload-block-text`, `sf-file-upload-bottom`, `sf-file-upload-drag`, `sf-file-upload-files`, `sf-file-upload-item`, `sf-file-upload-label`, `sf-file-upload-label--size-1`, `sf-file-upload-label--size-1/2`, `sf-file-upload-label--size-1/3`, `sf-file-upload-label--size-2`, `sf-file-upload-label--size-3`, `sf-file-upload-link`, `sf-file-upload-message`, `sf-file-upload-status`, `sf-file-upload-text` |
+| Размеры | `sf-file-upload--size-1`, `sf-file-upload--size-1/2`, `sf-file-upload--size-1/3`, `sf-file-upload--size-2`, `sf-file-upload--size-3` |
 
 **`sf-upload-progress`**
 
@@ -263,6 +263,8 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 | `--sf-file-upload-block-text--line-height` | не задана; задают модификаторы, например `.sf-file-upload--size-1 .sf-file-upload-block-text`: `var(--sf-text-height-1)` | `line-height` |
 | `--sf-file-upload-bottom--background-color` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-bottom`: `transparent` | `background-color` |
 | `--sf-file-upload-bottom--gap` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-bottom`: `var(--sf-space-1/4)` | `gap` |
+| `--sf-file-upload-label--font-size` | не задана; задают модификаторы, например `.sf-file-upload-label--size-1/3`: `var(--sf-text-size-1/3)` | `font-size` |
+| `--sf-file-upload-label--line-height` | не задана; задают модификаторы, например `.sf-file-upload-label--size-1/3`: `var(--sf-text-height-1/3)` | `line-height`, `height`, `block-size` |
 | `--sf-file-upload-link--color` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-link`: `var(--sf-file-upload-link-color, var(--sf-primary))` | `color` |
 | `--sf-file-upload-link--font-family` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-link`: `var(--sf-text--family)` | `font-family` |
 | `--sf-file-upload-link--font-size` | не задана; задают модификаторы, например `.sf-file-upload--size-1 .sf-file-upload-link`: `var(--sf-text-size-1)` | `font-size` |
@@ -290,7 +292,7 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 | `--sf-upload-progress-repeat--font-family` | не задана; задают модификаторы, например `.sf-upload-progress--error .sf-upload-progress-repeat`: `var(--sf-text--family)` | `font-family` |
 | `--sf-upload-progress-repeat--font-size` | не задана; задают модификаторы, например `.sf-upload-progress.sf-upload-progress--error.sf-upload-progress--size-1 .sf-upload-progress-repeat`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-upload-progress-repeat--font-weight` | не задана; задают модификаторы, например `.sf-upload-progress--error .sf-upload-progress-repeat`: `var(--sf-font-weight-regular)` | `font-weight` |
-| `--sf-upload-progress-repeat--inset` | не задана; задают модификаторы, например `.sf-upload-progress .sf-upload-progress-repeat`: `max(var(--sf-upload-progress-repeat--padding-inline), var(--sf-focus-outline-width))` | `max-width`, `max-inline-size`, `margin-left`, `margin-right`, `margin-inline`, `padding-left`, `padding-right`, `padding-inline` |
+| `--sf-upload-progress-repeat--inset` | не задана; задают модификаторы, например `.sf-upload-progress .sf-upload-progress-repeat`: `max(var(--sf-upload-progress-repeat--padding-inline), var(--sf-focus--width))` | `max-width`, `max-inline-size`, `margin-left`, `margin-right`, `margin-inline`, `padding-left`, `padding-right`, `padding-inline` |
 | `--sf-upload-progress-repeat--line-height` | не задана; задают модификаторы, например `.sf-upload-progress.sf-upload-progress--error.sf-upload-progress--size-1 .sf-upload-progress-repeat`: `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-upload-progress-repeat--padding-block` | не задана; задают модификаторы, например `.sf-upload-progress.sf-upload-progress--error.sf-upload-progress--size-1 .sf-upload-progress-repeat`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-top`, `padding-bottom`, `padding-block` |
 | `--sf-upload-progress-repeat--padding-inline` | не задана; задают модификаторы, например `.sf-upload-progress.sf-upload-progress--error.sf-upload-progress--size-1 .sf-upload-progress-repeat`: `var(--sf-ui-1--space-x)` | `--sf-upload-progress-repeat--inset` |

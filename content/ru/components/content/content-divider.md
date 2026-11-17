@@ -6,7 +6,7 @@ profile: reference
 
 # Разделитель
 
-:badge[sf-divider]{variant=outline scheme=on-surface size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-divider]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Разделитель отделяет соседние части содержимого или действий линией. Для
 простой границы между разделами достаточно `<hr>`; компонент нужен, когда
@@ -102,7 +102,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-divider` |
-| Части | `sf-divider-borders`, `sf-divider-button`, `sf-divider-button--left`, `sf-divider-button--right`, `sf-divider-button--solo`, `sf-divider-button-square--left`, `sf-divider-button-square--right`, `sf-divider-buttons`, `sf-divider-content`, `sf-divider-content--bold`, `sf-divider-content--small`, `sf-divider-content-border`, `sf-divider-horizontal`, `sf-divider-vertical` |
+| Части | `sf-divider-borders`, `sf-divider-button`, `sf-divider-button--left`, `sf-divider-button--right`, `sf-divider-button--solo`, `sf-divider-button-square--left`, `sf-divider-button-square--right`, `sf-divider-buttons`, `sf-divider-content`, `sf-divider-content--bold`, `sf-divider-content-border`, `sf-divider-horizontal`, `sf-divider-vertical` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -116,16 +116,16 @@ profile: reference
 | `--sf-divider--border-color` | `var(
       --sf-divider-borders--border-color,
       var(--sf-outline-variant)
-    )` | `border-top`, `border-bottom`, `border-block` |
-| `--sf-divider--gap` | `var(--sf-space-1)` | `gap` |
-| `--sf-divider--length` | `var(--sf-d0)` | `min-height`, `min-block-size` |
-| `--sf-divider--thickness` | `var(--sf-px)` | `height`, `block-size`, `width`, `inline-size`, `border-top`, `border-bottom`, `border-block`, `border`, `border-inline-end-width` |
-| `--sf-divider-buttons--gap` | не задана; задают модификаторы, например `.sf-divider-buttons`: `var(--sf-space-1/3)` | `gap` |
+    )` | `border-top-color`, `border-bottom-color`, `border-block-color` |
+| `--sf-divider--gap` | `var(--sf-space-1/2)` | `gap` |
+| `--sf-divider--length` | `var(--sf-text-height-1)` | `min-height`, `min-block-size` |
+| `--sf-divider--thickness` | `var(--sf-px)` | `height`, `block-size`, `width`, `inline-size`, `border-top-width`, `border-bottom-width`, `border-block-width`, `border-width`, `border-inline-end-width` |
+| `--sf-divider-buttons--gap` | не задана; задают модификаторы, например `.sf-divider-buttons`: `var(--sf-gap--actions)` | `gap` |
 | `--sf-divider-content--background-color` | `var(--sf-transparent)` | `background-color` |
-| `--sf-divider-content--color` | `var(--sf-on-surface)` | `color` |
-| `--sf-divider-content--font-size` | `var(--sf-text--size)` | `font-size` |
-| `--sf-divider-content--line-height` | `var(--sf-text--height)` | `line-height` |
-| `--sf-divider-content--padding` | `var(--sf-space-1/3) 0` | `padding` |
+| `--sf-divider-content--color` | `var(--sf-on-surface-variant)` | `color` |
+| `--sf-divider-content--font-size` | `var(--sf-text-size-1/2)` | `font-size` |
+| `--sf-divider-content--line-height` | `var(--sf-text-height-1/2)` | `line-height` |
+| `--sf-divider-content--padding` | `var(--sf-0)` | `padding` |
 
 ## См. также
 

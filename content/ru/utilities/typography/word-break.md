@@ -20,7 +20,9 @@ description: "Разрешает или запрещает разрывать д
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
+| `text-break` | `word-wrap: anywhere` | — |
 | `text-break-normal` | `word-wrap: normal; word-break: normal` | — |
+| `text-hyphens` | `hyphens: auto` | — |
 | `text-break-word` | `word-wrap: break-word` | — |
 | `text-break-all` | `word-break: break-all` | — |
 

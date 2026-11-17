@@ -6,7 +6,7 @@ profile: reference
 
 # Флаг
 
-:badge[sf-flag]{variant=outline scheme=on-surface size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-flag]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Флаг показывает страну картинкой: в телефонном поле, списке стран, рядом с
 ценой или адресом. Берите его вместо флага-эмодзи: эмодзи рисует системный
@@ -147,8 +147,8 @@ SF.Flag.render(flag);
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-flag--default-size` | не задана; задают модификаторы, например `.sf-flag--circle`: `var(--sf-icon-size-3)` | `--sf-flag--height` |
-| `--sf-flag--height` | `var(--sf-flag-size, var(--sf-flag--size, var(--sf-flag--default-size, var(--sf-icon-size-2))))` | `height`, `block-size`, `width`, `inline-size` |
+| `--sf-flag--default-size` | не задана; задают модификаторы, например `.sf-flag--circle`: `var(--sf-text-height-1)` | `--sf-flag--height` |
+| `--sf-flag--height` | `var(--sf-flag-size, var(--sf-flag--size, var(--sf-flag--default-size, var(--sf-text-height-1/2))))` | `vertical-align`, `height`, `block-size`, `width`, `inline-size` |
 | `--sf-flag--outline-color` | `var(--sf-flag-outline-color, var(--sf-outline-variant))` | `outline` |
 | `--sf-flag--outline-width` | `var(--sf-flag-outline-width, var(--sf-px))` | `outline`, `outline-offset` |
 | `--sf-flag--radius` | `var(--sf-flag-radius, var(--sf-radius--ui))` | `border-radius` |

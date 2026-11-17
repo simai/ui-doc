@@ -6,7 +6,7 @@ profile: reference
 
 # Аватары
 
-:badge[sf-avatar]{variant=outline scheme=on-surface size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-avatar]{variant=outline scheme=on-surface size=1/2} :badge[1.12.1]{variant=outline scheme=on-surface size=1/2}
 
 Аватар помогает быстро узнать человека, организацию или системный объект по
 фотографии, инициалам или значку. Он представляет идентичность, а не
@@ -226,7 +226,7 @@ unread" и "new". В имени всегда точное число: при `99
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-avatar` |
-| Части | `sf-avatar-badge`, `sf-avatar-badge--company`, `sf-avatar-badge--size-1`, `sf-avatar-badge--size-1/2`, `sf-avatar-badge--size-1/3`, `sf-avatar-badge--size-1/4`, `sf-avatar-badge--size-2`, `sf-avatar-badge--size-3`, `sf-avatar-badge--verified`, `sf-avatar-badge-glyph`, `sf-avatar-badge-plate`, `sf-avatar-card`, `sf-avatar-card--portrait`, `sf-avatar-card--square`, `sf-avatar-card-content`, `sf-avatar-card-image`, `sf-avatar-card-initials`, `sf-avatar-card-placeholder`, `sf-avatar-card-placeholder--text`, `sf-avatar-card-portrait`, `sf-avatar-card-row`, `sf-avatar-card-square`, `sf-avatar-card-title`, `sf-avatar-group`, `sf-avatar-group--size-1/2`, `sf-avatar-group--size-1/3`, `sf-avatar-group--size-1/4`, `sf-avatar-group--size-md`, `sf-avatar-group--size-sm`, `sf-avatar-group--size-xs`, `sf-avatar-group-avatars`, `sf-avatar-image`, `sf-avatar-label-group`, `sf-avatar-label-group--size-1`, `sf-avatar-label-group--size-1/2`, `sf-avatar-label-group--size-1/3`, `sf-avatar-label-group--size-1/4`, `sf-avatar-label-group--size-2`, `sf-avatar-label-group--size-3`, `sf-avatar-label-group--status-icon-company`, `sf-avatar-label-group-container`, `sf-avatar-label-group-text`, `sf-avatar-label-group-title` |
+| Части | `sf-avatar-anchor`, `sf-avatar-badge`, `sf-avatar-badge--company`, `sf-avatar-badge--size-1`, `sf-avatar-badge--size-1/2`, `sf-avatar-badge--size-1/3`, `sf-avatar-badge--size-1/4`, `sf-avatar-badge--size-2`, `sf-avatar-badge--size-3`, `sf-avatar-badge--verified`, `sf-avatar-badge-glyph`, `sf-avatar-badge-plate`, `sf-avatar-card`, `sf-avatar-card--portrait`, `sf-avatar-card--portrait-9x16`, `sf-avatar-card--square`, `sf-avatar-card-content`, `sf-avatar-card-image`, `sf-avatar-card-initials`, `sf-avatar-card-placeholder`, `sf-avatar-card-placeholder--text`, `sf-avatar-card-portrait`, `sf-avatar-card-row`, `sf-avatar-card-square`, `sf-avatar-card-title`, `sf-avatar-group`, `sf-avatar-group--size-1/2`, `sf-avatar-group--size-1/3`, `sf-avatar-group--size-1/4`, `sf-avatar-group--size-md`, `sf-avatar-group--size-sm`, `sf-avatar-group--size-xs`, `sf-avatar-group-avatars`, `sf-avatar-group-list`, `sf-avatar-group-list-item`, `sf-avatar-group-list-name`, `sf-avatar-group-more`, `sf-avatar-image`, `sf-avatar-label-group`, `sf-avatar-label-group--size-1`, `sf-avatar-label-group--size-1/2`, `sf-avatar-label-group--size-1/3`, `sf-avatar-label-group--size-1/4`, `sf-avatar-label-group--size-2`, `sf-avatar-label-group--size-3`, `sf-avatar-label-group-container`, `sf-avatar-label-group-text`, `sf-avatar-label-group-title`, `sf-avatar-text` |
 | Модификаторы | `sf-avatar--expressive`, `sf-avatar--line-1`, `sf-avatar--line-1/2`, `sf-avatar--line-2`, `sf-avatar--picture`, `sf-avatar--placeholder`, `sf-avatar--square`, `sf-avatar--text` |
 | Размеры | `sf-avatar--size-1`, `sf-avatar--size-1/2`, `sf-avatar--size-1/3`, `sf-avatar--size-1/4`, `sf-avatar--size-2`, `sf-avatar--size-3` |
 
@@ -235,7 +235,7 @@ unread" и "new". В имени всегда точное число: при `99
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-online-indicator` |
-| Модификаторы | `sf-online-indicator--offline`, `sf-online-indicator--online` |
+| Модификаторы | `sf-online-indicator--away`, `sf-online-indicator--offline`, `sf-online-indicator--online` |
 | Размеры | `sf-online-indicator--size-1`, `sf-online-indicator--size-1/2`, `sf-online-indicator--size-1/3`, `sf-online-indicator--size-1/4`, `sf-online-indicator--size-2`, `sf-online-indicator--size-3` |
 
 **`sf-add-button`**
@@ -259,8 +259,6 @@ unread" и "new". В имени всегда точное число: при `99
 | `--sf-avatar-border-color` | Цвет рамки в покое; у наведения — свой. | `transparent` |
 | `--sf-avatar-border-width` | Ширина рамки со всех сторон. | `var(--sf-px)` |
 | `--sf-avatar-radius` | Скругление углов — одинаково для круглой и квадратной формы. | `var(--sf-radius-circle)`; зависит от вида |
-| `--sf-avatar-offline-background-color` | Цвет точки «не в сети»: приглушённый цвет текста места (с 2026-11-11; раньше это был цвет места под цветом недоступного текста, контраст ниже 3:1) поверх ближайшего непрозрачного места (--sf-surface-place-ground), поэтому сквозь точку не видны ни фото, ни инициалы — и на мягком цветном месте тоже. | `var(--sf-on-surface-variant)` |
-| `--sf-avatar-offline-overlay` | Слой поверх этого цвета, по умолчанию его нет (до 2026-11-11 здесь был цвет недоступного текста). Страница может положить сюда картинку или градиент поверх точки. | `none` |
 
 ```css
 .sf-avatar {
@@ -275,23 +273,30 @@ unread" и "new". В имени всегда точное число: при `99
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-avatar--background-color` | `var(--sf-avatar-background-color, transparent)` | `background-color` |
-| `--sf-avatar--border-bottom-left-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-radius--ui))` | `border-end-start-radius` |
-| `--sf-avatar--border-bottom-right-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-radius--ui))` | `border-end-end-radius` |
+| `--sf-avatar--border-bottom-left-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-avatar--square-radius))` | `border-end-start-radius` |
+| `--sf-avatar--border-bottom-right-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-avatar--square-radius))` | `border-end-end-radius` |
 | `--sf-avatar--border-bottom-width` | `var(--sf-avatar-border-width, var(--sf-px))` | `border-bottom-width` |
-| `--sf-avatar--border-color` | не задана; задают модификаторы, например `.disabled .sf-avatar`: `transparent` | `border-color`, `outline` |
+| `--sf-avatar--border-color` | не задана; задают модификаторы, например `.disabled .sf-avatar`: `transparent` | `outline`, `border-color` |
 | `--sf-avatar--border-inline-end-width` | `var(--sf-avatar-border-width, var(--sf-px))` | `border-inline-end-width` |
 | `--sf-avatar--border-inline-start-width` | `var(--sf-avatar-border-width, var(--sf-px))` | `border-inline-start-width` |
 | `--sf-avatar--border-style` | не задана; задают модификаторы, например `button.sf-avatar:not(:disabled):not(.disabled):hover`: `solid` | `border-style` |
-| `--sf-avatar--border-top-left-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-radius--ui))` | `border-start-start-radius` |
-| `--sf-avatar--border-top-right-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-radius--ui))` | `border-start-end-radius` |
+| `--sf-avatar--border-top-left-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-avatar--square-radius))` | `border-start-start-radius` |
+| `--sf-avatar--border-top-right-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-avatar--square-radius))` | `border-start-end-radius` |
 | `--sf-avatar--border-top-width` | `var(--sf-avatar-border-width, var(--sf-px))` | `border-top-width` |
 | `--sf-avatar--border-width` | не задана; задают модификаторы, например `button.sf-avatar:not(:disabled):not(.disabled):hover`: `var(--sf-px)` | `border-width` |
 | `--sf-avatar--color` | не задана; задают модификаторы, например `.sf-avatar--text.sf-hue-red`: `var(--sf-avatar-color, var(--sf-on-hue-container))` | `color` |
 | `--sf-avatar--font-size` | не задана; задают модификаторы, например `.sf-avatar--size-1`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-avatar--glyph-size` | не задана; задают модификаторы, например `.sf-avatar .sf-icon`: `calc(var(--sf-b2)
+      + clamp(var(--sf-a0), (var(--sf-avatar--width) - var(--sf-c2) + var(--sf-a1)) * 1000, var(--sf-a4))
+      + clamp(var(--sf-a0), (var(--sf-avatar--width) - var(--sf-c6) + var(--sf-a1)) * 1000, var(--sf-a4))
+      + clamp(var(--sf-a0), (var(--sf-avatar--width) - var(--sf-c8) + var(--sf-a1)) * 1000, var(--sf-a4))
+      + clamp(var(--sf-a0), (var(--sf-avatar--width) - var(--sf-d1) + var(--sf-a1)) * 1000, var(--sf-a4))
+      + clamp(var(--sf-a0), (var(--sf-avatar--width) - var(--sf-d3) + var(--sf-a1)) * 1000, var(--sf-a4)))` | `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
 | `--sf-avatar--height` | не задана; задают модификаторы, например `.sf-avatar--size-1`: `var(--sf-ui-1--control-height)` | `height` |
 | `--sf-avatar--line-height` | не задана; задают модификаторы, например `.sf-avatar--size-1`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-avatar--width` | не задана; задают модификаторы, например `.sf-avatar--size-1`: `var(--sf-ui-1--control-height)` | `width`, `background-size` |
-| `--sf-avatar-badge--border` | не задана; задают модификаторы, например `.sf-avatar .sf-avatar-badge.sf-avatar-badge--company`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-style`, `border-width` |
+| `--sf-avatar--square-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-radius--ui)` | `--sf-avatar--border-bottom-right-radius`, `--sf-avatar--border-bottom-left-radius`, `--sf-avatar--border-top-right-radius`, `--sf-avatar--border-top-left-radius` |
+| `--sf-avatar--width` | не задана; задают модификаторы, например `.sf-avatar--size-1`: `var(--sf-ui-1--control-height)` | `width`, `--sf-avatar--glyph-size`, `background-size` |
+| `--sf-avatar-badge--border` | не задана; задают модификаторы, например `.sf-avatar .sf-avatar-badge.sf-avatar-badge--company`: `var(--sf-px) solid` | `border`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-style`, `border-width`, `border-color` |
 | `--sf-avatar-badge--border-color` | не задана; задают модификаторы, например `.sf-avatar .sf-avatar-badge.sf-avatar-badge--company`: `var(--sf-surface-place)` | `border-color` |
 | `--sf-avatar-badge--border-end-end-radius` | не задана; задают модификаторы, например `.sf-avatar .sf-avatar-badge.sf-avatar-badge--company`: `var(--sf-radius-circle)` | `border-end-end-radius` |
 | `--sf-avatar-badge--border-end-start-radius` | не задана; задают модификаторы, например `.sf-avatar .sf-avatar-badge.sf-avatar-badge--company`: `var(--sf-radius-circle)` | `border-end-start-radius` |
@@ -300,17 +305,18 @@ unread" и "new". В имени всегда точное число: при `99
 | `--sf-avatar-badge--border-style` | не задана; задают модификаторы, например `.sf-avatar .sf-avatar-badge.sf-avatar-badge--company`: `solid` | `border-style` |
 | `--sf-avatar-badge--border-width` | не задана; задают модификаторы, например `.sf-avatar .sf-avatar-badge.sf-avatar-badge--company`: `var(--sf-px)` | `border-width` |
 | `--sf-avatar-badge--width` | не задана; задают модификаторы, например `.sf-avatar-badge--size-1`: `var(--sf-micro--badge-1)` | `width`, `height` |
+| `--sf-avatar-group--overlap` | не задана; задают модификаторы, например `.sf-avatar-group .sf-avatar-group-avatars > *`: `var(--sf-space-1/4)` | `margin-inline-start` |
 | `--sf-avatar-group--ring` | не задана; задают модификаторы, например `.sf-avatar-group .sf-avatar--size-1/4`: `var(--sf-micro--ring-1/4)` | `border`, `border-width` |
-| `--sf-avatar-label-group--gap` | не задана; задают модификаторы, например `.sf-avatar-label-group--size-1`: `var(--sf-space-1/2)` | `gap` |
-| `--sf-avatar-label-group-text--font-size` | не задана; задают модификаторы, например `.sf-avatar-label-group.sf-avatar-label-group--size-2.sf-avatar-label-group--status-icon-company .sf-avatar-label-group-text`: `var(--sf-text-size-1)` | `font-size` |
-| `--sf-avatar-label-group-text--line-height` | не задана; задают модификаторы, например `.sf-avatar-label-group.sf-avatar-label-group--size-2.sf-avatar-label-group--status-icon-company .sf-avatar-label-group-text`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-avatar-label-group-title--font-size` | не задана; задают модификаторы, например `.sf-avatar-label-group--size-1 .sf-avatar-label-group-title`: `var(--sf-text-size-1)` | `font-size` |
-| `--sf-avatar-label-group-title--line-height` | не задана; задают модификаторы, например `.sf-avatar-label-group--size-1 .sf-avatar-label-group-title`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-online-indicator--background-color` | не задана; задают модификаторы, например `.sf-online-indicator--offline`: `var(--sf-avatar-offline-background-color, var(--sf-on-surface-variant))` | `background-image` |
+| `--sf-avatar-label-group--gap` | не задана; задают модификаторы, например `.sf-avatar-label-group`: `var(--sf-space-1/2)` | `gap` |
+| `--sf-avatar-label-group-text--font-size` | не задана; задают модификаторы, например `.sf-avatar-label-group--size-3 .sf-avatar-label-group-text`: `var(--sf-text-size-2)` | `font-size` |
+| `--sf-avatar-label-group-text--line-height` | не задана; задают модификаторы, например `.sf-avatar-label-group--size-3 .sf-avatar-label-group-text`: `var(--sf-text-height-2)` | `line-height` |
+| `--sf-avatar-label-group-title--font-size` | не задана; задают модификаторы, например `.sf-avatar-label-group--size-3 .sf-avatar-label-group-title`: `var(--sf-text-size-3)` | `font-size` |
+| `--sf-avatar-label-group-title--line-height` | не задана; задают модификаторы, например `.sf-avatar-label-group--size-3 .sf-avatar-label-group-title`: `var(--sf-text-height-3)` | `line-height` |
+| `--sf-online-indicator--background-color` | не задана; задают модификаторы, например `.sf-online-indicator--online`: `var(--sf-success)` | `background-image` |
 | `--sf-online-indicator--height` | `var(--sf-micro--point-2)` | `height` |
 | `--sf-online-indicator--ring-fill` | `color-mix(in srgb, var(--sf-surface-place-fill) 100%, var(--sf-surface-underlay) 0%)` | `outline` |
-| `--sf-online-indicator--ring-width` | `var(--sf-micro--ring-2)` | `box-shadow`, `outline` |
-| `--sf-online-indicator--width` | `var(--sf-micro--point-2)` | `width` |
+| `--sf-online-indicator--ring-width` | `var(--sf-micro--ring-2)` | `box-shadow`, `outline`, `--sf-dot-item--ring`, `border-width` |
+| `--sf-online-indicator--width` | `var(--sf-micro--point-2)` | `width`, `--sf-dot-item--size` |
 
 ## См. также
 

@@ -22,9 +22,9 @@ description: "Задаёт, сколько длится плавный пере�
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `duration-fast` | `transition-duration: var(--sf-duration-fast)` | — |
-| `duration-normal` | `transition-duration: var(--sf-duration-normal)` | — |
-| `duration-slow` | `transition-duration: var(--sf-duration-slow)` | — |
+| `duration-fast` | `transition-duration: var(--sf-duration-fast); (prefers-reduced-motion: reduce): transition-duration: 0.01ms` | — |
+| `duration-normal` | `transition-duration: var(--sf-duration-normal); (prefers-reduced-motion: reduce): transition-duration: 0.01ms` | — |
+| `duration-slow` | `transition-duration: var(--sf-duration-slow); (prefers-reduced-motion: reduce): transition-duration: 0.01ms` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 

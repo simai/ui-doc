@@ -6,7 +6,7 @@ profile: reference
 
 # Спиннер
 
-:badge[sf-loader]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-loader]{variant=outline scheme=on-surface size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
 
 Спиннер показывает, что операция выполняется, когда процент завершения
 неизвестен. Если процент известен, берите
@@ -200,7 +200,7 @@ whenLoader(() => SF.Loader.ready('Spinner', (Spinner) => {
 | `--sf-spinner-size` | Рамка рисунка; по умолчанию — значок кнопки того же размера. | `var(--sf-text-height-1)`; зависит от размера |
 | `--sf-spinner-stroke-width` | Толщина кольца в единицах сетки значка из 24 единиц. | `2` |
 | `--sf-spinner-gap` | Расстояние между рисунком и его словами. | `var(--sf-space-1/2)`; зависит от размера |
-| `--sf-spinner-text-color` | Подпись под рисунком: цвет текста места, цвет текста на заливке под спиннером. | `currentColor` |
+| `--sf-spinner-text-color` | Слова под рисунком: цвет самого индикатора (currentColor) — on-surface-variant у отдельного индикатора и цвет элемента внутри кнопки или другого элемента управления. | `currentColor` |
 
 ```css
 .sf-loader-container {

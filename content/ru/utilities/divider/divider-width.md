@@ -38,14 +38,14 @@ description: "Проводит линии между соседними элем
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `divider-x-1` (`.divider-x-1 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-x-reverse:0; border-inline-end-width: calc(var(--sf-a1) * var(--sf-divide-x-reverse)); border-inline-start-width: calc(var(--sf-a1) * (1 - var(--sf-divide-x-reverse)))` | — |
-| `divide-x-1` (`.divide-x-1 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-x-reverse:0; border-inline-end-width: calc(var(--sf-a1) * var(--sf-divide-x-reverse)); border-inline-start-width: calc(var(--sf-a1) * (1 - var(--sf-divide-x-reverse)))` | — |
-| `divider-y-1` (`.divider-y-1 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-y-reverse:0; border-top-width: calc(var(--sf-a1) * (1 - var(--sf-divide-y-reverse))); border-bottom-width: calc(var(--sf-a1) * var(--sf-divide-y-reverse))` | — |
-| `divide-y-1` (`.divide-y-1 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-y-reverse:0; border-top-width: calc(var(--sf-a1) * (1 - var(--sf-divide-y-reverse))); border-bottom-width: calc(var(--sf-a1) * var(--sf-divide-y-reverse))` | — |
-| `divider-x-2` (`.divider-x-2 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-x-reverse:0; border-inline-end-width: calc(var(--sf-a2) * var(--sf-divide-x-reverse)); border-inline-start-width: calc(var(--sf-a2) * (1 - var(--sf-divide-x-reverse)))` | — |
-| `divide-x-2` (`.divide-x-2 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-x-reverse:0; border-inline-end-width: calc(var(--sf-a2) * var(--sf-divide-x-reverse)); border-inline-start-width: calc(var(--sf-a2) * (1 - var(--sf-divide-x-reverse)))` | — |
-| `divider-y-2` (`.divider-y-2 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-y-reverse:0; border-top-width: calc(var(--sf-a2) * (1 - var(--sf-divide-y-reverse))); border-bottom-width: calc(var(--sf-a2) * var(--sf-divide-y-reverse))` | — |
-| `divide-y-2` (`.divide-y-2 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-y-reverse:0; border-top-width: calc(var(--sf-a2) * (1 - var(--sf-divide-y-reverse))); border-bottom-width: calc(var(--sf-a2) * var(--sf-divide-y-reverse))` | — |
+| `divider-x-1` (`.divider-x-1 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-x-reverse:0; border-inline-end-width: calc(var(--sf-line--border) * var(--sf-divide-x-reverse)); border-inline-start-width: calc(var(--sf-line--border) * (1 - var(--sf-divide-x-reverse)))` | — |
+| `divide-x-1` (`.divide-x-1 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-x-reverse:0; border-inline-end-width: calc(var(--sf-line--border) * var(--sf-divide-x-reverse)); border-inline-start-width: calc(var(--sf-line--border) * (1 - var(--sf-divide-x-reverse)))` | — |
+| `divider-y-1` (`.divider-y-1 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-y-reverse:0; border-top-width: calc(var(--sf-line--border) * (1 - var(--sf-divide-y-reverse))); border-bottom-width: calc(var(--sf-line--border) * var(--sf-divide-y-reverse))` | — |
+| `divide-y-1` (`.divide-y-1 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-y-reverse:0; border-top-width: calc(var(--sf-line--border) * (1 - var(--sf-divide-y-reverse))); border-bottom-width: calc(var(--sf-line--border) * var(--sf-divide-y-reverse))` | — |
+| `divider-x-2` (`.divider-x-2 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-x-reverse:0; border-inline-end-width: calc(var(--sf-line--indicator) * var(--sf-divide-x-reverse)); border-inline-start-width: calc(var(--sf-line--indicator) * (1 - var(--sf-divide-x-reverse)))` | — |
+| `divide-x-2` (`.divide-x-2 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-x-reverse:0; border-inline-end-width: calc(var(--sf-line--indicator) * var(--sf-divide-x-reverse)); border-inline-start-width: calc(var(--sf-line--indicator) * (1 - var(--sf-divide-x-reverse)))` | — |
+| `divider-y-2` (`.divider-y-2 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-y-reverse:0; border-top-width: calc(var(--sf-line--indicator) * (1 - var(--sf-divide-y-reverse))); border-bottom-width: calc(var(--sf-line--indicator) * var(--sf-divide-y-reverse))` | — |
+| `divide-y-2` (`.divide-y-2 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-y-reverse:0; border-top-width: calc(var(--sf-line--indicator) * (1 - var(--sf-divide-y-reverse))); border-bottom-width: calc(var(--sf-line--indicator) * var(--sf-divide-y-reverse))` | — |
 | `divider-x-3` (`.divider-x-3 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-x-reverse:0; border-inline-end-width: calc(var(--sf-a4) * var(--sf-divide-x-reverse)); border-inline-start-width: calc(var(--sf-a4) * (1 - var(--sf-divide-x-reverse)))` | — |
 | `divide-x-3` (`.divide-x-3 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-x-reverse:0; border-inline-end-width: calc(var(--sf-a4) * var(--sf-divide-x-reverse)); border-inline-start-width: calc(var(--sf-a4) * (1 - var(--sf-divide-x-reverse)))` | — |
 | `divider-y-3` (`.divider-y-3 > :not([hidden]) ~ :not([hidden])`) | `--sf-divide-y-reverse:0; border-top-width: calc(var(--sf-a4) * (1 - var(--sf-divide-y-reverse))); border-bottom-width: calc(var(--sf-a4) * var(--sf-divide-y-reverse))` | — |
@@ -73,8 +73,8 @@ description: "Проводит линии между соседними элем
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
-| `--sf-a1` | `0.0625rem` |
-| `--sf-a2` | `0.125rem` |
+| `--sf-line--border` | `var(--sf-px)` |
+| `--sf-line--indicator` | `calc(2 * var(--sf-px))` |
 | `--sf-a4` | `0.25rem` |
 | `--sf-a8` | `0.5rem` |
 | `--sf-0` | `0` |

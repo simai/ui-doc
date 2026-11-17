@@ -5,7 +5,7 @@ description: "Параметры письма, строки блоков в по
 
 # Структура письма
 
-:badge[sf-mail-structure]{variant=outline scheme=on-surface size=1/2} :badge[1.0.6]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-structure]{variant=outline scheme=on-surface size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
 
 Структура показывает письмо в редакторе писем списком: параметры письма, по
 строке на блок в порядке письма и способ добавить блок. Структура
@@ -148,9 +148,9 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 
 | | |
 |:---|:---|
-| Тег | `<sf-mail-structure>`, контракт `smart.mail-structure` версии `1.0.6` |
+| Тег | `<sf-mail-structure>`, контракт `smart.mail-structure` версии `1.1.1` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | Доступность | Читается как список; название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`, `↑`, `↓`, `Home`, `End`, `Alt+ArrowUp`, `Alt+ArrowDown`, `Delete`, `Shift+F10`. |
-| Источник | `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-structure` |
-| Правило классов | `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-structure/rule.js#name=cl-mail-structure` |
+| Источник | `simai/ui-pro@b3f54d5da7ccaf05eaca2c296996980408dabbf0:components/src/smart/mail-structure` |
+| Правило классов | `simai/ui-pro@b3f54d5da7ccaf05eaca2c296996980408dabbf0:components/src/smart/mail-structure/rule.js#name=cl-mail-structure` |

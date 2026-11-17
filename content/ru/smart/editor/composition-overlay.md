@@ -5,7 +5,7 @@ description: "Рисует поверх отрисованной страниц�
 
 # Оверлей редактора
 
-:badge[sf-editor-overlay]{variant=outline scheme=on-surface size=1/2} :badge[1.7.6]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-editor-overlay]{variant=outline scheme=on-surface size=1/2} :badge[1.12.2]{variant=outline scheme=on-surface size=1/2}
 
 Оверлей редактора даёт править страницу на месте, а не в отдельной форме:
 поверх страницы, собранной из Composition Document, он показывает рамку при
@@ -226,7 +226,7 @@ overlay.addEventListener('sf-editor-overlay-apply', (event) => {
 | `label` | строка | пусто | — | Имя дерева структуры; иначе — `runtime.tree` из языкового файла. |
 | `placement` | строка | `top` | `top`, `side` | Где стоит панель действий: `top` — над блоком по правому краю, по умолчанию; `side` — сбоку от блока, если рядом есть место, а если места нет — над блоком. |
 | `passive` | да/нет | нет | — | Пока включено, не принимает ввод на холсте: щелчки, двойные щелчки, клавиши, наведение и перетаскивание доходят до страницы (до редактора, который приложение поставило в выбранный блок), выбор сохраняется, а рамка выбранного блока остаётся видна; панель инструментов, точки вставки и ручка перемещения уходят, а дерево выходит из порядка Tab. После выключения слой снова принимает ввод. |
-| `actions` | список | `[]` | — | Действия выбранного узла: до 16 `{id, label}` с необязательными `icon`, `shortcut`, `disabled` и `tone`; записываются через ту же проверку, что и `setActions`. |
+| `actions` | список | `[]` | — | Действия выбранного узла: до 16 записей `{id, label}` с необязательными `icon`, `shortcut`, `disabled`, `tone` и `priority`; проходят ту же проверку, что `setActions`. Панель показывает до пяти действий с иконками группами (соседи одного приоритета; ручка `drag_indicator` отдельно); остальные и все действия без иконки — под ⋯ «Ещё». `priority` — по C155: целое число от 1 (чем больше, тем раньше уходит в «Ещё»; без приоритета уходит первым) или `"pin"` (никогда не уходит). |
 | `messages` | объект | `{}` | — | Собственные слова приложения поверх языкового файла; записываются через `setMessages`. |
 | `insertion-target` | объект | `{}` | — | Место вставки, которое приложение держит отмеченным `{parent_id, slot, index}`; записывается через `setInsertionTarget`. |
 
@@ -273,13 +273,13 @@ overlay.addEventListener('sf-editor-overlay-apply', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-editor-overlay>`, контракт `smart.editor-overlay` версии `1.7.6` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-editor-overlay>`, контракт `smart.editor-overlay` версии `1.12.2` |
+| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как дерево; желательна подпись или `aria-label`; с клавиатуры: `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Пробел`, `Esc`. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/editor-overlay` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-editor-overlay` |
+| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/editor-overlay` |
+| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-editor-overlay` |
 
 ## См. также
 

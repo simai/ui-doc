@@ -22,7 +22,7 @@ description: "Прячет полосу прокрутки области и п�
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `scroll-hover` | `scrollbar-width: none; .scroll-hover::-webkit-scrollbar { width: 0; height: 0 }; .scroll-hover:hover { scrollbar-width: thin; scrollbar-color: var(--sf-scroll-bg-thumb) var(--sf-transparent) }; .scroll-hover:hover::-webkit-scrollbar { width: var(--sf-scroll-bg-width); height: var(--sf-scroll-bg-width) }; .scroll-hover:hover::-webkit-scrollbar-thumb { height: var(--sf-scroll-thumb-width); height: var(--sf-scroll-thumb-size, var(--sf-scroll-thumb-width)); border: var(--sf-scroll-thumb-inset) solid var(--sf-transparent); background-clip: padding-box; border-radius: var(--sf-scroll-radius); background-color: var(--sf-scroll-bg-thumb) }; .scroll-hover:hover::-webkit-scrollbar-track { background-color: var(--sf-scroll-bg-track); border: var(--sf-scroll-thumb-inset) solid var(--sf-transparent); background-clip: padding-box; border-radius: var(--sf-scroll-radius) }; transition: var(--sf-duration-normal) var(--sf-animation); .scroll-hover::-webkit-scrollbar { transition: var(--sf-duration-normal) var(--sf-animation) }; .scroll-hover::-webkit-scrollbar-thumb { transition: var(--sf-duration-normal) var(--sf-animation) }; .scroll-hover::-webkit-scrollbar-track { transition: var(--sf-duration-normal) var(--sf-animation) }` | — |
+| `scroll-hover` | `--sf-scroll-bg-thumb: var(--sf-transparent); .scroll-hover:hover { --sf-scroll-bg-thumb: var(--sf-outline) }; .scroll-hover[focus-within] { --sf-scroll-bg-thumb: var(--sf-outline) }; .scroll-hover:focus-within { --sf-scroll-bg-thumb: var(--sf-outline) }` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
@@ -34,16 +34,8 @@ description: "Прячет полосу прокрутки области и п�
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
-| `--sf-scroll-bg-thumb` | задаётся темой |
 | `--sf-transparent` | `rgba(255,255,255,0)` |
-| `--sf-scroll-bg-width` | задаётся темой |
-| `--sf-scroll-thumb-width` | задаётся темой |
-| `--sf-scroll-thumb-size` | задаётся темой |
-| `--sf-scroll-thumb-inset` | задаётся темой |
-| `--sf-scroll-radius` | задаётся темой |
-| `--sf-scroll-bg-track` | задаётся темой |
-| `--sf-duration-normal` | `0.3S` |
-| `--sf-animation` | `cubic-bezier(.25, .8, .25, 1)` |
+| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
 
 ## Применение
 

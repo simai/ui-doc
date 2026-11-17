@@ -5,7 +5,7 @@ description: "Заголовок с действиями, путь, вкладк
 
 # Панель свойств письма
 
-:badge[sf-mail-inspector]{variant=outline scheme=on-surface size=1/2} :badge[1.0.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-inspector]{variant=outline scheme=on-surface size=1/2} :badge[1.1.3]{variant=outline scheme=on-surface size=1/2}
 
 Панель свойств — правая колонка редактора писем, где человек настраивает
 выбранный блок: заголовок с действиями, путь, вкладки, разделы и все виды
@@ -214,15 +214,15 @@ panel.sections = [
 | `delete()` | объект | то же, что «Удалить»; refused unknown, если head-actions этого не предлагает. |
 | `replace()` | объект | то же, что «Сменить вариант…»; refused unknown, если head-actions этого не предлагает. |
 | `levelUp()` | объект | то же, что Escape; refused top без уровней. |
-| `goToLevel(index: number)` | объект | то же, что нажатие на пути; refused unknown. |
-| `openTab(id: any)` | объект | просит вкладку, как нажатие: отправляет tab, приложение передаёт её обратно; refused unknown. |
-| `toggleSection(key: any)` | объект | открывает или закрывает раздел, как его заголовок; refused unknown. |
-| `itemToggle(path: string, index: number)` | объект | то же, что раскрытие элемента; refused unknown. |
-| `itemAdd(path: string)` | объект | то же, что «Добавить элемент»; refused unknown, full. |
-| `itemMove(path: string, index: number, to: number, by: number)` | объект | просит переместить элемент на место или на несколько шагов; refused unknown, unchanged. |
-| `itemDuplicate(path: string, index: number)` | объект | то же, что «Дублировать» под ⋯; refused unknown, full. |
-| `itemDelete(path: string, index: number)` | объект | то же, что «Удалить» под ⋯; refused unknown, least. |
-| `focusItem(path: string, index: number)` | объект | ставит фокус на раскрытие элемента после отрисовки; refused unknown без path. |
+| `goToLevel(args: object)` | объект | то же, что нажатие на пути; refused unknown. |
+| `openTab(args: object)` | объект | просит вкладку, как нажатие: отправляет tab, приложение передаёт её обратно; refused unknown. |
+| `toggleSection(args: object)` | объект | открывает или закрывает раздел, как его заголовок; refused unknown. |
+| `itemToggle(args: object)` | объект | то же, что раскрытие элемента; refused unknown. |
+| `itemAdd(args: object)` | объект | то же, что «Добавить элемент»; refused unknown, full. |
+| `itemMove(args: object)` | объект | просит переместить элемент на место или на несколько шагов; refused unknown, unchanged. |
+| `itemDuplicate(args: object)` | объект | то же, что «Дублировать» под ⋯; refused unknown, full. |
+| `itemDelete(args: object)` | объект | то же, что «Удалить» под ⋯; refused unknown, least. |
+| `focusItem(args: object)` | объект | ставит фокус на раскрытие элемента после отрисовки; refused unknown без path. |
 
 ### События
 
@@ -250,9 +250,9 @@ panel.sections = [
 
 | | |
 |:---|:---|
-| Тег | `<sf-mail-inspector>`, контракт `smart.mail-inspector` версии `1.0.7` |
+| Тег | `<sf-mail-inspector>`, контракт `smart.mail-inspector` версии `1.1.3` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | Доступность | Роль `form`; название компонент ставит сам; с клавиатуры: `Tab`, `Esc`, `Enter`, `Пробел`, `Alt+ArrowUp`, `Alt+ArrowDown`, `Shift+F10`. |
-| Источник | `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-inspector` |
-| Правило классов | `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector` |
+| Источник | `simai/ui-pro@b3f54d5da7ccaf05eaca2c296996980408dabbf0:components/src/smart/mail-inspector` |
+| Правило классов | `simai/ui-pro@b3f54d5da7ccaf05eaca2c296996980408dabbf0:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector` |

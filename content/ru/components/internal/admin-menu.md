@@ -6,7 +6,7 @@ profile: reference
 
 # Основа Admin Menu
 
-:badge[sf-admin-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-admin-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Боковая навигация административного приложения: человек видит разделы
 с иконками, открывает вложенные панели, ищет пункт по названию, сворачивает

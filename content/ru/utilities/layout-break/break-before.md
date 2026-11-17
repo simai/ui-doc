@@ -25,13 +25,13 @@ description: "Задаёт, начинает ли элемент новую ко
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `break-before-auto` | `page-break-before: auto; -webkit-column-break-before: auto; -moz-column-break-before: auto; break-before: auto` | — |
-| `break-before-avoid` | `page-break-before: avoid; -webkit-column-break-before: avoid; -moz-column-break-before: avoid; break-before: avoid` | — |
-| `break-before-all` | `page-break-before: all; -webkit-column-break-before: all; -moz-column-break-before: all; break-before: all` | — |
-| `break-before-avoid-page` | `page-break-before: avoid; -webkit-column-break-before: avoid; -moz-column-break-before: avoid; break-before: avoid-page` | — |
-| `break-before-page` | `page-break-before: always; -webkit-column-break-before: page; -moz-column-break-before: page; break-before: page` | — |
-| `break-before-left` | `page-break-before: left; -webkit-column-break-before: left; -moz-column-break-before: left; break-before: left` | — |
-| `break-before-right` | `page-break-before: right; -webkit-column-break-before: right; -moz-column-break-before: right; break-before: right` | — |
+| `break-before-auto` | `-webkit-column-break-before: auto; -moz-column-break-before: auto; break-before: auto` | — |
+| `break-before-avoid` | `-webkit-column-break-before: avoid; -moz-column-break-before: avoid; break-before: avoid` | — |
+| `break-before-all` | `-webkit-column-break-before: all; -moz-column-break-before: all; break-before: all` | — |
+| `break-before-avoid-page` | `-webkit-column-break-before: avoid; -moz-column-break-before: avoid; break-before: avoid-page` | — |
+| `break-before-page` | `-webkit-column-break-before: page; -moz-column-break-before: page; break-before: page` | — |
+| `break-before-left` | `-webkit-column-break-before: left; -moz-column-break-before: left; break-before: left` | — |
+| `break-before-right` | `-webkit-column-break-before: right; -moz-column-break-before: right; break-before: right` | — |
 | `break-before-column` | `-webkit-column-break-before: column; -moz-column-break-before: column; break-before: column` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:break-before-auto`.

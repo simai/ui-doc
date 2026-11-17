@@ -6,7 +6,7 @@ profile: reference
 
 # Акцентная иконка
 
-:badge[sf-featured-icon]{variant=outline scheme=on-surface size=1/2} :badge[1.1.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-featured-icon]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Акцентная иконка ставит [иконку](/ru/components/content/icons/) на цветную
 подложку и выделяет тему карточки, раздела, статуса или пустого состояния.
@@ -89,7 +89,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-featured-icon` |
-| Модификаторы | `sf-featured-icon--circle`, `sf-featured-icon--clear`, `sf-featured-icon--dark`, `sf-featured-icon--elevated`, `sf-featured-icon--error`, `sf-featured-icon--info`, `sf-featured-icon--light`, `sf-featured-icon--medium`, `sf-featured-icon--mid`, `sf-featured-icon--modern`, `sf-featured-icon--neutral`, `sf-featured-icon--primary`, `sf-featured-icon--soft`, `sf-featured-icon--solid`, `sf-featured-icon--square`, `sf-featured-icon--success`, `sf-featured-icon--warning` |
+| Модификаторы | `sf-featured-icon--circle`, `sf-featured-icon--error`, `sf-featured-icon--info`, `sf-featured-icon--neutral`, `sf-featured-icon--primary`, `sf-featured-icon--soft`, `sf-featured-icon--solid`, `sf-featured-icon--square`, `sf-featured-icon--success`, `sf-featured-icon--warning` |
 | Размеры | `sf-featured-icon--size-1`, `sf-featured-icon--size-1/2`, `sf-featured-icon--size-1/3`, `sf-featured-icon--size-2`, `sf-featured-icon--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -102,16 +102,15 @@ profile: reference
 |:---|:---|:---|
 | `--sf-featured-icon--background-color` | `var(--sf-featured-icon--container)` | `background-color` |
 | `--sf-featured-icon--box-shadow` | `none` | `box-shadow` |
-| `--sf-featured-icon--container` | `var(--sf-primary-container)` | `--sf-featured-icon--background-color`, `border` |
-| `--sf-featured-icon--container-strong` | `var(--sf-primary-container-hover)` | `--sf-featured-icon--background-color` |
+| `--sf-featured-icon--container` | `var(--sf-surface-container)` | `--sf-featured-icon--background-color`, `border-color` |
 | `--sf-featured-icon--foreground-color` | `var(--sf-featured-icon--on-container)` | `--sf-icon--color` |
-| `--sf-featured-icon--icon-size` | `var(--sf-text-height-1)` | `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
-| `--sf-featured-icon--on-container` | `var(--sf-on-primary-container)` | `--sf-featured-icon--foreground-color` |
-| `--sf-featured-icon--on-tone` | `var(--sf-on-primary)` | `--sf-featured-icon--foreground-color` |
+| `--sf-featured-icon--icon-size` | `var(--sf-text-height-1)` | `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `--sf-featured-icon--padding` |
+| `--sf-featured-icon--on-container` | `var(--sf-on-surface-variant)` | `--sf-featured-icon--foreground-color` |
+| `--sf-featured-icon--on-tone` | `var(--sf-on-surface-inverse)` | `--sf-featured-icon--foreground-color` |
 | `--sf-featured-icon--padding` | `var(--sf-ui-1--space-y-tightness-default)` | `padding` |
 | `--sf-featured-icon--radius` | `var(--sf-radius-circle)` | `border-radius` |
 | `--sf-featured-icon--square-radius` | `var(--sf-radius-1)` | `--sf-featured-icon--radius` |
-| `--sf-featured-icon--tone` | `var(--sf-primary)` | `--sf-featured-icon--background-color`, `--sf-featured-icon--foreground-color` |
+| `--sf-featured-icon--tone` | `var(--sf-on-surface)` | `--sf-featured-icon--background-color` |
 
 ## См. также
 

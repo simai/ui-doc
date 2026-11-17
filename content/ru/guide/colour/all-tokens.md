@@ -49,39 +49,39 @@ description: "Полный список переменных, которые о�
 
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
-| `--sf-on-error-container` | `light-dark(var(--sf-error-10), var(--sf-error-90))` |
-| `--sf-on-error-container-graphic` | `light-dark(var(--sf-error-50), var(--sf-error-60))` |
+| `--sf-on-error-container` | `light-dark(var(--sf-error-10), var(--sf-error-90))` · `var(--sf-white)` |
+| `--sf-on-error-container-graphic` | `light-dark(var(--sf-error-50), var(--sf-error-70))` · `var(--sf-white)` |
 | `--sf-on-hue-container` | `light-dark(var(--sf-red-10), var(--sf-red-90))` · `light-dark(var(--sf-orange-10), var(--sf-orange-90))` · `light-dark(var(--sf-amber-10), var(--sf-amber-90))` · `light-dark(var(--sf-yellow-10), var(--sf-yellow-90))` · `light-dark(var(--sf-lime-10), var(--sf-lime-90))` · `light-dark(var(--sf-green-10), var(--sf-green-90))` · `light-dark(var(--sf-teal-10), var(--sf-teal-90))` · `light-dark(var(--sf-cyan-10), var(--sf-cyan-90))` · `light-dark(var(--sf-sky-10), var(--sf-sky-90))` · `light-dark(var(--sf-blue-10), var(--sf-blue-90))` · `light-dark(var(--sf-indigo-10), var(--sf-indigo-90))` · `light-dark(var(--sf-violet-10), var(--sf-violet-90))` · `light-dark(var(--sf-purple-10), var(--sf-purple-90))` · `light-dark(var(--sf-pink-10), var(--sf-pink-90))` · `light-dark(var(--sf-brown-10), var(--sf-brown-90))` · `light-dark(var(--sf-gray-10), var(--sf-gray-90))` · `light-dark(var(--sf-primary-10), var(--sf-primary-90))` · `light-dark(var(--sf-secondary-10), var(--sf-secondary-90))` · `light-dark(var(--sf-tertiary-10), var(--sf-tertiary-90))` |
-| `--sf-on-hue-container-graphic` | `light-dark(var(--sf-red-50), var(--sf-red-60))` · `light-dark(var(--sf-orange-50), var(--sf-orange-60))` · `light-dark(var(--sf-amber-50), var(--sf-amber-60))` · `light-dark(var(--sf-yellow-50), var(--sf-yellow-60))` · `light-dark(var(--sf-lime-50), var(--sf-lime-60))` · `light-dark(var(--sf-green-50), var(--sf-green-60))` · `light-dark(var(--sf-teal-50), var(--sf-teal-60))` · `light-dark(var(--sf-cyan-50), var(--sf-cyan-60))` · `light-dark(var(--sf-sky-50), var(--sf-sky-60))` · `light-dark(var(--sf-blue-50), var(--sf-blue-60))` · `light-dark(var(--sf-indigo-50), var(--sf-indigo-60))` · `light-dark(var(--sf-violet-50), var(--sf-violet-60))` · `light-dark(var(--sf-purple-50), var(--sf-purple-60))` · `light-dark(var(--sf-pink-50), var(--sf-pink-60))` · `light-dark(var(--sf-brown-50), var(--sf-brown-60))` · `light-dark(var(--sf-gray-50), var(--sf-gray-60))` · `light-dark(var(--sf-primary-50), var(--sf-primary-60))` · `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` · `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
-| `--sf-on-info-container` | `light-dark(var(--sf-info-10), var(--sf-info-90))` |
-| `--sf-on-info-container-graphic` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
-| `--sf-on-neutral-container` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
-| `--sf-on-neutral-container-graphic` | `light-dark(var(--sf-neutral-50), var(--sf-neutral-60))` |
+| `--sf-on-hue-container-graphic` | `light-dark(var(--sf-red-50), var(--sf-red-70))` · `light-dark(var(--sf-orange-50), var(--sf-orange-70))` · `light-dark(var(--sf-amber-50), var(--sf-amber-70))` · `light-dark(var(--sf-yellow-50), var(--sf-yellow-70))` · `light-dark(var(--sf-lime-50), var(--sf-lime-70))` · `light-dark(var(--sf-green-50), var(--sf-green-70))` · `light-dark(var(--sf-teal-50), var(--sf-teal-70))` · `light-dark(var(--sf-cyan-50), var(--sf-cyan-70))` · `light-dark(var(--sf-sky-50), var(--sf-sky-70))` · `light-dark(var(--sf-blue-50), var(--sf-blue-70))` · `light-dark(var(--sf-indigo-50), var(--sf-indigo-70))` · `light-dark(var(--sf-violet-50), var(--sf-violet-70))` · `light-dark(var(--sf-purple-50), var(--sf-purple-70))` · `light-dark(var(--sf-pink-50), var(--sf-pink-70))` · `light-dark(var(--sf-brown-50), var(--sf-brown-70))` · `light-dark(var(--sf-gray-50), var(--sf-gray-70))` · `light-dark(var(--sf-primary-50), var(--sf-primary-70))` · `light-dark(var(--sf-secondary-50), var(--sf-secondary-70))` · `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-70))` |
+| `--sf-on-info-container` | `light-dark(var(--sf-info-10), var(--sf-info-90))` · `var(--sf-white)` |
+| `--sf-on-info-container-graphic` | `light-dark(var(--sf-info-50), var(--sf-info-70))` · `var(--sf-white)` |
+| `--sf-on-neutral-container` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` · `var(--sf-white)` |
+| `--sf-on-neutral-container-graphic` | `light-dark(var(--sf-neutral-50), var(--sf-neutral-70))` · `var(--sf-white)` |
 | `--sf-on-primary-container` | `light-dark(var(--sf-primary-10), var(--sf-primary-90))` · `var(--sf-white)` |
-| `--sf-on-primary-container-graphic` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
-| `--sf-on-secondary-container` | `light-dark(var(--sf-secondary-10), var(--sf-secondary-90))` |
-| `--sf-on-secondary-container-graphic` | `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` |
-| `--sf-on-success-container` | `light-dark(var(--sf-success-10), var(--sf-success-90))` |
-| `--sf-on-success-container-graphic` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
+| `--sf-on-primary-container-graphic` | `light-dark(var(--sf-primary-50), var(--sf-primary-70))` · `var(--sf-white)` |
+| `--sf-on-secondary-container` | `light-dark(var(--sf-secondary-10), var(--sf-secondary-90))` · `var(--sf-white)` |
+| `--sf-on-secondary-container-graphic` | `light-dark(var(--sf-secondary-50), var(--sf-secondary-70))` · `var(--sf-white)` |
+| `--sf-on-success-container` | `light-dark(var(--sf-success-10), var(--sf-success-90))` · `var(--sf-white)` |
+| `--sf-on-success-container-graphic` | `light-dark(var(--sf-success-50), var(--sf-success-70))` · `var(--sf-white)` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` · `var(--sf-on-surface-media)` |
 | `--sf-on-surface-active` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-80))` · `var(--sf-on-surface-media)` |
-| `--sf-on-surface-card-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
-| `--sf-on-surface-container-variant` | `light-dark(var(--sf-neutral-35), var(--sf-neutral-85))` · `var(--sf-white--alfa-80)` |
+| `--sf-on-surface-card-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` · `var(--sf-on-surface)` |
+| `--sf-on-surface-container-variant` | `light-dark(var(--sf-neutral-35), var(--sf-neutral-85))` · `var(--sf-white--alfa-80)` · `var(--sf-on-surface)` |
 | `--sf-on-surface-disabled` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` · `var(--sf-white--alfa-64)` |
 | `--sf-on-surface-fixed` | `var(--sf-neutral-10)` |
 | `--sf-on-surface-hover` | `light-dark(var(--sf-neutral-15), var(--sf-neutral-85))` · `var(--sf-on-surface-media)` |
-| `--sf-on-surface-icon` | `light-dark(var(--sf-neutral-25), var(--sf-neutral-80))` · `var(--sf-on-surface-media)` |
+| `--sf-on-surface-icon` | `light-dark(var(--sf-neutral-25), var(--sf-neutral-80))` · `var(--sf-on-surface-media)` · `var(--sf-on-surface)` |
 | `--sf-on-surface-inverse` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-10))` |
 | `--sf-on-surface-inverse-fixed` | `var(--sf-neutral-90)` |
 | `--sf-on-surface-media` | `var(--sf-white)` |
-| `--sf-on-surface-popup-nested-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
-| `--sf-on-surface-popup-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
-| `--sf-on-surface-raised-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
-| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` · `var(--sf-white--alfa-80)` |
-| `--sf-on-tertiary-container` | `light-dark(var(--sf-tertiary-10), var(--sf-tertiary-90))` |
-| `--sf-on-tertiary-container-graphic` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
-| `--sf-on-warning-container` | `light-dark(var(--sf-warning-10), var(--sf-warning-90))` |
-| `--sf-on-warning-container-graphic` | `light-dark(var(--sf-warning-50), var(--sf-warning-60))` |
+| `--sf-on-surface-popup-nested-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` · `var(--sf-on-surface)` |
+| `--sf-on-surface-popup-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` · `var(--sf-on-surface)` |
+| `--sf-on-surface-raised-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` · `var(--sf-on-surface)` |
+| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` · `var(--sf-white--alfa-80)` · `var(--sf-on-surface)` |
+| `--sf-on-tertiary-container` | `light-dark(var(--sf-tertiary-10), var(--sf-tertiary-90))` · `var(--sf-white)` |
+| `--sf-on-tertiary-container-graphic` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-70))` · `var(--sf-white)` |
+| `--sf-on-warning-container` | `light-dark(var(--sf-warning-10), var(--sf-warning-90))` · `var(--sf-white)` |
+| `--sf-on-warning-container-graphic` | `light-dark(var(--sf-warning-50), var(--sf-warning-70))` · `var(--sf-white)` |
 | `--sf-surface-2` | `light-dark(var(--sf-neutral-95), var(--sf-neutral-15))` |
 | `--sf-surface-3` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-20))` |
 | `--sf-surface-4` | `light-dark(var(--sf-neutral-85), var(--sf-neutral-25))` |
@@ -96,17 +96,17 @@ description: "Полный список переменных, которые о�
 | `--sf-surface-inverse` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-90))` |
 | `--sf-surface-inverse-fixed` | `var(--sf-neutral-20)` |
 | `--sf-surface-inverse-hover` | `light-dark(var(--sf-neutral-25), var(--sf-neutral-85))` |
-| `--sf-surface-media` | `var(--sf-black--alfa-48)` |
-| `--sf-surface-media-active` | `var(--sf-black--alfa-80)` |
-| `--sf-surface-media-hover` | `var(--sf-black--alfa-64)` |
-| `--sf-surface-overlay--blur` | `var(--sf-d6)` |
-| `--sf-surface-page` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
+| `--sf-surface-media` | `var(--sf-black--alfa-64)` · `var(--sf-black--alfa-80)` |
+| `--sf-surface-media-active` | `var(--sf-black--alfa-80)` · `var(--sf-black)` |
+| `--sf-surface-media-hover` | `var(--sf-black--alfa-80)` · `var(--sf-black)` |
+| `--sf-surface-overlay--blur` | `var(--sf-d6)` · `var(--sf-blur-none)` |
+| `--sf-surface-page` | `light-dark(var(--sf-white), var(--sf-neutral-5))` · `var(--sf-scheme-ground)` |
 | `--sf-surface-place` | `var(--sf-surface-page)` · `var(--sf-surface-media)` |
 | `--sf-surface-place-fill` | `initial` |
 | `--sf-surface-place-ground` | `var(--sf-surface-page)` · `var(--sf-black)` |
 | `--sf-surface-place-solid` | `var(--sf-surface-page)` · `initial` |
 | `--sf-surface-popup` | `light-dark(var(--sf-surface-page), var(--sf-surface-4))` |
-| `--sf-surface-popup-nested` | `light-dark(var(--sf-surface-page), var(--sf-surface-5))` |
+| `--sf-surface-popup-nested` | `light-dark(var(--sf-surface-page), var(--sf-surface-4))` |
 | `--sf-surface-raised` | `light-dark(var(--sf-surface-page), var(--sf-surface-3))` |
 | `--sf-surface-state-active` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` · `var(--sf-white--alfa-12)` |
 | `--sf-surface-state-hover` | `light-dark(var(--sf-neutral-50--alfa-4), var(--sf-neutral-90--alfa-4))` · `var(--sf-white--alfa-4)` |
@@ -148,14 +148,15 @@ description: "Полный список переменных, которые о�
 | `--sf-info-state-active` | `light-dark(var(--sf-info-50--alfa-12), var(--sf-info-90--alfa-12))` |
 | `--sf-info-state-hover` | `light-dark(var(--sf-info-50--alfa-4), var(--sf-info-90--alfa-4))` |
 | `--sf-info-state-select` | `light-dark(var(--sf-info-50--alfa-8), var(--sf-info-90--alfa-8))` |
-| `--sf-link` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` · `var(--sf-white)` |
+| `--sf-link` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` · `var(--sf-white)` · `var(--sf-scheme-link)` |
 | `--sf-link--underline-dashed` | `var(--sf-a6)` |
 | `--sf-link--underline-dotted` | `var(--sf-a3)` |
+| `--sf-link--underline-ink` | `48%` |
 | `--sf-link--underline-weight` | `var(--sf-px)` |
-| `--sf-link-active` | `light-dark(var(--sf-primary-30), var(--sf-primary-90))` · `var(--sf-neutral-90)` |
-| `--sf-link-hover` | `light-dark(var(--sf-primary-35), var(--sf-primary-85))` · `var(--sf-neutral-95)` |
-| `--sf-link-visited` | `light-dark(var(--sf-tertiary-40), var(--sf-tertiary-80))` · `var(--sf-white--alfa-80)` |
-| `--sf-mark` | `light-dark(var(--sf-yellow-50--alfa-24), var(--sf-yellow-90--alfa-24))` |
+| `--sf-link-active` | `light-dark(var(--sf-primary-30), var(--sf-primary-90))` · `var(--sf-neutral-90)` · `var(--sf-scheme-link)` |
+| `--sf-link-hover` | `light-dark(var(--sf-primary-35), var(--sf-primary-85))` · `var(--sf-neutral-95)` · `var(--sf-scheme-link)` |
+| `--sf-link-visited` | `light-dark(var(--sf-tertiary-40), var(--sf-tertiary-80))` · `var(--sf-white--alfa-80)` · `var(--sf-scheme-link)` |
+| `--sf-mark` | `light-dark(var(--sf-yellow-50--alfa-24), var(--sf-yellow-90--alfa-24))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 24%)` |
 | `--sf-mark--color` | `var(--sf-mark)` |
 | `--sf-neutral` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
 | `--sf-neutral-active` | `light-dark(var(--sf-neutral-30), var(--sf-neutral-90))` |
@@ -163,14 +164,14 @@ description: "Полный список переменных, которые о�
 | `--sf-neutral-container-active` | `light-dark(var(--sf-neutral-80), var(--sf-neutral-40))` |
 | `--sf-neutral-container-hover` | `light-dark(var(--sf-neutral-85), var(--sf-neutral-35))` |
 | `--sf-neutral-hover` | `light-dark(var(--sf-neutral-35), var(--sf-neutral-85))` |
-| `--sf-on-error` | `light-dark(var(--sf-white), var(--sf-error-20))` |
-| `--sf-on-info` | `light-dark(var(--sf-white), var(--sf-info-20))` |
-| `--sf-on-neutral` | `light-dark(var(--sf-white), var(--sf-neutral-20))` |
-| `--sf-on-primary` | `light-dark(var(--sf-white), var(--sf-primary-20))` · `var(--sf-black)` |
-| `--sf-on-secondary` | `light-dark(var(--sf-white), var(--sf-secondary-20))` |
-| `--sf-on-success` | `light-dark(var(--sf-white), var(--sf-success-20))` |
-| `--sf-on-tertiary` | `light-dark(var(--sf-white), var(--sf-tertiary-20))` |
-| `--sf-on-warning` | `light-dark(var(--sf-white), var(--sf-warning-20))` |
+| `--sf-on-error` | `light-dark(var(--sf-white), var(--sf-error-20))` · `var(--sf-scheme-ground)` |
+| `--sf-on-info` | `light-dark(var(--sf-white), var(--sf-info-20))` · `var(--sf-scheme-ground)` |
+| `--sf-on-neutral` | `light-dark(var(--sf-white), var(--sf-neutral-20))` · `var(--sf-scheme-ground)` |
+| `--sf-on-primary` | `light-dark(var(--sf-white), var(--sf-primary-20))` · `var(--sf-black)` · `var(--sf-scheme-ground)` |
+| `--sf-on-secondary` | `light-dark(var(--sf-white), var(--sf-secondary-20))` · `var(--sf-scheme-ground)` |
+| `--sf-on-success` | `light-dark(var(--sf-white), var(--sf-success-20))` · `var(--sf-scheme-ground)` |
+| `--sf-on-tertiary` | `light-dark(var(--sf-white), var(--sf-tertiary-20))` · `var(--sf-scheme-ground)` |
+| `--sf-on-warning` | `light-dark(var(--sf-white), var(--sf-warning-20))` · `var(--sf-scheme-ground)` |
 | `--sf-primary` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` · `var(--sf-white)` |
 | `--sf-primary-active` | `light-dark(var(--sf-primary-30), var(--sf-primary-90))` · `var(--sf-neutral-90)` |
 | `--sf-primary-container` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` · `var(--sf-white--alfa-12)` |
@@ -295,23 +296,24 @@ description: "Полный список переменных, которые о�
 
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
-| `--sf-focus` | `light-dark(var(--sf-primary-50), var(--sf-primary-90))` · `var(--sf-white)` |
-| `--sf-focus--color` | `var(--sf-focus)` |
+| `--sf-focus` | `light-dark(var(--sf-primary-50), var(--sf-primary-90))` · `var(--sf-white)` · `var(--sf-scheme-link)` |
+| `--sf-focus--color` | `var(--sf-focus)` · `var(--sf-scheme-link)` |
+| `--sf-focus--inset` | `calc(var(--sf-focus--width) * -1)` |
 | `--sf-focus--offset` | `var(--sf-px)` |
 | `--sf-focus--style` | `solid` |
-| `--sf-focus--width` | `var(--sf-focus-outline-width)` |
-| `--sf-focus-outline-width` | `calc(var(--sf-px) * 2)` |
-| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` · `var(--sf-white--alfa-64)` |
+| `--sf-focus--width` | `calc(var(--sf-px) * 2)` |
+| `--sf-focus-room` | `var(--sf-space-1\/4)` |
+| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` · `var(--sf-white--alfa-64)` · `var(--sf-scheme-text)` · `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
 | `--sf-outline--alfa` | `1` |
 | `--sf-outline-disabled` | `light-dark(var(--sf-neutral-50--alfa-48), var(--sf-neutral-60--alfa-48))` |
-| `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` · `var(--sf-white--alfa-24)` |
+| `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` · `var(--sf-white--alfa-24)` · `var(--sf-scheme-text)` · `light-dark(var(--sf-neutral-50), var(--sf-neutral-60))` |
 
 ### Текст
 
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
-| `--sf-display--family` | `"Inter Variable", "Inter Fallback", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Segoe UI", sans-serif` |
-| `--sf-display--weight` | `var(--sf-weight--light)` · `300` |
+| `--sf-display--family` | `"Inter Variable", "Inter Fallback", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Segoe UI", sans-serif` · `var(--sf-sans)` · `var(--sf-serif)` |
+| `--sf-display--weight` | `var(--sf-weight--light)` |
 | `--sf-display-1--height` | `var(--sf-title--height-12)` |
 | `--sf-display-1--size` | `var(--sf-text--size-12)` |
 | `--sf-display-2--height` | `var(--sf-title--height-11)` |
@@ -324,20 +326,16 @@ description: "Полный список переменных, которые о�
 | `--sf-display-5--size` | `var(--sf-text--size-8)` |
 | `--sf-display-6--height` | `var(--sf-title--height-7)` |
 | `--sf-display-6--size` | `var(--sf-text--size-7)` |
-| `--sf-font-weight-bold` | `700` |
-| `--sf-font-weight-light` | `300` |
-| `--sf-font-weight-medium` | `500` |
-| `--sf-font-weight-regular` | `400` |
-| `--sf-heading--family` | `"Inter Variable", "Inter Fallback", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Segoe UI", sans-serif` |
+| `--sf-heading--family` | `"Inter Variable", "Inter Fallback", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Segoe UI", sans-serif` · `var(--sf-sans)` · `var(--sf-serif)` |
 | `--sf-heading--margin` | `var(--sf-heading--space-top)` |
 | `--sf-heading--space-bottom` | `var(--sf-content--space-text)` |
 | `--sf-heading--space-top` | `var(--sf-content--space-section)` |
-| `--sf-heading--weight` | `var(--sf-weight--bold)` · `700` |
+| `--sf-heading--weight` | `var(--sf-weight--bold)` |
 | `--sf-heading-1--height` | `var(--sf-title--height-6)` |
 | `--sf-heading-1--size` | `var(--sf-text--size-6)` · `var(--sf-c8)` |
 | `--sf-heading-2--height` | `var(--sf-title--height-5)` |
 | `--sf-heading-2--size` | `var(--sf-text--size-5)` · `var(--sf-c6)` |
-| `--sf-heading-3--height` | `var(--sf-title--height-3)` |
+| `--sf-heading-3--height` | `var(--sf-title--height-4)` · `var(--sf-title--height-3)` |
 | `--sf-heading-3--size` | `var(--sf-text--size-3)` · `var(--sf-c2)` |
 | `--sf-heading-4--height` | `var(--sf-title--height-2)` |
 | `--sf-heading-4--size` | `var(--sf-text--size-2)` · `var(--sf-c0)` |
@@ -352,16 +350,7 @@ description: "Полный список переменных, которые о�
 | `--sf-label-small--height` | `var(--sf-text--height-1\/4)` |
 | `--sf-label-small--size` | `var(--sf-text--size-1\/4)` |
 | `--sf-mono` | `ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace` |
-| `--sf-text--family` | `"Inter Variable", "Inter Fallback", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Segoe UI", sans-serif` |
-| `--sf-text--font-weight-1` | `100` |
-| `--sf-text--font-weight-2` | `200` |
-| `--sf-text--font-weight-3` | `300` |
-| `--sf-text--font-weight-4` | `400` |
-| `--sf-text--font-weight-5` | `500` |
-| `--sf-text--font-weight-6` | `600` |
-| `--sf-text--font-weight-7` | `700` |
-| `--sf-text--font-weight-8` | `800` |
-| `--sf-text--font-weight-9` | `900` |
+| `--sf-text--family` | `"Inter Variable", "Inter Fallback", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Segoe UI", sans-serif` · `var(--sf-sans)` · `var(--sf-serif)` |
 | `--sf-text--height` | `var(--sf-text--height-1)` |
 | `--sf-text--height-1` | `var(--sf-c0)` · `var(--sf-c2)` |
 | `--sf-text--height-10` | `var(--sf-d5)` · `var(--sf-e2)` |
@@ -388,6 +377,7 @@ description: "Полный список переменных, которые о�
 | `--sf-text--measure` | `65ch` |
 | `--sf-text--measure-narrow` | `45ch` |
 | `--sf-text--measure-wide` | `80ch` |
+| `--sf-text--middle` | `0.3633em` |
 | `--sf-text--size` | `var(--sf-text--size-1)` |
 | `--sf-text--size-1` | `var(--sf-b4)` · `var(--sf-b6)` |
 | `--sf-text--size-10` | `var(--sf-d0)` · `var(--sf-d6)` |
@@ -413,7 +403,7 @@ description: "Полный список переменных, которые о�
 | `--sf-text--tracking-wide` | `0.025em` |
 | `--sf-text--tracking-wider` | `0.05em` |
 | `--sf-text--tracking-widest` | `0.1em` |
-| `--sf-text--weight` | `var(--sf-font-weight-regular)` · `400` |
+| `--sf-text--weight` | `var(--sf-weight--regular)` |
 | `--sf-text-height-1` | `var(--sf-text--height-1)` |
 | `--sf-text-height-10` | `var(--sf-text--height-10)` |
 | `--sf-text-height-11` | `var(--sf-text--height-11)` |
@@ -538,6 +528,7 @@ description: "Полный список переменных, которые о�
 | `--sf-border--style` | `solid` |
 | `--sf-border--width` | `0` |
 | `--sf-divider--alfa` | `1` |
+| `--sf-radius--inner` | `max(var(--sf-a4), calc(var(--sf-radius--surface) - var(--sf-inset--plate)))` |
 | `--sf-radius--surface` | `var(--sf-radius-1)` |
 | `--sf-radius--ui` | `var(--sf-radius-1\/2)` |
 | `--sf-radius-0` | `var(--sf-a0)` |
@@ -551,6 +542,9 @@ description: "Полный список переменных, которые о�
 | `--sf-radius-rounded` | `1000px` |
 | `--sf-radius-square` | `0` |
 | `--sf-scrim-color` | `var(--sf-black--alfa-64)` |
+| `--sf-scrim-control` | `var(--sf-surface-media)` |
+| `--sf-scrim-control-state-active` | `var(--sf-white--alfa-12)` |
+| `--sf-scrim-control-state-hover` | `var(--sf-white--alfa-8)` |
 | `--sf-scrim-opacity` | `1` |
 | `--sf-shadow--alfa` | `1` |
 | `--sf-shadow-ambient-color` | `light-dark(var(--sf-black--alfa-8), var(--sf-transparent))` |
@@ -579,10 +573,10 @@ description: "Полный список переменных, которые о�
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
 | `--sf-alfa` | `1` |
-| `--sf-blur-large` | `var(--sf-a8)` |
-| `--sf-blur-medium` | `var(--sf-a4)` |
+| `--sf-blur-large` | `var(--sf-a8)` · `var(--sf-blur-none)` |
+| `--sf-blur-medium` | `var(--sf-a4)` · `var(--sf-blur-none)` |
 | `--sf-blur-none` | `var(--sf-a0)` |
-| `--sf-blur-small` | `var(--sf-a2)` |
+| `--sf-blur-small` | `var(--sf-a2)` · `var(--sf-blur-none)` |
 | `--sf-floating-active-1-space-y` | `var(--sf-a8)` · `var(--sf-a6)` |
 | `--sf-floating-active-1/2-space-y` | `0.5rem` · `var(--sf-a8)` · `0.375rem` · `var(--sf-a6)` |
 | `--sf-floating-active-1/3-space-y` | `0.25rem` · `var(--sf-a4)` · `0.375rem` · `var(--sf-a6)` |
@@ -602,11 +596,29 @@ description: "Полный список переменных, которые о�
 | `--sf-opacity-70` | `70%` |
 | `--sf-opacity-80` | `80%` |
 | `--sf-opacity-90` | `90%` |
+| `--sf-opacity-disabled` | `var(--sf-opacity-40)` |
 | `--sf-scroll--alfa` | `1` |
+| `--sf-scroll--appear` | `0.12s` |
+| `--sf-scroll--edge` | `var(--sf-scroll--gap-edge, var(--sf-0))` |
+| `--sf-scroll--gap` | `var(--sf-scroll--gap-content, var(--sf-0))` |
+| `--sf-scroll--gap-content` | `var(--sf-scroll-thumb-inset)` |
+| `--sf-scroll--gap-edge` | `var(--sf-scroll-thumb-inset)` · `var(--sf-a0)` |
+| `--sf-scroll--grow` | `0.15s` |
+| `--sf-scroll--held-colour` | `var(--sf-scroll--thumb-held, var(--sf-on-surface-variant))` |
+| `--sf-scroll--hide` | `var(--sf-duration-normal)` |
+| `--sf-scroll--rest` | `var(--sf-scroll-thumb-size)` · `var(--sf-a2)` |
+| `--sf-scroll--rest-at` | `var(--sf-scroll--rest, var(--sf-scroll-thumb-size))` |
+| `--sf-scroll--rest-colour` | `var(--sf-scroll-bg-thumb)` |
+| `--sf-scroll--rest-size` | `min(var(--sf-scroll--rest-at), var(--sf-scroll--size))` |
+| `--sf-scroll--room` | `var(--sf-scroll-bg-width)` |
+| `--sf-scroll--shown` | `var(--sf-scroll--rest-size)` · `var(--sf-scroll--size)` |
+| `--sf-scroll--size` | `calc(var(--sf-scroll--room) - var(--sf-scroll--gap) - var(--sf-scroll--edge))` |
+| `--sf-scroll--thumb-held` | `var(--sf-on-surface-variant)` |
+| `--sf-scroll--thumb-min` | `var(--sf-c2)` |
 | `--sf-scroll-bg-thumb` | `var(--sf-outline)` |
 | `--sf-scroll-bg-track` | `var(--sf-transparent)` |
-| `--sf-scroll-bg-width` | `var(--sf-b4)` |
-| `--sf-scroll-radius` | `var(--sf-d6)` |
+| `--sf-scroll-bg-width` | `var(--sf-b4)` · `calc(var(--sf-scroll--gap-content) + var(--sf-scroll-thumb-size))` |
+| `--sf-scroll-radius` | `var(--sf-d6)` · `var(--sf-a0)` |
 | `--sf-scroll-thumb--alfa` | `1` |
 | `--sf-scroll-thumb-inset` | `var(--sf-a4)` |
 | `--sf-scroll-thumb-size` | `var(--sf-a6)` |
@@ -670,12 +682,8 @@ description: "Полный список переменных, которые о�
 | `--sf-ui-3--space-y-tightness-highest` | `var(--sf-c3)` · `var(--sf-c1)` · `var(--sf-c0)` |
 | `--sf-ui-3--space-y-tightness-low` | `var(--sf-b0)` · `var(--sf-a6)` |
 | `--sf-ui-3--text-space-x` | `var(--sf-b0)` · `var(--sf-b2)` |
-| `--sf-ui-blur-large` | `blur(var(--sf-blur-large))` |
-| `--sf-ui-blur-medium` | `blur(var(--sf-blur-medium))` |
-| `--sf-ui-blur-small` | `blur(var(--sf-blur-small))` |
-| `--sf-ui-blur-surface-overlay` | `blur(var(--sf-surface-overlay--blur))` |
-| `--sf-ui-focus` | `0 0 0 var(--sf-focus-outline-width) var(--sf-focus)` |
-| `--sf-ui-focus-inset` | `inset 0 0 0 var(--sf-focus-outline-width) var(--sf-focus)` |
+| `--sf-ui-focus` | `0 0 0 var(--sf-focus--width) var(--sf-focus)` |
+| `--sf-ui-focus-inset` | `inset 0 0 0 var(--sf-focus--width) var(--sf-focus)` |
 | `--sf-ui-radius-default` | `var(--sf-radius--ui)` |
 | `--sf-ui-skeleton` | `var(--sf-surface-container)` |
 
@@ -696,11 +704,9 @@ description: "Полный список переменных, которые о�
 | `--sf-ease-enter` | `cubic-bezier(.19, 1, .22, 1)` |
 | `--sf-ease-exit` | `cubic-bezier(.65, 0, .4, 1)` |
 | `--sf-ease-move` | `cubic-bezier(.65, 0, .35, 1)` |
-| `--sf-ring--alfa` | `1` |
-| `--sf-ring-color` | `` |
 | `--sf-stripe--alfa` | `1` |
-| `--sf-stripe--color` | `var(--sf-surface-inverse)` |
-| `--sf-stripe--size` | `var(--sf-a1)` |
+| `--sf-stripe--color` | `var(--sf-surface-state-select)` |
+| `--sf-stripe--size` | `var(--sf-space-1\/2)` |
 | `--sf-viewport-height-dynamic` | `100vh` · `100dvh` |
 | `--sf-viewport-height-large` | `100vh` · `100lvh` |
 | `--sf-viewport-height-small` | `100vh` · `100svh` |
@@ -713,7 +719,8 @@ description: "Полный список переменных, которые о�
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
 | `--sf-0` | `0` |
-| `--sf-accordion--box-gap` | `var(--sf-space-2)` · `calc(var(--sf-px) * 0)` |
+| `--sf-accordion--box-all` | `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/3--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` · `var(--sf-ui-3--control-height)` |
+| `--sf-accordion--box-gap` | `calc(var(--sf-px) * 0)` · `var(--sf-space-2)` |
 | `--sf-accordion--box-header` | `var(--sf-ui-3--control-height)` · `var(--sf-ui-1\/3--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-1--control-height)` · `var(--sf-ui-2--control-height)` |
 | `--sf-accordion--box-inset` | `var(--sf-space-3)` · `var(--sf-ui-1\/3--space-x)` · `max(var(--sf-space-1\/2), var(--sf-b2))` · `var(--sf-space-1)` · `var(--sf-space-2)` · `var(--sf-ui-3--space-x)` |
 | `--sf-accordion--box-line` | `var(--sf-text--height)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1\/2)` · `var(--sf-text-height-1)` · `var(--sf-text-height-2)` · `var(--sf-text-height-3)` |
@@ -722,6 +729,8 @@ description: "Полный список переменных, которые о�
 | `--sf-avatar--box-description` | `0` · `1` |
 | `--sf-avatar--box-heading` | `0` · `1` |
 | `--sf-avatar--box-line` | `var(--sf-text-height-1)` · `var(--sf-text-height-1\/4)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1\/2)` · `var(--sf-text-height-2)` · `var(--sf-text-height-3)` |
+| `--sf-avatar--card-heading` | `0` · `1` |
+| `--sf-avatar--card-row` | `0` · `1` |
 | `--sf-color--alfa` | `1` |
 | `--sf-current` | `currentColor` |
 | `--sf-decoration--alfa` | `1` |
@@ -732,13 +741,70 @@ description: "Полный список переменных, которые о�
 | `--sf-first-paint-bar--mask-band` | `linear-gradient(black, black)` |
 | `--sf-first-paint-bar--mask-dot` | `radial-gradient(circle closest-side, black 98%, transparent)` |
 | `--sf-first-paint-bar--top` | `calc(0.6055em - var(--sf-first-paint-bar--height) / 2)` |
+| `--sf-gallery--columns` | `2` · `3` · `1` |
+| `--sf-gallery--gap` | `var(--sf-space-1\/3)` |
+| `--sf-gallery--tile` | `var(--sf-f0)` · `var(--sf-e2)` · `var(--sf-f5)` |
+| `--sf-gap--actions` | `var(--sf-space-1\/3)` |
+| `--sf-gap--groups` | `var(--sf-space-1)` |
+| `--sf-gap--icon-inline` | `var(--sf-space-1\/4)` |
+| `--sf-gap--icon-text` | `var(--sf-space-1\/2)` |
+| `--sf-gap--tags` | `var(--sf-space-1\/4)` |
+| `--sf-gap--toolbar` | `var(--sf-space-1\/4)` |
 | `--sf-gradient--angle` | `90deg` |
+| `--sf-highlight--addition` | `var(--sf-place--ink, var(--sf-highlight-addition))` |
+| `--sf-highlight--attribute` | `var(--sf-place--ink, var(--sf-highlight-attribute))` |
+| `--sf-highlight--built-in` | `var(--sf-place--ink, var(--sf-highlight-built-in))` |
+| `--sf-highlight--bullet` | `var(--sf-place--ink, var(--sf-highlight-bullet))` |
+| `--sf-highlight--comment` | `var(--sf-place--ink-variant, var(--sf-highlight-comment))` |
+| `--sf-highlight--deletion` | `var(--sf-place--ink, var(--sf-highlight-deletion))` |
+| `--sf-highlight--keyword` | `var(--sf-place--ink, var(--sf-highlight-keyword))` |
+| `--sf-highlight--line-number` | `var(--sf-place--ink-variant, var(--sf-highlight-line-number))` |
+| `--sf-highlight--number` | `var(--sf-place--ink, var(--sf-highlight-number))` |
+| `--sf-highlight--operator` | `var(--sf-place--ink, var(--sf-highlight-operator))` |
+| `--sf-highlight--property` | `var(--sf-place--ink, var(--sf-highlight-property))` |
+| `--sf-highlight--punctuation` | `var(--sf-place--ink-variant, var(--sf-highlight-punctuation))` |
+| `--sf-highlight--section` | `var(--sf-place--ink, var(--sf-highlight-section))` |
+| `--sf-highlight--string` | `var(--sf-place--ink, var(--sf-highlight-string))` |
+| `--sf-highlight--tag` | `var(--sf-place--ink, var(--sf-highlight-tag))` |
+| `--sf-highlight--text` | `var(--sf-place--ink, var(--sf-highlight-text))` |
+| `--sf-highlight--title` | `var(--sf-place--ink, var(--sf-highlight-title))` |
+| `--sf-highlight--variable` | `var(--sf-place--ink, var(--sf-highlight-variable))` |
+| `--sf-highlight-addition` | `var(--sf-on-success-container)` |
+| `--sf-highlight-addition-background` | `var(--sf-success-container)` |
+| `--sf-highlight-attribute` | `light-dark(var(--sf-blue-40), var(--sf-blue-80))` |
+| `--sf-highlight-background` | `transparent` |
+| `--sf-highlight-built-in` | `light-dark(var(--sf-teal-40), var(--sf-teal-80))` |
+| `--sf-highlight-bullet` | `var(--sf-warning)` |
+| `--sf-highlight-comment` | `var(--sf-on-surface-variant)` |
+| `--sf-highlight-deletion` | `var(--sf-on-error-container)` |
+| `--sf-highlight-deletion-background` | `var(--sf-error-container)` |
+| `--sf-highlight-keyword` | `light-dark(var(--sf-violet-40), var(--sf-violet-80))` |
+| `--sf-highlight-line-number` | `var(--sf-on-surface-variant)` |
+| `--sf-highlight-number` | `var(--sf-highlight-attribute)` |
+| `--sf-highlight-operator` | `var(--sf-highlight-attribute)` |
+| `--sf-highlight-property` | `var(--sf-highlight-attribute)` |
+| `--sf-highlight-punctuation` | `var(--sf-on-surface-variant)` |
+| `--sf-highlight-section` | `var(--sf-primary)` |
+| `--sf-highlight-string` | `light-dark(var(--sf-green-40), var(--sf-green-80))` |
+| `--sf-highlight-tag` | `light-dark(var(--sf-green-40), var(--sf-green-80))` |
+| `--sf-highlight-text` | `var(--sf-on-surface)` |
+| `--sf-highlight-title` | `light-dark(var(--sf-amber-40), var(--sf-amber-80))` |
+| `--sf-highlight-variable` | `var(--sf-highlight-attribute)` |
+| `--sf-hit--min` | `var(--sf-c2)` |
+| `--sf-hit--touch` | `var(--sf-d1)` |
+| `--sf-icon--font-size` | `1em` |
+| `--sf-icon--height` | `1lh` |
+| `--sf-icon--text-middle` | `var(--sf-text--middle)` |
+| `--sf-icon--width` | `1em` |
 | `--sf-inherit` | `inherit` |
 | `--sf-input--box-control` | `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/3--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` · `var(--sf-ui-3--control-height)` |
 | `--sf-input--box-gap` | `var(--sf-input--gap, var(--sf-space-1\/4))` |
 | `--sf-input--box-label` | `0` · `1` |
+| `--sf-input--box-label-line` | `var(--sf-input--box-line)` · `var(--sf-text-height-1)` |
 | `--sf-input--box-line` | `var(--sf-text-height-1\/2)` · `var(--sf-text-height-1\/4)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1)` · `var(--sf-text-height-2)` |
 | `--sf-input--box-message` | `0` · `1` |
+| `--sf-inset--panel` | `var(--sf-space-2)` |
+| `--sf-inset--plate` | `var(--sf-space-1\/4)` |
 | `--sf-language--box` | `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/3--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` · `var(--sf-ui-3--control-height)` |
 | `--sf-language--field` | `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` |
 | `--sf-language--field-box` | `calc(var(--sf-language--field-label) + var(--sf-space-1\/4) + var(--sf-language--field))` |
@@ -747,9 +813,16 @@ description: "Полный список переменных, которые о�
 | `--sf-language--space-x` | `var(--sf-button-padding-inline, var(--sf-ui-1--space-x))` · `var(--sf-button-padding-inline, var(--sf-ui-1\/3--space-x))` · `var(--sf-button-padding-inline, var(--sf-ui-1\/2--space-x))` · `var(--sf-button-padding-inline, var(--sf-ui-2--space-x))` · `var(--sf-button-padding-inline, var(--sf-ui-3--space-x))` |
 | `--sf-language--text-x` | `var(--sf-ui-1--text-space-x)` · `var(--sf-ui-1\/3--text-space-x)` · `var(--sf-ui-1\/2--text-space-x)` · `var(--sf-ui-2--text-space-x)` · `var(--sf-ui-3--text-space-x)` |
 | `--sf-language--trigger` | `calc(2 * var(--sf-language--space-x) + 2 * var(--sf-language--text-x) + 3 * var(--sf-language--line))` |
+| `--sf-layer--base` | `var(--sf-z-index-0)` |
+| `--sf-layer--message` | `var(--sf-z-index-layer)` |
+| `--sf-layer--popover` | `var(--sf-z-index-9)` |
+| `--sf-layer--sticky` | `var(--sf-z-index-5)` |
+| `--sf-layer--window` | `var(--sf-z-index-layer)` |
 | `--sf-layout-floating-panel-height` | `calc(var(--sf-h0) + var(--sf-d0))` |
 | `--sf-layout-floating-panel-width` | `calc(var(--sf-g2) + var(--sf-b6))` |
 | `--sf-layout-reading-width` | `var(--sf-h2)` |
+| `--sf-line--border` | `var(--sf-px)` |
+| `--sf-line--indicator` | `calc(2 * var(--sf-px))` |
 | `--sf-list-item--box-caption-line` | `var(--sf-text-height-1\/2)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1)` · `var(--sf-text-height-2)` |
 | `--sf-list-item--box-caption-size` | `var(--sf-text-size-1\/2)` · `var(--sf-text-size-1\/3)` · `var(--sf-text-size-1)` · `var(--sf-text-size-2)` |
 | `--sf-list-item--box-caption-step` | `var(--sf-ui-1\/2--control-height)` · `max(var(--sf-ui-1\/2--control-height), var(--sf-d1))` |
@@ -793,11 +866,19 @@ description: "Полный список переменных, которые о�
 | `--sf-micro--ring-2` | `var(--sf-a2)` |
 | `--sf-micro--ring-3` | `var(--sf-a2)` |
 | `--sf-micro--tick` | `var(--sf-a4)` |
-| `--sf-on-paper` | `var(--sf-neutral-10)` |
-| `--sf-paper` | `var(--sf-white)` |
+| `--sf-on-paper` | `var(--sf-neutral-10)` · `var(--sf-scheme-text)` |
+| `--sf-on-scrim-control` | `var(--sf-on-surface-media)` |
+| `--sf-page-header--box` | `calc(var(--sf-page-header--box-path) + max(var(--sf-page-header--box-line), var(--sf-page-header--box-actions)) + var(--sf-page-header--box-tabs) + var(--sf-page-header--box-pad))` |
+| `--sf-page-header--box-actions` | `calc(var(--sf-px) * 0)` · `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` |
+| `--sf-page-header--box-line` | `max(var(--sf-heading-4--height), var(--sf-ui-1\/2--control-height))` |
+| `--sf-page-header--box-pad` | `calc(var(--sf-px) * 0)` · `calc(var(--sf-space-1) + var(--sf-space-2))` · `var(--sf-space-1)` |
+| `--sf-page-header--box-path` | `calc(var(--sf-px) * 0)` · `calc(var(--sf-ui-1\/3--control-height) + var(--sf-page-header-gap, var(--sf-space-1\/2)))` |
+| `--sf-page-header--box-tabs` | `calc(var(--sf-px) * 0)` · `calc(var(--sf-page-header-gap, var(--sf-space-1\/2)) + var(--sf-page-header--box-tabs-strip))` |
+| `--sf-page-header--box-tabs-strip` | `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` |
+| `--sf-paper` | `var(--sf-white)` · `var(--sf-scheme-ground)` |
 | `--sf-paper-hover` | `var(--sf-primary-50--alfa-4)` |
 | `--sf-paper-outline` | `var(--sf-neutral-50)` |
-| `--sf-paper-primary` | `var(--sf-primary-40)` |
+| `--sf-paper-primary` | `var(--sf-primary-40)` · `var(--sf-scheme-text)` |
 | `--sf-paper-select` | `var(--sf-primary-50--alfa-8)` |
 | `--sf-place--container-outline` | `var(--sf-outline)` |
 | `--sf-place--fill-surface` | `initial` |
@@ -809,14 +890,31 @@ description: "Полный список переменных, которые о�
 | `--sf-place--outer-link-active` | `var(--sf-link-active)` |
 | `--sf-place--outer-link-hover` | `var(--sf-link-hover)` |
 | `--sf-place--outer-link-visited` | `var(--sf-link-visited)` |
+| `--sf-place--outer-on-error-container` | `var(--sf-on-error-container)` |
+| `--sf-place--outer-on-error-container-graphic` | `var(--sf-on-error-container-graphic)` |
+| `--sf-place--outer-on-info-container` | `var(--sf-on-info-container)` |
+| `--sf-place--outer-on-info-container-graphic` | `var(--sf-on-info-container-graphic)` |
+| `--sf-place--outer-on-neutral-container` | `var(--sf-on-neutral-container)` |
+| `--sf-place--outer-on-neutral-container-graphic` | `var(--sf-on-neutral-container-graphic)` |
 | `--sf-place--outer-on-primary` | `var(--sf-on-primary)` |
 | `--sf-place--outer-on-primary-container` | `var(--sf-on-primary-container)` |
+| `--sf-place--outer-on-primary-container-graphic` | `var(--sf-on-primary-container-graphic)` |
+| `--sf-place--outer-on-secondary-container` | `var(--sf-on-secondary-container)` |
+| `--sf-place--outer-on-secondary-container-graphic` | `var(--sf-on-secondary-container-graphic)` |
+| `--sf-place--outer-on-success-container` | `var(--sf-on-success-container)` |
+| `--sf-place--outer-on-success-container-graphic` | `var(--sf-on-success-container-graphic)` |
+| `--sf-place--outer-on-tertiary-container` | `var(--sf-on-tertiary-container)` |
+| `--sf-place--outer-on-tertiary-container-graphic` | `var(--sf-on-tertiary-container-graphic)` |
+| `--sf-place--outer-on-warning-container` | `var(--sf-on-warning-container)` |
+| `--sf-place--outer-on-warning-container-graphic` | `var(--sf-on-warning-container-graphic)` |
 | `--sf-place--outer-primary` | `var(--sf-primary)` |
 | `--sf-place--outer-primary-active` | `var(--sf-primary-active)` |
 | `--sf-place--outer-primary-container` | `var(--sf-primary-container)` |
 | `--sf-place--outer-primary-container-active` | `var(--sf-primary-container-active)` |
 | `--sf-place--outer-primary-container-hover` | `var(--sf-primary-container-hover)` |
 | `--sf-place--outer-primary-hover` | `var(--sf-primary-hover)` |
+| `--sf-popup--window-form-width` | `var(--sf-g8)` · `var(--sf-g6)` |
+| `--sf-popup--window-wide-width` | `var(--sf-h2)` · `var(--sf-h1)` |
 | `--sf-popup-form-wide-width` | `var(--sf-g2)` · `var(--sf-g1)` |
 | `--sf-popup-form-width` | `var(--sf-g0)` · `var(--sf-f8)` |
 | `--sf-popup-list-max-width` | `var(--sf-g0)` · `var(--sf-f8)` |
@@ -830,7 +928,11 @@ description: "Полный список переменных, которые о�
 | `--sf-reference-link--box-pad` | `calc(2 * var(--sf-space-1) + 2 * var(--sf-px))` · `calc(var(--sf-px) * 0)` |
 | `--sf-reference-link--box-route` | `0` · `1` |
 | `--sf-sans` | `ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"` |
+| `--sf-scheme-ground` | `var(--sf-white)` · `var(--sf-black)` · `var(--sf-sky-90)` · `var(--sf-yellow-95)` |
+| `--sf-scheme-link` | `var(--sf-blue-30)` · `var(--sf-sky-85)` · `var(--sf-white)` |
+| `--sf-scheme-text` | `var(--sf-black)` · `var(--sf-white)` · `var(--sf-yellow-85)` · `var(--sf-blue-10)` · `var(--sf-brown-10)` |
 | `--sf-serif` | `ui-serif, Georgia, Cambria, "Times New Roman", Times, serif` |
+| `--sf-site-header--box` | `var(--sf-site-header-block-size, calc(var(--sf-ui-1--control-height) + 2 * var(--sf-space-1) + var(--sf-px)))` · `var(--sf-site-header-block-size, calc(var(--sf-ui-1\/2--control-height) + 2 * var(--sf-space-1) + var(--sf-px)))` |
 | `--sf-skeleton-bar` | `calc(var(--sf-text-size-1) * 0.727)` · `round(nearest, calc(var(--sf-text-size-1) * 0.727), var(--sf-a2))` |
 | `--sf-skeleton-base` | `var(--sf-surface-container)` |
 | `--sf-skeleton-line` | `var(--sf-text-height-1)` |
@@ -839,13 +941,29 @@ description: "Полный список переменных, которые о�
 | `--sf-slider--peek` | `1.15` · `2.2` |
 | `--sf-tag--box-control` | `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-1\/3--control-height)` · `var(--sf-ui-1--control-height)` · `var(--sf-ui-2--control-height)` · `var(--sf-ui-3--control-height)` · `var(--sf-text-height-1\/2)` · `var(--sf-text-height-1)` · `var(--sf-text-height-2)` · `var(--sf-c2)` |
 | `--sf-tag--box-cross` | `var(--sf-micro--cross-1\/2)` · `var(--sf-micro--cross-1\/3)` · `var(--sf-micro--cross-1)` · `var(--sf-micro--cross-2)` · `var(--sf-micro--cross-3)` |
+| `--sf-tag--box-cross-gap` | `var(--sf-tag--box-gap)` · `max(calc(var(--sf-px) * 0), calc((var(--sf-c2) - var(--sf-tag--box-cross)) / 2))` |
 | `--sf-tag--box-cross-on` | `0` · `1` |
-| `--sf-tag--box-edge` | `var(--sf-b2)` · `var(--sf-a8)` · `var(--sf-b6)` · `var(--sf-c0)` · `var(--sf-ui-3--space-x)` · `var(--sf-space-1\/3)` |
+| `--sf-tag--box-edge` | `var(--sf-b2)` · `var(--sf-a8)` · `var(--sf-b6)` · `var(--sf-c0)` · `var(--sf-ui-3--space-x)` · `var(--sf-space-1\/3)` · `var(--sf-space-1\/2)` |
 | `--sf-tag--box-gap` | `var(--sf-ui-1\/2--text-space-x)` · `var(--sf-ui-1\/3--text-space-x)` · `var(--sf-ui-1--text-space-x)` · `var(--sf-ui-2--text-space-x)` · `var(--sf-ui-3--text-space-x)` · `var(--sf-space-1\/3)` |
-| `--sf-tag--box-lead` | `var(--sf-text-height-1\/2)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1)` · `var(--sf-text-height-2)` · `var(--sf-text-height-3)` · `calc(var(--sf-tag--box-control) - 2 * var(--sf-space-1\/4))` |
-| `--sf-tag--box-lead-on` | `1` · `0` |
+| `--sf-tag--box-lead` | `var(--sf-text-height-1\/2)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1)` · `var(--sf-text-height-2)` · `var(--sf-text-height-3)` · `calc(var(--sf-tag--box-control) - 2 * var(--sf-space-1\/4))` · `var(--sf-micro--point-1\/2)` · `var(--sf-micro--point-1\/3)` · `var(--sf-micro--point-1)` · `var(--sf-micro--point-2)` · `var(--sf-micro--point-3)` |
+| `--sf-tag--box-lead-on` | `0` · `1` |
 | `--sf-tag--box-line` | `var(--sf-text-height-1\/2)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1)` · `var(--sf-text-height-2)` · `var(--sf-text-height-3)` |
+| `--sf-tag--box-pull` | `calc(var(--sf-px) * 0)` · `calc(var(--sf-tag--box-lead) / 6)` · `calc(var(--sf-tag--box-lead) / 16)` |
 | `--sf-tag--box-text` | `var(--sf-text-size-1\/2)` · `var(--sf-text-size-1\/3)` · `var(--sf-text-size-1)` · `var(--sf-text-size-2)` · `var(--sf-text-size-3)` |
+| `--sf-tile-metric--box-badge` | `calc(var(--sf-c0) + 2 * var(--sf-a4))` · `calc(var(--sf-b6) + 2 * var(--sf-a4))` · `calc(var(--sf-c2) + 2 * var(--sf-a4))` · `calc(var(--sf-text-height-1\/2) + 2 * var(--sf-ui-1\/2--space-y-tightness-low))` · `calc(var(--sf-text-height-1\/3) + 2 * var(--sf-ui-1\/3--space-y-tightness-low))` · `calc(var(--sf-text-height-1) + 2 * var(--sf-ui-1--space-y-tightness-low))` |
+| `--sf-tile-metric--box-bar` | `var(--sf-a8)` · `var(--sf-a4)` |
+| `--sf-tile-metric--box-change` | `1` · `0` |
+| `--sf-tile-metric--box-gap` | `var(--sf-ui-1--text-space-x)` · `var(--sf-ui-1\/2--text-space-x)` · `var(--sf-ui-2--text-space-x)` |
+| `--sf-tile-metric--box-line` | `var(--sf-text-height-1\/2)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1)` |
+| `--sf-tile-metric--box-meter` | `0` · `1` |
+| `--sf-tile-metric--box-space` | `var(--sf-ui-1--space-x)` · `var(--sf-ui-1\/2--space-x)` · `var(--sf-ui-2--space-x)` |
+| `--sf-tile-metric--box-status` | `0` · `1` |
+| `--sf-tile-metric--box-value` | `var(--sf-text-height-3)` · `var(--sf-text-height-2)` · `var(--sf-text-height-4)` |
 | `--sf-transparent-for-focus` | `var(--sf-transparent)` |
+| `--sf-wizard--box-control` | `var(--sf-ui-1--control-height)` |
+| `--sf-wizard--box-frame` | `calc(var(--sf-space-2) - var(--sf-px))` |
+| `--sf-wizard--box-gap` | `var(--sf-space-3)` |
+| `--sf-wizard--box-related` | `var(--sf-space-1)` |
+| `--sf-wizard--box-why` | `calc(var(--sf-px) * 0)` · `calc(var(--sf-wizard--box-related) + var(--sf-text-height-1))` |
 | `--sf-workspace--layout` | `narrow` · `split` · `wide` |
 | `--sf-workspace--list-edge` | `0` |

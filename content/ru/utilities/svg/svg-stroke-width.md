@@ -28,8 +28,8 @@ SVG. Берите их для линейных значков, схем и гр�
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `stroke-1` | `stroke-width: var(--sf-a1)` | — |
-| `stroke-2` | `stroke-width: var(--sf-a2)` | — |
+| `stroke-1` | `stroke-width: var(--sf-line--border)` | — |
+| `stroke-2` | `stroke-width: var(--sf-line--indicator)` | — |
 | `stroke-3` | `stroke-width: var(--sf-a3)` | — |
 | `stroke-4` | `stroke-width: var(--sf-a4)` | — |
 | `stroke-5` | `stroke-width: var(--sf-a5)` | — |
@@ -50,8 +50,8 @@ SVG. Берите их для линейных значков, схем и гр�
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
-| `--sf-a1` | `0.0625rem` |
-| `--sf-a2` | `0.125rem` |
+| `--sf-line--border` | `var(--sf-px)` |
+| `--sf-line--indicator` | `calc(2 * var(--sf-px))` |
 | `--sf-a3` | `0.1875rem` |
 | `--sf-a4` | `0.25rem` |
 | `--sf-a5` | `0.3125rem` |

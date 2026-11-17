@@ -5,7 +5,7 @@ description: "Даёт выбрать ровно один вариант из в
 
 # Радиокнопки
 
-:badge[sf-radio]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-radio]{variant=outline scheme=on-surface size=1/2} :badge[1.4.3]{variant=outline scheme=on-surface size=1/2}
 
 Радиокнопки дают выбрать один вариант из группы взаимоисключающих, где все
 варианты видны сразу. Для независимых вариантов берите
@@ -143,6 +143,7 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 | `label` | строка | пусто | — | — |
 | `description` | строка | пусто | — | — |
 | `help` | строка | пусто | — | Пояснение за кнопкой «?» (sf-help-mark) после текста подписи: через --sf-space-1/4 после последнего слова подписи, на её последней строке, если подпись переносится; нажатие на кнопку открывает пояснение и никогда не меняет элемент. В слот help можно положить своё sf-help-mark. |
+| `position` | строка | `start` | `start`, `end` | Логическое место индикатора относительно текста, как у sf-checkbox (C251): `end` ставит его после колонки текста, в конце строки; справа налево следует направлению документа. |
 | `disabled` | да/нет | нет | — | — |
 | `name` | строка | пусто | — | — |
 | `value` | строка | `on` | — | Что отправляет выбранная радиокнопка; без значения — "on", как у родной радиокнопки. |
@@ -183,13 +184,13 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 
 | | |
 |:---|:---|
-| Тег | `<sf-radio>`, контракт `smart.radio` версии `1.3.1` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-radio>`, контракт `smart.radio` версии `1.4.3` |
+| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как радиокнопка; нужна подпись или `aria-label`; с клавиатуры: `Tab`; стрелки; `Пробел`. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/radio` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-radio` |
+| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/radio` |
+| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-radio` |
 
 ## См. также
 

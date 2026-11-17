@@ -6,7 +6,7 @@ profile: reference
 
 # Радиокнопки
 
-:badge[sf-radio-button]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-radio-button]{variant=outline scheme=on-surface size=1/2} :badge[1.6.1]{variant=outline scheme=on-surface size=1/2}
 
 Радиокнопки выбирают ровно один вариант из группы, когда все варианты нужно
 показать сразу. Для независимых параметров берите
@@ -242,14 +242,14 @@ whenLoader(() => SF.Loader.ready('Radio', (Radio) => {
 | `--sf-radio-button--easing` | `var(--sf-ease-move)` | `transition-timing-function`, `transition` |
 | `--sf-radio-button--gap` | не задана; задают модификаторы, например `.sf-radio-button--size-1/2`: `var(--sf-radio-button-gap, var(--sf-space-1/2))` | `gap` |
 | `--sf-radio-button-box--background-color` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-radio-button-background-color, transparent)` | `background-color` |
-| `--sf-radio-button-box--border` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-style`, `border-width` |
+| `--sf-radio-button-box--border` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-px) solid` | `border`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-style`, `border-width`, `border-color`, `inset-inline-end` |
 | `--sf-radio-button-box--border-color` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-radio-button-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-radio-button-box--border-end-end-radius` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-radius-circle)` | `border-end-end-radius` |
 | `--sf-radio-button-box--border-end-start-radius` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-radius-circle)` | `border-end-start-radius` |
 | `--sf-radio-button-box--border-start-end-radius` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-radius-circle)` | `border-start-end-radius` |
 | `--sf-radio-button-box--border-start-start-radius` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-radius-circle)` | `border-start-start-radius` |
 | `--sf-radio-button-box--border-style` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `solid` | `border-style` |
-| `--sf-radio-button-box--border-width` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-radio-button-border-width, var(--sf-px))` | `border-width` |
+| `--sf-radio-button-box--border-width` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-radio-button-border-width, var(--sf-px))` | `border-width`, `inset-inline-end` |
 | `--sf-radio-button-box--box-shadow` | не задана; задают модификаторы, например `.sf-radio-button:has(input:not(:disabled):not(.disabled).focus-visible) .sf-radio-button-box`: `none` | `box-shadow` |
 | `--sf-radio-button-box--gap` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-a0)` | `gap` |
 | `--sf-radio-button-box--height` | не задана; задают модификаторы, например `.sf-radio-button.sf-radio-button--size-1/2 .sf-radio-button-box`: `var(--sf-radio-button-size, var(--sf-text-height-1/2))` | `height`, `--sf-radio-button-mark--height` |

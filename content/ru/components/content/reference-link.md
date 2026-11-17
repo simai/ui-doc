@@ -6,7 +6,7 @@ profile: reference
 
 # Справочная ссылка
 
-:badge[sf-reference-link]{variant=outline scheme=on-surface size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-reference-link]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Справочная ссылка показывает переход вместе с коротким пояснением: путём,
 источником, идентификатором записи. Вся карточка — область нажатия. Для
@@ -104,8 +104,8 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-reference-link` |
-| Части | `sf-reference-link-left`, `sf-reference-link-text`, `sf-reference-link__icon`, `sf-reference-link__link`, `sf-reference-link__main`, `sf-reference-link__meta` |
-| Модификаторы | `sf-reference-link--line-1`, `sf-reference-link--line-1/2`, `sf-reference-link--line-2`, `sf-reference-link--plain` |
+| Части | `sf-reference-link-left`, `sf-reference-link-text`, `sf-reference-link__copy`, `sf-reference-link__icon`, `sf-reference-link__label`, `sf-reference-link__link`, `sf-reference-link__main`, `sf-reference-link__meta`, `sf-reference-link__number`, `sf-reference-link__reason`, `sf-reference-link__start`, `sf-reference-link__tab`, `sf-reference-link__tab-words` |
+| Модификаторы | `sf-reference-link--copy`, `sf-reference-link--gone`, `sf-reference-link--inline`, `sf-reference-link--line-1`, `sf-reference-link--line-1/2`, `sf-reference-link--line-2`, `sf-reference-link--plain` |
 | Размеры | `sf-reference-link--size-1`, `sf-reference-link--size-1/2`, `sf-reference-link--size-2` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -140,14 +140,14 @@ profile: reference
 |:---|:---|:---|
 | `--sf-reference-link--accent` | `var(--sf-primary)` | `color` |
 | `--sf-reference-link--background-color` | `var(--sf-reference-link-background-color, transparent)` | `background-color` |
-| `--sf-reference-link--border-color` | `var(--sf-reference-link-border-color, var(--sf-outline-variant))` | `border` |
+| `--sf-reference-link--border-color` | `var(--sf-reference-link-border-color, var(--sf-outline-variant))` | `border-color` |
 | `--sf-reference-link--font-size` | не задана; задают модификаторы, например `.sf-reference-link.sf-reference-link--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
-| `--sf-reference-link--gap` | `var(--sf-space-1)` | `gap` |
-| `--sf-reference-link--line-height` | не задана; задают модификаторы, например `.sf-reference-link.sf-reference-link--size-1/2`: `var(--sf-text-height-1/2)` | `line-height`, `height`, `block-size`, `width`, `inline-size`, `font-size`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
+| `--sf-reference-link--gap` | `var(--sf-space-1)` | `gap`, `padding-inline-end` |
+| `--sf-reference-link--line-height` | не задана; задают модификаторы, например `.sf-reference-link.sf-reference-link--size-1/2`: `var(--sf-text-height-1/2)` | `line-height`, `height`, `block-size`, `width`, `inline-size`, `font-size`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `padding-inline-start` |
 | `--sf-reference-link--link` | `var(--sf-link)` | `color` |
-| `--sf-reference-link--main-gap` | не задана; задают модификаторы, например `.sf-reference-link.sf-reference-link--line-1/2`: `var(--sf-space-1/4)` | `gap` |
+| `--sf-reference-link--main-gap` | не задана; задают модификаторы, например `.sf-reference-link.sf-reference-link--line-1/2`: `var(--sf-space-1/4)` | `gap`, `padding-inline-start` |
 | `--sf-reference-link--padding-block` | `calc((var(--sf-ui-3--control-height) - var(--sf-text-height-1)) / 2 - var(--sf-px))` | `padding-top`, `padding-bottom`, `padding-block` |
-| `--sf-reference-link--padding-inline` | `var(--sf-space-1)` | `padding-left`, `padding-right`, `padding-inline` |
+| `--sf-reference-link--padding-inline` | `var(--sf-space-1)` | `padding-inline`, `padding-inline-end`, `inset-inline-end` |
 
 ## См. также
 

@@ -6,7 +6,7 @@ profile: reference
 
 # Вкладки
 
-:badge[sf-tabs]{variant=outline scheme=on-surface size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tabs]{variant=outline scheme=on-surface size=1/2} :badge[1.5.2]{variant=outline scheme=on-surface size=1/2}
 
 Вкладки показывают один из нескольких связанных разделов на месте, без
 перехода на другую страницу. Пункты короткие и относятся к одному объекту;
@@ -152,7 +152,7 @@ whenLoader(() => SF.Loader.ready('Tabs', () => {
 |:---|:---|
 | Блок | `sf-tabs` |
 | Части | `sf-tabs-count`, `sf-tabs-errors`, `sf-tabs-main-container`, `sf-tabs-more`, `sf-tabs-more-errors`, `sf-tabs-name`, `sf-tabs-overflowed`, `sf-tabs-said`, `sf-tabs-settings`, `sf-tabs-settings-handle`, `sf-tabs-settings-label`, `sf-tabs-settings-list`, `sf-tabs-settings-pin`, `sf-tabs-settings-row`, `sf-tabs-squeezed`, `sf-tabs-top`, `sf-tabs-top-container`, `sf-tabs-top-container--tools` |
-| Модификаторы | `sf-tabs--full`, `sf-tabs--overflow-more`, `sf-tabs--overflow-wrap`, `sf-tabs--pills`, `sf-tabs--sticky`, `sf-tabs--underline`, `sf-tabs--vertical` |
+| Модификаторы | `sf-tabs--overflow-more`, `sf-tabs--overflow-wrap`, `sf-tabs--pills`, `sf-tabs--sticky`, `sf-tabs--underline`, `sf-tabs--vertical` |
 | Размеры | `sf-tabs--size-1`, `sf-tabs--size-1-2`, `sf-tabs--size-2` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -189,7 +189,8 @@ whenLoader(() => SF.Loader.ready('Tabs', () => {
 | `--sf-tabs--focus-ink` | не задана; задают модификаторы, например `.sf-tabs-top .sf-button`: `var(--sf-on-surface)` | `--sf-focus--color` |
 | `--sf-tabs--icon-gap` | не задана; задают модификаторы, например `.sf-tabs.sf-tabs--size-1-2.sf-tabs--underline > .sf-tabs-top-container > .sf-tabs-top .sf-button`: `var(--sf-ui-1/2--text-space-x)` | `-moz-column-gap`, `column-gap` |
 | `--sf-tabs--icon-line` | не задана; задают модификаторы, например `.sf-tabs--underline.sf-tabs--size-1-2 > .sf-tabs-top-container > .sf-tabs-top .sf-icon-button`: `var(--sf-text-height-1/2)` | `width`, `inline-size` |
-| `--sf-tabs--line-drop` | не задана; задают модификаторы, например `.sf-tabs.sf-tabs--underline > .sf-tabs-top-container > .sf-tabs-top .sf-button`: `var(--sf-button--padding-bottom)` | `bottom`, `inset-block-end` |
+| `--sf-tabs--line-drop` | не задана; задают модификаторы, например `.sf-tabs.sf-tabs--underline:not(.does-not-exist) > .sf-tabs-top-container > .sf-tabs-top .sf-button`: `var(--sf-button--padding-bottom)` | `bottom`, `inset-block-end` |
+| `--sf-tabs--narrow` | не задана; задают модификаторы, например `.sf-tabs-top-container > .sf-tabs-top`: `1` | — |
 | `--sf-tabs--padding-inline` | не задана; задают модификаторы, например `.sf-tabs--underline > .sf-tabs-top-container > .sf-tabs-top .sf-button`: `var(--sf-tabs-padding-inline, var(--sf-ui-1--space-x))` | `--sf-button--padding-inline-start`, `--sf-button--padding-inline-end` |
 | `--sf-tabs-top--gap` | не задана; задают модификаторы, например `.sf-tabs.sf-tabs--full > .sf-tabs-top-container > .sf-tabs-top`: `0` | `gap` |
 | `--sf-tabs-top--margin` | не задана; задают модификаторы, например `.sf-tabs--underline > .sf-tabs-top-container > .sf-tabs-top`: `0 0 calc(var(--sf-tabs-border-width, var(--sf-tabs--border-width, var(--sf-px))) * -1) 0` | `margin` |

@@ -45,9 +45,9 @@ description: "Размывает элемент вместе с содержим
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
-| `--sf-blur-small` | `var(--sf-a2)` |
-| `--sf-blur-medium` | `var(--sf-a4)` |
-| `--sf-blur-large` | `var(--sf-a8)` |
+| `--sf-blur-small` | `var(--sf-a2); (prefers-reduced-transparency: reduce): var(--sf-blur-none)` |
+| `--sf-blur-medium` | `var(--sf-a4); (prefers-reduced-transparency: reduce): var(--sf-blur-none)` |
+| `--sf-blur-large` | `var(--sf-a8); (prefers-reduced-transparency: reduce): var(--sf-blur-none)` |
 | `--sf-blur-none` | `var(--sf-a0)` |
 
 ## Применение

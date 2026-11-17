@@ -68,11 +68,11 @@ description: "Ограничивает ширину элемента сверх�
 | `max-w-prose` | `max-width: 65ch` | — |
 | `max-w-0` | `max-width: 0` | — |
 | `max-w-none` | `max-width: none` | — |
-| `max-w-sm` | `max-width: 32rem` | — |
-| `max-w-md` | `max-width: 44rem` | — |
-| `max-w-lg` | `max-width: 60rem` | — |
-| `max-w-xl` | `max-width: 72rem` | — |
-| `max-w-xxl` | `max-width: 80rem` | — |
+| `max-w-sm` | `max-width: var(--sf-g6)` | — |
+| `max-w-md` | `max-width: var(--sf-h1)` | — |
+| `max-w-lg` | `max-width: var(--sf-h5)` | — |
+| `max-w-xl` | `max-width: var(--sf-h8)` | — |
+| `max-w-xxl` | `max-width: var(--sf-i0)` | — |
 | `max-w-{значение}` | `max-width: var(--sf-{значение})` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:max-w-full`.
@@ -85,6 +85,11 @@ description: "Ограничивает ширину элемента сверх�
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
+| `--sf-g6` | `32rem` |
+| `--sf-h1` | `44rem` |
+| `--sf-h5` | `60rem` |
+| `--sf-h8` | `72rem` |
+| `--sf-i0` | `80rem` |
 | `--sf-a0` | `0rem` |
 | `--sf-a1` | `0.0625rem` |
 | `--sf-a2` | `0.125rem` |
@@ -151,21 +156,16 @@ description: "Ограничивает ширину элемента сверх�
 | `--sf-g3` | `26rem` |
 | `--sf-g4` | `28rem` |
 | `--sf-g5` | `30rem` |
-| `--sf-g6` | `32rem` |
 | `--sf-g7` | `34rem` |
 | `--sf-g8` | `36rem` |
 | `--sf-g9` | `38rem` |
 | `--sf-h0` | `40rem` |
-| `--sf-h1` | `44rem` |
 | `--sf-h2` | `48rem` |
 | `--sf-h3` | `52rem` |
 | `--sf-h4` | `56rem` |
-| `--sf-h5` | `60rem` |
 | `--sf-h6` | `64rem` |
 | `--sf-h7` | `68rem` |
-| `--sf-h8` | `72rem` |
 | `--sf-h9` | `76rem` |
-| `--sf-i0` | `80rem` |
 | `--sf-i1` | `88rem` |
 | `--sf-i2` | `96rem` |
 | `--sf-i3` | `104rem` |

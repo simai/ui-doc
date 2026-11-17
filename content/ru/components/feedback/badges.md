@@ -6,7 +6,7 @@ profile: reference
 
 # Бейджи
 
-:badge[sf-badge]{variant=outline scheme=on-surface size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-badge]{variant=outline scheme=on-surface size=1/2} :badge[1.11.1]{variant=outline scheme=on-surface size=1/2}
 
 Бейдж показывает короткий статус, категорию или счётчик рядом с объектом. Он
 дополняет основное содержимое и не заменяет кнопку, фильтр или
@@ -243,20 +243,20 @@ profile: reference
 | `--sf-badge--anchor-border` | не задана; задают модификаторы, например `.sf-avatar > .sf-badge--anchored`: `var(--sf-avatar--border-top-width, var(--sf-a0))` | `--sf-badge--anchored-inset`, `top`, `inset-block-start`, `inset-inline-start` |
 | `--sf-badge--anchor-radius` | не задана; задают модификаторы, например `.sf-avatar > .sf-badge--anchored`: `var(--sf-avatar--border-top-right-radius, var(--sf-avatar-radius, var(--sf-radius-circle)))` | `--sf-badge--anchored-inset` |
 | `--sf-badge--anchored-count` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-micro--count-1)` | `--sf-badge--anchored-size` |
-| `--sf-badge--anchored-dot` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-micro--point-1)` | `--sf-badge--anchored-size`, `--sf-badge--anchored-max` |
+| `--sf-badge--anchored-dot` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-micro--point-1)` | `--sf-badge--anchored-size`, `--sf-badge--anchored-max`, `--sf-dot-item--size` |
 | `--sf-badge--anchored-font-size` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-text-size-1/4)` | `font-size` |
 | `--sf-badge--anchored-inset` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `calc(min(var(--sf-badge--anchor-radius), 50% + var(--sf-badge--anchor-border)) * 0.29289)` | `top`, `inset-block-start`, `inset-inline-start` |
 | `--sf-badge--anchored-max` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `none` | `max-width`, `max-inline-size` |
 | `--sf-badge--anchored-padding` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-a4)` | `padding-left`, `padding-right`, `padding-inline` |
 | `--sf-badge--anchored-size` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-badge--anchored-count)` | `height`, `block-size`, `min-height`, `min-block-size`, `min-width`, `min-inline-size`, `line-height` |
-| `--sf-badge--background-color` | `var(--sf-badge-background-color, var(--sf-surface-container))` | `background-color`, `background-image` |
+| `--sf-badge--background-color` | `var(--sf-badge-background-color, var(--sf-surface-container))` | `background-image`, `background-color`, `--sf-dot-item--background-color` |
 | `--sf-badge--border-bottom-width` | `var(--sf-badge-border-width, var(--sf-a0))` | `padding-bottom`, `padding-block-end`, `border-bottom-width`, `--sf-badge--line-box` |
 | `--sf-badge--border-color` | `var(--sf-badge-border-color, transparent)` | `border-color` |
 | `--sf-badge--border-inline-end-width` | `var(--sf-badge-border-width, var(--sf-a0))` | `padding-inline-end`, `border-inline-end-width` |
 | `--sf-badge--border-inline-start-width` | `var(--sf-badge-border-width, var(--sf-a0))` | `padding-inline-start`, `border-inline-start-width` |
 | `--sf-badge--border-style` | не задана; задают модификаторы, например `.sf-badge--outline`: `solid` | `border-style` |
 | `--sf-badge--border-top-width` | `var(--sf-badge-border-width, var(--sf-a0))` | `padding-top`, `padding-block-start`, `border-top-width`, `--sf-badge--line-box` |
-| `--sf-badge--color` | `var(--sf-badge-color, var(--sf-on-surface))` | `color`, `--sf-icon--color`, `--sf-badge-text--color` |
+| `--sf-badge--color` | `var(--sf-badge-color, var(--sf-on-surface))` | `--sf-icon--color`, `--sf-badge-text--color`, `color` |
 | `--sf-badge--font-size` | `var(--sf-text-size-1/3)` | `font-size`, `--sf-icon--font-size`, `--sf-badge-text--font-size` |
 | `--sf-badge--gap` | `var(--sf-badge-gap, var(--sf-space-1/4))` | `gap` |
 | `--sf-badge--line-1` | `var(--sf-c2)` | `--sf-badge--line-height` |

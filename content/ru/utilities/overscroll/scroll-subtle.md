@@ -22,15 +22,7 @@ Tab.
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `scroll-subtle` | `--sf-scroll-thumb-subtle: color-mix(
-      in srgb,
-      var(--sf-on-surface) 10%,
-      var(--sf-transparent)
-    ); --sf-scroll-thumb-subtle-interactive: color-mix(
-      in srgb,
-      var(--sf-on-surface) 20%,
-      var(--sf-transparent)
-    ); --sf-scroll-bg-track: var(--sf-transparent); --sf-scroll-bg-thumb: var(--sf-scroll-thumb-subtle); scrollbar-gutter: auto; scrollbar-width: thin; scrollbar-color: var(--sf-scroll-thumb-subtle) var(--sf-transparent); .scroll-subtle:hover { --sf-scroll-bg-thumb: var(--sf-scroll-thumb-subtle-interactive); scrollbar-color: var(--sf-scroll-thumb-subtle-interactive) var(--sf-transparent) }; .scroll-subtle[focus-within] { --sf-scroll-bg-thumb: var(--sf-scroll-thumb-subtle-interactive); scrollbar-color: var(--sf-scroll-thumb-subtle-interactive) var(--sf-transparent) }; .scroll-subtle:focus-within { --sf-scroll-bg-thumb: var(--sf-scroll-thumb-subtle-interactive); scrollbar-color: var(--sf-scroll-thumb-subtle-interactive) var(--sf-transparent) }; (forced-colors: active): scrollbar-color: auto; .scroll-subtle:hover { (forced-colors: active): scrollbar-color: auto }; .scroll-subtle[focus-within] { (forced-colors: active): scrollbar-color: auto }; .scroll-subtle:focus-within { (forced-colors: active): scrollbar-color: auto }` | — |
+| `scroll-subtle` | `--sf-scroll-bg-track: var(--sf-transparent); --sf-scroll-bg-thumb: color-mix(in srgb, var(--sf-transparent), var(--sf-on-surface) 48%); --sf-scroll--thumb-hover: color-mix(in srgb, var(--sf-transparent), var(--sf-on-surface) 64%); scrollbar-gutter: auto; .scroll-subtle:hover { --sf-scroll-bg-thumb: var(--sf-scroll--thumb-hover) }; .scroll-subtle[focus-within] { --sf-scroll-bg-thumb: var(--sf-scroll--thumb-hover) }; .scroll-subtle:focus-within { --sf-scroll-bg-thumb: var(--sf-scroll--thumb-hover) }; (forced-colors: active): scrollbar-color: auto; .scroll-subtle:hover { (forced-colors: active): scrollbar-color: auto }; .scroll-subtle[focus-within] { (forced-colors: active): scrollbar-color: auto }; .scroll-subtle:focus-within { (forced-colors: active): scrollbar-color: auto }` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
@@ -42,8 +34,8 @@ Tab.
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
-| `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 | `--sf-transparent` | `rgba(255,255,255,0)` |
+| `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 
 ## Применение
 

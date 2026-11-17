@@ -6,7 +6,7 @@ profile: reference
 
 # Рисунок
 
-:badge[sf-figure]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-figure]{variant=outline scheme=on-surface size=1/2} :badge[1.7.0]{variant=outline scheme=on-surface size=1/2}
 
 Рисунок показывает картинку, видео или иллюстрацию в заданной пропорции и
 подпись под ней. Берите его, когда изображению нужна подпись или ровная рамка
@@ -81,8 +81,8 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-figure` |
-| Части | `sf-figure-caption`, `sf-figure-media` |
-| Модификаторы | `sf-figure--caption-over`, `sf-figure--caption-plate`, `sf-figure--contain`, `sf-figure--expressive`, `sf-figure--ratio-16x9`, `sf-figure--ratio-1x1`, `sf-figure--ratio-21x9`, `sf-figure--ratio-3x2`, `sf-figure--ratio-4x3` |
+| Части | `sf-figure-caption`, `sf-figure-grid`, `sf-figure-grid--l`, `sf-figure-grid--masonry`, `sf-figure-grid--s`, `sf-figure-grid--selecting`, `sf-figure-media`, `sf-figure-pick` |
+| Модификаторы | `sf-figure--caption-over`, `sf-figure--caption-plate`, `sf-figure--contain`, `sf-figure--expressive`, `sf-figure--ratio-16x9`, `sf-figure--ratio-1x1`, `sf-figure--ratio-21x9`, `sf-figure--ratio-3x2`, `sf-figure--ratio-3x4`, `sf-figure--ratio-4x3`, `sf-figure--ratio-auto`, `sf-figure--selected`, `sf-figure--tile` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -99,7 +99,7 @@ profile: reference
 | `--sf-figure-border-width` | Толщина границы рамки медиа; пока не задана, границы нет. | `var(--sf-0)` |
 | `--sf-figure-radius` | Скругление углов рамки медиа. | `var(--sf-radius--surface)` |
 | `--sf-figure-caption-color` | Цвет подписи. | `var(--sf-on-surface-variant)` |
-| `--sf-figure-gap` | Промежуток между медиа и подписью. | `var(--sf-space-1\/2)` |
+| `--sf-figure-gap` | Промежуток между медиа и подписью: 8 на любой ширине, 4 в компактной плотности. | `var(--sf-space-1\/3)` |
 
 ```css
 .sf-figure {
@@ -116,3 +116,6 @@ profile: reference
 | `--sf-figure--on` | не задана; задают модификаторы, например `.sf-figure-media:not(:has(> img))`: `var(--sf-style--expressive, 0)` | `background-size` |
 | `--sf-figure--ramp` | не задана; задают модификаторы, например `.sf-figure.sf-figure--caption-over > .sf-figure-caption`: `calc(var(--sf-space-4) * 4)` | `padding-top`, `padding-block-start`, `background-image` |
 | `--sf-figure--ratio` | не задана; задают модификаторы, например `.sf-figure--ratio-1x1`: `1 / 1` | `aspect-ratio` |
+| `--sf-figure-grid--columns` | не задана; задают модификаторы, например `.sf-figure-grid`: `2` | `grid-template-columns` |
+| `--sf-figure-grid--gap` | не задана; задают модификаторы, например `.sf-figure-grid`: `var(--sf-space-1/3)` | `grid-template-columns`, `grid-gap`, `gap` |
+| `--sf-figure-grid--tile` | не задана; задают модификаторы, например `.sf-figure-grid`: `var(--sf-f0)` | `grid-template-columns` |

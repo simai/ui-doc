@@ -6,7 +6,7 @@ profile: reference
 
 # Полоса прокрутки
 
-:badge[sf-scrollbar]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-scrollbar]{variant=outline scheme=on-surface size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
 
 Компонент оформляет прокрутку области ограниченной высоты или ширины: прячет
 системную полосу и рисует поверх содержимого тонкую полосу, которую можно
@@ -80,7 +80,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-scrollbar` |
-| Части | `sf-scrollbar__thumb`, `sf-scrollbar__thumb--horizontal`, `sf-scrollbar__track`, `sf-scrollbar__track--horizontal`, `sf-scrollbar__viewport` |
+| Части | `sf-scrollbar__viewport` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -93,12 +93,6 @@ profile: reference
 | `--sf-scrollbar--fade-direction` | не задана; задают модификаторы, например `.sf-scrollbar__viewport`: `to bottom` | `mask-image` |
 | `--sf-scrollbar--fade-end` | не задана; задают модификаторы, например `.sf-scrollbar__viewport`: `0px` | `mask-image` |
 | `--sf-scrollbar--fade-start` | не задана; задают модификаторы, например `.sf-scrollbar__viewport`: `0px` | `mask-image` |
-| `--sf-scrollbar-active-size` | `var(--sf-a6)` | `width`, `inline-size`, `height`, `block-size` |
-| `--sf-scrollbar-hit-size` | `var(--sf-b6)` | `width`, `inline-size`, `height`, `block-size` |
-| `--sf-scrollbar-keyboard-step` | `var(--sf-d0)` | — |
-| `--sf-scrollbar-min-thumb-size` | `var(--sf-d1)` | `min-height`, `min-block-size`, `min-width`, `min-inline-size` |
-| `--sf-scrollbar-rest-size` | `var(--sf-a2)` | `width`, `inline-size`, `height`, `block-size` |
-| `--sf-scrollbar-thumb-color` | `var(--sf-outline)` | `background` |
 
 ## См. также
 

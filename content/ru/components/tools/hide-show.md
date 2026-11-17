@@ -6,7 +6,7 @@ profile: reference
 
 # Показ и скрытие
 
-:badge[sf-hide-show]{variant=outline scheme=on-surface size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-hide-show]{variant=outline scheme=on-surface size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
 
 Компонент показывает и скрывает связанное содержимое по кнопкам и отражает
 состояние для экранного диктора. Для простого раскрываемого блока сначала

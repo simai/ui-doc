@@ -6,7 +6,7 @@ profile: reference
 
 # Вкладка (совместимость)
 
-:badge[sf-tab]{variant=outline scheme=on-surface size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tab]{variant=outline scheme=on-surface size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
 
 Вкладка переключает секции содержимого по списку пунктов, у каждого из
 которых два представления — обычное и активное. Она нужна, чтобы сохранить

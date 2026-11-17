@@ -216,6 +216,11 @@
      "slug": "person/icons",
      "title": "Значки на выбор",
      "order": 20
+    },
+    {
+     "slug": "person/display-settings",
+     "title": "Настройки отображения",
+     "order": 30
     }
    ]
   },

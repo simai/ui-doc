@@ -6,7 +6,7 @@ profile: reference
 
 # Ссылка
 
-:badge[sf-link]{variant=outline scheme=on-surface size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-link]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Ссылка ведёт на другую страницу, раздел страницы или файл. Для действия на
 текущей странице — сохранить, отправить, открыть окно — берите
@@ -93,14 +93,10 @@ profile: reference
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-link--background-color` | `var(--sf-transparent)` | `background-color` |
-| `--sf-link--color` | `var(--sf-link)` | `color` |
-| `--sf-link--font-family` | `var(--sf-text--family)` | `font-family` |
-| `--sf-link--font-size` | `var(--sf-text-size-1)` | `font-size` |
-| `--sf-link--font-weight` | `var(--sf-font-weight-regular)` | `font-weight` |
-| `--sf-link--gap` | `var(--sf-space-1/3)` | `gap` |
-| `--sf-link--line-height` | `var(--sf-text-height-1)` | `line-height` |
+| `--sf-link--color` | `var(--sf-place--ink, var(--sf-link))` | `color` |
+| `--sf-link--gap` | `var(--sf-gap--icon-inline, var(--sf-space-1/4))` | `gap`, `margin-inline-start` |
 | `--sf-link--text-decoration` | `underline` | `text-decoration-line` |
-| `--sf-link-icon--size` | не задана; задают модификаторы, например `.sf-link :where(.sf-link__icon, .sf-link-icon)`: `var(--sf-text-height-1)` | `height`, `block-size`, `width`, `inline-size` |
+| `--sf-link-icon--size` | не задана; задают модификаторы, например `.sf-link :where(.sf-link__icon, .sf-link-icon)`: `1em` | `height`, `block-size`, `width`, `inline-size` |
 
 ## См. также
 

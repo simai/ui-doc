@@ -36,8 +36,8 @@ description: "Заполняет фон элемента тонкими лини
 |:---|:---|:---|
 | `stripe-1` | `background-image: repeating-linear-gradient(90deg, var(--sf-stripe--color) 0 var(--sf-px), transparent var(--sf-px) var(--sf-stripe--size))` | — |
 | `stripe-2` | `background-image: repeating-linear-gradient(0deg, var(--sf-stripe--color) 0 var(--sf-px), transparent var(--sf-px) var(--sf-stripe--size))` | — |
-| `stripe-3` | `background-image: repeating-linear-gradient(0deg, var(--sf-stripe--color) 0 var(--sf-px), transparent var(--sf-px) var(--sf-stripe--size)), repeating-linear-gradient(90deg, var(--sf-stripe--color) 0 var(--sf-px), transparent var(--sf-px) var(--sf-stripe--size))` | — |
-| `stripe-4` | `background-image: repeating-linear-gradient(135deg, var(--sf-stripe--color) 0 var(--sf-px), transparent var(--sf-px) var(--sf-stripe--size))` | — |
+
+Прежние имена работают до 2027-01-01: `stripe-3` → `pattern-grid`, `stripe-4` → `pattern-hatch`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:stripe-1`.
 
@@ -49,9 +49,9 @@ description: "Заполняет фон элемента тонкими лини
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
-| `--sf-stripe--color` | `var(--sf-surface-inverse)` |
+| `--sf-stripe--color` | `var(--sf-surface-state-select)` |
 | `--sf-px` | `1px` |
-| `--sf-stripe--size` | `var(--sf-a1)` |
+| `--sf-stripe--size` | `var(--sf-space-1\/2)` |
 
 ## Применение
 
