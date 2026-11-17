@@ -620,8 +620,8 @@ view: {
 
 ### Источник
 
-- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/view-properties`
-- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/view-properties/rule.js#name=cl-view-properties`
+- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/view-properties`
+- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/view-properties/rule.js#name=cl-view-properties`
 
 ## См. также
 

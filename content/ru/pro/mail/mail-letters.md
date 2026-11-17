@@ -153,5 +153,5 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | Доступность | Читается как список; название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/mail-letters` |
-| Правило классов | `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/mail-letters/rule.js#name=cl-mail-letters` |
+| Источник | `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/mail-letters` |
+| Правило классов | `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/mail-letters/rule.js#name=cl-mail-letters` |

@@ -4330,15 +4330,15 @@
             "schema_version": 2,
             "package": "pro",
             "requires": "ui-078a4b4c6f6e",
-            "mount": "_docara/framework-packages/pro/f29d4bf68b5d4128d40875b932d35175594b3d8c",
+            "mount": "_docara/framework-packages/pro/589ced99cfbde80910d35af856797ded18e0954b",
             "receipt": {
                 "schema": "simai.framework.product-package-receipt",
                 "schema_version": 1,
                 "package_source": {
                     "repository": "simai/ui-pro",
-                    "revision": "f29d4bf68b5d4128d40875b932d35175594b3d8c",
+                    "revision": "589ced99cfbde80910d35af856797ded18e0954b",
                     "path": "components",
-                    "tree": "d3c8779dd0be0513f5049909a6f359ec2c95c6eb"
+                    "tree": "3cf6cfcc7db5abcdedcde8e8924c579294ce5a33"
                 },
                 "framework_source": {
                     "repository": "simai/ui-source",
@@ -4348,8 +4348,8 @@
                     "repository": "simai/ui-builder",
                     "revision": "16e9a81c1f2838f7cfeebbbd19654016743c9672"
                 },
-                "manifest_sha256": "c8e042533560fac51a6b7b713f37ec499e6ec957280e5de5cf0e1350783072ac",
-                "archive_sha256": "5003f5287929f718e7994d502175c917a99fcdc526fe9d55913127a23681a152"
+                "manifest_sha256": "cb9f28b0ee8b4df1fb3937b307c24923594f1043c733740da7a509710a728d0e",
+                "archive_sha256": "7d0119bcb14eadacd8ab39b83cbee395f8f8d6de24b4d8cadb1f23c4d71a4162"
             },
             "files": {
                 "smart/admin-menu/css/admin-menu.css": {
@@ -4395,10 +4395,10 @@
                     "sha256": "e97bbc9a23869b3699a92f9987cf148221002394d7aaed0e504e2bbce3c4fb37"
                 },
                 "smart/chat-message/js/chat-message.js": {
-                    "sha256": "889179595e9eb1f903e2ffb282fabd8f5886d1d1000e30d17b0619aa2cbf89d4"
+                    "sha256": "bd6f58321a29f3746f53e952bd19d37a1ded5a72c5374d2690c98ea74527e764"
                 },
                 "smart/chat-message/js/chat-message.min.js": {
-                    "sha256": "77e4cda6e1f1715704ce6da5c7fadfb22a7be5fc27ac63b444cf821227fdfc48"
+                    "sha256": "5319fa5c4645ae1357f1f848e817c751cc19e767b2af228136395c0108a058c1"
                 },
                 "smart/chat-threads/css/chat-threads.css": {
                     "sha256": "a1a7c543e57168ccdbaf12ce29c4ce2245deb7d1742130e7f0e568cd3e88834a"
@@ -4407,10 +4407,10 @@
                     "sha256": "cfa288c1dae6955569e2849d6ed8031f14272c83976575643126ffd94a9f5525"
                 },
                 "smart/chat-threads/js/chat-threads.js": {
-                    "sha256": "d8975c0b8f9aa32cc8967efc13673da313ce34d744e4037e1ba7abdba0a43640"
+                    "sha256": "cd6c481750ad0af757cc11e83029b8e9194f4a2fdb36cc7b26ec8ecdfd07cb7c"
                 },
                 "smart/chat-threads/js/chat-threads.min.js": {
-                    "sha256": "d921e68a4f65acb57820808b322bcc570ecb38ef3c91a9c97e4a963d637a6287"
+                    "sha256": "057448a10acc60e178adede88037262b715abe53adf2641e01488f6ebd1cacad"
                 },
                 "smart/chat-window/css/chat-window.css": {
                     "sha256": "3083526eada9f1e56346947df9df2abd4dd9d35c118cbb2ec47b70393d4bafb1"
@@ -4419,10 +4419,10 @@
                     "sha256": "0c2ab58543f905198e6c0f046196c922f8cd190dbac3896e0323f6bc5e363496"
                 },
                 "smart/chat-window/js/chat-window.js": {
-                    "sha256": "633331da63829c4b574db4a1579a5db473004631cd1b3f7f1f1fc6682a6941d6"
+                    "sha256": "198be378d98f62485bfc3cdfd806064970872e5cbd76f9f7510757a369ab274f"
                 },
                 "smart/chat-window/js/chat-window.min.js": {
-                    "sha256": "d082facf50eb7f3b41549d9add76266d16d2e711e68b219316bcfa2198c483be"
+                    "sha256": "6d89b36f36289893b79c586148d589b07de09002ce3acb214347eeeff73a0a07"
                 },
                 "smart/editor-content/css/editor-content.css": {
                     "sha256": "c296208eefe76c422d5eedec5b344e1ab851d664ef094dd6012ff0e79034d55b"
@@ -4455,10 +4455,10 @@
                     "sha256": "b31151a691dc06dff53157896158c030bebd3f68e1746fb3c8e8d30d51c6d02e"
                 },
                 "smart/mail-canvas/js/mail-canvas.js": {
-                    "sha256": "bba853fff5a57d4c038a14f795788cb27eaaac9bbbf3088d2cd3e291ae28a0f9"
+                    "sha256": "ae5e92683b9390bfbf065afa14dcb302233fe7fd1642d5104c3f3e6237e6e4c5"
                 },
                 "smart/mail-canvas/js/mail-canvas.min.js": {
-                    "sha256": "787df6ab37a1359515499be58ecbf140a36eb19107791dc3c3816e0ac446f152"
+                    "sha256": "4f38c9642605f13fc5a731adc56c24d396b30322bfeb1d6679061580d200eaf0"
                 },
                 "smart/mail-inspector/css/mail-inspector.css": {
                     "sha256": "5ab2fd0a2e52d334d1b2752b262ce7af4e251fa2f63457bf3e1529e440f4ced5"
@@ -4536,10 +4536,10 @@
                     "sha256": "c01f8ea7670fd243e2b2a1813e4f77ba40d6e275e8764dd74d9b1b584ba2333e"
                 },
                 "smart/view-table/css/view-table.css": {
-                    "sha256": "36e19a2b5d751380be2c9d9cd043bed63ea520f36839399e7cbee2b1d5ca00c4"
+                    "sha256": "0b1fac83fa47ad0e780d80f5010e497053447acd55382555e139dfd9cd1dd7f7"
                 },
                 "smart/view-table/css/view-table.min.css": {
-                    "sha256": "49eaec56bb12e1f09f7324216f2fc75908800dd38fc5d0feb81a4b6eea687905"
+                    "sha256": "ec6d4f1c59170394e002cfb54fbc6561cc0b95e93c06036f4d3f28d0bf0a54a9"
                 },
                 "smart/view-table/js/view-table.js": {
                     "sha256": "0cf2ab46ab631277887bf21254cd719ab49563b3fdcf6bdf79445c135277bd45"

@@ -5,7 +5,7 @@ description: "Окно чата целиком на порте хоста: сп�
 
 # Окно чата
 
-:badge[sf-chat-window]{variant=outline scheme=on-surface size=1/2} :badge[1.14.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-window]{variant=outline scheme=on-surface size=1/2} :badge[1.15.2]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-window>` — окно чата целиком: список разговоров, открытый разговор,
 поле ввода, выбор собеседника и «Мои файлы». Окно собрано из частей —
@@ -249,7 +249,7 @@ Escape закрывает его и возвращает фокус на ком�
 |:---|:---|
 | Тег | `<sf-chat-window>` |
 | Назначение | Окно чата целиком на порту приложения `simai.chat-port` 1.0.0: разговоры (архив, постраничная загрузка, поиск, закрепление), открытый разговор с сообщениями, предложениями, оценками и описаниями задач, поле ввода с файлами и вопросами в очереди, пока ждётся ответ, поиск по разговору, собеседник и «Мои файлы». С сервером не говорит: данные даёт приложение, оно же отвечает на каждое намерение — через порт или действие `settle`. |
-| Контракт | `smart.chat-window`, версия `1.14.3` |
+| Контракт | `smart.chat-window`, версия `1.15.2` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -353,8 +353,8 @@ Escape закрывает его и возвращает фокус на ком�
 
 ### Источник
 
-- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/chat-window`
-- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/chat-window/rule.js#name=cl-chat-window`
+- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/chat-window`
+- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/chat-window/rule.js#name=cl-chat-window`
 
 ## См. также
 

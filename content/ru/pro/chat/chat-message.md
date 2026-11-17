@@ -5,7 +5,7 @@ description: "Одно сообщение чата: ответ помощник�
 
 # Сообщение чата
 
-:badge[sf-chat-message]{variant=outline scheme=on-surface size=1/2} :badge[1.7.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-message]{variant=outline scheme=on-surface size=1/2} :badge[1.8.1]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-message>` рисует одно сообщение чата: ответ помощника с разметкой,
 источниками, отметкой проверки и оценкой, вопрос человека с файлами, а по
@@ -159,7 +159,7 @@ log.renderMessage = (message, {view}) => {
 |:---|:---|
 | Тег | `<sf-chat-message>` |
 | Назначение | Одно сообщение чата: ответ помощника с разметкой, источниками, отметкой проверки, заметками, предложением изменения, оценкой и уточнением задачи — или его ожидание; вопрос человека с файлами; а по шаблону `person` — сообщение разговора людей. Сообщение сообщает, что сделал человек; что это значит, решает приложение. |
-| Контракт | `smart.chat-message`, версия `1.7.7` |
+| Контракт | `smart.chat-message`, версия `1.8.1` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -213,8 +213,8 @@ log.renderMessage = (message, {view}) => {
 
 ### Источник
 
-- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/chat-message`
-- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/chat-message/rule.js#name=cl-chat-message`
+- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/chat-message`
+- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/chat-message/rule.js#name=cl-chat-message`
 
 ## См. также
 

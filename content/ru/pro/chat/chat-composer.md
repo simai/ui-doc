@@ -177,8 +177,8 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 ### Источник
 
-- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/chat-composer`
-- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/chat-composer/rule.js#name=cl-chat-composer`
+- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/chat-composer`
+- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/chat-composer/rule.js#name=cl-chat-composer`
 
 ## См. также
 

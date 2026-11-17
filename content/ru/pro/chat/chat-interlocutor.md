@@ -147,8 +147,8 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/chat-interlocutor`
-- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/chat-interlocutor/rule.js#name=cl-chat-interlocutor`
+- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/chat-interlocutor`
+- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/chat-interlocutor/rule.js#name=cl-chat-interlocutor`
 
 ## См. также
 

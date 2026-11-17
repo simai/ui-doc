@@ -916,8 +916,8 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/view`
-- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/view/rule.js#name=cl-view`
+- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/view`
+- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/view/rule.js#name=cl-view`
 
 ### `<sf-view-table>`
 
@@ -1096,5 +1096,5 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/view-table`
-- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/view-table/rule.js#name=cl-view-table`
+- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/view-table`
+- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/view-table/rule.js#name=cl-view-table`

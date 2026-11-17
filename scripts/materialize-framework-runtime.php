@@ -63,9 +63,9 @@ const NPM_VERSION = '5.20261116.1505';
 const PACKAGES = [
     'pro' => [
         'repository' => 'simai/ui-pro',
-        'revision' => 'f29d4bf68b5d4128d40875b932d35175594b3d8c',
+        'revision' => '589ced99cfbde80910d35af856797ded18e0954b',
         'path' => 'components',
-        'archive_sha256' => '5003f5287929f718e7994d502175c917a99fcdc526fe9d55913127a23681a152',
+        'archive_sha256' => '7d0119bcb14eadacd8ab39b83cbee395f8f8d6de24b4d8cadb1f23c4d71a4162',
         'builder' => '16e9a81c1f2838f7cfeebbbd19654016743c9672',
     ],
 ];
