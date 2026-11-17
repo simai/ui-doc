@@ -6,7 +6,7 @@ profile: reference
 
 # Шаги
 
-:badge[sf-steps]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-steps]{variant=outline scheme=on-surface size=1/2} :badge[1.3.4]{variant=outline scheme=on-surface size=1/2}
 
 Шаги показывают, где человек находится в процессе, который проходит сам, —
 оформлении заказа, публикации, настройке, — и отмечают пройденные, текущий и
@@ -121,7 +121,7 @@ profile: reference
 | Блок | `sf-steps` |
 | Части | `sf-steps-container`, `sf-steps-count`, `sf-steps-count-label`, `sf-steps-count-line`, `sf-steps-count-position` |
 | Модификаторы | `sf-steps--auto`, `sf-steps--layout-column`, `sf-steps--layout-count`, `sf-steps--layout-row`, `sf-steps--marker-dot`, `sf-steps--marker-number` |
-| Размеры | `sf-steps--size-1/2` |
+| Размеры | `sf-steps--size-1`, `sf-steps--size-1/2` |
 
 **`sf-step`**
 
@@ -130,7 +130,7 @@ profile: reference
 | Блок | `sf-step` |
 | Части | `sf-step-body`, `sf-step-container`, `sf-step-content`, `sf-step-control`, `sf-step-marker`, `sf-step-text` |
 | Модификаторы | `sf-step--disabled`, `sf-step--passed`, `sf-step--state-ahead`, `sf-step--state-current`, `sf-step--state-done`, `sf-step--state-error`, `sf-step--state-running`, `sf-step--state-skipped` |
-| Размеры | `sf-step--size-1/2` |
+| Размеры | `sf-step--size-1`, `sf-step--size-1/2` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -169,7 +169,7 @@ profile: reference
 | `--sf-step--marker` | `var(--sf-text-height-1)` | `width`, `inline-size`, `height`, `block-size`, `grid-template-columns`, `margin-top`, `margin-bottom`, `margin-block`, `top`, `inset-block-start`, `bottom`, `inset-block-end`, `inset-inline-start`, `--sf-step--marker-reach` |
 | `--sf-step--marker-reach` | не задана; задают модификаторы, например `.sf-steps--marker-number .sf-step`: `var(--sf-step--marker)` | `top`, `inset-block-start`, `bottom`, `inset-block-end` |
 | `--sf-step--progress` | `var(--sf-steps-completed-icon-color, var(--sf-primary))` | `border-color`, `background-color`, `outline`, `color` |
-| `--sf-step--ring` | `calc(var(--sf-px) * 2)` | `outline`, `outline-offset`, `border`, `padding-top`, `padding-bottom`, `padding-block`, `--sf-step--marker-reach` |
+| `--sf-step--ring` | `calc(var(--sf-px) * 2)` | `gap`, `outline`, `outline-offset`, `border`, `padding-top`, `padding-bottom`, `padding-block`, `--sf-step--marker-reach` |
 | `--sf-step--small-height` | `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-step--small-size` | `var(--sf-text-size-1/2)` | `font-size` |
 

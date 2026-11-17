@@ -5,7 +5,7 @@ description: "Ведёт на соседнюю страницу или шаг п
 
 # Листалка страниц
 
-:badge[sf-pager]{variant=outline scheme=on-surface size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-pager]{variant=outline scheme=on-surface size=1/2} :badge[1.3.5]{variant=outline scheme=on-surface size=1/2}
 
 Листалка страниц ведёт на соседнюю страницу по смыслу: предыдущая и
 следующая страница документации, запись блога или товар, следующая запись в
@@ -259,13 +259,13 @@ pager.addEventListener('sf-pager-navigate', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-pager>`, контракт `smart.pager` версии `1.3.2` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-pager>`, контракт `smart.pager` версии `1.3.5` |
+| Поставка | выпуск Framework `ui-078a4b4c6f6e` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как навигация; название компонент ставит сам; с клавиатуры: `Tab` по порядку проходит ссылки и кнопки; `Enter` или `Пробел` нажимают кнопку, `Enter` открывает ссылку; с атрибутом `keys` клавиши `←` и `→` переходят к предыдущей и следующей записи. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/pager` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-pager` |
+| Источник | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/smart/pager` |
+| Правило классов | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/rule/rule.json#name=cl-pager` |
 
 ## См. также
 

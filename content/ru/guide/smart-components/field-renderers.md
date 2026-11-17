@@ -79,7 +79,7 @@ const set = await SF.whenFieldRenderers();
 | `label` | подпись: `aria-label` или `label` элемента правки, подпись цвета |
 | `variant` | вариант типа: `phone` и `password` у строки, `scale` и `stepper` у числа, `buttons` у выбора одного из списка, `badges`, `checklist` и `select` у нескольких значений, `image`, `image-card`, `image-list` у файла |
 | `options` | варианты выбора: `{value, label}`, вместо `label` допустим `text`; цвет метки — `color` или `scheme` (схема Framework или hex). Если `options` нет, набор берёт `filter.options`, затем `constraints.options` |
-| `required` | атрибут `required` элемента правки у строки, текста, числа, даты, выбора из списка, выбора записи и кода; у логического поля — переключатель вместо пары кнопок; у цвета запрещает очистку |
+| `required` | атрибут `required` элемента правки у строки, текста, числа, даты, выбора из списка, выбора записи и кода; у логического поля — флажок вместо пары кнопок в форме с кнопкой «Сохранить» и переключатель, когда значение применяется сразу (`apply: 'instant'`); у цвета запрещает очистку |
 | `readonly` | `true` у любого типа: `renderEditField` возвращает то же, что просмотр, а не выключенный элемент формы |
 | `unit` | единица после числа в просмотре |
 | `placeholder` | подсказка в пустой строке, тексте, выборе записи и пустом выпадающем списке выбора одного или нескольких значений |
@@ -371,7 +371,7 @@ set.renderCellField(status, 'live');
 | `text` | Текст | — | `placeholder`, `required`, `readonly` | есть | есть | текстовый | своё |
 | `html` | Форматированный текст | — | `placeholder`, `required`, `readonly` | есть | есть | своё | текстовый |
 | `integer` | Целое число | `stepper` — Кнопками «−» и «+» | `unit`, `min`, `max`, `step`, `required`, `readonly` | есть | есть | своё | своё |
-| `number` | Число | `scale` — Шкала 0–100, `stepper` — Кнопками «−» и «+» | `unit`, `min`, `max`, `step`, `precision`, `required`, `readonly` | есть | есть | своё | своё |
+| `number` | Число | `scale` — Шкала 0–100, `meter` — Доля предела, `stepper` — Кнопками «−» и «+» | `unit`, `min`, `max`, `step`, `precision`, `required`, `readonly` | есть | есть | своё | своё |
 | `date` | Дата | — | `required`, `readonly` | есть | есть | своё | своё |
 | `datetime` | Дата и время | — | `min`, `max`, `step`, `required`, `readonly` | есть | есть | своё | своё |
 | `time` | Время | — | `min`, `max`, `step`, `required`, `readonly` | есть | есть | своё | текстовый |

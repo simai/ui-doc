@@ -5,7 +5,7 @@ description: "Запускает действие кнопкой с подпис
 
 # Кнопки
 
-:badge[sf-button]{variant=outline scheme=on-surface size=1/2} :badge[1.15.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button]{variant=outline scheme=on-surface size=1/2} :badge[1.16.2]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка запускает действие: сохранить, отправить, открыть окно. Вид, цвет,
 размер, иконки и индикатор загрузки задаются атрибутами. Берите её там, где
@@ -593,14 +593,14 @@ menuButton.expanded = true; // aria-expanded="true" на кнопке внутр
 
 | | |
 |:---|:---|
-| Тег | `<sf-button>`, контракт `smart.button` версии `1.15.0` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-button>`, контракт `smart.button` версии `1.16.2` |
+| Поставка | выпуск Framework `ui-078a4b4c6f6e` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`, `↓`, `↑`, `Esc`. |
 | [Документ макета](/ru/guide/layouts/building/smart-component/#декларативный-контракт) | узел `smart.button`; свойства — атрибуты из таблицы выше, кроме `root-class`, `root-style`, `cycle`, `menu` |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/button` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-button` |
+| Источник | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/smart/button` |
+| Правило классов | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/rule/rule.json#name=cl-button` |
 
 ### Для разработчика
 

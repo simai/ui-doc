@@ -6,7 +6,7 @@ profile: reference
 
 # Слайдер диапазона
 
-:badge[sf-range-slider]{variant=outline scheme=on-surface size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-range-slider]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
 
 Слайдер диапазона выбирает одно значение или две границы перетаскиванием ручки
 по шкале. Подходит для приблизительной настройки цены, громкости или
@@ -174,7 +174,7 @@ slider.addEventListener('change', (event) => applyFilter(event.detail.value));
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-range-slider` |
-| Части | `sf-range-slider-base`, `sf-range-slider-field`, `sf-range-slider-field-box`, `sf-range-slider-field-dash`, `sf-range-slider-field-input`, `sf-range-slider-field-ruler`, `sf-range-slider-field-unit`, `sf-range-slider-group`, `sf-range-slider-group--size-1`, `sf-range-slider-group--size-1/2`, `sf-range-slider-group--size-2`, `sf-range-slider-handle`, `sf-range-slider-handle--dragging`, `sf-range-slider-handle-lower`, `sf-range-slider-handle-upper`, `sf-range-slider-head`, `sf-range-slider-labels`, `sf-range-slider-labels--bottom`, `sf-range-slider-labels--merged`, `sf-range-slider-labels--top`, `sf-range-slider-line`, `sf-range-slider-name`, `sf-range-slider-origin`, `sf-range-slider-output`, `sf-range-slider-progress`, `sf-range-slider-progress-line`, `sf-range-slider-scale`, `sf-range-slider-scale-mark`, `sf-range-slider-scale-mark--end`, `sf-range-slider-scale-mark--start`, `sf-range-slider-tick`, `sf-range-slider-ticks`, `sf-range-slider-touch-area`, `sf-range-slider-track`, `sf-range-slider-track-column`, `sf-range-slider-visual` |
+| Части | `sf-range-slider-base`, `sf-range-slider-field`, `sf-range-slider-field-box`, `sf-range-slider-field-dash`, `sf-range-slider-field-input`, `sf-range-slider-field-ruler`, `sf-range-slider-field-unit`, `sf-range-slider-field-word`, `sf-range-slider-group`, `sf-range-slider-group--field`, `sf-range-slider-group--size-1`, `sf-range-slider-group--size-1/2`, `sf-range-slider-group--size-2`, `sf-range-slider-handle`, `sf-range-slider-handle--dragging`, `sf-range-slider-handle-lower`, `sf-range-slider-handle-upper`, `sf-range-slider-head`, `sf-range-slider-labels`, `sf-range-slider-labels--bottom`, `sf-range-slider-labels--merged`, `sf-range-slider-labels--top`, `sf-range-slider-line`, `sf-range-slider-name`, `sf-range-slider-name-unit`, `sf-range-slider-origin`, `sf-range-slider-output`, `sf-range-slider-progress`, `sf-range-slider-progress-line`, `sf-range-slider-scale`, `sf-range-slider-scale-mark`, `sf-range-slider-scale-mark--end`, `sf-range-slider-scale-mark--start`, `sf-range-slider-tick`, `sf-range-slider-ticks`, `sf-range-slider-touch-area`, `sf-range-slider-track`, `sf-range-slider-track-column`, `sf-range-slider-visual` |
 | Размеры | `sf-range-slider--size-1`, `sf-range-slider--size-1/2`, `sf-range-slider--size-2` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.

@@ -6,7 +6,7 @@ profile: reference
 
 # Уведомления
 
-:badge[sf-alert]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-alert]{variant=outline scheme=on-surface size=1/2} :badge[1.3.4]{variant=outline scheme=on-surface size=1/2}
 
 Уведомление сообщает о состоянии этой страницы или её раздела: подсказку,
 предупреждение, ошибку или подтверждение результата. Оно стоит в потоке
@@ -183,7 +183,7 @@ document.addEventListener('sf-alert-action', (event) => {
 | `--sf-alert--lead` | `var(--sf-ui-1--space-y-tightness-low)` | `padding-top`, `padding-bottom`, `padding-block`, `padding-block-end`, `margin-top`, `margin-block-start`, `margin-inline-end` |
 | `--sf-alert--opacity` | не задана; задают модификаторы, например `.sf-alert.closing`: `0` | `opacity` |
 | `--sf-alert-buttons--background-color` | не задана; задают модификаторы, например `.sf-alert .sf-alert-buttons`: `transparent` | `background-color` |
-| `--sf-alert-buttons--gap` | не задана; задают модификаторы, например `.sf-alert .sf-alert-buttons`: `var(--sf-space-1/3)` | `gap` |
+| `--sf-alert-buttons--gap` | не задана; задают модификаторы, например `.sf-alert .sf-alert-buttons`: `var(--sf-gap--actions)` | `gap` |
 | `--sf-alert-content--background-color` | не задана; задают модификаторы, например `.sf-alert .sf-alert-content`: `transparent` | `background-color` |
 | `--sf-alert-content--gap` | не задана; задают модификаторы, например `.sf-alert .sf-alert-content`: `var(--sf-0)` | `gap` |
 | `--sf-alert-supporting-text--color` | не задана; задают модификаторы, например `.sf-alert .sf-alert-supporting-text`: `var(--sf-alert--color)` | `color` |

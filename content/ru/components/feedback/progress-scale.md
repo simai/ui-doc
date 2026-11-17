@@ -6,7 +6,7 @@ profile: reference
 
 # Шкала прогресса
 
-:badge[sf-progress-scale]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-scale]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Шкала делит ход операции на десять участков, по одному на каждые десять
 процентов. Она наглядна там, где обычная полоса выглядит слишком абстрактно:
@@ -118,7 +118,7 @@ whenLoader(() => SF.Loader.ready('ProgressScale', (ProgressScale) => {
 |:---|:---|
 | Блок | `sf-progress-scale` |
 | Части | `sf-progress-scale-block`, `sf-progress-scale-container`, `sf-progress-scale-text` |
-| Модификаторы | `sf-progress-scale--10`, `sf-progress-scale--100`, `sf-progress-scale--20`, `sf-progress-scale--30`, `sf-progress-scale--40`, `sf-progress-scale--50`, `sf-progress-scale--60`, `sf-progress-scale--70`, `sf-progress-scale--80`, `sf-progress-scale--90`, `sf-progress-scale--error`, `sf-progress-scale--info`, `sf-progress-scale--line-1`, `sf-progress-scale--line-1/2`, `sf-progress-scale--line-2`, `sf-progress-scale--neutral`, `sf-progress-scale--success`, `sf-progress-scale--warning` |
+| Модификаторы | `sf-progress-scale--10`, `sf-progress-scale--100`, `sf-progress-scale--20`, `sf-progress-scale--30`, `sf-progress-scale--40`, `sf-progress-scale--50`, `sf-progress-scale--60`, `sf-progress-scale--70`, `sf-progress-scale--80`, `sf-progress-scale--90`, `sf-progress-scale--error`, `sf-progress-scale--info`, `sf-progress-scale--level`, `sf-progress-scale--line-1`, `sf-progress-scale--line-1/2`, `sf-progress-scale--line-2`, `sf-progress-scale--neutral`, `sf-progress-scale--success`, `sf-progress-scale--warning` |
 | Размеры | `sf-progress-scale--size-1`, `sf-progress-scale--size-1/2`, `sf-progress-scale--size-1/3`, `sf-progress-scale--size-2`, `sf-progress-scale--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -150,7 +150,7 @@ whenLoader(() => SF.Loader.ready('ProgressScale', (ProgressScale) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-progress-scale--fill-color` | `var(--sf-progress-scale-fill-color, var(--sf-on-surface-variant))` | `background-color` |
+| `--sf-progress-scale--fill-color` | `var(--sf-progress-scale-fill-color, var(--sf-primary))` | `background-color` |
 | `--sf-progress-scale--font-size` | не задана; задают модификаторы, например `.sf-progress-scale--size-1/3`: `var(--sf-text-size-1/4)` | `font-size` |
 | `--sf-progress-scale--gap` | не задана; задают модификаторы, например `.sf-progress-scale--size-1/3`: `var(--sf-progress-scale-gap, var(--sf-space-1/4))` | `gap` |
 | `--sf-progress-scale--line-height` | не задана; задают модификаторы, например `.sf-progress-scale--size-1/3`: `var(--sf-text-height-1/4)` | `line-height` |

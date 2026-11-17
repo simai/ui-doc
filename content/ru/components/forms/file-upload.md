@@ -6,7 +6,7 @@ profile: reference
 
 # Загрузка файлов
 
-:badge[sf-file-upload]{variant=outline scheme=on-surface size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-upload]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Загрузка файлов принимает один или несколько файлов через системное окно или
 перетаскиванием и показывает список выбранных файлов с ходом передачи. Сами
@@ -205,7 +205,7 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-file-upload` |
-| Части | `sf-file-upload-block`, `sf-file-upload-block-text`, `sf-file-upload-bottom`, `sf-file-upload-files`, `sf-file-upload-link`, `sf-file-upload-message`, `sf-file-upload-text` |
+| Части | `sf-file-upload-block`, `sf-file-upload-block-text`, `sf-file-upload-bottom`, `sf-file-upload-files`, `sf-file-upload-item`, `sf-file-upload-link`, `sf-file-upload-message`, `sf-file-upload-text` |
 | Размеры | `sf-file-upload--size-1`, `sf-file-upload--size-1/2`, `sf-file-upload--size-2` |
 
 **`sf-upload-progress`**

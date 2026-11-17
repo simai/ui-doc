@@ -5,7 +5,7 @@ description: "Даёт выбрать или перетащить файлы и 
 
 # Загрузка файлов
 
-:badge[sf-file-upload]{variant=outline scheme=on-surface size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-upload]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Загрузка файлов даёт выбрать файлы в системном окне или перетащить их и
 показывает список выбранных файлов с прогрессом и состоянием передачи. Сами
@@ -342,7 +342,7 @@ async function store(item) {
 | `change` | `{ files: array, source: "input" \| "drop" }` | Выбраны файлы — через окно выбора или перетаскиванием (тогда в `detail` есть `files` и `source: 'drop'`); форма узнаёт об обоих случаях. |
 | `sf-file-upload-attach` | `{ files: array, source: "input" \| "drop", multiple: boolean }` | Выбраны файлы для загрузки. |
 | `sf-file-upload-attached` | `{ id: any, item: object, index: number, items: array, source: string, multiple: boolean }` | Файл попал в список. |
-| `sf-file-upload-detach` | `{ id: any, item: object, index: number, items: array }` | Файл убран из списка. |
+| `sf-file-upload-detach` | `{ id: any, item: object, index: number, items: array, action: "remove" \| "delete" }` | Файл убран из списка. |
 | `sf-file-upload-rejected` | `{ files: array, rejected: array, accept: string, source: string }` | Файлы, которые выбор или перетаскивание не взяли, — у каждого причина и сообщение: тип, которого нет в accept (и при выборе, и при перетаскивании), второй файл в области для одного файла, файл, который уже есть в списке. Те же слова показываются под областью. Прежнее имя sf-file-upload:reject приходит с тем же detail до 2026-12-01. |
 | `sf-file-upload-retry` | `{ id: any, item: object, index: number, items: array }` | Файл с ошибкой отправлен снова: строка опять в работе, progress равен null (полоса идёт без числа), пока передача не сообщит долю; загрузчик отправляет файл ещё раз, страница без загрузчика отвечает на это событие. Прежнее имя sf-file-upload:retry приходит с тем же detail до 2026-12-01. |
 | `sf-file-upload-begun` | `{ id: any, item: object }` | Запись перешла в process — выбрана, перетащена или отправлена снова: начался её поток загрузки. |
@@ -356,13 +356,13 @@ async function store(item) {
 
 | | |
 |:---|:---|
-| Тег | `<sf-file-upload>`, контракт `smart.file-upload` версии `1.2.2` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-file-upload>`, контракт `smart.file-upload` версии `1.3.0` |
+| Поставка | выпуск Framework `ui-078a4b4c6f6e` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/file-upload` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-file-upload` |
+| Источник | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/smart/file-upload` |
+| Правило классов | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/rule/rule.json#name=cl-file-upload` |
 
 ## См. также
 

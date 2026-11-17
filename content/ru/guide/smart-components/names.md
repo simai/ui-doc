@@ -340,7 +340,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 ### Прежние имена по компонентам
 
-Раздел собран из манифестов выпуска `ui-994f9db407fa` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
+Раздел собран из манифестов выпуска `ui-078a4b4c6f6e` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
 
 #### `<sf-accordion>`
 
@@ -555,6 +555,8 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
+| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-confirm-change-answer` | `sf-change-confirm-accept` | работает как псевдоним | — |
 | событие `sf-confirm-change-answer` | `sf-change-confirm-decline` | работает как псевдоним | — |
 | событие `sf-confirm-change-expired` | `sf-change-confirm-expire` | работает как псевдоним | — |
@@ -718,6 +720,12 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `type="outlined"` | `type="rounded"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `type="outlined"` | `type="sharp"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `type="outlined"` | `type="shape"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `size="data-sf-icon-scale="ladder" size="1/3""` | `size="1"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `size="data-sf-icon-scale="ladder" size="1/2""` | `size="2"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `size="data-sf-icon-scale="ladder" size="1""` | `size="3"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `size="data-sf-icon-scale="ladder" size="1/3" (14 has no ladder step; 16 is the smallest)"` | `size="1/2"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `size="data-sf-icon-scale="ladder" size="1/3" (12 has no ladder step; 16 is the smallest)"` | `size="1/3"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `size="data-sf-icon-scale="ladder" size="1/4" (12, kept)"` | `size="1/4"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 
 #### `<sf-input>`
 

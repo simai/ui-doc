@@ -6,7 +6,7 @@ profile: reference
 
 # Количество
 
-:badge[sf-quantity]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-quantity]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
 
 Поле количества принимает число с клавиатуры или меняет его кнопками «минус» и
 «плюс» на заданный шаг. Подходит для количества товаров, мест, участников и
@@ -217,7 +217,7 @@ whenLoader(() => SF.Loader.ready('Quantity', (Quantity) => {
 | `--sf-quantity-color` | Цвет числа в поле; у недоступного поля свой. | `var(--sf-on-surface)` |
 | `--sf-quantity-padding-inline` | Отступ внутри поля перед «−» и после «+»: по умолчанию равен зазору кнопок сверху и снизу, поэтому они стоят на одном расстоянии от всех краёв. | `calc((var(--sf-ui-1--control-height) - var(--sf-ui-1\/2--control-height)) / 2 - var(--sf-px))`; зависит от размера |
 | `--sf-quantity-padding-block` | Внутренний отступ поля над и под содержимым. | `calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px))`; зависит от размера |
-| `--sf-quantity-gap` | Расстояние между кнопками «−»/«+» и числом. | `calc(var(--sf-px) * 0)` |
+| `--sf-quantity-gap` | Расстояние между кнопками шага и числом. Значение по умолчанию у компонента на классах; у `sf-input-quantity` — 0, кнопки прилегают к числу (C53). | `var(--sf-space-2)` |
 | `--sf-quantity-stepper-radius` | Скругление углов кнопок «−» и «+». | `var(--sf-radius-1\/2)` |
 | `--sf-quantity-invalid-border-color` | Рамка поля при ошибке. | `var(--sf-error)` |
 
@@ -243,20 +243,20 @@ whenLoader(() => SF.Loader.ready('Quantity', (Quantity) => {
 | `--sf-quantity-input--font-size` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-wrap`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-quantity-input--font-weight` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-wrap`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-quantity-input--line-height` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-wrap`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-quantity-input--padding-inline-end` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 input`: `var(--sf-space-1/4)` | `padding-inline-end` |
-| `--sf-quantity-input--padding-inline-start` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 input`: `var(--sf-space-1/4)` | `padding-inline-start` |
+| `--sf-quantity-input--padding-inline-end` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 input`: `var(--sf-ui-1--text-space-x)` | `padding-inline-end` |
+| `--sf-quantity-input--padding-inline-start` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 input`: `var(--sf-ui-1--text-space-x)` | `padding-inline-start` |
 | `--sf-quantity-label--background-color` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-label`: `transparent` | `background-color` |
 | `--sf-quantity-label--gap` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-label`: `var(--sf-space-1/4)` | `gap` |
 | `--sf-quantity-placeholder--color` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap input::-webkit-input-placeholder`: `var(--sf-on-surface-variant)` | `color` |
 | `--sf-quantity-placeholder--font-family` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap input::-webkit-input-placeholder`: `var(--sf-text--family)` | `font-family` |
 | `--sf-quantity-placeholder--font-size` | не задана; задают модификаторы, например `.sf-quantity--size-1 .sf-quantity-wrap input::-webkit-input-placeholder`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-quantity-placeholder--line-height` | не задана; задают модификаторы, например `.sf-quantity--size-1 .sf-quantity-wrap input::-webkit-input-placeholder`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-quantity-required--color` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-required`: `var(--sf-error)` | `color` |
+| `--sf-quantity-required--color` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-required`: `var(--sf-on-surface)` | `color` |
 | `--sf-quantity-required--font-family` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-required`: `var(--sf-text--family)` | `font-family` |
 | `--sf-quantity-required--font-size` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-required`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-quantity-required--font-weight` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-required`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-quantity-required--line-height` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-required`: `var(--sf-text-height-1/2)` | `line-height` |
-| `--sf-quantity-text--color` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-text`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-quantity-text--color` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-text`: `var(--sf-on-surface)` | `color` |
 | `--sf-quantity-text--font-family` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-text`: `var(--sf-text--family)` | `font-family` |
 | `--sf-quantity-text--font-size` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-text`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-quantity-text--font-weight` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-text`: `var(--sf-font-weight-regular)` | `font-weight` |
@@ -270,7 +270,7 @@ whenLoader(() => SF.Loader.ready('Quantity', (Quantity) => {
 | `--sf-quantity-wrap--border-start-end-radius` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap`: `var(--sf-quantity-radius, var(--sf-radius--ui))` | `border-start-end-radius` |
 | `--sf-quantity-wrap--border-start-start-radius` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap`: `var(--sf-quantity-radius, var(--sf-radius--ui))` | `border-start-start-radius` |
 | `--sf-quantity-wrap--box-shadow` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--pointer-focus .sf-quantity-wrap`: `none` | `box-shadow` |
-| `--sf-quantity-wrap--gap` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap`: `var(--sf-quantity-gap, calc(var(--sf-px) * 0))` | `gap` |
+| `--sf-quantity-wrap--gap` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap`: `var(--sf-quantity-gap, var(--sf-space-2))` | `gap` |
 | `--sf-quantity-wrap--padding-bottom` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-wrap`: `var(--sf-quantity-padding-block, calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px)))` | `padding-bottom` |
 | `--sf-quantity-wrap--padding-inline-end` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-wrap`: `var(--sf-quantity-padding-inline, calc((var(--sf-ui-1--control-height) - var(--sf-ui-1/2--control-height)) / 2 - var(--sf-px)))` | `padding-inline-end`, `inset-inline-end` |
 | `--sf-quantity-wrap--padding-inline-start` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-wrap`: `var(--sf-quantity-padding-inline, calc((var(--sf-ui-1--control-height) - var(--sf-ui-1/2--control-height)) / 2 - var(--sf-px)))` | `padding-inline-start`, `top`, `bottom`, `inset-block`, `inset-inline-start` |

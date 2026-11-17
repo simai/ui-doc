@@ -6,7 +6,7 @@ profile: reference
 
 # Шаги инструкции
 
-:badge[sf-procedure]{variant=outline scheme=on-surface size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-procedure]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Шаги инструкции показывают нумерованную последовательность действий, которую
 читают сверху вниз: установку, настройку, перенос. В каждом шаге может быть
@@ -87,7 +87,7 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-procedure-marker-background-color` | Заливка отметки шага; у выполненного и текущего шага своя. | `var(--sf-surface-container)` |
+| `--sf-procedure-marker-background-color` | Заливка отметки шага; по умолчанию нет — пустой круг, как отметка `sf-steps` (C194); завершённый или текущий шаг рисует свою. Прежнее имя `--sf-procedure-marker-background` до 2027-01-01 ещё читается — после этого (именование C16, `src/core/contracts/token-aliases.v1.json`). | `transparent` |
 | `--sf-procedure-marker-color` | Цвет номера в маркере шага. | `var(--sf-on-surface)` |
 | `--sf-procedure-line-color` | Цвет линии от маркера к следующему. | `var(--sf-outline-variant)` |
 | `--sf-procedure-line-width` | Толщина линии между маркерами. | `var(--sf-px)` |
@@ -96,7 +96,7 @@ profile: reference
 
 ```css
 .sf-procedure {
-  --sf-procedure-marker-background-color: var(--sf-surface-container);
+  --sf-procedure-marker-background-color: transparent;
 }
 ```
 
@@ -108,4 +108,4 @@ profile: reference
 |:---|:---|:---|
 | `--sf-procedure--gap` | `var(--sf-procedure-gap, var(--sf-content--space-related))` | `gap`, `bottom`, `inset-block-end` |
 | `--sf-procedure--line-width` | `var(--sf-procedure-line-width, var(--sf-px))` | `inset-inline-start`, `width`, `inline-size` |
-| `--sf-procedure--marker-size` | `var(--sf-ui-1/2--control-height)` | `grid-template-columns`, `width`, `inline-size`, `height`, `block-size`, `top`, `inset-block-start`, `inset-inline-start`, `min-height`, `min-block-size`, `padding-top`, `padding-block-start` |
+| `--sf-procedure--marker-size` | `var(--sf-text-height-1)` | `grid-template-columns`, `width`, `inline-size`, `height`, `block-size`, `top`, `inset-block-start`, `inset-inline-start`, `min-height`, `min-block-size`, `padding-top`, `padding-block-start` |

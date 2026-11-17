@@ -5,7 +5,7 @@ description: "Показывает серверную коллекцию таб�
 
 # Представление данных
 
-:badge[sf-view]{variant=outline scheme=on-surface size=1/2} :badge[1.11.0]{variant=outline scheme=on-surface size=1/2} :badge[sf-view-table]{variant=outline scheme=on-surface size=1/2} :badge[1.19.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-view]{variant=outline scheme=on-surface size=1/2} :badge[1.11.0]{variant=outline scheme=on-surface size=1/2} :badge[sf-view-table]{variant=outline scheme=on-surface size=1/2} :badge[1.19.8]{variant=outline scheme=on-surface size=1/2}
 
 Представление данных показывает записи из базы таблицей: товары, заказы,
 пользователи. Над таблицей — поиск и фильтры, в строках — выбор и действия,
@@ -787,7 +787,7 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-994f9db407fa` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-078a4b4c6f6e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -916,8 +916,8 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/view`
-- `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/view/rule.js#name=cl-view`
+- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/view`
+- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/view/rule.js#name=cl-view`
 
 ### `<sf-view-table>`
 
@@ -925,7 +925,7 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 |:---|:---|
 | Тег | `<sf-view-table>` |
 | Назначение | Полное представление коллекции с серверными данными: поиск, фильтры, настройки таблицы, действия над строками и массовые действия, пагинация. |
-| Контракт | `smart.view-table`, версия `1.19.7` |
+| Контракт | `smart.view-table`, версия `1.19.8` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -1096,5 +1096,5 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/view-table`
-- `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/view-table/rule.js#name=cl-view-table`
+- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/view-table`
+- `simai/ui-pro@f29d4bf68b5d4128d40875b932d35175594b3d8c:components/src/smart/view-table/rule.js#name=cl-view-table`

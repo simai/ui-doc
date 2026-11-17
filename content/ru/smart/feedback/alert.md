@@ -5,7 +5,7 @@ description: "Показывает постоянное сообщение в п
 
 # Уведомление
 
-:badge[sf-alert]{variant=outline scheme=on-surface size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-alert]{variant=outline scheme=on-surface size=1/2} :badge[1.4.4]{variant=outline scheme=on-surface size=1/2}
 
 Уведомление показывает сообщение, которое остаётся на странице, пока его не
 закроют: предупреждение перед действием, ошибку формы, итог проверки. Для
@@ -194,13 +194,13 @@ form.prepend(alert);
 
 | | |
 |:---|:---|
-| Тег | `<sf-alert>`, контракт `smart.alert` версии `1.4.1` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-alert>`, контракт `smart.alert` версии `1.4.4` |
+| Поставка | выпуск Framework `ui-078a4b4c6f6e` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как строка состояния; название компонент ставит сам; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/alert` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-alert` |
+| Источник | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/smart/alert` |
+| Правило классов | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/rule/rule.json#name=cl-alert` |
 
 ## См. также
 

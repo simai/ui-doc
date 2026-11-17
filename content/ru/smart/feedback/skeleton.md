@@ -5,7 +5,7 @@ description: "Занимает место будущего содержимог�
 
 # Скелетон
 
-:badge[sf-skeleton]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-skeleton]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Скелетон занимает место содержимого, которое ещё загружается, серыми фигурами:
 строками текста, аватаром, изображением, карточкой. Страница не прыгает, когда
@@ -151,13 +151,13 @@ region.removeAttribute('aria-busy');
 
 | | |
 |:---|:---|
-| Тег | `<sf-skeleton>`, контракт `smart.skeleton` версии `1.3.0` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-skeleton>`, контракт `smart.skeleton` версии `1.3.1` |
+| Поставка | выпуск Framework `ui-078a4b4c6f6e` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; желательна подпись или `aria-label`. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/skeleton` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-skeleton` |
+| Источник | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/smart/skeleton` |
+| Правило классов | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/rule/rule.json#name=cl-skeleton` |
 
 ## См. также
 

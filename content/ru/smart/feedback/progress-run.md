@@ -5,7 +5,7 @@ description: "Долгое задание глазами человека: ша�
 
 # Ход выполнения
 
-:badge[sf-progress-run]{variant=outline scheme=on-surface size=1/2} :badge[1.4.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-run]{variant=outline scheme=on-surface size=1/2} :badge[1.4.5]{variant=outline scheme=on-surface size=1/2}
 
 Показывает долгое задание так, как его видит человек: создание сайта,
 обновление, резервную копию и восстановление, импорт, публикацию, установку
@@ -233,13 +233,13 @@ run.addEventListener('sf-progress-run-retry', () => job.start());
 
 | | |
 |:---|:---|
-| Тег | `<sf-progress-run>`, контракт `smart.progress-run` версии `1.4.2` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-progress-run>`, контракт `smart.progress-run` версии `1.4.5` |
+| Поставка | выпуск Framework `ui-078a4b4c6f6e` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: Tab проходит по ссылке на ошибки, журналам шагов, переключателю вывода, выводу, копированию, скачиванию и действиям по порядку; Enter или пробел нажимает кнопку; Enter переходит по ссылке на ошибки. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/progress-run` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-progress-run` |
+| Источник | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/smart/progress-run` |
+| Правило классов | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/rule/rule.json#name=cl-progress-run` |
 
 ## См. также
 

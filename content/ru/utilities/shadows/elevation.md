@@ -60,7 +60,7 @@ shadow-overlay`. В светлой теме они похожи; в тёмной
 | `--sf-surface-popup` | `light-dark(var(--sf-surface-page), var(--sf-surface-4))` |
 | `--sf-shadow-overlay` | `0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color), 0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color)` |
 | `--sf-on-surface-popup-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
-| `--sf-surface-popup-nested` | `light-dark(var(--sf-surface-page), var(--sf-surface-5))` |
+| `--sf-surface-popup-nested` | `light-dark(var(--sf-surface-page), var(--sf-surface-4))` |
 | `--sf-shadow-modal` | `0 var(--sf-a4) var(--sf-a8) var(--sf-shadow-key-color), 0 var(--sf-b6) var(--sf-c6) var(--sf-shadow-ambient-color)` |
 | `--sf-on-surface-popup-nested-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
 | `--sf-surface-page` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |

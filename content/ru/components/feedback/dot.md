@@ -6,7 +6,7 @@ profile: reference
 
 # Точка состояния
 
-:badge[sf-dot]{variant=outline scheme=on-surface size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-dot]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Точка состояния цветом показывает, доступен ли человек или сервис, идёт ли
 работа и чем она закончилась. Она подходит для строк списка и других мест, где
@@ -73,8 +73,8 @@ profile: reference
 |:---|:---|
 | Блок | `sf-dot` |
 | Части | `sf-dot-item` |
-| Модификаторы | `sf-dot--error`, `sf-dot--info`, `sf-dot--neutral`, `sf-dot--primary`, `sf-dot--success`, `sf-dot--warning` |
-| Размеры | `sf-dot--size-1`, `sf-dot--size-1/2`, `sf-dot--size-1/3`, `sf-dot--size-2` |
+| Модификаторы | `sf-dot--error`, `sf-dot--hollow`, `sf-dot--info`, `sf-dot--neutral`, `sf-dot--primary`, `sf-dot--ring`, `sf-dot--success`, `sf-dot--warning` |
+| Размеры | `sf-dot--size-1`, `sf-dot--size-1/2`, `sf-dot--size-1/3`, `sf-dot--size-1/4`, `sf-dot--size-2`, `sf-dot--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -84,8 +84,9 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-dot-item--background-color` | `var(--sf-primary)` | `background-color` |
+| `--sf-dot-item--background-color` | `var(--sf-primary)` | `background-color`, `box-shadow` |
 | `--sf-dot-item--border-radius` | не задана; задают модификаторы, например `.sf-dot .sf-dot-item`: `var(--sf-radius-circle)` | `border-radius` |
+| `--sf-dot-item--ring` | `var(--sf-a2)` | `box-shadow`, `gap`, `outline`, `outline-offset` |
 | `--sf-dot-item--size` | `var(--sf-a8)` | `height`, `block-size`, `width`, `inline-size` |
 
 ## См. также

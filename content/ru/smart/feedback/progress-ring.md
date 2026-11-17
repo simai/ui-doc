@@ -5,7 +5,7 @@ description: "Показывает долю выполненного кольц�
 
 # Кольцо прогресса
 
-:badge[sf-progress-ring]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-ring]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
 
 Кольцо прогресса показывает значение от 0 до 100 кольцом размером с элемент
 управления: в панели инструментов, в боковой полосе, вокруг аватара. Для
@@ -210,13 +210,13 @@ ring.setAttribute('value-text', 'Файлы загружены');
 
 | | |
 |:---|:---|
-| Тег | `<sf-progress-ring>`, контракт `smart.progress-ring` версии `1.3.0` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-progress-ring>`, контракт `smart.progress-ring` версии `1.5.0` |
+| Поставка | выпуск Framework `ui-078a4b4c6f6e` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как шкала; нужна подпись или `aria-label`. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/progress-ring` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-progress-ring` |
+| Источник | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/smart/progress-ring` |
+| Правило классов | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/rule/rule.json#name=cl-progress-ring` |
 
 ## См. также
 

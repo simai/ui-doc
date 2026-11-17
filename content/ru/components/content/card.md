@@ -6,7 +6,7 @@ profile: reference
 
 # Карточка
 
-:badge[sf-card]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-card]{variant=outline scheme=on-surface size=1/2} :badge[1.7.0]{variant=outline scheme=on-surface size=1/2}
 
 Карточка собирает несколько блоков содержимого — заголовок, абзац, список,
 действие — в одну отдельную область с тонкой границей и скруглёнными углами.
@@ -101,3 +101,11 @@ profile: reference
   --sf-card-radius: 0;
 }
 ```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-card`); переменную без него задают только модификаторы.
+
+| Переменная | По умолчанию | Задаёт |
+|:---|:---|:---|
+| `--sf-card--radius` | `var(--sf-card-radius, var(--sf-radius--surface))` | `border-radius`, `border-start-start-radius`, `border-start-end-radius` |

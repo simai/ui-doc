@@ -6,7 +6,7 @@ profile: reference
 
 # Заполнитель
 
-:badge[sf-placeholder]{variant=outline scheme=on-surface size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-placeholder]{variant=outline scheme=on-surface size=1/2} :badge[1.0.3]{variant=outline scheme=on-surface size=1/2}
 
 Заполнитель объясняет пустое состояние: данных нет, поиск ничего не нашёл или
 раздел не заполнен. Для ожидания данных берите
@@ -94,7 +94,7 @@ profile: reference
 | `--sf-placeholder--background-color` | `var(--sf-transparent)` | `background-color` |
 | `--sf-placeholder--color` | `var(--sf-on-surface)` | `color` |
 | `--sf-placeholder--gap` | `var(--sf-space-1)` | `gap` |
-| `--sf-placeholder-actions--gap` | `var(--sf-space-1/3)` | `gap` |
+| `--sf-placeholder-actions--gap` | `var(--sf-gap--actions)` | `gap` |
 | `--sf-placeholder-content--gap` | `var(--sf-placeholder-right--gap, var(--sf-space-1))` | `gap` |
 | `--sf-placeholder-header--gap` | `var(--sf-placeholder-top--gap, var(--sf-space-1/3))` | `gap` |
 

@@ -5,7 +5,7 @@ description: "Даёт выбрать ровно один вариант из в
 
 # Радиокнопки
 
-:badge[sf-radio]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-radio]{variant=outline scheme=on-surface size=1/2} :badge[1.3.5]{variant=outline scheme=on-surface size=1/2}
 
 Радиокнопки дают выбрать один вариант из группы взаимоисключающих, где все
 варианты видны сразу. Для независимых вариантов берите
@@ -183,13 +183,13 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 
 | | |
 |:---|:---|
-| Тег | `<sf-radio>`, контракт `smart.radio` версии `1.3.1` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-radio>`, контракт `smart.radio` версии `1.3.5` |
+| Поставка | выпуск Framework `ui-078a4b4c6f6e` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как радиокнопка; нужна подпись или `aria-label`; с клавиатуры: `Tab`; стрелки; `Пробел`. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/radio` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-radio` |
+| Источник | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/smart/radio` |
+| Правило классов | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/rule/rule.json#name=cl-radio` |
 
 ## См. также
 

@@ -6,7 +6,7 @@ profile: reference
 
 # Пагинация
 
-:badge[sf-pagination]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-pagination]{variant=outline scheme=on-surface size=1/2} :badge[1.4.5]{variant=outline scheme=on-surface size=1/2}
 
 Пагинация делит длинный список результатов на страницы, показывает текущую и
 даёт перейти к соседней или конкретной странице. Ставьте её сразу после
@@ -182,7 +182,7 @@ profile: reference
 | `--sf-pagination--text-size` | `var(--sf-text-size-1)` | `font-size` |
 | `--sf-pagination-actions--background-color` | не задана; задают модификаторы, например `.sf-pagination-actions`: `var(--sf-surface-raised)` | `background-color` |
 | `--sf-pagination-actions--border-color` | не задана; задают модификаторы, например `.sf-pagination-actions`: `var(--sf-outline-variant)` | `border-top`, `border-block-start` |
-| `--sf-pagination-actions--gap` | не задана; задают модификаторы, например `.sf-pagination-actions`: `var(--sf-space-1)` | `gap` |
+| `--sf-pagination-actions--gap` | не задана; задают модификаторы, например `.sf-pagination-actions`: `var(--sf-gap--groups)` | `gap` |
 | `--sf-pagination-actions--padding-block` | не задана; задают модификаторы, например `.sf-pagination-actions`: `var(--sf-space-1)` | `padding-top`, `padding-bottom`, `padding-block` |
 | `--sf-pagination-actions--padding-inline` | не задана; задают модификаторы, например `.sf-pagination-actions`: `var(--sf-space-2)` | `padding-left`, `padding-right`, `padding-inline` |
 | `--sf-pagination-actions--radius` | не задана; задают модификаторы, например `.sf-pagination-actions`: `var(--sf-radius--surface)` | `border-radius` |

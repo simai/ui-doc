@@ -6,7 +6,7 @@ profile: reference
 
 # Код страны
 
-:badge[sf-country-code]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-country-code]{variant=outline scheme=on-surface size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
 
 Поле кода страны принимает номер телефона вместе с международным кодом: флаг
 показывает страну, список позволяет её сменить, маска форматирует номер по
@@ -238,7 +238,7 @@ whenLoader(() => SF.Loader.ready('CountryCode', (CountryCode) => {
 | `--sf-country-code-hint--font-weight` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-hint`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-country-code-hint--line-height` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 .sf-country-code-hint`: `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-country-code-input--background-color` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-field input`: `transparent` | `background-color` |
-| `--sf-country-code-input--color` | не задана; задают модификаторы, например `.sf-country-code input`: `var(--sf-country-code-color, var(--sf-on-surface))` | `color` |
+| `--sf-country-code-input--color` | не задана; задают модификаторы, например `.sf-country-code input`: `var(--sf-country-code-color, var(--sf-on-surface))` | `color`, `caret-color` |
 | `--sf-country-code-input--font-family` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 input`: `var(--sf-text--family)` | `font-family` |
 | `--sf-country-code-input--font-size` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 input`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-country-code-input--font-weight` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 input`: `var(--sf-font-weight-regular)` | `font-weight` |
@@ -269,13 +269,13 @@ whenLoader(() => SF.Loader.ready('CountryCode', (CountryCode) => {
 | `--sf-country-code-placeholder--font-family` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-field input::-webkit-input-placeholder`: `var(--sf-text--family)` | `font-family` |
 | `--sf-country-code-placeholder--font-size` | не задана; задают модификаторы, например `.sf-country-code--size-1 .sf-country-code-field input::-webkit-input-placeholder`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-country-code-placeholder--line-height` | не задана; задают модификаторы, например `.sf-country-code--size-1 .sf-country-code-field input::-webkit-input-placeholder`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-country-code-required--color` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-required`: `var(--sf-error)` | `color` |
+| `--sf-country-code-required--color` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-required`: `var(--sf-on-surface)` | `color` |
 | `--sf-country-code-required--font-family` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-required`: `var(--sf-text--family)` | `font-family` |
 | `--sf-country-code-required--font-size` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 .sf-country-code-required`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-country-code-required--font-weight` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-required`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-country-code-required--line-height` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 .sf-country-code-required`: `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-country-code-row--block-size` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1/2`: `var(--sf-ui-1/2--control-height)` | `height`, `block-size`, `max-height`, `max-block-size` |
-| `--sf-country-code-text--color` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-text`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-country-code-text--color` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-text`: `var(--sf-on-surface)` | `color` |
 | `--sf-country-code-text--font-family` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-text`: `var(--sf-text--family)` | `font-family` |
 | `--sf-country-code-text--font-size` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 .sf-country-code-text`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-country-code-text--font-weight` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-text`: `var(--sf-font-weight-regular)` | `font-weight` |

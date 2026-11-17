@@ -6,7 +6,7 @@ profile: reference
 
 # Иконки
 
-:badge[sf-icon]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-icon]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Иконка — небольшой знак, который помогает быстрее узнать действие или
 раздел: корзина у «Удалить», шестерёнка у «Настройки». Берите её рядом с
@@ -206,11 +206,11 @@ Rounded со скруглёнными концами, `sf-icon--sharp` — Sharp
 | `--sf-icon--fill` | `0` | `font-variation-settings` |
 | `--sf-icon--font-family` | не задана; задают модификаторы, например `:root[data-sf-icons=subset-pending] .sf-icon`: `"Material Symbols Outlined Subset"` | `font-family` |
 | `--sf-icon--font-size` | не задана; задают модификаторы, например `.sf-icon--size-1/4`: `var(--sf-icon-size-1/4)` | `font-size`, `width`, `inline-size` |
-| `--sf-icon--grade` | `0` | `font-variation-settings` |
+| `--sf-icon--grade` | не задана; задают модификаторы, например `.theme-dark`: `-25` | `font-variation-settings` |
 | `--sf-icon--height` | не задана; задают модификаторы, например `.sf-icon--size-1/4`: `var(--sf-icon-size-1/4)` | `height` |
 | `--sf-icon--line-height` | `1` | `line-height` |
-| `--sf-icon--optical-size` | `24` | `font-variation-settings` |
-| `--sf-icon--weight` | `var(--sf-weight--regular)` | `font-variation-settings`, `font-weight` |
+| `--sf-icon--optical-size` | не задана; задают модификаторы, например `.sf-icon--size-1/4`: `20` | `font-variation-settings` |
+| `--sf-icon--weight` | не задана; задают модификаторы, например `.sf-icon--weight-thin`: `var(--sf-weight--thin)` | `font-weight` |
 | `--sf-icon--width` | не задана; задают модификаторы, например `.sf-icon--size-1/4`: `var(--sf-icon-size-1/4)` | `width` |
 
 ## См. также

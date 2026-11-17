@@ -6,7 +6,7 @@ profile: reference
 
 # Группа кнопок
 
-:badge[sf-button-group]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button-group]{variant=outline scheme=on-surface size=1/2} :badge[1.4.2]{variant=outline scheme=on-surface size=1/2}
 
 Группа объединяет несколько связанных кнопок в один компактный элемент: соседние
 границы сливаются, внешние углы сохраняют радиус кнопок. Берите её для близких
@@ -117,7 +117,7 @@ whenLoader(() => SF.Loader.ready('ButtonGroup', () => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-button-group` |
-| Части | `sf-button-group-count`, `sf-button-group-icon-only`, `sf-button-group-label--hidden`, `sf-button-group-narrow`, `sf-button-group-plate`, `sf-button-group-segment` |
+| Части | `sf-button-group-count`, `sf-button-group-icon-only`, `sf-button-group-label--hidden`, `sf-button-group-narrow`, `sf-button-group-out`, `sf-button-group-plate`, `sf-button-group-segment` |
 | Модификаторы | `sf-button-group--backdrop-color`, `sf-button-group--backdrop-media`, `sf-button-group--folded`, `sf-button-group--full-width`, `sf-button-group--on-surface`, `sf-button-group--plate-raised`, `sf-button-group--primary`, `sf-button-group--radius-default`, `sf-button-group--radius-rounded`, `sf-button-group--radius-square`, `sf-button-group--secondary`, `sf-button-group--segmented` |
 | Размеры | `sf-button-group--size-1/2`, `sf-button-group--size-1/3`, `sf-button-group--size-2`, `sf-button-group--size-3` |
 

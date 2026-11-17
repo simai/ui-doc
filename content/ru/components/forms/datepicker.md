@@ -6,7 +6,7 @@ profile: reference
 
 # Календарь
 
-:badge[sf-datepicker]{variant=outline scheme=on-surface size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-datepicker]{variant=outline scheme=on-surface size=1/2} :badge[1.7.0]{variant=outline scheme=on-surface size=1/2}
 
 Календарь показывает дни месяца, выбранную дату или период. Поведения у
 классов нет: перелистывание, выбор даты и
@@ -120,7 +120,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-datepicker` |
-| Части | `sf-datepicker-another-month`, `sf-datepicker-container`, `sf-datepicker-context`, `sf-datepicker-day`, `sf-datepicker-day-date`, `sf-datepicker-day-end`, `sf-datepicker-day-info`, `sf-datepicker-day-off`, `sf-datepicker-day-selected`, `sf-datepicker-day-start`, `sf-datepicker-main`, `sf-datepicker-period`, `sf-datepicker-preset`, `sf-datepicker-presets`, `sf-datepicker-ribbon`, `sf-datepicker-ribbon-month`, `sf-datepicker-ribbon-title`, `sf-datepicker-row`, `sf-datepicker-sheet-close`, `sf-datepicker-sheet-foot`, `sf-datepicker-sheet-head`, `sf-datepicker-sheet-summary`, `sf-datepicker-sheet-title`, `sf-datepicker-sheet-today`, `sf-datepicker-sheet-weekdays`, `sf-datepicker-text`, `sf-datepicker-text-end`, `sf-datepicker-text-selected`, `sf-datepicker-text-start`, `sf-datepicker-time`, `sf-datepicker-time-separator`, `sf-datepicker-time-value`, `sf-datepicker-top`, `sf-datepicker-week`, `sf-datepicker-weekday`, `sf-datepicker-weekday-off`, `sf-datepicker-wrap` |
+| Части | `sf-datepicker-another-month`, `sf-datepicker-container`, `sf-datepicker-context`, `sf-datepicker-day`, `sf-datepicker-day-date`, `sf-datepicker-day-end`, `sf-datepicker-day-info`, `sf-datepicker-day-off`, `sf-datepicker-day-selected`, `sf-datepicker-day-special`, `sf-datepicker-day-start`, `sf-datepicker-dayline`, `sf-datepicker-dayline-date`, `sf-datepicker-indicator`, `sf-datepicker-main`, `sf-datepicker-period`, `sf-datepicker-preset`, `sf-datepicker-presets`, `sf-datepicker-ribbon`, `sf-datepicker-ribbon-month`, `sf-datepicker-ribbon-title`, `sf-datepicker-row`, `sf-datepicker-sheet-close`, `sf-datepicker-sheet-foot`, `sf-datepicker-sheet-head`, `sf-datepicker-sheet-presets`, `sf-datepicker-sheet-summary`, `sf-datepicker-sheet-title`, `sf-datepicker-sheet-today`, `sf-datepicker-sheet-weekdays`, `sf-datepicker-text`, `sf-datepicker-text-end`, `sf-datepicker-text-selected`, `sf-datepicker-text-start`, `sf-datepicker-time`, `sf-datepicker-time-separator`, `sf-datepicker-time-value`, `sf-datepicker-top`, `sf-datepicker-week`, `sf-datepicker-weekday`, `sf-datepicker-weekday-off`, `sf-datepicker-wrap` |
 | Модификаторы | `sf-datepicker--inline`, `sf-datepicker--presets`, `sf-datepicker--sheet`, `sf-datepicker--time` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -183,6 +183,7 @@ profile: reference
 | `--sf-datepicker-day-info--font-size` | не задана; задают модификаторы, например `.sf-datepicker-day .sf-datepicker-day-info`: `var(--sf-text-size-1/4)` | `font-size` |
 | `--sf-datepicker-day-info--font-weight` | не задана; задают модификаторы, например `.sf-datepicker-day .sf-datepicker-day-info`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-datepicker-day-info--line-height` | не задана; задают модификаторы, например `.sf-datepicker-day .sf-datepicker-day-info`: `var(--sf-text-height-1/4)` | `line-height` |
+| `--sf-datepicker-day-special--size` | не задана; задают модификаторы, например `.sf-datepicker-day.sf-datepicker-day-special .sf-datepicker-day-date::after`: `var(--sf-space-1/4)` | `width`, `inline-size`, `height`, `block-size`, `margin-inline-start` |
 | `--sf-datepicker-main--background-color` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-main`: `var(--sf-transparent)` | `background-color` |
 | `--sf-datepicker-presets--inline-size` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--presets`: `calc(var(--sf-ui-1--control-height) * 5)` | `width`, `inline-size`, `flex` |
 | `--sf-datepicker-row--background-color` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-row`: `var(--sf-transparent)` | `background-color` |

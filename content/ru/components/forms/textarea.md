@@ -6,7 +6,7 @@ profile: reference
 
 # Многострочное поле
 
-:badge[sf-textarea]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-textarea]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Многострочное поле принимает комментарий, описание или другой свободный текст с
 переносами строк. Для короткого значения в одну строку берите
@@ -247,7 +247,7 @@ whenLoader(() => SF.Loader.ready('Textarea', (Textarea) => {
 |:---|:---|
 | Блок | `sf-textarea` |
 | Части | `sf-textarea-count`, `sf-textarea-count-said`, `sf-textarea-hint-text-wrap`, `sf-textarea-label`, `sf-textarea-message`, `sf-textarea-required`, `sf-textarea-text` |
-| Модификаторы | `sf-textarea--auto-grow`, `sf-textarea--bordered`, `sf-textarea--code`, `sf-textarea--filled`, `sf-textarea--flush`, `sf-textarea--over`, `sf-textarea--pointer-focus`, `sf-textarea--resize` |
+| Модификаторы | `sf-textarea--auto-grow`, `sf-textarea--bordered`, `sf-textarea--code`, `sf-textarea--filled`, `sf-textarea--flush`, `sf-textarea--over`, `sf-textarea--resize` |
 | Размеры | `sf-textarea--size-1`, `sf-textarea--size-1/2`, `sf-textarea--size-1/3`, `sf-textarea--size-2`, `sf-textarea--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -299,12 +299,12 @@ whenLoader(() => SF.Loader.ready('Textarea', (Textarea) => {
 | `--sf-textarea-placeholder--font-family` | не задана; задают модификаторы, например `.sf-textarea textarea::-webkit-input-placeholder`: `var(--sf-text--family)` | `font-family` |
 | `--sf-textarea-placeholder--font-size` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 textarea::-webkit-input-placeholder`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-textarea-placeholder--line-height` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 textarea::-webkit-input-placeholder`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-textarea-required--color` | не задана; задают модификаторы, например `.sf-textarea .sf-textarea-required`: `var(--sf-error)` | `color` |
+| `--sf-textarea-required--color` | не задана; задают модификаторы, например `.sf-textarea .sf-textarea-required`: `var(--sf-on-surface)` | `color` |
 | `--sf-textarea-required--font-family` | не задана; задают модификаторы, например `.sf-textarea .sf-textarea-required`: `var(--sf-text--family)` | `font-family` |
 | `--sf-textarea-required--font-size` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 .sf-textarea-required`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-textarea-required--font-weight` | не задана; задают модификаторы, например `.sf-textarea .sf-textarea-required`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-textarea-required--line-height` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 .sf-textarea-required`: `var(--sf-text-height-1/2)` | `line-height` |
-| `--sf-textarea-text--color` | не задана; задают модификаторы, например `.sf-textarea .sf-textarea-text`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-textarea-text--color` | не задана; задают модификаторы, например `.sf-textarea .sf-textarea-text`: `var(--sf-on-surface)` | `color` |
 | `--sf-textarea-text--font-family` | не задана; задают модификаторы, например `.sf-textarea .sf-textarea-text`: `var(--sf-text--family)` | `font-family` |
 | `--sf-textarea-text--font-size` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 .sf-textarea-text`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-textarea-text--font-weight` | не задана; задают модификаторы, например `.sf-textarea .sf-textarea-text`: `var(--sf-font-weight-regular)` | `font-weight` |
@@ -316,7 +316,7 @@ whenLoader(() => SF.Loader.ready('Textarea', (Textarea) => {
 | `--sf-textarea-textarea--border-end-start-radius` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-textarea--radius)` | `border-end-start-radius` |
 | `--sf-textarea-textarea--border-start-end-radius` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-textarea--radius)` | `border-start-end-radius` |
 | `--sf-textarea-textarea--border-start-start-radius` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-textarea--radius)` | `border-start-start-radius` |
-| `--sf-textarea-textarea--box-shadow` | не задана; задают модификаторы, например `.sf-textarea:not(.sf-textarea--pointer-focus) textarea:not(:disabled):not(.disabled).focus-visible`: `none` | `box-shadow` |
+| `--sf-textarea-textarea--box-shadow` | не задана; задают модификаторы, например `.sf-textarea textarea:not(:disabled):not(.disabled):focus`: `none` | `box-shadow` |
 | `--sf-textarea-textarea--color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-textarea-color, var(--sf-on-surface))` | `color` |
 | `--sf-textarea-textarea--font-family` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1.sf-textarea--bordered textarea`: `var(--sf-text--family)` | `font-family` |
 | `--sf-textarea-textarea--font-size` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1.sf-textarea--bordered textarea`: `var(--sf-text-size-1)` | `font-size` |

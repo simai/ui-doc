@@ -6,7 +6,7 @@ profile: reference
 
 # Скачивание файла
 
-:badge[sf-download-file]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-download-file]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
 
 Компонент оформляет ссылку на файл как отдельное действие: иконка
 скачивания, название и размер в одной строке. Берите его для вложений,

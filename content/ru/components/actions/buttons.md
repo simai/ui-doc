@@ -6,7 +6,7 @@ profile: reference
 
 # Кнопки
 
-:badge[sf-button]{variant=outline scheme=on-surface size=1/2} :badge[1.12.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button]{variant=outline scheme=on-surface size=1/2} :badge[1.16.0]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка запускает действие на текущей странице: сохраняет изменения, отправляет
 форму или подтверждает выбор. Для перехода на другую страницу берите ссылку, для
@@ -356,6 +356,7 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | `--sf-button--border-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-px)` | `border-width` |
 | `--sf-button--focus-ink` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--primary`: `var(--sf-on-primary)` | `--sf-button--focus-inset` |
 | `--sf-button--focus-inset` | не задана; задают модификаторы, например `.sf-button:not(:disabled):not(.disabled).focus-visible`: `inset 0 0 0 var(--sf-focus--offset) var(--sf-button--focus-ink, transparent)` | `box-shadow` |
+| `--sf-button--on-place-ink` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--on-surface`: `color-mix(in srgb, var(--sf-on-primary), var(--sf-place--ink) 0%)` | `--sf-button-text-container--color`, `--sf-icon--color`, `--sf-button--focus-ink` |
 | `--sf-button--padding-bottom` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-bottom` |
 | `--sf-button--padding-inline-end` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-end` |
 | `--sf-button--padding-inline-start` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-start` |
