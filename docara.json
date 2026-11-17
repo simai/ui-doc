@@ -68,6 +68,9 @@
     },
     {
       "command": ["node", "scripts/reference-name-column.mjs"]
+    },
+    {
+      "command": ["php", "scripts/publish-framework-language-files.php"]
     }
   ],
   "base_url": "/",

@@ -11,18 +11,21 @@ declare(strict_types=1);
 // error per part). Until Docara plans the language files itself, this step
 // copies distr/core/lang of the pinned distribution into the published runtime
 // folder and puts the language file in front of the Framework scripts of every
-// page in another language than English. It runs after `docara build`
-// (scripts/build-documentation.php).
+// page in another language than English. It is a Docara page transform
+// (docara.json page_transforms): Docara then plans each changed page again from
+// its final HTML and writes the performance receipt from it.
 
 chdir(dirname(__DIR__));
 $root = getcwd();
+// Docara runs page transforms with the build folder as the last argument.
+$build = rtrim($argv[1] ?? ($root . '/build_production'), '/');
 $lock = json_decode((string) file_get_contents($root . '/simai-framework.lock.json'), true, 512, JSON_THROW_ON_ERROR);
 $commit = (string) ($lock['runtime']['ui']['commit'] ?? '');
 if (preg_match('/^[0-9a-f]{40}$/D', $commit) !== 1) {
     fwrite(STDERR, "LANGUAGE_FILES_COMMIT_MISSING\n");
     exit(2);
 }
-$target = $root . '/build_production/_docara/vendor/simai-framework/runtime/' . $commit . '/distr/core/lang';
+$target = $build . '/_docara/vendor/simai-framework/runtime/' . $commit . '/distr/core/lang';
 if (!is_dir(dirname($target))) {
     fwrite(STDERR, "LANGUAGE_FILES_RUNTIME_FOLDER_MISSING " . dirname($target) . "\n");
     exit(2);
@@ -79,7 +82,7 @@ foreach ($files as $relative => $bytes) {
 // hands every script[data-docara-framework-asset][src] of the page to its
 // frames in page order, so the frames read the words from the same file.
 $pages = 0;
-$html = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/build_production', FilesystemIterator::SKIP_DOTS));
+$html = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($build, FilesystemIterator::SKIP_DOTS));
 $paths = [];
 foreach ($html as $file) {
     if ($file->isFile() && str_ends_with($file->getFilename(), '.html')) {
