@@ -51,6 +51,9 @@ profile: reference
 занимает заливка (`--sf-surface-container`): логотип или схема никогда не
 обрезаются.
 
+:::example {id="components/figure/ratios" label="Одна картинка в пяти пропорциях"}
+:::
+
 :::example {id="components/figure/contain" label="Заполнение и вписывание"}
 :::
 
