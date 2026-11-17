@@ -104,6 +104,15 @@ profile: reference
 :::example {id="components/tabs/state-focus" label="Пункт в фокусе"}
 :::
 
+## Применение
+
+### Прежняя вкладка
+
+Одиночная вкладка на списке пунктов (класс `sf-tab`, `SF.Tab`) устарела:
+её заменяют вкладки с этой страницы. Класс `sf-tab` и `SF.Tab` работают до
+2027-01-01 и отмечаются в `SF.deprecations`; прежний адрес её страницы
+ведёт сюда.
+
 ## Доступность
 
 Скрипт расставляет роли и связи сам:
@@ -199,6 +208,5 @@ whenLoader(() => SF.Loader.ready('Tabs', () => {
 
 ## См. также
 
-- [Вкладка (совместимость)](/ru/components/navigation/tab/)
 - [Шаги](/ru/components/navigation/step/)
 - [Вкладки](/ru/smart/navigation/tabs/)

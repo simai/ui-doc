@@ -370,13 +370,6 @@
         "sf-step"
       ]
     },
-    "components/navigation/tab.md": {
-      "kind": "component",
-      "component": "tab",
-      "blocks": [
-        "sf-tab"
-      ]
-    },
     "components/navigation/tabs.md": {
       "kind": "component",
       "component": "tabs",

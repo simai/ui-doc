@@ -303,8 +303,8 @@
       "label": "Переключатель"
     },
     "SF.Tab": {
-      "page": "/ru/components/navigation/tab/#javascript",
-      "label": "Вкладка (совместимость)"
+      "page": "/ru/components/navigation/tabs/#прежняя-вкладка",
+      "label": "Вкладки: прежняя вкладка"
     },
     "SF.Tabs": {
       "page": "/ru/components/navigation/tabs/#javascript",

@@ -396,7 +396,7 @@
     },
     {
       "from": "ru/components/reference/tab",
-      "to": "ru/components/navigation/tab"
+      "to": "ru/components/navigation/tabs"
     },
     {
       "from": "ru/components/reference/tabs",
@@ -472,7 +472,7 @@
     },
     {
       "from": "ru/components/tab",
-      "to": "ru/components/navigation/tab"
+      "to": "ru/components/navigation/tabs"
     },
     {
       "from": "ru/components/tabs",
@@ -916,7 +916,7 @@
     },
     {
       "from": "ru/framework-components/reference/tab",
-      "to": "ru/components/navigation/tab"
+      "to": "ru/components/navigation/tabs"
     },
     {
       "from": "ru/framework-components/reference/tabs",
@@ -992,7 +992,7 @@
     },
     {
       "from": "ru/framework-components/tab",
-      "to": "ru/components/navigation/tab"
+      "to": "ru/components/navigation/tabs"
     },
     {
       "from": "ru/framework-components/tabs",
@@ -2720,7 +2720,7 @@
     },
     {
       "from": "ru/guide/fundamentals/languages",
-      "to": "ru/guide/size-and-type/languages"
+      "to": "ru/guide/size-and-type/language"
     },
     {
       "from": "ru/guide/fundamentals/layout-classes",
@@ -4953,6 +4953,14 @@
     {
       "from": "en/utilities/typography/word-break",
       "to": "ru/utilities/typography/word-break"
+    },
+    {
+      "from": "ru/guide/size-and-type/languages",
+      "to": "ru/guide/size-and-type/language"
+    },
+    {
+      "from": "ru/components/navigation/tab",
+      "to": "ru/components/navigation/tabs"
     }
   ]
 }
