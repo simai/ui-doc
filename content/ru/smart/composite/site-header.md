@@ -5,7 +5,7 @@ description: "Верхняя полоса сайта: бренд, разделы
 
 # Шапка сайта
 
-:badge[sf-header-site]{variant=outline scheme=on-surface size=1/2} :badge[1.11.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-header-site]{variant=outline scheme=on-surface size=1/2} :badge[1.11.3]{variant=outline scheme=on-surface size=1/2}
 
 Шапка сайта — верхняя полоса с брендом, разделами, ссылками и инструментами в
 одну строку по ширине контейнера. На узком экране разделы и ссылки уходят в
@@ -233,13 +233,13 @@ header.addEventListener('sf-header-site-opened', () => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-header-site>`, контракт `smart.header-site` версии `1.11.2` |
-| Поставка | выпуск Framework `ui-078a4b4c6f6e` |
+| Тег | `<sf-header-site>`, контракт `smart.header-site` версии `1.11.3` |
+| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как шапка сайта; название компонент ставит сам; с клавиатуры: `Tab` по порядку проходит логотип, разделы, ссылки и инструменты; `Enter` или `Пробел` на кнопке меню открывают боковую панель; `Esc` закрывает боковую панель и возвращает фокус на кнопку меню. |
-| Источник | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/smart/header-site` |
-| Правило классов | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/rule/rule.json#name=cl-header-site` |
+| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/header-site` |
+| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-header-site` |
 
 ## См. также
 

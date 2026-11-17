@@ -6,7 +6,7 @@ profile: reference
 
 # Карусель
 
-:badge[sf-carousel]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-carousel]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 `sf-carousel` — прежнее имя [слайдера контента](/ru/components/overlays-media/slider/).
 Во Framework теперь один слайдер: `sf-slider`. Карусель работает до
@@ -40,7 +40,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-carousel` |
-| Части | `sf-carousel-pagination`, `sf-carousel-pagination--big`, `sf-carousel-pagination--no-background`, `sf-carousel-pagination--primary`, `sf-carousel-pagination--primary-container`, `sf-carousel-pagination--surface-2`, `sf-carousel-pagination--surface-area`, `sf-carousel-pagination--surface-inverse`, `sf-carousel-pagination-item`, `sf-carousel-pagination-item--active`, `sf-carousel-rotation`, `sf-carousel-slide`, `sf-carousel-slider`, `sf-carousel-switch`, `sf-carousel-switch--big`, `sf-carousel-switch--left`, `sf-carousel-switch--media`, `sf-carousel-switch--next`, `sf-carousel-switch--prev`, `sf-carousel-switch--primary`, `sf-carousel-switch--right`, `sf-carousel-switch--secondary-container`, `sf-carousel-switch--surface-inverse`, `sf-carousel-switch--surface-page`, `sf-carousel-switch--surface-zero` |
+| Части | `sf-carousel-pagination`, `sf-carousel-pagination--big`, `sf-carousel-pagination--no-background`, `sf-carousel-pagination--primary`, `sf-carousel-pagination-item`, `sf-carousel-pagination-item--active`, `sf-carousel-rotation`, `sf-carousel-slide`, `sf-carousel-slider`, `sf-carousel-switch`, `sf-carousel-switch--big`, `sf-carousel-switch--left`, `sf-carousel-switch--media`, `sf-carousel-switch--next`, `sf-carousel-switch--prev`, `sf-carousel-switch--primary`, `sf-carousel-switch--right` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

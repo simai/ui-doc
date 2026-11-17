@@ -6,7 +6,7 @@ profile: reference
 
 # Подсветка кода
 
-:badge[sf-highlight]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-highlight]{variant=outline scheme=on-surface size=1/2} :badge[1.7.0]{variant=outline scheme=on-surface size=1/2}
 
 Подсветка кода раскрашивает синтаксис в блоках `pre code` и оформляет их
 поверхностью с панелью: название языка и кнопка копирования. Берите её для
@@ -127,8 +127,8 @@ await SF.Highlight.refresh(block, 'const total = price * count;');
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-highlight` |
-| Части | `sf-highlight__head`, `sf-highlight__status`, `sf-highlight__wrap`, `sf-highlight__wrap-toggle` |
-| Модификаторы | `sf-highlight--wrap` |
+| Части | `sf-highlight__head`, `sf-highlight__language`, `sf-highlight__status`, `sf-highlight__wrap`, `sf-highlight__wrap-toggle` |
+| Модификаторы | `sf-highlight--terminal`, `sf-highlight--wrap` |
 
 **`sf-code-surface`**
 
@@ -158,45 +158,6 @@ await SF.Highlight.refresh(block, 'const total = price * count;');
   --sf-highlight-radius: 0;
 }
 ```
-
-### Устройство
-
-Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-highlight`, `.sf-code-surface`); переменную без него задают только модификаторы.
-
-| Переменная | По умолчанию | Задаёт |
-|:---|:---|:---|
-| `--sf-highlight--addition` | не задана; задают модификаторы, например `.theme-light .sf-code-surface`: `var(--sf-place--ink, var(--sf-highlight-addition))` | `color` |
-| `--sf-highlight--attribute` | не задана; задают модификаторы, например `.theme-light .sf-code-surface`: `var(--sf-place--ink, var(--sf-highlight-attribute))` | `color` |
-| `--sf-highlight--built-in` | не задана; задают модификаторы, например `.theme-light .sf-code-surface`: `var(--sf-place--ink, var(--sf-highlight-built-in))` | `color` |
-| `--sf-highlight--bullet` | не задана; задают модификаторы, например `.theme-light .sf-code-surface`: `var(--sf-place--ink, var(--sf-highlight-bullet))` | `color` |
-| `--sf-highlight--comment` | не задана; задают модификаторы, например `.theme-light .sf-code-surface`: `var(--sf-place--ink-variant, var(--sf-highlight-comment))` | `color` |
-| `--sf-highlight--deletion` | не задана; задают модификаторы, например `.theme-light .sf-code-surface`: `var(--sf-place--ink, var(--sf-highlight-deletion))` | `color` |
-| `--sf-highlight--keyword` | не задана; задают модификаторы, например `.theme-light .sf-code-surface`: `var(--sf-place--ink, var(--sf-highlight-keyword))` | `color` |
-| `--sf-highlight--line-number` | не задана; задают модификаторы, например `.theme-light .sf-code-surface`: `var(--sf-place--ink-variant, var(--sf-highlight-line-number))` | `color` |
-| `--sf-highlight--punctuation` | не задана; задают модификаторы, например `.theme-light .sf-code-surface`: `var(--sf-place--ink-variant, var(--sf-highlight-punctuation))` | `color` |
-| `--sf-highlight--section` | не задана; задают модификаторы, например `.theme-light .sf-code-surface`: `var(--sf-place--ink, var(--sf-highlight-section))` | `color` |
-| `--sf-highlight--string` | не задана; задают модификаторы, например `.theme-light .sf-code-surface`: `var(--sf-place--ink, var(--sf-highlight-string))` | `color` |
-| `--sf-highlight--tag` | не задана; задают модификаторы, например `.theme-light .sf-code-surface`: `var(--sf-place--ink, var(--sf-highlight-tag))` | `color` |
-| `--sf-highlight--text` | не задана; задают модификаторы, например `.theme-light .sf-code-surface`: `var(--sf-place--ink, var(--sf-highlight-text))` | `color` |
-| `--sf-highlight--title` | не задана; задают модификаторы, например `.theme-light .sf-code-surface`: `var(--sf-place--ink, var(--sf-highlight-title))` | `color` |
-| `--sf-highlight-addition` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-on-success-container)` | `--sf-highlight--addition`, `background-color` |
-| `--sf-highlight-addition-background` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-success-container)` | `background-color` |
-| `--sf-highlight-attribute` | не задана; задают модификаторы, например `.theme-light`: `light-dark(var(--sf-blue-40), var(--sf-blue-80))` | `--sf-highlight--attribute` |
-| `--sf-highlight-background` | не задана; задают модификаторы, например `.theme-light`: `transparent` | `background` |
-| `--sf-highlight-built-in` | не задана; задают модификаторы, например `.theme-light`: `light-dark(var(--sf-teal-40), var(--sf-teal-80))` | `--sf-highlight--built-in` |
-| `--sf-highlight-bullet` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-warning)` | `--sf-highlight--bullet` |
-| `--sf-highlight-comment` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-on-surface-variant)` | `--sf-highlight--comment` |
-| `--sf-highlight-deletion` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-on-error-container)` | `--sf-highlight--deletion`, `background-color` |
-| `--sf-highlight-deletion-background` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-error-container)` | `background-color` |
-| `--sf-highlight-keyword` | не задана; задают модификаторы, например `.theme-light`: `light-dark(var(--sf-violet-40), var(--sf-violet-80))` | `--sf-highlight--keyword` |
-| `--sf-highlight-line-divider` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-outline-variant)` | `border-inline-end` |
-| `--sf-highlight-line-number` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-on-surface-variant)` | `--sf-highlight--line-number` |
-| `--sf-highlight-punctuation` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-on-surface-variant)` | `--sf-highlight--punctuation` |
-| `--sf-highlight-section` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-primary)` | `--sf-highlight--section` |
-| `--sf-highlight-string` | не задана; задают модификаторы, например `.theme-light`: `light-dark(var(--sf-green-40), var(--sf-green-80))` | `--sf-highlight--string` |
-| `--sf-highlight-tag` | не задана; задают модификаторы, например `.theme-light`: `light-dark(var(--sf-green-40), var(--sf-green-80))` | `--sf-highlight--tag` |
-| `--sf-highlight-text` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-on-surface)` | `--sf-highlight--text` |
-| `--sf-highlight-title` | не задана; задают модификаторы, например `.theme-light`: `light-dark(var(--sf-amber-40), var(--sf-amber-80))` | `--sf-highlight--title` |
 
 ## См. также
 

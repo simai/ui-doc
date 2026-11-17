@@ -6,7 +6,7 @@ profile: reference
 
 # Оглавление
 
-:badge[sf-outline]{variant=outline scheme=on-surface size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-outline]{variant=outline scheme=on-surface size=1/2} :badge[1.1.3]{variant=outline scheme=on-surface size=1/2}
 
 Оглавление показывает разделы длинной страницы списком якорных ссылок и
 отмечает текущий раздел. Для навигации между страницами берите меню или
@@ -81,13 +81,13 @@ profile: reference
 | `--sf-outline--current-background` | `var(--sf-primary-container-active)` | `background-color` |
 | `--sf-outline--current-color` | `var(--sf-on-primary-container)` | `color` |
 | `--sf-outline--current-indicator` | `var(--sf-transparent)` | `border-inline-start-color` |
-| `--sf-outline--gap` | `var(--sf-space-1/3)` | `gap` |
+| `--sf-outline--gap` | `var(--sf-space-1/3)` | `gap`, `padding-top`, `padding-block-start` |
 | `--sf-outline--hover-background` | `var(--sf-surface-container-hover)` | `background-color` |
 | `--sf-outline--hover-color` | `var(--sf-on-surface)` | `color` |
 | `--sf-outline--indent` | `var(--sf-space-2)` | `padding-inline-start` |
-| `--sf-outline--indicator-width` | `var(--sf-a2)` | `border-inline-start` |
+| `--sf-outline--indicator-width` | `var(--sf-a2)` | `padding-inline-start`, `border-inline-start` |
 | `--sf-outline--link-padding-block` | `var(--sf-space-1/4)` | `padding-top`, `padding-bottom`, `padding-block` |
-| `--sf-outline--link-padding-inline` | `var(--sf-space-1)` | `padding-left`, `padding-right`, `padding-inline` |
+| `--sf-outline--link-padding-inline` | `var(--sf-space-1)` | `padding-inline`, `padding-inline-start` |
 
 ## См. также
 

@@ -23,16 +23,8 @@ description: "Окрашивает линии полосатого фона цв
 | `stripe-transparent` | `--sf-stripe--color: var(--sf-transparent)` | — |
 | `stripe-current` | `--sf-stripe--color: var(--sf-current)` | — |
 | `stripe-inherit` | `--sf-stripe--color: var(--sf-inherit)` | — |
-| `stripe-surface-container-strong` | `--sf-stripe--color: var(--sf-surface-container-strong)` | — |
-| `stripe-on-surface` | `--sf-stripe--color: var(--sf-on-surface)` | — |
-| `stripe-primary` | `--sf-stripe--color: var(--sf-primary)` | — |
-| `stripe-primary-container` | `--sf-stripe--color: var(--sf-primary-container)` | — |
-| `stripe-secondary` | `--sf-stripe--color: var(--sf-secondary)` | — |
-| `stripe-secondary-container` | `--sf-stripe--color: var(--sf-secondary-container)` | — |
-| `stripe-tertiary` | `--sf-stripe--color: var(--sf-tertiary)` | — |
-| `stripe-tertiary-container` | `--sf-stripe--color: var(--sf-tertiary-container)` | — |
 
-Прежние имена работают до 2027-01-01: `stripe-surface-transparent-overlay` → `stripe-surface-container-strong`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+Прежние имена работают до 2027-01-01: `stripe-on-surface` → `pattern-color-neutral`, `stripe-primary` → `pattern-color-primary`, `stripe-primary-container` → `pattern-color-primary`, `stripe-secondary` → `pattern-color-secondary`, `stripe-secondary-container` → `pattern-color-secondary`, `stripe-surface-container-strong` → `pattern-color-neutral`, `stripe-surface-transparent-overlay` → `pattern-color-neutral`, `stripe-tertiary` → `pattern-color-tertiary`, `stripe-tertiary-container` → `pattern-color-tertiary`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 

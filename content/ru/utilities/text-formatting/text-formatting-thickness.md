@@ -24,8 +24,8 @@ description: "Задаёт толщину подчёркивания и друг
 | `decoration-auto` | `text-decoration-thickness: auto` | — |
 | `decoration-font` | `text-decoration-thickness: from-font` | — |
 | `decoration-0` | `text-decoration-thickness: var(--sf-a0)` | — |
-| `decoration-1` | `text-decoration-thickness: var(--sf-a1)` | — |
-| `decoration-2` | `text-decoration-thickness: var(--sf-a2)` | — |
+| `decoration-1` | `text-decoration-thickness: var(--sf-line--border)` | — |
+| `decoration-2` | `text-decoration-thickness: var(--sf-line--indicator)` | — |
 | `decoration-3` | `text-decoration-thickness: var(--sf-a3)` | — |
 | `decoration-4` | `text-decoration-thickness: var(--sf-a4)` | — |
 
@@ -40,8 +40,8 @@ description: "Задаёт толщину подчёркивания и друг
 | Переменная | Значение по умолчанию |
 |:---|:---|
 | `--sf-a0` | `0rem` |
-| `--sf-a1` | `0.0625rem` |
-| `--sf-a2` | `0.125rem` |
+| `--sf-line--border` | `var(--sf-px)` |
+| `--sf-line--indicator` | `calc(2 * var(--sf-px))` |
 | `--sf-a3` | `0.1875rem` |
 | `--sf-a4` | `0.25rem` |
 

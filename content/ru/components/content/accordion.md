@@ -6,7 +6,7 @@ profile: reference
 
 # Аккордеон
 
-:badge[sf-accordion]{variant=outline scheme=on-surface size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-accordion]{variant=outline scheme=on-surface size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
 
 Аккордеон раскрывает и скрывает разделы содержимого под их заголовками.
 Берите его, чтобы сократить длинную страницу с независимыми разделами —

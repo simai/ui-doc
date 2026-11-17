@@ -70,8 +70,8 @@ JavaScript и TypeScript, CSS и SCSS, Markdown, JSON. Инструмент и �
 на который проект переходит: `git checkout <build_inputs.source.commit>`. Более
 новый журнал может назвать каноническое имя, которого в целевом выпуске ещё
 нет, и `--apply` записал бы в проект имя, которое этот выпуск не знает. Для
-выпуска `ui-078a4b4c6f6e` это ревизия
-`10145e63b9dc3325eeffd62731b4bb5881b21c12`.
+выпуска `ui-24d64b7f6eb7` это ревизия
+`40541c0c4fba6c24659907eb987c74f17a4fc46a`.
 
 Инструменту нужен только Node.js: зависимостей у него нет, устанавливать
 ничего не нужно.
@@ -281,7 +281,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
 
 ## Новые имена тегов
 
-С выпуска `ui-078a4b4c6f6e` (`@simai-studio/ui` 5.20261116.1505) часть
+С выпуска `ui-24d64b7f6eb7` (`@simai-studio/ui` 5.20261117.1311) часть
 смарт-компонентов называется по-новому: сначала семейство, затем уточнение
 (`sf-input-date`, а не `sf-datepicker`). Прежний тег работает до 2027-01-01:
 Loader определяет его как псевдоним нового, поэтому страницы на прежних
@@ -620,6 +620,8 @@ Framework (см. [Подтверждение изменения](/ru/smart/actio
 | `--sf-ui-blur-large` | `blur(var(--sf-blur-large))` | 2027-01-01 | `token-c178-blur-filter-values` |
 | `--sf-ui-blur-surface-overlay` | `blur(var(--sf-surface-overlay--blur))` | 2027-01-01 | `token-c178-blur-filter-values` |
 | `--sf-ring--alfa` | `--sf-ring--alpha` | 2027-01-01 | `token-ring-alpha-spelling` |
+| `--sf-avatar-offline-background-color` | без замены | 2027-01-01 | `token-avatar-offline-variables-retired` |
+| `--sf-avatar-offline-overlay` | без замены | 2027-01-01 | `token-avatar-offline-variables-retired` |
 
 ## Связь с другими частями
 

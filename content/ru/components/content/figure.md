@@ -6,7 +6,7 @@ profile: reference
 
 # Рисунок
 
-:badge[sf-figure]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-figure]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Рисунок показывает картинку, видео или иллюстрацию в заданной пропорции и
 подпись под ней. Берите его, когда изображению нужна подпись или ровная рамка
@@ -82,7 +82,7 @@ profile: reference
 |:---|:---|
 | Блок | `sf-figure` |
 | Части | `sf-figure-caption`, `sf-figure-grid`, `sf-figure-grid--l`, `sf-figure-grid--masonry`, `sf-figure-grid--s`, `sf-figure-grid--selecting`, `sf-figure-media`, `sf-figure-pick` |
-| Модификаторы | `sf-figure--caption-over`, `sf-figure--caption-plate`, `sf-figure--contain`, `sf-figure--expressive`, `sf-figure--ratio-16x9`, `sf-figure--ratio-1x1`, `sf-figure--ratio-21x9`, `sf-figure--ratio-3x2`, `sf-figure--ratio-4x3`, `sf-figure--ratio-auto`, `sf-figure--selected`, `sf-figure--tile` |
+| Модификаторы | `sf-figure--caption-over`, `sf-figure--caption-plate`, `sf-figure--contain`, `sf-figure--expressive`, `sf-figure--ratio-16x9`, `sf-figure--ratio-1x1`, `sf-figure--ratio-21x9`, `sf-figure--ratio-3x2`, `sf-figure--ratio-3x4`, `sf-figure--ratio-4x3`, `sf-figure--ratio-auto`, `sf-figure--selected`, `sf-figure--tile` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

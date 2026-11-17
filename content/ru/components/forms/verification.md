@@ -6,7 +6,7 @@ profile: reference
 
 # Код подтверждения
 
-:badge[sf-verification]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-verification]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Код подтверждения принимает одноразовый код из сообщения или приложения и
 показывает его по отдельным ячейкам. Под ячейками лежит одно нативное поле,
@@ -157,7 +157,7 @@ document.addEventListener('verification:complete', (event) => {
 |:---|:---|
 | Блок | `sf-verification` |
 | Части | `sf-verification-cell`, `sf-verification-cells`, `sf-verification-form`, `sf-verification-form--filled`, `sf-verification-form--size-1`, `sf-verification-form--size-1/2`, `sf-verification-form--size-1/3`, `sf-verification-form--size-2`, `sf-verification-form--size-3`, `sf-verification-form-hint`, `sf-verification-form-label`, `sf-verification-form-wrap`, `sf-verification-input`, `sf-verification-separator` |
-| Модификаторы | `sf-verification--filled`, `sf-verification--pointer-focus` |
+| Модификаторы | `sf-verification--filled` |
 | Размеры | `sf-verification--size-1`, `sf-verification--size-1/2`, `sf-verification--size-1/3`, `sf-verification--size-2`, `sf-verification--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.

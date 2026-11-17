@@ -51,7 +51,7 @@ v1, те же id, проверка, канонический вид и отпе�
 | `content.code` | `code` | `lang`, `title`, `numbers` | | компонент `highlight` |
 | `content.divider` | | | | компонент [разделитель](/ru/components/content/content-divider/) |
 | `content.table` | `rows` (ячейки — текст), `caption` | `header` (row, column, both, none), `align` | | утилита `table-frame` |
-| `content.figure` | `src`, `alt`, `width`, `height`, `caption` | `ratio` (auto, 1/1, 4/3, 3/2, 16/9, 21/9), `fit` (cover, contain) | | компонент [рисунок](/ru/components/content/figure/) |
+| `content.figure` | `src`, `alt`, `width`, `height`, `caption` | `ratio` (auto, 1/1, 4/3, 3/2, 16/9, 21/9, 3/4), `fit` (cover, contain) | | компонент [рисунок](/ru/components/content/figure/) |
 | `content.file` | `href`, `label`, `mime`, `size` (байты), `value` (ключ хранилища) | | | строка [`sf-file-download`](/ru/smart/actions/download-file/): значок по типу, название, размер |
 | `content.alert` | `title` (текст) | `status` (neutral, info, success, warning, error), `appearance` (default, outlined, flat) | `default` | классы `sf-alert` |
 | `content.details` | `summary` (текст) | `open`, `layout` (surface, lines) | `default` | `details`: раскрывается без скрипта |
@@ -60,7 +60,7 @@ v1, те же id, проверка, канонический вид и отпе�
 | `content.steps` | | `current`, `layout` (timeline, list) | `steps`: `content.step` | компонент [шаги инструкции](/ru/components/content/procedure/) |
 | `content.step` | `title` (текст) | | `default` | шаг процедуры |
 | `content.grid` | | `columns` (1–4), `gap` (0–4) | `default` | утилиты `grid`, на телефоне одна колонка |
-| `content.card` | | `variant` (default, plain) | `default` | компонент [карточка](/ru/components/content/card/) |
+| `content.card` | `title` (текст), `action_icon`, `action_label`, `action_href` — шапка карточки: заголовок и одна кнопка-значок в конце; кнопка рисуется, когда заданы все три поля действия | `variant` (default, plain) | `default` | компонент [карточка](/ru/components/content/card/) |
 | `content.media` | `src`, `alt`, `width`, `height` | `side` (left, right), `ratio` | `default` | утилиты `grid` и компонент `figure` |
 | `content.html` | `markup` | | | подмножество html@1 |
 | `content.diagram` | `source` | `engine` (mermaid), `title` | | рендерер, который регистрирует хост |

@@ -20,8 +20,8 @@ description: "Показывает строчные буквы капитель�
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `small-caps` | `font-feature-settings: "smcp"; font-variant: small-caps` | — |
-| `small-caps-none` | `font-feature-settings: "kern" off; font-variant: none` | — |
+| `small-caps` | `font-feature-settings: "smcp"; font-variant-caps: small-caps` | — |
+| `small-caps-none` | `font-feature-settings: normal; font-variant-caps: normal` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 

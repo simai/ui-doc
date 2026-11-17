@@ -5,7 +5,7 @@ description: "Список проблем, которым нужен челов�
 
 # Требует внимания
 
-:badge[sf-list-attention]{variant=outline scheme=on-surface size=1/2} :badge[1.3.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-attention]{variant=outline scheme=on-surface size=1/2} :badge[1.3.8]{variant=outline scheme=on-surface size=1/2}
 
 Список проблем, которые ждут человека, на обзорном экране: здоровье сервера,
 проверки сайта, ошибки импорта и переноса, готовность к обновлению,
@@ -189,13 +189,13 @@ list.addEventListener('sf-list-attention-apply', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list-attention>`, контракт `smart.list-attention` версии `1.3.5` |
-| Поставка | выпуск Framework `ui-078a4b4c6f6e` |
+| Тег | `<sf-list-attention>`, контракт `smart.list-attention` версии `1.3.8` |
+| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: Tab проходит по ссылке объекта, действию и «⋯» каждого пункта по порядку, затем по «Проверить снова» и «Все проблемы» внизу; Enter переходит по ссылке, Enter или пробел нажимает кнопку; В меню «⋯» стрелки двигают выбор, Enter выбирает, Escape закрывает и возвращает фокус. |
-| Источник | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/smart/list-attention` |
-| Правило классов | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/rule/rule.json#name=cl-list-attention` |
+| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/list-attention` |
+| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-list-attention` |
 
 ## См. также
 

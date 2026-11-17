@@ -52,7 +52,7 @@ description: "Окрашивает рамку элемента цветовой 
 
 Прежние имена работают до 2027-01-01: `border-error-transparent-overlay` → `border-error-container-strong`, `border-primary-transparent-overlay` → `border-primary-container-strong`, `border-secondary-transparent-overlay` → `border-secondary-container-strong`, `border-success-transparent-overlay` → `border-success-container-strong`, `border-surface-0` → `border-surface-page`, `border-surface-1` → `border-surface-area`, `border-surface-overlay` → `border-surface-veil`, `border-surface-transparent-overlay` → `border-surface-container-strong`, `border-tertiary-transparent-overlay` → `border-tertiary-container-strong`, `border-warning-transparent-overlay` → `border-warning-container-strong`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
 
-Другие классы записи `utility-c17-legacy-palette-classes` журнала уходят и работают до 2027-01-01; замена — класс оттенка рядом с ролевым классом: `sf-hue-{оттенок} border-hue` ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
+Другие классы записи `utility-c17-legacy-palette-classes` журнала уходят и работают до 2027-01-01; замена — ролевой класс, ближайший по тону, например `border-on-surface` ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:border-transparent`.
 

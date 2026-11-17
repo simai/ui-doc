@@ -6,7 +6,7 @@ profile: reference
 
 # Карточка
 
-:badge[sf-card]{variant=outline scheme=on-surface size=1/2} :badge[1.7.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-card]{variant=outline scheme=on-surface size=1/2} :badge[1.8.2]{variant=outline scheme=on-surface size=1/2}
 
 Карточка собирает несколько блоков содержимого — заголовок, абзац, список,
 действие — в одну отдельную область с тонкой границей и скруглёнными углами.
@@ -73,6 +73,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-card` |
+| Части | `sf-card-header` |
 | Модификаторы | `sf-card--plain` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.

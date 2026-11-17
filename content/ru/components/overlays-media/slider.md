@@ -6,7 +6,7 @@ profile: reference
 
 # Слайдер контента
 
-:badge[sf-slider]{variant=outline scheme=on-surface size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-slider]{variant=outline scheme=on-surface size=1/2} :badge[1.3.3]{variant=outline scheme=on-surface size=1/2}
 
 Слайдер контента показывает изображения, карточки или другие равноправные
 слайды по одному и листает их стрелками и точками.
@@ -216,7 +216,7 @@ swiper?.on('slideChange', () => console.log(swiper.realIndex));
 | `--sf-slider-dots--border-start-end-radius` | не задана; задают модификаторы, например `.sf-slider-dots--framed`: `var(--sf-radius-3)` | `border-start-end-radius` |
 | `--sf-slider-dots--border-start-start-radius` | не задана; задают модификаторы, например `.sf-slider-dots--framed`: `var(--sf-radius-3)` | `border-start-start-radius` |
 | `--sf-slider-dots--box-shadow` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--clear.sf-slider-dots--framed.sf-slider-dots--dark`: `var(--sf-shadow-raised)` | `box-shadow` |
-| `--sf-slider-dots--gap` | не задана; задают модификаторы, например `.sf-slider-dots--size-1`: `var(--sf-space-1/2)` | `gap`, `outline` |
+| `--sf-slider-dots--gap` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-space-1/3)` | `gap`, `width`, `outline` |
 | `--sf-slider-dots--padding-bottom` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-ui-1--space-y)` | `padding-bottom` |
 | `--sf-slider-dots--padding-inline-end` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-ui-1--space-y)` | `padding-inline-end` |
 | `--sf-slider-dots--padding-inline-start` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-ui-1--space-y)` | `padding-inline-start` |
@@ -229,9 +229,9 @@ swiper?.on('slideChange', () => console.log(swiper.realIndex));
 | `--sf-slider-dots-dot--border-start-end-radius` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `var(--sf-radius-circle)` | `border-start-end-radius` |
 | `--sf-slider-dots-dot--border-start-start-radius` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `var(--sf-radius-circle)` | `border-start-start-radius` |
 | `--sf-slider-dots-dot--color` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-on-surface)` | `color`, `--sf-slider-dots-dot--background-color` |
-| `--sf-slider-dots-dot--height` | не задана; задают модификаторы, например `.sf-slider-dots--size-1`: `var(--sf-a8)` | `padding-top`, `padding-bottom`, `height` |
-| `--sf-slider-dots-dot--target-size` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-ui-1/3--control-height)` | `gap`, `padding-inline-start`, `padding-top`, `padding-inline-end`, `padding-bottom`, `width`, `height`, `min-height`, `min-block-size` |
-| `--sf-slider-dots-dot--width` | не задана; задают модификаторы, например `.sf-slider-dots--size-1`: `var(--sf-a8)` | `gap`, `padding-inline-start`, `padding-inline-end`, `width` |
+| `--sf-slider-dots-dot--height` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-a8)` | `padding-top`, `padding-bottom`, `height` |
+| `--sf-slider-dots-dot--target-size` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-ui-1/3--control-height)` | `padding-inline-start`, `padding-top`, `padding-inline-end`, `padding-bottom`, `height`, `min-height`, `min-block-size` |
+| `--sf-slider-dots-dot--width` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-a8)` | `padding-inline-start`, `padding-inline-end`, `width` |
 | `--sf-slider-thumbnails--space-between` | `var(--sf-space-1/2)` | — |
 
 ## См. также

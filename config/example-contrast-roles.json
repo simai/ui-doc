@@ -1,6 +1,6 @@
 {
   "schema": "ui-doc.example-contrast-roles.v1",
-  "runtime_revision": "078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82",
+  "runtime_revision": "24d64b7f6eb7a782d648dbb5b44f7eb763ec815b",
   "note": "Written by scripts/audit-example-contrast.mjs --refresh-roles from the pinned SIMAI Framework distribution (core.css and utility.full.css), in .theme-light and .theme-dark. Refresh with every repin.",
   "themes": {
     "light": {
@@ -31,6 +31,7 @@
         "bg-error-transparent-overlay": "rgba(223, 54, 47, 0.24)",
         "bg-error-transparent-select": "rgba(223, 54, 47, 0.08)",
         "bg-fb": "rgb(43, 116, 225)",
+        "bg-fb-messenger": "image",
         "bg-gray": "rgb(119, 119, 119)",
         "bg-gray-0": "rgb(249, 249, 249)",
         "bg-gray-1": "rgb(249, 249, 249)",
@@ -376,6 +377,7 @@
         "bg-error-transparent-overlay": "rgba(255, 218, 214, 0.24)",
         "bg-error-transparent-select": "rgba(255, 218, 214, 0.08)",
         "bg-fb": "rgb(43, 116, 225)",
+        "bg-fb-messenger": "image",
         "bg-gray": "rgb(119, 119, 119)",
         "bg-gray-0": "rgb(249, 249, 249)",
         "bg-gray-1": "rgb(249, 249, 249)",

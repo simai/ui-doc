@@ -6,7 +6,7 @@ profile: reference
 
 # Шаги
 
-:badge[sf-steps]{variant=outline scheme=on-surface size=1/2} :badge[1.3.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-steps]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Шаги показывают, где человек находится в процессе, который проходит сам, —
 оформлении заказа, публикации, настройке, — и отмечают пройденные, текущий и
@@ -119,7 +119,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-steps` |
-| Части | `sf-steps-container`, `sf-steps-count`, `sf-steps-count-label`, `sf-steps-count-line`, `sf-steps-count-position` |
+| Части | `sf-steps-container`, `sf-steps-count`, `sf-steps-count-label`, `sf-steps-count-line`, `sf-steps-count-position`, `sf-steps-separator--directional` |
 | Модификаторы | `sf-steps--auto`, `sf-steps--layout-column`, `sf-steps--layout-count`, `sf-steps--layout-row`, `sf-steps--marker-dot`, `sf-steps--marker-number` |
 | Размеры | `sf-steps--size-1`, `sf-steps--size-1/2` |
 
@@ -142,7 +142,7 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-steps-gap` | Промежуток между двумя шагами в строке. | `var(--sf-space-1\/2)` |
+| `--sf-steps-gap` | Промежуток между двумя шагами в строке: линия заканчивается на таком расстоянии до следующей отметки — столько же, сколько отступ шага после подписи. | `var(--sf-space-1\/3)` |
 | `--sf-steps-separator-color` | Линия между двумя шагами после текущего. | `var(--sf-outline-variant)` |
 | `--sf-steps-step-color` | Подпись и номер шага впереди или пропущенного. | `var(--sf-on-surface-variant)` |
 | `--sf-steps-step-border-color` | Контур пустой отметки (шаг впереди или пропущенный). | `var(--sf-outline)` |
@@ -166,9 +166,9 @@ profile: reference
 | `--sf-step--font-size` | `var(--sf-text-size-1)` | `font-size` |
 | `--sf-step--icon` | `var(--sf-text-height-1/2)` | `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
 | `--sf-step--line-height` | `var(--sf-text-height-1)` | `line-height`, `height`, `block-size`, `margin-top`, `margin-bottom`, `margin-block`, `top`, `inset-block-start`, `bottom`, `inset-block-end` |
-| `--sf-step--marker` | `var(--sf-text-height-1)` | `width`, `inline-size`, `height`, `block-size`, `grid-template-columns`, `margin-top`, `margin-bottom`, `margin-block`, `top`, `inset-block-start`, `bottom`, `inset-block-end`, `inset-inline-start`, `--sf-step--marker-reach` |
+| `--sf-step--marker` | `var(--sf-text-height-1)` | `width`, `inline-size`, `height`, `block-size`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `grid-template-columns`, `margin-top`, `margin-bottom`, `margin-block`, `top`, `inset-block-start`, `bottom`, `inset-block-end`, `inset-inline-start`, `--sf-step--marker-reach` |
 | `--sf-step--marker-reach` | не задана; задают модификаторы, например `.sf-steps--marker-number .sf-step`: `var(--sf-step--marker)` | `top`, `inset-block-start`, `bottom`, `inset-block-end` |
-| `--sf-step--progress` | `var(--sf-steps-completed-icon-color, var(--sf-primary))` | `border-color`, `background-color`, `outline`, `color` |
+| `--sf-step--progress` | `var(--sf-steps-completed-icon-color, var(--sf-primary))` | `border-color`, `background-color`, `outline`, `color`, `--sf-icon--color` |
 | `--sf-step--ring` | `calc(var(--sf-px) * 2)` | `gap`, `outline`, `outline-offset`, `border`, `padding-top`, `padding-bottom`, `padding-block`, `--sf-step--marker-reach` |
 | `--sf-step--small-height` | `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-step--small-size` | `var(--sf-text-size-1/2)` | `font-size` |

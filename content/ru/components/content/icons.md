@@ -6,7 +6,7 @@ profile: reference
 
 # Иконки
 
-:badge[sf-icon]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-icon]{variant=outline scheme=on-surface size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Иконка — небольшой знак, который помогает быстрее узнать действие или
 раздел: корзина у «Удалить», шестерёнка у «Настройки». Берите её рядом с
@@ -207,9 +207,13 @@ Rounded со скруглёнными концами, `sf-icon--sharp` — Sharp
 | `--sf-icon--font-family` | не задана; задают модификаторы, например `:root[data-sf-icons=subset-pending] .sf-icon`: `"Material Symbols Outlined Subset"` | `font-family` |
 | `--sf-icon--font-size` | не задана; задают модификаторы, например `.sf-icon--size-1/4`: `var(--sf-icon-size-1/4)` | `font-size`, `width`, `inline-size` |
 | `--sf-icon--grade` | не задана; задают модификаторы, например `.theme-dark`: `-25` | `font-variation-settings` |
-| `--sf-icon--height` | не задана; задают модификаторы, например `.sf-icon--size-1/4`: `var(--sf-icon-size-1/4)` | `height` |
+| `--sf-icon--height` | не задана; задают модификаторы, например `.sf-icon--size-1/4`: `var(--sf-icon-size-1/4)` | `height`, `vertical-align` |
+| `--sf-icon--ladder-1` | не задана; задают модификаторы, например `[data-sf-icon-scale=ladder]`: `var(--sf-c0)` | `--sf-icon--font-size`, `--sf-icon--width`, `--sf-icon--height` |
+| `--sf-icon--ladder-2` | не задана; задают модификаторы, например `[data-sf-icon-scale=ladder]`: `var(--sf-c2)` | `--sf-icon--font-size`, `--sf-icon--width`, `--sf-icon--height` |
+| `--sf-icon--ladder-3` | не задана; задают модификаторы, например `[data-sf-icon-scale=ladder]`: `var(--sf-c4)` | `--sf-icon--font-size`, `--sf-icon--width`, `--sf-icon--height` |
 | `--sf-icon--line-height` | `1` | `line-height` |
 | `--sf-icon--optical-size` | не задана; задают модификаторы, например `.sf-icon--size-1/4`: `20` | `font-variation-settings` |
+| `--sf-icon--text-middle` | не задана; задают модификаторы, например `:where(:has(> .sf-icon))`: `var(--sf-text--middle)` | `vertical-align` |
 | `--sf-icon--weight` | не задана; задают модификаторы, например `.sf-icon--weight-thin`: `var(--sf-weight--thin)` | `font-weight` |
 | `--sf-icon--width` | не задана; задают модификаторы, например `.sf-icon--size-1/4`: `var(--sf-icon-size-1/4)` | `width` |
 

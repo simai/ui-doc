@@ -32,8 +32,10 @@ description: "Делает элемент невидимым или видимы
 | `print-inline-flex` | `display: none; при печати: display: inline-flex` | — |
 | `print-table` | `display: none; при печати: display: table` | — |
 | `print-visible` | `при печати: visibility: visible` | — |
-| `print-hidden` | `при печати: visibility: hidden` | — |
+| `print-hidden` | `при печати: display: none` | — |
+| `print-invisible` | `при печати: visibility: hidden` | — |
 | `print-visible-none` | `при печати: visibility: hidden` | — |
+| `print-only` | `при печати: display: none` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 

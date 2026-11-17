@@ -6,7 +6,7 @@ profile: reference
 
 # Копирование
 
-:badge[sf-clipboard]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-clipboard]{variant=outline scheme=on-surface size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Любая кнопка может положить в буфер обмена готовое значение или текст другого
 элемента: команду, ключ, код заказа. Ставьте её рядом с текстом, который
@@ -165,7 +165,7 @@ whenLoader(() => SF.Loader.ready('Copy', (Copy) => {
 | Блок | `sf-clipboard` |
 | Части | `sf-clipboard-1`, `sf-clipboard-2`, `sf-clipboard-3`, `sf-clipboard-fallback`, `sf-clipboard-holder`, `sf-clipboard-name`, `sf-clipboard-result`, `sf-clipboard-status`, `sf-clipboard-surface` |
 | Модификаторы | `sf-clipboard--inline`, `sf-clipboard--overlay` |
-| Размеры | `sf-clipboard--size-1`, `sf-clipboard--size-1/3`, `sf-clipboard--size-2` |
+| Размеры | `sf-clipboard--size-1`, `sf-clipboard--size-1/2`, `sf-clipboard--size-1/3`, `sf-clipboard--size-2`, `sf-clipboard--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

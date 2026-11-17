@@ -59,9 +59,12 @@ description: "Рисует кольцо вокруг элемента тенью
 | `ring-offset-on-surface` | `--sf-ring-offset-color: var(--sf-on-surface)` | — |
 | `ring-offset-on-surface-variant` | `--sf-ring-offset-color: var(--sf-on-surface-variant)` | — |
 | `ring-offset-{значение}` | `--sf-ring-offset-color: var(--sf-{значение}-outline)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
-| `ring-offset-{значение}` | `--sf-ring-offset-width: var(--sf-a{значение})` | `1`, `2`, `3`, `4` |
+| `ring-offset-1` | `--sf-ring-offset-width: var(--sf-line--border)` | — |
+| `ring-offset-2` | `--sf-ring-offset-width: var(--sf-line--indicator)` | — |
+| `ring-offset-3` | `--sf-ring-offset-width: var(--sf-a3)` | — |
+| `ring-offset-4` | `--sf-ring-offset-width: var(--sf-a4)` | — |
 | `ring-offset-0` | `--sf-ring-offset-width: var(--sf-0)` | — |
-| `ring-1` | `--sf-ring-width: var(--sf-a1); --sf-ring-shadow:
+| `ring-1` | `--sf-ring-width: var(--sf-line--border); --sf-ring-shadow:
         var(--sf-ring-inset, ) 0 0 0
         calc(var(--sf-ring-width) + var(--sf-ring-offset-width, 0px))
         color-mix(
@@ -72,7 +75,7 @@ description: "Рисует кольцо вокруг элемента тенью
         ),
         0 0 0 var(--sf-ring-offset-width, 0px)
         var(--sf-ring-offset-color, transparent); box-shadow: var(--sf-ring-shadow), 0 0 transparent; box-shadow: var(--sf-ring-shadow), var(--sf-place-shadow, 0 0 transparent)` | — |
-| `ring-{значение}` | `--sf-ring-width: var(--sf-a{значение}); --sf-ring-shadow:
+| `ring-2` | `--sf-ring-width: var(--sf-line--indicator); --sf-ring-shadow:
         var(--sf-ring-inset, ) 0 0 0
         calc(var(--sf-ring-width) + var(--sf-ring-offset-width, 0px))
         color-mix(
@@ -82,7 +85,29 @@ description: "Рисует кольцо вокруг элемента тенью
             calc(var(--sf-ring--alpha, var(--sf-ring--alfa, 1)) * 100%)
         ),
         0 0 0 var(--sf-ring-offset-width, 0px)
-        var(--sf-ring-offset-color, transparent); box-shadow: var(--sf-ring-shadow), 0 0 transparent; box-shadow: var(--sf-ring-shadow), var(--sf-place-shadow, 0 0 transparent)` | `2`, `3`, `4` |
+        var(--sf-ring-offset-color, transparent); box-shadow: var(--sf-ring-shadow), 0 0 transparent; box-shadow: var(--sf-ring-shadow), var(--sf-place-shadow, 0 0 transparent)` | — |
+| `ring-3` | `--sf-ring-width: var(--sf-a3); --sf-ring-shadow:
+        var(--sf-ring-inset, ) 0 0 0
+        calc(var(--sf-ring-width) + var(--sf-ring-offset-width, 0px))
+        color-mix(
+            in srgb,
+            transparent,
+            var(--sf-ring-color, currentColor)
+            calc(var(--sf-ring--alpha, var(--sf-ring--alfa, 1)) * 100%)
+        ),
+        0 0 0 var(--sf-ring-offset-width, 0px)
+        var(--sf-ring-offset-color, transparent); box-shadow: var(--sf-ring-shadow), 0 0 transparent; box-shadow: var(--sf-ring-shadow), var(--sf-place-shadow, 0 0 transparent)` | — |
+| `ring-4` | `--sf-ring-width: var(--sf-a4); --sf-ring-shadow:
+        var(--sf-ring-inset, ) 0 0 0
+        calc(var(--sf-ring-width) + var(--sf-ring-offset-width, 0px))
+        color-mix(
+            in srgb,
+            transparent,
+            var(--sf-ring-color, currentColor)
+            calc(var(--sf-ring--alpha, var(--sf-ring--alfa, 1)) * 100%)
+        ),
+        0 0 0 var(--sf-ring-offset-width, 0px)
+        var(--sf-ring-offset-color, transparent); box-shadow: var(--sf-ring-shadow), 0 0 transparent; box-shadow: var(--sf-ring-shadow), var(--sf-place-shadow, 0 0 transparent)` | — |
 | `ring-0` | `--sf-ring-width: var(--sf-0); --sf-ring-shadow:
         var(--sf-ring-inset, ) 0 0 0
         calc(var(--sf-ring-width) + var(--sf-ring-offset-width, 0px))
@@ -140,8 +165,8 @@ description: "Рисует кольцо вокруг элемента тенью
 | `--sf-info-outline` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
 | `--sf-info-container` | `light-dark(var(--sf-info-50--alfa-12), var(--sf-info-50--alfa-24))` |
 | `--sf-info-container-strong` | `light-dark(var(--sf-info-50--alfa-24), var(--sf-info-90--alfa-24))` |
-| `--sf-a1` | `0.0625rem` |
-| `--sf-a2` | `0.125rem` |
+| `--sf-line--border` | `var(--sf-px)` |
+| `--sf-line--indicator` | `calc(2 * var(--sf-px))` |
 | `--sf-a3` | `0.1875rem` |
 | `--sf-a4` | `0.25rem` |
 | `--sf-0` | `0` |

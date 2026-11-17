@@ -6,7 +6,7 @@ profile: reference
 
 # Код страны
 
-:badge[sf-country-code]{variant=outline scheme=on-surface size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-country-code]{variant=outline scheme=on-surface size=1/2} :badge[1.10.0]{variant=outline scheme=on-surface size=1/2}
 
 Поле кода страны принимает номер телефона вместе с международным кодом: флаг
 показывает страну, список позволяет её сменить, маска форматирует номер по
@@ -251,7 +251,7 @@ whenLoader(() => SF.Loader.ready('CountryCode', (CountryCode) => {
 | `--sf-country-code-item--font-size` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 .sf-country-code-item`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-country-code-item--font-weight` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 .sf-country-code-item`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-country-code-item--gap` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-item`: `var(--sf-space-1/3)` | `gap` |
-| `--sf-country-code-item--line-height` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 .sf-country-code-item`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-country-code-item--line-height` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 .sf-country-code-item`: `var(--sf-text-height-1)` | `line-height`, `--sf-icon--font-size`, `--sf-icon--height` |
 | `--sf-country-code-item--padding-bottom` | не задана; задают модификаторы, например `.sf-country-code--size-1 .sf-country-code-item`: `var(--sf-ui-1/2--space-y)` | `padding-bottom` |
 | `--sf-country-code-item--padding-inline-end` | не задана; задают модификаторы, например `.sf-country-code--size-1 .sf-country-code-item`: `var(--sf-ui-1/2--space-y)` | `padding-inline-end` |
 | `--sf-country-code-item--padding-inline-start` | не задана; задают модификаторы, например `.sf-country-code--size-1 .sf-country-code-item`: `var(--sf-ui-1/2--space-y)` | `padding-inline-start` |

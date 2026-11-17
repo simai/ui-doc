@@ -51,10 +51,23 @@ description: "Задаёт толщину начертания текста по
 | `weight-7` | `font-weight: 700` | — |
 | `weight-8` | `font-weight: 800` | — |
 | `weight-9` | `font-weight: 900` | — |
+| `weight-regular` | `font-weight: var(--sf-weight--regular)` | — |
+| `weight-medium` | `font-weight: var(--sf-weight--medium)` | — |
+| `weight-bold` | `font-weight: var(--sf-weight--bold)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — `hover:`. Например: `sm:regular`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-weight--regular` | `400` |
+| `--sf-weight--medium` | `500` |
+| `--sf-weight--bold` | `700` |
 
 ## Применение
 

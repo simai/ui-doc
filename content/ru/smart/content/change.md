@@ -5,7 +5,7 @@ description: "Изменение поля текстом: «Собран → П�
 
 # Изменение
 
-:badge[sf-change]{variant=outline scheme=on-surface size=1/2} :badge[1.0.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-change]{variant=outline scheme=on-surface size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
 
 Изменение показывает, каким значение поля было и каким стало:
 «Собран → Передан в доставку». Старое значение набрано тихим цветом, новое —
@@ -136,13 +136,13 @@ description: "Изменение поля текстом: «Собран → П�
 
 | | |
 |:---|:---|
-| Тег | `<sf-change>`, контракт `smart.change` версии `1.0.5` |
-| Поставка | выпуск Framework `ui-078a4b4c6f6e` |
+| Тег | `<sf-change>`, контракт `smart.change` версии `1.1.1` |
+| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; желательна подпись или `aria-label`; с клавиатуры: `Tab` доходит до кнопки «Показать изменения», когда длинное значение свёрнуто; `Enter` или `Пробел` раскрывают или прячут значения. |
-| Источник | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/smart/change` |
-| Правило классов | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/rule/rule.json#name=cl-change` |
+| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/change` |
+| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-change` |
 
 ## См. также
 

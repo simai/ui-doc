@@ -31,10 +31,10 @@ description: "Задаёт шаг между линиями полосатого
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `stripe-size-1` | `--sf-stripe--size: var(--sf-a2)` | — |
-| `stripe-size-2` | `--sf-stripe--size: var(--sf-a3)` | — |
-| `stripe-size-3` | `--sf-stripe--size: var(--sf-a4)` | — |
-| `stripe-size-4` | `--sf-stripe--size: var(--sf-a5)` | — |
+| `stripe-size-1` | `--sf-stripe--size: var(--sf-space-1/4)` | — |
+| `stripe-size-2` | `--sf-stripe--size: var(--sf-space-1/3)` | — |
+| `stripe-size-3` | `--sf-stripe--size: var(--sf-space-1/2)` | — |
+| `stripe-size-4` | `--sf-stripe--size: var(--sf-space-1)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:stripe-size-1`.
 
@@ -46,10 +46,12 @@ description: "Задаёт шаг между линиями полосатого
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
-| `--sf-a2` | `0.125rem` |
-| `--sf-a3` | `0.1875rem` |
-| `--sf-a4` | `0.25rem` |
-| `--sf-a5` | `0.3125rem` |
+| `--sf-space-1/4` | `0.25rem; от ширины lg: var(--sf-a4)` |
+| `--sf-space-1/3` | `0.5rem; от ширины lg: var(--sf-a8)` |
+| `--sf-space-1/2` | `0.5rem; от ширины lg: 0.75rem` |
+| `--sf-space-1` | `var(--sf-b2); от ширины lg: var(--sf-b6)` |
+
+В CSS косую черту в имени экранируют: `var(--sf-space-1\/4)`.
 
 ## Применение
 

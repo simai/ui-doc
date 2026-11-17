@@ -23,9 +23,9 @@ description: "Задаёт, сколько длится анимация поя�
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `animation-duration-fast` | `animation-duration: var(--sf-duration-fast)` | — |
-| `animation-duration-normal` | `animation-duration: var(--sf-duration-normal)` | — |
-| `animation-duration-slow` | `animation-duration: var(--sf-duration-slow)` | — |
+| `animation-duration-fast` | `animation-duration: var(--sf-duration-fast); (prefers-reduced-motion: reduce): animation-duration: 0.01ms` | — |
+| `animation-duration-normal` | `animation-duration: var(--sf-duration-normal); (prefers-reduced-motion: reduce): animation-duration: 0.01ms` | — |
+| `animation-duration-slow` | `animation-duration: var(--sf-duration-slow); (prefers-reduced-motion: reduce): animation-duration: 0.01ms` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 

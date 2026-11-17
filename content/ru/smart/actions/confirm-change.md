@@ -5,7 +5,7 @@ description: "Подготовленное изменение ждёт отве�
 
 # Подтверждение изменения
 
-:badge[sf-confirm-change]{variant=outline scheme=on-surface size=1/2} :badge[1.9.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-confirm-change]{variant=outline scheme=on-surface size=1/2} :badge[1.9.2]{variant=outline scheme=on-surface size=1/2}
 
 Подтверждение изменения показывает человеку подготовленное изменение и
 ждёт его «да» или «нет»: каждое значение как было и как станет, два
@@ -100,7 +100,7 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-078a4b4c6f6e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-24d64b7f6eb7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -108,8 +108,8 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 |:---|:---|
 | Тег | `<sf-confirm-change>` |
 | Назначение | Изменение, которое предлагает кто-то другой (ассистент, коллега, импорт), на решение человеку: каждое значение — каким было и каким станет, «Подтвердить» первой и с заливкой, «Отклонить» тихой, под ними — до какого времени можно ответить, а затем только итог. Сам ничего не применяет: нажатие — это событие. |
-| Контракт | `smart.confirm-change`, версия `1.9.1` |
-| Поставка | выпуск Framework `ui-078a4b4c6f6e` |
+| Контракт | `smart.confirm-change`, версия `1.9.2` |
+| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -159,5 +159,5 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 
 ### Источник
 
-- `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/smart/confirm-change`
-- `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/rule/rule.json#name=cl-confirm-change`
+- `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/confirm-change`
+- `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-confirm-change`

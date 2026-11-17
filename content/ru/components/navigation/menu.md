@@ -6,7 +6,7 @@ profile: reference
 
 # Меню
 
-:badge[sf-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.8.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.9.1]{variant=outline scheme=on-surface size=1/2}
 
 Меню ведёт по разделам сайта, раздела или личного кабинета и раскрывает
 группы вложенных разделов. Один компонент показывается вертикально в боковой
@@ -30,7 +30,11 @@ profile: reference
 - Ветка — пункт с вложенным `<ul class="sf-menu">` и текстом подписи прямо в
   `<li>`. Скрипт превращает подпись в кнопку раскрытия
   `sf-menu-element` со стрелкой, связывает её с подменю через
-  `aria-expanded` и `aria-controls` и прячет закрытое подменю.
+  `aria-expanded` и `aria-controls` и прячет закрытое подменю. У каждого
+  подменю свой `id`, и `aria-controls` называет именно его.
+- Ссылка с подразделами (`<a class="sf-menu-element" href>` и вложенный
+  список) при запуске делится на ссылку и отдельную кнопку со стрелкой:
+  ссылка ведёт на страницу, кнопка раскрывает ветку.
 - Скрипт оборачивает подпись в `sf-menu-element-wrap` и
   `sf-menu-element-text` и ставит уровень `sf-menu-element--level-1` …
   `--level-4`; писать эти классы вручную не нужно.
@@ -48,6 +52,10 @@ profile: reference
 `sf-menu--horizontal`, `sf-menu--documentation-tree` • [справочник](#классы)
 
 Без модификатора меню вертикальное — для боковой панели, каталога, настроек.
+Оно рисуется как навигация: строки без рамки, текущая страница — плашка
+навигации со средним начертанием подписи. Прежний вид с рамкой у каждой
+строки — модификатор `sf-menu--framed`; он работает до 2027-01-01 и
+отмечается в `SF.deprecations`, в новой разметке его не пишите.
 `sf-menu--horizontal` выстраивает первый уровень строкой — для основных
 разделов в шапке; ставьте его только корневому списку.
 `sf-menu--documentation-tree` — компактное дерево без рамок с отступом по
@@ -257,7 +265,7 @@ profile: reference
 | `--sf-menu-item-radius` | Скругление углов строки. | `var(--sf-radius--ui)` |
 | `--sf-menu-submenu-background-color` | Заливка панели горизонтального меню; этим же цветом обведены счётчики в ней. | `var(--sf-surface-popup)`; зависит от orientation |
 | `--sf-menu-submenu-border-color` | Цвет рамки панели горизонтального меню. | `var(--sf-outline-variant)`; зависит от orientation |
-| `--sf-menu-submenu-radius` | Скругление углов панели горизонтального меню. | `var(--sf-radius--ui)`; зависит от orientation |
+| `--sf-menu-submenu-radius` | Скругление углов панели горизонтального меню. | `var(--sf-radius--surface)`; зависит от orientation |
 | `--sf-menu-sticky-top` | На каком расстоянии от верха окна останавливается закреплённое меню (`sticky`): высота закреплённой шапки над ним. | `0` |
 
 ```css
@@ -274,32 +282,33 @@ profile: reference
 |:---|:---|:---|
 | `--sf-menu--border-width` | не задана; задают модификаторы, например `.sf-menu.sf-menu--horizontal > .sf-menu-item > .sf-menu`: `var(--sf-px)` | `border`, `--sf-menu--line-border`, `--sf-menu-path--block-start`, `--sf-menu-path--block-end` |
 | `--sf-menu--gap` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation`: `var(--sf-menu-gap, var(--sf-space-1/4))` | `gap` |
-| `--sf-menu--inset` | не задана; задают модификаторы, например `.sf-menu.sf-menu--horizontal > .sf-menu-item > .sf-menu`: `var(--sf-menu-horizontal-submenu--padding, var(--sf-space-1/3))` | `padding`, `padding-inline`, `padding-inline-end`, `padding-top`, `padding-bottom`, `padding-block`, `inset-inline-start`, `--sf-menu-path--block-start`, `--sf-menu-path--block-end` |
+| `--sf-menu--inset` | не задана; задают модификаторы, например `.sf-menu.sf-menu--horizontal > .sf-menu-item > .sf-menu`: `var(--sf-menu-horizontal-submenu--padding, calc(var(--sf-space-1/4) - var(--sf-px)))` | `padding-inline`, `padding-inline-end`, `padding-top`, `padding-bottom`, `padding-block`, `inset-inline-start`, `--sf-menu-path--block-start`, `--sf-menu-path--block-end` |
 | `--sf-menu--line-border` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation.sf-menu--bordered:not(.sf-menu--horizontal):not(.sf-menu-item > .sf-menu)`: `var(--sf-menu--border-width, var(--sf-px))` | `inset-inline-start` |
-| `--sf-menu--radius` | не задана; задают модификаторы, например `.sf-menu.sf-menu--horizontal > .sf-menu-item > .sf-menu`: `var(--sf-menu-horizontal-submenu--radius, var(--sf-menu-submenu-radius, var(--sf-radius--ui)))` | `border-radius`, `--sf-menu-path--block-start`, `--sf-menu-path--block-end` |
+| `--sf-menu--radius` | не задана; задают модификаторы, например `.sf-menu.sf-menu--horizontal > .sf-menu-item > .sf-menu`: `var(--sf-menu-horizontal-submenu--radius, var(--sf-menu-submenu-radius, var(--sf-radius--surface)))` | `border-radius`, `--sf-menu-path--block-start`, `--sf-menu-path--block-end` |
 | `--sf-menu--row-padding` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation:not(.sf-menu--horizontal)`: `var(--sf-space-1/2)` | `--sf-menu-element--padding-inline-start`, `--sf-menu-element--padding-inline-end`, `padding-inline` |
-| `--sf-menu--split-end` | не задана; задают модификаторы, например `.sf-menu-element > button.sf-icon-button`: `min(var(--sf-menu--split-grow) / 2, var(--sf-menu-element--padding-right, var(--sf-menu-element--padding-inline-end, var(--sf-space-1))))` | `margin-inline-start`, `margin-inline-end` |
+| `--sf-menu--split-end` | не задана; задают модификаторы, например `.sf-menu-element > button.sf-icon-button`: `min(var(--sf-menu--split-grow) / 2, var(--sf-menu-element--padding-right, var(--sf-menu-element--padding-inline-end, var(--sf-space-1))))` | `margin-inline-start`, `margin-inline-end`, `padding-inline-end`, `margin-inline` |
 | `--sf-menu--split-grow` | не задана; задают модификаторы, например `.sf-menu-element > button.sf-icon-button`: `calc(var(--sf-menu--split-plate) - var(--sf-menu-element--line-height, var(--sf-text-height-1)))` | `--sf-menu--split-end`, `margin-inline-start` |
 | `--sf-menu--split-plate` | не задана; задают модификаторы, например `.sf-menu-element > button.sf-icon-button`: `var(--sf-ui-1--control-height)` | `--sf-menu--split-grow`, `min-width`, `min-inline-size`, `width`, `inline-size`, `height`, `block-size` |
+| `--sf-menu--split-toggle` | не задана; задают модификаторы, например `.sf-menu.sf-menu:not(.sf-menu--horizontal):not(.sf-menu--horizontal .sf-menu) > .sf-menu-item > .sf-menu-element > a.sf-menu-element-wrap + button.sf-icon-button`: `calc(var(--sf-menu-element--line-height, var(--sf-text-height-1)) + var(--sf-menu-element--padding-top, var(--sf-menu-element--padding-block, calc((var(--sf-ui-1--control-height) - var(--sf-text-height-1)) / 2 - var(--sf-menu-element--border-width)))) + var(--sf-menu-element--padding-bottom, var(--sf-menu-element--padding-block, calc((var(--sf-ui-1--control-height) - var(--sf-text-height-1)) / 2 - var(--sf-menu-element--border-width)))) + 2 * var(--sf-menu--wrap-padding-block, calc(var(--sf-px) * 0)) + 2 * var(--sf-menu-element--border-width, var(--sf-px)))` | `margin-left`, `margin-right`, `min-width`, `min-inline-size`, `margin-inline` |
 | `--sf-menu--step-1` | не задана; задают модификаторы, например `.sf-menu-item:has(> .sf-menu-element--level-1)`: `var(--sf-space-1)` | `--sf-menu-element--padding-inline-start` |
 | `--sf-menu--step-2` | не задана; задают модификаторы, например `.sf-menu-item:has(> .sf-menu-element--level-2)`: `var(--sf-space-1)` | `--sf-menu-element--padding-inline-start` |
 | `--sf-menu--step-3` | не задана; задают модификаторы, например `.sf-menu-item:has(> .sf-menu-element--level-3)`: `var(--sf-space-1)` | `--sf-menu-element--padding-inline-start` |
-| `--sf-menu--wrap-padding-block` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `calc((var(--sf-ui-1--control-height) - var(--sf-menu-element--line-height, var(--sf-text-height-1))) / 2)` | `padding-top`, `padding-bottom`, `padding-block` |
-| `--sf-menu--wrap-padding-inline` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `var(--sf-space-1)` | `padding-left`, `padding-right`, `padding-inline` |
+| `--sf-menu--wrap-padding-block` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `calc((var(--sf-ui-1--control-height) - var(--sf-menu-element--line-height, var(--sf-text-height-1))) / 2)` | `padding-top`, `padding-bottom`, `padding-block`, `--sf-menu--split-toggle` |
+| `--sf-menu--wrap-padding-inline` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `var(--sf-space-1/2)` | `padding-inline`, `padding-inline-start` |
 | `--sf-menu-element--background-color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-background-color, var(--sf-transparent))` | `background-color`, `--sf-surface-place-fill` |
 | `--sf-menu-element--border-color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-border-color, var(--sf-surface-container))` | `border-color` |
-| `--sf-menu-element--border-width` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-px)` | `padding-top`, `padding-block-start`, `padding-bottom`, `padding-block-end`, `padding-inline-end`, `padding-inline-start`, `border-top-width`, `border-block-start-width`, `border-bottom-width`, `border-block-end-width`, `border-inline-start-width`, `border-inline-end-width`, `margin-top`, `margin-block-start`, `margin-bottom`, `margin-block-end`, `height`, `block-size` |
-| `--sf-menu-element--color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-color, var(--sf-on-surface))` | `color` |
+| `--sf-menu-element--border-width` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-px)` | `padding-top`, `padding-block-start`, `padding-bottom`, `padding-block-end`, `padding-inline-end`, `padding-inline-start`, `border-top-width`, `border-block-start-width`, `border-bottom-width`, `border-block-end-width`, `border-inline-start-width`, `border-inline-end-width`, `margin-top`, `margin-block-start`, `margin-bottom`, `margin-block-end`, `height`, `block-size`, `margin-block`, `padding-block`, `--sf-menu--split-toggle` |
+| `--sf-menu-element--color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-color, var(--sf-on-surface))` | `color`, `--sf-icon--color` |
 | `--sf-menu-element--font-size` | не задана; задают модификаторы, например `.sf-menu .sf-menu-region .sf-menu-element.sf-menu-region-small`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-menu-element--font-weight` | не задана; задают модификаторы, например `.sf-menu .sf-menu-region .sf-menu-element.sf-menu-region-head`: `var(--sf-font-weight-medium)` | `font-weight` |
 | `--sf-menu-element--gap` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-space-1/3)` | `gap`, `margin-inline-start` |
-| `--sf-menu-element--line-height` | не задана; задают модификаторы, например `.sf-menu .sf-menu-region .sf-menu-element.sf-menu-region-small`: `var(--sf-text-height-1/2)` | `line-height`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `height`, `block-size`, `--sf-menu--split-grow`, `margin-top`, `margin-bottom`, `margin-block`, `--sf-menu-element--padding-right`, `--sf-menu--wrap-padding-block` |
-| `--sf-menu-element--padding-block` | не задана; задают модификаторы, например `.sf-menu .sf-menu-region .sf-menu-element.sf-menu-region-link`: `calc((var(--sf-ui-1/2--control-height) - var(--sf-text-height-1)) / 2)` | `padding-top`, `padding-block-start`, `padding-bottom`, `padding-block-end`, `margin-top`, `margin-block-start`, `margin-bottom`, `margin-block-end` |
-| `--sf-menu-element--padding-bottom` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `calc(var(--sf-px) * 0)` | `padding-bottom`, `padding-block-end`, `margin-bottom`, `margin-block-end` |
-| `--sf-menu-element--padding-inline-end` | не задана; задают модификаторы, например `.sf-menu .sf-menu-region .sf-menu-element`: `var(--sf-space-1/2)` | `padding-inline-end`, `--sf-menu--split-end`, `padding-inline` |
-| `--sf-menu-element--padding-inline-start` | не задана; задают модификаторы, например `.sf-menu-element--level-1`: `var(--sf-menu--row-padding, var(--sf-space-1))` | `padding-inline-start` |
+| `--sf-menu-element--line-height` | не задана; задают модификаторы, например `.sf-menu .sf-menu-region .sf-menu-element.sf-menu-region-small`: `var(--sf-text-height-1/2)` | `line-height`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `height`, `block-size`, `--sf-menu--split-grow`, `margin-top`, `margin-bottom`, `margin-block`, `--sf-menu-element--padding-right`, `--sf-menu--wrap-padding-block`, `margin-left`, `margin-right`, `--sf-menu--split-toggle`, `margin-inline` |
+| `--sf-menu-element--padding-block` | не задана; задают модификаторы, например `.sf-menu .sf-menu-region .sf-menu-element.sf-menu-region-link`: `calc((var(--sf-ui-1/2--control-height) - var(--sf-text-height-1)) / 2)` | `padding-top`, `padding-block-start`, `padding-bottom`, `padding-block-end`, `margin-top`, `margin-block-start`, `margin-bottom`, `margin-block-end`, `margin-block`, `padding-block`, `--sf-menu--split-toggle` |
+| `--sf-menu-element--padding-bottom` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `calc(var(--sf-px) * 0)` | `padding-bottom`, `padding-block-end`, `margin-bottom`, `margin-block-end`, `margin-block`, `padding-block`, `--sf-menu--split-toggle` |
+| `--sf-menu-element--padding-inline-end` | не задана; задают модификаторы, например `.sf-menu.sf-menu--horizontal .sf-menu .sf-menu-element`: `var(--sf-space-1/2)` | `padding-inline-end`, `--sf-menu--split-end`, `padding-inline` |
+| `--sf-menu-element--padding-inline-start` | не задана; задают модификаторы, например `.sf-menu-element--level-1`: `var(--sf-menu--row-padding, var(--sf-space-1))` | `padding-inline-start`, `margin-inline-start` |
 | `--sf-menu-element--padding-right` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `calc((var(--sf-ui-1--control-height) - var(--sf-menu-element--line-height, var(--sf-text-height-1))) / 2)` | `padding-inline-end`, `--sf-menu--split-end` |
-| `--sf-menu-element--padding-top` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `calc(var(--sf-px) * 0)` | `padding-top`, `padding-block-start`, `margin-top`, `margin-block-start` |
+| `--sf-menu-element--padding-top` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `calc(var(--sf-px) * 0)` | `padding-top`, `padding-block-start`, `margin-top`, `margin-block-start`, `margin-block`, `padding-block`, `--sf-menu--split-toggle` |
 | `--sf-menu-element--radius` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-radius, var(--sf-radius--ui))` | `border-start-start-radius`, `border-start-end-radius`, `border-end-start-radius`, `border-end-end-radius` |
 | `--sf-menu-group-heading--border-width` | не задана; задают модификаторы, например `.sf-menu-group-heading`: `var(--sf-px)` | `padding-left`, `padding-right`, `padding-inline` |
 | `--sf-menu-item--background-color` | не задана; задают модификаторы, например `.sf-menu .sf-menu-item`: `transparent` | `background-color` |

@@ -6,7 +6,7 @@ profile: reference
 
 # Кнопки
 
-:badge[sf-button]{variant=outline scheme=on-surface size=1/2} :badge[1.16.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button]{variant=outline scheme=on-surface size=1/2} :badge[1.18.1]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка запускает действие на текущей странице: сохраняет изменения, отправляет
 форму или подтверждает выбор. Для перехода на другую страницу берите ссылку, для
@@ -307,7 +307,7 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 |:---|:---|
 | Блок | `sf-button` |
 | Части | `sf-button-shortcut`, `sf-button-spinner`, `sf-button-spinner--overlay`, `sf-button-split`, `sf-button-split--full-width`, `sf-button-state-loading`, `sf-button-text-container` |
-| Модификаторы | `sf-button--danger`, `sf-button--default`, `sf-button--full-width`, `sf-button--height-high`, `sf-button--height-highest`, `sf-button--height-low`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--pressed`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
+| Модификаторы | `sf-button--danger`, `sf-button--default`, `sf-button--full-width`, `sf-button--height-high`, `sf-button--height-highest`, `sf-button--height-low`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--pressed`, `sf-button--primary`, `sf-button--tonal` |
 | Размеры | `sf-button--size-1`, `sf-button--size-1/2`, `sf-button--size-1/3`, `sf-button--size-2`, `sf-button--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -357,17 +357,17 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | `--sf-button--focus-ink` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--primary`: `var(--sf-on-primary)` | `--sf-button--focus-inset` |
 | `--sf-button--focus-inset` | не задана; задают модификаторы, например `.sf-button:not(:disabled):not(.disabled).focus-visible`: `inset 0 0 0 var(--sf-focus--offset) var(--sf-button--focus-ink, transparent)` | `box-shadow` |
 | `--sf-button--on-place-ink` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--on-surface`: `color-mix(in srgb, var(--sf-on-primary), var(--sf-place--ink) 0%)` | `--sf-button-text-container--color`, `--sf-icon--color`, `--sf-button--focus-ink` |
-| `--sf-button--padding-bottom` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-bottom` |
+| `--sf-button--padding-bottom` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-bottom`, `--sf-button--padding-inline-end` |
 | `--sf-button--padding-inline-end` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-end` |
 | `--sf-button--padding-inline-start` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-start` |
-| `--sf-button--padding-top` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-top` |
+| `--sf-button--padding-top` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-top`, `--sf-button--padding-inline-start` |
 | `--sf-button--radius` | `var(--sf-button-radius, var(--sf-radius--ui))` | `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
 | `--sf-button-spinner--size` | `var(--sf-icon-size-3)` | `--sf-loader-svg-width`, `--sf-loader-svg-height`, `width`, `inline-size`, `height`, `block-size` |
 | `--sf-button-text-container--background-color` | не задана; задают модификаторы, например `.sf-button .sf-button-text-container`: `transparent` | `background-color` |
 | `--sf-button-text-container--color` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--primary .sf-button-text-container`: `var(--sf-button-color, var(--sf-on-primary))` | `color` |
-| `--sf-button-text-container--font-family` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--tonal.sf-button--secondary .sf-button-text-container`: `var(--sf-text--family)` | `font-family` |
+| `--sf-button-text-container--font-family` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--default.sf-button--on-surface .sf-button-text-container`: `var(--sf-text--family)` | `font-family` |
 | `--sf-button-text-container--font-size` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--default.sf-button--primary .sf-button-text-container`: `var(--sf-text-size-1)` | `font-size` |
-| `--sf-button-text-container--font-weight` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--tonal.sf-button--secondary .sf-button-text-container`: `var(--sf-font-weight-medium)` | `font-weight` |
+| `--sf-button-text-container--font-weight` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--default.sf-button--on-surface .sf-button-text-container`: `var(--sf-font-weight-medium)` | `font-weight` |
 | `--sf-button-text-container--line-height` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--default.sf-button--primary .sf-button-text-container`: `var(--sf-text-height-1)` | `line-height` |
 | `--sf-button-text-container--padding-inline-end` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1 .sf-button-text-container`: `var(--sf-ui-1--text-space-x)` | `padding-inline-end` |
 | `--sf-button-text-container--padding-inline-start` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1 .sf-button-text-container`: `var(--sf-ui-1--text-space-x)` | `padding-inline-start` |

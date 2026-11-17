@@ -6,7 +6,7 @@ profile: reference
 
 # Предпросмотр файла
 
-:badge[sf-file-preview]{variant=outline scheme=on-surface size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-preview]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Предпросмотр показывает выбранный или прикреплённый файл одной строкой:
 иконку типа или миниатюру, имя, размер и действия с файлом. Берите его для
@@ -120,7 +120,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-file-preview` |
-| Части | `sf-file-preview-actions`, `sf-file-preview-badge`, `sf-file-preview-error`, `sf-file-preview-extension`, `sf-file-preview-fit`, `sf-file-preview-full`, `sf-file-preview-holder`, `sf-file-preview-holder--picture`, `sf-file-preview-main`, `sf-file-preview-name`, `sf-file-preview-play`, `sf-file-preview-progress`, `sf-file-preview-question`, `sf-file-preview-retry`, `sf-file-preview-said`, `sf-file-preview-size`, `sf-file-preview-thumbnail` |
+| Части | `sf-file-preview-actions`, `sf-file-preview-badge`, `sf-file-preview-error`, `sf-file-preview-extension`, `sf-file-preview-fit`, `sf-file-preview-full`, `sf-file-preview-holder`, `sf-file-preview-holder--picture`, `sf-file-preview-main`, `sf-file-preview-name`, `sf-file-preview-play`, `sf-file-preview-progress`, `sf-file-preview-question`, `sf-file-preview-retry`, `sf-file-preview-retry-icon`, `sf-file-preview-said`, `sf-file-preview-size`, `sf-file-preview-thumbnail` |
 | Модификаторы | `sf-file-preview--chip`, `sf-file-preview--compact`, `sf-file-preview--error`, `sf-file-preview--surface`, `sf-file-preview--tile` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.

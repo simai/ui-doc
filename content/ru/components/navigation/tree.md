@@ -6,7 +6,7 @@ profile: reference
 
 # Дерево
 
-:badge[sf-tree]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tree]{variant=outline scheme=on-surface size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
 
 Дерево показывает вложенную иерархию — папки, разделы, категории — и даёт
 раскрывать и сворачивать ветви. Для навигации по страницам сайта с
@@ -198,7 +198,7 @@ whenLoader(() => SF.Loader.ready('Tree', () => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-tree` |
-| Части | `sf-tree-check`, `sf-tree-chevron`, `sf-tree-group`, `sf-tree-item`, `sf-tree-item--error`, `sf-tree-item--hidden`, `sf-tree-item--loading`, `sf-tree-item--mark`, `sf-tree-item--more`, `sf-tree-item-container`, `sf-tree-item-name`, `sf-tree-item-note`, `sf-tree-item-retry`, `sf-tree-item-spinner`, `sf-tree-node-icon`, `sf-tree-toggle-spacer` |
+| Части | `sf-tree-check`, `sf-tree-chevron`, `sf-tree-group`, `sf-tree-item`, `sf-tree-item--error`, `sf-tree-item--hidden`, `sf-tree-item--holds-current`, `sf-tree-item--loading`, `sf-tree-item--mark`, `sf-tree-item--more`, `sf-tree-item-container`, `sf-tree-item-name`, `sf-tree-item-note`, `sf-tree-item-retry`, `sf-tree-item-spinner`, `sf-tree-node-icon`, `sf-tree-toggle-spacer` |
 | Модификаторы | `sf-tree--static` |
 | Размеры | `sf-tree--size-1/2`, `sf-tree--size-2` |
 
@@ -208,7 +208,7 @@ whenLoader(() => SF.Loader.ready('Tree', () => {
 |:---|:---|
 | Блок | `sf-tree-item` |
 | Части | `sf-tree-item-container`, `sf-tree-item-name`, `sf-tree-item-note`, `sf-tree-item-retry`, `sf-tree-item-spinner` |
-| Модификаторы | `sf-tree-item--error`, `sf-tree-item--hidden`, `sf-tree-item--loading`, `sf-tree-item--mark`, `sf-tree-item--more` |
+| Модификаторы | `sf-tree-item--error`, `sf-tree-item--hidden`, `sf-tree-item--holds-current`, `sf-tree-item--loading`, `sf-tree-item--mark`, `sf-tree-item--more` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -236,7 +236,7 @@ sf-tree-item, .sf-tree-item {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-tree-gap` | Расстояние между строками. | `var(--sf-space-1\/3)` |
+| `--sf-tree-gap` | Промежуток между строками: 4, как у колонки меню. | `var(--sf-space-1\/4)` |
 | `--sf-tree-padding-inline` | Отступ внутри дерева по обе стороны от строк. | `var(--sf-space-1)` |
 | `--sf-tree-indent` | Насколько каждый уровень отступает от предыдущего. По умолчанию — первая колонка и промежуток в строке, так что первая колонка ребёнка стоит под второй колонкой родителя. | `calc(var(--sf-icon-size-3) + var(--sf-tree-item-gap))` |
 | `--sf-tree-radius` | Скругление углов строки. | `var(--sf-radius--ui)` |
@@ -256,13 +256,14 @@ sf-tree, .sf-tree {
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-tree--code-size` | `var(--sf-text-size-1/2)` | `font-size` |
-| `--sf-tree--column` | `var(--sf-icon-size-3)` | `--sf-tree--indent`, `padding-top`, `padding-bottom`, `padding-block`, `flex`, `--sf-icon--font-size`, `--sf-icon--width`, `--sf-icon--height`, `height`, `block-size`, `width`, `inline-size`, `font-size`, `--sf-loader-svg-width`, `--sf-loader-svg-height` |
+| `--sf-tree--column` | `var(--sf-icon-size-3)` | `--sf-tree--indent`, `padding-top`, `padding-bottom`, `padding-block`, `flex`, `width`, `inline-size`, `height`, `block-size`, `--sf-icon--font-size`, `--sf-icon--width`, `--sf-icon--height`, `font-size`, `--sf-loader-svg-width`, `--sf-loader-svg-height` |
 | `--sf-tree--indent` | `var(--sf-tree-indent, var(--sf-tree-item--nested-padding-inline-start, calc(var(--sf-tree--column) + var(--sf-tree--part-gap))))` | `margin-inline-start`, `padding-inline-start` |
+| `--sf-tree--inset` | `var(--sf-space-1)` | `padding-left`, `padding-right`, `padding-inline` |
 | `--sf-tree--part-gap` | `var(--sf-tree-item-gap, var(--sf-space-1/2))` | `--sf-tree--indent`, `-moz-column-gap`, `column-gap` |
 | `--sf-tree--row` | `var(--sf-ui-1--control-height)` | `min-height`, `min-block-size`, `padding-top`, `padding-bottom`, `padding-block` |
 | `--sf-tree--text-height` | `var(--sf-text-height-1)` | `line-height`, `min-height`, `min-block-size`, `--sf-icon--height` |
 | `--sf-tree--text-size` | `var(--sf-text-size-1)` | `font-size` |
-| `--sf-tree-item-icon--color` | не задана; задают модификаторы, например `.sf-tree:not(.sf-tree--static) .sf-tree-item:not([aria-disabled=true]):not([aria-current=page]):hover > .sf-tree-item-container`: `currentColor` | — |
+| `--sf-tree-item-icon--color` | не задана; задают модификаторы, например `.sf-tree:not(.sf-tree--static) .sf-tree-item:not([aria-disabled=true]):not([aria-current=page]):not(.active):not([aria-selected=true]) > .sf-tree-item-container:hover`: `currentColor` | — |
 
 ## См. также
 

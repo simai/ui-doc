@@ -5,7 +5,7 @@ description: "Принимает телефон с выбором страны: 
 
 # Код страны
 
-:badge[sf-input-country]{variant=outline scheme=on-surface size=1/2} :badge[1.8.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-country]{variant=outline scheme=on-surface size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
 
 Код страны — телефонное поле с кнопкой выбора страны: флаг и код страны стоят
 перед номером, а маска подстраивается под выбранную страну. Для телефона без
@@ -244,13 +244,13 @@ phone.setState({iso2: 'KZ'});
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-country>`, контракт `smart.input-country` версии `1.8.2` |
-| Поставка | выпуск Framework `ui-078a4b4c6f6e` |
+| Тег | `<sf-input-country>`, контракт `smart.input-country` версии `1.9.0` |
+| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как текстовое поле; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`, `Esc`, `↓`, `↑`, `Home`, `End`; поиск по первым буквам. |
-| Источник | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/smart/input-country` |
-| Правило классов | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/rule/rule.json#name=cl-input-country` |
+| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/input-country` |
+| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-input-country` |
 
 ## См. также
 

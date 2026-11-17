@@ -3,17 +3,17 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "10145e63b9dc3325eeffd62731b4bb5881b21c12",
-    "core_revision": "078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82",
+    "source_revision": "40541c0c4fba6c24659907eb987c74f17a4fc46a",
+    "core_revision": "24d64b7f6eb7a782d648dbb5b44f7eb763ec815b",
     "source_files": {
-      "src/component/menu/js/_menu.js": "d899ff8bb6d7229183a20fdc06ab10d8d65bfcc8dbe30f7e680cbf0294a7e650",
-      "src/component/menu/scss/_css__menu.scss": "e99f30e941fe81a982af8317b30513e661c5f27ba6c29ace6a328447453b72bf",
-      "src/component/menu/scss/_css__menu_compact.scss": "3725090d51ae815c1f3cd6852b2f588c25e0b13ac2c385b654aee98e4e30e0d3",
-      "src/component/menu/docs/docs.md": "6262447ffc92b44e4813e3d209d5b99bd9e42f1e8fda64c422ade684e1a8695d"
+      "src/component/menu/js/_menu.js": "0c366df3fcd9abd4fb7061cf03c4a12c26f9f303a61ec0f67b683086abe0d62f",
+      "src/component/menu/scss/_css__menu.scss": "81cd1f8c68f08f514cd18b20ac2613525a762f80d078c4f8bfec60f7eba463d7",
+      "src/component/menu/scss/_css__menu_compact.scss": "5bb08096f857692fc4f80b9c0970c822c59e71b9ac197c0510808b3aff09b6a9",
+      "src/component/menu/docs/docs.md": "ca15659ca1b160c625476c721e59b2324beac49856843dc0673b213a6713e2b4"
     },
     "generated_files": {
-      "distr/component/menu/css/menu.css": "5164d365b9abafd500cc6711904a3b3c18b245a13d673d303991d1297b012ee9",
-      "distr/component/menu/js/menu.js": "d7faee48bf4798bfa5e0cc4bea6f7f14251709f06e392426e8717b002772e410"
+      "distr/component/menu/css/menu.css": "04ca1c8d6d554511879ec1f6eb97516beb2a5837385f55a50cf092cf0314b837",
+      "distr/component/menu/js/menu.js": "05a7c63b1eeca736a8ee5a08ca82c7bdcb361d7b93807a443b640910dd9d3f81"
     }
   },
   "source_files": [

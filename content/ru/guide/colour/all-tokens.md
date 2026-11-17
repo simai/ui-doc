@@ -298,6 +298,7 @@ description: "Полный список переменных, которые о�
 | :--- | :--- |
 | `--sf-focus` | `light-dark(var(--sf-primary-50), var(--sf-primary-90))` · `var(--sf-white)` · `var(--sf-scheme-link)` |
 | `--sf-focus--color` | `var(--sf-focus)` · `var(--sf-scheme-link)` |
+| `--sf-focus--inset` | `calc(var(--sf-focus--width) * -1)` |
 | `--sf-focus--offset` | `var(--sf-px)` |
 | `--sf-focus--style` | `solid` |
 | `--sf-focus--width` | `calc(var(--sf-px) * 2)` |
@@ -376,6 +377,7 @@ description: "Полный список переменных, которые о�
 | `--sf-text--measure` | `65ch` |
 | `--sf-text--measure-narrow` | `45ch` |
 | `--sf-text--measure-wide` | `80ch` |
+| `--sf-text--middle` | `0.3633em` |
 | `--sf-text--size` | `var(--sf-text--size-1)` |
 | `--sf-text--size-1` | `var(--sf-b4)` · `var(--sf-b6)` |
 | `--sf-text--size-10` | `var(--sf-d0)` · `var(--sf-d6)` |
@@ -540,6 +542,9 @@ description: "Полный список переменных, которые о�
 | `--sf-radius-rounded` | `1000px` |
 | `--sf-radius-square` | `0` |
 | `--sf-scrim-color` | `var(--sf-black--alfa-64)` |
+| `--sf-scrim-control` | `var(--sf-surface-media)` |
+| `--sf-scrim-control-state-active` | `var(--sf-white--alfa-12)` |
+| `--sf-scrim-control-state-hover` | `var(--sf-white--alfa-8)` |
 | `--sf-scrim-opacity` | `1` |
 | `--sf-shadow--alfa` | `1` |
 | `--sf-shadow-ambient-color` | `light-dark(var(--sf-black--alfa-8), var(--sf-transparent))` |
@@ -591,14 +596,29 @@ description: "Полный список переменных, которые о�
 | `--sf-opacity-70` | `70%` |
 | `--sf-opacity-80` | `80%` |
 | `--sf-opacity-90` | `90%` |
+| `--sf-opacity-disabled` | `var(--sf-opacity-40)` |
 | `--sf-scroll--alfa` | `1` |
+| `--sf-scroll--appear` | `0.12s` |
+| `--sf-scroll--edge` | `var(--sf-scroll--gap-edge, var(--sf-0))` |
+| `--sf-scroll--gap` | `var(--sf-scroll--gap-content, var(--sf-0))` |
 | `--sf-scroll--gap-content` | `var(--sf-scroll-thumb-inset)` |
-| `--sf-scroll--gap-edge` | `var(--sf-scroll-thumb-inset)` |
-| `--sf-scroll--thumb-hover` | `var(--sf-on-surface)` |
+| `--sf-scroll--gap-edge` | `var(--sf-scroll-thumb-inset)` · `var(--sf-a0)` |
+| `--sf-scroll--grow` | `0.15s` |
+| `--sf-scroll--held-colour` | `var(--sf-scroll--thumb-held, var(--sf-on-surface-variant))` |
+| `--sf-scroll--hide` | `var(--sf-duration-normal)` |
+| `--sf-scroll--rest` | `var(--sf-scroll-thumb-size)` · `var(--sf-a2)` |
+| `--sf-scroll--rest-at` | `var(--sf-scroll--rest, var(--sf-scroll-thumb-size))` |
+| `--sf-scroll--rest-colour` | `var(--sf-scroll-bg-thumb)` |
+| `--sf-scroll--rest-size` | `min(var(--sf-scroll--rest-at), var(--sf-scroll--size))` |
+| `--sf-scroll--room` | `var(--sf-scroll-bg-width)` |
+| `--sf-scroll--shown` | `var(--sf-scroll--rest-size)` · `var(--sf-scroll--size)` |
+| `--sf-scroll--size` | `calc(var(--sf-scroll--room) - var(--sf-scroll--gap) - var(--sf-scroll--edge))` |
+| `--sf-scroll--thumb-held` | `var(--sf-on-surface-variant)` |
+| `--sf-scroll--thumb-min` | `var(--sf-c2)` |
 | `--sf-scroll-bg-thumb` | `var(--sf-outline)` |
 | `--sf-scroll-bg-track` | `var(--sf-transparent)` |
-| `--sf-scroll-bg-width` | `var(--sf-b4)` |
-| `--sf-scroll-radius` | `var(--sf-d6)` |
+| `--sf-scroll-bg-width` | `var(--sf-b4)` · `calc(var(--sf-scroll--gap-content) + var(--sf-scroll-thumb-size))` |
+| `--sf-scroll-radius` | `var(--sf-d6)` · `var(--sf-a0)` |
 | `--sf-scroll-thumb--alfa` | `1` |
 | `--sf-scroll-thumb-inset` | `var(--sf-a4)` |
 | `--sf-scroll-thumb-size` | `var(--sf-a6)` |
@@ -684,10 +704,10 @@ description: "Полный список переменных, которые о�
 | `--sf-ease-enter` | `cubic-bezier(.19, 1, .22, 1)` |
 | `--sf-ease-exit` | `cubic-bezier(.65, 0, .4, 1)` |
 | `--sf-ease-move` | `cubic-bezier(.65, 0, .35, 1)` |
-| `--sf-ring-color` | `` |
+| `--sf-ring-color` | `currentColor` |
 | `--sf-stripe--alfa` | `1` |
-| `--sf-stripe--color` | `var(--sf-surface-inverse)` |
-| `--sf-stripe--size` | `var(--sf-a1)` |
+| `--sf-stripe--color` | `var(--sf-surface-state-select)` |
+| `--sf-stripe--size` | `var(--sf-space-1\/2)` |
 | `--sf-viewport-height-dynamic` | `100vh` · `100dvh` |
 | `--sf-viewport-height-large` | `100vh` · `100lvh` |
 | `--sf-viewport-height-small` | `100vh` · `100svh` |
@@ -710,6 +730,8 @@ description: "Полный список переменных, которые о�
 | `--sf-avatar--box-description` | `0` · `1` |
 | `--sf-avatar--box-heading` | `0` · `1` |
 | `--sf-avatar--box-line` | `var(--sf-text-height-1)` · `var(--sf-text-height-1\/4)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1\/2)` · `var(--sf-text-height-2)` · `var(--sf-text-height-3)` |
+| `--sf-avatar--card-heading` | `0` · `1` |
+| `--sf-avatar--card-row` | `0` · `1` |
 | `--sf-color--alfa` | `1` |
 | `--sf-current` | `currentColor` |
 | `--sf-decoration--alfa` | `1` |
@@ -730,15 +752,56 @@ description: "Полный список переменных, которые о�
 | `--sf-gap--tags` | `var(--sf-space-1\/4)` |
 | `--sf-gap--toolbar` | `var(--sf-space-1\/4)` |
 | `--sf-gradient--angle` | `90deg` |
+| `--sf-highlight--addition` | `var(--sf-place--ink, var(--sf-highlight-addition))` |
+| `--sf-highlight--attribute` | `var(--sf-place--ink, var(--sf-highlight-attribute))` |
+| `--sf-highlight--built-in` | `var(--sf-place--ink, var(--sf-highlight-built-in))` |
+| `--sf-highlight--bullet` | `var(--sf-place--ink, var(--sf-highlight-bullet))` |
+| `--sf-highlight--comment` | `var(--sf-place--ink-variant, var(--sf-highlight-comment))` |
+| `--sf-highlight--deletion` | `var(--sf-place--ink, var(--sf-highlight-deletion))` |
+| `--sf-highlight--keyword` | `var(--sf-place--ink, var(--sf-highlight-keyword))` |
+| `--sf-highlight--line-number` | `var(--sf-place--ink-variant, var(--sf-highlight-line-number))` |
+| `--sf-highlight--number` | `var(--sf-place--ink, var(--sf-highlight-number))` |
+| `--sf-highlight--operator` | `var(--sf-place--ink, var(--sf-highlight-operator))` |
+| `--sf-highlight--property` | `var(--sf-place--ink, var(--sf-highlight-property))` |
+| `--sf-highlight--punctuation` | `var(--sf-place--ink-variant, var(--sf-highlight-punctuation))` |
+| `--sf-highlight--section` | `var(--sf-place--ink, var(--sf-highlight-section))` |
+| `--sf-highlight--string` | `var(--sf-place--ink, var(--sf-highlight-string))` |
+| `--sf-highlight--tag` | `var(--sf-place--ink, var(--sf-highlight-tag))` |
+| `--sf-highlight--text` | `var(--sf-place--ink, var(--sf-highlight-text))` |
+| `--sf-highlight--title` | `var(--sf-place--ink, var(--sf-highlight-title))` |
+| `--sf-highlight--variable` | `var(--sf-place--ink, var(--sf-highlight-variable))` |
+| `--sf-highlight-addition` | `var(--sf-on-success-container)` |
+| `--sf-highlight-addition-background` | `var(--sf-success-container)` |
+| `--sf-highlight-attribute` | `light-dark(var(--sf-blue-40), var(--sf-blue-80))` |
+| `--sf-highlight-background` | `transparent` |
+| `--sf-highlight-built-in` | `light-dark(var(--sf-teal-40), var(--sf-teal-80))` |
+| `--sf-highlight-bullet` | `var(--sf-warning)` |
+| `--sf-highlight-comment` | `var(--sf-on-surface-variant)` |
+| `--sf-highlight-deletion` | `var(--sf-on-error-container)` |
+| `--sf-highlight-deletion-background` | `var(--sf-error-container)` |
+| `--sf-highlight-keyword` | `light-dark(var(--sf-violet-40), var(--sf-violet-80))` |
+| `--sf-highlight-line-number` | `var(--sf-on-surface-variant)` |
+| `--sf-highlight-number` | `var(--sf-highlight-attribute)` |
+| `--sf-highlight-operator` | `var(--sf-highlight-attribute)` |
+| `--sf-highlight-property` | `var(--sf-highlight-attribute)` |
+| `--sf-highlight-punctuation` | `var(--sf-on-surface-variant)` |
+| `--sf-highlight-section` | `var(--sf-primary)` |
+| `--sf-highlight-string` | `light-dark(var(--sf-green-40), var(--sf-green-80))` |
+| `--sf-highlight-tag` | `light-dark(var(--sf-green-40), var(--sf-green-80))` |
+| `--sf-highlight-text` | `var(--sf-on-surface)` |
+| `--sf-highlight-title` | `light-dark(var(--sf-amber-40), var(--sf-amber-80))` |
+| `--sf-highlight-variable` | `var(--sf-highlight-attribute)` |
 | `--sf-hit--min` | `var(--sf-c2)` |
 | `--sf-hit--touch` | `var(--sf-d1)` |
 | `--sf-icon--font-size` | `1em` |
 | `--sf-icon--height` | `1lh` |
+| `--sf-icon--text-middle` | `var(--sf-text--middle)` |
 | `--sf-icon--width` | `1em` |
 | `--sf-inherit` | `inherit` |
 | `--sf-input--box-control` | `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/3--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` · `var(--sf-ui-3--control-height)` |
 | `--sf-input--box-gap` | `var(--sf-input--gap, var(--sf-space-1\/4))` |
 | `--sf-input--box-label` | `0` · `1` |
+| `--sf-input--box-label-line` | `var(--sf-input--box-line)` · `var(--sf-text-height-1)` |
 | `--sf-input--box-line` | `var(--sf-text-height-1\/2)` · `var(--sf-text-height-1\/4)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1)` · `var(--sf-text-height-2)` |
 | `--sf-input--box-message` | `0` · `1` |
 | `--sf-inset--panel` | `var(--sf-space-2)` |
@@ -805,6 +868,7 @@ description: "Полный список переменных, которые о�
 | `--sf-micro--ring-3` | `var(--sf-a2)` |
 | `--sf-micro--tick` | `var(--sf-a4)` |
 | `--sf-on-paper` | `var(--sf-neutral-10)` · `var(--sf-scheme-text)` |
+| `--sf-on-scrim-control` | `var(--sf-on-surface-media)` |
 | `--sf-page-header--box` | `calc(var(--sf-page-header--box-path) + max(var(--sf-page-header--box-line), var(--sf-page-header--box-actions)) + var(--sf-page-header--box-tabs) + var(--sf-page-header--box-pad))` |
 | `--sf-page-header--box-actions` | `calc(var(--sf-px) * 0)` · `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` |
 | `--sf-page-header--box-line` | `max(var(--sf-heading-4--height), var(--sf-ui-1\/2--control-height))` |
@@ -878,12 +942,14 @@ description: "Полный список переменных, которые о�
 | `--sf-slider--peek` | `1.15` · `2.2` |
 | `--sf-tag--box-control` | `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-1\/3--control-height)` · `var(--sf-ui-1--control-height)` · `var(--sf-ui-2--control-height)` · `var(--sf-ui-3--control-height)` · `var(--sf-text-height-1\/2)` · `var(--sf-text-height-1)` · `var(--sf-text-height-2)` · `var(--sf-c2)` |
 | `--sf-tag--box-cross` | `var(--sf-micro--cross-1\/2)` · `var(--sf-micro--cross-1\/3)` · `var(--sf-micro--cross-1)` · `var(--sf-micro--cross-2)` · `var(--sf-micro--cross-3)` |
+| `--sf-tag--box-cross-gap` | `var(--sf-tag--box-gap)` · `max(calc(var(--sf-px) * 0), calc((var(--sf-c2) - var(--sf-tag--box-cross)) / 2))` |
 | `--sf-tag--box-cross-on` | `0` · `1` |
-| `--sf-tag--box-edge` | `var(--sf-b2)` · `var(--sf-a8)` · `var(--sf-b6)` · `var(--sf-c0)` · `var(--sf-ui-3--space-x)` · `var(--sf-space-1\/3)` |
+| `--sf-tag--box-edge` | `var(--sf-b2)` · `var(--sf-a8)` · `var(--sf-b6)` · `var(--sf-c0)` · `var(--sf-ui-3--space-x)` · `var(--sf-space-1\/3)` · `var(--sf-space-1\/2)` |
 | `--sf-tag--box-gap` | `var(--sf-ui-1\/2--text-space-x)` · `var(--sf-ui-1\/3--text-space-x)` · `var(--sf-ui-1--text-space-x)` · `var(--sf-ui-2--text-space-x)` · `var(--sf-ui-3--text-space-x)` · `var(--sf-space-1\/3)` |
 | `--sf-tag--box-lead` | `var(--sf-text-height-1\/2)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1)` · `var(--sf-text-height-2)` · `var(--sf-text-height-3)` · `calc(var(--sf-tag--box-control) - 2 * var(--sf-space-1\/4))` · `var(--sf-micro--point-1\/2)` · `var(--sf-micro--point-1\/3)` · `var(--sf-micro--point-1)` · `var(--sf-micro--point-2)` · `var(--sf-micro--point-3)` |
 | `--sf-tag--box-lead-on` | `0` · `1` |
 | `--sf-tag--box-line` | `var(--sf-text-height-1\/2)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1)` · `var(--sf-text-height-2)` · `var(--sf-text-height-3)` |
+| `--sf-tag--box-pull` | `calc(var(--sf-px) * 0)` · `calc(var(--sf-tag--box-lead) / 6)` · `calc(var(--sf-tag--box-lead) / 16)` |
 | `--sf-tag--box-text` | `var(--sf-text-size-1\/2)` · `var(--sf-text-size-1\/3)` · `var(--sf-text-size-1)` · `var(--sf-text-size-2)` · `var(--sf-text-size-3)` |
 | `--sf-tile-metric--box-badge` | `calc(var(--sf-c0) + 2 * var(--sf-a4))` · `calc(var(--sf-b6) + 2 * var(--sf-a4))` · `calc(var(--sf-c2) + 2 * var(--sf-a4))` · `calc(var(--sf-text-height-1\/2) + 2 * var(--sf-ui-1\/2--space-y-tightness-low))` · `calc(var(--sf-text-height-1\/3) + 2 * var(--sf-ui-1\/3--space-y-tightness-low))` · `calc(var(--sf-text-height-1) + 2 * var(--sf-ui-1--space-y-tightness-low))` |
 | `--sf-tile-metric--box-bar` | `var(--sf-a8)` · `var(--sf-a4)` |

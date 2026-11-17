@@ -5,7 +5,7 @@ description: "Короткая история событий на вертика
 
 # Хронология
 
-:badge[sf-list-timeline]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-timeline]{variant=outline scheme=on-surface size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Короткая история, которую читают сверху: последние действия на сервере,
 журнал аудита, история записи, страница уведомлений, история заданий.
@@ -241,13 +241,13 @@ timeline.addEventListener('sf-list-timeline-load-more', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list-timeline>`, контракт `smart.list-timeline` версии `1.4.0` |
-| Поставка | выпуск Framework `ui-078a4b4c6f6e` |
+| Тег | `<sf-list-timeline>`, контракт `smart.list-timeline` версии `1.4.1` |
+| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как список; желательна подпись или `aria-label`; с клавиатуры: `Tab` проходит по ссылкам заголовков, по каждому `sf-time` с его подсказкой, по строкам «Ещё N» и кнопке «Показать ещё» по порядку; `Enter` открывает ссылку, `Enter` или `Пробел` нажимают кнопку; `Escape` прячет подсказку времени. |
-| Источник | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/smart/list-timeline` |
-| Правило классов | `simai/ui@078a4b4c6f6eae1e3a6171a0a86f5fcdc9fe2b82:distr/rule/rule.json#name=cl-list-timeline` |
+| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/list-timeline` |
+| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-list-timeline` |
 
 ## См. также
 

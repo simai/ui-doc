@@ -6,7 +6,7 @@ profile: reference
 
 # Текстовые поля
 
-:badge[sf-input]{variant=outline scheme=on-surface size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input]{variant=outline scheme=on-surface size=1/2} :badge[1.11.1]{variant=outline scheme=on-surface size=1/2}
 
 Текстовое поле принимает короткое значение в одну строку: имя, адрес почты,
 пароль или поисковый запрос. Для текста с переносами строк берите
@@ -309,9 +309,9 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 | `--sf-input-hint-text-wrap--background-color` | не задана; задают модификаторы, например `.sf-input .sf-input-hint-text-wrap`: `transparent` | `background-color` |
 | `--sf-input-hint-text-wrap--color` | не задана; задают модификаторы, например `.sf-input.sf-input--bordered .sf-input-hint-text-wrap`: `var(--sf-on-surface-variant)` | `color` |
 | `--sf-input-hint-text-wrap--font-family` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-hint-text-wrap`: `var(--sf-text--family)` | `font-family` |
-| `--sf-input-hint-text-wrap--font-size` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-hint-text-wrap`: `var(--sf-text-size-1/4)` | `font-size` |
+| `--sf-input-hint-text-wrap--font-size` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-hint-text-wrap`: `var(--sf-text-size-1/3)` | `font-size` |
 | `--sf-input-hint-text-wrap--font-weight` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-hint-text-wrap`: `var(--sf-font-weight-regular)` | `font-weight` |
-| `--sf-input-hint-text-wrap--line-height` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-hint-text-wrap`: `var(--sf-text-height-1/4)` | `line-height` |
+| `--sf-input-hint-text-wrap--line-height` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-hint-text-wrap`: `var(--sf-text-height-1/3)` | `line-height` |
 | `--sf-input-input--background-color` | не задана; задают модификаторы, например `.sf-input .sf-input-field input`: `transparent` | `background-color` |
 | `--sf-input-input--color` | не задана; задают модификаторы, например `.sf-input.sf-input--bordered input`: `var(--sf-on-surface)` | `color`, `caret-color` |
 | `--sf-input-input--font-family` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 input`: `var(--sf-text--family)` | `font-family` |
@@ -321,7 +321,7 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 | `--sf-input-input--padding-inline-start` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-field input`: `var(--sf-ui-1/3--text-space-x)` | `padding-inline-start` |
 | `--sf-input-label--background-color` | не задана; задают модификаторы, например `.sf-input .sf-input-label`: `transparent` | `background-color` |
 | `--sf-input-label--gap` | не задана; задают модификаторы, например `.sf-input .sf-input-label`: `var(--sf-space-1/4)` | `margin-inline-start`, `gap` |
-| `--sf-input-label--line` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-label`: `var(--sf-text-height-1/4)` | `height`, `block-size` |
+| `--sf-input-label--line` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-label`: `var(--sf-text-height-1/3)` | `height`, `block-size` |
 | `--sf-input-left--background-color` | не задана; задают модификаторы, например `.sf-input .sf-input-left`: `transparent` | `background-color` |
 | `--sf-input-placeholder--color` | не задана; задают модификаторы, например `.sf-input .sf-input-field input::-webkit-input-placeholder`: `var(--sf-on-surface-variant)` | `color` |
 | `--sf-input-placeholder--font-family` | не задана; задают модификаторы, например `.sf-input .sf-input-field input::-webkit-input-placeholder`: `var(--sf-text--family)` | `font-family` |
@@ -329,9 +329,9 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 | `--sf-input-placeholder--line-height` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-field input::-webkit-input-placeholder`: `var(--sf-text-height-1/3)` | `line-height` |
 | `--sf-input-required--color` | не задана; задают модификаторы, например `.sf-input .sf-input-required`: `var(--sf-on-surface)` | `color` |
 | `--sf-input-required--font-family` | не задана; задают модификаторы, например `.sf-input .sf-input-required`: `var(--sf-text--family)` | `font-family` |
-| `--sf-input-required--font-size` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-required`: `var(--sf-text-size-1/4)` | `font-size` |
+| `--sf-input-required--font-size` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-required`: `var(--sf-text-size-1/3)` | `font-size` |
 | `--sf-input-required--font-weight` | не задана; задают модификаторы, например `.sf-input .sf-input-required`: `var(--sf-font-weight-regular)` | `font-weight` |
-| `--sf-input-required--line-height` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-required`: `var(--sf-text-height-1/4)` | `line-height` |
+| `--sf-input-required--line-height` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-required`: `var(--sf-text-height-1/3)` | `line-height` |
 | `--sf-input-right--background-color` | не задана; задают модификаторы, например `.sf-input .sf-input-right`: `transparent` | `background-color` |
 | `--sf-input-right--padding-inline-end` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-right`: `var(--sf-ui-1/3--text-space-x)` | `padding-inline-end` |
 | `--sf-input-right--padding-inline-start` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-right`: `var(--sf-ui-1/3--text-space-x)` | `padding-inline-start` |

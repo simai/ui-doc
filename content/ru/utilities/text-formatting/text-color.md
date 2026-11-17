@@ -75,7 +75,7 @@ description: "Окрашивает текст цветовой ролью тем
 
 Прежние имена работают до 2027-01-01: `color-on-disable` → `color-on-surface-disabled`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
 
-Другие классы записи `utility-c17-legacy-palette-classes` журнала уходят и работают до 2027-01-01; замена — класс оттенка рядом с ролевым классом: `sf-hue-{оттенок} color-hue` ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
+Другие классы записи `utility-c17-legacy-palette-classes` журнала уходят и работают до 2027-01-01; замена — ролевой класс, ближайший по тону, например `color-on-surface` ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:color-transparent`.
 

@@ -1,7 +1,7 @@
 {
     "schema": "ui-doc.layout_expectations.v1",
     "note": "Built from the utility-hint comments of the pinned Core runtime by scripts/build-layout-expectations.mjs --write.",
-    "elements": 85,
+    "elements": 80,
     "targets": {
         "sf-alert-buttons": {
             "alignItems": "center"
@@ -132,14 +132,11 @@
         "sf-input-field": {
             "alignItems": "center"
         },
-        "sf-input-hint-text-wrap": {
-            "alignItems": "center"
-        },
         "sf-input-right": {
             "justifyContent": "center",
             "alignItems": "center"
         },
-        "sf-link": {
+        "sf-link__icon": {
             "alignItems": "center"
         },
         "sf-list": {
@@ -233,10 +230,6 @@
             "justifyContent": "center",
             "alignItems": "center"
         },
-        "sf-slider-arrows": {
-            "justifyContent": "center",
-            "alignItems": "center"
-        },
         "sf-slider-dots": {
             "justifyContent": "center",
             "alignItems": "center"
@@ -254,10 +247,6 @@
         "sf-tag": {
             "alignItems": "center"
         },
-        "sf-tag-container": {
-            "justifyContent": "center",
-            "alignItems": "center"
-        },
         "sf-tag-count": {
             "flexDirection": "column",
             "justifyContent": "center",
@@ -265,14 +254,6 @@
         },
         "sf-textarea": {
             "flexDirection": "column"
-        },
-        "sf-textarea-hint-text-wrap": {
-            "alignItems": "center"
-        },
-        "sf-thumb": {
-            "flexDirection": "column",
-            "justifyContent": "center",
-            "alignItems": "center"
         },
         "sf-thumb-handle": {
             "justifyContent": "center",

@@ -34,11 +34,11 @@ description: "Включает привязку прокрутки у конте
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `snap-x` | `scroll-snap-type: x` | — |
-| `snap-y` | `scroll-snap-type: y` | — |
-| `snap-both` | `scroll-snap-type: both` | — |
-| `snap-mandatory` | `scroll-snap-type: x mandatory` | — |
-| `snap-proximity` | `scroll-snap-type: x proximity` | — |
+| `snap-x` | `scroll-snap-type: x proximity; scroll-snap-type: x var(--sf-snap-strictness, proximity)` | — |
+| `snap-y` | `scroll-snap-type: y proximity; scroll-snap-type: y var(--sf-snap-strictness, proximity)` | — |
+| `snap-both` | `scroll-snap-type: both proximity; scroll-snap-type: both var(--sf-snap-strictness, proximity)` | — |
+| `snap-mandatory` | `--sf-snap-strictness: mandatory` | — |
+| `snap-proximity` | `--sf-snap-strictness: proximity` | — |
 | `snap-none` | `scroll-snap-type: none` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.

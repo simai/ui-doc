@@ -6,7 +6,7 @@ profile: reference
 
 # Клавиши
 
-:badge[sf-kbd]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-kbd]{variant=outline scheme=on-surface size=1/2} :badge[1.5.2]{variant=outline scheme=on-surface size=1/2}
 
 Показывает, какую клавишу или сочетание нажать, так, что это читается как
 надпись на клавише: «нажмите `Ctrl` + `S`». Берите его в инструкциях, подсказках и справке по
