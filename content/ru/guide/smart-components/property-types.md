@@ -19,7 +19,7 @@ description: "Все типы свойств набора SF.fieldRenderers и �
 его нельзя. Изменения уходят странице-хосту через `setFieldValue`; строка
 под таблицей показывает, что хост получил.
 
-:::example {id="guide/property-types/gallery" label="Все типы" preview=sandbox}
+:::example {id="guide/property-types/gallery" label="Все типы"}
 :::
 
 ## Как читать галерею

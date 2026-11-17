@@ -69,7 +69,7 @@ description: "Даёт выбрать одно изображение: мини�
 
 `size` выбирает ступень полей формы: `1/2`, `1` или `2`.
 
-:::example {id="smart-components/image-field/sizes" preview=sandbox label="Размеры 1/2, 1 и 2"}
+:::example {id="smart-components/image-field/sizes" label="Размеры 1/2, 1 и 2"}
 :::
 
 ## Состояния
@@ -101,7 +101,7 @@ description: "Даёт выбрать одно изображение: мини�
 `disabled` показывает изображение с недоступными кнопками; перетаскивание
 не принимается.
 
-:::example {id="smart-components/image-field/state-disabled" preview=sandbox label="Недоступное поле"}
+:::example {id="smart-components/image-field/state-disabled" label="Недоступное поле"}
 :::
 
 ### Только чтение
@@ -111,7 +111,7 @@ description: "Даёт выбрать одно изображение: мини�
 `readonly` показывает изображение без кнопок; перетаскивание не
 принимается.
 
-:::example {id="smart-components/image-field/state-readonly" preview=sandbox label="Поле только для чтения"}
+:::example {id="smart-components/image-field/state-readonly" label="Поле только для чтения"}
 :::
 
 ## Поведение

@@ -46,7 +46,7 @@ JavaScript.
 показывается значок человека. Изображение декоративно: имя человека
 передаёт `aria-label`, а не альтернативный текст картинки.
 
-:::example {id="smart-components/avatar/content" preview=sandbox label="Содержимое"}
+:::example {id="smart-components/avatar/content" label="Содержимое"}
 :::
 
 ### Размер
