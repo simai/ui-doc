@@ -53,7 +53,7 @@ profile: reference
 `sf-menu--documentation-tree` — компактное дерево без рамок с отступом по
 уровню, для навигации по документации.
 
-:::example {id="components/menu/layouts" label="Вид"}
+:::example {id="components/menu/layouts" label="Вертикальное и горизонтальное меню"}
 :::
 
 ### Навигация в шапке
@@ -214,7 +214,7 @@ profile: reference
 раскрывать и приглушает подпись. Недоступную ссылку лучше убрать из
 навигации.
 
-:::example {id="components/menu/states" label="Ветки"}
+:::example {id="components/menu/states" label="Открытая и недоступная ветка"}
 :::
 
 ## Доступность

@@ -57,7 +57,7 @@ profile: reference
 `sf-alert--flat` — только заливкой, внутри поверхности, границы которой задаёт
 окружающий контейнер. В одном сценарии держите один вид.
 
-:::example {id="components/alerts/appearance" label="Вид"}
+:::example {id="components/alerts/appearance" label="Виды уведомления"}
 :::
 
 ### Действия
@@ -127,7 +127,7 @@ sf-alert--outlined`: только граница, без кнопки закры
 токенах движения; при системной настройке уменьшения движения блок удаляется
 сразу.
 
-:::example {id="components/alerts/actions" label="Действия" preview=sandbox log="sf-alert-action sf-alert-close" log_console=true log_open=false}
+:::example {id="components/alerts/actions" label="Уведомление с кнопкой «Скачать»" preview=sandbox log="sf-alert-action sf-alert-close" log_console=true log_open=false}
 :::
 
 Подписка на действие:

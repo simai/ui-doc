@@ -73,7 +73,7 @@ profile: reference
 оператора или город в скобки. Своя маска для всех стран задаётся в
 `data-mask-pattern` вместе с `data-use-country-masks="false"`.
 
-:::example {id="components/country-code/masks" label="Маска"}
+:::example {id="components/country-code/masks" label="Поле без маски и с маской страны"}
 :::
 
 ### Свой список стран

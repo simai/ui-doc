@@ -62,7 +62,7 @@ profile: reference
 поиска. Высоту меню в примере задаёт обёртка `h-f6`; меню у кнопки
 ограничивает высота окна.
 
-:::example {id="components/context-menu/search" label="Поиск"}
+:::example {id="components/context-menu/search" label="Меню с поиском по городам"}
 :::
 
 ## Состояния

@@ -121,7 +121,7 @@ profile: reference
 `SF.ProgressBar.getState(element)` возвращает текущие значения этих полей.
 Обе функции принимают блок или любой элемент внутри него.
 
-:::example {id="components/progress-bar/update" label="Изменение"}
+:::example {id="components/progress-bar/update" label="Изменение значения из скрипта"}
 :::
 
 ```js

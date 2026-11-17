@@ -81,7 +81,7 @@ profile: reference
 - В режиме высокой контрастности подложка становится системным фоном с
   рамкой цвета текста.
 
-:::example {id="components/featured-icon/accessibility" label="Доступность"}
+:::example {id="components/featured-icon/accessibility" label="Декоративная и смысловая иконка"}
 :::
 
 ## Классы

@@ -64,7 +64,7 @@ profile: reference
 Здесь у каждого спиннера свой `data-variant`, чтобы показать виды рядом. На
 сайте вид задают один раз для всей страницы.
 
-:::example {id="components/spinner/variant" label="Вид"}
+:::example {id="components/spinner/variant" label="Виды спиннера"}
 :::
 
 ### Вид страницы
@@ -124,7 +124,7 @@ SIMAI Framework: `window.SF_BOOT_CONFIG = {spinner: 'comet'}` записывае
 Берите ступень того элемента, рядом с которым стоит спиннер: кнопки, поля,
 строки списка. Для ожидания целой области подходят `2` и `3`.
 
-:::example {id="components/spinner/sizes" label="Размер"}
+:::example {id="components/spinner/sizes" label="Размеры спиннера"}
 :::
 
 ### Цвет

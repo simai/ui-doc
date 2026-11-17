@@ -99,7 +99,7 @@ profile: reference
 сдвигаются. Нажмите кнопки в примере: у второй нет источника, и она
 показывает ошибку.
 
-:::example {id="components/clipboard/state-result" label="Результат"}
+:::example {id="components/clipboard/state-result" label="Удачное и неудачное копирование"}
 :::
 
 ## Доступность

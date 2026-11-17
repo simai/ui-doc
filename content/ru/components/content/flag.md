@@ -55,7 +55,7 @@ profile: reference
 к палитре набора; их круглые версии вырезаны из прямоугольных. Уведомление
 об авторстве лежит в `flags/index.json` компонента.
 
-:::example {id="components/flag/shapes" label="Форма"}
+:::example {id="components/flag/shapes" label="Прямоугольный и круглый флаг"}
 :::
 
 ### Размер

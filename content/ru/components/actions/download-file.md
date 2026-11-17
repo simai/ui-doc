@@ -129,7 +129,7 @@ profile: reference
 действие, и файл готовит приложение. Недоступная строка события не
 отправляет.
 
-:::example {id="components/download-file/action" label="Кнопка"}
+:::example {id="components/download-file/action" label="Кнопка, по которой приложение готовит файл"}
 :::
 
 ```js

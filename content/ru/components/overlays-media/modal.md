@@ -16,7 +16,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="components/modal/overview" label="Окно"}
+:::example {id="components/modal/overview" label="Окно подтверждения публикации"}
 :::
 
 ## Разметка
@@ -54,7 +54,7 @@ profile: reference
 размывает страницу за окном с выбранной силой. `overlay: false` убирает фон:
 страница видна как есть, но по-прежнему недоступна.
 
-:::example {id="components/modal/backdrop" label="Фон"}
+:::example {id="components/modal/backdrop" label="Затемнение и размытие фона"}
 :::
 
 ### Размер
@@ -63,7 +63,7 @@ profile: reference
 `width` и `height` задают размеры панели любой длиной CSS, `fullscreen: true`
 раскрывает окно на весь экран.
 
-:::example {id="components/modal/size" label="Размер"}
+:::example {id="components/modal/size" label="Ширина окна: по содержимому, заданная и весь экран"}
 :::
 
 ## Доступность

@@ -88,7 +88,7 @@ profile: reference
 `showText`, `label` и `valueText` меняют то же, что и атрибуты.
 `SF.ProgressScale.getState(element)` возвращает текущие значения.
 
-:::example {id="components/progress-scale/update" label="Изменение"}
+:::example {id="components/progress-scale/update" label="Изменение значения из скрипта"}
 :::
 
 ```js
