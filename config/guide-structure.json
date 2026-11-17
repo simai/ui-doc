@@ -357,6 +357,11 @@
      "order": 95
     },
     {
+     "slug": "language-file",
+     "title": "Стандарт файла языка",
+     "order": 92
+    },
+    {
      "slug": "motion",
      "title": "Движение",
      "order": 115

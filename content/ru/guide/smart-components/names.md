@@ -293,6 +293,51 @@ id?}` значит «перестать ждать», а `wait` принимае
 `SF.deprecations.list()`. Вместо них задайте ступень: `size` или класс
 `sf-loader--size-…`.
 
+**Имена вне манифестов.** Метод `setHostPort` у `<sf-admin-menu>` —
+псевдоним `connectPort`; запрос `sf-host-port-request`, на который страница
+отвечала портом, и поле `base_revision` вместо `baseRevision` в событиях
+настроек меню приходят до 2026-12-01. Атрибут `data-sf-drawer-container`
+читается как `data-sf-overlay-container` до 2026-12-01 (запись журнала
+`attribute-overlay-container`).
+
+**Уходящий компонент.** `<sf-theme-generator>` работает до **2027-01-01**;
+вместо него — [поле цвета](/ru/smart/forms/color/#фирменный-цвет)
+`<sf-input-color variant="brand">` на экране «Оформление» и
+`variant="theme"` в шапке сайта. Событие `change` поля цвета несёт те же
+`theme`, `variables` и `css`, что события генератора. У самого генератора
+события `sf-theme-generator-change` и `sf-theme-change` — прежние имена
+`change`, а `sf-theme-generator-apply` и `sf-theme-apply` — прежние имена
+`sf-theme-generator-committed`; они приходят до 2026-12-01.
+
+### Лента сообщений `sf-message-log`
+
+`<sf-message-log>` из пакета `pro` — прежнее имя
+[Ленты](/ru/smart/content/list-feed/) `<sf-list-feed>`. Каждое прежнее имя
+работает до 2027-01-01 и записывается в `SF.deprecations`; первый
+`<sf-message-log>` на странице один раз называется в консоли.
+
+| Прежнее имя | Имя ленты |
+|:---|:---|
+| `<sf-message-log>` | `<sf-list-feed>` |
+| `messages` | `items` |
+| `setMessages(messages, {hasMore})` | `setItems(items, {hasMore})` |
+| `prependMessages(messages, {hasMore})` | `prependItems(items, {hasMore})` |
+| `renderMessage(message, context)` | `renderItem(entry, context)`; в `context` вместо `log` — `feed` |
+| `announceMessage(message, context)` | `announceItem(entry, context)` |
+| `sf-message-log-load-more`, `-begun`, `-chunk`, `-completed`, `-failed`, `-cancelled` | `sf-list-feed-load-more`, `-begun`, `-chunk`, `-completed`, `-failed`, `-cancelled` |
+| `setHasMore(value)` | настройка `has-more` (`hasMore`) |
+| `isNearBottom()` | `isAtLatest()` |
+| `cl-message-log` | `cl-list-feed` |
+| `--sf-message-log-column-width`, `-inset`, `-run-gap`, `-turn-gap`, `-fade-size` | `--sf-list-feed-column-width`, `-inset`, `-run-gap`, `-turn-gap`, `-fade-size` |
+
+Каждое событие ленты уходит и под прежним именем с тем же `detail`; один
+`preventDefault()` отменяет оба. До 2026-12-01 действуют ещё более ранние
+имена: событие `sf-message-log-load-earlier` — это `-load-more`, поля
+сообщения `pending` и `author_name` — это `growing` и `author-name`, а
+`remove(id)` — это `detach(id)`. Стили страницы для
+`.sf-message-log`, `.sf-message-log__*` и `--sf-message-log--*` переносятся
+на `.sf-list-feed`, `.sf-list-feed__*` и `--sf-list-feed--*`.
+
 ### Прежние имена по компонентам
 
 Раздел собран из манифестов выпуска `ui-994f9db407fa` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
@@ -1009,15 +1054,6 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `appearance="outline"` | `appearance="surface"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `sf-tag--appearance-outline` | `sf-tag--appearance-surface` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | событие `sf-tag-close` | `close` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-
-#### `<sf-theme-generator>`
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| событие `change` | `sf-theme-generator-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-theme-generator-committed` | `sf-theme-generator-apply` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `change` | `sf-theme-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-theme-generator-committed` | `sf-theme-apply` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-tile-metric>`
 

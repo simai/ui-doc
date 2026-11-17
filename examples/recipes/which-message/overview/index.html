@@ -1,0 +1,41 @@
+<div class="flex flex-col gap-2">
+  <div class="flex flex-wrap gap-1/3" role="group" aria-label="Что случилось" id="what">
+    <sf-button size="1/2" appearance="outline" scheme="on-surface" data-place="bar" text="Диск сервера заполнен"></sf-button>
+    <sf-button size="1/2" appearance="outline" scheme="on-surface" data-place="alert" text="Раздел только для чтения" pressed></sf-button>
+    <sf-button size="1/2" appearance="outline" scheme="on-surface" data-place="toast" text="Запись сохранена"></sf-button>
+    <sf-button size="1/2" appearance="outline" scheme="on-surface" data-place="form" text="Ошибки в форме"></sf-button>
+    <sf-button size="1/2" appearance="outline" scheme="on-surface" data-place="centre" text="Что было за день"></sf-button>
+    <sf-button size="1/2" appearance="outline" scheme="on-surface" data-place="confirm" text="Удалить раздел"></sf-button>
+  </div>
+  <div data-for="bar" hidden class="flex flex-col gap-1/2">
+    <sf-alert-bar id="msg-bar" size="1/2" label="Важные уведомления"></sf-alert-bar>
+    <p class="m-0 text-1/2 color-on-surface-variant">Полоса — состояние всего продукта. Стоит над шапкой, пока жива причина.</p>
+  </div>
+  <div data-for="alert" class="flex flex-col gap-1/2">
+    <sf-alert status="warning" heading="Раздел «Каталог» открыт только для чтения" supporting-text="Идёт перенос товаров на новый склад, правка вернётся примерно в 15:00."></sf-alert>
+    <p class="m-0 text-1/2 color-on-surface-variant">Уведомление — состояние этой страницы или раздела. Стоит в начале страницы.</p>
+  </div>
+  <div data-for="toast" hidden class="flex flex-col gap-1/2">
+    <div class="flex flex-wrap gap-1/3">
+      <sf-button id="msg-save" text="Сохранить запись"></sf-button>
+      <sf-button id="msg-offline" appearance="outline" scheme="on-surface" text="Сохранить без связи"></sf-button>
+    </div>
+    <p class="m-0 text-1/2 color-on-surface-variant">Всплывающее — короткий ответ на нажатие. Успех уходит сам, ошибка — только по крестику.</p>
+  </div>
+  <div data-for="form" hidden class="flex flex-col gap-1">
+    <sf-alert status="error" heading="Не сохранено: 2 ошибки" supporting-text="Исправьте поля ниже." action-text="К первой ошибке" action="first"></sf-alert>
+    <sf-input id="msg-slug" label="Адрес страницы" default-value="осенняя распродажа" invalid error-message="Только латинские буквы, цифры и дефис."></sf-input>
+    <sf-input label="Описание для поиска" invalid error-message="Заполните описание для поиска."></sf-input>
+    <p class="m-0 text-1/2 color-on-surface-variant">Ошибки полей — сводкой над формой и у каждого поля. Всплывающее — только когда сохранение не дошло до сервера.</p>
+  </div>
+  <div data-for="centre" hidden class="flex flex-col gap-1/2">
+    <div class="radius-surface border border-outline-variant bg-surface-card p-1/2">
+      <sf-list id="msg-centre" size="1/2" label="Уведомления за сегодня"></sf-list>
+    </div>
+    <p class="m-0 text-1/2 color-on-surface-variant">Центр уведомлений — история. В админке Larena он открывается из меню.</p>
+  </div>
+  <div data-for="confirm" hidden class="flex flex-col gap-1/2">
+    <sf-confirm id="msg-confirm" status="danger" destructive appearance="card" question="Удалить раздел «Акции»?" consequence="Вместе с ним уйдут 24 записи. Вернуть нельзя." accept-text="Удалить раздел" decline-text="Отмена"></sf-confirm>
+    <p class="m-0 text-1/2 color-on-surface-variant">Вопрос — решение человека. Опасный ответ залит, фокус на «Отмене».</p>
+  </div>
+</div>

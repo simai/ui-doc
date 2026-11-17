@@ -1,0 +1,37 @@
+<div class="flex flex-col gap-1">
+  <div class="flex flex-wrap items-cross-center gap-1">
+    <sf-button id="page-open" icon-start="add" text="Новая страница"></sf-button>
+    <sf-switch id="page-fail" label="Сервер ответит ошибкой"></sf-switch>
+  </div>
+  <p id="page-result" class="m-0 text-1/2 color-on-surface-variant" role="status"></p>
+</div>
+<sf-modal id="page-dialog" heading="Новая страница" initial-focus="first" close-on-overlay="false">
+  <form slot="content" id="page-form" class="flex flex-col gap-1" novalidate>
+    <div id="page-summary" tabindex="-1" hidden>
+      <sf-alert id="page-summary-alert" status="error" heading="Исправьте 2 поля">
+        <div slot="supporting-text">
+          <ul class="m-0 p-inline-start-1">
+            <li><a href="#page-title">Название — введите название страницы</a></li>
+            <li><a href="#page-slug">Адрес — только латинские буквы, цифры и дефис</a></li>
+          </ul>
+        </div>
+      </sf-alert>
+    </div>
+    <sf-alert id="page-error" status="error" heading="Не удалось создать страницу" supporting-text="Сервер не ответил. Набранное осталось в окне — нажмите «Создать страницу» ещё раз." hidden></sf-alert>
+    <sf-input id="page-title" name="title" label="Название" required placeholder="Например, Насосы для дачи"></sf-input>
+    <sf-input id="page-slug" name="slug" label="Адрес" hint="Будет так: shop.example.ru/catalog/адрес" placeholder="nasosy-dlya-dachi"></sf-input>
+    <sf-dropdown name="parent" label="Раздел" search="false" options='[{"text":"Каталог","value":"catalog","selected":true},{"text":"Каталог › Насосы","value":"pumps"},{"text":"Каталог › Фильтры","value":"filters"},{"text":"О компании","value":"about"}]'></sf-dropdown>
+    <sf-checkbox name="menu" value="1" label="Показать в меню сайта"></sf-checkbox>
+  </form>
+  <div slot="footer" class="flex flex-wrap items-cross-center gap-1/3 w-full">
+    <sf-button id="page-save" text="Создать страницу" native-type="submit" form="page-form"></sf-button>
+    <sf-button id="page-cancel" text="Отмена" appearance="ghost" scheme="on-surface"></sf-button>
+  </div>
+</sf-modal>
+<sf-modal id="page-question" heading="Закрыть без сохранения?" size="question" initial-focus="safe">
+  <p slot="content" class="m-0">Название и адрес новой страницы пропадут.</p>
+  <div slot="footer" class="flex flex-wrap items-cross-center gap-1/3 w-full">
+    <sf-button id="page-drop" text="Не сохранять" status="danger"></sf-button>
+    <sf-button id="page-keep" text="Продолжить правку" appearance="ghost" scheme="on-surface" data-sf-safe></sf-button>
+  </div>
+</sf-modal>

@@ -6,14 +6,16 @@ profile: reference
 
 # Количество
 
-:badge[sf-quantity]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-quantity]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Поле количества принимает число с клавиатуры или меняет его кнопками «минус» и
 «плюс» на заданный шаг. Подходит для количества товаров, мест, участников и
 других ограниченных числовых величин; для произвольного текста берите
 [текстовое поле](/ru/components/forms/inputs/).
 Простое числовое поле без кнопок, с единицей в поле, — у
-[смарт-поля количества](/ru/smart/forms/quantity/) (`steppers="none"`).
+[смарт-поля количества](/ru/smart/forms/quantity/) (`steppers="none"`). Там
+же режим строки корзины `removable`: на нижней границе вместо «−» стоит
+корзина, а страница предлагает «Вернуть».
 
 ## Пример
 

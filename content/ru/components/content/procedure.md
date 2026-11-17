@@ -6,7 +6,7 @@ profile: reference
 
 # Шаги инструкции
 
-:badge[sf-procedure]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-procedure]{variant=outline scheme=on-surface size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
 
 Шаги инструкции показывают нумерованную последовательность действий, которую
 читают сверху вниз: установку, настройку, перенос. В каждом шаге может быть
@@ -60,6 +60,9 @@ profile: reference
 `sf-procedure-step--complete` заливает маркер выполненного шага основной
 ролью, `sf-procedure-step--current` обводит текущий. Без этих классов все
 маркеры нейтральные.
+
+:::example {id="components/procedure/states" label="Выполненный, текущий и следующий шаг"}
+:::
 
 ## Доступность
 

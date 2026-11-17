@@ -6,7 +6,7 @@ profile: reference
 
 # Теги
 
-:badge[sf-tag]{variant=tonal scheme=primary size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tag]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Тег компактно показывает категорию, выбранное значение, фильтр или статус.
 Сам по себе тег — надпись, а не действие: кнопкой становится только тег, который
@@ -16,7 +16,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="components/tags/overview" label="Теги"}
+:::example {id="components/tags/overview" label="Теги разделов"}
 :::
 
 ## Разметка
@@ -60,20 +60,24 @@ profile: reference
 повторяет его. Нейтральный статус — `sf-tag--default`. Статус не передавайте
 только цветом: подпись называет его словами.
 
+Тег — то, что человек выбирает, добавляет или убирает. Статус, который
+только сообщает и не меняется нажатием, — не тег, а тональная
+[пометка](/ru/components/feedback/badges/).
+
 :::example {id="components/tags/statuses" label="Статусы тега"}
 :::
 
 ### Вид
 
-`sf-tag--appearance-surface`, `sf-tag--appearance-ghost` • [справочник](#классы)
+`sf-tag--appearance-outline`, `sf-tag--appearance-ghost` • [справочник](#классы)
 
 Вид — отдельная ось. Без класса тег стоит на нейтральной заливке.
-`sf-tag--appearance-surface` берёт слабую заливку и контур на ступень сильнее
+`sf-tag--appearance-outline` берёт слабую заливку и контур на ступень сильнее
 из [нейтральной шкалы](/ru/guide/colour/palettes/) — для тега на
 цветном фоне или изображении. `sf-tag--appearance-ghost` прозрачен; у выбираемого
 тега фон появляется при наведении. Вид берут нейтральные теги (`default`,
 `icon`, `color`, `avatar`, `checkbox`); статусные теги вид не берут, чтобы не
-вымывать цвет статуса. Контур `surface` — внутренняя тень, а не рамка: тег не
+вымывать цвет статуса. Контур `outline` — внутренняя тень, а не рамка: тег не
 становится выше соседних.
 
 :::example {id="components/tags/appearance" label="Виды тега"}
@@ -89,13 +93,15 @@ profile: reference
 :::example {id="components/tags/sizes" label="Размеры тега"}
 :::
 
-### Плотность
+### Высота
 
-Плотность меняет только отступы сверху и снизу, как у кнопок:
-`spacing-compact`, без класса — обычная, `spacing-comfortable` и
-`spacing-spacious`.
+`sf-tag--height-low`, `sf-tag--height-high`, `sf-tag--height-highest` • [справочник](#классы)
 
-:::example {id="components/tags/spacing" label="Плотность тега"}
+Высота меняет только отступы сверху и снизу, как у кнопок: `sf-tag--height-low`
+ниже обычной, без класса — обычная, `sf-tag--height-high` и
+`sf-tag--height-highest` выше. Текст и скругление остаются от размера.
+
+:::example {id="components/tags/spacing" label="Высота тега"}
 :::
 
 ### Счётчик и удаление
@@ -107,7 +113,7 @@ profile: reference
 стоит [кнопка закрытия](/ru/components/actions/close/) размера `1/3`, её
 доступное имя называет удаляемое значение.
 
-:::example {id="components/tags/actions" label="Тег"}
+:::example {id="components/tags/actions" label="Тег со счётчиком и тег с удалением"}
 :::
 
 ### В строке
@@ -119,7 +125,7 @@ profile: reference
 удаления высотой в строку. В строке текста тег обычно на ступень меньше
 текста вокруг. Высоту строки задают `sf-tag--line-1/2`, `--line-1` и
 `--line-2` или переменная `--sf-tag--line` на элементе. Вместе с
-`spacing-compact` тег в строке становится компактной плашкой своего размера —
+`sf-tag--height-low` тег в строке становится компактной плашкой своего размера —
 так поле выпадающего списка показывает выбранные значения.
 
 :::example {id="components/tags/inline" label="Теги в строке текста"}

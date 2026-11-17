@@ -6,7 +6,7 @@ profile: reference
 
 # Всплывающие сообщения
 
-:badge[sf-toast]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-toast]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Всплывающее сообщение коротко сообщает результат действия поверх интерфейса
 и не блокирует дальнейшую работу. Для постоянного текста внутри страницы
@@ -88,7 +88,7 @@ profile: reference
 настройке уменьшения движения блок удаляется сразу. Само действие выполняет
 приложение.
 
-:::example {id="components/toast/actions" label="Действие"}
+:::example {id="components/toast/actions" label="Сообщение с действием «Отменить»"}
 :::
 
 Функции `SF.Toast`:
@@ -125,7 +125,7 @@ SF.Toast.show('#toasts', {
 
 ### Пример уведомлений страницы
 
-:::example {id="components/toast/notify" label="Уведомления"}
+:::example {id="components/toast/notify" label="Уведомления страницы об успехе и об ошибке"}
 :::
 
 ### Параметры уведомления

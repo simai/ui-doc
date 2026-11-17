@@ -39,6 +39,7 @@
             "@docs:example-classes:check",
             "@docs:example-helpers:check",
             "@docs:example-contrast:check",
+            "@docs:illustrations:check",
             "@docs:reference-sections:check",
             "@docs:reference-pages:check",
             "@docs:layout-classes:check",
@@ -50,6 +51,7 @@
             "@docs:reachable:check",
             "@docs:tokens:check",
             "@docs:colour-legacy:check",
+            "@docs:palette-examples:check",
             "@docs:wide-pages:check",
             "@docs:catalogue-indexes:check",
             "@docs:property-types:check",
@@ -58,6 +60,11 @@
             "@php scripts/test-recipe-edition.php"
         ],
         "docs:example-contrast:check": "node scripts/audit-example-contrast.mjs",
+        "docs:illustrations:build": [
+            "node assets/illustrations/generate.mjs",
+            "node assets/illustrations/generate.mjs sync"
+        ],
+        "docs:illustrations:check": "node assets/illustrations/generate.mjs sync --check",
         "docs:example-contrast:roles": "node scripts/audit-example-contrast.mjs --refresh-roles",
         "docs:architecture:check": [
             "@php scripts/audit-guide-information-architecture.php",
@@ -70,6 +77,7 @@
         "docs:tokens:build": "node scripts/build-token-reference.mjs",
         "docs:tokens:check": "node scripts/build-token-reference.mjs --check",
         "docs:colour-legacy:check": "node scripts/audit-colour-legacy.mjs",
+        "docs:palette-examples:check": "node scripts/audit-palette-examples.mjs",
         "docs:wide-pages:build": "node scripts/audit-wide-data-pages.mjs --fix",
         "docs:wide-pages:check": "node scripts/audit-wide-data-pages.mjs",
         "docs:recipe:check": "@php scripts/audit-docara-recipe-primary.php",

@@ -1,0 +1,1 @@
+.booking { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: var(--sf-space-1); align-items: end; }

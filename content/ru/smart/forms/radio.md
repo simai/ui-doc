@@ -5,7 +5,7 @@ description: "Даёт выбрать ровно один вариант из в
 
 # Радиокнопки
 
-:badge[sf-radio]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-radio]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Радиокнопки дают выбрать один вариант из группы взаимоисключающих, где все
 варианты видны сразу. Для независимых вариантов берите

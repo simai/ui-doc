@@ -1,0 +1,2 @@
+.brand { display: inline-flex; align-items: center; gap: var(--sf-space-1\/2); font-weight: var(--sf-font-weight-medium); color: var(--sf-on-surface); text-decoration: none; white-space: nowrap; }
+.first-frame { display: flex; align-items: center; gap: var(--sf-space-1); block-size: var(--sf-ui-1--control-height); padding: var(--sf-space-1\/2) var(--sf-space-2); box-sizing: content-box; }

@@ -1,0 +1,17 @@
+<div class="query-container" data-sf-density="compact">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — дела в любом порядке: список с отметками и «N из M»</span></figcaption>
+      <div class="flex flex-1 flex-col gap-1 p-2">
+        <sf-progress-bar value="33" label="Первые шаги" value-text="1 из 3 задач"></sf-progress-bar>
+        <sf-list data-demo="do" label="Задачи для начала"></sf-list>
+      </div>
+    </figure>
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — шаги по порядку для дел, которые можно делать в любом: человек думает, что домен нельзя подключить раньше логотипа</span></figcaption>
+      <div class="flex flex-1 flex-col p-2">
+        <sf-steps current="2" aria-label="Первые шаги" items='[{"label":"Оформление"},{"label":"Логотип"},{"label":"Домен"}]'></sf-steps>
+      </div>
+    </figure>
+  </div>
+</div>

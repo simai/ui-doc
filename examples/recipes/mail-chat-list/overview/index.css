@@ -1,0 +1,8 @@
+.mail { display: grid; grid-template-columns: minmax(0, 24rem) minmax(0, 1fr); min-block-size: 28rem; border: var(--sf-px) solid var(--sf-outline-variant); border-radius: var(--sf-radius--surface); overflow: hidden; }
+.mail-list { padding: var(--sf-space-1\/4); border-inline-end: var(--sf-px) solid var(--sf-outline-variant); max-block-size: 34rem; overflow: auto; min-inline-size: 0; }
+.mail-read { display: flex; flex-direction: column; gap: var(--sf-space-1); padding: var(--sf-space-1) var(--sf-space-2); min-inline-size: 0; }
+@media (max-width: 60rem) {
+  .mail { grid-template-columns: minmax(0, 1fr); }
+  .mail-list { border: 0; }
+  .mail-read { display: none; }
+}

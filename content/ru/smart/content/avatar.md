@@ -5,7 +5,7 @@ description: "Показывает человека или организаци�
 
 # Аватар
 
-:badge[sf-avatar]{variant=tonal scheme=primary size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-avatar]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Аватар показывает одного человека или одну организацию: фотографию, инициалы
 или значок-заполнитель, при необходимости — состояние в сети или отметку
@@ -46,7 +46,7 @@ JavaScript.
 показывается значок человека. Изображение декоративно: имя человека
 передаёт `aria-label`, а не альтернативный текст картинки.
 
-:::example {id="smart-components/avatar/content" label="Содержимое"}
+:::example {id="smart-components/avatar/content" preview=sandbox label="Содержимое"}
 :::
 
 ### Размер

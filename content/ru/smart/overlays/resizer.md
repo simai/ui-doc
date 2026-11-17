@@ -5,7 +5,7 @@ description: "Ручка на краю панели: ширину меняют �
 
 # Изменение ширины
 
-:badge[sf-resizer]{variant=tonal scheme=primary size=1/2} :badge[1.1.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-resizer]{variant=outline scheme=on-surface size=1/2} :badge[1.1.5]{variant=outline scheme=on-surface size=1/2}
 
 Изменение ширины — ручка на краю панели: ширину тянут мышью, пером или
 касанием, меняют стрелками с клавиатуры и возвращают двойным щелчком. Подходит
@@ -108,8 +108,7 @@ SF.language.register('sf-resizer', 'de', {
 `sf-resizer/<storage-key>` в блок `data-sf-preferences`, а без значения у
 человека — `null` (см. [Подключение хранилища хоста](/ru/guide/smart-components/view-preferences/#подключение-хранилища-хоста)).
 
-Событие `sf-resizer-resize` приходит с `{width, phase}` (прежнее имя
-`sf-resize` приходит с тем же `detail`): `move` — во время
+Событие `sf-resizer-resize` приходит с `{width, phase}`: `move` — во время
 перетаскивания, `end` — после перетаскивания или нажатия клавиши, `reset` —
 после возврата. Если окно стало уже, сохранённая ширина возвращается в
 пределы.

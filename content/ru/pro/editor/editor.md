@@ -5,7 +5,7 @@ description: "Единый редактор блоков страницы: ра�
 
 # Редактор страниц
 
-:badge[sf-editor]{variant=tonal scheme=primary size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-editor]{variant=outline scheme=on-surface size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-editor>` — единый редактор блоков страницы SIMAI: раскладка и текст —
 один документ и один редактор. Режимов нет, есть глубина: щелчок по тексту —
@@ -13,8 +13,17 @@ description: "Единый редактор блоков страницы: ра�
 
 Элемент ничего не хранит: после каждого изменения он отправляет `change` с
 новым документом, а сохраняет хост. Режим одного потока текста — отдельный
-компонент [Редактор содержимого](/ru/pro/editor/content-editor/); свои блоки
+компонент [Редактор содержимого](/ru/pro/editor/editor-content/); свои блоки
 для каталога редактора описывает страница [Свои блоки](/ru/pro/editor/blocks/).
+
+## Пример
+
+Щёлкните по тексту, чтобы печатать, или рядом с ним, чтобы выбрать блок;
+`Esc` поднимает на уровень выше. Журнал показывает `change` после каждого
+изменения: документ сохраняет страница.
+
+:::example {id="smart-components/editor/overview" label="Страница «Доставка и оплата» в редакторе" preview=sandbox log="change" log_console=true log_open=false}
+:::
 
 ## Данные
 
@@ -256,6 +265,6 @@ Markdown текстовых областей; то же даёт действи�
 
 ## См. также
 
-- [Редактор содержимого](/ru/pro/editor/content-editor/) — страница одним потоком текста.
+- [Редактор содержимого](/ru/pro/editor/editor-content/) — страница одним потоком текста.
 - [Свои блоки](/ru/pro/editor/blocks/) — как сделать свой блок для каталога редактора.
 - [Редактор раскладки](/ru/guide/layouts/editor/overview/) — части, из которых собран редактор.

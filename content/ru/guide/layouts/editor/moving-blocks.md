@@ -8,7 +8,7 @@ description: "Перенос узлов на холсте и вставка бл
 **Перенос.** Узел переносят за ручку — действие панели с иконкой
 `drag_indicator`, а без неё за подпись выбранной рамки; с клавиатуры — из
 дерева: Пробел берёт, стрелки выбирают место, Enter кладёт, Escape отменяет.
-Оверлей сообщает о переносе событием `sf-composition-overlay-move` с новым
+Оверлей сообщает о переносе событием `sf-editor-overlay-move` с новым
 родителем, слотом и позицией.
 
 **Библиотека блоков** — это `<sf-sortable mode="copy">`: карточка остаётся в
@@ -21,11 +21,11 @@ description: "Перенос узлов на холсте и вставка бл
 Пример ниже показывает, как приложение принимает перенос и вставку:
 
 ```js
-overlay.addEventListener('sf-composition-overlay-move', (event) => {
+overlay.addEventListener('sf-editor-overlay-move', (event) => {
   const {node_id, parent_id, slot, index} = event.detail;
   applyAndSave({type: 'move', node_id, parent_id, slot, index});
 });
-overlay.addEventListener('sf-composition-overlay-insert', (event) => {
+overlay.addEventListener('sf-editor-overlay-insert', (event) => {
   const {parent_id, slot, index, item} = event.detail; // item — карточка из библиотеки
   applyAndSave({type: 'insert', parent_id, slot, index, block: item});
 });

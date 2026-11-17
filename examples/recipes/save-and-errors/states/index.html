@@ -1,0 +1,36 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-skeleton kind="text" count="3" size="1"></sf-skeleton>
+      <span class="text-1/2 color-on-surface-variant">Запись открывается: скелет на месте полей</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <div class="flex flex-wrap gap-1/3"><sf-button loading text="Сохранить"></sf-button><sf-button appearance="ghost" scheme="on-surface" text="Отмена"></sf-button></div>
+      <span class="text-1/2 color-on-surface-variant">Сохраняется: кнопка занята, второй раз не нажать</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-input label="Адрес страницы" invalid error-message="Только латинские буквы, цифры и дефис." default-value="осенняя распродажа"></sf-input>
+      <span class="text-1/2 color-on-surface-variant">Одна ошибка: без сводки, фокус сразу в поле</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-alert status="error" heading="Не сохранено: 12 ошибок" supporting-text="Поля с ошибками — на вкладках «Основное», «Поиск», «Доступ»." action-text="К первой ошибке" action="first"></sf-alert>
+      <span class="text-1/2 color-on-surface-variant">Много ошибок: сводка и переход к первой</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-alert status="warning" heading="Запись изменила Анна Котова в 14:32" supporting-text="Ваши правки не сохранены и остались в форме." action-text="Показать её версию" action="theirs" secondary-action-text="Сохранить мою" secondary-action="mine"></sf-alert>
+      <span class="text-1/2 color-on-surface-variant">Чужая правка: две кнопки</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-toast status="error" heading="Не сохранено: нет связи" supporting-text="Изменения остались в форме." action-text="Повторить" action="retry" closable duration="0"></sf-toast>
+      <span class="text-1/2 color-on-surface-variant">Нет связи: всплывающее до крестика, правки в форме</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-alert status="warning" heading="Править эту запись может только редактор раздела" supporting-text="Поля открыты для чтения."></sf-alert>
+      <span class="text-1/2 color-on-surface-variant">Нет прав: уведомление, поля только для чтения</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-toast status="success" heading="Сохранено" action-text="Отменить" action="undo" closable duration="0"></sf-toast>
+      <span class="text-1/2 color-on-surface-variant">Сохранено: уходит само через 5 секунд</span>
+    </div>
+  </div>
+</div>

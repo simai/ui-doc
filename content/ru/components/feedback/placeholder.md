@@ -6,7 +6,7 @@ profile: reference
 
 # Заполнитель
 
-:badge[sf-placeholder]{variant=tonal scheme=primary size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-placeholder]{variant=outline scheme=on-surface size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
 
 Заполнитель объясняет пустое состояние: данных нет, поиск ничего не нашёл или
 раздел не заполнен. Для ожидания данных берите
@@ -51,6 +51,17 @@ profile: reference
 таблицей.
 
 :::example {id="components/placeholder/overview" label="Компоновки заполнителя"}
+:::
+
+### Пусто, не найдено, ошибка
+
+Одна и та же разметка закрывает три частых случая. Раздел пуст с самого
+начала — заголовок говорит, что здесь будет, а главная кнопка создаёт
+первую запись. Поиск ничего не нашёл — подсказка называет запрос, кнопка
+сбрасывает его. Данные не загрузились — значок в цвете ошибки, текст
+объясняет причину, кнопка повторяет загрузку.
+
+:::example {id="components/placeholder/states" label="Пустой раздел, пустой поиск и ошибка загрузки"}
 :::
 
 ## Доступность

@@ -1,0 +1,10 @@
+.shell-menu { flex: 0 0 var(--sf-f6); }
+.news-tile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sf-space-1\/4);
+  padding: var(--sf-space-1);
+  border: var(--sf-px) solid var(--sf-outline-variant);
+  border-radius: var(--sf-radius--surface);
+  background: var(--sf-surface-card);
+}

@@ -10,8 +10,8 @@ const initialize = async () => {
   const file = document.querySelector('#download-file-report');
   if (!file || file.dataset.exampleReady === 'true') return;
   file.dataset.exampleReady = 'true';
-  file.addEventListener('sf-file-download-download', async (event) => {
-    docara.example.log('sf-file-download-download', event.detail);
+  file.addEventListener('sf-file-download-request', async (event) => {
+    docara.example.log('sf-file-download-request', event.detail);
     if (file.getAttribute('href')) return;
     event.preventDefault();
     file.setAttribute('state', 'preparing');

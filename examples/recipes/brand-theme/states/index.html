@@ -1,0 +1,25 @@
+<div class="grid grid-col-1 cq-md:grid-col-2 gap-2 query-container" data-sf-density="compact">
+  <figure class="m-0 flex flex-col gap-1/2">
+    <sf-input-color variant="brand" label="Фирменный цвет" value="" swatches="#0b57d0|Синий SIMAI, #e8a33d|Логотип, #1a7f37|Зелёный" target="#sample-empty" clearable></sf-input-color>
+    <div class="sample" id="sample-empty"><div class="sample-head"><b>Аквабур</b></div><div class="sample-cover">Насосы для дома и дачи</div></div>
+    <figcaption class="text-1/2 color-on-surface-variant">Цвет не выбран: действует цвет SIMAI</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <sf-input-color variant="brand" label="Фирменный цвет" value="#f2c94c" swatches="#0b57d0|Синий SIMAI, #e8a33d|Логотип, #1a7f37|Зелёный" target="#sample-light" clearable></sf-input-color>
+    <div class="sample" id="sample-light"><div class="sample-head"><b>Аквабур</b></div><div class="sample-cover">Насосы для дома и дачи</div></div>
+    <figcaption class="text-1/2 color-on-surface-variant">Светлый цвет: шапка с тёмным текстом, под полем — что важно знать о цвете</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <sf-input-color variant="brand" label="Фирменный цвет" value="#1a7f37" target="#sample-dark" clearable></sf-input-color>
+    <div class="sample theme-dark bg-surface-page color-on-surface" id="sample-dark"><div class="sample-head"><b>Аквабур</b></div><div class="sample-cover">Насосы для дома и дачи</div></div>
+    <figcaption class="text-1/2 color-on-surface-variant">Тёмная тема сайта: тот же цвет, образец в тёмной</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <div class="flex flex-col gap-1/2" aria-busy="true"><sf-skeleton size="1/2" width="30%"></sf-skeleton><sf-skeleton kind="rounded" height="a8"></sf-skeleton><sf-skeleton kind="rounded" height="b4"></sf-skeleton></div>
+    <figcaption class="text-1/2 color-on-surface-variant">Загрузка: поле и образец держат место</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <sf-alert status="error" heading="Оформление не сохранено" supporting-text="Сервер не ответил. Сайт показывает прежние цвета — нажмите «Сохранить» ещё раз."></sf-alert>
+    <figcaption class="text-1/2 color-on-surface-variant">Ошибка сохранения: выбранное на месте, сайт прежний</figcaption>
+  </figure>
+</div>

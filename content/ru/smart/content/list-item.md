@@ -5,7 +5,7 @@ description: "Вариант выпадающего списка и общая �
 
 # Строка списка
 
-:badge[sf-list-item]{variant=tonal scheme=primary size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-item]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
 
 Строка списка задаёт один вариант [выпадающего
 списка](/ru/smart/navigation/dropdown/): значение, подпись и вид строки —
@@ -60,7 +60,7 @@ description: "Вариант выпадающего списка и общая �
 
 Вид строки задаёт атрибут `kind` — и в выпадающем списке, и вне его.
 
-:::example {id="smart-components/list-item/kinds" label="Пять видов строки"}
+:::example {id="smart-components/list-item/kinds" preview=sandbox label="Пять видов строки"}
 :::
 
 ### Размер
@@ -143,7 +143,7 @@ description: "Вариант выпадающего списка и общая �
 перемещаемую строку, это делает щелчок. Ручка видна на строке под
 указателем и на строке с фокусом, на сенсорном экране — всегда; её место
 сохраняется, и ничего не сдвигается. Хост, который перерисовывает список по
-`sf-sortable-intent`, переставляет сами элементы `sf-list-item`.
+`sf-sortable-move`, переставляет сами элементы `sf-list-item`.
 
 ## Доступность
 

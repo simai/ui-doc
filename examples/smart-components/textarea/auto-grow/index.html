@@ -1,20 +1,12 @@
-<div class="grid grid-col-1 md:grid-col-2 gap-3 items-cross-start">
-  <sf-input-textarea
-    name="comment"
-    label="Комментарий"
-    placeholder="Напишите комментарий"
-    auto-grow
-    min-rows="1"
-    max-rows="6">
-  </sf-input-textarea>
-
-  <sf-input-textarea
-    name="summary"
-    label="Краткое описание"
-    appearance="filled"
-    value="Первая строка описания.&#10;Вторая строка.&#10;Третья строка.&#10;Четвёртая строка.&#10;Пятая строка уже прокручивается внутри поля."
-    auto-grow
-    min-rows="2"
-    max-rows="4">
-  </sf-input-textarea>
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-4 items-cross-start">
+    <div class="flex flex-col gap-2">
+      <sf-input-textarea name="comment" label="Комментарий" placeholder="Напишите комментарий"></sf-input-textarea>
+      <span class="text-1/2 color-on-surface-variant">по умолчанию: от 3 до 10 строк</span>
+    </div>
+    <div class="flex flex-col gap-2">
+      <sf-input-textarea name="summary" label="Краткое описание" min-rows="2" max-rows="4" value="Первая строка описания.&#10;Вторая строка.&#10;Третья строка.&#10;Четвёртая строка.&#10;Пятая строка уже прокручивается внутри поля."></sf-input-textarea>
+      <span class="text-1/2 color-on-surface-variant">min-rows="2" max-rows="4"</span>
+    </div>
+  </div>
 </div>

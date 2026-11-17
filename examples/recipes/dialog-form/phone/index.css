@@ -1,0 +1,4 @@
+@media (max-width: 37.5rem) {
+  .answers { flex-wrap: nowrap; }
+  .answers > sf-button > button { flex: 1 1 0; min-inline-size: 0; }
+}

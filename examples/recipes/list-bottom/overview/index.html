@@ -1,0 +1,9 @@
+<sf-segmented id="bottom-kind" aria-label="Вид низа списка" size="1/2" value="field" items="field::Админка|numbers::Каталог|more::Лента"></sf-segmented>
+<div id="bottom-scope" class="m-top-1 flex flex-col gap-1/2" data-sf-density="compact">
+  <sf-list id="orders" label="Заказы" size="1/2"></sf-list>
+  <div id="orders-foot" class="list-foot">
+    <span id="orders-range" class="list-range">1–20 из 340</span>
+    <sf-button id="orders-size" class="list-size" size="1/2" appearance="ghost" scheme="on-surface" text="По 20" icon-end="expand_more" menu='[{"id":"10","text":"По 10"},{"id":"20","text":"По 20"},{"id":"50","text":"По 50"},{"id":"100","text":"По 100"}]'></sf-button>
+    <div class="list-nav"><sf-pagination id="orders-pages" appearance="field" size="1/2" total="340" page-size="20" current="1" aria-label="Страницы заказов"></sf-pagination></div>
+  </div>
+</div>

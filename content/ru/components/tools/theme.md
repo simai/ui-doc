@@ -6,7 +6,7 @@ profile: reference
 
 # Тема
 
-:badge[sf-theme-button]{variant=tonal scheme=primary size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-theme-button]{variant=outline scheme=on-surface size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
 
 Тема задаёт светлое или тёмное оформление всего интерфейса. Без сохранённого
 выбора Framework следует системной настройке пользователя; кнопка темы

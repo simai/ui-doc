@@ -5,11 +5,12 @@ description: "Показывает и правит поля одного объ�
 
 # Представление свойств
 
-:badge[sf-view-properties]{variant=tonal scheme=primary size=1/2} :badge[1.16.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-view-properties]{variant=outline scheme=on-surface size=1/2} :badge[1.16.2]{variant=outline scheme=on-surface size=1/2}
 
-`<sf-view-properties>` — карточка одного объекта: поля сгруппированы в области,
-области — в разделы, а каждое поле рисуется отрисовщиком своего типа. Берите
-его для записи, настроек сайта или профиля; множество записей показывает
+Представление свойств — карточка одного объекта: заказа, товара, профиля,
+настроек сайта. Поля сгруппированы в области, области — в разделы; человек
+читает карточку и правит область целиком, а приложение сохраняет её одной
+записью. Берите его для одной записи; множество записей показывает
 [представление данных](/ru/pro/admin/table/).
 
 **Компонент Pro.** Входит в [SIMAI Pro](/ru/pro/), а не в выпуск SIMAI
@@ -99,6 +100,12 @@ Framework: поставляется пакетом `pro` из репозитор
 и держит введённое, пока приложение не уберёт панель. Поэтому ответ «нет» на
 вопрос приложения ничего не теряет. Эти режимы требуют порта версии `1.12.0`.
 
+В примере режим `edit`: все области открыты, а «Сохранить» отправляет весь
+заказ одним `record.save`.
+
+:::example {id="smart-components/property-view/edit" label="Заказ в режиме правки" preview=sandbox log="sf-property-view-state sf-property-view-cancel" log_console=true log_open=false}
+:::
+
 ### Сохранение области
 
 Область правится и сохраняется целиком: одно нажатие кнопки — одно намерение
@@ -134,6 +141,12 @@ Framework: поставляется пакетом `pro` из репозитор
 { answer: 'refused', reason: 'confirm_required',
   confirm: { summary: 'Тип договора сменится у 12 записей', digest: 'c41f…' } }
 ```
+
+Измените тип товара и сохраните: приложение сначала просит подтверждения,
+и только после него сохранение проходит.
+
+:::example {id="smart-components/property-view/confirm" label="Сохранение с подтверждением" preview=sandbox log="sf-property-view-state" log_console=true log_open=false}
+:::
 
 ### Структура записи
 
@@ -175,6 +188,12 @@ Framework: поставляется пакетом `pro` из репозитор
 (`back-label`).
 
 Шапка и подвал закреплены: прокручиваются только колонки разделов и полей.
+
+Разделы примера стоят вкладками. Квартира в «Доставке» и область
+«Служебное» в «Истории» — редкие: их открывает «Показать редкие поля».
+
+:::example {id="smart-components/property-view/sections" label="Разделы вкладками и редкие поля" preview=sandbox log="sf-property-view-state" log_console=true log_open=false}
+:::
 
 ### Панель рядом со списком
 
@@ -229,10 +248,15 @@ view.addEventListener('sf-property-view-close', async (event) => {
 ```
 
 Значение-ссылка поднимает `record.open` и затем отправляет
-`sf-property-view-open` с `{field, value, answer}`; прежнее имя
-`sf-property-view-open-record` приходит следом до 2026-12-01. Смена состояния
+`sf-property-view-open` с `{field, value, answer}`. Смена состояния
 карточки (загрузка, готово, правка, ошибка) отправляет
 `sf-property-view-state` с `{state, message}`.
+
+Закройте панель крестиком или `Escape`: журнал покажет причину и число
+несохранённых полей, а скрывает панель страница.
+
+:::example {id="smart-components/property-view/panel" label="Панель заказа и её закрытие" preview=sandbox log="sf-property-view-close" log_console=true log_open=false}
+:::
 
 ### Именованные виды
 
@@ -282,6 +306,14 @@ view: {
 | `view.rename` | изменена подпись | запись; идентификатор не меняется |
 | `view.delete` | вид удалён | запись через вид, который стал текущим |
 
+В примере три общих вида карточки товара: «Обычный» прячет себестоимость
+и поставщика, «Для продаж» ставит цену и остаток первыми, «Экспертный»
+показывает все поля. В режиме «Настроить вид» список видов можно дополнить,
+переименовать и сократить; журнал показывает намерения.
+
+:::example {id="smart-components/property-view/views" label="Виды карточки товара" preview=sandbox log_console=true log_open=false}
+:::
+
 ### Расстановка вида
 
 Если приложение заявило возможность `view-settings` и человек вправе менять
@@ -309,6 +341,14 @@ view: {
 перечитывает раскладку и говорит об этом (`view-conflict-text`). Слой, который
 человеку писать нельзя, показан недоступным с причиной от приложения.
 
+В примере общий вид отдела прячет поле «Юрист», и менять его человеку
+нельзя. Нажмите «Настроить вид»: перенесите поле, переименуйте область,
+уберите поле в «Не размещённые» — каждое изменение уходит в личный слой
+намерением `view.save`. «Сбросить» убирает личный слой.
+
+:::example {id="smart-components/property-view/layout" label="Расстановка договора" preview=sandbox log_console=true log_open=false}
+:::
+
 ### Поля из справочника
 
 Тип `lookup` — значение из справочника, который хранит приложение:
@@ -323,6 +363,12 @@ view: {
 { key: 'region', label: 'Регион', propertyType: 'lookup', source: 'regions',
   value: { value: 'ru-tat', label: 'Татарстан' } }
 ```
+
+В примере тип склада выбирается из короткого списка на месте, а регион —
+из длинного справочника: варианты приходят от приложения по пять.
+
+:::example {id="smart-components/property-view/lookup" label="Справочники на месте и у приложения" preview=sandbox log="sf-property-view-state" log_console=true log_open=false}
+:::
 
 ### Поля по условию
 
@@ -345,6 +391,12 @@ view: {
       { field: 'valid_until', op: 'empty' } ] } } }
 ```
 
+Откройте правку и смените «Как покупает» на «Розница»: номер и срок договора
+скрываются, а скидка становится недоступной.
+
+:::example {id="smart-components/property-view/when" label="Поля договора по условию" preview=sandbox log="sf-property-view-state" log_console=true log_open=false}
+:::
+
 ### Подсказки полей
 
 `hint` поля рисуется рядом с его подписью как
@@ -353,6 +405,11 @@ view: {
 и вежливо объявляет его. Доступное имя знака — сама подсказка, поэтому при
 фокусе экранный диктор читает то же, что знак открывает. Пакет подключает
 `sf-help-mark` сам.
+
+Нажмите «?» у подписи поля, чтобы прочитать подсказку.
+
+:::example {id="smart-components/property-view/hints" label="Подсказки у полей настроек" preview=sandbox log="sf-property-view-state" log_console=true log_open=false}
+:::
 
 ### Дата и время
 
@@ -368,6 +425,12 @@ view: {
 очищается. День без времени, время без дня или время не в виде чч:мм
 показываются под полем как ошибка, и сохранение ждёт исправления. Поле
 `datetime` с `readonly` только показывается.
+
+Откройте правку сроков акции: день и время правятся рядом, у каждого своё
+имя.
+
+:::example {id="smart-components/property-view/datetime" label="Начало и окончание акции" preview=sandbox log="sf-property-view-state" log_console=true log_open=false}
+:::
 
 ### Подписи
 

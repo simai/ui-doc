@@ -1,0 +1,24 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-empty-state kind="no-data" size="1/2" heading="Уведомлений нет" text="Здесь появятся заказы, ответы и напоминания."></sf-empty-state>
+      <span class="text-1/2 color-on-surface-variant">Уведомлений нет</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-empty-state kind="nothing-found" size="1/2" heading="Непрочитанных нет" text="Все уведомления прочитаны."><sf-button slot="actions" appearance="outline" scheme="on-surface" text="Показать все"></sf-button></sf-empty-state>
+      <span class="text-1/2 color-on-surface-variant">Непрочитанных нет: вернуть все</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <div class="flex"><sf-button-icon icon="notifications" appearance="ghost" scheme="on-surface" badge-count="3" badge-label="3 непрочитанных" aria-label="Уведомления"></sf-button-icon></div>
+      <span class="text-1/2 color-on-surface-variant">Есть непрочитанные: число на колокольчике</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <div class="flex flex-col gap-1" aria-busy="true" aria-label="Загрузка">
+        <sf-skeleton kind="text" width="60%"></sf-skeleton>
+        <sf-skeleton kind="text" width="90%"></sf-skeleton>
+        <sf-skeleton kind="text" width="75%"></sf-skeleton>
+      </div>
+      <span class="text-1/2 color-on-surface-variant">Загрузка: строки-заготовки</span>
+    </div>
+  </div>
+</div>

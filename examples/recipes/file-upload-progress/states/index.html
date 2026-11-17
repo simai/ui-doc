@@ -1,0 +1,35 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-file-upload size="1/2" link-text="Выберите файлы" text="или перетащите их сюда" formats="PDF или JPG, до 20 МБ"></sf-file-upload>
+      <span class="text-1/2 color-on-surface-variant">Пусто: зона и форматы</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-file-upload id="state-unknown" size="1/2" link-text="Выберите файлы"></sf-file-upload>
+      <span class="text-1/2 color-on-surface-variant">Доля ещё не известна: полоса бежит без числа</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-file-upload id="state-error" size="1/2" link-text="Выберите файлы"></sf-file-upload>
+      <span class="text-1/2 color-on-surface-variant">Ошибка: причина своей строкой и «Повторить»</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-progress-run id="state-many" look="notice" label="Загрузка фото" unit="файлов" cancelable></sf-progress-run>
+      <span class="text-1/2 color-on-surface-variant">Много: пачка в углу — «N из M», осталось, отмена</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-progress-run id="state-partial" look="notice" label="Загрузка фото" unit="файлов" retryable></sf-progress-run>
+      <span class="text-1/2 color-on-surface-variant">Итог с ошибками: до крестика, «Повторить»</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <div class="flex items-cross-center gap-1/2">
+        <sf-progress-ring size="1/3" value="64" label="Загрузка договор-поставки-2026.pdf" value-text="64 %"></sf-progress-ring>
+        <span class="min-w-0">договор-поставки-2026.pdf <span class="color-on-surface-variant">· 1,4 из 2,2 МБ</span></span>
+      </div>
+      <span class="text-1/2 color-on-surface-variant">Вложение в сообщении чата: кольцо доли у имени</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-file-upload size="1/2" disabled link-text="Выберите файлы" supporting-text="Добавлять файлы может редактор раздела."></sf-file-upload>
+      <span class="text-1/2 color-on-surface-variant">Нет прав: зона выключена и объясняет почему</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-4">
+    <div class="flex flex-col gap-2 min-w-0">
+      <sf-input-color variant="brand" label="Фирменный цвет" value="#2e7d32" target="#theme-brand-preview"></sf-input-color>
+      <div id="theme-brand-preview" class="flex flex-col gap-1 p-2 radius-surface border border-outline-variant">
+        <span class="text-1">Превью</span>
+        <div class="flex gap-1/3"><sf-button text="Оформить заказ"></sf-button><sf-button appearance="outline" text="В корзину"></sf-button></div>
+      </div>
+      <span class="text-1/2 color-on-surface-variant">variant="brand" — экран «Оформление»</span>
+    </div>
+    <div class="flex flex-col gap-2 min-w-0">
+      <div class="flex items-cross-center gap-1/3">
+        <span class="text-1/2 color-on-surface-variant">Цвет темы</span>
+        <sf-input-color variant="theme" size="1/2" label="Цвет темы" target="#theme-brand-header"></sf-input-color>
+      </div>
+      <div id="theme-brand-header" class="flex items-cross-center gap-1 p-2 radius-surface border border-outline-variant">
+        <sf-button text="Войти"></sf-button>
+      </div>
+      <span class="text-1/2 color-on-surface-variant">variant="theme" — кружок в шапке</span>
+    </div>
+  </div>
+</div>

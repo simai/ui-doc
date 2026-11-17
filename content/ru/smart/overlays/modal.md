@@ -6,7 +6,7 @@ profile: reference
 
 # Модальное окно
 
-:badge[sf-modal]{variant=tonal scheme=primary size=1/2} :badge[1.7.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-modal]{variant=outline scheme=on-surface size=1/2} :badge[1.7.2]{variant=outline scheme=on-surface size=1/2}
 
 Модальное окно показывает одну ограниченную задачу поверх страницы:
 подтверждение, короткую форму, подробности. Пока оно открыто, страница за ним
@@ -84,7 +84,7 @@ profile: reference
 
 ### Свёрнуто
 
-`minimizable` (прежнее имя — `hide="true"`, до 2026-12-01) добавляет
+`minimizable` добавляет
 действие сворачивания. Свёрнутое окно остаётся
 открытым экземпляром, но перестаёт быть видимым интерактивным слоем. Для
 восстановления нужна внешняя кнопка с `data-sf-modal-show`, потому что
@@ -98,7 +98,7 @@ profile: reference
 ### Закрытие
 
 По умолчанию окно закрывается по `Escape`, нажатию на затемнение и кнопке
-закрытия. `dismissible="false"` (прежнее имя — `unclose`, до 2026-12-01) отключает
+закрытия. `dismissible="false"` отключает
 эти пути для обязательного решения; в таком
 окне всегда оставляйте понятные действия. При нескольких открытых окнах
 `Escape`, `Tab` и блокировкой страницы владеет только верхнее.
@@ -201,9 +201,7 @@ profile: reference
 `sf-modal-content-uploaded`.
 
 События всплывают до `document`, как у `sf-drawer`; окно-источник указано в
-`event.detail.modalId`. Прежние имена `modal:before-*`, `modal:after-*`,
-`modal:before-content-upload` и `modal:after-content-upload` приходят до
-2026-12-01 с элементом окна в `event.detail.modal`; `modal:ready` и
+`event.detail.modalId`; `modal:ready` и
 `modal:update` сообщают об отрисовке. Помощники `onBeforeOpen()`,
 `onAfterOpen()` и остальные, а также обработчики, переданные в `SF.create`,
 получают только события своего окна. Обычный слушатель на внешнем окне

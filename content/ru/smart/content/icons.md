@@ -5,7 +5,7 @@ description: "Выводит символ Material Symbols, для которо�
 
 # Иконки
 
-:badge[sf-icon]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-icon]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Иконка выводит один символ Material Symbols по имени, а загружается только
 нужная часть шрифта. Размер, семейство, заливка и толщина задаются атрибутами
@@ -35,17 +35,6 @@ JavaScript.
 
 ## Варианты
 
-### Семейство
-
-`type` • [справочник](#атрибуты)
-
-`type` — семейство знаков: `outlined`, `rounded` или `sharp`. Без него
-действует семейство проекта из `SF_BOOT_CONFIG.icons.type`, а если оно не
-задано — `outlined`. Держите одно семейство во всём интерфейсе.
-
-:::example {id="smart-components/icons/families" label="outlined, rounded и sharp"}
-:::
-
 ### Толщина
 
 `weight` • по умолчанию `400` • [справочник](#атрибуты)
@@ -66,6 +55,24 @@ JavaScript.
 ```
 
 :::example {id="smart-components/icons/fill" label="Контурная и залитая иконка"}
+:::
+
+### Цвет
+
+`class="color-*"` • [Цвет иконки: три роли](/ru/guide/colour/colour-roles/#цвет-иконки-три-роли)
+
+Иконка берёт цвет текста вокруг. Свой цвет задайте утилитой `color-*` на
+самой иконке или на предке. Ролей у иконки три, по весу текста рядом:
+
+- `color-on-surface` — иконка несёт смысл наравне с текстом: в заголовке, в
+  пункте меню;
+- `color-on-surface-variant` — служебная иконка: ручка перетаскивания,
+  «закрыть», подсказка;
+- `color-on-surface-disabled` — элемент недоступен.
+
+Внутри окрашенной кнопки или поля иконка берёт цвет их текста.
+
+:::example {id="smart-components/icons/colour" label="Три роли цвета иконки"}
 :::
 
 ### Размер

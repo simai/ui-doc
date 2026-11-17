@@ -6,7 +6,7 @@ profile: reference
 
 # Кнопки
 
-:badge[sf-button]{variant=tonal scheme=primary size=1/2} :badge[1.12.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button]{variant=outline scheme=on-surface size=1/2} :badge[1.12.0]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка запускает действие на текущей странице: сохраняет изменения, отправляет
 форму или подтверждает выбор. Для перехода на другую страницу берите ссылку, для
@@ -246,10 +246,6 @@ profile: reference
 он только снимает заливку у сочетаний `sf-button--default` с
 `sf-button--primary` и с `sf-button--danger` и спиннера не рисует. Загрузку
 задают классы `loading sf-button-state-loading`.
-
-Переменная `--sf-button-loading-stripe` устарела: Framework её не задаёт,
-а страница, которая задаёт её сама, до 2026-12-01 получает неподвижные полосы
-поверх кнопки в загрузке. Удалите её; цвет спиннера задаёт `--sf-loader--color`.
 
 ## Доступность
 

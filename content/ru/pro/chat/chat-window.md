@@ -5,12 +5,12 @@ description: "Окно чата целиком на порте хоста: сп�
 
 # Окно чата
 
-:badge[sf-chat-window]{variant=tonal scheme=primary size=1/2} :badge[1.14.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-window]{variant=outline scheme=on-surface size=1/2} :badge[1.14.3]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-window>` — окно чата целиком: список разговоров, открытый разговор,
 поле ввода, выбор собеседника и «Мои файлы». Окно собрано из частей —
-[Список разговоров](/ru/pro/chat/thread-list/),
-[Лента сообщений](/ru/pro/chat/message-log/),
+[Список разговоров](/ru/pro/chat/chat-threads/),
+[Лента](/ru/smart/content/list-feed/),
 [Поле чата](/ru/pro/chat/chat-composer/),
 [Выбор собеседника](/ru/pro/chat/chat-interlocutor/) и
 [Сообщение чата](/ru/pro/chat/chat-message/), — и загрузчик
@@ -358,6 +358,6 @@ Escape закрывает его и возвращает фокус на ком�
 
 ## См. также
 
-- [Список разговоров](/ru/pro/chat/thread-list/) — часть окна слева.
-- [Лента сообщений](/ru/pro/chat/message-log/) — лента разговора.
+- [Список разговоров](/ru/pro/chat/chat-threads/) — часть окна слева.
+- [Лента](/ru/smart/content/list-feed/) — лента разговора.
 - [Поле чата](/ru/pro/chat/chat-composer/) — поле вопроса и файлов.

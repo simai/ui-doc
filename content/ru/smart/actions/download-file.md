@@ -5,7 +5,7 @@ description: "Показывает файл для скачивания с им�
 
 # Скачивание файла
 
-:badge[sf-file-download]{variant=tonal scheme=primary size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-download]{variant=outline scheme=on-surface size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
 
 Скачивание файла показывает файл, который можно скачать: знак скачивания,
 имя, тип и размер. С адресом это обычная ссылка на файл, без адреса — кнопка, по которой
@@ -67,7 +67,7 @@ description: "Показывает файл для скачивания с им�
 
 ### Файл готовит приложение
 
-`sf-file-download-download`, `state` • [справочник](#события)
+`sf-file-download-request`, `state` • [справочник](#события)
 
 Без `href` нажатие отправляет событие, и приложение собирает файл: отчёт,
 выгрузку, архив. На это время оно ставит `state="preparing"`: на месте знака
@@ -80,7 +80,7 @@ description: "Показывает файл для скачивания с им�
 :::
 
 ```js
-file.addEventListener('sf-file-download-download', async (event) => {
+file.addEventListener('sf-file-download-request', async (event) => {
   if (file.getAttribute('href')) return;
   event.preventDefault();
   file.setAttribute('state', 'preparing');
@@ -100,6 +100,22 @@ file.addEventListener('sf-file-download-download', async (event) => {
 | `href` | адрес файла; у кнопки без адреса — пустая строка |
 | `fileName` | имя файла |
 
+#### Долгая подготовка
+
+`value`, `cancelable`, `sf-file-download-cancel` • [справочник](#атрибуты)
+
+Если файл готовится долго, сообщайте, сколько уже готово: `value` — доля в
+процентах от 0 до 100. На месте знака рисуется кольцо, рядом — «Готовим…
+45 %». Без `value` крутится индикатор и стоит «Готовим файл…».
+
+`cancelable` ставит рядом со строкой «Отменить», пока файл готовится. Нажатие
+присылает событие `sf-file-download-cancel`: приложение останавливает работу,
+а строка сразу снова готова. Если приложение отменяет это событие, оно само
+возвращает `state="ready"`.
+
+:::example {id="smart-components/download-file/progress" label="Долгая подготовка" preview=sandbox log_console=true log_open=false}
+:::
+
 ## Внешний вид
 
 ### Размер
@@ -112,6 +128,17 @@ file.addEventListener('sf-file-download-download', async (event) => {
 ступени.
 
 :::example {id="smart-components/download-file/sizes" label="Размеры" preview=inline}
+:::
+
+### Во всю ширину
+
+`full-width` • [справочник](#атрибуты)
+
+Без атрибута строка шириной со свой текст, но не шире контейнера.
+`full-width` растягивает её на всю ширину контейнера — так файлы в списке
+вложений стоят ровной колонкой одной ширины.
+
+:::example {id="smart-components/download-file/full-width" label="Во всю ширину" preview=sandbox}
 :::
 
 ### Тип файла

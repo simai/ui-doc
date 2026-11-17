@@ -1,0 +1,27 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <section class="sf-card" aria-busy="true" aria-label="Сведения загружаются">
+        <sf-skeleton kind="text" width="30%"></sf-skeleton>
+        <sf-skeleton kind="text" count="4"></sf-skeleton>
+      </section>
+      <span class="text-1/2 color-on-surface-variant">Загрузка: заготовка раздела на его месте</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-list-description empty-text="Не указан">
+        <script type="application/json" data-sf-settings>{"items": [{"label": "Адрес", "value": "nord-wind.ru"}, {"label": "Ответственный", "value": ""}]}</script>
+      </sf-list-description>
+      <span class="text-1/2 color-on-surface-variant">Пустое значение: «Не указан», не прочерк</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-list-description>
+        <script type="application/json" data-sf-settings>{"items": [{"label": "Сертификат", "value": "Истёк 2 ноября", "status": "error", "hint": "Сайт открывается с предупреждением"}, {"label": "Резервная копия", "value": "Не создана сегодня", "status": "warning"}]}</script>
+      </sf-list-description>
+      <span class="text-1/2 color-on-surface-variant">Проблема: статус у строки и пояснение</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-empty-state kind="no-access" size="1/2" heading="Нет доступа к сайту" text="Попросите владельца сайта добавить вас в команду."></sf-empty-state>
+      <span class="text-1/2 color-on-surface-variant">Нет доступа: что делать дальше</span>
+    </div>
+  </div>
+</div>

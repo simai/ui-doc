@@ -6,7 +6,7 @@ profile: reference
 
 # Рисунок
 
-:badge[sf-figure]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-figure]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Рисунок показывает картинку, видео или иллюстрацию в заданной пропорции и
 подпись под ней. Берите его, когда изображению нужна подпись или ровная рамка
@@ -50,6 +50,9 @@ profile: reference
 `sf-figure--contain` медиа встаёт в рамку целиком, а остальную часть рамки
 занимает заливка (`--sf-surface-container`): логотип или схема никогда не
 обрезаются.
+
+:::example {id="components/figure/ratios" label="Одна картинка в пяти пропорциях"}
+:::
 
 :::example {id="components/figure/contain" label="Заполнение и вписывание"}
 :::

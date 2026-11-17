@@ -5,7 +5,7 @@ description: "Показывает постоянное сообщение в п
 
 # Уведомление
 
-:badge[sf-alert]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-alert]{variant=outline scheme=on-surface size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Уведомление показывает сообщение, которое остаётся на странице, пока его не
 закроют: предупреждение перед действием, ошибку формы, итог проверки. Для
@@ -73,6 +73,20 @@ description: "Показывает постоянное сообщение в п
 `secondary-action-text` — второстепенную, `closable` — кнопку закрытия.
 
 :::example {id="smart-components/alert/composition" label="Части уведомления"}
+:::
+
+### Действия в строке и под текстом
+
+`actions-layout` • по умолчанию `auto` • [справочник](#атрибуты)
+
+Кнопки действий стоят в строке с текстом, пока уведомление достаточно
+широкое, и уходят под текст, когда оно уже (`auto`). `actions-layout="under"`
+ставит их под текст всегда — для длинного пояснения и двух кнопок.
+
+Ссылка в тексте уведомления бывает только одна — «Узнать больше», переход к
+справке. Любое другое действие — кнопкой.
+
+:::example {id="smart-components/alert/actions-layout" label="Кнопка в строке и под текстом"}
 :::
 
 ## Поведение

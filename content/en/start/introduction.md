@@ -8,4 +8,4 @@ This section helps you quickly spin up SF UI and understand what to do next. Sta
 - [Project setup](/en/start/project-setup/) — structure, environment, and useful commands.
 - Loader — SFLoader architecture and settings.
 
-After starting, continue with [Fundamentals](/ru/guide/) and the [Utilities reference](/en/utilities/).
+After starting, continue with [Fundamentals](/ru/guide/) and the [Utilities reference](/ru/utilities/).

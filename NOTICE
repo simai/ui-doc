@@ -4,7 +4,10 @@ Copyright 2024-2026 Rim Zabarov and contributors
 Source code, configuration, scripts, templates and code examples in this
 repository are licensed under the Apache License, Version 2.0 (LICENSE).
 Original documentation prose and images in content/ are licensed under
-CC BY 4.0 (LICENSE-CONTENT.md).
+CC BY 4.0 (LICENSE-CONTENT.md). The illustrations in assets/illustrations/
+and their copies in examples/*/assets/ are drawn by the script
+assets/illustrations/generate.mjs (Apache 2.0) and are licensed under
+CC BY 4.0 as documentation images.
 
 "SIMAI" and "SIMAI Framework" are names of the SIMAI project. The licences
 above grant no right to use them, except as needed to describe the origin

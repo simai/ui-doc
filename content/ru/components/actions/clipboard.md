@@ -6,7 +6,7 @@ profile: reference
 
 # Копирование
 
-:badge[sf-clipboard]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-clipboard]{variant=outline scheme=on-surface size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
 
 Любая кнопка может положить в буфер обмена готовое значение или текст другого
 элемента: команду, ключ, код заказа. Ставьте её рядом с текстом, который
@@ -82,9 +82,8 @@ profile: reference
 Пока идёт запись в буфер, скрипт ставит кнопке `aria-disabled="true"`:
 повторное нажатие ничего не делает. После записи атрибут снимается.
 
-Приглушённый вид такой кнопки (цвет недоступного, без отклика на наведение)
-приходит со следующей парой SIMAI Framework; в этой паре кнопка с
-`aria-disabled="true"` ещё откликается на наведение.
+Своего приглушённого вида у такой кнопки нет: на наведение она откликается,
+как обычно.
 
 :::example {id="components/clipboard/state-pending" label="Копирование"}
 :::
@@ -99,7 +98,7 @@ profile: reference
 сдвигаются. Нажмите кнопки в примере: у второй нет источника, и она
 показывает ошибку.
 
-:::example {id="components/clipboard/state-result" label="Результат"}
+:::example {id="components/clipboard/state-result" label="Удачное и неудачное копирование"}
 :::
 
 ## Доступность

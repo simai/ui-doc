@@ -3708,6 +3708,23 @@
       ]
     },
     {
+      "place": "content/ru/smart/content/change.md",
+      "units": [
+        {
+          "id": "smart.change",
+          "version": "1.0.3",
+          "content_sha256": "1e08e05cfd56be8d967b92328360daad35f25046396f842300350faad76189f1",
+          "source": "simai/ui-source"
+        },
+        {
+          "id": "smart.confirm-change",
+          "version": "1.7.4",
+          "content_sha256": "bb3fc2c41083bbe5ff451942af45aa4d1b895a72c69daa563c21a1ba4b59023f",
+          "source": "simai/ui-source"
+        }
+      ]
+    },
+    {
       "place": "content/ru/smart/content/file-preview.md",
       "units": [
         {
@@ -3804,6 +3821,17 @@
           "id": "smart.tag",
           "version": "1.1.8",
           "content_sha256": "05d3b875529caef0aab868fdeca4b92103bcedd55332a01a2d16768c8a6dbd00",
+          "source": "simai/ui-source"
+        }
+      ]
+    },
+    {
+      "place": "content/ru/smart/content/time.md",
+      "units": [
+        {
+          "id": "smart.time",
+          "version": "1.0.1",
+          "content_sha256": "71dcfe5cb4855d33d3b0b6da956947b7ba7a13c7172b5f1b7b8d399be3b93aad",
           "source": "simai/ui-source"
         }
       ]

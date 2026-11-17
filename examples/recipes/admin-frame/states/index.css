@@ -1,0 +1,4 @@
+.frame { display: grid; grid-template-columns: 16rem minmax(0, 1fr); min-block-size: 16rem; border: var(--sf-px) solid var(--sf-outline-variant); border-radius: var(--sf-radius--surface); overflow: hidden; }
+.frame-side { padding: var(--sf-space-1\/4); background: var(--sf-surface-card); border-inline-end: var(--sf-px) solid var(--sf-outline-variant); min-inline-size: 0; }
+.frame-content { display: flex; flex-direction: column; gap: var(--sf-space-1); padding: var(--sf-space-1); min-inline-size: 0; }
+@media (max-width: 37.5rem) { .frame { grid-template-columns: minmax(0, 1fr); } .frame-side { display: none; } }

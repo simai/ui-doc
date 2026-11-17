@@ -5,11 +5,12 @@ description: "Заголовок с действиями, путь, вкладк
 
 # Панель свойств письма
 
-:badge[sf-mail-inspector]{variant=tonal scheme=primary size=1/2} :badge[1.0.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-inspector]{variant=outline scheme=on-surface size=1/2} :badge[1.0.7]{variant=outline scheme=on-surface size=1/2}
 
-`<sf-mail-inspector>` — правая панель редактора писем: заголовок с действиями,
-путь, вкладки, разделы и все виды полей редактора. Это форма, нарисованная из
-данных. Элемент не знает ни письма, ни хранилища, ни правил адресов и ничего не
+Панель свойств — правая колонка редактора писем, где человек настраивает
+выбранный блок: заголовок с действиями, путь, вкладки, разделы и все виды
+полей редактора. Это форма, нарисованная из данных. Панель
+`<sf-mail-inspector>` не знает ни письма, ни хранилища, ни правил адресов и ничего не
 проверяет: приложение передаёт всё на языке человека — значение, ошибку, подсказку
 и заполнитель каждого поля, — слушает, что человек сделал, и передаёт форму обратно.
 
@@ -38,7 +39,7 @@ Framework: поставляется пакетом `pro` из репозитор
 :::example {id="smart-components/mail-inspector/item" label="Элемент списка: путь и уровень выше"}
 :::
 
-## Применение
+## Поведение
 
 ### Данные
 
@@ -178,87 +179,80 @@ panel.sections = [
 встаёт на изменившийся элемент, когда хост передал список обратно. У ⋯ имя
 «Действия с элементом: <название>», поэтому два элемента не звучат одинаково.
 
-## Справочник API
-
-Раздел собран из манифеста компонента выпуска `ui-994f9db407fa` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
-
-Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
-
-| | |
-|:---|:---|
-| Тег | `<sf-mail-inspector>` |
-| Назначение | Правая панель SIMAI Email Editor как форма, нарисованная из данных: заголовок с действиями, путь уровней, вкладки, раскрывающиеся разделы и все поля редактора. Приложение передаёт форму на языке человека, включая значение, ошибку, подсказку и заполнитель каждого поля; элемент сообщает, что сделал человек, и ничего не меняет. Набранный текст, который приложение не приняло, переживает перерисовку, а перерисовка никогда не уводит фокус и курсор из поля, где человек печатает. |
-| Контракт | `smart.mail-inspector`, версия `1.0.7` |
-| Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
-| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
+## Справочник
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`. Имя шаблона отрисовки; `default` — встроенный.
-- `root-class` — `string`, по умолчанию пусто. Свои CSS-классы для нарисованного элемента.
-- `root-style` — `string`, по умолчанию пусто. Свои стили для нарисованного элемента, например `max-width: 20rem`.
-- `heading` — `string`, по умолчанию пусто. Что редактируется, на языке человека: заголовок панели.
-- `heading-icon` — `string`, по умолчанию пусто. Иконка перед заголовком.
-- `form-key` — `string`, по умолчанию пусто. Чья это форма (например, id блока). Когда он меняется, форма рисуется заново, а текст, набранный для прежней, пропадает.
-- `tab` — `string`, по умолчанию пусто. Показанная вкладка, по id; пусто — первая.
-- `levels` — `array` из `object`, по умолчанию `[]`. Путь сверху вниз: [{text}], последний уровень — где человек сейчас. Два и больше рисуются путём. Один не рисуется, но Escape всё равно просит то, что над ним.
-- `head-actions` — `array`, по умолчанию `[]`. Действия рядом с заголовком, по порядку: любые из duplicate, delete, replace.
-- `notice` — `object`, по умолчанию `{}`. Строка под заголовком: {text, action}. С action у неё есть кнопка с этим названием, которая отправляет notice-action.
-- `tabs` — `array` из `object`, по умолчанию `[]`. Вкладки: {id, label, slot}. Вкладка со slot показывает панель приложения из этого слота; без него — форму (sections). Пусто — форма без вкладок.
-- `sections` — `array` из `object`, по умолчанию `[]`. Форма: {key, title, fields}. Одному разделу раскрытие не нужно, его поля стоят сами по себе. Поле — {kind, path, label, value, error, hint, placeholder, required, disabled, ...}; каждый вид описан в x-registry.contracts.field.
-- `closed-sections` — `array`, по умолчанию `[]`. Ключи разделов, которые закрыл человек. Элемент обновляет список сам; приложение, которое помнит дольше, передаёт его обратно. Ключ, общий для двух форм, помнится в обеих.
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `heading` | строка | пусто | — | Что редактируется, на языке человека: заголовок панели. |
+| `heading-icon` | строка | пусто | — | Иконка перед заголовком. |
+| `form-key` | строка | пусто | — | Чья это форма (например, id блока). Когда он меняется, форма рисуется заново, а текст, набранный для прежней, пропадает. |
+| `tab` | строка | пусто | — | Показанная вкладка, по id; пусто — первая. |
+| `levels` | список: объект | `[]` | — | Путь сверху вниз: [{text}], последний уровень — где человек сейчас. Два и больше рисуются путём. Один не рисуется, но Escape всё равно просит то, что над ним. |
+| `head-actions` | список | `[]` | — | Действия рядом с заголовком, по порядку: любые из duplicate, delete, replace. |
+| `notice` | объект | `{}` | — | Строка под заголовком: {text, action}. С action у неё есть кнопка с этим названием, которая отправляет notice-action. |
+| `tabs` | список: объект | `[]` | — | Вкладки: {id, label, slot}. Вкладка со slot показывает панель приложения из этого слота; без него — форму (sections). Пусто — форма без вкладок. |
+| `sections` | список: объект | `[]` | — | Форма: {key, title, fields}. Одному разделу раскрытие не нужно, его поля стоят сами по себе. Поле — {kind, path, label, value, error, hint, placeholder, required, disabled, ...}; каждый вид описан в x-registry.contracts.field. |
+| `closed-sections` | список | `[]` | — | Ключи разделов, которые закрыл человек. Элемент обновляет список сам; приложение, которое помнит дольше, передаёт его обратно. Ключ, общий для двух форм, помнится в обеих. |
+
+#### Общие для всех компонентов
+
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
+| `root-class` | строка | пусто | — | Свои CSS-классы для нарисованного элемента. |
+| `root-style` | строка | пусто | — | Свои стили для нарисованного элемента, например `max-width: 20rem`. |
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
 ### Методы
 
-- `duplicate()` — возвращает `object`. то же, что «Дублировать»; refused unknown, если head-actions этого не предлагает.
-- `delete()` — возвращает `object`. то же, что «Удалить»; refused unknown, если head-actions этого не предлагает.
-- `replace()` — возвращает `object`. то же, что «Сменить вариант…»; refused unknown, если head-actions этого не предлагает.
-- `levelUp()` — возвращает `object`. то же, что Escape; refused top без уровней.
-- `goToLevel(index: number)` — возвращает `object`. то же, что нажатие на пути; refused unknown.
-- `openTab(id: any)` — возвращает `object`. просит вкладку, как нажатие: отправляет tab, приложение передаёт её обратно; refused unknown.
-- `toggleSection(key: any)` — возвращает `object`. открывает или закрывает раздел, как его заголовок; refused unknown.
-- `itemToggle(path: string, index: number)` — возвращает `object`. то же, что раскрытие элемента; refused unknown.
-- `itemAdd(path: string)` — возвращает `object`. то же, что «Добавить элемент»; refused unknown, full.
-- `itemMove(path: string, index: number, to: number, by: number)` — возвращает `object`. просит переместить элемент на место или на несколько шагов; refused unknown, unchanged.
-- `itemDuplicate(path: string, index: number)` — возвращает `object`. то же, что «Дублировать» под ⋯; refused unknown, full.
-- `itemDelete(path: string, index: number)` — возвращает `object`. то же, что «Удалить» под ⋯; refused unknown, least.
-- `focusItem(path: string, index: number)` — возвращает `object`. ставит фокус на раскрытие элемента после отрисовки; refused unknown без path.
+| Метод | Возвращает | Что делает |
+|:---|:---|:---|
+| `duplicate()` | объект | то же, что «Дублировать»; refused unknown, если head-actions этого не предлагает. |
+| `delete()` | объект | то же, что «Удалить»; refused unknown, если head-actions этого не предлагает. |
+| `replace()` | объект | то же, что «Сменить вариант…»; refused unknown, если head-actions этого не предлагает. |
+| `levelUp()` | объект | то же, что Escape; refused top без уровней. |
+| `goToLevel(index: number)` | объект | то же, что нажатие на пути; refused unknown. |
+| `openTab(id: any)` | объект | просит вкладку, как нажатие: отправляет tab, приложение передаёт её обратно; refused unknown. |
+| `toggleSection(key: any)` | объект | открывает или закрывает раздел, как его заголовок; refused unknown. |
+| `itemToggle(path: string, index: number)` | объект | то же, что раскрытие элемента; refused unknown. |
+| `itemAdd(path: string)` | объект | то же, что «Добавить элемент»; refused unknown, full. |
+| `itemMove(path: string, index: number, to: number, by: number)` | объект | просит переместить элемент на место или на несколько шагов; refused unknown, unchanged. |
+| `itemDuplicate(path: string, index: number)` | объект | то же, что «Дублировать» под ⋯; refused unknown, full. |
+| `itemDelete(path: string, index: number)` | объект | то же, что «Удалить» под ⋯; refused unknown, least. |
+| `focusItem(path: string, index: number)` | объект | ставит фокус на раскрытие элемента после отрисовки; refused unknown без path. |
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+События приходят на сам элемент и всплывают; глаголы в именах — из [общего словаря](/ru/guide/smart-components/names/). Общие события базового элемента — в главе [Модель компонента](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `change` — `detail`: `{ path: string, value: string, typed: boolean }`. Теперь в этом поле это значение: {path, value, typed}.
-- `sf-mail-inspector-attach` — `detail`: `{ path: string, files: array }`. Сохранить эти файлы для этого поля: {path, files}.
-- `sf-mail-inspector-detach` — `detail`: `{ path: string }`. Убрать изображение этого поля: {path}.
-- `sf-mail-inspector-toggle` — `detail`: `{ key: any, open: boolean }`. Этот раздел теперь открыт или закрыт: {key, open}.
-- `sf-mail-inspector-level` — `detail`: `{ index: number }`. Перейти к этому уровню пути: {index}.
-- `sf-mail-inspector-tab` — `detail`: `{ id: any }`. Выбрана эта вкладка: {id}.
-- `sf-mail-inspector-notice-action` — ничего не передаёт. Нажата кнопка сообщения.
-- `sf-mail-inspector-duplicate` — ничего не передаёт. Сделать копию того, что редактируется.
-- `sf-mail-inspector-delete` — ничего не передаёт. Удалить то, что редактируется.
-- `sf-mail-inspector-replace` — ничего не передаёт. Попросили другой вариант того, что редактируется.
-- `sf-mail-inspector-item-toggle` — `detail`: `{ path: string, index: number, open: boolean }`. Открыть или закрыть этот элемент: {path, index, open}.
-- `sf-mail-inspector-item-add` — `detail`: `{ path: string }`. Добавить элемент в этот список: {path}.
-- `sf-mail-inspector-item-move` — `detail`: `{ path: string, from: number, to: number }`. Переместить элемент внутри списка: {path, from, to}.
-- `sf-mail-inspector-item-duplicate` — `detail`: `{ path: string, index: number }`. Сделать копию этого элемента: {path, index}.
-- `sf-mail-inspector-item-delete` — `detail`: `{ path: string, index: number }`. Удалить этот элемент: {path, index}.
+| Событие | `detail` | Когда приходит |
+|:---|:---|:---|
+| `change` | `{ path: string, value: string, typed: boolean }` | Теперь в этом поле это значение: {path, value, typed}. |
+| `sf-mail-inspector-attach` | `{ path: string, files: array }` | Сохранить эти файлы для этого поля: {path, files}. |
+| `sf-mail-inspector-detach` | `{ path: string }` | Убрать изображение этого поля: {path}. |
+| `sf-mail-inspector-toggle` | `{ key: any, open: boolean }` | Этот раздел теперь открыт или закрыт: {key, open}. |
+| `sf-mail-inspector-level` | `{ index: number }` | Перейти к этому уровню пути: {index}. |
+| `sf-mail-inspector-tab` | `{ id: any }` | Выбрана эта вкладка: {id}. |
+| `sf-mail-inspector-notice-action` | пустой объект | Нажата кнопка сообщения. |
+| `sf-mail-inspector-duplicate` | пустой объект | Сделать копию того, что редактируется. |
+| `sf-mail-inspector-delete` | пустой объект | Удалить то, что редактируется. |
+| `sf-mail-inspector-replace` | пустой объект | Попросили другой вариант того, что редактируется. |
+| `sf-mail-inspector-item-toggle` | `{ path: string, index: number, open: boolean }` | Открыть или закрыть этот элемент: {path, index, open}. |
+| `sf-mail-inspector-item-add` | `{ path: string }` | Добавить элемент в этот список: {path}. |
+| `sf-mail-inspector-item-move` | `{ path: string, from: number, to: number }` | Переместить элемент внутри списка: {path, from, to}. |
+| `sf-mail-inspector-item-duplicate` | `{ path: string, index: number }` | Сделать копию этого элемента: {path, index}. |
+| `sf-mail-inspector-item-delete` | `{ path: string, index: number }` | Удалить этот элемент: {path, index}. |
 
-### Доступность
+### О компоненте
 
-- Роль: форма (`form`).
-- Доступное имя: внутренний.
-- Клавиши: `Tab`, `Escape`, `Enter`, `Space`, `Alt+ArrowUp`, `Alt+ArrowDown`, `Shift+F10`.
-- Фокус: Перерисовка оставляет фокус и курсор в поле, где человек печатает. Раскрытие элемента — единственная остановка Tab этого элемента; ⋯ называется «Действия с элементом: <название>», поэтому два элемента не звучат одинаково. После действия со списком фокус переходит на изменившийся элемент, когда приложение передало список обратно.
-
-### Минимальная разметка
-
-```html
-<sf-mail-inspector id="panel" heading="Кнопка"></sf-mail-inspector> <script>panel.sections = [{key: 'content', title: 'Содержимое', fields: [{kind: 'text', path: '/text', label: 'Текст', value: 'Подробнее'}]}];</script>
-```
-
-### Источник
-
-- `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-inspector`
-- `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector`
+| | |
+|:---|:---|
+| Тег | `<sf-mail-inspector>`, контракт `smart.mail-inspector` версии `1.0.7` |
+| Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
+| Доступность | Роль `form`; название компонент ставит сам; с клавиатуры: `Tab`, `Esc`, `Enter`, `Пробел`, `Alt+ArrowUp`, `Alt+ArrowDown`, `Shift+F10`. |
+| Источник | `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-inspector` |
+| Правило классов | `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector` |

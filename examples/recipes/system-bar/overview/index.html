@@ -1,0 +1,15 @@
+<div class="flex flex-col gap-2">
+  <div class="flex"><sf-segmented id="bar-state" size="1/2" aria-label="Что прислал сервер" value="many"
+    items='[{"value":"one","label":"Предупреждение"},{"value":"many","label":"Несколько"},{"value":"error","label":"Ошибка"},{"value":"none","label":"Всё в порядке"}]'></sf-segmented></div>
+  <div class="radius-surface border border-outline-variant overflow-hidden bg-surface-page" data-sf-density="compact">
+    <sf-alert-bar id="bar-main" size="1/2" label="Важные уведомления"></sf-alert-bar>
+    <div class="flex items-cross-center gap-1/2 p-x-1 p-y-1/2 bg-surface-card border-bottom-1 border-bottom-solid border-outline-variant">
+      <span class="grow weight-5">Панель сервера</span>
+      <sf-button size="1/2" appearance="ghost" scheme="on-surface" icon-start="notifications" text="Уведомления"></sf-button>
+    </div>
+    <div class="p-1 flex flex-col gap-1/4">
+      <h3 class="m-0 text-2 weight-5">Сайты</h3>
+      <p class="m-0 text-1/2 color-on-surface-variant">12 сайтов · 3 на PHP 8.3 · последняя копия сегодня в 03:10</p>
+    </div>
+  </div>
+</div>

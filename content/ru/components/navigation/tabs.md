@@ -6,7 +6,7 @@ profile: reference
 
 # Вкладки
 
-:badge[sf-tabs]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tabs]{variant=outline scheme=on-surface size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
 
 Вкладки показывают один из нескольких связанных разделов на месте, без
 перехода на другую страницу. Пункты короткие и относятся к одному объекту;

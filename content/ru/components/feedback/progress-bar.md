@@ -6,7 +6,7 @@ profile: reference
 
 # Прогресс
 
-:badge[sf-progress-bar]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-bar]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Индикатор прогресса показывает ход операции, когда долю выполненного можно
 выразить от 0 до 100 процентов. Для операции без известного процента берите
@@ -66,11 +66,38 @@ profile: reference
 
 Атрибут `data-position` задаёт, где стоит текст: `top` — название в начале и
 число в конце одной строкой над полосой, `inline-end` — число в конце строки
-полосы, `none` — только полоса. Внутри дорожки текста нет. Прежние значения
-`right` и `bottom` работают до 2027-01-01 как `inline-end` и `top`. Число показывайте, когда точное значение важно
-пользователю.
+полосы, `none` — только полоса. Внутри дорожки текста нет. Число
+показывайте, когда точное значение важно пользователю.
 
 :::example {id="components/progress-bar/position" label="Положение значения"}
+:::
+
+## Состояния
+
+### Размер работы неизвестен
+
+`sf-progress-bar--indeterminate` • [справочник](#классы)
+
+Пока размер работы неизвестен, задайте `data-indeterminate="true"`: скрипт
+ставит `sf-progress-bar--indeterminate`, отрезок заливки бежит по дорожке, а
+число не показывается. Когда размер стал известен, уберите атрибут и задайте
+`data-value` — та же полоса заполнится от значения. При системной настройке
+уменьшения движения отрезок стоит на месте.
+
+:::example {id="components/progress-bar/indeterminate" label="Размер работы неизвестен"}
+:::
+
+### Пауза
+
+`sf-progress-bar--paused` • [справочник](#классы)
+
+`data-paused="true"` показывает, что работа остановлена: скрипт ставит
+`sf-progress-bar--paused`, и бегущий отрезок неопределённой полосы
+замирает. Цвет предупреждения задайте сами — `data-tone="warning"`, а
+`data-value-text` пусть скажет экранному диктору «35 %, на паузе». Рядом
+напишите словами, почему работа стоит и как её продолжить.
+
+:::example {id="components/progress-bar/paused" label="Работа на паузе"}
 :::
 
 ## Доступность
@@ -94,7 +121,7 @@ profile: reference
 `SF.ProgressBar.getState(element)` возвращает текущие значения этих полей.
 Обе функции принимают блок или любой элемент внутри него.
 
-:::example {id="components/progress-bar/update" label="Изменение"}
+:::example {id="components/progress-bar/update" label="Изменение значения из скрипта"}
 :::
 
 ```js

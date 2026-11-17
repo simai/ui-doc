@@ -1,0 +1,11 @@
+<div class="grid grid-col-1 cq-md:grid-col-2 gap-3 query-container" data-sf-density="compact">
+  <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+    <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — у готовых цветов есть названия</span></figcaption>
+    <div class="flex-1 p-2"><sf-input-color variant="brand" label="Фирменный цвет" value="#e8a33d" swatches="#0b57d0|Синий SIMAI, #e8a33d|Логотип, #1a7f37|Зелёный" target="#none-a"></sf-input-color></div>
+  </figure>
+  <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+    <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — без названий человек слышит и видит только код цвета</span></figcaption>
+    <div class="flex-1 p-2"><sf-input-color variant="brand" label="Фирменный цвет" value="#e8a33d" swatches="#0b57d0, #e8a33d, #1a7f37" target="#none-b"></sf-input-color></div>
+  </figure>
+</div>
+<div id="none-a" hidden></div><div id="none-b" hidden></div>

@@ -16,6 +16,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Скачивание файла](/ru/smart/actions/download-file/)
 - [Кнопка копирования](/ru/smart/actions/copy-button/)
 - [Подтверждение](/ru/smart/actions/confirm/)
+- [Подтверждение изменения](/ru/smart/actions/confirm-change/)
 
 ## Формы и ввод
 
@@ -33,7 +34,6 @@ description: "Смарт-компоненты по задачам интерфе
 - [Код страны](/ru/smart/forms/country-code/)
 - [Код подтверждения](/ru/smart/forms/code-input/)
 - [Цвет](/ru/smart/forms/color/)
-- [Генератор темы](/ru/smart/forms/theme-generator/)
 - [Загрузка файлов](/ru/smart/forms/file-upload/)
 - [Поле изображения](/ru/smart/forms/image-field/)
 
@@ -47,7 +47,6 @@ description: "Смарт-компоненты по задачам интерфе
 - [Вкладки](/ru/smart/navigation/tabs/)
 - [Шаги](/ru/smart/navigation/steps/)
 - [Дерево](/ru/smart/navigation/tree/)
-- [Элемент дерева](/ru/smart/navigation/tree-item/)
 - [Выпадающий список](/ru/smart/navigation/dropdown/)
 - [Контекстное меню](/ru/smart/navigation/context-menu/)
 - [Настройки](/ru/smart/navigation/settings/)
@@ -83,6 +82,8 @@ description: "Смарт-компоненты по задачам интерфе
 - [Плитка показателя](/ru/smart/content/tile-metric/) — Одно важное число на панели: значение, изменение за период, предел со шкалой и состояние.
 - [Список сведений](/ru/smart/content/list-description/) — Факты парами «подпись — значение»: сводка сайта, сведения о сервере, параметры задания.
 - [Хронология](/ru/smart/content/list-timeline/) — Короткая история событий на линии, по дням: последние действия, журнал, история записи.
+- [Время](/ru/smart/content/time/) — Момент времени так, как удобно месту, с точной датой в подсказке.
+- [Изменение](/ru/smart/content/change/) — Изменение поля текстом: «было → стало» в предложении, списком или блоками.
 - [Галерея](/ru/smart/content/gallery/)
 - [Предпросмотр файла](/ru/smart/content/file-preview/)
 - [Справочная ссылка](/ru/smart/content/reference-link/)

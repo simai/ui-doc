@@ -5,7 +5,7 @@ description: "Список проблем, которым нужен челов�
 
 # Требует внимания
 
-:badge[sf-list-attention]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-attention]{variant=outline scheme=on-surface size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
 
 Список проблем, которые ждут человека, на обзорном экране: здоровье сервера,
 проверки сайта, ошибки импорта и переноса, готовность к обновлению,
@@ -69,15 +69,16 @@ description: "Список проблем, которым нужен челов�
 :::example {id="smart-components/list-attention/heading" label="Заголовок по умолчанию и свой" preview=sandbox}
 :::
 
-### Размер
+### Плотность
 
-`size` • по умолчанию `1` • [справочник](#атрибуты)
+`data-sf-density` на контейнере • [плотность](/ru/guide/size-and-type/density/)
 
-`1` — для основной колонки страницы, `1/2` — для боковой панели. От размера
-зависят текст, иконка, кнопка действия и высота строки: строка в одну линию
-высотой с поле того же размера.
+Своего размера у списка нет: он берёт плотность места, где стоит. В
+основной колонке страницы — обычная плотность, в боковой панели и на
+сводке — `data-sf-density="compact"` на контейнере: текст, значок, кнопка
+действия и строка становятся меньше вместе с соседними компонентами.
 
-:::example {id="smart-components/list-attention/sizes" label="Размеры 1 и 1/2" preview=sandbox}
+:::example {id="smart-components/list-attention/sizes" label="Обычная и компактная плотность" preview=sandbox}
 :::
 
 ## Состояния

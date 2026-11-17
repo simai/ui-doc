@@ -6,7 +6,7 @@ profile: reference
 
 # Эмодзи
 
-:badge[sf-emoji]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-emoji]{variant=outline scheme=on-surface size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
 
 Цветной эмодзи того же размера, что и текст вокруг: символ стоит в строке
 ровно и не раздвигает строки. Берите его для эмоциональных акцентов в тексте; статус и действия
@@ -45,7 +45,7 @@ profile: reference
 - Декоративный символ скрывайте: `aria-hidden="true"`.
 - Не сообщайте статус, ошибку или действие только emoji: рядом нужен текст.
 
-:::example {id="components/emoji/semantics" label="Доступность"}
+:::example {id="components/emoji/semantics" label="Смысловой и декоративный emoji"}
 :::
 
 ## JavaScript

@@ -1,0 +1,10 @@
+<div class="grid grid-col-1 cq-md:grid-col-2 gap-3 query-container">
+  <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+    <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — цена и срок у названия, видно сразу</span></figcaption>
+    <div class="flex-1 p-2"><sf-input-choice label="Доставка" layout="list" value="pickup" items='[{"value":"courier","label":"Курьером","price":"350 ₽","term":"2–3 дня"},{"value":"pickup","label":"Пункт выдачи","price":"150 ₽","term":"1–2 дня"}]'></sf-input-choice></div>
+  </figure>
+  <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+    <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — цена спрятана, выбирать приходится вслепую</span></figcaption>
+    <div class="flex-1 p-2"><sf-dropdown label="Доставка" search="false" options='[{"text":"Курьером","value":"courier"},{"text":"Пункт выдачи","value":"pickup","selected":true}]'></sf-dropdown></div>
+  </figure>
+</div>

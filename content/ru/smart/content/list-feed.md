@@ -5,7 +5,7 @@ description: "Прокручиваемая колонка записей, кот
 
 # Лента
 
-:badge[sf-list-feed]{variant=tonal scheme=primary size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-feed]{variant=outline scheme=on-surface size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
 
 Лента — прокручиваемая колонка записей, которую читают от новой записи внизу:
 переписка, комментарии к задаче, история действий, журнал, ход выполнения
@@ -220,7 +220,5 @@ feed.addEventListener('sf-list-feed-load-more', async (event) => {
 ## См. также
 
 - [Список](/ru/smart/content/list/) — список, с которым что-то делают.
-- [Лента сообщений](/ru/pro/chat/message-log/) — лента сообщений чата в пакете
-  Pro.
 - [Положение чтения](/ru/guide/functions/screen/reading-position/) — `SF.readingPosition`,
   правило, на котором построена лента.

@@ -6,7 +6,7 @@ profile: reference
 
 # Код страны
 
-:badge[sf-country-code]{variant=tonal scheme=primary size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-country-code]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Поле кода страны принимает номер телефона вместе с международным кодом: флаг
 показывает страну, список позволяет её сменить, маска форматирует номер по
@@ -73,7 +73,7 @@ profile: reference
 оператора или город в скобки. Своя маска для всех стран задаётся в
 `data-mask-pattern` вместе с `data-use-country-masks="false"`.
 
-:::example {id="components/country-code/masks" label="Маска"}
+:::example {id="components/country-code/masks" label="Поле без маски и с маской страны"}
 :::
 
 ### Свой список стран

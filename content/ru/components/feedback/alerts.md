@@ -6,7 +6,7 @@ profile: reference
 
 # Уведомления
 
-:badge[sf-alert]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-alert]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Уведомление сообщает о состоянии этой страницы или её раздела: подсказку,
 предупреждение, ошибку или подтверждение результата. Оно стоит в потоке
@@ -42,8 +42,7 @@ profile: reference
 `sf-alert--neutral`, `sf-alert--info`, `sf-alert--success`,
 `sf-alert--warning`, `sf-alert--error` — общий словарь статусов Framework.
 Для обычной подсказки берите `neutral`; остальные выбирайте по смыслу
-сообщения, а не по желаемому цвету. Классы `sf-alert--clear` и
-`sf-alert--danger` — другие имена `neutral` и `error`.
+сообщения, а не по желаемому цвету.
 
 :::example {id="components/alerts/overview" label="Статусы уведомления"}
 :::
@@ -58,7 +57,7 @@ profile: reference
 `sf-alert--flat` — только заливкой, внутри поверхности, границы которой задаёт
 окружающий контейнер. В одном сценарии держите один вид.
 
-:::example {id="components/alerts/appearance" label="Вид"}
+:::example {id="components/alerts/appearance" label="Виды уведомления"}
 :::
 
 ### Действия
@@ -126,10 +125,9 @@ sf-alert--outlined`: только граница, без кнопки закры
 `trigger`. Недоступная кнопка (`disabled` или `aria-disabled="true"`) событий
 не вызывает. На время удаления блок получает класс `closing` и плавно гаснет на
 токенах движения; при системной настройке уменьшения движения блок удаляется
-сразу. `data-alert-action`, `data-alert-close` и класс `sf-alert--close` —
-другие имена тех же атрибутов.
+сразу.
 
-:::example {id="components/alerts/actions" label="Действия" preview=sandbox log="sf-alert-action sf-alert-close" log_console=true log_open=false}
+:::example {id="components/alerts/actions" label="Уведомление с кнопкой «Скачать»" preview=sandbox log="sf-alert-action sf-alert-close" log_console=true log_open=false}
 :::
 
 Подписка на действие:

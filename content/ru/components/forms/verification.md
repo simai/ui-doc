@@ -6,7 +6,7 @@ profile: reference
 
 # Код подтверждения
 
-:badge[sf-verification]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-verification]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Код подтверждения принимает одноразовый код из сообщения или приложения и
 показывает его по отдельным ячейкам. Под ячейками лежит одно нативное поле,
@@ -83,7 +83,7 @@ profile: reference
 `data-length` задаёт число ячеек и предел ввода. Без него длина берётся из
 `maxlength` поля, а без обоих — шесть символов.
 
-:::example {id="components/verification/length" label="Длина"}
+:::example {id="components/verification/length" label="Код из четырёх и из шести символов"}
 :::
 
 ## Состояния

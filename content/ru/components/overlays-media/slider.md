@@ -6,7 +6,7 @@ profile: reference
 
 # Слайдер контента
 
-:badge[sf-slider]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-slider]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Слайдер контента показывает изображения, карточки или другие равноправные
 слайды по одному и листает их стрелками и точками.
@@ -69,7 +69,7 @@ profile: reference
 `sf-slider-arrows` без модификатора — тихие стрелки без подложки, для
 карточек на фоне страницы. `sf-slider-arrows--plate` кладёт каждую стрелку на
 плашку всплывающего слоя с тенью, чтобы она читалась поверх любого
-изображения. `sf-slider-arrows--light` и `--dark` — прежние имена.
+изображения.
 
 :::example {id="components/slider/arrows" label="Стрелки"}
 :::
@@ -83,8 +83,6 @@ profile: reference
 `sf-slider-dots--bare` ставит в начало строки под карточками. Точки — одна
 остановка клавиши Tab: дальше по слайдам ведут стрелки, Home и End. От восьми
 слайдов вместо точек стоит счётчик «2 / 12» (`sf-slider-dots--count`).
-Модификаторы `--primary`, `--clear`, `--framed`, `--light`, `--dark` и
-`--size-1`/`--size-2` — прежние имена.
 
 :::example {id="components/slider/dots" label="Точки на плашке и под карточками"}
 :::
@@ -166,7 +164,7 @@ swiper?.on('slideChange', () => console.log(swiper.realIndex));
 ```
 
 `bind` возвращает `null`, пока движок Swiper не загружен; скрипт подключает
-слайдер сам, когда он появится. Экземпляр создаёт события `slideChange`,
+слайдер сам, как только движок загрузится. Экземпляр создаёт события `slideChange`,
 `transitionEnd`, `autoplayStart` и `autoplayStop` и даёт методы
 `slideTo(index)`, `slideNext()` и `slidePrev()`.
 

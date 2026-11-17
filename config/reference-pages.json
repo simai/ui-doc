@@ -384,18 +384,12 @@
         "sf-tabs"
       ]
     },
-    "components/navigation/tree-item.md": {
-      "kind": "component",
-      "component": "tree-item",
-      "blocks": [
-        "sf-tree-item"
-      ]
-    },
     "components/navigation/tree.md": {
       "kind": "component",
       "component": "tree",
       "blocks": [
-        "sf-tree"
+        "sf-tree",
+        "sf-tree-item"
       ]
     },
     "components/overlays-media/carousel.md": {
@@ -561,6 +555,14 @@
       "kind": "smart",
       "standard": 3
     },
+    "smart/content/time.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/content/change.md": {
+      "kind": "smart",
+      "standard": 3
+    },
     "smart/content/list-description.md": {
       "kind": "smart",
       "standard": 3
@@ -678,10 +680,6 @@
       "standard": 3
     },
     "smart/navigation/tabs.md": {
-      "kind": "smart",
-      "standard": 3
-    },
-    "smart/navigation/tree-item.md": {
       "kind": "smart",
       "standard": 3
     },
@@ -1977,14 +1975,9 @@
       "kind": "smart",
       "standard": 4
     },
-    "pro/admin/change-confirm.md": {
+    "smart/actions/confirm-change.md": {
       "kind": "smart",
       "standard": 2
-    },
-    "pro/chat/message-log.md": {
-      "kind": "smart",
-      "standard": 2,
-      "alias_of": "sf-list-feed"
     },
     "pro/chat/chat-composer.md": {
       "kind": "smart",
@@ -2012,25 +2005,25 @@
     },
     "pro/mail/mail-letters.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
     "pro/mail/mail-library.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
     "pro/mail/mail-structure.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
     "pro/mail/mail-inspector.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
     "pro/mail/mail-canvas.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
-    "pro/editor/content-editor.md": {
+    "pro/editor/editor-content.md": {
       "kind": "smart",
       "standard": 2
     },
@@ -2042,7 +2035,7 @@
       "kind": "smart",
       "standard": 3
     },
-    "pro/chat/thread-list.md": {
+    "pro/chat/chat-threads.md": {
       "kind": "smart",
       "standard": 2
     },
@@ -2067,10 +2060,6 @@
       "standard": 4
     },
     "smart/navigation/menu.md": {
-      "kind": "smart",
-      "standard": 3
-    },
-    "smart/forms/theme-generator.md": {
       "kind": "smart",
       "standard": 3
     },

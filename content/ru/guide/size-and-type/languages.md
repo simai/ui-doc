@@ -42,12 +42,12 @@ description: "Как смарт-компоненты выбирают язык, 
 добавляется снаружи, и фреймворку не нужно о нём знать заранее.
 
 ```js
-SF.language.registerAll('tr', {
-  'sf-pagination': { pagesLabel: 'Sayfalar:', totalLabel: 'Toplam:' },
-  'sf-tag': { remove: 'Kaldır' },
+SF.language.registerAll('de', {
+  'sf-pagination': { pagesLabel: 'Seiten:', totalLabel: 'Gesamt:' },
+  'sf-tag': { remove: 'Entfernen' },
 });
 
-SF.language.use('tr');   // переключиться сейчас, без перезагрузки
+SF.language.use('de');   // переключиться сейчас, без перезагрузки
 SF.language.use(null);   // снова следовать за страницей
 ```
 

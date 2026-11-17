@@ -5,7 +5,7 @@ description: "Даёт выбрать или перетащить файлы и 
 
 # Загрузка файлов
 
-:badge[sf-file-upload]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-upload]{variant=outline scheme=on-surface size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
 
 Загрузка файлов даёт выбрать файлы в системном окне или перетащить их и
 показывает список выбранных файлов с прогрессом и состоянием передачи. Сами
@@ -70,6 +70,20 @@ description: "Даёт выбрать или перетащить файлы и 
 заменяет список файлов.
 
 :::example {id="components/file-upload/smart-selection" label="PDF и Word"}
+:::
+
+### Ограничения
+
+`max-files`, `max-size`, `max-total-size`, `required` • [справочник](#атрибуты)
+
+`max-files` — сколько файлов самое большее держит поле, `max-size` —
+наибольший размер одного файла, `max-total-size` — всех файлов вместе;
+размеры — в байтах, `0` — без предела. Файл, который не проходит, не
+добавляется, а под полем написано почему. `required` не даёт отправить
+форму без файла: «Добавьте файл» или, при `multiple`, «Добавьте хотя бы один
+файл». Пределы назовите в тексте поля, чтобы человек знал их заранее.
+
+:::example {id="smart-components/file-upload/limits" label="До трёх файлов по 5 МБ" log="sf-file-upload-rejected" log_open=false}
 :::
 
 ### Оформление

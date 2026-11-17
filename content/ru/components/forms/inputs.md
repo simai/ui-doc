@@ -6,7 +6,7 @@ profile: reference
 
 # Текстовые поля
 
-:badge[sf-input]{variant=tonal scheme=primary size=1/2} :badge[1.6.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input]{variant=outline scheme=on-surface size=1/2} :badge[1.6.1]{variant=outline scheme=on-surface size=1/2}
 
 Текстовое поле принимает короткое значение в одну строку: имя, адрес почты,
 пароль или поисковый запрос. Для текста с переносами строк берите

@@ -324,7 +324,7 @@ Loader определяет его как псевдоним нового, по�
 | `sf-data-view` | `sf-view` |
 
 `sf-change-confirm` при этом перешёл из пакета `pro` в выпуск SIMAI
-Framework (см. [Подтверждение изменения](/ru/pro/admin/change-confirm/)).
+Framework (см. [Подтверждение изменения](/ru/smart/actions/confirm-change/)).
 
 ## Новые имена теней
 

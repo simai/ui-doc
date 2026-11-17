@@ -1,0 +1,16 @@
+<div class="flex flex-col gap-2" data-sf-density="compact">
+  <div class="flex"><sf-segmented id="start-state" size="1/2" aria-label="Что показать" value="some"
+    items='[{"value":"none","label":"Начало"},{"value":"some","label":"3 из 5"},{"value":"all","label":"Всё готово"}]'></sf-segmented></div>
+  <section id="start-card" class="sf-card max-w-g8 flex flex-col gap-1" aria-labelledby="start-title">
+    <div class="flex justify-between items-cross-baseline gap-1">
+      <h3 id="start-title" class="m-0 text-1 weight-6" tabindex="-1">Первые шаги</h3>
+      <span id="start-count" class="text-1/2 color-on-surface-variant" aria-hidden="true">3 из 5</span>
+    </div>
+    <p id="start-lead" class="m-0 text-1/2 color-on-surface-variant">Сайт заработает, когда сделаете эти пять дел. Порядок любой.</p>
+    <sf-progress-bar id="start-bar" value="60" label="Первые шаги" value-text="3 из 5 задач"></sf-progress-bar>
+    <sf-list id="start-list" label="Задачи для начала"></sf-list>
+    <div class="flex justify-end"><sf-button id="start-hide" appearance="ghost" scheme="on-surface" text="Скрыть список"></sf-button></div>
+  </section>
+  <p id="start-hidden" class="m-0 text-1/2 color-on-surface-variant" tabindex="-1" hidden>Список скрыт. Вернуть его — «Помощь → Первые шаги».</p>
+  <p id="start-live" class="sr-only" role="status"></p>
+</div>

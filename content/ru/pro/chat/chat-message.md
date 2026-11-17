@@ -5,7 +5,7 @@ description: "Одно сообщение чата: ответ помощник�
 
 # Сообщение чата
 
-:badge[sf-chat-message]{variant=tonal scheme=primary size=1/2} :badge[1.7.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-message]{variant=outline scheme=on-surface size=1/2} :badge[1.7.7]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-message>` рисует одно сообщение чата: ответ помощника с разметкой,
 источниками, отметкой проверки и оценкой, вопрос человека с файлами, а по
@@ -84,7 +84,7 @@ Framework: поставляется пакетом `pro` из репозитор
 
 ### Сообщение в ленте
 
-Окно чата ставит сообщение в [Ленту сообщений](/ru/pro/chat/message-log/)
+Окно чата ставит сообщение в [Ленту](/ru/smart/content/list-feed/)
 через её `renderMessage`; сама лента о чате ничего не знает. Странице, которой
 нужно одно сообщение — например, для предпросмотра, — элемент ставят сами.
 
@@ -218,6 +218,6 @@ log.renderMessage = (message, {view}) => {
 
 ## См. также
 
-- [Лента сообщений](/ru/pro/chat/message-log/) — лента, в которую встаёт сообщение.
+- [Лента](/ru/smart/content/list-feed/) — лента, в которую встаёт сообщение.
 - [Поле чата](/ru/pro/chat/chat-composer/) — поле вопроса и файлов.
-- [Подтверждение изменения](/ru/pro/admin/change-confirm/) — карточка предложения внутри ответа.
+- [Подтверждение изменения](/ru/smart/actions/confirm-change/) — карточка предложения внутри ответа.

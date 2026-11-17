@@ -5,7 +5,7 @@ description: "Показывает выбранный или прикреплё�
 
 # Предпросмотр файла
 
-:badge[sf-file-preview]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-preview]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Предпросмотр файла показывает один уже выбранный или прикреплённый файл:
 значок или миниатюру, имя, размер и две кнопки — скачать и удалить. Выбирают и
@@ -80,7 +80,7 @@ JavaScript.
 `compact` оставляет только ведущий значок высотой со строку списка:
 изображение или расширение файла в плитке. Для файла в ячейке таблицы.
 
-:::example {id="smart-components/file-preview/compact" label="Компактный"}
+:::example {id="smart-components/file-preview/compact" preview=sandbox label="Компактный"}
 :::
 
 ## Состояния

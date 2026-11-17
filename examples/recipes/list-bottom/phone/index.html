@@ -1,0 +1,18 @@
+<div class="flex flex-col gap-2">
+  <figure class="m-0 flex flex-col gap-1/2" data-sf-density="compact">
+    <div class="list-foot">
+      <span class="list-range">1–20 из 340</span>
+      <sf-button class="list-size" size="1/2" appearance="ghost" scheme="on-surface" text="По 20" icon-end="expand_more" menu='[{"id":"20","text":"По 20"},{"id":"50","text":"По 50"}]'></sf-button>
+      <div class="list-nav"><sf-pagination appearance="field" size="1/2" total="340" page-size="20" current="1" aria-label="Страницы заказов"></sf-pagination></div>
+    </div>
+    <figcaption class="text-1/2 color-on-surface-variant">Админка: диапазон и размер сверху, переход снизу</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <div class="list-foot is-center"><sf-pagination appearance="numbers" total="1240" page-size="20" current="5" aria-label="Страницы каталога"></sf-pagination></div>
+    <figcaption class="text-1/2 color-on-surface-variant">Каталог: номера-ссылки</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <div class="list-foot is-center"><sf-pagination appearance="more" total="240" page-size="20" current="1"></sf-pagination></div>
+    <figcaption class="text-1/2 color-on-surface-variant">Лента: «Показать ещё»</figcaption>
+  </figure>
+</div>

@@ -15,8 +15,8 @@ const initialize = async () => {
   if (!list || list.dataset.exampleReady === 'true') return;
   list.dataset.exampleReady = 'true';
   list.setThreads(threads, {hasMore: false});
-  list.addEventListener('sf-thread-list-select', (event) => { list.selected = event.detail.id; });
-  list.addEventListener('sf-thread-list-archive', (event) => { list.removeThread(event.detail.id); });
+  list.addEventListener('sf-chat-threads-open', (event) => { list.selected = event.detail.id; });
+  list.addEventListener('sf-chat-threads-archive', (event) => { list.removeThread(event.detail.id); });
 };
 
 initialize();

@@ -10,13 +10,13 @@ description: "Заголовки и абзацы правятся прямо н�
 массив `content`**, который можно сразу записать в узел.
 
 ```js
-await customElements.whenDefined('sf-inline-editor');
+await customElements.whenDefined('sf-editor-inline');
 canvas.addEventListener('dblclick', (event) => {
   const element = event.target.closest('[data-sf-composition-id]');
   const node = findNode(element.dataset.sfCompositionId); // модель приложения
   SF.Composition.startInlineEdit(element, {content: node.data.content, nodeId: node.id, label: 'Абзац'});
 });
-document.addEventListener('sf-inline-editor-change', (event) => {
+document.addEventListener('sf-editor-inline-change', (event) => {
   saveProperty(event.detail.id, 'content', event.detail.content);
 });
 ```

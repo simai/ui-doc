@@ -1,0 +1,18 @@
+<div class="grid grid-col-1 cq-md:grid-col-2 gap-3 query-container">
+  <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+    <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — тема одной кнопкой по кругу</span></figcaption>
+    <div class="flex flex-1 flex-wrap gap-1/3 items-cross-center p-2">
+      <sf-button-icon icon="search" appearance="ghost" scheme="on-surface" aria-label="Поиск"></sf-button-icon>
+      <sf-language languages="ru en" mode="menu" label="Язык сайта" apply="none"></sf-language>
+      <sf-button-icon theme-cycle appearance="ghost" scheme="on-surface"></sf-button-icon>
+      <sf-button-icon icon="shopping_cart" appearance="ghost" scheme="on-surface" aria-label="Корзина"></sf-button-icon>
+    </div>
+  </figure>
+  <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+    <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — три кнопки темы занимают пол-шапки</span></figcaption>
+    <div class="flex flex-1 flex-wrap gap-1/3 items-cross-center p-2">
+      <sf-button-icon icon="search" appearance="ghost" scheme="on-surface" aria-label="Поиск"></sf-button-icon>
+      <sf-segmented theme-switch aria-label="Тема"></sf-segmented>
+    </div>
+  </figure>
+</div>

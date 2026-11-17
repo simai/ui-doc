@@ -436,7 +436,7 @@
     },
     {
       "from": "ru/components/reference/tree-item",
-      "to": "ru/components/navigation/tree-item"
+      "to": "ru/components/navigation/tree"
     },
     {
       "from": "ru/components/reference/verification",
@@ -520,7 +520,7 @@
     },
     {
       "from": "ru/components/tree-item",
-      "to": "ru/components/navigation/tree-item"
+      "to": "ru/components/navigation/tree"
     },
     {
       "from": "ru/components/verification",
@@ -956,7 +956,7 @@
     },
     {
       "from": "ru/framework-components/reference/tree-item",
-      "to": "ru/components/navigation/tree-item"
+      "to": "ru/components/navigation/tree"
     },
     {
       "from": "ru/framework-components/reference/verification",
@@ -1032,7 +1032,7 @@
     },
     {
       "from": "ru/framework-components/tree-item",
-      "to": "ru/components/navigation/tree-item"
+      "to": "ru/components/navigation/tree"
     },
     {
       "from": "ru/framework-components/verification",
@@ -2168,7 +2168,7 @@
     },
     {
       "from": "ru/smart-components/reference/tree-item",
-      "to": "ru/smart/navigation/tree-item"
+      "to": "ru/smart/navigation/tree"
     },
     {
       "from": "ru/smart-components/templates-and-assets",
@@ -2936,7 +2936,7 @@
     },
     {
       "from": "ru/fundamentals/color/color-generator",
-      "to": "ru/smart/forms/theme-generator"
+      "to": "ru/smart/forms/color"
     },
     {
       "from": "ru/fundamentals/color/color-palette",
@@ -2980,7 +2980,7 @@
     },
     {
       "from": "ru/fundamentals/concept/color/color-generator",
-      "to": "ru/smart/forms/theme-generator"
+      "to": "ru/smart/forms/color"
     },
     {
       "from": "ru/fundamentals/concept/color/color-palette",
@@ -3524,7 +3524,7 @@
     },
     {
       "from": "ru/smart-components/composite/change-confirm",
-      "to": "ru/pro/admin/change-confirm"
+      "to": "ru/smart/actions/confirm-change"
     },
     {
       "from": "ru/smart-components/composite/chat-window",
@@ -3532,7 +3532,7 @@
     },
     {
       "from": "ru/smart-components/composite/thread-list",
-      "to": "ru/pro/chat/thread-list"
+      "to": "ru/pro/chat/chat-threads"
     },
     {
       "from": "ru/smart-components/composite/message-log",
@@ -3572,7 +3572,7 @@
     },
     {
       "from": "ru/smart-components/composite/content-editor",
-      "to": "ru/pro/editor/content-editor"
+      "to": "ru/pro/editor/editor-content"
     },
     {
       "from": "ru/smart/actions/button-group",
@@ -3808,7 +3808,7 @@
     },
     {
       "from": "ru/smart-components/forms/theme-generator",
-      "to": "ru/smart/forms/theme-generator"
+      "to": "ru/smart/forms/color"
     },
     {
       "from": "ru/smart-components",
@@ -3856,7 +3856,7 @@
     },
     {
       "from": "ru/smart-components/navigation/tree-item",
-      "to": "ru/smart/navigation/tree-item"
+      "to": "ru/smart/navigation/tree"
     },
     {
       "from": "ru/smart-components/navigation/tree",
@@ -3897,6 +3897,1062 @@
     {
       "from": "ru/components/feedback/progress-ring",
       "to": "ru/smart/feedback/progress-ring"
+    },
+    {
+      "from": "ru/pro/chat/thread-list",
+      "to": "ru/pro/chat/chat-threads"
+    },
+    {
+      "from": "ru/pro/editor/content-editor",
+      "to": "ru/pro/editor/editor-content"
+    },
+    {
+      "from": "ru/pro/admin/change-confirm",
+      "to": "ru/smart/actions/confirm-change"
+    },
+    {
+      "from": "ru/smart/navigation/tree-item",
+      "to": "ru/smart/navigation/tree"
+    },
+    {
+      "from": "ru/components/navigation/tree-item",
+      "to": "ru/components/navigation/tree"
+    },
+    {
+      "from": "ru/smart/forms/theme-generator",
+      "to": "ru/smart/forms/color"
+    },
+    {
+      "from": "ru/smart/composite/change-confirm",
+      "to": "ru/smart/actions/confirm-change"
+    },
+    {
+      "from": "ru/recipes/empty-state",
+      "to": "ru/recipes/progress/empty-state"
+    },
+    {
+      "from": "ru/recipes/file-upload-progress",
+      "to": "ru/recipes/progress/file-upload-progress"
+    },
+    {
+      "from": "ru/recipes/first-paint",
+      "to": "ru/recipes/progress/first-paint"
+    },
+    {
+      "from": "ru/recipes/order-status",
+      "to": "ru/recipes/progress/order-status"
+    },
+    {
+      "from": "ru/recipes/resource-list",
+      "to": "ru/recipes/find/resource-list"
+    },
+    {
+      "from": "ru/recipes/filter-drawer",
+      "to": "ru/recipes/find/filter-drawer"
+    },
+    {
+      "from": "ru/recipes/list-toolbar",
+      "to": "ru/recipes/find/list-toolbar"
+    },
+    {
+      "from": "ru/recipes/list-bottom",
+      "to": "ru/recipes/find/list-bottom"
+    },
+    {
+      "from": "ru/recipes/choice-cards",
+      "to": "ru/recipes/find/choice-cards"
+    },
+    {
+      "from": "ru/recipes/mail-chat-list",
+      "to": "ru/recipes/find/mail-chat-list"
+    },
+    {
+      "from": "ru/recipes/report-period",
+      "to": "ru/recipes/find/report-period"
+    },
+    {
+      "from": "ru/recipes/record-card",
+      "to": "ru/recipes/edit/record-card"
+    },
+    {
+      "from": "ru/recipes/settings-form",
+      "to": "ru/recipes/edit/settings-form"
+    },
+    {
+      "from": "ru/recipes/save-and-errors",
+      "to": "ru/recipes/edit/save-and-errors"
+    },
+    {
+      "from": "ru/recipes/checkout",
+      "to": "ru/recipes/edit/checkout"
+    },
+    {
+      "from": "ru/recipes/dialog-form",
+      "to": "ru/recipes/edit/dialog-form"
+    },
+    {
+      "from": "ru/recipes/brand-theme",
+      "to": "ru/recipes/edit/brand-theme"
+    },
+    {
+      "from": "ru/recipes/delete",
+      "to": "ru/recipes/remove/delete"
+    },
+    {
+      "from": "ru/recipes/bulk-actions",
+      "to": "ru/recipes/remove/bulk-actions"
+    },
+    {
+      "from": "ru/recipes/dashboard",
+      "to": "ru/recipes/notify/dashboard"
+    },
+    {
+      "from": "ru/recipes/notifications",
+      "to": "ru/recipes/notify/notifications"
+    },
+    {
+      "from": "ru/recipes/copy",
+      "to": "ru/recipes/notify/copy"
+    },
+    {
+      "from": "ru/recipes/which-message",
+      "to": "ru/recipes/notify/which-message"
+    },
+    {
+      "from": "ru/recipes/system-bar",
+      "to": "ru/recipes/notify/system-bar"
+    },
+    {
+      "from": "ru/recipes/admin-frame",
+      "to": "ru/recipes/navigate/admin-frame"
+    },
+    {
+      "from": "ru/recipes/site-header",
+      "to": "ru/recipes/navigate/site-header"
+    },
+    {
+      "from": "ru/recipes/hero-and-promo",
+      "to": "ru/recipes/decorate/hero-and-promo"
+    },
+    {
+      "from": "en/utilities/animation/animation-default-parameters",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/animation/animation-transition-appearing",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/animation/animation-transition-delay",
+      "to": "ru/utilities/animation/animation-transition-delay"
+    },
+    {
+      "from": "en/utilities/animation/animation-transition-duration",
+      "to": "ru/utilities/animation/animation-transition-duration"
+    },
+    {
+      "from": "en/utilities/animation/animation-transition-property",
+      "to": "ru/utilities/animation/animation-transition-property"
+    },
+    {
+      "from": "en/utilities/animation/animation-transition-timing-function",
+      "to": "ru/utilities/animation/animation-transition-timing-function"
+    },
+    {
+      "from": "en/utilities/animation/animation-type",
+      "to": "ru/utilities/animation/animation-type"
+    },
+    {
+      "from": "en/utilities/animation",
+      "to": "ru/utilities/animation"
+    },
+    {
+      "from": "en/utilities/backdrop-filter/backdrop-blur",
+      "to": "ru/utilities/backdrop-filter/backdrop-blur"
+    },
+    {
+      "from": "en/utilities/backdrop-filter/backdrop-contrast",
+      "to": "ru/utilities/backdrop-filter/backdrop-contrast"
+    },
+    {
+      "from": "en/utilities/backdrop-filter/backdrop-grayscale",
+      "to": "ru/utilities/backdrop-filter/backdrop-grayscale"
+    },
+    {
+      "from": "en/utilities/backdrop-filter/backdrop-hue-rotate",
+      "to": "ru/utilities/backdrop-filter/backdrop-hue-rotate"
+    },
+    {
+      "from": "en/utilities/backdrop-filter/backdrop-invert",
+      "to": "ru/utilities/backdrop-filter/backdrop-invert"
+    },
+    {
+      "from": "en/utilities/backdrop-filter/backdrop-opacity",
+      "to": "ru/utilities/backdrop-filter/backdrop-opacity"
+    },
+    {
+      "from": "en/utilities/backdrop-filter/backdrop-saturate",
+      "to": "ru/utilities/backdrop-filter/backdrop-saturate"
+    },
+    {
+      "from": "en/utilities/backdrop-filter/backdrop-sepia",
+      "to": "ru/utilities/backdrop-filter/backdrop-sepia"
+    },
+    {
+      "from": "en/utilities/backdrop-filter",
+      "to": "ru/utilities/backdrop-filter"
+    },
+    {
+      "from": "en/utilities/background-color/background-color",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/background-color",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/background-gradient/background-gradient-background",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/background-gradient/background-gradient-type",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/background-gradient",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/background-image/background-attachment",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/background-image/background-clip",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/background-image/background-origin",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/background-image/background-pattern",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/background-image/background-position",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/background-image/background-repeat",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/background-image/background-size",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/background-image",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/border/border-color",
+      "to": "ru/utilities/border/border-color"
+    },
+    {
+      "from": "en/utilities/border/border-default-parameters",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/border/border-radius",
+      "to": "ru/utilities/border/border-radius"
+    },
+    {
+      "from": "en/utilities/border/border-style",
+      "to": "ru/utilities/border/border-style"
+    },
+    {
+      "from": "en/utilities/border/border-width",
+      "to": "ru/utilities/border/border-width"
+    },
+    {
+      "from": "en/utilities/border",
+      "to": "ru/utilities/border"
+    },
+    {
+      "from": "en/utilities/divider/divider-color",
+      "to": "ru/utilities/divider/divider-color"
+    },
+    {
+      "from": "en/utilities/divider/divider-default-parameters",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/divider/divider-style",
+      "to": "ru/utilities/divider/divider-style"
+    },
+    {
+      "from": "en/utilities/divider/divider-width",
+      "to": "ru/utilities/divider/divider-width"
+    },
+    {
+      "from": "en/utilities/divider",
+      "to": "ru/utilities/divider"
+    },
+    {
+      "from": "en/utilities/filters/filter-blur",
+      "to": "ru/utilities/filters/filter-blur"
+    },
+    {
+      "from": "en/utilities/filters/filter-brightness",
+      "to": "ru/utilities/filters/filter-brightness"
+    },
+    {
+      "from": "en/utilities/filters/filter-contrast",
+      "to": "ru/utilities/filters/filter-contrast"
+    },
+    {
+      "from": "en/utilities/filters/filter-grayscale",
+      "to": "ru/utilities/filters/filter-grayscale"
+    },
+    {
+      "from": "en/utilities/filters/filter-hue-rotate",
+      "to": "ru/utilities/filters/filter-hue-rotate"
+    },
+    {
+      "from": "en/utilities/filters/filter-invert",
+      "to": "ru/utilities/filters/filter-invert"
+    },
+    {
+      "from": "en/utilities/filters/filter-opacity",
+      "to": "ru/utilities/filters/filter-opacity"
+    },
+    {
+      "from": "en/utilities/filters/filter-saturate",
+      "to": "ru/utilities/filters/filter-saturate"
+    },
+    {
+      "from": "en/utilities/filters/filter-sepia",
+      "to": "ru/utilities/filters/filter-sepia"
+    },
+    {
+      "from": "en/utilities/filters",
+      "to": "ru/utilities/filters"
+    },
+    {
+      "from": "en/utilities/flex/flex-basis",
+      "to": "ru/utilities/flex/flex-basis"
+    },
+    {
+      "from": "en/utilities/flex/flex-direction",
+      "to": "ru/utilities/flex/flex-direction"
+    },
+    {
+      "from": "en/utilities/flex/flex-grow",
+      "to": "ru/utilities/flex/flex-grow"
+    },
+    {
+      "from": "en/utilities/flex/flex-shrink",
+      "to": "ru/utilities/flex/flex-shrink"
+    },
+    {
+      "from": "en/utilities/flex/flex-wrap",
+      "to": "ru/utilities/flex/flex-wrap"
+    },
+    {
+      "from": "en/utilities/flex/flexibility",
+      "to": "ru/utilities/flex/flexibility"
+    },
+    {
+      "from": "en/utilities/flex",
+      "to": "ru/utilities/flex"
+    },
+    {
+      "from": "en/utilities/forms/accent-color",
+      "to": "ru/utilities/forms/accent-color"
+    },
+    {
+      "from": "en/utilities/forms/appearance",
+      "to": "ru/utilities/forms/appearance"
+    },
+    {
+      "from": "en/utilities/forms/caret-color",
+      "to": "ru/utilities/forms/caret-color"
+    },
+    {
+      "from": "en/utilities/forms",
+      "to": "ru/utilities/forms"
+    },
+    {
+      "from": "en/utilities/forms/pointer-events",
+      "to": "ru/utilities/forms/pointer-events"
+    },
+    {
+      "from": "en/utilities/forms/resize",
+      "to": "ru/utilities/forms/resize"
+    },
+    {
+      "from": "en/utilities/grid-and-flexbox-utilities/align-content",
+      "to": "ru/utilities/grid-and-flexbox-utilities/align-content"
+    },
+    {
+      "from": "en/utilities/grid-and-flexbox-utilities/align-items",
+      "to": "ru/utilities/grid-and-flexbox-utilities/align-items"
+    },
+    {
+      "from": "en/utilities/grid-and-flexbox-utilities/align-self",
+      "to": "ru/utilities/grid-and-flexbox-utilities/align-self"
+    },
+    {
+      "from": "en/utilities/grid-and-flexbox-utilities/flex-align",
+      "to": "ru/utilities/grid-and-flexbox-utilities/flex-align"
+    },
+    {
+      "from": "en/utilities/grid-and-flexbox-utilities/gap",
+      "to": "ru/utilities/grid-and-flexbox-utilities/gap"
+    },
+    {
+      "from": "en/utilities/grid-and-flexbox-utilities",
+      "to": "ru/utilities/grid-and-flexbox-utilities"
+    },
+    {
+      "from": "en/utilities/grid-and-flexbox-utilities/justify-content",
+      "to": "ru/utilities/grid-and-flexbox-utilities/justify-content"
+    },
+    {
+      "from": "en/utilities/grid-and-flexbox-utilities/justify-items",
+      "to": "ru/utilities/grid-and-flexbox-utilities/justify-items"
+    },
+    {
+      "from": "en/utilities/grid-and-flexbox-utilities/justify-self",
+      "to": "ru/utilities/grid-and-flexbox-utilities/justify-self"
+    },
+    {
+      "from": "en/utilities/grid-and-flexbox-utilities/order",
+      "to": "ru/utilities/grid-and-flexbox-utilities/order"
+    },
+    {
+      "from": "en/utilities/grid-and-flexbox-utilities/place-content",
+      "to": "ru/utilities/grid-and-flexbox-utilities/place-content"
+    },
+    {
+      "from": "en/utilities/grid-and-flexbox-utilities/place-items",
+      "to": "ru/utilities/grid-and-flexbox-utilities/place-items"
+    },
+    {
+      "from": "en/utilities/grid-and-flexbox-utilities/place-self",
+      "to": "ru/utilities/grid-and-flexbox-utilities/place-self"
+    },
+    {
+      "from": "en/utilities/grid/grid-auto-columns",
+      "to": "ru/utilities/grid/grid-auto-columns"
+    },
+    {
+      "from": "en/utilities/grid/grid-auto-flow",
+      "to": "ru/utilities/grid/grid-auto-flow"
+    },
+    {
+      "from": "en/utilities/grid/grid-auto-rows",
+      "to": "ru/utilities/grid/grid-auto-rows"
+    },
+    {
+      "from": "en/utilities/grid/grid-column-end",
+      "to": "ru/utilities/grid/grid-column-end"
+    },
+    {
+      "from": "en/utilities/grid/grid-column-start",
+      "to": "ru/utilities/grid/grid-column-start"
+    },
+    {
+      "from": "en/utilities/grid/grid-column",
+      "to": "ru/utilities/grid/grid-column"
+    },
+    {
+      "from": "en/utilities/grid/grid-row-end",
+      "to": "ru/utilities/grid/grid-row-end"
+    },
+    {
+      "from": "en/utilities/grid/grid-row-start",
+      "to": "ru/utilities/grid/grid-row-start"
+    },
+    {
+      "from": "en/utilities/grid/grid-row",
+      "to": "ru/utilities/grid/grid-row"
+    },
+    {
+      "from": "en/utilities/grid/grid-template-columns",
+      "to": "ru/utilities/grid/grid-template-columns"
+    },
+    {
+      "from": "en/utilities/grid/grid-template-rows",
+      "to": "ru/utilities/grid/grid-template-rows"
+    },
+    {
+      "from": "en/utilities/grid",
+      "to": "ru/utilities/grid"
+    },
+    {
+      "from": "en/utilities/indents",
+      "to": "ru/utilities/indents"
+    },
+    {
+      "from": "en/utilities/indents/margin",
+      "to": "ru/utilities/indents/margin"
+    },
+    {
+      "from": "en/utilities/indents/padding",
+      "to": "ru/utilities/indents/padding"
+    },
+    {
+      "from": "en/utilities/indents/space",
+      "to": "ru/utilities/indents/space"
+    },
+    {
+      "from": "en/utilities",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/interactivity/cursor",
+      "to": "ru/utilities/interactivity/cursor"
+    },
+    {
+      "from": "en/utilities/interactivity",
+      "to": "ru/utilities/interactivity"
+    },
+    {
+      "from": "en/utilities/interactivity/touch-action",
+      "to": "ru/utilities/interactivity/touch-action"
+    },
+    {
+      "from": "en/utilities/interactivity/user-select",
+      "to": "ru/utilities/interactivity/user-select"
+    },
+    {
+      "from": "en/utilities/interactivity/will-change",
+      "to": "ru/utilities/interactivity/will-change"
+    },
+    {
+      "from": "en/utilities/layout-break/break-after",
+      "to": "ru/utilities/layout-break/break-after"
+    },
+    {
+      "from": "en/utilities/layout-break/break-before",
+      "to": "ru/utilities/layout-break/break-before"
+    },
+    {
+      "from": "en/utilities/layout-break/break-inside",
+      "to": "ru/utilities/layout-break/break-inside"
+    },
+    {
+      "from": "en/utilities/layout-break/column",
+      "to": "ru/utilities/layout-break/column"
+    },
+    {
+      "from": "en/utilities/layout-break",
+      "to": "ru/utilities/layout-break"
+    },
+    {
+      "from": "en/utilities/layout/aspect-ratio",
+      "to": "ru/utilities/layout/aspect-ratio"
+    },
+    {
+      "from": "en/utilities/layout/box-decoration-break",
+      "to": "ru/utilities/layout/box-decoration-break"
+    },
+    {
+      "from": "en/utilities/layout/box-sizing",
+      "to": "ru/utilities/layout/box-sizing"
+    },
+    {
+      "from": "en/utilities/layout/clear",
+      "to": "ru/utilities/layout/clear"
+    },
+    {
+      "from": "en/utilities/layout/container",
+      "to": "ru/utilities/layout/container"
+    },
+    {
+      "from": "en/utilities/layout/display",
+      "to": "ru/utilities/layout/display"
+    },
+    {
+      "from": "en/utilities/layout/element-position",
+      "to": "ru/utilities/layout/element-position"
+    },
+    {
+      "from": "en/utilities/layout/float",
+      "to": "ru/utilities/layout/float"
+    },
+    {
+      "from": "en/utilities/layout",
+      "to": "ru/utilities/layout"
+    },
+    {
+      "from": "en/utilities/layout/isolation",
+      "to": "ru/utilities/layout/isolation"
+    },
+    {
+      "from": "en/utilities/layout/max-container",
+      "to": "ru/utilities/layout/max-container"
+    },
+    {
+      "from": "en/utilities/layout/overflow",
+      "to": "ru/utilities/layout/overflow"
+    },
+    {
+      "from": "en/utilities/layout/visibility",
+      "to": "ru/utilities/layout/visibility"
+    },
+    {
+      "from": "en/utilities/layout/z-index",
+      "to": "ru/utilities/layout/z-index"
+    },
+    {
+      "from": "en/utilities/links/heritage-link-color",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/links",
+      "to": "ru/utilities/links"
+    },
+    {
+      "from": "en/utilities/links/links-default-parameters",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/links/links-formatting",
+      "to": "ru/utilities/links/links-formatting"
+    },
+    {
+      "from": "en/utilities/links/links-underlining",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/mask",
+      "to": "ru/utilities/mask"
+    },
+    {
+      "from": "en/utilities/mask/mask-clip",
+      "to": "ru/utilities/mask/mask-clip"
+    },
+    {
+      "from": "en/utilities/mask/mask-composite",
+      "to": "ru/utilities/mask/mask-composite"
+    },
+    {
+      "from": "en/utilities/mask/mask-mode",
+      "to": "ru/utilities/mask/mask-mode"
+    },
+    {
+      "from": "en/utilities/mask/mask-origin",
+      "to": "ru/utilities/mask/mask-origin"
+    },
+    {
+      "from": "en/utilities/mask/mask-position",
+      "to": "ru/utilities/mask/mask-position"
+    },
+    {
+      "from": "en/utilities/mask/mask-repeat",
+      "to": "ru/utilities/mask/mask-repeat"
+    },
+    {
+      "from": "en/utilities/mask/mask-size",
+      "to": "ru/utilities/mask/mask-size"
+    },
+    {
+      "from": "en/utilities/mask/mask-type",
+      "to": "ru/utilities/mask/mask-type"
+    },
+    {
+      "from": "en/utilities/objects",
+      "to": "ru/utilities/objects"
+    },
+    {
+      "from": "en/utilities/objects/object-fit",
+      "to": "ru/utilities/objects/object-fit"
+    },
+    {
+      "from": "en/utilities/objects/object-position",
+      "to": "ru/utilities/objects/object-position"
+    },
+    {
+      "from": "en/utilities/outline",
+      "to": "ru/utilities/outline"
+    },
+    {
+      "from": "en/utilities/outline/outline-color",
+      "to": "ru/utilities/outline/outline-color"
+    },
+    {
+      "from": "en/utilities/outline/outline-default-parameters",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/outline/outline-offset",
+      "to": "ru/utilities/outline/outline-offset"
+    },
+    {
+      "from": "en/utilities/outline/outline-style",
+      "to": "ru/utilities/outline/outline-style"
+    },
+    {
+      "from": "en/utilities/outline/outline-width",
+      "to": "ru/utilities/outline/outline-width"
+    },
+    {
+      "from": "en/utilities/overscroll",
+      "to": "ru/utilities/overscroll"
+    },
+    {
+      "from": "en/utilities/overscroll/overscroll-behavior-smooth",
+      "to": "ru/utilities/overscroll/overscroll-behavior-smooth"
+    },
+    {
+      "from": "en/utilities/overscroll/overscroll-behavior",
+      "to": "ru/utilities/overscroll/overscroll-behavior"
+    },
+    {
+      "from": "en/utilities/overscroll/scroll-backdrop-color",
+      "to": "ru/utilities/overscroll/scroll-backdrop-color"
+    },
+    {
+      "from": "en/utilities/overscroll/scroll-backdrop-radius",
+      "to": "ru/utilities/overscroll/scroll-backdrop-radius"
+    },
+    {
+      "from": "en/utilities/overscroll/scroll-backdrop-width",
+      "to": "ru/utilities/overscroll/scroll-backdrop-width"
+    },
+    {
+      "from": "en/utilities/overscroll/scroll-hover",
+      "to": "ru/utilities/overscroll/scroll-hover"
+    },
+    {
+      "from": "en/utilities/overscroll/scroll-margin",
+      "to": "ru/utilities/overscroll/scroll-margin"
+    },
+    {
+      "from": "en/utilities/overscroll/scroll-padding",
+      "to": "ru/utilities/overscroll/scroll-padding"
+    },
+    {
+      "from": "en/utilities/overscroll/scroll-slider-color",
+      "to": "ru/utilities/overscroll/scroll-slider-color"
+    },
+    {
+      "from": "en/utilities/overscroll/scroll-slider-radius",
+      "to": "ru/utilities/overscroll/scroll-slider-radius"
+    },
+    {
+      "from": "en/utilities/overscroll/scroll-snap-align",
+      "to": "ru/utilities/overscroll/scroll-snap-align"
+    },
+    {
+      "from": "en/utilities/overscroll/scroll-snap-stop",
+      "to": "ru/utilities/overscroll/scroll-snap-stop"
+    },
+    {
+      "from": "en/utilities/overscroll/scroll-snap-type",
+      "to": "ru/utilities/overscroll/scroll-snap-type"
+    },
+    {
+      "from": "en/utilities/overscroll/scroll",
+      "to": "ru/utilities/overscroll/scroll"
+    },
+    {
+      "from": "en/utilities/print/display-print",
+      "to": "ru/utilities/print/display-print"
+    },
+    {
+      "from": "en/utilities/print/display-visibility",
+      "to": "ru/utilities/print/display-visibility"
+    },
+    {
+      "from": "en/utilities/print",
+      "to": "ru/utilities/print"
+    },
+    {
+      "from": "en/utilities/shadows/drop-shadow-color",
+      "to": "ru/utilities/shadows/drop-shadow-color"
+    },
+    {
+      "from": "en/utilities/shadows/drop-shadow",
+      "to": "ru/utilities/shadows/drop-shadow"
+    },
+    {
+      "from": "en/utilities/shadows/element-color",
+      "to": "ru/utilities/shadows/element-color"
+    },
+    {
+      "from": "en/utilities/shadows/element-shadow",
+      "to": "ru/utilities/shadows/element-shadow"
+    },
+    {
+      "from": "en/utilities/shadows",
+      "to": "ru/utilities/shadows"
+    },
+    {
+      "from": "en/utilities/sizes/height",
+      "to": "ru/utilities/sizes/height"
+    },
+    {
+      "from": "en/utilities/sizes",
+      "to": "ru/utilities/sizes"
+    },
+    {
+      "from": "en/utilities/sizes/max-height",
+      "to": "ru/utilities/sizes/max-height"
+    },
+    {
+      "from": "en/utilities/sizes/max-width",
+      "to": "ru/utilities/sizes/max-width"
+    },
+    {
+      "from": "en/utilities/sizes/min-height",
+      "to": "ru/utilities/sizes/min-height"
+    },
+    {
+      "from": "en/utilities/sizes/min-width",
+      "to": "ru/utilities/sizes/min-width"
+    },
+    {
+      "from": "en/utilities/sizes/width",
+      "to": "ru/utilities/sizes/width"
+    },
+    {
+      "from": "en/utilities/stripes",
+      "to": "ru/utilities/stripes"
+    },
+    {
+      "from": "en/utilities/stripes/stripes-color",
+      "to": "ru/utilities/stripes/stripes-color"
+    },
+    {
+      "from": "en/utilities/stripes/stripes-size",
+      "to": "ru/utilities/stripes/stripes-size"
+    },
+    {
+      "from": "en/utilities/stripes/stripes",
+      "to": "ru/utilities/stripes/stripes"
+    },
+    {
+      "from": "en/utilities/svg",
+      "to": "ru/utilities/svg"
+    },
+    {
+      "from": "en/utilities/svg/svg-fill-color",
+      "to": "ru/utilities/svg/svg-fill-color"
+    },
+    {
+      "from": "en/utilities/svg/svg-fill-type",
+      "to": "ru/utilities/svg/svg-fill-type"
+    },
+    {
+      "from": "en/utilities/svg/svg-image-size",
+      "to": "ru/utilities/svg/svg-image-size"
+    },
+    {
+      "from": "en/utilities/svg/svg-stroke-color",
+      "to": "ru/utilities/svg/svg-stroke-color"
+    },
+    {
+      "from": "en/utilities/svg/svg-stroke-line-cap",
+      "to": "ru/utilities/svg/svg-stroke-line-cap"
+    },
+    {
+      "from": "en/utilities/svg/svg-stroke-line-join",
+      "to": "ru/utilities/svg/svg-stroke-line-join"
+    },
+    {
+      "from": "en/utilities/svg/svg-stroke-width",
+      "to": "ru/utilities/svg/svg-stroke-width"
+    },
+    {
+      "from": "en/utilities/tables",
+      "to": "ru/utilities/tables"
+    },
+    {
+      "from": "en/utilities/tables/table-border-cells",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/tables/table-border",
+      "to": "ru/utilities/tables/table-border"
+    },
+    {
+      "from": "en/utilities/tables/table-layout",
+      "to": "ru/utilities/tables/table-layout"
+    },
+    {
+      "from": "en/utilities/tables/tables-active-rows-and-cells",
+      "to": "ru/utilities/tables/tables-active-rows-and-cells"
+    },
+    {
+      "from": "en/utilities/tables/tables-alternating-rows-and-columns",
+      "to": "ru/utilities/tables/tables-alternating-rows-and-columns"
+    },
+    {
+      "from": "en/utilities/tables/tables-default-parameters",
+      "to": "ru/utilities/tables/tables-default-parameters"
+    },
+    {
+      "from": "en/utilities/tables/tables-formatting",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/text-formatting",
+      "to": "ru/utilities/text-formatting"
+    },
+    {
+      "from": "en/utilities/text-formatting/text-code",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/text-formatting/text-color",
+      "to": "ru/utilities/text-formatting/text-color"
+    },
+    {
+      "from": "en/utilities/text-formatting/text-formatting-color",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/text-formatting/text-formatting-style",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/text-formatting/text-formatting-text",
+      "to": "ru/utilities/text-formatting/text-formatting-text"
+    },
+    {
+      "from": "en/utilities/text-formatting/text-formatting-thickness",
+      "to": "ru/utilities/text-formatting/text-formatting-thickness"
+    },
+    {
+      "from": "en/utilities/text-formatting/text-selecting",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/text-formatting/text-underline-offset",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/transform",
+      "to": "ru/utilities/transform"
+    },
+    {
+      "from": "en/utilities/transform/transform-origin",
+      "to": "ru/utilities/transform/transform-origin"
+    },
+    {
+      "from": "en/utilities/transform/transform-rotate",
+      "to": "ru/utilities/transform/transform-rotate"
+    },
+    {
+      "from": "en/utilities/transform/transform-scale",
+      "to": "ru/utilities/transform/transform-scale"
+    },
+    {
+      "from": "en/utilities/transform/transform-skew",
+      "to": "ru/utilities/transform/transform-skew"
+    },
+    {
+      "from": "en/utilities/transform/transform-translate",
+      "to": "ru/utilities/transform/transform-translate"
+    },
+    {
+      "from": "en/utilities/typography/content",
+      "to": "ru/utilities/typography/content"
+    },
+    {
+      "from": "en/utilities/typography/font-family",
+      "to": "ru/utilities/typography/font-family"
+    },
+    {
+      "from": "en/utilities/typography/font-smoothing",
+      "to": "ru/utilities/typography/font-smoothing"
+    },
+    {
+      "from": "en/utilities/typography/font-style",
+      "to": "ru/utilities/typography/font-style"
+    },
+    {
+      "from": "en/utilities/typography/font-variant-numeric",
+      "to": "ru/utilities/typography/font-variant-numeric"
+    },
+    {
+      "from": "en/utilities/typography/font-variant",
+      "to": "ru/utilities/typography/font-variant"
+    },
+    {
+      "from": "en/utilities/typography/font-weight",
+      "to": "ru/utilities/typography/font-weight"
+    },
+    {
+      "from": "en/utilities/typography",
+      "to": "ru/utilities/typography"
+    },
+    {
+      "from": "en/utilities/typography/letter-spacing",
+      "to": "ru/utilities/typography/letter-spacing"
+    },
+    {
+      "from": "en/utilities/typography/line-height",
+      "to": "ru/utilities/typography/line-height"
+    },
+    {
+      "from": "en/utilities/typography/list-style-position",
+      "to": "ru/utilities/typography/list-style-position"
+    },
+    {
+      "from": "en/utilities/typography/list-style-type",
+      "to": "ru/utilities/typography/list-style-type"
+    },
+    {
+      "from": "en/utilities/typography/text-align",
+      "to": "ru/utilities/typography/text-align"
+    },
+    {
+      "from": "en/utilities/typography/text-default",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/typography/text-indent",
+      "to": "ru/utilities/typography/text-indent"
+    },
+    {
+      "from": "en/utilities/typography/text-max-width",
+      "to": "ru/utilities/typography/text-max-width"
+    },
+    {
+      "from": "en/utilities/typography/text-overflow",
+      "to": "ru/utilities/typography/text-overflow"
+    },
+    {
+      "from": "en/utilities/typography/text-role-modifiers",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/typography/text-size",
+      "to": "ru/utilities/typography/text-size"
+    },
+    {
+      "from": "en/utilities/typography/text-transform",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "en/utilities/typography/title-size",
+      "to": "ru/utilities/typography/title-size"
+    },
+    {
+      "from": "en/utilities/typography/vertical-align",
+      "to": "ru/utilities/typography/vertical-align"
+    },
+    {
+      "from": "en/utilities/typography/white-space",
+      "to": "ru/utilities/typography/white-space"
+    },
+    {
+      "from": "en/utilities/typography/word-break",
+      "to": "ru/utilities/typography/word-break"
     }
   ]
 }

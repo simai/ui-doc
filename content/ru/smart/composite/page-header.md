@@ -5,7 +5,7 @@ description: "Показывает в начале страницы админи
 
 # Шапка страницы
 
-:badge[sf-header-page]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-header-page]{variant=outline scheme=on-surface size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
 
 Шапка страницы показывает в одной строке путь к странице, заголовок, число
 записей, звезду избранного и главные действия. Ставьте её в начало каждой
@@ -99,18 +99,19 @@ description: "Показывает в начале страницы админи
 </main>
 ```
 
-### Избранное и событие `sf-page-header-toggle`
+### Избранное
 
-Нажатие на звезду отправляет отменяемое событие `sf-page-header-toggle` с
-`event.detail.on` — состоянием, которое просит пользователь. Прежнее имя
-`sf-page-header-star` приходит с тем же `detail`. Если событие не отменено,
+`star`, событие `sf-header-page-toggle` • [справочник](#атрибуты)
+
+Нажатие на звезду отправляет отменяемое событие `sf-header-page-toggle` с
+`event.detail.on` — состоянием, которое просит пользователь. Если событие не отменено,
 компонент сам переключает `star`. Если состояние хранит сервер, отмените
 событие, дождитесь ответа и задайте `star` по нему: так звезда не покажет
 состояние, которое не сохранилось.
 
 ```js
 const header = document.querySelector('sf-header-page');
-header.addEventListener('sf-page-header-toggle', async (event) => {
+header.addEventListener('sf-header-page-toggle', async (event) => {
   event.preventDefault();
   const saved = await saveFavourite(event.detail.on);
   header.setAttribute('star', saved ? 'on' : 'off');

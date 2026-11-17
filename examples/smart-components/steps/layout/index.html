@@ -1,0 +1,16 @@
+<div class="query-container">
+  <div class="grid grid-col-1 gap-4">
+    <div class="flex flex-col gap-1 min-w-0">
+      <sf-steps aria-label="Этапы, строка" layout="row" items='[{"label":"Корзина"},{"label":"Доставка"},{"label":"Оплата"},{"label":"Подтверждение"}]' current="1"></sf-steps>
+      <span class="text-1/2 color-on-surface-variant">layout="row"</span>
+    </div>
+    <div class="flex flex-col gap-1 min-w-0">
+      <sf-steps aria-label="Этапы, столбец" layout="column" items='[{"label":"Корзина","text":"3 товара"},{"label":"Доставка","text":"Курьером, 12 ноября"},{"label":"Оплата","text":"Картой или по счёту"},{"label":"Подтверждение"}]' current="1"></sf-steps>
+      <span class="text-1/2 color-on-surface-variant">layout="column"</span>
+    </div>
+    <div class="flex flex-col gap-1 min-w-0">
+      <sf-steps aria-label="Этапы, счёт" layout="count" items='[{"label":"Корзина"},{"label":"Доставка"},{"label":"Оплата"},{"label":"Подтверждение"}]' current="1"></sf-steps>
+      <span class="text-1/2 color-on-surface-variant">layout="count"</span>
+    </div>
+  </div>
+</div>

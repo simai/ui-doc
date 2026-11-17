@@ -124,7 +124,7 @@ description: "На каком месте стоит форма, какое по�
 
 ## См. также
 
-- [Форма настроек](/ru/recipes/settings-form/) — рецепт страницы настроек
+- [Форма настроек](/ru/recipes/edit/settings-form/) — рецепт страницы настроек
 - [Фоны](/ru/guide/colour/surfaces/) — какие места бывают
 - [Текстовое поле](/ru/smart/forms/inputs/) — виды поля
 - [Карточка](/ru/components/content/card/)

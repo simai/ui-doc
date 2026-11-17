@@ -1,0 +1,17 @@
+<div class="flex flex-wrap gap-1/3">
+  <sf-button id="rename-open" text="Переименовать раздел" appearance="outline" scheme="on-surface"></sf-button>
+  <sf-button id="create-open" text="Новая страница" icon-start="add"></sf-button>
+</div>
+<sf-modal id="rename" heading="Переименовать раздел" initial-focus="first" close-on-overlay="false">
+  <div slot="content" class="flex flex-col gap-1"><sf-input label="Название" default-value="Насосы"></sf-input></div>
+  <div slot="footer" class="answers flex flex-wrap gap-1/3 w-full"><sf-button text="Сохранить" data-sf-action="close"></sf-button><sf-button text="Отмена" appearance="ghost" scheme="on-surface" data-sf-action="close"></sf-button></div>
+</sf-modal>
+<sf-modal id="create" heading="Новая страница" initial-focus="first" close-on-overlay="false">
+  <div slot="content" class="flex flex-col gap-1">
+    <sf-input label="Название" required placeholder="Например, Насосы для дачи"></sf-input>
+    <sf-input label="Адрес" hint="shop.example.ru/catalog/адрес"></sf-input>
+    <sf-dropdown label="Раздел" search="false" options='[{"text":"Каталог","value":"catalog","selected":true},{"text":"О компании","value":"about"}]'></sf-dropdown>
+    <sf-checkbox label="Показать в меню сайта"></sf-checkbox>
+  </div>
+  <div slot="footer" class="answers flex flex-wrap gap-1/3 w-full"><sf-button text="Создать страницу" data-sf-action="close"></sf-button><sf-button text="Отмена" appearance="ghost" scheme="on-surface" data-sf-action="close"></sf-button></div>
+</sf-modal>

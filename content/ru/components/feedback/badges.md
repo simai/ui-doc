@@ -6,7 +6,7 @@ profile: reference
 
 # Бейджи
 
-:badge[sf-badge]{variant=tonal scheme=primary size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-badge]{variant=outline scheme=on-surface size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
 
 Бейдж показывает короткий статус, категорию или счётчик рядом с объектом. Он
 дополняет основное содержимое и не заменяет кнопку, фильтр или
@@ -55,7 +55,7 @@ profile: reference
 `sf-badge--secondary`, `sf-badge--tertiary`, `sf-badge--on-surface` и статусы
 `sf-badge--info`, `sf-badge--success`, `sf-badge--warning`, `sf-badge--error`.
 Статус выбирайте по смыслу, а не по желаемому цвету. У `on-surface` нет
-тонального вида. `sf-badge--danger` — другое имя `error`.
+тонального вида.
 
 :::example {id="components/badges/overview" label="Цвета бейджа в каждом виде"}
 :::
@@ -75,7 +75,7 @@ profile: reference
 
 Отступ текста от края — `--sf-space-1/2`: 12 px на компьютере и 8 px на телефоне, как у всей линейки отступов; плотный `sf-badge--tight` — свой отступ размера.
 
-:::example {id="components/badges/tight" label="Размер"}
+:::example {id="components/badges/tight" label="Плотный бейдж рядом с обычным"}
 :::
 
 ### В строке текста

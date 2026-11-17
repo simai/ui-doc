@@ -5,10 +5,11 @@ description: "Параметры письма, строки блоков в по
 
 # Структура письма
 
-:badge[sf-mail-structure]{variant=tonal scheme=primary size=1/2} :badge[1.0.6]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-structure]{variant=outline scheme=on-surface size=1/2} :badge[1.0.6]{variant=outline scheme=on-surface size=1/2}
 
-`<sf-mail-structure>` — структура письма в редакторе писем: параметры письма, по
-строке на блок в порядке письма и способ добавить блок. Элемент не хранит письмо
+Структура показывает письмо в редакторе писем списком: параметры письма, по
+строке на блок в порядке письма и способ добавить блок. Структура
+`<sf-mail-structure>` не хранит письмо
 и ничего в нём не меняет: он сообщает, о чём попросил человек, а приложение
 выполняет и передаёт строки обратно.
 
@@ -39,7 +40,7 @@ Framework: поставляется пакетом `pro` из репозитор
 :::example {id="smart-components/mail-structure/empty" label="Письмо без блоков"}
 :::
 
-## Применение
+## Поведение
 
 ### Данные
 
@@ -97,66 +98,59 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 <название>», поэтому две строки не звучат одинаково. Выбранная строка отмечена
 `aria-current`, а не только цветом.
 
-## Справочник API
-
-Раздел собран из манифеста компонента выпуска `ui-994f9db407fa` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
-
-Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
-
-| | |
-|:---|:---|
-| Тег | `<sf-mail-structure>` |
-| Назначение | Структура письма в SIMAI Email Editor: параметры письма, по строке на блок и способ добавить блок. Строка выбирает, двигает, копирует и удаляет свой блок; точка между строками просит там новый блок; шапка и подвал закреплены. Элемент не хранит письмо и не меняет его; он сообщает, о чём попросил человек. |
-| Контракт | `smart.mail-structure`, версия `1.0.6` |
-| Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
-| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
+## Справочник
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`. Имя шаблона отрисовки; `default` — встроенный.
-- `root-class` — `string`, по умолчанию пусто. Свои CSS-классы для нарисованного элемента.
-- `root-style` — `string`, по умолчанию пусто. Свои стили для нарисованного элемента, например `max-width: 20rem`.
-- `selected` — `string`, по умолчанию пусто. Выбранный блок; пусто — выбраны параметры письма.
-- `rows` — `array` из `object`, по умолчанию `[]`. Блоки в порядке письма, по строке на блок: {id, title, summary, icon, family}. family отмечает место, которое есть в каждом письме (header, footer): оно не двигается, и за него ничего не встанет.
-- `inserter-items` — `array` из `object`, по умолчанию `[]`. Виды, которые предлагает точка вставки между строками, в форме sf-sortable: {value, label, icon, caption, keywords} и {type: 'heading', label}. Пусто — точек вставки нет.
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `selected` | строка | пусто | — | Выбранный блок; пусто — выбраны параметры письма. |
+| `rows` | список: объект | `[]` | — | Блоки в порядке письма, по строке на блок: {id, title, summary, icon, family}. family отмечает место, которое есть в каждом письме (header, footer): оно не двигается, и за него ничего не встанет. |
+| `inserter-items` | список: объект | `[]` | — | Виды, которые предлагает точка вставки между строками, в форме sf-sortable: {value, label, icon, caption, keywords} и {type: 'heading', label}. Пусто — точек вставки нет. |
+
+#### Общие для всех компонентов
+
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
+| `root-class` | строка | пусто | — | Свои CSS-классы для нарисованного элемента. |
+| `root-style` | строка | пусто | — | Свои стили для нарисованного элемента, например `max-width: 20rem`. |
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
 ### Методы
 
-- `select(id: any)` — возвращает `object`. Выбирает блок, как его строка; без id выбирает параметры письма; refused unknown для блока, которого нет в данных.
-- `move(id: any, index: number, by: number)` — возвращает `object`. Переместить блок на index или на by шагов, оставаясь между закреплёнными местами; для места — refused pinned, unchanged, если он остался бы на месте.
-- `insert(type: any, index: number)` — возвращает `object`. Просит новый блок, как точка вставки; для вида, которого нет в предложенных, — refused unknown.
-- `add()` — возвращает `object`. Просит блок, как «Добавить блок».
-- `duplicate(id: any)` — возвращает `object`. Просит копию блока; для места — refused pinned.
-- `delete(id: any)` — возвращает `object`. Просит удалить блок: отправляет delete; для места — refused pinned.
-- `replace(id: any)` — возвращает `object`. Просит другой вариант закреплённого места; для блока — refused not-pinned.
+| Метод | Возвращает | Что делает |
+|:---|:---|:---|
+| `select(id: any)` | объект | Выбирает блок, как его строка; без id выбирает параметры письма; refused unknown для блока, которого нет в данных. |
+| `move(id: any, index: number, by: number)` | объект | Переместить блок на index или на by шагов, оставаясь между закреплёнными местами; для места — refused pinned, unchanged, если он остался бы на месте. |
+| `insert(type: any, index: number)` | объект | Просит новый блок, как точка вставки; для вида, которого нет в предложенных, — refused unknown. |
+| `add()` | объект | Просит блок, как «Добавить блок». |
+| `duplicate(id: any)` | объект | Просит копию блока; для места — refused pinned. |
+| `delete(id: any)` | объект | Просит удалить блок: отправляет delete; для места — refused pinned. |
+| `replace(id: any)` | объект | Просит другой вариант закреплённого места; для блока — refused not-pinned. |
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+События приходят на сам элемент и всплывают; глаголы в именах — из [общего словаря](/ru/guide/smart-components/names/). Общие события базового элемента — в главе [Модель компонента](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-mail-structure-select` — `detail`: `{ id: any, keyboard?: boolean }`. Выбран этот блок: {id, keyboard}. Пустой id — параметры письма.
-- `sf-mail-structure-move` — `detail`: `{ id: any, index: number }`. Переместить этот блок в это место: {id, index}.
-- `sf-mail-structure-insert` — `detail`: `{ type: any, index: number }`. Добавить в этом месте новый блок этого вида: {type, index}.
-- `sf-mail-structure-add` — ничего не передаёт. Попросили блок; место выбирает приложение.
-- `sf-mail-structure-duplicate` — `detail`: `{ id: any }`. Сделать копию этого блока: {id}.
-- `sf-mail-structure-delete` — `detail`: `{ ids: array, id: any }`. Удалить этот блок: {ids: [id], id}.
-- `sf-mail-structure-replace` — `detail`: `{ family: any }`. Попросили другой вариант этого места: {family}.
+| Событие | `detail` | Когда приходит |
+|:---|:---|:---|
+| `sf-mail-structure-select` | `{ id: any, keyboard?: boolean }` | Выбран этот блок: {id, keyboard}. Пустой id — параметры письма. |
+| `sf-mail-structure-move` | `{ id: any, index: number }` | Переместить этот блок в это место: {id, index}. |
+| `sf-mail-structure-insert` | `{ type: any, index: number }` | Добавить в этом месте новый блок этого вида: {type, index}. |
+| `sf-mail-structure-add` | пустой объект | Попросили блок; место выбирает приложение. |
+| `sf-mail-structure-duplicate` | `{ id: any }` | Сделать копию этого блока: {id}. |
+| `sf-mail-structure-delete` | `{ ids: array, id: any }` | Удалить этот блок: {ids: [id], id}. |
+| `sf-mail-structure-replace` | `{ family: any }` | Попросили другой вариант этого места: {family}. |
 
-### Доступность
+### О компоненте
 
-- Роль: список.
-- Доступное имя: внутренний.
-- Клавиши: `Tab`, `Enter`, `Space`, `ArrowUp`, `ArrowDown`, `Home`, `End`, `Alt+ArrowUp`, `Alt+ArrowDown`, `Delete`, `Shift+F10`.
-- Фокус: Сначала строка параметров, затем список как одна остановка Tab на выбранной строке. ⋯ называется «Действия с блоком: <название>», поэтому две строки не звучат одинаково. Выбранная строка отмечена aria-current, а не только цветом.
-
-### Минимальная разметка
-
-```html
-<sf-mail-structure id="structure"></sf-mail-structure> <script>structure.rows = [{id: 'b1', title: 'Заголовок', icon: 'title'}];</script>
-```
-
-### Источник
-
-- `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-structure`
-- `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-structure/rule.js#name=cl-mail-structure`
+| | |
+|:---|:---|
+| Тег | `<sf-mail-structure>`, контракт `smart.mail-structure` версии `1.0.6` |
+| Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
+| Доступность | Читается как список; название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`, `↑`, `↓`, `Home`, `End`, `Alt+ArrowUp`, `Alt+ArrowDown`, `Delete`, `Shift+F10`. |
+| Источник | `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-structure` |
+| Правило классов | `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-structure/rule.js#name=cl-mail-structure` |

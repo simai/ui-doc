@@ -5,7 +5,7 @@ description: "Верхняя полоса сайта: бренд, разделы
 
 # Шапка сайта
 
-:badge[sf-header-site]{variant=tonal scheme=primary size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-header-site]{variant=outline scheme=on-surface size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
 
 Шапка сайта — верхняя полоса с брендом, разделами, ссылками и инструментами в
 одну строку по ширине контейнера. На узком экране разделы и ссылки уходят в
@@ -54,7 +54,7 @@ SIMAI: каталогу эффектов, сайтам документации 
 - В `tools` кладут то, что нужно всегда: поиск, язык, тему, цвет. Менее
   важное — в `actions`: на узком экране оно уйдёт в панель.
 - Слот `sheet` — то, что бывает только в панели, например дерево
-  документации; сайт может заполнить его по событию `sf-site-header-opened`.
+  документации; сайт может заполнить его по событию `sf-header-site-opened`.
 
 ## Варианты
 
@@ -67,6 +67,35 @@ SIMAI: каталогу эффектов, сайтам документации 
 без скрипта.
 
 :::example {id="smart-components/site-header/collapse" label="Ширина сворачивания" preview=sandbox}
+:::
+
+### Сторона кнопки меню
+
+`menu-placement` • по умолчанию `inline-start` • [справочник](#атрибуты)
+
+Кнопка меню свёрнутой полосы и её боковая панель всегда на одной стороне.
+`inline-start` — кнопка первой в полосе, перед брендом, панель выезжает от
+начального края. `inline-end` — кнопка последней, после инструментов, панель
+выезжает от конечного края. На странице справа налево обе стороны
+отражаются.
+
+:::example {id="smart-components/site-header/menu-placement" label="Кнопка меню в начале и в конце полосы" preview=sandbox}
+:::
+
+### Своя кнопка меню
+
+`data-header-site`, `aria-controls` • [справочник](#методы)
+
+Панель шапки может открывать кнопка самой страницы — например, «Каталог»
+в полосе под шапкой. Поставьте ей `data-header-site="toggle"` и
+`aria-controls` с `id` шапки: нажатие открывает и закрывает панель, а шапка
+пишет кнопке `aria-expanded`. `data-header-site="open"` только открывает
+панель, `"close"` — только закрывает.
+
+Пока такая кнопка видна на экране и стоит вне панели, шапка не рисует свою
+кнопку меню: на странице одна кнопка, которая открывает панель.
+
+:::example {id="smart-components/site-header/own-toggle" label="Своя кнопка страницы открывает панель шапки" preview=sandbox}
 :::
 
 ### Размер и прилипание
@@ -104,13 +133,13 @@ SIMAI: каталогу эффектов, сайтам документации 
 верхний слой, а страница не прокручивается, пока панель открыта.
 
 Действия `open()`, `close({reason})` и `toggle()` делают то же, что кнопка
-меню. Событие `sf-site-header-open` можно отменить — тогда панель не
-откроется; `sf-site-header-close` несёт причину: `close`, `escape`,
+меню. Событие `sf-header-site-open` можно отменить — тогда панель не
+откроется; `sf-header-site-close` несёт причину: `close`, `escape`,
 `outside`, `cancelled` или `api`.
 
 ```js
 const header = document.querySelector('sf-header-site');
-header.addEventListener('sf-site-header-opened', () => {
+header.addEventListener('sf-header-site-opened', () => {
   header.querySelector('[slot="sheet"]')?.replaceChildren(buildDocumentationTree());
 });
 ```

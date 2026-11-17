@@ -5,7 +5,7 @@ description: "Навигация по сайту из данных или спи
 
 # Меню
 
-:badge[sf-menu]{variant=tonal scheme=primary size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
 
 Меню ведёт по сайту, разделу или кабинету: вложенные разделы, текущая
 страница, ветки, которые открываются и закрываются; пункты задают данными или
@@ -133,12 +133,12 @@ disabled, open, children}`: в свойстве — массивом, в атр�
 :::example {id="smart-components/menu/documentation-tree" label="Дерево документации"}
 :::
 
-### Компактная полоса
+### Полоса значков
 
-`appearance="compact"` — полоса значков первого уровня: слова остаются в
+`appearance="rail"` — полоса значков первого уровня: слова остаются в
 имени ссылки, ветки не открываются.
 
-:::example {id="smart-components/menu/compact" label="Полоса значков"}
+:::example {id="smart-components/menu/rail" label="Полоса значков"}
 :::
 
 ### Навигация в шапке
@@ -188,7 +188,7 @@ disabled, open, children}`: в свойстве — массивом, в атр�
 открывается сама. В разметке группу задаёт `data-group` на `<li>`, а
 `data-collapsible` делает её сворачиваемой.
 
-В строке (`orientation="horizontal"`) и в компактной полосе групп нет: их
+В строке (`orientation="horizontal"`) и в полосе значков групп нет: их
 пункты стоят на месте группы, без заголовка.
 
 :::example {id="smart-components/menu/groups" label="Две группы" preview=sandbox log_console=true log_open=false}
@@ -266,7 +266,7 @@ menu.addEventListener('sf-menu-navigate', (event) => {
 ветками из кода. Открыть, закрыть и переключить ветку можно и объектом:
 `open({id})`. Они отвечают `{outcome: 'applied'}`, если что-то изменилось, и
 `{outcome: 'refused', reason}`, если нет: `unknown` — такой ветки нет,
-`compact` — вид compact ветки не открывает, `disabled` — пункт недоступен,
+`compact` — полоса значков (`rail`) ветки не открывает, `disabled` — пункт недоступен,
 `already` — ветка уже в этом состоянии, `fixed` — группу без
 `collapsible` свернуть нельзя.
 

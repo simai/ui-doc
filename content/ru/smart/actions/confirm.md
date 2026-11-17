@@ -5,7 +5,7 @@ description: "Вопрос человеку прямо на месте: что �
 
 # Подтверждение
 
-:badge[sf-confirm]{variant=tonal scheme=primary size=1/2} :badge[1.3.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-confirm]{variant=outline scheme=on-surface size=1/2} :badge[1.3.4]{variant=outline scheme=on-surface size=1/2}
 
 Подтверждение спрашивает человека прямо там, где он работает: удалить файл в
 его строке, убрать участника, вернуть вид раздела. Оно показывает, что
@@ -48,7 +48,7 @@ description: "Вопрос человеку прямо на месте: что �
 - **Вся страница должна остановиться** — [Модальное
   окно](/ru/smart/overlays/modal/).
 - **Нужно показать, каким станет каждое значение** — [Подтверждение
-  изменения](/ru/pro/admin/change-confirm/).
+  изменения](/ru/smart/actions/confirm-change/).
 
 ## Частые задачи
 
@@ -106,8 +106,7 @@ confirm.addEventListener('sf-confirm-answer', (event) => {
 :::
 
 Слова ответов задают `accept-text` и `decline-text`; без них — «Подтвердить»
-и «Отмена» на языке страницы. Прежнее имя `destructive` до 2027-01-01
-читается как `status="danger"`.
+и «Отмена» на языке страницы.
 
 ## Состояния
 
@@ -243,5 +242,5 @@ Tab доходит до ответов, Enter и пробел отвечают, 
 
 ## См. также
 
-- [Подтверждение изменения](/ru/pro/admin/change-confirm/) — как было и как станет для каждого значения.
+- [Подтверждение изменения](/ru/smart/actions/confirm-change/) — как было и как станет для каждого значения.
 - [Модальное окно](/ru/smart/overlays/modal/) — когда вопрос должен остановить всю страницу.

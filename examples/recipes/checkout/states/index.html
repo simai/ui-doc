@@ -1,0 +1,29 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-empty-state kind="no-data" size="1/2" heading="В корзине пока пусто" text="Загляните в каталог: новые улуны уже на складе."></sf-empty-state>
+      <span class="text-1/2 color-on-surface-variant">Пусто: корзина пуста</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-skeleton kind="text" count="3" size="1"></sf-skeleton>
+      <span class="text-1/2 color-on-surface-variant">Загрузка: считаем доставку, скелет на месте способов</span>
+    </div>
+    <div class="flex flex-col gap-1 min-w-0">
+      <sf-alert status="warning" heading="Курьером по этому адресу не доставляем" supporting-text="Остались пункт выдачи и почта."></sf-alert>
+      <sf-input-choice id="state-blocked" layout="list" label="Способ доставки"></sf-input-choice>
+      <span class="text-1/2 color-on-surface-variant">Не везём по адресу: способ недоступен, причина сверху</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-input-choice id="state-invalid" layout="list" label="Способ оплаты" invalid error-message="Выберите способ оплаты."></sf-input-choice>
+      <span class="text-1/2 color-on-surface-variant">Ошибка поля: не выбран способ</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-input-choice id="state-many" layout="list" label="Способ доставки"></sf-input-choice>
+      <span class="text-1/2 color-on-surface-variant">Много: шесть способов, всё ещё строками</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-alert status="success" heading="Заказ № 48 215 оформлен" supporting-text="Письмо с деталями отправлено на почту. Курьер позвонит за час."></sf-alert>
+      <span class="text-1/2 color-on-surface-variant">Оформлено</span>
+    </div>
+  </div>
+</div>

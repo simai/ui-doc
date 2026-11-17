@@ -24,7 +24,9 @@ here.
   carry the facts badges repeated. The one exception is generated: on a
   Smart page `scripts/build-smart-reference.mjs` writes one line under the
   H1 with the tag and the version of every component the page documents
-  (owner remark R007, 2026-11-07). A class component page gets the same
+  (owner remark R007, 2026-11-07); both badges are outline on-surface
+  (`{variant=outline scheme=on-surface size=1/2}`, owner decision C140:
+  a mark beside a title is outline). A class component page gets the same
   line from `scripts/build-reference-sections.mjs`: its `sf-` block and the
   version of the component's passport (dispatcher call on D01,
   2026-11-10). The audit fails either page without it

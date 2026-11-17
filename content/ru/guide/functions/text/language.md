@@ -15,7 +15,7 @@ description: "SF.language — выбрать язык всей страницы 
 ```js
 SF.language.use('en');                                     // язык всей страницы
 SF.language.register('sf-pager', 'ru', {next: 'Вперёд'});  // поправить одно слово
-SF.language.registerAll('kk', {'sf-pager': {next: 'Келесі'}});
+SF.language.registerAll('de', {'sf-pager': {next: 'Weiter'}});
 const stop = SF.language.onChange(() => redraw());
 ```
 

@@ -128,8 +128,7 @@ HTML и JSON живут по одному адресу, поэтому серв�
    `detail: {url, region}`. `preventDefault()` отменяет переход.
 2. Незавершённый прежний запрос прерывается; применяется только последний.
 3. Если ответ задерживается дольше 150 мс, область получает `aria-busy` и
-   скелетон `data-sf-region-loading`; оболочка не меняется
-   ([Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/)).
+   скелетон `data-sf-region-loading`; оболочка не меняется.
 4. Таблицы стилей области загружаются до замены, поэтому новое содержимое не
    показывается без оформления.
 5. Адрес попадает в историю, содержимое области заменяется — в переходе
@@ -183,6 +182,5 @@ HTML и JSON живут по одному адресу, поэтому серв�
 
 - [Фрагменты интерфейса](/ru/guide/layouts/building/interface-fragments/) — что стоит в области и как фрагменты освобождают ресурсы.
 - [Типы значений маршрутов](/ru/guide/layouts/reference/value-types/) — `navigation`: переход в области как значение маршрута.
-- [Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/) — как выглядит область во время перехода.
 - [Как работает Loader](/ru/guide/connection/loader/) — когда доступен каждый `SF.*`.
 - [Фрагмент интерфейса (`simai.interface-fragment`)](/ru/guide/standards/map/#фрагмент-интерфейса-simai-interface-fragment) — требования `region-navigation` и `full-load-fallback`.

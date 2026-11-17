@@ -5,7 +5,7 @@ description: "Поле вопроса и файлов чата: Enter отпра
 
 # Поле чата
 
-:badge[sf-chat-composer]{variant=tonal scheme=primary size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-composer]{variant=outline scheme=on-surface size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-composer>` — поле вопроса и файлов чата: текст растёт до восьми
 строк, Enter отправляет, Shift+Enter переносит строку. Файлы поле только
@@ -184,4 +184,4 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 - [Сообщение чата](/ru/pro/chat/chat-message/) — одно сообщение ленты.
 - [Окно чата](/ru/pro/chat/chat-window/) — окно целиком на порте хоста.
-- [Лента сообщений](/ru/pro/chat/message-log/) — лента, в которую встаёт сообщение.
+- [Лента](/ru/smart/content/list-feed/) — лента, в которую встаёт сообщение.

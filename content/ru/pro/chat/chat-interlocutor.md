@@ -5,7 +5,7 @@ description: "Кнопка с именем текущего собеседник
 
 # Выбор собеседника
 
-:badge[sf-chat-interlocutor]{variant=tonal scheme=primary size=1/2} :badge[1.0.8]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-interlocutor]{variant=outline scheme=on-surface size=1/2} :badge[1.0.8]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-interlocutor>` показывает, с кем разговор, и даёт выбрать другого
 собеседника. Список собеседников — серверный: элемент только показывает его и
@@ -153,5 +153,5 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 ## См. также
 
 - [Окно чата](/ru/pro/chat/chat-window/) — где стоит выбор собеседника.
-- [Список разговоров](/ru/pro/chat/thread-list/) — разговоры человека.
+- [Список разговоров](/ru/pro/chat/chat-threads/) — разговоры человека.
 - [Контекстное меню](/ru/smart/navigation/context-menu/) — меню, которым открывается список.

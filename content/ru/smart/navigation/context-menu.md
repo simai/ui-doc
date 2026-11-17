@@ -5,7 +5,7 @@ description: "Показывает короткий список действи�
 
 # Контекстное меню
 
-:badge[sf-menu-context]{variant=tonal scheme=primary size=1/2} :badge[1.19.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-menu-context]{variant=outline scheme=on-surface size=1/2} :badge[1.19.0]{variant=outline scheme=on-surface size=1/2}
 
 Контекстное меню — панель с коротким списком действий над объектом: страницей,
 строкой таблицы, файлом, профилем; пунктами можно управлять с клавиатуры.
@@ -156,6 +156,12 @@ value}`, где `value` — открыто ли меню после вызова
 элемент); `unavailable`, если меню негде открыть. Дождитесь итога, если
 следующий шаг зависит от того, открылось ли меню.
 
+Каждая кнопка примера открывает одно и то же меню со своей стороны; журнал
+показывает открытие и закрытие.
+
+:::example {id="smart-components/context-menu/open-side" label="Меню с четырёх сторон кнопки" preview=sandbox log="sf-menu-context-open sf-menu-context-close" log_console=true log_open=false}
+:::
+
 ### Выбор пункта
 
 Выбор на любом уровне, в том числе в подменю, приходит одним событием
@@ -168,6 +174,12 @@ value}`, где `value` — открыто ли меню после вызова
 Отметки `check` и `radio` хранит приложение: получив событие, оно
 записывает новое `checked` и значение `value` в `entries`, как в примере
 выше.
+
+В примере отметки колонок не закрывают меню: у пунктов `keepOpen: true`, и
+за один раз можно включить несколько колонок.
+
+:::example {id="smart-components/context-menu/select" label="Отметки колонок таблицы" preview=sandbox log="sf-menu-context-select" log_console=true log_open=false}
+:::
 
 ### Ширина и подвал
 
@@ -192,6 +204,12 @@ value}`, где `value` — открыто ли меню после вызова
   <sf-button slot="footer" size="1/2" text="Применить"></sf-button>
 </sf-menu-context>
 ```
+
+Меню сайта шириной точно с кнопку, длинная строка обрезана; фильтр — окно
+с подвалом, кнопки которого делят ширину поровну.
+
+:::example {id="smart-components/context-menu/width-footer" label="Ширина по кнопке и подвал с кнопками"}
+:::
 
 ### Меню, которым управляет страница
 
@@ -223,6 +241,12 @@ layer.addEventListener('keydown', (event) => {
 });
 ```
 
+Кнопка «Файл» показывает и скрывает меню сама; `Escape` и выбор пункта
+скрывают его и возвращают фокус на кнопку.
+
+:::example {id="smart-components/context-menu/page-owned" label="Меню, которое показывает страница"}
+:::
+
 ### Подменю в той же панели
 
 Подменю по умолчанию открывается сбоку — `submenu="flyout"`. Атрибут
@@ -250,6 +274,12 @@ layer.addEventListener('keydown', (event) => {
 Панель, которую показывает страница (без `popup`), тоже возвращается на
 уровень выше по `Escape` и `←`. На вложенном уровне `Escape` до страницы не
 доходит: страница скрывает меню только с верхнего уровня.
+
+Откройте «Сортировку»: подменю встаёт в ту же панель, длинное значение
+обрезано под названием, стрелка в шапке ведёт назад.
+
+:::example {id="smart-components/context-menu/drill" label="Подменю в одной панели" preview=sandbox log="sf-menu-context-select" log_console=true log_open=false}
+:::
 
 ### Меню профиля
 
@@ -281,6 +311,12 @@ layer.addEventListener('keydown', (event) => {
 настройки, — это отдельный компонент [Настройки](/ru/smart/navigation/settings/)
 (`<sf-settings>`): три вида раскладки, кнопка или место в потоке страницы,
 запоминание выбора.
+
+В примере две команды и две настройки: переключатель и ползунок масштаба.
+Журнал показывает `sf-menu-context-changed` с новым и прежним значением.
+
+:::example {id="smart-components/context-menu/value-rows" label="Команды и настройки в одном меню" preview=sandbox log="sf-menu-context-changed" log_console=true log_open=false}
+:::
 
 ### Поиск
 

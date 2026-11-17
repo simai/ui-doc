@@ -1,34 +1,36 @@
-<div class="grid grid-col-1 md:grid-col-2 gap-4">
-  <div class="flex flex-col gap-1">
-    <sf-slider button-type="primary" dots="false">
-      <div slot="slide" class="radius-surface bg-primary-container p-3">Слайд 1</div>
-      <div slot="slide" class="radius-surface bg-secondary-container p-3">Слайд 2</div>
-      <div slot="slide" class="radius-surface bg-tertiary-container p-3">Слайд 3</div>
-    </sf-slider>
-    <code class="text-1/2 color-on-surface-variant">button-type="primary"</code>
-  </div>
-  <div class="flex flex-col gap-1">
-    <sf-slider button-type="secondary" dots="false">
-      <div slot="slide" class="radius-surface bg-primary-container p-3">Слайд 1</div>
-      <div slot="slide" class="radius-surface bg-secondary-container p-3">Слайд 2</div>
-      <div slot="slide" class="radius-surface bg-tertiary-container p-3">Слайд 3</div>
-    </sf-slider>
-    <code class="text-1/2 color-on-surface-variant">button-type="secondary"</code>
-  </div>
-  <div class="flex flex-col gap-1">
-    <sf-slider button-type="dark" dots="false">
-      <div slot="slide" class="radius-surface bg-primary-container p-3">Слайд 1</div>
-      <div slot="slide" class="radius-surface bg-secondary-container p-3">Слайд 2</div>
-      <div slot="slide" class="radius-surface bg-tertiary-container p-3">Слайд 3</div>
-    </sf-slider>
-    <code class="text-1/2 color-on-surface-variant">button-type="dark"</code>
-  </div>
-  <div class="flex flex-col gap-1">
-    <sf-slider button-type="light" dots="false">
-      <div slot="slide" class="radius-surface bg-primary-container p-3">Слайд 1</div>
-      <div slot="slide" class="radius-surface bg-secondary-container p-3">Слайд 2</div>
-      <div slot="slide" class="radius-surface bg-tertiary-container p-3">Слайд 3</div>
-    </sf-slider>
-    <code class="text-1/2 color-on-surface-variant">button-type="light"</code>
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-4">
+    <div class="flex flex-col gap-1 min-w-0">
+      <sf-slider aria-label="Фотографии города, стрелки без button-type" dots="false" ratio="16/9">
+      <figure slot="slide" class="relative m-0 h-full"><img class="w-full h-full object-cover" src="assets/place-06-16x9.svg" alt=""><figcaption class="absolute inset-x-0 bottom-0 gradient-scrim p-x-3 p-top-4 p-bottom-5"><span class="text-2">Город на рассвете</span></figcaption></figure>
+      <figure slot="slide" class="relative m-0 h-full"><img class="w-full h-full object-cover" src="assets/place-02-16x9.svg" alt=""><figcaption class="absolute inset-x-0 bottom-0 gradient-scrim p-x-3 p-top-4 p-bottom-5"><span class="text-2">Город у холмов</span></figcaption></figure>
+      <figure slot="slide" class="relative m-0 h-full"><img class="w-full h-full object-cover" src="assets/place-07-16x9.svg" alt=""><figcaption class="absolute inset-x-0 bottom-0 gradient-scrim p-x-3 p-top-4 p-bottom-5"><span class="text-2">Озеро в долине</span></figcaption></figure>
+      </sf-slider>
+      <span class="text-1/2 color-on-surface-variant">без button-type</span>
+    </div>
+    <div class="flex flex-col gap-1 min-w-0">
+      <sf-slider aria-label="Фотографии города, стрелки primary" button-type="primary" dots="false" ratio="16/9">
+      <figure slot="slide" class="relative m-0 h-full"><img class="w-full h-full object-cover" src="assets/place-06-16x9.svg" alt=""><figcaption class="absolute inset-x-0 bottom-0 gradient-scrim p-x-3 p-top-4 p-bottom-5"><span class="text-2">Город на рассвете</span></figcaption></figure>
+      <figure slot="slide" class="relative m-0 h-full"><img class="w-full h-full object-cover" src="assets/place-02-16x9.svg" alt=""><figcaption class="absolute inset-x-0 bottom-0 gradient-scrim p-x-3 p-top-4 p-bottom-5"><span class="text-2">Город у холмов</span></figcaption></figure>
+      <figure slot="slide" class="relative m-0 h-full"><img class="w-full h-full object-cover" src="assets/place-07-16x9.svg" alt=""><figcaption class="absolute inset-x-0 bottom-0 gradient-scrim p-x-3 p-top-4 p-bottom-5"><span class="text-2">Озеро в долине</span></figcaption></figure>
+      </sf-slider>
+      <span class="text-1/2 color-on-surface-variant">primary</span>
+    </div>
+    <div class="flex flex-col gap-1 min-w-0">
+      <sf-slider aria-label="Фотографии города, стрелки dark" button-type="dark" dots="false" ratio="16/9">
+      <figure slot="slide" class="relative m-0 h-full"><img class="w-full h-full object-cover" src="assets/place-06-16x9.svg" alt=""><figcaption class="absolute inset-x-0 bottom-0 gradient-scrim p-x-3 p-top-4 p-bottom-5"><span class="text-2">Город на рассвете</span></figcaption></figure>
+      <figure slot="slide" class="relative m-0 h-full"><img class="w-full h-full object-cover" src="assets/place-02-16x9.svg" alt=""><figcaption class="absolute inset-x-0 bottom-0 gradient-scrim p-x-3 p-top-4 p-bottom-5"><span class="text-2">Город у холмов</span></figcaption></figure>
+      <figure slot="slide" class="relative m-0 h-full"><img class="w-full h-full object-cover" src="assets/place-07-16x9.svg" alt=""><figcaption class="absolute inset-x-0 bottom-0 gradient-scrim p-x-3 p-top-4 p-bottom-5"><span class="text-2">Озеро в долине</span></figcaption></figure>
+      </sf-slider>
+      <span class="text-1/2 color-on-surface-variant">dark</span>
+    </div>
+    <div class="flex flex-col gap-1 min-w-0">
+      <sf-slider aria-label="Фотографии города, стрелки light" button-type="light" dots="false" ratio="16/9">
+      <figure slot="slide" class="relative m-0 h-full"><img class="w-full h-full object-cover" src="assets/place-06-16x9.svg" alt=""><figcaption class="absolute inset-x-0 bottom-0 gradient-scrim p-x-3 p-top-4 p-bottom-5"><span class="text-2">Город на рассвете</span></figcaption></figure>
+      <figure slot="slide" class="relative m-0 h-full"><img class="w-full h-full object-cover" src="assets/place-02-16x9.svg" alt=""><figcaption class="absolute inset-x-0 bottom-0 gradient-scrim p-x-3 p-top-4 p-bottom-5"><span class="text-2">Город у холмов</span></figcaption></figure>
+      <figure slot="slide" class="relative m-0 h-full"><img class="w-full h-full object-cover" src="assets/place-07-16x9.svg" alt=""><figcaption class="absolute inset-x-0 bottom-0 gradient-scrim p-x-3 p-top-4 p-bottom-5"><span class="text-2">Озеро в долине</span></figcaption></figure>
+      </sf-slider>
+      <span class="text-1/2 color-on-surface-variant">light</span>
+    </div>
   </div>
 </div>

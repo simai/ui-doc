@@ -5,7 +5,7 @@ description: "Факты парами «подпись — значение»: �
 
 # Список сведений
 
-:badge[sf-list-description]{variant=tonal scheme=primary size=1/2} :badge[1.1.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-description]{variant=outline scheme=on-surface size=1/2} :badge[1.1.4]{variant=outline scheme=on-surface size=1/2}
 
 Показывает факты парами «подпись — значение»: сводку сайта, сведения о
 сервере, шапку записи, параметры задания, данные лицензии. Значение может

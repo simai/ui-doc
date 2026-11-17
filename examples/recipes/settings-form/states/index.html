@@ -1,0 +1,20 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-input label="Название сайта" required invalid default-value="" error-message="Введите название: его видно во вкладке браузера и в поиске"></sf-input>
+      <span class="text-1/2 color-on-surface-variant">Ошибка поля: что исправить, под полем</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <div class="flex flex-wrap gap-1/3"><sf-button text="Сохранить" loading></sf-button><sf-button appearance="ghost" scheme="on-surface" text="Отмена" disabled></sf-button></div>
+      <span class="text-1/2 color-on-surface-variant">Сохранение: кнопка занята, повторно не нажать</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-alert status="success" heading="Настройки сохранены" supporting-text="Изменения видны посетителям сразу."></sf-alert>
+      <span class="text-1/2 color-on-surface-variant">Сохранено: короткое подтверждение</span>
+    </div>
+    <div class="flex flex-col gap-1/2 min-w-0">
+      <sf-alert status="error" heading="Не сохранено" supporting-text="Сервер не ответил. Изменения остались в форме." action-text="Повторить" action="retry"></sf-alert>
+      <span class="text-1/2 color-on-surface-variant">Ошибка сохранения: правки не теряются</span>
+    </div>
+  </div>
+</div>

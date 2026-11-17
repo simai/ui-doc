@@ -1,0 +1,66 @@
+<div class="grid grid-col-1 cq-md:grid-col-2 gap-2 query-container">
+  <figure class="m-0 flex flex-col gap-1/2">
+    <sf-modal display="inline" heading="Новая страница" show-close="false">
+      <div slot="content" class="flex flex-col gap-1">
+        <sf-input label="Название" required placeholder="Например, Насосы для дачи"></sf-input>
+        <sf-input label="Адрес" hint="Будет так: shop.example.ru/catalog/адрес"></sf-input>
+      </div>
+      <div slot="footer" class="flex flex-wrap gap-1/3 w-full"><sf-button text="Создать страницу"></sf-button><sf-button text="Отмена" appearance="ghost" scheme="on-surface"></sf-button></div>
+    </sf-modal>
+    <figcaption class="text-1/2 color-on-surface-variant">Только что открыто: курсор в первом поле, главная кнопка не выключена</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <sf-modal display="inline" heading="Свойства раздела" show-close="false">
+      <div slot="content" class="flex flex-col gap-1" aria-busy="true">
+        <sf-skeleton kind="text" width="30%"></sf-skeleton><sf-skeleton kind="rounded" height="a8" width="100%"></sf-skeleton>
+        <sf-skeleton kind="text" width="30%"></sf-skeleton><sf-skeleton kind="rounded" height="a8" width="100%"></sf-skeleton>
+      </div>
+      <div slot="footer" class="flex flex-wrap gap-1/3 w-full"><sf-button text="Сохранить" disabled></sf-button><sf-button text="Отмена" appearance="ghost" scheme="on-surface"></sf-button></div>
+    </sf-modal>
+    <figcaption class="text-1/2 color-on-surface-variant">Загрузка содержимого: заготовка в размер полей, кнопка ждёт</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <sf-modal display="inline" heading="Новая страница" show-close="false">
+      <div slot="content" class="flex flex-col gap-1">
+        <sf-alert status="error" heading="Исправьте 2 поля"><div slot="supporting-text"><ul class="m-0 p-inline-start-1"><li>Название — введите название страницы</li><li>Адрес — только латинские буквы, цифры и дефис</li></ul></div></sf-alert>
+        <sf-input label="Название" required invalid error-message="Введите название страницы"></sf-input>
+        <sf-input label="Адрес" default-value="насосы дача" invalid error-message="Только латинские буквы, цифры и дефис"></sf-input>
+      </div>
+      <div slot="footer" class="flex flex-wrap gap-1/3 w-full"><sf-button text="Создать страницу"></sf-button><sf-button text="Отмена" appearance="ghost" scheme="on-surface"></sf-button></div>
+    </sf-modal>
+    <figcaption class="text-1/2 color-on-surface-variant">Ошибки в полях: от двух ошибок — сводка со ссылками над полями</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <sf-modal display="inline" heading="Новая страница" show-close="false">
+      <div slot="content" class="flex flex-col gap-1">
+        <sf-input label="Название" default-value="Насосы для дачи" readonly></sf-input>
+        <sf-input label="Адрес" default-value="nasosy-dlya-dachi" readonly></sf-input>
+      </div>
+      <div slot="footer" class="flex flex-wrap gap-1/3 w-full"><sf-button text="Создать страницу" loading></sf-button><sf-button text="Отмена" appearance="ghost" scheme="on-surface" disabled></sf-button></div>
+    </sf-modal>
+    <figcaption class="text-1/2 color-on-surface-variant">Сохраняем: главная кнопка с загрузкой своего цвета, поля только для чтения</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <sf-modal display="inline" heading="Новая страница" show-close="false">
+      <div slot="content" class="flex flex-col gap-1">
+        <sf-alert status="error" heading="Не удалось создать страницу" supporting-text="Сервер не ответил. Набранное осталось в окне — нажмите «Создать страницу» ещё раз."></sf-alert>
+        <sf-input label="Название" default-value="Насосы для дачи"></sf-input>
+      </div>
+      <div slot="footer" class="flex flex-wrap gap-1/3 w-full"><sf-button text="Создать страницу"></sf-button><sf-button text="Отмена" appearance="ghost" scheme="on-surface"></sf-button></div>
+    </sf-modal>
+    <figcaption class="text-1/2 color-on-surface-variant">Ошибка сервера: окно остаётся, набранное на месте</figcaption>
+  </figure>
+  <figure class="m-0 flex flex-col gap-1/2">
+    <sf-modal display="inline" heading="Свойства товара" show-close="false" height="22rem">
+      <div slot="content" class="flex flex-col gap-1">
+        <sf-input label="Название" default-value="Насос погружной Аквабур-40"></sf-input>
+        <sf-input label="Артикул" default-value="AQ-40-2026"></sf-input>
+        <sf-input label="Цена" default-value="12 490" text-end="₽" inputmode="decimal"></sf-input>
+        <sf-input label="Остаток" default-value="18" text-end="шт."></sf-input>
+        <sf-input label="Вес" default-value="7,4" text-end="кг"></sf-input>
+      </div>
+      <div slot="footer" class="flex flex-wrap gap-1/3 w-full"><sf-button text="Сохранить"></sf-button><sf-button text="Отмена" appearance="ghost" scheme="on-surface"></sf-button><sf-button class="m-inline-start-auto" text="Удалить товар" appearance="outline" status="danger"></sf-button></div>
+    </sf-modal>
+    <figcaption class="text-1/2 color-on-surface-variant">Много полей: тело прокручивается, заголовок и подвал на месте</figcaption>
+  </figure>
+</div>

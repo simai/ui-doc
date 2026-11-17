@@ -1,18 +1,27 @@
-<div class="grid grid-col-1 md:grid-col-2 gap-4">
+<div class="grid grid-col-1 gap-4">
   <div class="flex flex-col gap-1">
-    <sf-slider root-class="sf-slider--content" arrows="false" dots-type="primary-dark">
-      <div slot="slide" class="radius-surface bg-primary-container p-3">Слайд 1</div>
-      <div slot="slide" class="radius-surface bg-secondary-container p-3">Слайд 2</div>
-      <div slot="slide" class="radius-surface bg-tertiary-container p-3">Слайд 3</div>
+    <sf-slider aria-label="Фотографии города, точки" arrows="false" ratio="21/9">
+      <figure slot="slide" class="relative m-0 h-full"><img class="w-full h-full object-cover" src="assets/place-06-16x9.svg" alt=""><figcaption class="absolute inset-x-0 bottom-0 gradient-scrim p-x-3 p-top-4 p-bottom-5"><span class="text-2">Город на рассвете</span></figcaption></figure>
+      <figure slot="slide" class="relative m-0 h-full"><img class="w-full h-full object-cover" src="assets/place-02-16x9.svg" alt=""><figcaption class="absolute inset-x-0 bottom-0 gradient-scrim p-x-3 p-top-4 p-bottom-5"><span class="text-2">Город у холмов</span></figcaption></figure>
+      <figure slot="slide" class="relative m-0 h-full"><img class="w-full h-full object-cover" src="assets/place-07-16x9.svg" alt=""><figcaption class="absolute inset-x-0 bottom-0 gradient-scrim p-x-3 p-top-4 p-bottom-5"><span class="text-2">Озеро в долине</span></figcaption></figure>
     </sf-slider>
-    <code class="text-1/2 color-on-surface-variant">dots-type="primary-dark"</code>
+    <span class="text-1/2 color-on-surface-variant">поверх картинки: точки на плашке</span>
   </div>
   <div class="flex flex-col gap-1">
-    <sf-slider root-class="sf-slider--content" arrows="false" dots-type="primary-light">
-      <div slot="slide" class="radius-surface bg-primary-container p-3">Слайд 1</div>
-      <div slot="slide" class="radius-surface bg-secondary-container p-3">Слайд 2</div>
-      <div slot="slide" class="radius-surface bg-tertiary-container p-3">Слайд 3</div>
+    <sf-slider aria-label="Отзывы покупателей" root-class="sf-slider--content">
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 1</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4101.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 2</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4102.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 3</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4103.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 4</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4104.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 5</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4105.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 6</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4106.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 7</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4107.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 8</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4108.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 9</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4109.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 10</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4110.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 11</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4111.</span></article>
+      <article slot="slide" class="radius-surface bg-surface-container p-3 flex flex-col gap-1"><span class="text-1 weight-6">Отзыв № 12</span><span class="text-1/2 color-on-surface-variant">Покупатель из заказа № 4112.</span></article>
     </sf-slider>
-    <code class="text-1/2 color-on-surface-variant">dots-type="primary-light"</code>
+    <span class="text-1/2 color-on-surface-variant">двенадцать карточек: счётчик вместо точек</span>
   </div>
 </div>

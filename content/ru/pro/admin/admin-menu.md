@@ -5,7 +5,7 @@ description: "Даёт административному приложению �
 
 # Меню администратора
 
-:badge[sf-admin-menu]{variant=tonal scheme=primary size=1/2} :badge[1.11.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-admin-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.11.2]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-admin-menu>` — боковая навигация административного приложения: вложенные
 разделы, поиск, компактный режим и настройка порядка и видимости пунктов.
@@ -44,10 +44,8 @@ Framework: поставляется пакетом `pro` из репозитор
   пользователя. Меню ничего не хранит и обо всём, что делает человек,
   спрашивает приложение.
 
-Порт передаётся методом `connectPort(port)`; прежний `setHostPort` — его
-псевдоним. С портом рисуется навигация порта, без него — меню из пунктов
-разметки. Прежний запрос `sf-host-port-request`, на который страница отвечала
-портом, меню отправляет при подключении до 2026-12-01.
+Порт передаётся методом `connectPort(port)`. С портом рисуется навигация
+порта, без него — меню из пунктов разметки.
 
 ### Пункты меню
 
@@ -82,12 +80,17 @@ Framework: поставляется пакетом `pro` из репозитор
 `event.detail` `{kind, query, requestId}`, где `kind` — `menu`; ответ передаётся методом
 `setSearchResults(requestId, groups)`. Ответ на запрос, который человек уже
 сменил, отбрасывается. Настройка `recent-results` (свойство `recentResults`) задаёт,
-что показывать при пустом поле, например недавно открытое. Прежние
-`sf-admin-menu-search` и `setRecentResults(groups)` работают до 2026-12-01.
+что показывать при пустом поле, например недавно открытое.
 
 Группа результатов — `{key, label, items, more}`, результат —
 `{text, subtext, icon, href}`, `more` — `{text, href}`. Результаты с адресом на
 другом сайте меню не показывает.
+
+Наберите в поиске «роль» — найдётся раздел «Роли», — или «1042»: заказ
+придёт ответом страницы на `sf-admin-menu-query`.
+
+:::example {id="smart-components/admin-menu/search" label="Поиск по разделам и заказам" preview=sandbox log="sf-admin-menu-query" log_console=true log_open=false}
+:::
 
 ### Компактный режим
 
@@ -102,6 +105,12 @@ Framework: поставляется пакетом `pro` из репозитор
 верхний угол точкой размером 8px, а число остаётся в имени пункта. Как точка и
 число ведут себя на якоре, описано в разделе
 [Бейдж на якоре](/ru/components/feedback/badges/#бейдж-на-якоре).
+
+Меню в примере открыто свёрнутым: наведите указатель на значок, чтобы
+увидеть подпись, и разверните меню кнопкой свёртывания.
+
+:::example {id="smart-components/admin-menu/compact" label="Свёрнутое меню и счётчик точкой"}
+:::
 
 ### Меню в колонке с ручкой ширины
 
@@ -148,6 +157,12 @@ menu.addEventListener('sf-admin-menu-compact-change', ({detail}) => {
 });
 ```
 
+В примере ручка стоит у правого края меню; пока меню свёрнуто, ручка
+выключена.
+
+:::example {id="smart-components/admin-menu/column" label="Колонка меню с ручкой ширины" preview=sandbox log="sf-admin-menu-compact-change" log_console=true log_open=false}
+:::
+
 ### Настройки пунктов
 
 Пока `settings` включён, человек может скрывать и показывать пункты и менять
@@ -161,8 +176,7 @@ menu.addEventListener('sf-admin-menu-compact-change', ({detail}) => {
 В режиме `external` сохранение отправляет `sf-admin-menu-settings-save` с
 `{target, baseRevision, profile}`; сброс — `sf-admin-menu-reset` с
 `{kind: 'settings', target, baseRevision}`, отмена — `sf-admin-menu-settings-cancel`.
-Прежнее поле `base_revision` и прежнее имя `sf-admin-menu-settings-reset`
-приходят до 2026-12-01. `target` — уровень настроек: `user`
+`target` — уровень настроек: `user`
 для своих, `system` для общих; общие доступны при `allow-system-settings`, а
 переключение уровня отправляет `sf-admin-menu-settings-mode-change`.
 `settings-revision` и `system-settings-revision` — ревизии, против которых
@@ -217,8 +231,7 @@ profile})` фиксирует сохранение, `applySettingsError(error)` 
 Каждое намерение дублируется событием по своему глаголу — `sf-admin-menu-open`,
 `-toggle`, `-save`, `-query` и другими (список — в справочнике ниже) — с
 `{kind, intent, payload}` и полями намерения: по нему страница видит, что
-человек попросил, но отвечает только порт. Прежнее `sf-admin-menu-intent`
-приходит до 2026-12-01.
+человек попросил, но отвечает только порт.
 
 Если избранное или разделы изменились вне меню — например, звездой в шапке
 страницы, — вызовите `refresh()`: меню заново запросит `navigation.load`.

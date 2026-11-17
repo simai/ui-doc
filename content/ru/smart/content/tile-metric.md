@@ -5,7 +5,7 @@ description: "Одно важное число на панели: подпись
 
 # Плитка показателя
 
-:badge[sf-tile-metric]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tile-metric]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Плитка показателя показывает одно число, которое важно на панели
 администратора или на сводной странице: нагрузку сервера, занятое место из

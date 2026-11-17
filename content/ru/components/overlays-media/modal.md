@@ -6,7 +6,7 @@ profile: reference
 
 # Модальное окно
 
-:badge[sf-modal]{variant=tonal scheme=primary size=1/2} :badge[1.3.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-modal]{variant=outline scheme=on-surface size=1/2} :badge[1.3.3]{variant=outline scheme=on-surface size=1/2}
 
 Модальное окно переводит пользователя к одной важной задаче поверх страницы:
 подтвердить действие, заполнить короткую форму. Страница за окном недоступна,
@@ -16,7 +16,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="components/modal/overview" label="Окно"}
+:::example {id="components/modal/overview" label="Окно подтверждения публикации"}
 :::
 
 ## Разметка
@@ -54,7 +54,7 @@ profile: reference
 размывает страницу за окном с выбранной силой. `overlay: false` убирает фон:
 страница видна как есть, но по-прежнему недоступна.
 
-:::example {id="components/modal/backdrop" label="Фон"}
+:::example {id="components/modal/backdrop" label="Затемнение и размытие фона"}
 :::
 
 ### Размер
@@ -63,7 +63,7 @@ profile: reference
 `width` и `height` задают размеры панели любой длиной CSS, `fullscreen: true`
 раскрывает окно на весь экран.
 
-:::example {id="components/modal/size" label="Размер"}
+:::example {id="components/modal/size" label="Ширина окна: по содержимому, заданная и весь экран"}
 :::
 
 ## Доступность
@@ -155,10 +155,7 @@ const modal = new Modal({
 `modal:before-open` и `modal:before-close` — до перехода, их отменяет
 `preventDefault()` на блоке; `modal:after-open` и `modal:after-close` — после;
 `modal:before-content-upload` и `modal:after-content-upload` — вокруг загрузки
-содержимого. `detail` несёт `modal`, `id` и `isOpen`. События
-`SFModalBeforeOpenWindow`, `SFModalAfterOpenWindow`,
-`SFModalBeforeCloseWindow` и `SFModalAfterCloseWindow` — другие имена тех же
-событий.
+содержимого. `detail` несёт `modal`, `id` и `isOpen`.
 
 ```js
 document.addEventListener('modal:before-close', (event) => {

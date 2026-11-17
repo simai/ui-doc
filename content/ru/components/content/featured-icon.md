@@ -6,7 +6,7 @@ profile: reference
 
 # Акцентная иконка
 
-:badge[sf-featured-icon]{variant=tonal scheme=primary size=1/2} :badge[1.1.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-featured-icon]{variant=outline scheme=on-surface size=1/2} :badge[1.1.4]{variant=outline scheme=on-surface size=1/2}
 
 Акцентная иконка ставит [иконку](/ru/components/content/icons/) на цветную
 подложку и выделяет тему карточки, раздела, статуса или пустого состояния.
@@ -81,7 +81,7 @@ profile: reference
 - В режиме высокой контрастности подложка становится системным фоном с
   рамкой цвета текста.
 
-:::example {id="components/featured-icon/accessibility" label="Доступность"}
+:::example {id="components/featured-icon/accessibility" label="Декоративная и смысловая иконка"}
 :::
 
 ## Классы

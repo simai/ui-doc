@@ -45,8 +45,10 @@
         "wrap": "Wrap long lines", "unwrap": "Keep original line layout"
     },
     "examples": {
-        "fullscreen": "Open example fullscreen",
-        "fullscreen_exit": "Exit fullscreen"
+        "fullscreen_exit": "Exit fullscreen",
+        "viewer": "Check responsiveness", "viewer_exit": "Exit viewer",
+        "viewer_dialog": "Responsive example viewer", "viewport_group": "Example width",
+        "viewport_desktop": "Desktop", "viewport_tablet": "Tablet", "viewport_mobile": "Phone"
     },
     "common": {"continue": "Continue", "greeting": "Hello, {name}!"}
 }

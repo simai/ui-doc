@@ -6,7 +6,7 @@ profile: reference
 
 # Боковая панель
 
-:badge[sf-drawer]{variant=tonal scheme=primary size=1/2} :badge[1.10.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-drawer]{variant=outline scheme=on-surface size=1/2} :badge[1.10.5]{variant=outline scheme=on-surface size=1/2}
 
 Боковая панель открывается рядом со страницей и оставляет её доступной:
 подсказка у формы, библиотека блоков и свойства в редакторе страниц.
@@ -42,8 +42,7 @@ profile: reference
 Модальный режим по умолчанию оставлен только для совместимости и помечен
 устаревшим. Новой панели всегда задавайте `modal="false"` или `docked`.
 
-`heading` задаёт видимый заголовок панели (прежнее имя атрибута — `title`, до
-2026-12-01), `label` — доступное имя без заголовка.
+`heading` задаёт видимый заголовок панели, `label` — доступное имя без заголовка.
 
 ## Варианты
 
@@ -196,8 +195,6 @@ profile: reference
 страницы. Так область редактора или пример документации держат свой Drawer,
 не открывая его поверх всей страницы; оба примера на этой странице устроены
 так. Тот же атрибут держит внутри блока и [модальное окно](/ru/smart/overlays/modal/#окно-внутри-блока).
-Прежнее имя атрибута `data-sf-drawer-container` читается для совместимости до
-2026-12-01 (запись журнала `attribute-overlay-container`).
 
 ```html
 <div data-sf-overlay-container class="h-e6">
@@ -215,10 +212,7 @@ profile: reference
 завершённого перехода, `drawer:ready` и `drawer:update` — после отрисовки.
 
 События всплывают до `document`, как остальные события `sf-*`. Панель,
-которая их отправила, указана в `event.detail.drawerId`. Прежние имена
-`drawer:before-open`, `drawer:after-open`, `drawer:before-close`,
-`drawer:after-close` и `drawer:snap` приходят до 2026-12-01 с элементом
-панели в `event.detail.drawer`. Помощники
+которая их отправила, указана в `event.detail.drawerId`. Помощники
 `onBeforeOpen()`, `onAfterOpen()`, `onBeforeClose()` и `onAfterClose()`
 получают только события своей панели; обычный слушатель на внешней панели
 услышит и вложенную, поэтому проверяйте `event.detail.drawerId`.

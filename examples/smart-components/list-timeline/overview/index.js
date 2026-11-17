@@ -2,7 +2,7 @@
 // appends the next page to items and clears has-more when there is none.
 // A title link asks sf-list-timeline-navigate first; here it is cancelled.
 const OLDER = [
-  {id: 'php', time: '2026-10-20T15:30:00+03:00', icon: 'tune', title: 'PHP 8.3 включён для demo.test', actor: 'Анна'},
+  {id: 'php', time: '2026-10-20T15:30:00+03:00', icon: 'tune', title: 'PHP 8.3 включён для сайта', actor: 'Анна'},
   {id: 'server', time: '2026-10-19T09:00:00+03:00', status: 'success', title: 'Сервер подключён к панели', actor: 'Установщик'},
 ];
 

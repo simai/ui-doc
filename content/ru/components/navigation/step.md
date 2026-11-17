@@ -6,7 +6,7 @@ profile: reference
 
 # Шаги
 
-:badge[sf-steps]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-steps]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Шаги показывают, где человек находится в процессе, который проходит сам, —
 оформлении заказа, публикации, настройке, — и отмечают пройденные, текущий и

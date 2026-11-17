@@ -6,7 +6,7 @@ profile: reference
 
 # Меню
 
-:badge[sf-menu]{variant=tonal scheme=primary size=1/2} :badge[1.8.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.8.1]{variant=outline scheme=on-surface size=1/2}
 
 Меню ведёт по разделам сайта, раздела или личного кабинета и раскрывает
 группы вложенных разделов. Один компонент показывается вертикально в боковой
@@ -53,7 +53,7 @@ profile: reference
 `sf-menu--documentation-tree` — компактное дерево без рамок с отступом по
 уровню, для навигации по документации.
 
-:::example {id="components/menu/layouts" label="Вид"}
+:::example {id="components/menu/layouts" label="Вертикальное и горизонтальное меню"}
 :::
 
 ### Навигация в шапке
@@ -70,6 +70,10 @@ profile: reference
 насыщенность подписи; под указателем плашка не меняется. Высота, отступы и
 шрифт — обычной строки меню. Работает с `sf-menu--horizontal` и без него; в
 режиме принудительных цветов текущая страница обводится рамкой.
+
+Строка разделов не переносится. Если на узком экране она не помещается,
+оберните её блоком с прокруткой по горизонтали (`overflow-x-auto`), как в
+примере, или уберите разделы в меню шапки.
 
 :::example {id="components/menu/navigation" label="Разделы сайта в шапке"}
 :::
@@ -210,7 +214,7 @@ profile: reference
 раскрывать и приглушает подпись. Недоступную ссылку лучше убрать из
 навигации.
 
-:::example {id="components/menu/states" label="Ветки"}
+:::example {id="components/menu/states" label="Открытая и недоступная ветка"}
 :::
 
 ## Доступность

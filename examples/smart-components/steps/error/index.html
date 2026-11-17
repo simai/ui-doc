@@ -1,1 +1,4 @@
-<sf-steps aria-label="Этапы публикации" size="1/2" items="Черновик|Проверка|Публикация::disabled" current="1" error-step="1"></sf-steps>
+<div class="flex flex-col gap-4">
+  <sf-steps aria-label="Подключение домена" layout="column" current="2"
+    items='[{"label":"Домен","text":"shop-north.ru"},{"label":"Проверка DNS","state":"error","text":"Запись A не найдена"},{"label":"Сертификат","state":"running","text":"Выпускается"},{"label":"Почта","state":"skipped","text":"Необязательно"},{"label":"Готово"}]'></sf-steps>
+</div>

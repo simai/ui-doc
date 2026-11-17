@@ -5,7 +5,7 @@ description: "Выбирает ровно одно значение из нес�
 
 # Сегментный переключатель
 
-:badge[sf-segmented]{variant=tonal scheme=primary size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-segmented]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Сегментный переключатель даёт выбрать ровно одно значение из нескольких и
 сразу его применяет: период отчёта, вид списка, фильтр, тему оформления. У
@@ -136,7 +136,7 @@ description: "Выбирает ровно одно значение из нес�
 | Значение | Когда брать |
 |:---|:---|
 | `primary` | выбор на виду, рядом нет главного действия |
-| `secondary` | тихий выбор рядом с главным действием |
+| `secondary` | тихий выбор рядом с главным действием; только у дорожки (`appearance="track"`) |
 | `on-surface` | нейтральный выбор без цвета проекта |
 
 ### Плашка
@@ -170,14 +170,28 @@ description: "Выбирает ровно одно значение из нес�
 :::example {id="smart-components/segmented/sizes" label="Дорожка рядом с кнопками" preview=inline}
 :::
 
+### Высота
+
+`height` • по умолчанию `default` • [справочник](#атрибуты)
+
+`height` выбирает высоту из ступеней размера, как у
+[Кнопки](/ru/smart/actions/buttons/): `low`, `default`, `high`, `highest`.
+Текст и значки остаются того же размера, меняются высота и боковые поля.
+Дорожка той же высоты, что кнопка того же размера и высоты, поэтому ряд
+кнопок и переключатель стоят ровно.
+
+:::example {id="smart-components/segmented/height" label="Четыре высоты" preview=inline}
+:::
+
 ### Плотность
 
-`spacing` • по умолчанию `normal` • [справочник](#атрибуты)
+`data-sf-density` • [плотность](/ru/guide/size-and-type/density/)
 
-Плотность меняет поля внутри кнопок, не меняя размер текста.
-`spacing="compact"` опускает и кнопку, и дорожку на компактную ступень.
+В компактной плотности — `data-sf-density="compact"` на корне экрана или
+панели — переключатель вместе с кнопками и полями опускается на ступень.
+Отдельного атрибута плотности у переключателя нет.
 
-:::example {id="smart-components/button-group/spacing" label="Плотность" preview=inline}
+:::example {id="smart-components/segmented/density" label="Обычная и компактная" preview=inline}
 :::
 
 ### Скругление
