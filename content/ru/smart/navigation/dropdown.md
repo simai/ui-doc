@@ -332,3 +332,4 @@ SIMAI Framework язык не запоминает.
 - [Контекстное меню](/ru/smart/navigation/context-menu/) — меню действий у элемента.
 - [Строка списка](/ru/smart/content/list-item/) — пункт списка вариантов.
 - [Выпадающий список на классах](/ru/components/navigation/dropdown/) — то же поле в статической разметке.
+- Рецепты: [«Окно с формой»](/ru/recipes/edit/dialog-form/)

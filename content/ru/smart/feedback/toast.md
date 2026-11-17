@@ -213,3 +213,4 @@ Toast отвечает за одно сообщение. Позицию на э�
 
 - [Всплывающие сообщения](/ru/components/feedback/toast/) — сообщения на классах без смарт-элемента.
 - [Уведомление](/ru/smart/feedback/alert/) — сообщение, которое остаётся в потоке страницы.
+- Рецепты: [«Оформление заказа»](/ru/recipes/edit/checkout/), [«Удаление»](/ru/recipes/remove/delete/), [«Форма настроек»](/ru/recipes/edit/settings-form/)

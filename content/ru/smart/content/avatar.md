@@ -286,3 +286,4 @@ avatar.addEventListener('click', () => openProfile('anna'));
 
 - [Аватары](/ru/components/content/avatars/) — тот же вид на классах, без смарт-элемента.
 - [Аватары](/ru/smart/content/avatars/) — готовые сочетания аватаров.
+- Рецепты: [«Список писем и диалогов»](/ru/recipes/find/mail-chat-list/)

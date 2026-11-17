@@ -254,3 +254,4 @@ timeline.addEventListener('sf-list-timeline-load-more', async (event) => {
 - [Лента](/ru/smart/content/list-feed/) — записи, которые читают от новой
   внизу.
 - [Список](/ru/smart/content/list/) — строки, с которыми работают.
+- Рецепты: [«Карточка записи»](/ru/recipes/edit/record-card/), [«Обзор с плитками»](/ru/recipes/notify/dashboard/), [«Статус заказа или заявки»](/ru/recipes/progress/order-status/)

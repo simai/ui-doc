@@ -200,3 +200,4 @@ upload.addEventListener('load', () => {
 - [Прогресс](/ru/components/feedback/progress-bar/) — полоса прогресса на классах.
 - [Шкала прогресса](/ru/smart/feedback/progress-scale/) — ход процесса десятью шагами.
 - [Спиннер](/ru/smart/feedback/spinner/) — ожидание без известной доли.
+- Рецепты: [«Первые шаги»](/ru/recipes/progress/onboarding-checklist/)

@@ -336,3 +336,4 @@ document.addEventListener('sf-drawer-opened', (event) => {
 
 - [Модальное окно](/ru/smart/overlays/modal/) — модальная боковая панель и диалог.
 - [Всплывающая панель](/ru/smart/overlays/popover/) — небольшая панель у кнопки.
+- Рецепты: [«Каркас админки»](/ru/recipes/navigate/admin-frame/), [«Фильтры в шторке»](/ru/recipes/find/filter-drawer/)

@@ -205,3 +205,4 @@ list.addEventListener('sf-list-attention-apply', async (event) => {
   страницы.
 - [Пустое состояние](/ru/smart/feedback/empty-state/) — что показать, когда
   данных нет.
+- Рецепты: [«Обзор с плитками»](/ru/recipes/notify/dashboard/)

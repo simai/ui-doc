@@ -246,3 +246,4 @@ header.addEventListener('sf-header-site-opened', () => {
 - [Меню](/ru/smart/navigation/menu/) — разделы сайта в строке и колонкой.
 - [Боковая панель](/ru/smart/overlays/drawer/) — тот же общий стек слоёв.
 - [Заголовок страницы](/ru/smart/composite/page-header/) — строка над содержимым страницы.
+- Рецепты: [«Шапка сайта»](/ru/recipes/navigate/site-header/)

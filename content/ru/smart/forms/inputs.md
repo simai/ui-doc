@@ -391,3 +391,4 @@ email.focus();
 - [Многострочное поле](/ru/smart/forms/textarea/) — текст в несколько строк.
 - [Календарь](/ru/smart/forms/datepicker/) — выбор даты.
 - [Текстовые поля на классах](/ru/components/forms/inputs/) — то же поле в статической разметке.
+- Рецепты: [«Копирование»](/ru/recipes/notify/copy/), [«Окно с формой»](/ru/recipes/edit/dialog-form/), [«Панель над списком»](/ru/recipes/find/list-toolbar/), [«Сохранение и ошибки в форме»](/ru/recipes/edit/save-and-errors/), [«Список записей»](/ru/recipes/find/resource-list/), [«Удаление»](/ru/recipes/remove/delete/), [«Фильтры в шторке»](/ru/recipes/find/filter-drawer/), [«Форма настроек»](/ru/recipes/edit/settings-form/)

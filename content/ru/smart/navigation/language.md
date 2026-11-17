@@ -341,3 +341,4 @@ picker.addEventListener('change', (event) => {
   собран вид для двух-трёх языков.
 - [Контекстное меню](/ru/smart/navigation/context-menu/) — меню видов `menu`
   и `search`.
+- Рецепты: [«Шапка сайта»](/ru/recipes/navigate/site-header/)

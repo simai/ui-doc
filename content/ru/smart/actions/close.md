@@ -129,3 +129,4 @@ description: "Крестик, который закрывает окно, пан
 - [Кнопки с иконкой](/ru/smart/actions/icon-buttons/) — другие действия значком.
 - [Модальное окно](/ru/smart/overlays/modal/) — окно со своей кнопкой закрытия.
 - [Закрытие на классах](/ru/components/actions/close/) — тот же знак в статической разметке.
+- Рецепты: [«Первый экран сайта и промо»](/ru/recipes/decorate/hero-and-promo/)

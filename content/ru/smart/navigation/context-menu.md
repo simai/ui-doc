@@ -540,3 +540,4 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 - [Всплывающая панель](/ru/smart/overlays/popover/) — поверхность у кнопки с открытием, закрытием и возвратом фокуса.
 - [Выпадающий список](/ru/smart/navigation/dropdown/) — выбор значения из списка.
 - [Контекстное меню на классах](/ru/components/navigation/context-menu/) — то же меню в статической разметке.
+- Рецепты: [«Карточка записи»](/ru/recipes/edit/record-card/)

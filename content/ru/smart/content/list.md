@@ -295,3 +295,4 @@ list.addEventListener('sf-list-open', (event) => {
 - [Лента](/ru/smart/content/list-feed/) — колонка записей, которую читают.
 - [Пустое состояние](/ru/smart/feedback/empty-state/) — что показать, когда
   строк нет.
+- Рецепты: [«Первые шаги»](/ru/recipes/progress/onboarding-checklist/), [«Первый кадр страницы»](/ru/recipes/progress/first-paint/), [«Пустой раздел и первое действие»](/ru/recipes/progress/empty-state/), [«Список записей»](/ru/recipes/find/resource-list/), [«Список писем и диалогов»](/ru/recipes/find/mail-chat-list/), [«Список уведомлений»](/ru/recipes/notify/notifications/), [«Удаление»](/ru/recipes/remove/delete/)

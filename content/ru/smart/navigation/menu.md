@@ -352,3 +352,4 @@ menu.addEventListener('sf-menu-navigate', (event) => {
 
 - [Меню на классах](/ru/components/navigation/menu/) — то же меню в статической разметке.
 - [Контекстное меню](/ru/smart/navigation/context-menu/) — действия над выбранным объектом.
+- Рецепты: [«Каркас админки»](/ru/recipes/navigate/admin-frame/), [«Первый кадр страницы»](/ru/recipes/progress/first-paint/), [«Шапка сайта»](/ru/recipes/navigate/site-header/)

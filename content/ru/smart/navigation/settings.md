@@ -330,3 +330,4 @@ applyTheme(settings.values.theme);
   переключателем.
 - [Кнопки с иконкой](/ru/smart/actions/icon-buttons/) — кнопка, которая
   открывает панель.
+- Рецепты: [«Панель над списком»](/ru/recipes/find/list-toolbar/)

@@ -247,3 +247,4 @@ run.addEventListener('sf-progress-run-retry', () => job.start());
 - [Шаги](/ru/smart/navigation/steps/) — шаги, которые проходит человек.
 - [Кнопка копирования](/ru/smart/actions/copy-button/) — то же копирование
   отдельно.
+- Рецепты: [«Долгая операция»](/ru/recipes/progress/long-job/), [«Загрузка файлов с прогрессом»](/ru/recipes/progress/file-upload-progress/)

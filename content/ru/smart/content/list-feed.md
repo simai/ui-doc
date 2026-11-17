@@ -222,3 +222,4 @@ feed.addEventListener('sf-list-feed-load-more', async (event) => {
 - [Список](/ru/smart/content/list/) — список, с которым что-то делают.
 - [Положение чтения](/ru/guide/functions/screen/reading-position/) — `SF.readingPosition`,
   правило, на котором построена лента.
+- Рецепты: [«Список писем и диалогов»](/ru/recipes/find/mail-chat-list/)

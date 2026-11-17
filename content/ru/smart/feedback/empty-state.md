@@ -174,3 +174,4 @@ description: "Показывает, почему в списке, панели �
 
 - [Скелетон](/ru/smart/feedback/skeleton/)
 - [Представление данных](/ru/pro/admin/table/)
+- Рецепты: [«Каркас админки»](/ru/recipes/navigate/admin-frame/), [«Низ списка»](/ru/recipes/find/list-bottom/), [«Первые шаги»](/ru/recipes/progress/onboarding-checklist/), [«Первый кадр страницы»](/ru/recipes/progress/first-paint/), [«Пустой раздел и первое действие»](/ru/recipes/progress/empty-state/), [«Список записей»](/ru/recipes/find/resource-list/), [«Фильтры в шторке»](/ru/recipes/find/filter-drawer/)

@@ -408,3 +408,4 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 - [Вкладки](/ru/components/navigation/tabs/) — вкладки на классах без смарт-элемента.
 - [Сегментный переключатель](/ru/smart/actions/segmented/) — переключатель из двух-трёх вариантов без панелей.
 - [Выпадающий список](/ru/smart/navigation/dropdown/) — выбор из скрытого списка, когда вариантов много.
+- Рецепты: [«Сохранение и ошибки в форме»](/ru/recipes/edit/save-and-errors/)

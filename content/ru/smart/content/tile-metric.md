@@ -223,3 +223,4 @@ description: "Одно важное число на панели: подпись
 - [Прогресс](/ru/smart/feedback/progress-bar/) — та же шкала с порогами
   отдельно от плитки.
 - [Бейджи](/ru/smart/feedback/badges/) — метка изменения в плитке.
+- Рецепты: [«Обзор с плитками»](/ru/recipes/notify/dashboard/), [«Период для отчёта»](/ru/recipes/find/report-period/)

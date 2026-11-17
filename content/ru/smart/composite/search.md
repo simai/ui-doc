@@ -355,3 +355,4 @@ search.addEventListener('sf-search-navigate', (event) => {
 
 - [Шапка сайта](/ru/smart/composite/site-header/) — место кнопки поиска в слоте `tools`.
 - [Кнопки](/ru/smart/actions/buttons/) — кнопка-вызов с сочетанием клавиш.
+- Рецепты: [«Шапка сайта»](/ru/recipes/navigate/site-header/)

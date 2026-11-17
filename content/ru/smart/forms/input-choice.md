@@ -249,3 +249,4 @@ field.addEventListener('change', (event) => {
 - [Радиокнопки](/ru/smart/forms/radio/) — выбор одного варианта из короткого
   списка без пояснений.
 - [Флажок](/ru/smart/forms/checkbox/) — одна настройка «да или нет».
+- Рецепты: [«Выбор карточками»](/ru/recipes/find/choice-cards/), [«Оформление заказа»](/ru/recipes/edit/checkout/)

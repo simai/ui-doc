@@ -1098,3 +1098,7 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 
 - `simai/ui-pro@b3f54d5da7ccaf05eaca2c296996980408dabbf0:components/src/smart/view-table`
 - `simai/ui-pro@b3f54d5da7ccaf05eaca2c296996980408dabbf0:components/src/smart/view-table/rule.js#name=cl-view-table`
+
+## См. также
+
+- Рецепты: [«Выбор строк и общие действия»](/ru/recipes/remove/bulk-actions/), [«Панель над списком»](/ru/recipes/find/list-toolbar/)

@@ -172,3 +172,4 @@ await SF.Highlight.refresh(block, 'const total = price * count;');
 
 - [Копирование](/ru/components/actions/clipboard/)
 - [Документ](/ru/components/content/doc/)
+- Рецепты: [«Копирование»](/ru/recipes/notify/copy/)

@@ -223,3 +223,4 @@ ring.setAttribute('value-text', 'Файлы загружены');
 - [Прогресс](/ru/smart/feedback/progress-bar/) — полоса для длинной задачи в теле страницы.
 - [Шкала прогресса](/ru/smart/feedback/progress-scale/) — крупные шаги вместо процента.
 - [Спиннер](/ru/smart/feedback/spinner/) — когда доля неизвестна и места под кольцо нет.
+- Рецепты: [«Загрузка файлов с прогрессом»](/ru/recipes/progress/file-upload-progress/)

@@ -201,3 +201,4 @@ crumbs.onItemClick((item) => {
 - [Шаги](/ru/smart/navigation/steps/) — этапы последовательного процесса.
 - [Дерево](/ru/smart/navigation/tree/) — вся иерархия разделов сразу.
 - [Хлебные крошки на классах](/ru/components/navigation/breadcrumbs/) — тот же путь в статической разметке.
+- Рецепты: [«Каркас админки»](/ru/recipes/navigate/admin-frame/), [«Карточка записи»](/ru/recipes/edit/record-card/), [«Список записей»](/ru/recipes/find/resource-list/)

@@ -110,3 +110,7 @@ profile: reference
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-card--radius` | `var(--sf-card-radius, var(--sf-radius--surface))` | `border-radius`, `border-start-start-radius`, `border-start-end-radius` |
+
+## См. также
+
+- Рецепты: [«Карточка записи»](/ru/recipes/edit/record-card/), [«Обзор с плитками»](/ru/recipes/notify/dashboard/), [«Форма настроек»](/ru/recipes/edit/settings-form/)

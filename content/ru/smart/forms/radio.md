@@ -197,3 +197,4 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 - [Флажок](/ru/smart/forms/checkbox/) — независимые варианты.
 - [Выпадающий список](/ru/smart/navigation/dropdown/) — один вариант из длинного списка.
 - [Радиокнопки на классах](/ru/components/forms/radio/) — та же радиокнопка в статической разметке.
+- Рецепты: [«Фильтры в шторке»](/ru/recipes/find/filter-drawer/), [«Форма настроек»](/ru/recipes/edit/settings-form/)

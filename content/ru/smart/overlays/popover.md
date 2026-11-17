@@ -187,3 +187,4 @@ popover.addEventListener('sf-popover-closed', () => {
 
 - [Контекстное меню](/ru/smart/navigation/context-menu/) — меню действий над объектом.
 - [Боковая панель](/ru/smart/overlays/drawer/) — боковая панель рабочего места.
+- Рецепты: [«Список уведомлений»](/ru/recipes/notify/notifications/)

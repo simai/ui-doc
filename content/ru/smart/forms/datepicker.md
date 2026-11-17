@@ -484,3 +484,4 @@ period.value = ['2026-10-01', '2026-10-31'];
 
 - [Текстовое поле](/ru/smart/forms/inputs/) — когда дату удобнее напечатать.
 - [Календарь на классах](/ru/components/forms/datepicker/) — оформление календаря в статической разметке.
+- Рецепты: [«Оформление заказа»](/ru/recipes/edit/checkout/), [«Период для отчёта»](/ru/recipes/find/report-period/)

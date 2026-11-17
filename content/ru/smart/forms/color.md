@@ -343,3 +343,4 @@ Framework: файл `src/core/js/theme-palette.js` открытого репоз
 
 - [Палитры](/ru/guide/colour/palettes/) — цвета палитры и как из одного цвета строятся палитры темы.
 - [Темы](/ru/guide/colour/themes/) — светлая и тёмная тема и своя тема проекта.
+- Рецепты: [«Оформление: цвет и тема»](/ru/recipes/edit/brand-theme/)

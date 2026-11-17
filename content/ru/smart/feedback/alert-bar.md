@@ -219,3 +219,4 @@ bar.addEventListener('sf-alert-bar-close', (event) => {
 - [Уведомление](/ru/smart/feedback/alert/) — сообщение в потоке страницы.
 - [Всплывающие сообщения](/ru/smart/feedback/toast/) — короткий результат
   действия поверх интерфейса.
+- Рецепты: [«Системная полоса»](/ru/recipes/notify/system-bar/)

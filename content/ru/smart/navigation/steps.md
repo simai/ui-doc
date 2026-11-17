@@ -220,3 +220,4 @@ document.querySelector('#next').addEventListener('click', () => {
 - [Шаги на классах](/ru/components/navigation/step/) — этапы в статической разметке.
 - [Хлебные крошки](/ru/smart/navigation/breadcrumbs/) — путь по иерархии страниц.
 - [Вкладки](/ru/smart/navigation/tabs/) — панели без обязательного порядка.
+- Рецепты: [«Оформление заказа»](/ru/recipes/edit/checkout/), [«Статус заказа или заявки»](/ru/recipes/progress/order-status/)

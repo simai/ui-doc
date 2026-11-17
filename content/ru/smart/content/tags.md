@@ -265,3 +265,4 @@ tags.addEventListener('sf-tag-close', (event) => {
 
 - [Теги](/ru/components/content/tags/) — теги на классах.
 - [Бейджи](/ru/smart/feedback/badges/) — неинтерактивная метка статуса или числа.
+- Рецепты: [«Фильтры в шторке»](/ru/recipes/find/filter-drawer/)

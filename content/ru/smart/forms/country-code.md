@@ -256,3 +256,4 @@ phone.setState({iso2: 'KZ'});
 
 - [Текстовое поле](/ru/smart/forms/inputs/) — телефон без выбора страны, с маской.
 - [Код страны на классах](/ru/components/forms/country-code/) — то же поле в статической разметке.
+- Рецепты: [«Оформление заказа»](/ru/recipes/edit/checkout/)

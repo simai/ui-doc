@@ -250,3 +250,4 @@ report.append(spinner);
 - [Спиннер](/ru/components/feedback/spinner/) — спиннер на классах.
 - [Прогресс](/ru/smart/feedback/progress-bar/) — ход процесса с известной долей.
 - [Скелетон](/ru/smart/feedback/skeleton/) — место будущего содержимого.
+- Рецепты: [«Первый кадр страницы»](/ru/recipes/progress/first-paint/)

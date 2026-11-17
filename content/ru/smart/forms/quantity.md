@@ -271,3 +271,4 @@ guests.addEventListener('change', (event) => {
 - [Слайдер диапазона](/ru/smart/forms/range-slider/) — значение, которое выбирают по шкале.
 - [Текстовое поле](/ru/smart/forms/inputs/) — произвольное число без кнопок.
 - [Количество на классах](/ru/components/forms/quantity/) — то же поле в статической разметке.
+- Рецепты: [«Оформление заказа»](/ru/recipes/edit/checkout/)

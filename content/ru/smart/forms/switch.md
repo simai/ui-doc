@@ -206,3 +206,4 @@ compact.addEventListener('change', async (event) => {
 
 - [Флажок](/ru/smart/forms/checkbox/) — значение, которое уходит с формой после подтверждения.
 - [Переключатель на классах](/ru/components/forms/switch/) — тот же переключатель в статической разметке.
+- Рецепты: [«Форма настроек»](/ru/recipes/edit/settings-form/)

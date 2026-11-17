@@ -185,3 +185,4 @@ header.addEventListener('sf-header-page-toggle', async (event) => {
 
 - [Меню администратора](/ru/pro/admin/admin-menu/) — навигация администратора, рядом с которой стоит шапка.
 - [Хлебные крошки](/ru/smart/navigation/breadcrumbs/) — путь к странице для слота `path`.
+- Рецепты: [«Каркас админки»](/ru/recipes/navigate/admin-frame/), [«Карточка записи»](/ru/recipes/edit/record-card/), [«Обзор с плитками»](/ru/recipes/notify/dashboard/), [«Пустой раздел и первое действие»](/ru/recipes/progress/empty-state/), [«Список записей»](/ru/recipes/find/resource-list/), [«Форма настроек»](/ru/recipes/edit/settings-form/)

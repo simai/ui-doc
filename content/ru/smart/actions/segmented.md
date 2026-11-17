@@ -484,3 +484,4 @@ Tab на выбранном варианте. Стрелки, Home и End пер
 - [Вкладки](/ru/smart/navigation/tabs/) — когда варианты переключают панели содержимого.
 - [Группа кнопок на классах](/ru/components/actions/button-group/) — независимые действия в общем контуре на классах.
 - [Тема](/ru/components/tools/theme/) — классы темы и кнопки `sf-theme-button`.
+- Рецепты: [«Оформление: цвет и тема»](/ru/recipes/edit/brand-theme/), [«Панель над списком»](/ru/recipes/find/list-toolbar/), [«Период для отчёта»](/ru/recipes/find/report-period/), [«Системная полоса»](/ru/recipes/notify/system-bar/), [«Список записей»](/ru/recipes/find/resource-list/), [«Список уведомлений»](/ru/recipes/notify/notifications/)

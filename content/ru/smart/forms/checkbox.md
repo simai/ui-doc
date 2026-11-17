@@ -232,3 +232,4 @@ terms.setChecked(false);
 - [Радиокнопки](/ru/smart/forms/radio/) — один вариант из нескольких.
 - [Переключатель](/ru/smart/forms/switch/) — настройка, которая действует сразу.
 - [Флажок на классах](/ru/components/forms/checkbox/) — тот же флажок в статической разметке.
+- Рецепты: [«Окно с формой»](/ru/recipes/edit/dialog-form/), [«Оформление заказа»](/ru/recipes/edit/checkout/), [«Фильтры в шторке»](/ru/recipes/find/filter-drawer/)

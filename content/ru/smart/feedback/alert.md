@@ -206,3 +206,4 @@ form.prepend(alert);
 
 - [Уведомления](/ru/components/feedback/alerts/) — сообщения на классах.
 - [Всплывающие сообщения](/ru/smart/feedback/toast/) — временное сообщение поверх интерфейса.
+- Рецепты: [«Выбор карточками»](/ru/recipes/find/choice-cards/), [«Окно с формой»](/ru/recipes/edit/dialog-form/), [«Оформление: цвет и тема»](/ru/recipes/edit/brand-theme/), [«Сохранение и ошибки в форме»](/ru/recipes/edit/save-and-errors/), [«Статус заказа или заявки»](/ru/recipes/progress/order-status/)

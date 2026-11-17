@@ -204,3 +204,4 @@ facts.addEventListener('sf-list-description-navigate', (event) => {
   действия, переименование.
 - [Требует внимания](/ru/smart/feedback/list-attention/) — проблемы, которым
   нужен человек.
+- Рецепты: [«Карточка записи»](/ru/recipes/edit/record-card/), [«Оформление заказа»](/ru/recipes/edit/checkout/)

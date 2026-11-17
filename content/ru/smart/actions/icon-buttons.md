@@ -430,3 +430,4 @@ tag.dataAttributes.searchToggle;                          // значение а
 - [Кнопки](/ru/smart/actions/buttons/) — кнопка с подписью.
 - [Кнопка закрытия](/ru/smart/actions/close/) — крестик, который закрывает окно, панель или сообщение.
 - [Кнопки с иконкой на классах](/ru/components/actions/icon-buttons/) — та же кнопка в статической разметке.
+- Рецепты: [«Каркас админки»](/ru/recipes/navigate/admin-frame/), [«Карточка записи»](/ru/recipes/edit/record-card/), [«Копирование»](/ru/recipes/notify/copy/), [«Список уведомлений»](/ru/recipes/notify/notifications/), [«Удаление»](/ru/recipes/remove/delete/), [«Шапка сайта»](/ru/recipes/navigate/site-header/)

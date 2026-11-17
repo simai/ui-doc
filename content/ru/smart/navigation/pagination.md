@@ -330,3 +330,4 @@ pagination.addEventListener('sf-pagination-change', async (event) => {
 
 - [Пагинация на классах](/ru/components/navigation/pagination/) — та же раскладка в статической разметке.
 - [Выпадающий список](/ru/smart/navigation/dropdown/) — выбор размера страницы устроен так же.
+- Рецепты: [«Низ списка»](/ru/recipes/find/list-bottom/)

@@ -163,3 +163,4 @@ region.removeAttribute('aria-busy');
 
 - [Скелетон](/ru/components/feedback/skeleton/) — фигуры загрузки на классах.
 - [Спиннер](/ru/smart/feedback/spinner/) — ожидание без известной раскладки.
+- Рецепты: [«Выбор карточками»](/ru/recipes/find/choice-cards/), [«Первый кадр страницы»](/ru/recipes/progress/first-paint/)

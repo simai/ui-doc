@@ -370,3 +370,4 @@ async function store(item) {
 
 - [Поле изображения](/ru/smart/forms/image-field/) — одно изображение с миниатюрой.
 - [Загрузка файлов на классах](/ru/components/forms/file-upload/) — та же зона в статической разметке.
+- Рецепты: [«Загрузка файлов с прогрессом»](/ru/recipes/progress/file-upload-progress/)
