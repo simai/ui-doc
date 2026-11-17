@@ -60,7 +60,7 @@ description: "Вариант выпадающего списка и общая �
 
 Вид строки задаёт атрибут `kind` — и в выпадающем списке, и вне его.
 
-:::example {id="smart-components/list-item/kinds" label="Пять видов строки"}
+:::example {id="smart-components/list-item/kinds" preview=sandbox label="Пять видов строки"}
 :::
 
 ### Размер

@@ -154,8 +154,8 @@ Object.assign(element, {
               "ratio": "21/9"
             },
             "data": {
-              "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='520'%3E%3Crect width='1200' height='520' fill='%23c9d6f5'/%3E%3C/svg%3E",
-              "alt": "Градиент",
+              "src": "assets/place-01-16x9.svg",
+              "alt": "Холмы и солнце над долиной",
               "caption": [
                 {
                   "type": "text",

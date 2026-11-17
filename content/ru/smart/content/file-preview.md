@@ -80,7 +80,7 @@ JavaScript.
 `compact` оставляет только ведущий значок высотой со строку списка:
 изображение или расширение файла в плитке. Для файла в ячейке таблицы.
 
-:::example {id="smart-components/file-preview/compact" label="Компактный"}
+:::example {id="smart-components/file-preview/compact" preview=sandbox label="Компактный"}
 :::
 
 ## Состояния

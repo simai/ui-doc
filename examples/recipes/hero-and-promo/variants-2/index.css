@@ -1,5 +1,5 @@
 .photo-fig { position: relative; display: flex; flex-direction: column; gap: var(--sf-space-1\/3); margin: 0; min-inline-size: 0; }
-.photo { aspect-ratio: 16 / 9; border-radius: var(--sf-radius--surface); background: var(--sf-surface-container) center / cover no-repeat; }
+.photo { aspect-ratio: 16 / 9; border-radius: var(--sf-radius--surface); background: var(--sf-surface-container) url("assets/place-08-16x9.svg") center / cover no-repeat; }
 .photo-over { position: absolute; inset: auto 0 0 0; display: flex; flex-direction: column; padding: var(--sf-space-3) var(--sf-space-1) var(--sf-space-1); border-radius: 0 0 var(--sf-radius--surface) var(--sf-radius--surface); }
 .photo-over span { font-size: var(--sf-text-size-1\/2); line-height: var(--sf-text-height-1\/2); }
 .is-soft .photo-over { padding-block-start: var(--sf-space-5); }

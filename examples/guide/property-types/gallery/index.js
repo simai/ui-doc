@@ -54,8 +54,8 @@ function sample(type, variant) {
     case 'lookup': return [{...field, options: regions}, regions[0]];
     case 'file':
       if (variant && variant.startsWith('image')) {
-        // An image drawn here, so the gallery fetches nothing from another site.
-        const href = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 48"><rect width="64" height="48" fill="#dfe6fb"/><circle cx="20" cy="18" r="7" fill="#005bbe"/><path d="M0 48 24 26l14 12 10-8 16 18z" fill="#2f5bd3"/></svg>');
+        // A picture of the documentation set (D22), kept beside the example.
+        const href = 'assets/place-03-4x3.svg';
         const image = {label: 'Обложка.svg', mime: 'image/svg+xml', href};
         return [{...field, multiple: variant === 'image-list'}, variant === 'image-list' ? [image, image] : image];
       }
