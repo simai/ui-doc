@@ -55,7 +55,7 @@ function sample(type, variant) {
     case 'file':
       if (variant && variant.startsWith('image')) {
         // A picture of the documentation set (D22), kept beside the example.
-        const href = 'assets/place-03-4x3.svg';
+        const href = new URL('place-03-4x3.svg', new URL('assets/', document.baseURI)).href;
         const image = {label: 'Обложка.svg', mime: 'image/svg+xml', href};
         return [{...field, multiple: variant === 'image-list'}, variant === 'image-list' ? [image, image] : image];
       }
