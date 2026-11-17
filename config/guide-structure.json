@@ -357,11 +357,6 @@
      "order": 55
     },
     {
-     "slug": "languages",
-     "title": "Языки",
-     "order": 95
-    },
-    {
      "slug": "language-file",
      "title": "Стандарт файла языка",
      "order": 92

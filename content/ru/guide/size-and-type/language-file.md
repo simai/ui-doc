@@ -262,4 +262,3 @@ SF.language.register('sf-pagination', 'de', null);   // убрать свои с
   выбирает язык и какие слова есть у компонентов.
 - [Направление текста](/ru/guide/size-and-type/directions/) — письмо справа
   налево.
-- [Языки](/ru/guide/size-and-type/languages/) — краткая памятка.

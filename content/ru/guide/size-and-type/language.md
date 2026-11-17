@@ -16,10 +16,18 @@ description: "Компоненты Framework сами подставляют ч�
 собственных словах: доступных именах кнопок, подписях по умолчанию,
 подсказках для клавиатуры, сообщениях.
 
-Язык определяется одним правилом для всех компонентов. Компонент смотрит на
-ближайший к себе атрибут `lang` — поиск проходит и через границы shadow DOM,
-к элементам, внутри которых компонент собран. Если такого атрибута нет,
-компонент смотрит на `lang` документа, а если нет и его, выбирает английский.
+Язык определяется одним правилом для всех компонентов:
+
+> ближайший `lang` ниже `<html>` → язык, выбранный через `SF.language.use()` →
+> `lang` документа → английский.
+
+Компонент ищет ближайший к себе атрибут `lang` — поиск проходит и через
+границы shadow DOM, к элементам, внутри которых компонент собран. Часть
+страницы со своим `lang` говорит на своём языке. Если такого атрибута нет,
+действует язык, который страница выбрала через `SF.language.use()`, затем
+`lang` документа, а если нет и его — английский. Одно правило нужно, чтобы
+страница не смешивала два языка из-за того, что два компонента посмотрели в
+разные места.
 
 ```html
 <html lang="ru">
@@ -65,7 +73,7 @@ Framework:
 
 ```js
 SF.language.registerAll('de', {
-  'sf-pagination': { showMoreText: 'Mehr anzeigen' },
+  'sf-pagination': { 'show-more-text': 'Mehr anzeigen' },
 });
 SF.language.use('de');   // явно выбрать язык для всей страницы
 SF.language.use(null);   // снять явный выбор и снова следовать атрибуту lang
@@ -74,9 +82,13 @@ SF.language.use(null);   // снять явный выбор и снова сл�
 - `SF.language.register(component, code, words)` добавляет слова одного
   компонента, `registerAll(code, byComponent)` — сразу нескольких. Слова
   дополняют уже зарегистрированные, а `words = null` убирает их для этого языка.
+  Ключи — те же, что в файлах языка компонента, через дефис:
+  `show-more-text`, `pages-label` (см. [Компоненты и ключи](/ru/guide/size-and-type/language-file/#компоненты-и-ключи)).
 - `SF.language.use(code)` переключает язык сразу, без перезагрузки страницы:
-  смарт-компоненты перерисовываются сами. Первую отрисовку определяет атрибут
-  `lang`. Явный выбор задаёт и язык форматирования: компоненты, которые сами
+  смарт-компоненты перерисовываются сами. Выбранный язык становится и
+  атрибутом `lang` у `<html>`, поэтому браузер, вспомогательные технологии и
+  стили по `:lang()` видят тот же язык, что и компоненты. Первую отрисовку
+  определяет атрибут `lang` разметки. Явный выбор задаёт и язык форматирования: компоненты, которые сами
   называют месяцы и дни недели через `Intl` (календарь `sf-input-date`), берут
   выбранный язык вместе с регионом (`use('ar-EG')`). Регион выбирает и
   цифры: по данным `Intl` браузера `ar` пишет год латинскими цифрами, а
@@ -84,8 +96,9 @@ SF.language.use(null);   // снять явный выбор и снова сл�
   `Intl` дополняет регионом по своему правилу для языка: `ru` форматирует как
   `ru-RU`, `en` — как `en-US`. Собственный атрибут `locale` компонента
   сильнее явного выбора.
-- `SF.language.use(null)` снимает явный выбор: язык снова определяет
-  ближайший атрибут `lang`, и компоненты перерисовываются.
+- `SF.language.use(null)` снимает явный выбор: `<html>` получает обратно
+  `lang` из разметки, язык снова определяет ближайший атрибут `lang`, и
+  компоненты перерисовываются.
 - `SF.language.current(node)` возвращает действующий язык узла вместе с
   регионом (`ru-ru`; без аргумента — язык документа), `known(component)` —
   языки, для которых проект зарегистрировал слова компонента, `components()` —
@@ -103,15 +116,13 @@ SF.language.use(null);   // снять явный выбор и снова сл�
 сам ключ. Слова, зарегистрированные через `SF.language`, `pageText` находит по
 имени тега узла; четвёртый аргумент `component` задаёт имя явно.
 
-Переключатель языка на странице делает две вещи: выбирает язык для
-компонентов и сам ставит `lang` и `dir` документу. Явный выбор сильнее
-атрибута, поэтому порядок вызовов не важен, а `lang` нужен вспомогательным
-технологиям и стилям по `:lang()`:
+Переключатель языка на странице выбирает язык через `SF.language.use()` —
+он же ставит `lang` документу — и сам ставит `dir`: направление письма язык
+не задаёт.
 
 ```js
 function switchLanguage(code, direction = 'ltr') {
-  SF.language.use(code);                      // слова и форматы компонентов
-  document.documentElement.lang = code;       // язык документа
+  SF.language.use(code);                      // слова, форматы и lang документа
   document.documentElement.dir = direction;   // направление письма
 }
 
@@ -166,10 +177,11 @@ Framework не запоминает выбранный язык: ни cookie, н
 - **Перерисовку по языку получает каждый смарт-элемент,** в том числе
   компонент проекта на `SF.smart.SfBaseElement`: базовый класс подписывает
   его на `SF.language.onChange`.
-- **`use()` не меняет атрибут `lang`,** а изменение `lang` после загрузки
-  компоненты не отслеживают. Чтобы сменить язык без перезагрузки, вызывайте
-  `SF.language.use()`; `SF.pageLanguage()` и `SF.pageText()` учитывают
-  явный выбор.
+- **Компоненты следят за атрибутом `lang`.** `use()` ставит `lang` у
+  `<html>`, а смена `lang` у страницы или её части после загрузки
+  перерисовывает компоненты внутри без перезагрузки. Часть страницы со своим
+  `lang` сильнее явного выбора. `SF.pageLanguage()` и `SF.pageText()`
+  учитывают явный выбор.
 - **Направление письма язык не задаёт:** `dir` ставится отдельно (см. [Начало и конец вместо левого и правого](/ru/guide/size-and-type/directions/#начало-и-конец-вместо-левого-и-правого)).
 - **Ключ слова — не имя атрибута.** Подпись кнопки удаления у `sf-tag`
   задаёт атрибут `close-label`, а в словаре это слово `remove`. Ключ, которого
@@ -183,84 +195,41 @@ Framework не запоминает выбранный язык: ни cookie, н
 
 | Компонент | Ключ | Слово `en` | Слово `ru` |
 |:---|:---|:---|:---|
-| `sf-alert` | `closeLabel` | Close alert | Закрыть сообщение |
-| `sf-avatar` | `ariaLabel` | Avatar | Аватар |
-| `sf-breadcrumbs` | `ariaLabel` | Breadcrumb | Хлебные крошки |
-| `sf-breadcrumbs` | `expandLabel` | Show hidden breadcrumbs | Показать скрытые крошки |
-| `sf-color` | `choose` | Choose a colour | Выбрать цвет |
-| `sf-color` | `clear` | Use the inherited colour | Вернуть унаследованный |
-| `sf-color` | `inherited` | inherited | наследуется |
-| `sf-color` | `custom` | Custom | Свой |
-| `sf-datepicker` | `previousMonth` | Previous month | Предыдущий месяц |
-| `sf-datepicker` | `nextMonth` | Next month | Следующий месяц |
-| `sf-datepicker` | `previousYears` | Previous years | Предыдущие годы |
-| `sf-datepicker` | `nextYears` | Next years | Следующие годы |
-| `sf-datepicker` | `chooseMonth` | Choose a month | Выберите месяц |
-| `sf-datepicker` | `chooseYear` | Choose a year | Выберите год |
-| `sf-datepicker` | `presets` | Quick ranges | Быстрый выбор |
-| `sf-datepicker` | `customRange` | Custom range | Свой период |
-| `sf-datepicker` | `preset_today` | Today | Сегодня |
-| `sf-datepicker` | `preset_yesterday` | Yesterday | Вчера |
-| `sf-datepicker` | `preset_last7Days` | Last 7 days | Последние 7 дней |
-| `sf-datepicker` | `preset_last30Days` | Last 30 days | Последние 30 дней |
-| `sf-datepicker` | `preset_thisWeek` | This week | Эта неделя |
-| `sf-datepicker` | `preset_thisMonth` | This month | Этот месяц |
-| `sf-datepicker` | `preset_lastMonth` | Last month | Прошлый месяц |
-| `sf-drawer` | `closeLabel` | Close drawer | Закрыть панель |
-| `sf-dropdown` | `search` | Search | Поиск |
-| `sf-file-preview` | `ariaLabel` | File | Файл |
-| `sf-file-preview` | `downloadLabel` | Download file | Скачать файл |
-| `sf-file-preview` | `removeLabel` | Remove file | Удалить файл |
-| `sf-file-upload` | `linkText` | Click to upload | Выберите файл |
-| `sf-file-upload` | `text` | or drag and drop | или перетащите его сюда |
-| `sf-file-upload` | `retry` | Try again | Повторить |
+| `sf-alert` | `close-label` | Close alert | Закрыть сообщение |
+| `sf-breadcrumbs` | `aria-label` | Breadcrumb | Хлебные крошки |
+| `sf-breadcrumbs` | `expand-label` | Show hidden breadcrumbs | Показать скрытые крошки |
+| `sf-drawer` | `close-label` | Close drawer | Закрыть панель |
+| `sf-drawer` | `handle-label` | Resize the panel | Изменить высоту панели |
+| `sf-drawer` | `back-label` | Back | Назад |
+| `sf-file-preview` | `aria-label` | File | Файл |
+| `sf-file-preview` | `error-text` | Not uploaded | Не загрузился |
+| `sf-file-preview` | `retry-text` | Retry | Повторить |
+| `sf-file-preview` | `delete-text` | Delete | Удалить |
+| `sf-file-preview` | `viewer-previous` | Previous file | Предыдущий файл |
+| `sf-file-preview` | `viewer-next` | Next file | Следующий файл |
 | `sf-modal` | `close` | Close | Закрыть |
+| `sf-modal` | `loading` | Loading… | Загрузка… |
 | `sf-modal` | `minimize` | Minimize | Свернуть |
 | `sf-modal` | `title` | Dialog | Окно |
-| `sf-modal` | `loading` | Loading… | Загрузка… |
-| `sf-modal` | `loadFailed` | Failed to load content | Не удалось загрузить содержимое |
-| `sf-modal` | `frameFailed` | Failed to load iframe content | Не удалось загрузить встроенную страницу |
-| `sf-page-header` | `star` | Add to favourites | В избранное |
-| `sf-page-header` | `unstar` | Remove from favourites | Убрать из избранного |
-| `sf-page-header` | `allSites` | for all sites | для всех сайтов |
-| `sf-pagination` | `ariaLabel` | Result pages | Страницы результатов |
-| `sf-pagination` | `pagesLabel` | Pages: | Страницы: |
-| `sf-pagination` | `pageLabel` | Page | Страница |
-| `sf-pagination` | `previousLabel` | Previous page | Предыдущая страница |
-| `sf-pagination` | `nextLabel` | Next page | Следующая страница |
-| `sf-pagination` | `lastLabel` | Last | Последняя |
-| `sf-pagination` | `totalLabel` | Total: | Всего: |
-| `sf-pagination` | `selectedLabel` | Selected: | Отмечено: |
-| `sf-pagination` | `showMoreText` | Show more | Показать ещё |
-| `sf-pagination` | `pageSizeLabel` | Per page: | На странице: |
-| `sf-pagination` | `actionApplyText` | Apply | Применить |
-| `sf-pagination` | `actionForAllLabel` | For all | Для всех |
-| `sf-pagination` | `actionsLabel` | Action for the selected records | Действие с выбранными элементами |
-| `sf-pagination` | `actionChooseLabel` | Choose an action | Выберите действие |
-| `sf-pagination` | `actionsRegionLabel` | Actions for the selected | Действия с отмеченными |
-| `sf-pagination` | `clearSelectionLabel` | Clear the selection | Снять выделение |
-| `sf-pagination` | `showCountLabel` | Show the number | Показать количество |
-| `sf-pagination` | `countingLabel` | Counting | Считаем |
-| `sf-pagination` | `firstLabel` | First | В начало |
-| `sf-pagination` | `pageFieldLabel` | Page: | Страница: |
+| `sf-pagination` | `aria-label` | Result pages | Страницы результатов |
+| `sf-pagination` | `next-label` | Next page | Следующая страница |
+| `sf-pagination` | `pages-label` | Pages: | Страницы: |
+| `sf-pagination` | `previous-label` | Previous page | Предыдущая страница |
+| `sf-pagination` | `show-more-text` | Show more | Показать ещё |
+| `sf-pagination` | `total-label` | Total: | Всего: |
 | `sf-spinner` | `label` | Loading… | Загрузка… |
-| `sf-steps` | `ariaLabel` | Steps | Шаги |
-| `sf-steps` | `completedLabel` | Completed | Завершено |
-| `sf-steps` | `errorLabel` | Error | Ошибка |
 | `sf-tag` | `remove` | Remove | Удалить |
-| `sf-toast` | `closeLabel` | Close message | Закрыть сообщение |
-| `sf-tree-item` | `openLabel` | Open item | Развернуть |
-| `sf-tree-item` | `closeLabel` | Close item | Свернуть |
+| `sf-toast` | `close-label` | Close message | Закрыть сообщение |
 
-Таблица собрана из словарей компонентов выпуска и полна: других встроенных
-слов, которые заменяются через `SF.language`, у компонентов нет.
+В таблице — часть слов. Все ключи компонента — в его английском файле языка
+`lang/en.json`, в части `runtime` (см. [Компоненты и ключи](/ru/guide/size-and-type/language-file/#компоненты-и-ключи)).
 
 Пример добавляет арабский язык к тегу и пагинации:
 
 ```js
 SF.language.registerAll('ar', {
   'sf-tag': { remove: 'إزالة' },
-  'sf-pagination': { previousLabel: 'الصفحة السابقة', nextLabel: 'الصفحة التالية' },
+  'sf-pagination': { 'previous-label': 'الصفحة السابقة', 'next-label': 'الصفحة التالية' },
 });
 ```
 
@@ -275,7 +244,7 @@ Framework переводит только собственные слова ко
   `sf-input-date` пишет дату по маске `format` (цифры латинские, например
   `DD.MM.YYYY`), а названия месяцев и дней недели берёт из `Intl` на языке
   страницы;
-- формы множественного числа.
+- формы множественного числа в собственных текстах проекта.
 
 ## Правила для нового компонента
 
@@ -296,6 +265,5 @@ Framework переводит только собственные слова ко
 ## Смотрите также
 
 - [Направление текста](/ru/guide/size-and-type/directions/) — направление текста.
-- [Языки](/ru/guide/size-and-type/languages/) — краткая памятка по языкам и добавлению своего.
 - [Стандарт файла языка](/ru/guide/size-and-type/language-file/) — как устроен файл слов для своего языка.
 - [Смарт-компоненты](/ru/smart/) — языковое поведение каждого компонента.

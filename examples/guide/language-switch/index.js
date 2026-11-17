@@ -3,11 +3,11 @@
 const registerArabic = () => {
   SF.language.registerAll('ar', {
     'sf-pagination': {
-      pagesLabel: 'الصفحات:',
-      totalLabel: 'المجموع:',
-      previousLabel: 'الصفحة السابقة',
-      nextLabel: 'الصفحة التالية',
-      lastLabel: 'الأخيرة',
+      'pages-label': 'الصفحات:',
+      'total-label': 'المجموع:',
+      'previous-label': 'الصفحة السابقة',
+      'next-label': 'الصفحة التالية',
+      'last-label': 'الأخيرة',
     },
     'sf-tag': {remove: 'إزالة'},
   });
