@@ -332,9 +332,8 @@ const SETS = [
 
 // Pictures whose order, shape or crop an example shows carry their number and shape.
 const LABELS = [
-  'place-01-16x9', 'place-02-16x9', 'place-03-16x9', 'place-06-4x3',
-  'document-05-3x2', 'document-06-3x2', 'document-07-3x2',
-  'document-06-16x9', 'document-07-16x9', 'document-08-16x9',
+  'place-01-16x9', 'place-02-16x9', 'place-03-16x9',
+  'place-01-3x2', 'place-02-3x2', 'place-03-3x2', 'place-06-4x3',
 ];
 
 function size(shape) {
