@@ -96,7 +96,7 @@ description: "Страница одной записи: путь назад к �
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Карточка записи», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Карточка записи», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Корень экрана админки — data-sf-density="compact".
 2. sf-header-page: heading — название записи; sf-breadcrumbs в slot="path", последний пункт без href.

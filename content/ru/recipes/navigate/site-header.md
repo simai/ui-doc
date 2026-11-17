@@ -119,7 +119,7 @@ description: "Логотип, разделы, поиск, язык, тема и 
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Шапка сайта», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Шапка сайта», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Шапка — sf-header-site; логотип — ссылка на главную в slot="brand".
 2. Разделы — sf-menu orientation="horizontal" appearance="navigation", current у текущего; больше семи разделов — overflow="more".

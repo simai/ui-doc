@@ -101,7 +101,7 @@ description: "Поиск, фильтр, колонки, сохранённые �
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Панель над списком», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Панель над списком», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Порядок: поиск (sf-input appearance="filled" icon-start="search") → фильтр (sf-settings look="panel" apply="button") → колонки (sf-settings look="panel" search, type fields) → сохранённые виды (sf-button с menu, текст — имя текущего вида) → вид списка (sf-segmented) → «Добавить …» (sf-button split + menu).
 2. Кнопки группы — gap-1/3 (8), группы — gap-1 (16); создание прижато к концу.

@@ -95,7 +95,7 @@ description: "Уведомления под колокольчиком в шап
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Список уведомлений», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Список уведомлений», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Колокольчик — sf-button-icon icon="notifications" appearance="ghost" scheme="on-surface" aria-label="Уведомления"; badge-count — число непрочитанных, badge-label — то же словами; 0 — значка нет.
 2. Панель — sf-popover label="Уведомления" placement="bottom-end" width="min(var(--sf-g4), calc(100vw - var(--sf-space-4)))": колокольчик в slot="trigger", панель в slot="content". Колокольчик — последний элемент строки, у её конечного края: поповер не сдвигается в пределы экрана, и только так панель помещается на телефоне.

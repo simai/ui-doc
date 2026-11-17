@@ -106,7 +106,7 @@ description: "Страница настроек записи или прилож
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Форма настроек», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Форма настроек», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Корень экрана админки — data-sf-density="compact"; заголовок — sf-header-page с путём через запись.
 2. Форма — колонка max-w-h0; каждый раздел — section.sf-card с h2 class="m-0 text-1 weight-6".

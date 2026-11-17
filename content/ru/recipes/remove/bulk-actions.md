@@ -100,7 +100,7 @@ description: "Как отметить несколько строк и сдел�
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Выбор строк и общие действия», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Выбор строк и общие действия», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Таблица Pro sf-view-table toolbar="false" quick-actions="edit,view" row-actions-visible="always"; bulkActions не задавать — строку выбора собирает страница.
 2. По sf-view-table-select (detail.ids): ids.length > 0 — панель над списком скрыть, показать строку «Выбрано N» · «Снять выбор» (ghost on-surface) и действия через 8: обычные — outline on-surface, «Удалить» — outline status="danger" последней.

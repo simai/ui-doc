@@ -94,7 +94,7 @@ description: "Первый экран админки: сначала то, чт�
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Обзор с плитками», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Обзор с плитками», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Порядок: sf-header-page, sf-list-attention, ряд плиток, последние события.
 2. sf-list-attention — на странице, не в карточке: без проблем он не рисуется. У проблемы status (error, warning, info), title, одно action: {label, href} или {label, event}.

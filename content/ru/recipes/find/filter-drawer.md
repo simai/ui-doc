@@ -97,7 +97,7 @@ description: "Отбор списка по нескольким признака
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Фильтры в шторке», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Фильтры в шторке», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Панель — sf-drawer modal="false" placement="inline-end" size="1/2" heading="Фильтры"; кнопка — sf-button appearance="outline" scheme="on-surface" icon-start="filter_list" data-drawer="toggle" aria-controls="<id панели>".
 2. Признак из нескольких значений — sf-checkbox в fieldset с legend; из одного — sf-radio в fieldset, первый вариант «Любой».

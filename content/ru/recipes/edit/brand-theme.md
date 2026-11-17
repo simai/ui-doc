@@ -102,7 +102,7 @@ description: "Владелец сайта выбирает фирменный ц
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Оформление: цвет и тема», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Оформление: цвет и тема», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Фирменный цвет — sf-input-color variant="brand" с label, swatches (цвета продукта с названиями), target="#<образец>" и clearable.
 2. Тема сайта — sf-segmented «Светлая / Тёмная / Как в системе» с подписью; меняет класс theme-dark / theme-light только у образца.

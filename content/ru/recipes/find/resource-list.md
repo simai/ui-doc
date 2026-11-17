@@ -108,7 +108,7 @@ description: "Страница админки со списком сайтов, 
 собирают.
 
 ```html
-<!-- Рецепт SIMAI Framework «Список записей», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Список записей», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Корень экрана админки — data-sf-density="compact".
 2. sf-header-page: heading — вид записей, count — их число; путь — sf-breadcrumbs в slot="path".
