@@ -5,7 +5,7 @@ description: "Показывает серверную коллекцию таб�
 
 # Представление данных
 
-:badge[sf-view]{variant=outline scheme=on-surface size=1/2} :badge[1.11.0]{variant=outline scheme=on-surface size=1/2} :badge[sf-view-table]{variant=outline scheme=on-surface size=1/2} :badge[1.19.8]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-view]{variant=outline scheme=on-surface size=1/2} :badge[1.12.6]{variant=outline scheme=on-surface size=1/2} :badge[sf-view-table]{variant=outline scheme=on-surface size=1/2} :badge[1.20.4]{variant=outline scheme=on-surface size=1/2}
 
 Представление данных показывает записи из базы таблицей: товары, заказы,
 пользователи. Над таблицей — поиск и фильтры, в строках — выбор и действия,
@@ -787,7 +787,7 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-078a4b4c6f6e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-24d64b7f6eb7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -797,7 +797,7 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 |:---|:---|
 | Тег | `<sf-view>` |
 | Назначение | Представление данных под управлением элемента: панель инструментов, содержимое и пагинация вокруг отдельного порта данных. |
-| Контракт | `smart.view`, версия `1.11.0` |
+| Контракт | `smart.view`, версия `1.12.6` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -916,8 +916,8 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/view`
-- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/view/rule.js#name=cl-view`
+- `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/view`
+- `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/view/rule.js#name=cl-view`
 
 ### `<sf-view-table>`
 
@@ -925,7 +925,7 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 |:---|:---|
 | Тег | `<sf-view-table>` |
 | Назначение | Полное представление коллекции с серверными данными: поиск, фильтры, настройки таблицы, действия над строками и массовые действия, пагинация. |
-| Контракт | `smart.view-table`, версия `1.19.8` |
+| Контракт | `smart.view-table`, версия `1.20.4` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -1096,5 +1096,5 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/view-table`
-- `simai/ui-pro@589ced99cfbde80910d35af856797ded18e0954b:components/src/smart/view-table/rule.js#name=cl-view-table`
+- `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/view-table`
+- `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/view-table/rule.js#name=cl-view-table`
