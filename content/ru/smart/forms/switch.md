@@ -5,7 +5,7 @@ description: "Включает или выключает настройку ср
 
 # Переключатель
 
-:badge[sf-switch]{variant=outline scheme=on-surface size=1/2} :badge[1.5.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-switch]{variant=outline scheme=on-surface size=1/2} :badge[1.7.2]{variant=outline scheme=on-surface size=1/2}
 
 Переключатель включает или выключает настройку сразу после нажатия. Подпись
 называет состояние или возможность — «Уведомления», «Компактный режим», — а не
@@ -191,13 +191,13 @@ compact.addEventListener('change', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-switch>`, контракт `smart.switch` версии `1.5.3` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-switch>`, контракт `smart.switch` версии `1.7.2` |
+| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как переключатель; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Пробел`. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/switch` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-switch` |
+| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/switch` |
+| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-switch` |
 
 ## См. также
 

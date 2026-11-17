@@ -5,7 +5,7 @@ description: "Короткая история событий на вертика
 
 # Хронология
 
-:badge[sf-list-timeline]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-timeline]{variant=outline scheme=on-surface size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Короткая история, которую читают сверху: последние действия на сервере,
 журнал аудита, история записи, страница уведомлений, история заданий.
@@ -211,7 +211,7 @@ timeline.addEventListener('sf-list-timeline-load-more', async (event) => {
 | `has-more` | да/нет | нет | — | Есть ещё события: после последнего стоит кнопка «Показать ещё», её нажатие отправляет `sf-list-timeline-load-more`. |
 | `loading` | да/нет | нет | — | Следующая страница загружается: кнопка показывает загрузку и больше ничего не спрашивает. |
 | `empty-text` | строка | — | — | Тихая строка, когда событий нет; без атрибута — «Событий пока нет» на русской странице и «No events yet» на остальных. |
-| `items` | список | `[]` | — | События в порядке показа (сначала новые, как в истории, или сначала старые, как в журнале), каждое `{id, title, time?, text?, actor?, status?, icon?, href?, kind?, state?, change?, changes?}`. `time` — дата и время ISO 8601 (со смещением) или миллисекунды, рисует `sf-time`. `actor` — имя или `{name, avatar?, hue?, system?}`: аватар и имя полужирным в начале фразы (у системного автора — только имя). `status` (`success`, `warning`, `error`, `info`; по умолчанию нейтральный) задаёт тон отметки: `error`, `warning` и `success` её красят, `info` говорится словами. `icon` — значок на отметке (`.sf-featured-icon`), иначе значок вида (`comment` — `chat_bubble`, `sms` — `phone_iphone`), иначе точка. `kind: comment` ставит текст в обводку под строкой сведений. `state` (`done`, `current`, `upcoming`) рисует события шагами, у текущего `aria-current=step`. `change` `{label, before, after}` (или список `changes`) рисует `sf-change`. `href` делает заголовок ссылкой. Свойство или JSON-блок от сервера; следующую страницу хост дописывает в него. Событие без `id` или `title` или с уже встреченным `id` пропускается. |
+| `items` | список | `[]` | — | События в порядке показа (сначала новые, как в истории, или сначала старые, как в журнале), каждое `{id, title, time?, text?, actor?, status?, icon?, href?, kind?, state?, change?, changes?, items?, summary?, slot?}`. `time` — дата и время ISO 8601 (со смещением) или миллисекунды, рисует `sf-time`. `actor` — имя или `{name, avatar?, hue?, system?}`: аватар `sf-avatar` и имя полужирным в начале фразы (у системного автора — только имя). `status` (`success`, `warning`, `error`, `info`; по умолчанию нейтральный) задаёт тон отметки: `error`, `warning` и `success` её красят, `info` говорится словами. `icon` — значок на отметке (`.sf-featured-icon`), иначе значок вида (`comment` — `chat_bubble`, `sms` — `phone_iphone`), иначе точка. `kind` `comment` ставит текст в обводку под строкой сведений. `state` (`done`, `current`, `upcoming`) рисует события шагами, у текущего `aria-current=step`. `change` `{label, before, after}` (или список `changes`) рисует `sf-change`. `href` делает заголовок ссылкой. `items` — вложенные события этого события (те же поля; `id` уникальны во всём списке; до трёх уровней): свёрнуты под тихой строкой раскрытия с текстом `summary`, иначе «Ещё N событий», и по нажатию рисуются на месте ступенью меньше — остановки маршрута, перемещения посылки, середина длинного журнала. `slot` называет слот элемента: содержимое приложения под строкой сведений события (карточка курьера, кнопки). Свойство или JSON-блок от сервера; следующую страницу приложение дописывает в него. Событие без `id` или `title` или с уже встреченным `id` пропускается. |
 
 #### Общие для всех компонентов
 
@@ -241,13 +241,13 @@ timeline.addEventListener('sf-list-timeline-load-more', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list-timeline>`, контракт `smart.list-timeline` версии `1.3.0` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-list-timeline>`, контракт `smart.list-timeline` версии `1.4.1` |
+| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как список; желательна подпись или `aria-label`; с клавиатуры: `Tab` проходит по ссылкам заголовков, по каждому `sf-time` с его подсказкой, по строкам «Ещё N» и кнопке «Показать ещё» по порядку; `Enter` открывает ссылку, `Enter` или `Пробел` нажимают кнопку; `Escape` прячет подсказку времени. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/list-timeline` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-list-timeline` |
+| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/list-timeline` |
+| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-list-timeline` |
 
 ## См. также
 

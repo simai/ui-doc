@@ -6,7 +6,7 @@ profile: reference
 
 # Всплывающие сообщения
 
-:badge[sf-toast]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-toast]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Всплывающее сообщение коротко сообщает результат действия поверх интерфейса
 и не блокирует дальнейшую работу. Для постоянного текста внутри страницы
@@ -205,7 +205,7 @@ handle.close();
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-toast--background-color` | не задана; задают модификаторы, например `.sf-toast--neutral`: `var(--sf-toast-background-color, var(--sf-surface-container))` | `background-image` |
-| `--sf-toast--content-color` | не задана; задают модификаторы, например `.sf-toast--neutral`: `var(--sf-toast-color, var(--sf-on-surface))` | `color`, `--sf-close-icon--background-color` |
+| `--sf-toast--content-color` | не задана; задают модификаторы, например `.sf-toast--neutral`: `var(--sf-toast-color, var(--sf-on-surface))` | `color`, `--sf-close-icon--background-color`, `--sf-button-close--ink` |
 | `--sf-toast--lead` | `var(--sf-ui-1--space-y-tightness-low)` | `margin-top`, `margin-block-start`, `margin-inline-end`, `padding-top`, `padding-bottom`, `padding-block`, `padding-block-end` |
 | `--sf-toast-bottom--background-color` | не задана; задают модификаторы, например `.sf-toast .sf-toast-bottom`: `transparent` | `background-color` |
 | `--sf-toast-container--background-color` | не задана; задают модификаторы, например `.sf-toast .sf-toast-container`: `transparent` | `background-color` |

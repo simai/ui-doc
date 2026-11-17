@@ -34,13 +34,16 @@
     "alert-bar": "smart/feedback/alert-bar.md",
     "list": "smart/content/list.md",
     "list-feed": "smart/content/list-feed.md",
-    "tree-item": "smart/navigation/tree.md"
+    "tree-item": "smart/navigation/tree.md",
+    "tag-group": "smart/content/tags.md"
   },
   "skip": {
     "message-log": "Dated alias of sf-list-feed until 2027-01-01: the page is a short note that points to the feed (D10, register RG-S2-52); the name table lives in the «Прежние имена» guide.",
     "theme-generator": "Leaving until 2027-01-01 (C84): sf-input-color variant=\"brand\" and variant=\"theme\" replace it; its page folded into smart/forms/color.md (DEV decision 2026-11-15), the old address redirects there. Its former names stay in the «Прежние имена» guide.",
     "wizard": "New in ui-b58b5dec35e4 (sf-wizard); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands.",
-    "wizard-step": "New in ui-b58b5dec35e4 (sf-wizard-step); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands."
+    "wizard-step": "New in ui-b58b5dec35e4 (sf-wizard-step); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands.",
+    "display-settings": "New in ui-078a4b4c6f6e (sf-display-settings, C196); the site has no page for it yet. The page is a separate docs task (the «Доступность» section, dispatcher queue msg-28584551); remove this entry when it lands.",
+    "form": "New in ui-078a4b4c6f6e (sf-form); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands."
   },
   "suppress": {
     "popover": {

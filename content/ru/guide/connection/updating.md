@@ -70,8 +70,8 @@ JavaScript и TypeScript, CSS и SCSS, Markdown, JSON. Инструмент и �
 на который проект переходит: `git checkout <build_inputs.source.commit>`. Более
 новый журнал может назвать каноническое имя, которого в целевом выпуске ещё
 нет, и `--apply` записал бы в проект имя, которое этот выпуск не знает. Для
-выпуска `ui-994f9db407fa` это ревизия
-`09cf1b0f4e22af6f1d48d8ffdef496ba07f0d894`.
+выпуска `ui-24d64b7f6eb7` это ревизия
+`40541c0c4fba6c24659907eb987c74f17a4fc46a`.
 
 Инструменту нужен только Node.js: зависимостей у него нет, устанавливать
 ничего не нужно.
@@ -169,7 +169,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
   `sf-property-view` и `sf-admin-menu`; запись журнала —
   `component-larena-package-move`. В поставке `ui` их нет; на странице они
   работают, только если она объявила пакет `pro`, например
-  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/2ba35fabb343d85550dde2fdd7964bd801cb1fdf/smart'}`
+  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/0f8512da5188fecf74261cfcac9f29ec42c025ca/smart'}`
   (путь — по правилу из [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), и
   подключила его сборку, квитанция которой называет выпуск Framework на
   странице. Проект без Larena берёт сборку из выпуска `simai/ui-pro` (см. [Готовая сборка пакета `pro`](/ru/guide/introduction/structure/#готовая-сборка-пакета-pro)).
@@ -281,7 +281,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
 
 ## Новые имена тегов
 
-С выпуска `ui-994f9db407fa` (`@simai-studio/ui` 5.20261114.1835) часть
+С выпуска `ui-24d64b7f6eb7` (`@simai-studio/ui` 5.20261117.1311) часть
 смарт-компонентов называется по-новому: сначала семейство, затем уточнение
 (`sf-input-date`, а не `sf-datepicker`). Прежний тег работает до 2027-01-01:
 Loader определяет его как псевдоним нового, поэтому страницы на прежних
@@ -595,6 +595,33 @@ Framework (см. [Подтверждение изменения](/ru/smart/actio
 | `--sf-download-file-icon-size` | `--sf-file-download-icon-size` | 2027-01-01 | `token-file-download-variable-names` |
 | `--sf-download-file-icon-color` | `--sf-file-download-icon-color` | 2027-01-01 | `token-file-download-variable-names` |
 | `--sf-spinner-track-color` | `--sf-spinner-track-color` | 2027-01-01 | `token-spinner-track-carries-alpha` |
+| `--sf-change-confirm-radius` | `--sf-confirm-change-radius` | 2027-01-01 | `token-confirm-change-variable-names` |
+| `--sf-change-confirm-inset` | `--sf-confirm-change-inset` | 2027-01-01 | `token-confirm-change-variable-names` |
+| `--sf-change-confirm-gap` | `--sf-confirm-change-gap` | 2027-01-01 | `token-confirm-change-variable-names` |
+| `--sf-change-confirm-before-background-color` | `--sf-confirm-change-before-background-color` | 2027-01-01 | `token-confirm-change-variable-names` |
+| `--sf-change-confirm-after-background-color` | `--sf-confirm-change-after-background-color` | 2027-01-01 | `token-confirm-change-variable-names` |
+| `--sf-change-confirm-after-color` | `--sf-confirm-change-after-color` | 2027-01-01 | `token-confirm-change-variable-names` |
+| `--sf-font-weight-light` | `--sf-weight--light` | 2027-01-01 | `token-c178-one-family-names` |
+| `--sf-font-weight-regular` | `--sf-weight--regular` | 2027-01-01 | `token-c178-one-family-names` |
+| `--sf-font-weight-medium` | `--sf-weight--medium` | 2027-01-01 | `token-c178-one-family-names` |
+| `--sf-font-weight-bold` | `--sf-weight--bold` | 2027-01-01 | `token-c178-one-family-names` |
+| `--sf-text--font-weight-1` | `--sf-weight--thin` | 2027-01-01 | `token-c178-one-family-names` |
+| `--sf-text--font-weight-2` | `--sf-weight--extra-light` | 2027-01-01 | `token-c178-one-family-names` |
+| `--sf-text--font-weight-3` | `--sf-weight--light` | 2027-01-01 | `token-c178-one-family-names` |
+| `--sf-text--font-weight-4` | `--sf-weight--regular` | 2027-01-01 | `token-c178-one-family-names` |
+| `--sf-text--font-weight-5` | `--sf-weight--medium` | 2027-01-01 | `token-c178-one-family-names` |
+| `--sf-text--font-weight-6` | `--sf-weight--semi-bold` | 2027-01-01 | `token-c178-one-family-names` |
+| `--sf-text--font-weight-7` | `--sf-weight--bold` | 2027-01-01 | `token-c178-one-family-names` |
+| `--sf-text--font-weight-8` | `--sf-weight--extra-bold` | 2027-01-01 | `token-c178-one-family-names` |
+| `--sf-text--font-weight-9` | `--sf-weight--black` | 2027-01-01 | `token-c178-one-family-names` |
+| `--sf-focus-outline-width` | `--sf-focus--width` | 2027-01-01 | `token-c178-one-family-names` |
+| `--sf-ui-blur-small` | `blur(var(--sf-blur-small))` | 2027-01-01 | `token-c178-blur-filter-values` |
+| `--sf-ui-blur-medium` | `blur(var(--sf-blur-medium))` | 2027-01-01 | `token-c178-blur-filter-values` |
+| `--sf-ui-blur-large` | `blur(var(--sf-blur-large))` | 2027-01-01 | `token-c178-blur-filter-values` |
+| `--sf-ui-blur-surface-overlay` | `blur(var(--sf-surface-overlay--blur))` | 2027-01-01 | `token-c178-blur-filter-values` |
+| `--sf-ring--alfa` | `--sf-ring--alpha` | 2027-01-01 | `token-ring-alpha-spelling` |
+| `--sf-avatar-offline-background-color` | без замены | 2027-01-01 | `token-avatar-offline-variables-retired` |
+| `--sf-avatar-offline-overlay` | без замены | 2027-01-01 | `token-avatar-offline-variables-retired` |
 
 ## Связь с другими частями
 

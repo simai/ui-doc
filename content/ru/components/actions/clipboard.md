@@ -6,7 +6,7 @@ profile: reference
 
 # Копирование
 
-:badge[sf-clipboard]{variant=outline scheme=on-surface size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-clipboard]{variant=outline scheme=on-surface size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Любая кнопка может положить в буфер обмена готовое значение или текст другого
 элемента: команду, ключ, код заказа. Ставьте её рядом с текстом, который
@@ -165,7 +165,7 @@ whenLoader(() => SF.Loader.ready('Copy', (Copy) => {
 | Блок | `sf-clipboard` |
 | Части | `sf-clipboard-1`, `sf-clipboard-2`, `sf-clipboard-3`, `sf-clipboard-fallback`, `sf-clipboard-holder`, `sf-clipboard-name`, `sf-clipboard-result`, `sf-clipboard-status`, `sf-clipboard-surface` |
 | Модификаторы | `sf-clipboard--inline`, `sf-clipboard--overlay` |
-| Размеры | `sf-clipboard--size-1`, `sf-clipboard--size-1/3`, `sf-clipboard--size-2` |
+| Размеры | `sf-clipboard--size-1`, `sf-clipboard--size-1/2`, `sf-clipboard--size-1/3`, `sf-clipboard--size-2`, `sf-clipboard--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -175,8 +175,11 @@ whenLoader(() => SF.Loader.ready('Copy', (Copy) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-clipboard--box` | не задана; задают модификаторы, например `.sf-clipboard--size-1/3:not(.sf-button):not(.sf-icon-button)`: `var(--sf-ui-1/3--control-height)` | `height`, `block-size`, `min-height`, `min-block-size`, `min-width`, `min-inline-size` |
-| `--sf-clipboard--icon` | не задана; задают модификаторы, например `.sf-clipboard--size-1/3:not(.sf-button):not(.sf-icon-button)`: `var(--sf-text-height-1/3)` | `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
+| `--sf-clipboard--box` | не задана; задают модификаторы, например `.sf-clipboard--size-1/3:not(.sf-button):not(.sf-icon-button)`: `var(--sf-ui-1/3--control-height)` | `--sf-clipboard--overlay-box`, `height`, `block-size`, `min-height`, `min-block-size`, `min-width`, `min-inline-size` |
+| `--sf-clipboard--icon` | не задана; задают модификаторы, например `.sf-clipboard--size-1/3:not(.sf-button):not(.sf-icon-button)`: `var(--sf-text-height-1/3)` | `--sf-clipboard--overlay-glyph`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
+| `--sf-clipboard--overlay-box` | не задана; задают модификаторы, например `.sf-clipboard--overlay`: `var(--sf-clipboard--box, var(--sf-ui-1--control-height))` | `top`, `inset-block-start`, `inset-inline-end` |
+| `--sf-clipboard--overlay-glyph` | не задана; задают модификаторы, например `.sf-clipboard--overlay`: `var(--sf-clipboard--icon, var(--sf-text-height-1))` | `inset-inline-end` |
+| `--sf-clipboard--overlay-inset` | не задана; задают модификаторы, например `.sf-clipboard--overlay`: `var(--sf-clipboard-overlay-inset, var(--sf-space-2))` | `top`, `inset-block-start`, `inset-inline-end` |
 
 ## См. также
 

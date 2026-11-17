@@ -6,7 +6,7 @@ profile: reference
 
 # Аккордеон
 
-:badge[sf-accordion]{variant=outline scheme=on-surface size=1/2} :badge[1.0.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-accordion]{variant=outline scheme=on-surface size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
 
 Аккордеон раскрывает и скрывает разделы содержимого под их заголовками.
 Берите его, чтобы сократить длинную страницу с независимыми разделами —
@@ -157,7 +157,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-accordion` |
-| Части | `sf-accordion-content`, `sf-accordion-heading`, `sf-accordion-title`, `sf-accordion-trigger` |
+| Части | `sf-accordion-content`, `sf-accordion-heading`, `sf-accordion-lead`, `sf-accordion-summary`, `sf-accordion-title`, `sf-accordion-trigger` |
 | Модификаторы | `sf-accordion--flush`, `sf-accordion--legacy`, `sf-accordion--outline`, `sf-accordion--plus-minus`, `sf-accordion--static` |
 | Размеры | `sf-accordion--size-1`, `sf-accordion--size-1/2`, `sf-accordion--size-1/3`, `sf-accordion--size-2`, `sf-accordion--size-3` |
 
@@ -195,7 +195,9 @@ profile: reference
 | `--sf-accordion--background-color` | `var(--sf-accordion-background-color, var(--sf-surface-container))` | `background-color` |
 | `--sf-accordion--border-color` | `var(--sf-accordion-border-color, var(--sf-outline-variant))` | `border`, `border-bottom`, `border-block-end` |
 | `--sf-accordion--border-width` | `var(--sf-accordion-border-width, var(--sf-px))` | `--sf-accordion--frame-block`, `border`, `border-bottom`, `border-block-end`, `height` |
-| `--sf-accordion--content-padding` | `var(--sf-accordion--trigger-padding-inline)` | `padding` |
+| `--sf-accordion--content-padding` | `var(--sf-accordion--trigger-padding-inline)` | `padding`, `padding-top`, `padding-bottom`, `padding-block` |
+| `--sf-accordion--duration` | `calc(var(--sf-duration-fast) * 2)` | `transition` |
+| `--sf-accordion--easing` | `var(--sf-ease-move)` | `transition` |
 | `--sf-accordion--frame-block` | не задана; задают модификаторы, например `.sf-accordion.sf-accordion--outline`: `calc(var(--sf-accordion--border-width) * 2)` | `min-height`, `min-block-size`, `padding` |
 | `--sf-accordion--icon-size` | `var(--sf-text-height-1)` | `font-size`, `height`, `width` |
 | `--sf-accordion--radius` | `var(--sf-accordion-radius, var(--sf-radius--surface))` | `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |

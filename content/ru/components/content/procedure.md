@@ -6,7 +6,7 @@ profile: reference
 
 # Шаги инструкции
 
-:badge[sf-procedure]{variant=outline scheme=on-surface size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-procedure]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Шаги инструкции показывают нумерованную последовательность действий, которую
 читают сверху вниз: установку, настройку, перенос. В каждом шаге может быть
@@ -87,16 +87,16 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-procedure-marker-background-color` | Заливка отметки шага; у выполненного и текущего шага своя. | `var(--sf-surface-container)` |
-| `--sf-procedure-marker-color` | Цвет номера в маркере шага. | `var(--sf-on-surface)` |
+| `--sf-procedure-marker-background-color` | Заливка отметки шага; по умолчанию нет — пустой круг, как отметка `sf-steps` (C194); завершённый или текущий шаг рисует свою. Прежнее имя `--sf-procedure-marker-background` до 2027-01-01 ещё читается — после этого (именование C16, `src/core/contracts/token-aliases.v1.json`). | `transparent` |
+| `--sf-procedure-marker-color` | Номер в отметке шага впереди; цвет пояснения, как у отметки `sf-steps`. Завершённый шаг рисует галочку, текущий — свой номер цветом `on-primary`. | `var(--sf-on-surface-variant)` |
 | `--sf-procedure-line-color` | Цвет линии от маркера к следующему. | `var(--sf-outline-variant)` |
 | `--sf-procedure-line-width` | Толщина линии между маркерами. | `var(--sf-px)` |
 | `--sf-procedure-gap` | Промежуток между шагами. | `var(--sf-content--space-related)` |
-| `--sf-procedure-indent` | Промежуток между маркером и содержимым шага. | `var(--sf-space-1)` |
+| `--sf-procedure-indent` | Промежуток между отметкой и содержимым шага: 12 при любой ширине и плотности, как от отметки до подписи у `sf-steps`. | `calc(var(--sf-a8) + var(--sf-procedure--ring) * 2)` |
 
 ```css
 .sf-procedure {
-  --sf-procedure-marker-background-color: var(--sf-surface-container);
+  --sf-procedure-marker-background-color: transparent;
 }
 ```
 
@@ -106,6 +106,8 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
+| `--sf-procedure--check` | `var(--sf-px)` | `background-image` |
 | `--sf-procedure--gap` | `var(--sf-procedure-gap, var(--sf-content--space-related))` | `gap`, `bottom`, `inset-block-end` |
 | `--sf-procedure--line-width` | `var(--sf-procedure-line-width, var(--sf-px))` | `inset-inline-start`, `width`, `inline-size` |
-| `--sf-procedure--marker-size` | `var(--sf-ui-1/2--control-height)` | `grid-template-columns`, `width`, `inline-size`, `height`, `block-size`, `top`, `inset-block-start`, `inset-inline-start`, `min-height`, `min-block-size`, `padding-top`, `padding-block-start` |
+| `--sf-procedure--marker-size` | `var(--sf-text-height-1)` | `grid-template-columns`, `width`, `inline-size`, `height`, `block-size`, `top`, `inset-block-start`, `inset-inline-start`, `min-height`, `min-block-size`, `padding-top`, `padding-block-start` |
+| `--sf-procedure--ring` | `calc(var(--sf-px) * 2)` | `grid-column-gap`, `-moz-column-gap`, `column-gap`, `outline`, `outline-offset`, `top`, `inset-block-start`, `bottom`, `inset-block-end` |

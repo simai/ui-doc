@@ -41,8 +41,8 @@ description: "Проявляет элемент при отрисовке — и
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `animation` | `animation-name: sf-animation-fade; animation-duration: var(--sf-duration-normal); animation-timing-function: var(--sf-animation); animation-fill-mode: both` | — |
-| `infinite` | `animation-iteration-count: infinite` | — |
+| `animation` | `animation-name: sf-animation-fade; animation-duration: var(--sf-duration-normal); animation-timing-function: var(--sf-ease-enter); animation-fill-mode: both; (prefers-reduced-motion: reduce): animation-duration: 0.01ms; animation-iteration-count: 1` | — |
+| `infinite` | `animation-iteration-count: infinite; (prefers-reduced-motion: reduce): animation-duration: 0.01ms; animation-iteration-count: 1` | — |
 | `animation-from-left` | `animation-name: sf-animation-from-left` | — |
 | `animation-from-right` | `animation-name: sf-animation-from-right` | — |
 | `animation-from-bottom` | `animation-name: sf-animation-from-bottom` | — |
@@ -59,7 +59,7 @@ description: "Проявляет элемент при отрисовке — и
 | Переменная | Значение по умолчанию |
 |:---|:---|
 | `--sf-duration-normal` | `0.3S` |
-| `--sf-animation` | `cubic-bezier(.25, .8, .25, 1)` |
+| `--sf-ease-enter` | `cubic-bezier(.19, 1, .22, 1)` |
 | `--sf-b0` | `0.625rem` |
 
 ## Применение

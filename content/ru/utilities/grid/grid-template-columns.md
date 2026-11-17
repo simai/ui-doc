@@ -41,23 +41,28 @@ description: "Делит грид-контейнер на заданное чи�
 | Класс | CSS | Значения |
 |:---|:---|:---|
 | `grid-col-1` | `grid-template-columns: repeat(1, minmax(0, 1fr))` | — |
-| `grid-col-2` | `grid-template-columns: repeat(2, minmax(0, 1fr))` | — |
-| `grid-col-3` | `grid-template-columns: repeat(3, minmax(0, 1fr))` | — |
-| `grid-col-4` | `grid-template-columns: repeat(4, minmax(0, 1fr))` | — |
-| `grid-col-5` | `grid-template-columns: repeat(5, minmax(0, 1fr))` | — |
-| `grid-col-6` | `grid-template-columns: repeat(6, minmax(0, 1fr))` | — |
-| `grid-col-7` | `grid-template-columns: repeat(7, minmax(0, 1fr))` | — |
-| `grid-col-8` | `grid-template-columns: repeat(8, minmax(0, 1fr))` | — |
-| `grid-col-9` | `grid-template-columns: repeat(9, minmax(0, 1fr))` | — |
-| `grid-col-10` | `grid-template-columns: repeat(10, minmax(0, 1fr))` | — |
-| `grid-col-11` | `grid-template-columns: repeat(11, minmax(0, 1fr))` | — |
-| `grid-col-12` | `grid-template-columns: repeat(12, minmax(0, 1fr))` | — |
+| `grid-col-{значение}` | `grid-template-columns: repeat({значение}, minmax(0, 1fr))` | `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `grid-col-none` | `grid-template-columns: none` | — |
 | `grid-col-subgrid` | `grid-template-columns: subgrid` | — |
+| `grid-col-fit` | `grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--sf-f2)), 1fr))` | — |
+| `grid-col-fit-{значение}` | `grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--sf-{значение})), 1fr))` | `f0`, `f2`, `f6`, `g0`, `g2`, `g6` |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:grid-col-1`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-f2` | `12rem` |
+| `--sf-f0` | `10rem` |
+| `--sf-f6` | `16rem` |
+| `--sf-g0` | `20rem` |
+| `--sf-g2` | `24rem` |
+| `--sf-g6` | `32rem` |
 
 ## Применение
 

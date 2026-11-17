@@ -6,7 +6,7 @@ profile: reference
 
 # Эмодзи
 
-:badge[sf-emoji]{variant=outline scheme=on-surface size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-emoji]{variant=outline scheme=on-surface size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
 
 Цветной эмодзи того же размера, что и текст вокруг: символ стоит в строке
 ровно и не раздвигает строки. Берите его для эмоциональных акцентов в тексте; статус и действия

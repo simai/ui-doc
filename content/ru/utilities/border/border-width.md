@@ -40,25 +40,39 @@ description: "Задаёт толщину рамки от 0 до 10 пиксел
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `border-{значение}` | `border-width: var(--sf-a{значение})` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9` |
+| `border-1` | `border-width: var(--sf-line--border)` | — |
+| `border-2` | `border-width: var(--sf-line--indicator)` | — |
+| `border-{значение}` | `border-width: var(--sf-a{значение})` | `3`, `4`, `5`, `6`, `7`, `8`, `9` |
 | `border-10` | `border-width: var(--sf-b0)` | — |
 | `border-0` | `border-width: var(--sf-0)` | — |
-| `border-top-{значение}` | `border-top-width: var(--sf-a{значение})` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9` |
+| `border-top-1` | `border-top-width: var(--sf-line--border)` | — |
+| `border-top-2` | `border-top-width: var(--sf-line--indicator)` | — |
+| `border-top-{значение}` | `border-top-width: var(--sf-a{значение})` | `3`, `4`, `5`, `6`, `7`, `8`, `9` |
 | `border-top-10` | `border-top-width: var(--sf-b0)` | — |
 | `border-top-0` | `border-top-width: var(--sf-0)` | — |
-| `border-inline-end-{значение}` | `border-inline-end-width: var(--sf-a{значение})` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9` |
+| `border-inline-end-1` | `border-inline-end-width: var(--sf-line--border)` | — |
+| `border-inline-end-2` | `border-inline-end-width: var(--sf-line--indicator)` | — |
+| `border-inline-end-{значение}` | `border-inline-end-width: var(--sf-a{значение})` | `3`, `4`, `5`, `6`, `7`, `8`, `9` |
 | `border-inline-end-10` | `border-inline-end-width: var(--sf-b0)` | — |
 | `border-inline-end-0` | `border-inline-end-width: var(--sf-0)` | — |
-| `border-bottom-{значение}` | `border-bottom-width: var(--sf-a{значение})` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9` |
+| `border-bottom-1` | `border-bottom-width: var(--sf-line--border)` | — |
+| `border-bottom-2` | `border-bottom-width: var(--sf-line--indicator)` | — |
+| `border-bottom-{значение}` | `border-bottom-width: var(--sf-a{значение})` | `3`, `4`, `5`, `6`, `7`, `8`, `9` |
 | `border-bottom-10` | `border-bottom-width: var(--sf-b0)` | — |
 | `border-bottom-0` | `border-bottom-width: var(--sf-0)` | — |
-| `border-inline-start-{значение}` | `border-inline-start-width: var(--sf-a{значение})` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9` |
+| `border-inline-start-1` | `border-inline-start-width: var(--sf-line--border)` | — |
+| `border-inline-start-2` | `border-inline-start-width: var(--sf-line--indicator)` | — |
+| `border-inline-start-{значение}` | `border-inline-start-width: var(--sf-a{значение})` | `3`, `4`, `5`, `6`, `7`, `8`, `9` |
 | `border-inline-start-10` | `border-inline-start-width: var(--sf-b0)` | — |
 | `border-inline-start-0` | `border-inline-start-width: var(--sf-0)` | — |
-| `border-x-{значение}` | `border-inline-end-width: var(--sf-a{значение}); border-inline-start-width: var(--sf-a{значение})` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9` |
+| `border-x-1` | `border-inline-end-width: var(--sf-line--border); border-inline-start-width: var(--sf-line--border)` | — |
+| `border-x-2` | `border-inline-end-width: var(--sf-line--indicator); border-inline-start-width: var(--sf-line--indicator)` | — |
+| `border-x-{значение}` | `border-inline-end-width: var(--sf-a{значение}); border-inline-start-width: var(--sf-a{значение})` | `3`, `4`, `5`, `6`, `7`, `8`, `9` |
 | `border-x-10` | `border-inline-end-width: var(--sf-b0); border-inline-start-width: var(--sf-b0)` | — |
 | `border-x-0` | `border-inline-end-width: var(--sf-0); border-inline-start-width: var(--sf-0)` | — |
-| `border-y-{значение}` | `border-top-width: var(--sf-a{значение}); border-bottom-width: var(--sf-a{значение})` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9` |
+| `border-y-1` | `border-top-width: var(--sf-line--border); border-bottom-width: var(--sf-line--border)` | — |
+| `border-y-2` | `border-top-width: var(--sf-line--indicator); border-bottom-width: var(--sf-line--indicator)` | — |
+| `border-y-{значение}` | `border-top-width: var(--sf-a{значение}); border-bottom-width: var(--sf-a{значение})` | `3`, `4`, `5`, `6`, `7`, `8`, `9` |
 | `border-y-10` | `border-top-width: var(--sf-b0); border-bottom-width: var(--sf-b0)` | — |
 | `border-y-0` | `border-top-width: var(--sf-0); border-bottom-width: var(--sf-0)` | — |
 
@@ -72,8 +86,8 @@ description: "Задаёт толщину рамки от 0 до 10 пиксел
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
-| `--sf-a1` | `0.0625rem` |
-| `--sf-a2` | `0.125rem` |
+| `--sf-line--border` | `var(--sf-px)` |
+| `--sf-line--indicator` | `calc(2 * var(--sf-px))` |
 | `--sf-a3` | `0.1875rem` |
 | `--sf-a4` | `0.25rem` |
 | `--sf-a5` | `0.3125rem` |

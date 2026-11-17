@@ -1,22 +1,22 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "09cf1b0f4e22af6f1d48d8ffdef496ba07f0d894",
-    "core_revision": "994f9db407fa5523feeafd1b8cb859fad34fa9c3",
+    "source_revision": "40541c0c4fba6c24659907eb987c74f17a4fc46a",
+    "core_revision": "24d64b7f6eb7a782d648dbb5b44f7eb763ec815b",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "53f603377124a90a2340ce42453998f65642e0e28b046a4d9c7b5328024389b0",
-      "src/core/contracts/composition-types.v1.json": "538bcc48f1a923fb24cfbf64073598aaa1116bd305da5f95cb7680581562c4c3",
-      "src/core/js/composition/index.mjs": "82266969933e063456b74c9dbc722ae526ddcc92d3d8781171f0c52e580df1a2",
-      "src/core/js/composition/builtins.mjs": "1928bbc9104c953dbe6651c471f5c8a656437724800fadec520ffbf622dab9a5",
+      "src/core/contracts/composition-types.v1.json": "c64c2e76b3c2782e899b36f0362b9cfbc1f0a6271d36e6f5bde644315210c1d7",
+      "src/core/js/composition/index.mjs": "55f7941f674ea37ebad4640eda458c40fdd460bbb675f27c7f164a0ebcf1562c",
+      "src/core/js/composition/builtins.mjs": "c068ad3984cff200de700ad61770c44ccec95df79d804dbd0104bca092e759cc",
       "tests/fixtures/composition/catalog-page.json": "3f9c8f86ccf8203509fad4c702318885815f550c17055613d41f04bf815dedfc",
-      "src/smart/button/smart.manifest.json": "3d19acb54ea81755522d3727b1654e38f93917fd19273468d87a989e6ee03d05"
+      "src/smart/button/smart.manifest.json": "97773e1ba8c33a8943eb72c20aa42d4c11e2f7bb8ceacaa3d174e9ee2e7bbb27"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "53f603377124a90a2340ce42453998f65642e0e28b046a4d9c7b5328024389b0",
-      "distr/core/contracts/composition-types.v1.json": "538bcc48f1a923fb24cfbf64073598aaa1116bd305da5f95cb7680581562c4c3",
-      "distr/core/js/core.js": "ad0c95201e0d08c98d1b45a9cda848dc0d50989447129a113a79935eff124ead"
+      "distr/core/contracts/composition-types.v1.json": "c64c2e76b3c2782e899b36f0362b9cfbc1f0a6271d36e6f5bde644315210c1d7",
+      "distr/core/js/core.js": "7f7e1fd2b617c3575407f1f336236b5820fc941ad32e53d24e1ea4fe3dbd2c3d"
     }
   },
   "source_files": [

@@ -32,10 +32,10 @@ description: "Ставит элементу тень его места: на с�
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `shadow-flat` | `box-shadow: var(--sf-shadow-flat)` | — |
-| `shadow-raised` | `box-shadow: 0 var(--sf-px) var(--sf-a2) var(--sf-shadow-key-color), 0 var(--sf-a2) var(--sf-a8) var(--sf-shadow-ambient-color)` | — |
-| `shadow-overlay` | `box-shadow: 0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color), 0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color)` | — |
-| `shadow-modal` | `box-shadow: 0 var(--sf-a4) var(--sf-a8) var(--sf-shadow-key-color), 0 var(--sf-b6) var(--sf-c6) var(--sf-shadow-ambient-color)` | — |
+| `shadow-flat` | `--sf-place-shadow: 0 0 transparent; box-shadow: var(--sf-shadow-flat); box-shadow: var(--sf-ring-shadow, var(--sf-shadow-flat))` | — |
+| `shadow-raised` | `--sf-place-shadow: 0 var(--sf-px) var(--sf-a2) var(--sf-shadow-key-color), 0 var(--sf-a2) var(--sf-a8) var(--sf-shadow-ambient-color); box-shadow: 0 0 transparent, var(--sf-place-shadow); box-shadow: var(--sf-ring-shadow, 0 0 transparent), var(--sf-place-shadow)` | — |
+| `shadow-overlay` | `--sf-place-shadow: 0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color), 0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color); box-shadow: 0 0 transparent, var(--sf-place-shadow); box-shadow: var(--sf-ring-shadow, 0 0 transparent), var(--sf-place-shadow)` | — |
+| `shadow-modal` | `--sf-place-shadow: 0 var(--sf-a4) var(--sf-a8) var(--sf-shadow-key-color), 0 var(--sf-b6) var(--sf-c6) var(--sf-shadow-ambient-color); box-shadow: 0 0 transparent, var(--sf-place-shadow); box-shadow: var(--sf-ring-shadow, 0 0 transparent), var(--sf-place-shadow)` | — |
 
 Прежние имена работают до 2027-01-01: `shadow-0` → `shadow-flat`, `shadow-1` → `shadow-raised`, `shadow-2` → `shadow-overlay`, `shadow-3` → `shadow-overlay`, `shadow-4` → `shadow-modal`, `shadow-5` → `shadow-modal`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
 
@@ -50,6 +50,7 @@ description: "Ставит элементу тень его места: на с�
 | Переменная | Значение по умолчанию |
 |:---|:---|
 | `--sf-shadow-flat` | `none` |
+| `--sf-ring-shadow` | задаётся темой |
 | `--sf-px` | `1px` |
 | `--sf-a2` | `0.125rem` |
 | `--sf-shadow-key-color` | `light-dark(var(--sf-black--alfa-16), var(--sf-black--alfa-28))` |

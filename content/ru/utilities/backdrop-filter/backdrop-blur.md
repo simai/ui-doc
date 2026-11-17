@@ -52,7 +52,7 @@ description: "Размывает то, что видно за элементом
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
-| `--sf-blur-small` | `var(--sf-a2)` |
+| `--sf-blur-small` | `var(--sf-a2); (prefers-reduced-transparency: reduce): var(--sf-blur-none)` |
 | `--sf-backdrop-brightness` | задаётся темой |
 | `--sf-backdrop-contrast` | задаётся темой |
 | `--sf-backdrop-grayscale` | задаётся темой |
@@ -61,8 +61,8 @@ description: "Размывает то, что видно за элементом
 | `--sf-backdrop-opacity` | задаётся темой |
 | `--sf-backdrop-saturate` | задаётся темой |
 | `--sf-backdrop-sepia` | задаётся темой |
-| `--sf-blur-medium` | `var(--sf-a4)` |
-| `--sf-blur-large` | `var(--sf-a8)` |
+| `--sf-blur-medium` | `var(--sf-a4); (prefers-reduced-transparency: reduce): var(--sf-blur-none)` |
+| `--sf-blur-large` | `var(--sf-a8); (prefers-reduced-transparency: reduce): var(--sf-blur-none)` |
 | `--sf-blur-none` | `var(--sf-a0)` |
 
 ## Применение

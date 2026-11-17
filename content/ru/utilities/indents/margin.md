@@ -74,19 +74,12 @@ description: "Задаёт расстояние вокруг элемента: �
 | Класс | CSS | Значения |
 |:---|:---|:---|
 | `m-{значение}` | `margin: var(--sf-space-{значение})` | `auto`, `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
-| `-m-{значение}` | `margin: calc(0rem - var(--sf-space-{значение}))` | `auto`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `m-top-{значение}` | `margin-top: var(--sf-space-{значение})` | `auto`, `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
-| `-m-top-{значение}` | `margin-top: calc(0rem - var(--sf-space-{значение}))` | `auto`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `m-inline-end-{значение}` | `margin-inline-end: var(--sf-space-{значение})` | `auto`, `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
-| `-m-inline-end-{значение}` | `margin-inline-end: calc(0rem - var(--sf-space-{значение}))` | `auto`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `m-bottom-{значение}` | `margin-bottom: var(--sf-space-{значение})` | `auto`, `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
-| `-m-bottom-{значение}` | `margin-bottom: calc(0rem - var(--sf-space-{значение}))` | `auto`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `m-inline-start-{значение}` | `margin-inline-start: var(--sf-space-{значение})` | `auto`, `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
-| `-m-inline-start-{значение}` | `margin-inline-start: calc(0rem - var(--sf-space-{значение}))` | `auto`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `m-inline-{значение}` | `margin-left: var(--sf-space-{значение}); margin-right: var(--sf-space-{значение}); margin-inline: var(--sf-space-{значение})` | `auto`, `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
-| `-m-inline-{значение}` | `margin-left: calc(0rem - var(--sf-space-{значение})); margin-right: calc(0rem - var(--sf-space-{значение})); margin-inline: calc(0rem - var(--sf-space-{значение}))` | `auto`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `m-block-{значение}` | `margin-top: var(--sf-space-{значение}); margin-bottom: var(--sf-space-{значение}); margin-block: var(--sf-space-{значение})` | `auto`, `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
-| `-m-block-{значение}` | `margin-top: calc(0rem - var(--sf-space-{значение})); margin-bottom: calc(0rem - var(--sf-space-{значение})); margin-block: calc(0rem - var(--sf-space-{значение}))` | `auto`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `-m-0` | `margin: calc(0rem - var(--sf-space-0))` | — |
 | `-m-top-0` | `margin-top: calc(0rem - var(--sf-space-0))` | — |
 | `-m-inline-end-0` | `margin-inline-end: calc(0rem - var(--sf-space-0))` | — |
@@ -94,6 +87,13 @@ description: "Задаёт расстояние вокруг элемента: �
 | `-m-inline-start-0` | `margin-inline-start: calc(0rem - var(--sf-space-0))` | — |
 | `-m-inline-0` | `margin-left: calc(0rem - var(--sf-space-0)); margin-right: calc(0rem - var(--sf-space-0)); margin-inline: calc(0rem - var(--sf-space-0))` | — |
 | `-m-block-0` | `margin-top: calc(0rem - var(--sf-space-0)); margin-bottom: calc(0rem - var(--sf-space-0)); margin-block: calc(0rem - var(--sf-space-0))` | — |
+| `-m-{значение}` | `margin: calc(0rem - var(--sf-space-{значение}))` | `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
+| `-m-top-{значение}` | `margin-top: calc(0rem - var(--sf-space-{значение}))` | `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
+| `-m-inline-end-{значение}` | `margin-inline-end: calc(0rem - var(--sf-space-{значение}))` | `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
+| `-m-bottom-{значение}` | `margin-bottom: calc(0rem - var(--sf-space-{значение}))` | `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
+| `-m-inline-start-{значение}` | `margin-inline-start: calc(0rem - var(--sf-space-{значение}))` | `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
+| `-m-inline-{значение}` | `margin-left: calc(0rem - var(--sf-space-{значение})); margin-right: calc(0rem - var(--sf-space-{значение})); margin-inline: calc(0rem - var(--sf-space-{значение}))` | `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
+| `-m-block-{значение}` | `margin-top: calc(0rem - var(--sf-space-{значение})); margin-bottom: calc(0rem - var(--sf-space-{значение})); margin-block: calc(0rem - var(--sf-space-{значение}))` | `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `m-{значение}` | `margin: var(--sf-{значение})` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
 | `-m-{значение}` | `margin: calc(0rem - var(--sf-{значение}))` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
 | `m-top-{значение}` | `margin-top: var(--sf-{значение})` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |

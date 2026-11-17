@@ -5,7 +5,7 @@ description: "Поле вопроса и файлов чата: Enter отпра
 
 # Поле чата
 
-:badge[sf-chat-composer]{variant=outline scheme=on-surface size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-composer]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-composer>` — поле вопроса и файлов чата: текст растёт до восьми
 строк, Enter отправляет, Shift+Enter переносит строку. Файлы поле только
@@ -116,7 +116,7 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-994f9db407fa` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-24d64b7f6eb7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -124,7 +124,7 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 |:---|:---|
 | Тег | `<sf-chat-composer>` |
 | Назначение | Место, где пишут вопрос и добавляют файлы: Enter отправляет, Shift+Enter переносит строку, набор через IME никогда не прерывается, кнопка отправки на время ожидания ответа становится «остановить ожидание», а файлы только сообщаются — загружает их приложение; их плашки приходят обратно через `files`. |
-| Контракт | `smart.chat-composer`, версия `1.2.3` |
+| Контракт | `smart.chat-composer`, версия `1.3.0` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -177,8 +177,8 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 ### Источник
 
-- `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/chat-composer`
-- `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/chat-composer/rule.js#name=cl-chat-composer`
+- `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/chat-composer`
+- `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/chat-composer/rule.js#name=cl-chat-composer`
 
 ## См. также
 

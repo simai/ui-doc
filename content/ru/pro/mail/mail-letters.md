@@ -5,7 +5,7 @@ description: "Письма человека в редакторе: поиск п
 
 # Список писем
 
-:badge[sf-mail-letters]{variant=outline scheme=on-surface size=1/2} :badge[1.0.8]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-letters]{variant=outline scheme=on-surface size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
 
 Список писем показывает письма человека в редакторе писем: поиск по названию,
 порядок и то, что предлагает строка, — «Открыть» и под ⋯ копия, переименование
@@ -129,9 +129,9 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `search(query: string)` | объект | Ищет, как поле: задаёт `query`. |
-| `sort(order: any)` | объект | Упорядочивает строки, как список порядка; `refused unknown` для порядка, отличного от `changed` и `title`. |
-| `choose(action: any, id: any)` | объект | Делает то же, что строка или панель: отправляет `open`, `copy`, `rename`, `delete` или `create`; `refused current` при открытии уже открытого письма. |
+| `search(args: object)` | объект | Ищет, как поле: задаёт `query`. |
+| `sort(args: object)` | объект | Упорядочивает строки, как список порядка; `refused unknown` для порядка, отличного от `changed` и `title`. |
+| `choose(args: object)` | объект | Делает то же, что строка или панель: отправляет `open`, `copy`, `rename`, `delete` или `create`; `refused current` при открытии уже открытого письма. |
 
 ### События
 
@@ -149,9 +149,9 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-mail-letters>`, контракт `smart.mail-letters` версии `1.0.8` |
+| Тег | `<sf-mail-letters>`, контракт `smart.mail-letters` версии `1.1.2` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | Доступность | Читается как список; название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-letters` |
-| Правило классов | `simai/ui-pro@2ba35fabb343d85550dde2fdd7964bd801cb1fdf:components/src/smart/mail-letters/rule.js#name=cl-mail-letters` |
+| Источник | `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/mail-letters` |
+| Правило классов | `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/mail-letters/rule.js#name=cl-mail-letters` |

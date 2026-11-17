@@ -349,6 +349,20 @@
     "SF.ThemePalette": {
       "page": "/ru/smart/forms/color/#тема-в-коде",
       "label": "Цвет: тема в коде"
+    },
+    "SF.displaySettings": {
+      "text": "Настройки отображения, которые выбрал человек: размер текста, схема, интервалы, картинки, движение.",
+      "page": "/ru/guide/functions/person/",
+      "label": "Настройки отображения"
+    },
+    "SF.menu": {
+      "text": "Открывает одно меню действий страницы у кнопки или в точке и отвечает выбранной строкой.",
+      "page": "/ru/smart/navigation/context-menu/",
+      "label": "Меню действий страницы"
+    },
+    "SF.Gallery": {
+      "page": "/ru/smart/content/gallery/",
+      "label": "Галерея"
     }
   }
 }

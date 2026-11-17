@@ -163,14 +163,11 @@
     "sf-input-field": {
       "alignItems": "center"
     },
-    "sf-input-hint-text-wrap": {
-      "alignItems": "center"
-    },
     "sf-input-right": {
       "justifyContent": "center",
       "alignItems": "center"
     },
-    "sf-link": {
+    "sf-link__icon": {
       "alignItems": "center"
     },
     "sf-list": {
@@ -264,10 +261,6 @@
       "justifyContent": "center",
       "alignItems": "center"
     },
-    "sf-slider-arrows": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
     "sf-slider-dots": {
       "justifyContent": "center",
       "alignItems": "center"
@@ -285,10 +278,6 @@
     "sf-tag": {
       "alignItems": "center"
     },
-    "sf-tag-container": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
     "sf-tag-count": {
       "flexDirection": "column",
       "justifyContent": "center",
@@ -296,14 +285,6 @@
     },
     "sf-textarea": {
       "flexDirection": "column"
-    },
-    "sf-textarea-hint-text-wrap": {
-      "alignItems": "center"
-    },
-    "sf-thumb": {
-      "flexDirection": "column",
-      "justifyContent": "center",
-      "alignItems": "center"
     },
     "sf-thumb-handle": {
       "justifyContent": "center",

@@ -6,7 +6,7 @@ profile: reference
 
 # Флажок
 
-:badge[sf-checkbox]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-checkbox]{variant=outline scheme=on-surface size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
 
 Флажок включает независимый параметр или выбирает несколько значений из
 списка. Для одного выбора из взаимоисключающих вариантов берите
@@ -229,7 +229,7 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 | `--sf-checkbox-description--font-weight` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-description`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-checkbox-description--line-height` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-description`: `var(--sf-text-height-1/3)` | `line-height` |
 | `--sf-checkbox-label--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `transparent` | `background-color` |
-| `--sf-checkbox-label--color` | не задана; задают модификаторы, например `.sf-checkbox:not(.error):has(input:not(:checked)) .sf-checkbox-label`: `var(--sf-on-surface)` | `color` |
+| `--sf-checkbox-label--color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `var(--sf-on-surface)` | `color` |
 | `--sf-checkbox-label--font-family` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `var(--sf-text--family)` | `font-family` |
 | `--sf-checkbox-label--font-size` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-label`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-checkbox-label--font-weight` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `var(--sf-font-weight-regular)` | `font-weight` |

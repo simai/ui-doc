@@ -5,7 +5,7 @@ description: "Полоса во всю ширину над шапкой стра
 
 # Плашка уведомлений
 
-:badge[sf-alert-bar]{variant=outline scheme=on-surface size=1/2} :badge[1.6.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-alert-bar]{variant=outline scheme=on-surface size=1/2} :badge[1.6.8]{variant=outline scheme=on-surface size=1/2}
 
 Плашка уведомлений — полоса во всю ширину над шапкой страницы или
 административного интерфейса для состояний, которые требуют действия сейчас:
@@ -206,13 +206,13 @@ bar.addEventListener('sf-alert-bar-close', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-alert-bar>`, контракт `smart.alert-bar` версии `1.6.1` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-alert-bar>`, контракт `smart.alert-bar` версии `1.6.8` |
+| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: Tab доходит до ссылки действия, кнопки подтверждения, времени показанного пункта (его подсказки), «Ещё N», закрытия или сворачивания, затем по порядку до строк открытого списка: действие строки, подтверждение и закрытие; время строки — текст, остановки Tab нет; `Enter` или `Пробел` нажимают кнопку, `Enter` открывает ссылку действия; Escape в любом месте полосы или её открытого списка закрывает список и возвращает фокус на «Ещё N». |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/alert-bar` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-alert-bar` |
+| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/alert-bar` |
+| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-alert-bar` |
 
 ## См. также
 

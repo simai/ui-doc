@@ -33,13 +33,21 @@ description: "Поворачивает элемент на угол от 1° д�
 |:---|:---|:---|
 | `rotate-0` | `transform: rotate(0deg)` | — |
 | `rotate-1` | `transform: rotate(1deg)` | — |
+| `-rotate-1` | `transform: rotate(-1deg)` | — |
 | `rotate-2` | `transform: rotate(2deg)` | — |
+| `-rotate-2` | `transform: rotate(-2deg)` | — |
 | `rotate-3` | `transform: rotate(3deg)` | — |
+| `-rotate-3` | `transform: rotate(-3deg)` | — |
 | `rotate-5` | `transform: rotate(5deg)` | — |
+| `-rotate-5` | `transform: rotate(-5deg)` | — |
 | `rotate-15` | `transform: rotate(15deg)` | — |
+| `-rotate-15` | `transform: rotate(-15deg)` | — |
 | `rotate-45` | `transform: rotate(45deg)` | — |
+| `-rotate-45` | `transform: rotate(-45deg)` | — |
 | `rotate-90` | `transform: rotate(90deg)` | — |
+| `-rotate-90` | `transform: rotate(-90deg)` | — |
 | `rotate-180` | `transform: rotate(180deg)` | — |
+| `-rotate-180` | `transform: rotate(-180deg)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:rotate-0`.
 

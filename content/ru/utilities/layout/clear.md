@@ -23,8 +23,8 @@ description: "Опускает блок ниже плавающих элемен
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `clear-inline-start` | `clear: left` | — |
-| `clear-inline-end` | `clear: right` | — |
+| `clear-inline-start` | `clear: inline-start` | — |
+| `clear-inline-end` | `clear: inline-end` | — |
 | `clear-both` | `clear: both` | — |
 | `clear-none` | `clear: none` | — |
 

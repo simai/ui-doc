@@ -6,7 +6,7 @@ profile: reference
 
 # Заполнитель
 
-:badge[sf-placeholder]{variant=outline scheme=on-surface size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-placeholder]{variant=outline scheme=on-surface size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
 
 Заполнитель объясняет пустое состояние: данных нет, поиск ничего не нашёл или
 раздел не заполнен. Для ожидания данных берите
@@ -93,8 +93,13 @@ profile: reference
 |:---|:---|:---|
 | `--sf-placeholder--background-color` | `var(--sf-transparent)` | `background-color` |
 | `--sf-placeholder--color` | `var(--sf-on-surface)` | `color` |
+| `--sf-placeholder--description-color` | `var(--sf-on-surface-variant)` | `color` |
+| `--sf-placeholder--description-height` | `var(--sf-text--height)` | `line-height` |
+| `--sf-placeholder--description-size` | `var(--sf-text--size)` | `font-size` |
 | `--sf-placeholder--gap` | `var(--sf-space-1)` | `gap` |
-| `--sf-placeholder-actions--gap` | `var(--sf-space-1/3)` | `gap` |
+| `--sf-placeholder--title-height` | `var(--sf-heading-4--height)` | `line-height` |
+| `--sf-placeholder--title-size` | `var(--sf-heading-4--size)` | `font-size` |
+| `--sf-placeholder-actions--gap` | `var(--sf-gap--actions)` | `gap` |
 | `--sf-placeholder-content--gap` | `var(--sf-placeholder-right--gap, var(--sf-space-1))` | `gap` |
 | `--sf-placeholder-header--gap` | `var(--sf-placeholder-top--gap, var(--sf-space-1/3))` | `gap` |
 

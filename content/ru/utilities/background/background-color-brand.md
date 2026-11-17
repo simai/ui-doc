@@ -30,7 +30,7 @@ description: "Заливает элемент фирменным цветом с
 | Класс | CSS | Значения |
 |:---|:---|:---|
 | `bg-fb` | `background-color: #2B74E1` | — |
-| `bg-fb-messenger` | `background-color: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%)` | — |
+| `bg-fb-messenger` | `background-color: #e72c83; background-image: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%)` | — |
 | `bg-youtube` | `background-color: #F60D00` | — |
 | `bg-whatsapp` | `background-color: #30B944` | — |
 | `bg-instagram` | `background-color: #d6249f; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)` | — |

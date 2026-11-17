@@ -6,7 +6,7 @@ profile: reference
 
 # Подсказка
 
-:badge[sf-tooltip]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tooltip]{variant=outline scheme=on-surface size=1/2} :badge[1.6.2]{variant=outline scheme=on-surface size=1/2}
 
 Подсказка показывает короткое пояснение к элементу при наведении указателя
 или фокусе с клавиатуры. Не переносите в неё сведения, без которых нельзя
@@ -59,15 +59,12 @@ profile: reference
 
 ### Размер
 
-`sf-tooltip--size-1/3`, `sf-tooltip--size-1/2`, `sf-tooltip--size-1` • [справочник](#классы)
+У подсказки один размер: мелкий текст 12/16 и поля 4 × 8 px. Она короткая и
+не растёт вместе с триггером, поэтому у кнопки, поля и значка любого размера
+она одна и та же. Классы `sf-tooltip--size-*` из прежней разметки ничего не
+меняют, их можно оставить или убрать.
 
-Подсказке нужен один размер: без класса размера она набрана мелким текстом
-12/16 с полями 4 × 8 px. Она короткая и не растёт вместе с триггером, поэтому
-у кнопки, поля и значка любого размера она одна и та же. Ступени
-`sf-tooltip--size-1/2`, `sf-tooltip--size-1`, `sf-tooltip--size-2` и
-`sf-tooltip--size-3` крупнее, они нужны редко.
-
-:::example {id="components/tooltip/sizes" label="Размеры подсказки"}
+:::example {id="components/tooltip/size" label="Размер подсказки"}
 :::
 
 ### Положение стрелки
@@ -132,7 +129,6 @@ profile: reference
 | Блок | `sf-tooltip` |
 | Части | `sf-tooltip-anchor`, `sf-tooltip-content`, `sf-tooltip-shortcut`, `sf-tooltip-supporting-text`, `sf-tooltip-tail`, `sf-tooltip-text`, `sf-tooltip-wrap` |
 | Модификаторы | `sf-tooltip--arrow-bottom-center`, `sf-tooltip--arrow-bottom-inline-end`, `sf-tooltip--arrow-bottom-inline-start`, `sf-tooltip--arrow-bottom-left`, `sf-tooltip--arrow-bottom-right`, `sf-tooltip--arrow-inline-end`, `sf-tooltip--arrow-inline-start`, `sf-tooltip--arrow-left`, `sf-tooltip--arrow-none`, `sf-tooltip--arrow-right`, `sf-tooltip--arrow-top-center`, `sf-tooltip--arrow-top-inline-end`, `sf-tooltip--arrow-top-inline-start`, `sf-tooltip--arrow-top-left`, `sf-tooltip--arrow-top-right`, `sf-tooltip--dark`, `sf-tooltip--light` |
-| Размеры | `sf-tooltip--size-1`, `sf-tooltip--size-1/2`, `sf-tooltip--size-1/3`, `sf-tooltip--size-2`, `sf-tooltip--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -165,34 +161,24 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
+| `--sf-tooltip--tail-gap` | `calc(var(--sf-tooltip-tail-half) * 1.4142 + var(--sf-space-1/4))` | `bottom`, `inset-block-end`, `top`, `inset-block-start`, `inset-inline-end`, `inset-inline-start` |
 | `--sf-tooltip-content--background-color` | не задана; задают модификаторы, например `.sf-tooltip--dark .sf-tooltip-content`: `var(--sf-tooltip-background-color, var(--sf-surface-inverse))` | `background-color` |
 | `--sf-tooltip-content--border-end-end-radius` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-content`: `var(--sf-tooltip-radius, var(--sf-radius--ui))` | `border-end-end-radius` |
 | `--sf-tooltip-content--border-end-start-radius` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-content`: `var(--sf-tooltip-radius, var(--sf-radius--ui))` | `border-end-start-radius` |
 | `--sf-tooltip-content--border-start-end-radius` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-content`: `var(--sf-tooltip-radius, var(--sf-radius--ui))` | `border-start-end-radius` |
 | `--sf-tooltip-content--border-start-start-radius` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-content`: `var(--sf-tooltip-radius, var(--sf-radius--ui))` | `border-start-start-radius` |
-| `--sf-tooltip-content--padding-bottom` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-content`: `var(--sf-tooltip-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-bottom` |
-| `--sf-tooltip-content--padding-inline-end` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-content`: `var(--sf-tooltip-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-end` |
-| `--sf-tooltip-content--padding-inline-start` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-content`: `var(--sf-tooltip-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-start` |
-| `--sf-tooltip-content--padding-top` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-content`: `var(--sf-tooltip-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-top` |
 | `--sf-tooltip-supporting-text--color` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark .sf-tooltip-supporting-text`: `var(--sf-tooltip-color, var(--sf-on-surface-inverse))` | `color` |
 | `--sf-tooltip-supporting-text--font-family` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-supporting-text`: `var(--sf-text--family)` | `font-family` |
-| `--sf-tooltip-supporting-text--font-size` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark.sf-tooltip--size-1 .sf-tooltip-supporting-text`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-tooltip-supporting-text--font-size` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-supporting-text`: `var(--sf-text-size-1/3)` | `font-size` |
 | `--sf-tooltip-supporting-text--font-weight` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-supporting-text`: `var(--sf-font-weight-regular)` | `font-weight` |
-| `--sf-tooltip-supporting-text--line-height` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark.sf-tooltip--size-1 .sf-tooltip-supporting-text`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-tooltip-supporting-text--line-height` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-supporting-text`: `var(--sf-text-height-1/3)` | `line-height` |
 | `--sf-tooltip-tail--background-color` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark .sf-tooltip-tail`: `var(--sf-tooltip-background-color, var(--sf-surface-inverse))` | `background-color` |
-| `--sf-tooltip-tail--color` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark.sf-tooltip--arrow-bottom-left.sf-tooltip--size-1 .sf-tooltip-tail`: `var(--sf-on-surface-inverse)` | `color` |
-| `--sf-tooltip-tail--font-family` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark.sf-tooltip--arrow-bottom-left.sf-tooltip--size-1 .sf-tooltip-tail`: `var(--sf-text--family)` | `font-family` |
-| `--sf-tooltip-tail--font-size` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark.sf-tooltip--arrow-bottom-left.sf-tooltip--size-1 .sf-tooltip-tail`: `var(--sf-text-size-1)` | `font-size` |
-| `--sf-tooltip-tail--font-weight` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark.sf-tooltip--arrow-bottom-left.sf-tooltip--size-1 .sf-tooltip-tail`: `var(--sf-font-weight-regular)` | `font-weight` |
-| `--sf-tooltip-tail--line-height` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark.sf-tooltip--arrow-bottom-left.sf-tooltip--size-1 .sf-tooltip-tail`: `var(--sf-text-height-1)` | `line-height` |
 | `--sf-tooltip-tail-corner-offset` | `var(--sf-b6)` | `inset-inline-start`, `inset-inline-end` |
-| `--sf-tooltip-tail-half` | `calc(var(--sf-tooltip-tail-size) / 2)` | `bottom`, `inset-block-end`, `top`, `inset-block-start`, `inset-inline-end`, `inset-inline-start` |
+| `--sf-tooltip-tail-half` | `calc(var(--sf-tooltip-tail-size) / 2)` | `--sf-tooltip--tail-gap`, `inset-inline-start`, `top`, `inset-block-start`, `bottom`, `inset-block-end`, `inset-inline-end` |
 | `--sf-tooltip-tail-size` | `var(--sf-b2)` | `--sf-tooltip-tail-half`, `width`, `height` |
 | `--sf-tooltip-text--color` | не задана; задают модификаторы, например `.sf-tooltip--dark .sf-tooltip-text`: `var(--sf-tooltip-color, var(--sf-on-surface-inverse))` | `color` |
 | `--sf-tooltip-text--font-family` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-text`: `var(--sf-text--family)` | `font-family` |
-| `--sf-tooltip-text--font-size` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-text`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-tooltip-text--font-weight` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-text`: `var(--sf-font-weight-regular)` | `font-weight` |
-| `--sf-tooltip-text--line-height` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-text`: `var(--sf-text-height-1)` | `line-height` |
 | `--sf-tooltip-wrap--background-color` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-wrap`: `transparent` | `background-color` |
 | `--sf-tooltip-wrap--gap` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-wrap`: `var(--sf-tooltip-gap, var(--sf-space-1/4))` | `gap` |
 

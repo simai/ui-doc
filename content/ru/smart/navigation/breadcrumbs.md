@@ -5,7 +5,7 @@ description: "Показывает путь от корня сайта до те
 
 # Хлебные крошки
 
-:badge[sf-breadcrumbs]{variant=outline scheme=on-surface size=1/2} :badge[1.2.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-breadcrumbs]{variant=outline scheme=on-surface size=1/2} :badge[1.2.7]{variant=outline scheme=on-surface size=1/2}
 
 Хлебные крошки показывают, где в иерархии сайта находится страница: ссылки на
 разделы выше и название текущей страницы в конце; длинный путь сворачивается
@@ -188,13 +188,13 @@ crumbs.onItemClick((item) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-breadcrumbs>`, контракт `smart.breadcrumbs` версии `1.2.4` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-breadcrumbs>`, контракт `smart.breadcrumbs` версии `1.2.7` |
+| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «строка» (сервер пишет `data-sf-skeleton="line"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как навигация; нужна подпись или `aria-label`; с клавиатуры: `Tab`; `Enter` на ссылках; `Enter` или `Пробел` на кнопке «…». |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/breadcrumbs` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-breadcrumbs` |
+| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/breadcrumbs` |
+| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-breadcrumbs` |
 
 ## См. также
 

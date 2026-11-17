@@ -132,7 +132,7 @@ description: "Задаёт начальный, средний и конечны�
 | `--sf-error` | `light-dark(var(--sf-error-40), var(--sf-error-80))` |
 | `--sf-surface-card` | `light-dark(var(--sf-surface-page), var(--sf-surface-2))` |
 | `--sf-surface-popup` | `light-dark(var(--sf-surface-page), var(--sf-surface-4))` |
-| `--sf-surface-popup-nested` | `light-dark(var(--sf-surface-page), var(--sf-surface-5))` |
+| `--sf-surface-popup-nested` | `light-dark(var(--sf-surface-page), var(--sf-surface-4))` |
 | `--sf-surface-inverse` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-90))` |
 | `--sf-primary-5` | `#00102c` |
 | `--sf-primary-10` | `#001a40` |

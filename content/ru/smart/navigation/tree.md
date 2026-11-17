@@ -5,7 +5,7 @@ description: "Показывает иерархию папок или разде
 
 # Дерево
 
-:badge[sf-tree]{variant=outline scheme=on-surface size=1/2} :badge[2.3.1]{variant=outline scheme=on-surface size=1/2} :badge[sf-tree-item]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tree]{variant=outline scheme=on-surface size=1/2} :badge[2.4.0]{variant=outline scheme=on-surface size=1/2} :badge[sf-tree-item]{variant=outline scheme=on-surface size=1/2} :badge[1.3.3]{variant=outline scheme=on-surface size=1/2}
 
 Дерево показывает вложенный список: папки и файлы, разделы сайта, категории
 каталога. Ветви раскрываются и сворачиваются, пункты выбираются мышью и
@@ -360,13 +360,13 @@ tree.items = await fetchFolders();
 
 | | |
 |:---|:---|
-| Тег | `<sf-tree>`, контракт `smart.tree` версии `2.3.1` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-tree>`, контракт `smart.tree` версии `2.4.0` |
+| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «меню» (сервер пишет `data-sf-skeleton="menu"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как дерево; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Пробел`; поиск по первым буквам. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/tree` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-tree` |
+| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/tree` |
+| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-tree` |
 
 ### `<sf-tree-item>`
 
@@ -432,13 +432,13 @@ tree.items = await fetchFolders();
 
 | | |
 |:---|:---|
-| Тег | `<sf-tree-item>`, контракт `smart.tree-item` версии `1.3.1` |
-| Поставка | выпуск Framework `ui-994f9db407fa` |
+| Тег | `<sf-tree-item>`, контракт `smart.tree-item` версии `1.3.3` |
+| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «строка» (сервер пишет `data-sf-skeleton="line"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как пункт дерева; нужна подпись или `aria-label`; с клавиатуры: `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/smart/tree-item` |
-| Правило классов | `simai/ui@994f9db407fa5523feeafd1b8cb859fad34fa9c3:distr/rule/rule.json#name=cl-tree-item` |
+| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/tree-item` |
+| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-tree-item` |
 
 ## См. также
 
