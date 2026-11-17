@@ -55,9 +55,11 @@ profile: reference
 
 ### Размер
 
-`sf-input--size-1/2`, `sf-input--size-1`, `sf-input--size-2` • [справочник](#классы)
+`sf-input--size-1/3`, `sf-input--size-1/2`, `sf-input--size-1`, `sf-input--size-2`, `sf-input--size-3` • [справочник](#классы)
 
-Три ступени — `sf-input--size-1/2`, `sf-input--size-1` и `sf-input--size-2`.
+Пять ступеней — `sf-input--size-1/3`, `sf-input--size-1/2`, `sf-input--size-1`,
+`sf-input--size-2` и `sf-input--size-3`: на компьютере 28, 32, 40, 48 и 56 px,
+как у кнопок тех же ступеней.
 Высота поля совпадает с кнопкой той же ступени; размер меняет подпись, текст,
 значки и подсказку вместе.
 

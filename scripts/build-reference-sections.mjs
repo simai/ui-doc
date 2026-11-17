@@ -85,10 +85,20 @@ const legacyModifiers = (block, present) => {
       if (record.kind === 'value' && item.attribute === 'status' && own(item)) reversed.add(`${block}--${item.to}>${block}--${item.from}`);
     }
   }
+  // A class rename reversed by a later record is history (sf-upgrade's rule):
+  // sf-button--ghost -> sf-button--link (2026-10-09), then link -> ghost (C15,
+  // 2026-11-11). Without it both names counted as former and neither was
+  // listed among the modifiers.
+  const lastMove = new Map();
+  journal.records.forEach((record, index) => {
+    if (record.kind !== 'class') return;
+    for (const item of record.items ?? []) if (item.from && item.to) lastMove.set(`${item.from}>${item.to}`, index);
+  });
+  const reversedLater = (record, item) => (lastMove.get(`${item.to}>${item.from}`) ?? -1) > journal.records.indexOf(record);
   for (const record of journal.records) {
     for (const item of record.items ?? []) {
       if (!item.from || !item.to) continue;
-      if (record.kind === 'class' && item.from.startsWith(`${block}--`)) out.set(item.from, item.to);
+      if (record.kind === 'class' && item.from.startsWith(`${block}--`) && !reversedLater(record, item)) out.set(item.from, item.to);
       if (record.kind === 'value' && item.attribute === 'status' && (!item.component || own(item))) {
         const from = `${block}--${item.from}`;
         const to = `${block}--${item.to}`;

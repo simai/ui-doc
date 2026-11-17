@@ -182,9 +182,13 @@ profile: reference
 
 ### Нажатая
 
-Класс `active` вместе с `aria-pressed="true"` оставляет кнопку-переключатель
-нажатой. Доступное имя при переключении не меняется: состояние сообщает
-`aria-pressed`.
+Кнопка-переключатель сообщает состояние атрибутом `aria-pressed="true"` или
+`"false"`, и её подпись не меняется. Если подпись меняется сама («В избранное» →
+«В избранном»), `aria-pressed` не пишут, а ставят класс `sf-button--pressed`:
+он рисует тот же нажатый вид. И атрибут, и класс — только для переключателя:
+кнопки `outline` или `ghost` в нейтральной схеме `on-surface` (решение C211).
+Залитая, тональная или основная кнопка — действие, а не переключатель.
+Класс `active` — мгновенное нажатие и текущий пункт, не переключатель.
 
 :::example {id="components/buttons/state-active" label="Кнопки-переключатели"}
 :::
@@ -307,7 +311,7 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 |:---|:---|
 | Блок | `sf-button` |
 | Части | `sf-button-shortcut`, `sf-button-spinner`, `sf-button-spinner--overlay`, `sf-button-split`, `sf-button-split--full-width`, `sf-button-state-loading`, `sf-button-text-container` |
-| Модификаторы | `sf-button--danger`, `sf-button--default`, `sf-button--full-width`, `sf-button--height-high`, `sf-button--height-highest`, `sf-button--height-low`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--pressed`, `sf-button--primary`, `sf-button--tonal` |
+| Модификаторы | `sf-button--danger`, `sf-button--default`, `sf-button--full-width`, `sf-button--ghost`, `sf-button--height-high`, `sf-button--height-highest`, `sf-button--height-low`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--pressed`, `sf-button--primary`, `sf-button--tonal` |
 | Размеры | `sf-button--size-1`, `sf-button--size-1/2`, `sf-button--size-1/3`, `sf-button--size-2`, `sf-button--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
