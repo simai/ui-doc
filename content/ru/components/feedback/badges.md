@@ -75,7 +75,7 @@ profile: reference
 
 Отступ текста от края — `--sf-space-1/2`: 12 px на компьютере и 8 px на телефоне, как у всей линейки отступов; плотный `sf-badge--tight` — свой отступ размера.
 
-:::example {id="components/badges/tight" label="Размер"}
+:::example {id="components/badges/tight" label="Плотный бейдж рядом с обычным"}
 :::
 
 ### В строке текста

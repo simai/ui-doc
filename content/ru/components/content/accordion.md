@@ -72,7 +72,7 @@ profile: reference
 обычным. Класс размера задаёт отступы, поэтому свои значения переменных
 отступов ставьте после него.
 
-:::example {id="components/accordion/sizes" label="Размер"}
+:::example {id="components/accordion/sizes" label="Размеры аккордеона"}
 :::
 
 ### Иконка

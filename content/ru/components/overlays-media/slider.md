@@ -164,7 +164,7 @@ swiper?.on('slideChange', () => console.log(swiper.realIndex));
 ```
 
 `bind` возвращает `null`, пока движок Swiper не загружен; скрипт подключает
-слайдер сам, когда он появится. Экземпляр создаёт события `slideChange`,
+слайдер сам, как только движок загрузится. Экземпляр создаёт события `slideChange`,
 `transitionEnd`, `autoplayStart` и `autoplayStop` и даёт методы
 `slideTo(index)`, `slideNext()` и `slidePrev()`.
 

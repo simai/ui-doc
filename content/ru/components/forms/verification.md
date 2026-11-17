@@ -83,7 +83,7 @@ profile: reference
 `data-length` задаёт число ячеек и предел ввода. Без него длина берётся из
 `maxlength` поля, а без обоих — шесть символов.
 
-:::example {id="components/verification/length" label="Длина"}
+:::example {id="components/verification/length" label="Код из четырёх и из шести символов"}
 :::
 
 ## Состояния

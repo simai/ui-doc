@@ -16,7 +16,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="components/tags/overview" label="Теги"}
+:::example {id="components/tags/overview" label="Теги разделов"}
 :::
 
 ## Разметка
@@ -113,7 +113,7 @@ profile: reference
 стоит [кнопка закрытия](/ru/components/actions/close/) размера `1/3`, её
 доступное имя называет удаляемое значение.
 
-:::example {id="components/tags/actions" label="Тег"}
+:::example {id="components/tags/actions" label="Тег со счётчиком и тег с удалением"}
 :::
 
 ### В строке

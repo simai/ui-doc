@@ -20,9 +20,18 @@ profile: reference
 ## Разметка
 
 Минимальную разметку показывает пример выше. Части вложены так:
-`a.sf-download-file` → `sf-download-file-wrap` → `sf-download-file-container`
-с иконкой `sf-icon` и названием `sf-download-file-file-name`, затем размер
-`sf-download-file-file-size`.
+`a.sf-download-file` → `sf-download-file__body` → `sf-download-file__main`
+с иконкой `sf-download-file__icon` и текстом `sf-download-file__text`. В
+тексте — название `sf-download-file__name` и строка `sf-download-file__meta`
+с типом `sf-download-file__type` и размером `sf-download-file__size`.
+
+- Тип и размер в `sf-download-file__meta` видны глазу, но скрыты от
+  программы чтения с экрана (`aria-hidden="true"`). Ей они звучат словами из
+  `sf-download-file__said` внутри названия: «, PDF, 2,4 мегабайта».
+- Части несут и второе имя — `sf-download-file-wrap`,
+  `sf-download-file-container`, `sf-download-file-file-name`,
+  `sf-download-file-file-size`: по ним скрипт находит название и размер.
+  Скрипт сам ставит оба имени, когда собирает строку.
 
 - Готовый файл — ссылка `<a>` с настоящим `href`. Атрибут `download` задаёт
   имя сохраняемого файла.
@@ -120,7 +129,7 @@ profile: reference
 действие, и файл готовит приложение. Недоступная строка события не
 отправляет.
 
-:::example {id="components/download-file/action" label="Кнопка"}
+:::example {id="components/download-file/action" label="Кнопка, по которой приложение готовит файл"}
 :::
 
 ```js

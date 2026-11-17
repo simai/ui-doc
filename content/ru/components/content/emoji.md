@@ -45,7 +45,7 @@ profile: reference
 - Декоративный символ скрывайте: `aria-hidden="true"`.
 - Не сообщайте статус, ошибку или действие только emoji: рядом нужен текст.
 
-:::example {id="components/emoji/semantics" label="Доступность"}
+:::example {id="components/emoji/semantics" label="Смысловой и декоративный emoji"}
 :::
 
 ## JavaScript
