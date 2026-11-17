@@ -47,9 +47,8 @@ description: "Делает элемент прозрачным для мыши �
 `pointer-events-none` наследуется. Чтобы внутри такого блока снова принимал
 указатель один элемент, поставьте ему `pointer-events-auto`.
 
-Классы в таблице выше записаны как `pointer-event-none` и `pointer-event-auto`;
-Loader переводит в них `pointer-events-none` и `pointer-events-auto`, поэтому
-работают оба написания. Пишите `pointer-events-*`, как в CSS.
+Имя класса повторяет свойство CSS: `pointer-events-*`. `pointer-event-none` и
+`pointer-event-auto` — прежние имена; они работают до 2027-01-01.
 
 ## Ограничения
 
