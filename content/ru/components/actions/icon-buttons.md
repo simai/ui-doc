@@ -191,7 +191,7 @@ profile: reference
 Доступное имя из `aria-label` остаётся, `aria-busy="true"` сообщает о работе.
 С нативным `disabled` спиннер окрашен цветом недоступной кнопки; другой цвет
 задаёт `--sf-loader--color`. Вид у [спиннера](/ru/components/feedback/spinner/) один — дуга; при
-уменьшении движения она стоит на месте.
+уменьшении движения вместо неё всё кольцо окрашено на 32 %.
 
 :::example {id="components/icon-buttons/state-loading" label="Загрузка"}
 :::

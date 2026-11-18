@@ -335,11 +335,7 @@ exportButton.addEventListener('sf-button-select', (event) => download(event.deta
 :::example {id="smart-components/buttons/loading-sizes" label="Загрузка по размерам" preview=inline}
 :::
 
-Вид спиннера один на всю страницу; как его выбрать —
-[Спиннер](/ru/smart/feedback/spinner/#вид-страницы).
-
-:::example {id="smart-components/buttons/loading-looks" label="Виды спиннера" preview=inline}
-:::
+Вид у [спиннера](/ru/smart/feedback/spinner/) один — дуга.
 
 ### Включённая и выключенная
 
