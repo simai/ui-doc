@@ -61,6 +61,12 @@ foreach ($families as $family) {
 
     $page = $candidates[0];
     $markdown = (string) file_get_contents($page);
+    // A page whose classes the pair retires (C187 (1)) is a short note on
+    // their going and shows no example; the family still resolves to it.
+    if (preg_match('/^description:\s*"Уходящие классы:/mu', $markdown) === 1) {
+        $resolved[$family] = ['kind' => 'catalog', 'page' => str_replace($root . '/', '', $page)];
+        continue;
+    }
     if (! preg_match('/^:::example\s*\{[^}\n]*\bid=["\']([^"\']+)["\']/mu', $markdown, $match)) {
         $blockers[] = ['code' => 'utility_example_missing', 'family' => $family, 'page' => $page];
         continue;
