@@ -152,7 +152,7 @@ whenLoader(() => SF.Loader.ready('ProgressScale', (ProgressScale) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-progress-scale-fill-color` | Заполненные сегменты; статус задаёт свой цвет, если эта переменная не задана. | `var(--sf-on-surface-variant)`; зависит от статуса |
+| `--sf-progress-scale-fill-color` | Заполненные сегменты: без статуса — основной цвет темы, у статуса свой цвет, если эта переменная не задана. | `var(--sf-primary)`; зависит от статуса |
 | `--sf-progress-scale-track-color` | Ещё не заполненные сегменты. | `var(--sf-surface-container)` |
 | `--sf-progress-scale-segment-gap` | Расстояние между десятью сегментами. | `var(--sf-a2)` |
 | `--sf-progress-scale-radius` | Углы каждого сегмента. | `var(--sf-radius-1/3)` |

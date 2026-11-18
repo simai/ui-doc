@@ -170,7 +170,7 @@ whenLoader(() => SF.Loader.ready('ProgressBar', (ProgressBar) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-progress-bar-fill-color` | Заполненная часть; статус задаёт свой цвет, если эта переменная не задана. | `var(--sf-on-surface-variant)`; зависит от статуса |
+| `--sf-progress-bar-fill-color` | Заполненная часть: без статуса — основной цвет темы, у статуса свой цвет, если эта переменная не задана. | `var(--sf-primary)`; зависит от статуса |
 | `--sf-progress-bar-track-color` | Дорожка под заполненной частью. | `var(--sf-surface-container)` |
 | `--sf-progress-bar-height` | Толщина дорожки. | `var(--sf-a8)`; зависит от размера |
 | `--sf-progress-bar-radius` | Углы дорожки и заполненной части. | `var(--sf-radius-circle)` |

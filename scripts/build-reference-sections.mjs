@@ -619,19 +619,30 @@ const ru = (text) => {
   untranslated.add(text);
   return text;
 };
+// What the pair draws where its contract says otherwise: a default or a summary
+// the release's public-variables contract gets wrong is written here, keyed by
+// variable name, until the contract is fixed (Framework DF-1). The page shows
+// what a reader sees, not what the contract claims.
+const publicOverrides = (() => {
+  const path = join(root, 'config/public-variable-overrides.json');
+  return existsSync(path) ? readJson(path).variables ?? {} : {};
+})();
 const VARIES = {appearance: 'вида', scheme: 'схемы', status: 'статуса', size: 'размера'};
 
 const publicVariablesSection = (entry) => {
-  const example = entry.variables.find((item) => item.role === 'radius') ?? entry.variables[0];
+  const picked = entry.variables.find((item) => item.role === 'radius') ?? entry.variables[0];
+  const example = {...picked, ...(publicOverrides[picked.name] ?? {})};
   return [
     `Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (${code(entry.selector)}) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.`,
     '',
     '| Переменная | Что задаёт | По умолчанию |',
     '|:---|:---|:---|',
-    ...entry.variables.map((item) => {
+    ...entry.variables.map((contractItem) => {
+      const item = {...contractItem, ...(publicOverrides[contractItem.name] ?? {})};
       const varies = (item.varies_with ?? []).map((name) => VARIES[name] ?? name);
       const fallback = `${code(item.default)}${varies.length ? `; зависит от ${varies.join(', ')}` : ''}`;
-      return `| ${code(item.name)} | ${ru(item.summary)} | ${fallback} |`;
+      const summary = publicOverrides[contractItem.name]?.summary_ru ?? ru(item.summary);
+      return `| ${code(item.name)} | ${summary} | ${fallback} |`;
     }),
     '',
     '```css',

@@ -168,7 +168,7 @@ whenLoader(() => SF.Loader.ready('Spinner', (Spinner) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-spinner-color` | Дуга, точки или комета: текущий цвет текста, если не задано. | `currentColor` |
+| `--sf-spinner-color` | Дуга: у отдельного спиннера — тихий цвет места, внутри кнопки или другого элемента — его цвет, если не задано. | `var(--sf-on-surface-variant)` |
 | `--sf-spinner-track-color` | Кольцо под дугой — цвет и прозрачность вместе: своей прозрачности у кольца нет. | `color-mix(in srgb, currentColor 16%, transparent)` |
 | `--sf-spinner-size` | Рамка рисунка; по умолчанию — значок кнопки того же размера. | `var(--sf-text-height-1)`; зависит от размера |
 | `--sf-spinner-stroke-width` | Толщина кольца в единицах сетки значка из 24 единиц. | `2` |
@@ -177,7 +177,7 @@ whenLoader(() => SF.Loader.ready('Spinner', (Spinner) => {
 
 ```css
 .sf-loader-container {
-  --sf-spinner-color: currentColor;
+  --sf-spinner-color: var(--sf-on-surface-variant);
 }
 ```
 
