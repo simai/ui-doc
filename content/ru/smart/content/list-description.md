@@ -29,8 +29,8 @@ description: "Факты парами «подпись — значение»: �
 <sf-list-description label="Сведения о сайте">
   <script type="application/json" data-sf-settings>
     {"items": [
-      {"label": "Адрес", "value": "demo-static.test", "href": "https://demo-static.test/"},
-      {"label": "Корень сайта", "value": "/var/www/demo-static/public", "mono": true, "copy": true},
+      {"label": "Адрес", "value": "posuda.ru", "href": "https://posuda.ru/"},
+      {"label": "Корень сайта", "value": "/var/www/posuda/public", "mono": true, "copy": true},
       {"label": "Сертификат", "value": "Действует до 12 декабря", "status": "success",
        "hint": "Let's Encrypt, продлевается сам"}
     ]}

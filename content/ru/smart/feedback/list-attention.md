@@ -33,10 +33,10 @@ description: "Список проблем, которым нужен челов�
 <sf-list-attention label="Здоровье сервера">
   <script type="application/json" data-sf-settings>
     {"items": [
-      {"id": "down", "status": "error", "title": "demo-php.test не отвечает",
+      {"id": "down", "status": "error", "title": "shop.ru не отвечает",
        "text": "12 минут, код 502", "action": {"label": "Перезапустить", "event": "restart"}},
       {"id": "cert", "status": "warning", "title": "Сертификат истекает через 6 дней",
-       "action": {"label": "Продлить", "href": "/sites/demo-static/ssl/"}}
+       "action": {"label": "Продлить", "href": "/sites/posuda/ssl/"}}
     ]}
   </script>
 </sf-list-attention>

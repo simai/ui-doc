@@ -67,30 +67,14 @@ description: "Рисует поверхность короткой подска�
 
 ## Поведение
 
-### Подсказка у триггера
+### Подсказка у элемента
 
-Связка `data-tooltip` с `<sf-tooltip>` не работает: контроллер подсказки
-показывает и располагает сам элемент `<sf-tooltip>`, у которого нет
-собственного блока, и поверхность остаётся под триггером шириной в него.
-Для подсказки при наведении и фокусе пишите поверхность классами
-`sf-tooltip`, как на странице [Подсказка](/ru/components/overlays-media/tooltip/).
-
-```html
-<span class="sf-tooltip-anchor">
-  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1"
-    data-tooltip="save-tooltip" aria-describedby="save-tooltip">
-    <span class="sf-button-text-container">Сохранить</span>
-  </button>
-  <span id="save-tooltip" class="sf-tooltip sf-tooltip--dark sf-tooltip--size-1 sf-tooltip--arrow-bottom-center" hidden>
-    <span class="sf-tooltip-content flex flex-col">
-      <span class="sf-tooltip-wrap flex flex-col">
-        <span class="sf-tooltip-text">Сохранить изменения</span>
-      </span>
-      <span class="sf-tooltip-tail" aria-hidden="true"></span>
-    </span>
-  </span>
-</span>
-```
+Подсказку при наведении и фокусе показывают сами элементы.
+[Кнопка-иконка](/ru/smart/actions/icon-buttons/#атрибуты) показывает своё имя
+подсказкой Framework без отдельной разметки (атрибут `tooltip`). Для своей
+подсказки у любого триггера пишите поверхность классами `sf-tooltip`, как на
+странице [Подсказка](/ru/components/overlays-media/tooltip/), и связывайте её
+с элементом через `data-tooltip` и `aria-describedby`.
 
 ## Доступность
 

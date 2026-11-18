@@ -31,11 +31,11 @@ description: "Кратко сообщает результат действия 
 Сообщению нужен заголовок; пояснение, иконка и действие добавляются по задаче:
 
 ```html
-<sf-toast status="success" icon="check_circle" title="Изменения сохранены"
+<sf-toast status="success" icon="check_circle" heading="Изменения сохранены"
   supporting-text="Новая версия доступна участникам проекта."></sf-toast>
 ```
 
-`title` — короткий заголовок результата, `supporting-text` — пояснение
+`heading` — короткий заголовок результата, `supporting-text` — пояснение
 обычным размером текста, `icon` — декоративная иконка.
 
 ## Варианты
@@ -61,7 +61,7 @@ description: "Кратко сообщает результат действия 
 должен успеть его выполнить.
 
 ```html
-<sf-toast status="success" title="Ссылка скопирована" duration="5000" role="status"></sf-toast>
+<sf-toast status="success" heading="Ссылка скопирована" duration="5000" role="status"></sf-toast>
 ```
 
 ### Действие и закрытие
