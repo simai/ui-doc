@@ -1,0 +1,13 @@
+<div class="flex radius-2 border border-outline-variant overflow-hidden" style="block-size: 14rem">
+  <nav class="flex flex-col gap-1 p-2 bg-surface-container flex-none" style="inline-size: var(--demo-fold-width, 14rem)" aria-label="Разделы">
+    <span class="text-1/2 color-on-surface-variant">Разделы</span>
+    <a class="sf-link" href="#resizer-fold-orders">Заказы</a>
+    <a class="sf-link" href="#resizer-fold-clients">Клиенты</a>
+    <a class="sf-link" href="#resizer-fold-catalog">Каталог товаров и услуг</a>
+    <sf-resizer id="resizer-fold" min="10rem" max="22rem" property="--demo-fold-width" collapsible label="Ширина меню"></sf-resizer>
+  </nav>
+  <main class="flex-1 p-3 flex flex-col gap-1">
+    <span class="text-1">Протяните край меню влево за минимум или нажмите на нём Enter: меню свернётся до края. Кнопка «Показать» или Enter возвращает его.</span>
+    <output class="text-1/2 color-on-surface-variant" id="resizer-fold-log" aria-live="polite"></output>
+  </main>
+</div>
