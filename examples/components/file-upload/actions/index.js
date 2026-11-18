@@ -7,7 +7,7 @@ ready(() => {
   const output = document.querySelector('output');
   SF.FileUpload.setItems(upload, [
     {name: 'presentation.pdf', fileSize: '2,4 МБ', progress: 65, state: 'process'},
-    {name: 'report.pdf', fileSize: '1,7 МБ', state: 'error', errorMessage: 'Повторить'},
+    {name: 'report.pdf', fileSize: '1,7 МБ', state: 'error', errorMessage: 'сервер не ответил'},
   ]);
   upload.addEventListener('sf-file-upload:retry', (event) => {
     output.value = `Повтор передачи: ${event.detail.item.name}`;
