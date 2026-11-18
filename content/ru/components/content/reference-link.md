@@ -96,8 +96,7 @@ profile: reference
 `sf-reference-link--gone` • [справочник](#классы)
 
 Если запись удалена или к ней нет доступа, ссылки нет: корень получает
-`sf-reference-link--gone` с `sf-reference-link--missing` или
-`--forbidden`, иконка — `link_off`, а после имени в
+`sf-reference-link--gone`, иконка — `link_off`, а после имени в
 `sf-reference-link__reason` стоит причина («удалена», «нет доступа»). Слова и
 иконка — приглушённого цвета.
 
