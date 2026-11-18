@@ -43,8 +43,8 @@ profile: reference
 `sf-tag--default`, `sf-tag--checkbox`, `sf-tag--icon` • [справочник](#классы)
 
 Модификатор содержимого добавляет маркер перед подписью: `sf-tag--default` —
-только текст; `sf-tag--checkbox` — отметка `sf-tag-check` для выбираемого
-фильтра; `sf-tag--icon` — иконка `sf-icon`; `sf-tag--color` — цветная метка
+только текст; `sf-tag--checkbox` — выбираемый фильтр: пока
+он не выбран, маркера нет, выбранный получает галочку `sf-tag-check`; `sf-tag--icon` — иконка `sf-icon`; `sf-tag--color` — цветная метка
 `sf-tag-color-icon` (цвет задаёт утилита фона); `sf-tag--avatar` — аватар
 размера `1/4`.
 
@@ -147,7 +147,8 @@ profile: reference
 ### Выбран
 
 Класс `active` вместе с `aria-pressed="true"` отмечает выбранный фильтр:
-отметка `sf-tag-check` заполняется. Состояние сообщает `aria-pressed`, а не
+перед подписью встаёт галочка — значок `sf-icon sf-tag-icon sf-tag-check`.
+У невыбранного фильтра галочки нет, и места под неё подпись не держит. Состояние сообщает `aria-pressed`, а не
 класс.
 
 :::example {id="components/tags/state-active" label="Выбран"}
