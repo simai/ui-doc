@@ -48,7 +48,10 @@ foreach ($pages as $path) {
     }
     // Badges are no longer asked for: the reference page standard carries no
     // badges, and a page outside it (core link styles) has no family to badge.
-    if (!preg_match('/^:::example\s*\{[^}\n]*\bid=["\'][^"\']+["\'][^}\n]*\}\s*$/mu', $markdown, $match, PREG_OFFSET_CAPTURE)) {
+    // A page whose classes the pair retires (C187 (1)) is a short note on
+    // their going: there is nothing a reader should write, so nothing to show.
+    $retiringNote = preg_match('/^description:\s*"Уходящие классы:/mu', $markdown) === 1;
+    if (!$retiringNote && !preg_match('/^:::example\s*\{[^}\n]*\bid=["\'][^"\']+["\'][^}\n]*\}\s*$/mu', $markdown, $match, PREG_OFFSET_CAPTURE)) {
         $blockers[] = ['code' => 'reusable_example_missing', 'path' => $relative];
         continue;
     }
