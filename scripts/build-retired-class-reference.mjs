@@ -41,42 +41,58 @@ try {
   process.exit(1);
 }
 
-const code = (value) => `\`${value}\``;
-const instead = (to) => {
+// The list is one plain text block, a line per name: a table of nearly a
+// thousand rows put about eight thousand elements on the page, and every
+// part of the page that measures itself then took seconds per pass (the page
+// did not finish loading in a minute). One block is one element and finds
+// with the browser's search as well.
+const plain = (to) => {
   if (to === null || to === undefined) return 'без замены';
-  if (typeof to === 'object') return to.to ? code(to.to) : 'без замены';
-  return to.split(' ').map(code).join(' ');
+  if (typeof to === 'object') return to.to ? to.to : 'без замены';
+  return to;
 };
 
 const rows = [];
+const dates = new Set();
 for (const record of table.records) {
   const until = record.remove_after ?? '';
   const decision = record.decision ?? '';
+  dates.add(until);
   for (const [name, to] of Object.entries(record.names ?? {})) {
-    rows.push([code(name), instead(to), until, decision]);
+    rows.push([name, plain(to), until, decision]);
   }
   for (const pattern of record.patterns ?? []) {
-    const to = /\$\d/u.test(pattern.to ?? '') ? `${code(pattern.to.replace(/\$\d/gu, '…'))} той же ступени` : instead(pattern.to);
-    rows.push([`${code(pattern.from)} (семейство)`, to, until, decision]);
+    const to = /\$\d/u.test(pattern.to ?? '') ? `${pattern.to.replace(/\$\d/gu, '…')} (той же ступени)` : plain(pattern.to);
+    rows.push([`${pattern.from} (семейство)`, to, until, decision]);
   }
   for (const [sheet, to] of Object.entries(record.sheets ?? {})) {
-    rows.push([`все классы модуля ${code(sheet)}`, instead(to), until, decision]);
+    rows.push([`все классы модуля ${sheet}`, plain(to), until, decision]);
   }
 }
+const oneDate = dates.size === 1 ? [...dates][0] : null;
+// Names line up at the length most of them fit; a longer one pushes its own arrow.
+const lengths = rows.map(([name]) => name.length).sort((x, y) => x - y);
+const width = lengths[Math.floor(lengths.length * 0.95)] ?? 0;
+const line = ([name, to, until, decision]) => {
+  const tail = oneDate ? decision : `${until}, ${decision}`;
+  return `${name.padEnd(width)}  →  ${to}  (${tail})`;
+};
 
 const section = [
   heading,
   '',
-  'Классы, которые выпуск убирает. Прежний класс рисует то же, что рисовал, до даты в третьем столбце,'
+  'Классы, которые выпуск убирает. Прежний класс рисует то же, что рисовал,'
+    + (oneDate ? ` до ${oneDate},` : ' до даты в скобках,')
     + ' а первое использование каждого имени на странице Loader записывает в `SF.deprecations`.'
-    + ' В новой разметке пишите имя из второго столбца; «без замены» значит, что задача ушла из утилит'
-    + ' (страница утилиты говорит, чем её решать). Под `md:`, `hover:` и другими условиями замена та же.'
+    + ' В строке: прежнее имя, после стрелки — что писать в новой разметке, в скобках — решение.'
+    + ' «Без замены» значит, что задача ушла из утилит (страница утилиты говорит, чем её решать).'
+    + ' Под `md:`, `hover:` и другими условиями замена та же.'
     + ' Страницы утилит и компонентов прежних имён не описывают.'
-    + ' Таблица собрана из таблицы прежних классов выпуска (`node scripts/build-retired-class-reference.mjs`).',
+    + ' Список собран из таблицы прежних классов выпуска (`node scripts/build-retired-class-reference.mjs`).',
   '',
-  '| Прежнее имя | Что писать | Работает до | Решение |',
-  '| :--- | :--- | :--- | :--- |',
-  ...rows.map((row) => `| ${row.join(' | ')} |`),
+  '```text',
+  ...rows.map(line),
+  '```',
   '',
 ].join('\n');
 

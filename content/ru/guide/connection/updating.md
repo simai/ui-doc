@@ -625,997 +625,997 @@ Framework (см. [Подтверждение изменения](/ru/smart/actio
 
 ## Прежние имена классов
 
-Классы, которые выпуск убирает. Прежний класс рисует то же, что рисовал, до даты в третьем столбце, а первое использование каждого имени на странице Loader записывает в `SF.deprecations`. В новой разметке пишите имя из второго столбца; «без замены» значит, что задача ушла из утилит (страница утилиты говорит, чем её решать). Под `md:`, `hover:` и другими условиями замена та же. Страницы утилит и компонентов прежних имён не описывают. Таблица собрана из таблицы прежних классов выпуска (`node scripts/build-retired-class-reference.mjs`).
+Классы, которые выпуск убирает. Прежний класс рисует то же, что рисовал, до 2027-01-01, а первое использование каждого имени на странице Loader записывает в `SF.deprecations`. В строке: прежнее имя, после стрелки — что писать в новой разметке, в скобках — решение. «Без замены» значит, что задача ушла из утилит (страница утилиты говорит, чем её решать). Под `md:`, `hover:` и другими условиями замена та же. Страницы утилит и компонентов прежних имён не описывают. Список собран из таблицы прежних классов выпуска (`node scripts/build-retired-class-reference.mjs`).
 
-| Прежнее имя | Что писать | Работает до | Решение |
-| :--- | :--- | :--- | :--- |
-| `table-sm` | `data-sf-density="compact"` | 2027-01-01 | C185 (2) |
-| `table-small` | `data-sf-density="compact"` | 2027-01-01 | C185 (2) |
-| `wrap-none` | `text-nowrap` | 2027-01-01 | C186 (8) |
-| `text-break-word` | `text-break` | 2027-01-01 | C186 (8) |
-| `text-break-all` | `text-break` | 2027-01-01 | C186 (8) |
-| `t-ellipsis` | `truncate` | 2027-01-01 | C186 (8) |
-| `t-clip` | `truncate` | 2027-01-01 | C186 (8) |
-| `max-w-prose` | `measure` | 2027-01-01 | C212 (3) |
-| `regular` | `weight-regular` | 2027-01-01 | C212 (3) |
-| `weight-4` | `weight-regular` | 2027-01-01 | C212 (3) |
-| `weight-5` | `weight-medium` | 2027-01-01 | C212 (3) |
-| `bold` | `weight-bold` | 2027-01-01 | C212 (3) |
-| `weight-7` | `weight-bold` | 2027-01-01 | C212 (3) |
-| `weight-1` | `weight-regular` | 2027-01-01 | C212 (3) |
-| `weight-2` | `weight-regular` | 2027-01-01 | C212 (3) |
-| `weight-3` | `weight-regular` | 2027-01-01 | C212 (3) |
-| `lighter` | `weight-regular` | 2027-01-01 | C212 (3) |
-| `weight-6` | `weight-medium` | 2027-01-01 | C212 (3) |
-| `weight-8` | `weight-bold` | 2027-01-01 | C212 (3) |
-| `weight-9` | `weight-bold` | 2027-01-01 | C212 (3) |
-| `bolder` | `weight-bold` | 2027-01-01 | C212 (3) |
-| `line-tight` | `line-N` | 2027-01-01 | C212 (3) |
-| `line-snug` | `line-N` | 2027-01-01 | C212 (3) |
-| `line-normal` | `line-N` | 2027-01-01 | C212 (3) |
-| `line-relaxed` | `line-N` | 2027-01-01 | C212 (3) |
-| `line-loose` | `line-N` | 2027-01-01 | C212 (3) |
-| `line-none` | `line-N` | 2027-01-01 | C212 (3) |
-| все классы модуля `margin-ext` | без замены | 2027-01-01 | C187 (2) |
-| все классы модуля `padding-ext` | без замены | 2027-01-01 | C187 (2) |
-| все классы модуля `scroll-margin-ext` | без замены | 2027-01-01 | C187 (2) |
-| все классы модуля `scroll-padding-ext` | без замены | 2027-01-01 | C187 (2) |
-| все классы модуля `background-size-ext` | без замены | 2027-01-01 | C187 (2) |
-| все классы модуля `transform-translate-ext` | без замены | 2027-01-01 | C187 (2) |
-| `w-1/1` | `w-full` | 2027-01-01 | C212 (4) |
-| `w-10/12` | `w-5/6` | 2027-01-01 | C212 (4) |
-| `w-2/12` | `w-1/6` | 2027-01-01 | C212 (4) |
-| `w-2/4` | `w-1/2` | 2027-01-01 | C212 (4) |
-| `w-2/6` | `w-1/3` | 2027-01-01 | C212 (4) |
-| `w-3/12` | `w-1/4` | 2027-01-01 | C212 (4) |
-| `w-3/6` | `w-1/2` | 2027-01-01 | C212 (4) |
-| `w-4/12` | `w-1/3` | 2027-01-01 | C212 (4) |
-| `w-4/6` | `w-2/3` | 2027-01-01 | C212 (4) |
-| `w-6/12` | `w-1/2` | 2027-01-01 | C212 (4) |
-| `w-8/12` | `w-2/3` | 2027-01-01 | C212 (4) |
-| `w-9/12` | `w-3/4` | 2027-01-01 | C212 (4) |
-| `basis-1/1` | `basis-full` | 2027-01-01 | C212 (4) |
-| `basis-10/12` | `basis-5/6` | 2027-01-01 | C212 (4) |
-| `basis-2/12` | `basis-1/6` | 2027-01-01 | C212 (4) |
-| `basis-2/4` | `basis-1/2` | 2027-01-01 | C212 (4) |
-| `basis-2/6` | `basis-1/3` | 2027-01-01 | C212 (4) |
-| `basis-3/12` | `basis-1/4` | 2027-01-01 | C212 (4) |
-| `basis-3/6` | `basis-1/2` | 2027-01-01 | C212 (4) |
-| `basis-4/12` | `basis-1/3` | 2027-01-01 | C212 (4) |
-| `basis-4/6` | `basis-2/3` | 2027-01-01 | C212 (4) |
-| `basis-6/12` | `basis-1/2` | 2027-01-01 | C212 (4) |
-| `basis-8/12` | `basis-2/3` | 2027-01-01 | C212 (4) |
-| `basis-9/12` | `basis-3/4` | 2027-01-01 | C212 (4) |
-| `h-2/4` | `h-1/2` | 2027-01-01 | C212 (4) |
-| `h-2/6` | `h-1/3` | 2027-01-01 | C212 (4) |
-| `h-3/6` | `h-1/2` | 2027-01-01 | C212 (4) |
-| `h-4/6` | `h-2/3` | 2027-01-01 | C212 (4) |
-| `h-screen-2/4` | `h-screen-1/2` | 2027-01-01 | C212 (4) |
-| `top-10/12` | `top-5/6` | 2027-01-01 | C212 (4) |
-| `top-2/12` | `top-1/6` | 2027-01-01 | C212 (4) |
-| `top-2/4` | `top-1/2` | 2027-01-01 | C212 (4) |
-| `top-2/6` | `top-1/3` | 2027-01-01 | C212 (4) |
-| `top-3/12` | `top-1/4` | 2027-01-01 | C212 (4) |
-| `top-3/6` | `top-1/2` | 2027-01-01 | C212 (4) |
-| `top-4/12` | `top-1/3` | 2027-01-01 | C212 (4) |
-| `top-4/6` | `top-2/3` | 2027-01-01 | C212 (4) |
-| `top-6/12` | `top-1/2` | 2027-01-01 | C212 (4) |
-| `top-8/12` | `top-2/3` | 2027-01-01 | C212 (4) |
-| `top-9/12` | `top-3/4` | 2027-01-01 | C212 (4) |
-| `bottom-10/12` | `bottom-5/6` | 2027-01-01 | C212 (4) |
-| `bottom-2/12` | `bottom-1/6` | 2027-01-01 | C212 (4) |
-| `bottom-2/4` | `bottom-1/2` | 2027-01-01 | C212 (4) |
-| `bottom-2/6` | `bottom-1/3` | 2027-01-01 | C212 (4) |
-| `bottom-3/12` | `bottom-1/4` | 2027-01-01 | C212 (4) |
-| `bottom-3/6` | `bottom-1/2` | 2027-01-01 | C212 (4) |
-| `bottom-4/12` | `bottom-1/3` | 2027-01-01 | C212 (4) |
-| `bottom-4/6` | `bottom-2/3` | 2027-01-01 | C212 (4) |
-| `bottom-6/12` | `bottom-1/2` | 2027-01-01 | C212 (4) |
-| `bottom-8/12` | `bottom-2/3` | 2027-01-01 | C212 (4) |
-| `bottom-9/12` | `bottom-3/4` | 2027-01-01 | C212 (4) |
-| `inline-start-10/12` | `inline-start-5/6` | 2027-01-01 | C212 (4) |
-| `inline-start-2/12` | `inline-start-1/6` | 2027-01-01 | C212 (4) |
-| `inline-start-2/4` | `inline-start-1/2` | 2027-01-01 | C212 (4) |
-| `inline-start-2/6` | `inline-start-1/3` | 2027-01-01 | C212 (4) |
-| `inline-start-3/12` | `inline-start-1/4` | 2027-01-01 | C212 (4) |
-| `inline-start-3/6` | `inline-start-1/2` | 2027-01-01 | C212 (4) |
-| `inline-start-4/12` | `inline-start-1/3` | 2027-01-01 | C212 (4) |
-| `inline-start-4/6` | `inline-start-2/3` | 2027-01-01 | C212 (4) |
-| `inline-start-6/12` | `inline-start-1/2` | 2027-01-01 | C212 (4) |
-| `inline-start-8/12` | `inline-start-2/3` | 2027-01-01 | C212 (4) |
-| `inline-start-9/12` | `inline-start-3/4` | 2027-01-01 | C212 (4) |
-| `inline-end-10/12` | `inline-end-5/6` | 2027-01-01 | C212 (4) |
-| `inline-end-2/12` | `inline-end-1/6` | 2027-01-01 | C212 (4) |
-| `inline-end-2/4` | `inline-end-1/2` | 2027-01-01 | C212 (4) |
-| `inline-end-2/6` | `inline-end-1/3` | 2027-01-01 | C212 (4) |
-| `inline-end-3/12` | `inline-end-1/4` | 2027-01-01 | C212 (4) |
-| `inline-end-3/6` | `inline-end-1/2` | 2027-01-01 | C212 (4) |
-| `inline-end-4/12` | `inline-end-1/3` | 2027-01-01 | C212 (4) |
-| `inline-end-4/6` | `inline-end-2/3` | 2027-01-01 | C212 (4) |
-| `inline-end-6/12` | `inline-end-1/2` | 2027-01-01 | C212 (4) |
-| `inline-end-8/12` | `inline-end-2/3` | 2027-01-01 | C212 (4) |
-| `inline-end-9/12` | `inline-end-3/4` | 2027-01-01 | C212 (4) |
-| `g-0` | `gap-0` | 2027-01-01 | C212 (4) |
-| `g-1` | `gap-1` | 2027-01-01 | C212 (4) |
-| `g-1/2` | `gap-1/2` | 2027-01-01 | C212 (4) |
-| `g-1/3` | `gap-1/3` | 2027-01-01 | C212 (4) |
-| `g-1/4` | `gap-1/4` | 2027-01-01 | C212 (4) |
-| `g-2` | `gap-2` | 2027-01-01 | C212 (4) |
-| `g-3` | `gap-3` | 2027-01-01 | C212 (4) |
-| `g-4` | `gap-4` | 2027-01-01 | C212 (4) |
-| `g-5` | `gap-5` | 2027-01-01 | C212 (4) |
-| `g-6` | `gap-6` | 2027-01-01 | C212 (4) |
-| `g-7` | `gap-7` | 2027-01-01 | C212 (4) |
-| `g-8` | `gap-8` | 2027-01-01 | C212 (4) |
-| `g-x-0` | `gap-x-0` | 2027-01-01 | C212 (4) |
-| `g-x-1` | `gap-x-1` | 2027-01-01 | C212 (4) |
-| `g-x-1/2` | `gap-x-1/2` | 2027-01-01 | C212 (4) |
-| `g-x-1/3` | `gap-x-1/3` | 2027-01-01 | C212 (4) |
-| `g-x-1/4` | `gap-x-1/4` | 2027-01-01 | C212 (4) |
-| `g-x-2` | `gap-x-2` | 2027-01-01 | C212 (4) |
-| `g-x-3` | `gap-x-3` | 2027-01-01 | C212 (4) |
-| `g-x-4` | `gap-x-4` | 2027-01-01 | C212 (4) |
-| `g-x-5` | `gap-x-5` | 2027-01-01 | C212 (4) |
-| `g-x-6` | `gap-x-6` | 2027-01-01 | C212 (4) |
-| `g-x-7` | `gap-x-7` | 2027-01-01 | C212 (4) |
-| `g-x-8` | `gap-x-8` | 2027-01-01 | C212 (4) |
-| `g-y-0` | `gap-y-0` | 2027-01-01 | C212 (4) |
-| `g-y-1` | `gap-y-1` | 2027-01-01 | C212 (4) |
-| `g-y-1/2` | `gap-y-1/2` | 2027-01-01 | C212 (4) |
-| `g-y-1/3` | `gap-y-1/3` | 2027-01-01 | C212 (4) |
-| `g-y-1/4` | `gap-y-1/4` | 2027-01-01 | C212 (4) |
-| `g-y-2` | `gap-y-2` | 2027-01-01 | C212 (4) |
-| `g-y-3` | `gap-y-3` | 2027-01-01 | C212 (4) |
-| `g-y-4` | `gap-y-4` | 2027-01-01 | C212 (4) |
-| `g-y-5` | `gap-y-5` | 2027-01-01 | C212 (4) |
-| `g-y-6` | `gap-y-6` | 2027-01-01 | C212 (4) |
-| `g-y-7` | `gap-y-7` | 2027-01-01 | C212 (4) |
-| `g-y-8` | `gap-y-8` | 2027-01-01 | C212 (4) |
-| `w-20` | `w-1/5` | 2027-01-01 | C212 (4) |
-| `w-25` | `w-1/4` | 2027-01-01 | C212 (4) |
-| `w-40` | `w-2/5` | 2027-01-01 | C212 (4) |
-| `w-50` | `w-1/2` | 2027-01-01 | C212 (4) |
-| `w-60` | `w-3/5` | 2027-01-01 | C212 (4) |
-| `w-75` | `w-3/4` | 2027-01-01 | C212 (4) |
-| `w-80` | `w-4/5` | 2027-01-01 | C212 (4) |
-| `basis-20` | `basis-1/5` | 2027-01-01 | C212 (4) |
-| `basis-25` | `basis-1/4` | 2027-01-01 | C212 (4) |
-| `basis-40` | `basis-2/5` | 2027-01-01 | C212 (4) |
-| `basis-50` | `basis-1/2` | 2027-01-01 | C212 (4) |
-| `basis-60` | `basis-3/5` | 2027-01-01 | C212 (4) |
-| `basis-75` | `basis-3/4` | 2027-01-01 | C212 (4) |
-| `basis-80` | `basis-4/5` | 2027-01-01 | C212 (4) |
-| `basis-100` | `basis-full` | 2027-01-01 | C212 (4) |
-| `h-content-min` | `h-min` | 2027-01-01 | C212 (4) |
-| `h-content-max` | `h-max` | 2027-01-01 | C212 (4) |
-| `col-gap-*` (семейство) | `gap-x-…` той же ступени | 2027-01-01 | C212 (4) |
-| `row-gap-*` (семейство) | `gap-y-…` той же ступени | 2027-01-01 | C212 (4) |
-| `w-1` | `w-1/12` | 2027-01-01 | C212 (4) |
-| `w-2` | `w-1/12` | 2027-01-01 | C212 (4) |
-| `w-3` | `w-1/12` | 2027-01-01 | C212 (4) |
-| `w-4` | `w-1/12` | 2027-01-01 | C212 (4) |
-| `w-5` | `w-1/12` | 2027-01-01 | C212 (4) |
-| `w-6` | `w-1/12` | 2027-01-01 | C212 (4) |
-| `w-7` | `w-1/12` | 2027-01-01 | C212 (4) |
-| `w-8` | `w-1/12` | 2027-01-01 | C212 (4) |
-| `w-9` | `w-1/12` | 2027-01-01 | C212 (4) |
-| `w-10` | `w-1/12` | 2027-01-01 | C212 (4) |
-| `w-11` | `w-1/12` | 2027-01-01 | C212 (4) |
-| `w-12` | `w-1/12` | 2027-01-01 | C212 (4) |
-| `w-13` | `w-1/6` | 2027-01-01 | C212 (4) |
-| `w-14` | `w-1/6` | 2027-01-01 | C212 (4) |
-| `w-15` | `w-1/6` | 2027-01-01 | C212 (4) |
-| `w-16` | `w-1/6` | 2027-01-01 | C212 (4) |
-| `w-17` | `w-1/6` | 2027-01-01 | C212 (4) |
-| `w-18` | `w-1/6` | 2027-01-01 | C212 (4) |
-| `w-19` | `w-1/5` | 2027-01-01 | C212 (4) |
-| `w-21` | `w-1/5` | 2027-01-01 | C212 (4) |
-| `w-22` | `w-1/5` | 2027-01-01 | C212 (4) |
-| `w-23` | `w-1/4` | 2027-01-01 | C212 (4) |
-| `w-24` | `w-1/4` | 2027-01-01 | C212 (4) |
-| `w-26` | `w-1/4` | 2027-01-01 | C212 (4) |
-| `w-27` | `w-1/4` | 2027-01-01 | C212 (4) |
-| `w-28` | `w-1/4` | 2027-01-01 | C212 (4) |
-| `w-29` | `w-1/4` | 2027-01-01 | C212 (4) |
-| `w-30` | `w-1/3` | 2027-01-01 | C212 (4) |
-| `w-31` | `w-1/3` | 2027-01-01 | C212 (4) |
-| `w-32` | `w-1/3` | 2027-01-01 | C212 (4) |
-| `w-33` | `w-1/3` | 2027-01-01 | C212 (4) |
-| `w-34` | `w-1/3` | 2027-01-01 | C212 (4) |
-| `w-35` | `w-1/3` | 2027-01-01 | C212 (4) |
-| `w-36` | `w-1/3` | 2027-01-01 | C212 (4) |
-| `w-37` | `w-2/5` | 2027-01-01 | C212 (4) |
-| `w-38` | `w-2/5` | 2027-01-01 | C212 (4) |
-| `w-39` | `w-2/5` | 2027-01-01 | C212 (4) |
-| `w-41` | `w-5/12` | 2027-01-01 | C212 (4) |
-| `w-42` | `w-5/12` | 2027-01-01 | C212 (4) |
-| `w-43` | `w-5/12` | 2027-01-01 | C212 (4) |
-| `w-44` | `w-5/12` | 2027-01-01 | C212 (4) |
-| `w-45` | `w-5/12` | 2027-01-01 | C212 (4) |
-| `w-46` | `w-1/2` | 2027-01-01 | C212 (4) |
-| `w-47` | `w-1/2` | 2027-01-01 | C212 (4) |
-| `w-48` | `w-1/2` | 2027-01-01 | C212 (4) |
-| `w-49` | `w-1/2` | 2027-01-01 | C212 (4) |
-| `w-51` | `w-1/2` | 2027-01-01 | C212 (4) |
-| `w-52` | `w-1/2` | 2027-01-01 | C212 (4) |
-| `w-53` | `w-1/2` | 2027-01-01 | C212 (4) |
-| `w-54` | `w-1/2` | 2027-01-01 | C212 (4) |
-| `w-55` | `w-7/12` | 2027-01-01 | C212 (4) |
-| `w-56` | `w-7/12` | 2027-01-01 | C212 (4) |
-| `w-57` | `w-7/12` | 2027-01-01 | C212 (4) |
-| `w-58` | `w-7/12` | 2027-01-01 | C212 (4) |
-| `w-59` | `w-7/12` | 2027-01-01 | C212 (4) |
-| `w-61` | `w-3/5` | 2027-01-01 | C212 (4) |
-| `w-62` | `w-3/5` | 2027-01-01 | C212 (4) |
-| `w-63` | `w-3/5` | 2027-01-01 | C212 (4) |
-| `w-64` | `w-2/3` | 2027-01-01 | C212 (4) |
-| `w-65` | `w-2/3` | 2027-01-01 | C212 (4) |
-| `w-66` | `w-2/3` | 2027-01-01 | C212 (4) |
-| `w-67` | `w-2/3` | 2027-01-01 | C212 (4) |
-| `w-68` | `w-2/3` | 2027-01-01 | C212 (4) |
-| `w-69` | `w-2/3` | 2027-01-01 | C212 (4) |
-| `w-70` | `w-2/3` | 2027-01-01 | C212 (4) |
-| `w-71` | `w-3/4` | 2027-01-01 | C212 (4) |
-| `w-72` | `w-3/4` | 2027-01-01 | C212 (4) |
-| `w-73` | `w-3/4` | 2027-01-01 | C212 (4) |
-| `w-74` | `w-3/4` | 2027-01-01 | C212 (4) |
-| `w-76` | `w-3/4` | 2027-01-01 | C212 (4) |
-| `w-77` | `w-3/4` | 2027-01-01 | C212 (4) |
-| `w-78` | `w-4/5` | 2027-01-01 | C212 (4) |
-| `w-79` | `w-4/5` | 2027-01-01 | C212 (4) |
-| `w-81` | `w-4/5` | 2027-01-01 | C212 (4) |
-| `w-82` | `w-5/6` | 2027-01-01 | C212 (4) |
-| `w-83` | `w-5/6` | 2027-01-01 | C212 (4) |
-| `w-84` | `w-5/6` | 2027-01-01 | C212 (4) |
-| `w-85` | `w-5/6` | 2027-01-01 | C212 (4) |
-| `w-86` | `w-5/6` | 2027-01-01 | C212 (4) |
-| `w-87` | `w-5/6` | 2027-01-01 | C212 (4) |
-| `w-88` | `w-11/12` | 2027-01-01 | C212 (4) |
-| `w-89` | `w-11/12` | 2027-01-01 | C212 (4) |
-| `w-90` | `w-11/12` | 2027-01-01 | C212 (4) |
-| `w-91` | `w-11/12` | 2027-01-01 | C212 (4) |
-| `w-92` | `w-11/12` | 2027-01-01 | C212 (4) |
-| `w-93` | `w-11/12` | 2027-01-01 | C212 (4) |
-| `w-94` | `w-11/12` | 2027-01-01 | C212 (4) |
-| `w-95` | `w-11/12` | 2027-01-01 | C212 (4) |
-| `w-96` | `w-full` | 2027-01-01 | C212 (4) |
-| `w-97` | `w-full` | 2027-01-01 | C212 (4) |
-| `w-98` | `w-full` | 2027-01-01 | C212 (4) |
-| `w-99` | `w-full` | 2027-01-01 | C212 (4) |
-| `space-x-reverse` | без замены | 2027-01-01 | C212 (4) |
-| `space-y-reverse` | без замены | 2027-01-01 | C212 (4) |
-| `basis-1` | `basis-1/12` | 2027-01-01 | C212 (4) |
-| `basis-2` | `basis-1/12` | 2027-01-01 | C212 (4) |
-| `basis-3` | `basis-1/12` | 2027-01-01 | C212 (4) |
-| `basis-4` | `basis-1/12` | 2027-01-01 | C212 (4) |
-| `basis-5` | `basis-1/12` | 2027-01-01 | C212 (4) |
-| `basis-6` | `basis-1/12` | 2027-01-01 | C212 (4) |
-| `basis-7` | `basis-1/12` | 2027-01-01 | C212 (4) |
-| `basis-8` | `basis-1/12` | 2027-01-01 | C212 (4) |
-| `basis-9` | `basis-1/12` | 2027-01-01 | C212 (4) |
-| `basis-10` | `basis-1/12` | 2027-01-01 | C212 (4) |
-| `basis-11` | `basis-1/12` | 2027-01-01 | C212 (4) |
-| `basis-12` | `basis-1/12` | 2027-01-01 | C212 (4) |
-| `basis-13` | `basis-1/6` | 2027-01-01 | C212 (4) |
-| `basis-14` | `basis-1/6` | 2027-01-01 | C212 (4) |
-| `basis-15` | `basis-1/6` | 2027-01-01 | C212 (4) |
-| `basis-16` | `basis-1/6` | 2027-01-01 | C212 (4) |
-| `basis-17` | `basis-1/6` | 2027-01-01 | C212 (4) |
-| `basis-18` | `basis-1/6` | 2027-01-01 | C212 (4) |
-| `basis-19` | `basis-1/5` | 2027-01-01 | C212 (4) |
-| `basis-21` | `basis-1/5` | 2027-01-01 | C212 (4) |
-| `basis-22` | `basis-1/5` | 2027-01-01 | C212 (4) |
-| `basis-23` | `basis-1/4` | 2027-01-01 | C212 (4) |
-| `basis-24` | `basis-1/4` | 2027-01-01 | C212 (4) |
-| `basis-26` | `basis-1/4` | 2027-01-01 | C212 (4) |
-| `basis-27` | `basis-1/4` | 2027-01-01 | C212 (4) |
-| `basis-28` | `basis-1/4` | 2027-01-01 | C212 (4) |
-| `basis-29` | `basis-1/4` | 2027-01-01 | C212 (4) |
-| `basis-30` | `basis-1/3` | 2027-01-01 | C212 (4) |
-| `basis-31` | `basis-1/3` | 2027-01-01 | C212 (4) |
-| `basis-32` | `basis-1/3` | 2027-01-01 | C212 (4) |
-| `basis-33` | `basis-1/3` | 2027-01-01 | C212 (4) |
-| `basis-34` | `basis-1/3` | 2027-01-01 | C212 (4) |
-| `basis-35` | `basis-1/3` | 2027-01-01 | C212 (4) |
-| `basis-36` | `basis-1/3` | 2027-01-01 | C212 (4) |
-| `basis-37` | `basis-2/5` | 2027-01-01 | C212 (4) |
-| `basis-38` | `basis-2/5` | 2027-01-01 | C212 (4) |
-| `basis-39` | `basis-2/5` | 2027-01-01 | C212 (4) |
-| `basis-41` | `basis-5/12` | 2027-01-01 | C212 (4) |
-| `basis-42` | `basis-5/12` | 2027-01-01 | C212 (4) |
-| `basis-43` | `basis-5/12` | 2027-01-01 | C212 (4) |
-| `basis-44` | `basis-5/12` | 2027-01-01 | C212 (4) |
-| `basis-45` | `basis-5/12` | 2027-01-01 | C212 (4) |
-| `basis-46` | `basis-1/2` | 2027-01-01 | C212 (4) |
-| `basis-47` | `basis-1/2` | 2027-01-01 | C212 (4) |
-| `basis-48` | `basis-1/2` | 2027-01-01 | C212 (4) |
-| `basis-49` | `basis-1/2` | 2027-01-01 | C212 (4) |
-| `basis-51` | `basis-1/2` | 2027-01-01 | C212 (4) |
-| `basis-52` | `basis-1/2` | 2027-01-01 | C212 (4) |
-| `basis-53` | `basis-1/2` | 2027-01-01 | C212 (4) |
-| `basis-54` | `basis-1/2` | 2027-01-01 | C212 (4) |
-| `basis-55` | `basis-7/12` | 2027-01-01 | C212 (4) |
-| `basis-56` | `basis-7/12` | 2027-01-01 | C212 (4) |
-| `basis-57` | `basis-7/12` | 2027-01-01 | C212 (4) |
-| `basis-58` | `basis-7/12` | 2027-01-01 | C212 (4) |
-| `basis-59` | `basis-7/12` | 2027-01-01 | C212 (4) |
-| `basis-61` | `basis-3/5` | 2027-01-01 | C212 (4) |
-| `basis-62` | `basis-3/5` | 2027-01-01 | C212 (4) |
-| `basis-63` | `basis-3/5` | 2027-01-01 | C212 (4) |
-| `basis-64` | `basis-2/3` | 2027-01-01 | C212 (4) |
-| `basis-65` | `basis-2/3` | 2027-01-01 | C212 (4) |
-| `basis-66` | `basis-2/3` | 2027-01-01 | C212 (4) |
-| `basis-67` | `basis-2/3` | 2027-01-01 | C212 (4) |
-| `basis-68` | `basis-2/3` | 2027-01-01 | C212 (4) |
-| `basis-69` | `basis-2/3` | 2027-01-01 | C212 (4) |
-| `basis-70` | `basis-2/3` | 2027-01-01 | C212 (4) |
-| `basis-71` | `basis-3/4` | 2027-01-01 | C212 (4) |
-| `basis-72` | `basis-3/4` | 2027-01-01 | C212 (4) |
-| `basis-73` | `basis-3/4` | 2027-01-01 | C212 (4) |
-| `basis-74` | `basis-3/4` | 2027-01-01 | C212 (4) |
-| `basis-76` | `basis-3/4` | 2027-01-01 | C212 (4) |
-| `basis-77` | `basis-3/4` | 2027-01-01 | C212 (4) |
-| `basis-78` | `basis-4/5` | 2027-01-01 | C212 (4) |
-| `basis-79` | `basis-4/5` | 2027-01-01 | C212 (4) |
-| `basis-81` | `basis-4/5` | 2027-01-01 | C212 (4) |
-| `basis-82` | `basis-5/6` | 2027-01-01 | C212 (4) |
-| `basis-83` | `basis-5/6` | 2027-01-01 | C212 (4) |
-| `basis-84` | `basis-5/6` | 2027-01-01 | C212 (4) |
-| `basis-85` | `basis-5/6` | 2027-01-01 | C212 (4) |
-| `basis-86` | `basis-5/6` | 2027-01-01 | C212 (4) |
-| `basis-87` | `basis-5/6` | 2027-01-01 | C212 (4) |
-| `basis-88` | `basis-11/12` | 2027-01-01 | C212 (4) |
-| `basis-89` | `basis-11/12` | 2027-01-01 | C212 (4) |
-| `basis-90` | `basis-11/12` | 2027-01-01 | C212 (4) |
-| `basis-91` | `basis-11/12` | 2027-01-01 | C212 (4) |
-| `basis-92` | `basis-11/12` | 2027-01-01 | C212 (4) |
-| `basis-93` | `basis-11/12` | 2027-01-01 | C212 (4) |
-| `basis-94` | `basis-11/12` | 2027-01-01 | C212 (4) |
-| `basis-95` | `basis-11/12` | 2027-01-01 | C212 (4) |
-| `basis-96` | `basis-full` | 2027-01-01 | C212 (4) |
-| `basis-97` | `basis-full` | 2027-01-01 | C212 (4) |
-| `basis-98` | `basis-full` | 2027-01-01 | C212 (4) |
-| `basis-99` | `basis-full` | 2027-01-01 | C212 (4) |
-| `space-x-*` (семейство) | `gap-x-…` той же ступени | 2027-01-01 | C212 (4) |
-| `space-y-*` (семейство) | `gap-y-…` той же ступени | 2027-01-01 | C212 (4) |
-| `m-, p-, scroll-m-, scroll-p- <a0-i9>` (семейство) | `…-…` той же ступени | 2027-01-01 | C212 (4) |
-| `-scroll-m-, -scroll-p- <a0-i9>` (семейство) | без замены | 2027-01-01 | C212 (4) |
-| `ring-3` | `ring-2` | 2027-01-01 | C187 (3) |
-| `ring-4` | `ring-2` | 2027-01-01 | C187 (3) |
-| все классы модуля `ring-opacity` | без замены | 2027-01-01 | C187 (3) |
-| `divider-*` (семейство) | `divide-…` той же ступени | 2027-01-01 | C187 (4) |
-| все классы модуля `divider-opacity` | `divide-outline-variant` | 2027-01-01 | C187 (4) |
-| `bg-disable` | `bg-surface-disabled` | 2027-01-01 | C212 (5) |
-| `bg-error-transparent-overlay` | `bg-error-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-error-transparent-select` | `bg-error-state-select` | 2027-01-01 | C212 (5) |
-| `bg-primary-transparent-overlay` | `bg-primary-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-primary-transparent-select` | `bg-primary-state-select` | 2027-01-01 | C212 (5) |
-| `bg-secondary-transparent-overlay` | `bg-secondary-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-secondary-transparent-select` | `bg-secondary-state-select` | 2027-01-01 | C212 (5) |
-| `bg-success-transparent-overlay` | `bg-success-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-success-transparent-select` | `bg-success-state-select` | 2027-01-01 | C212 (5) |
-| `bg-surface-0` | `bg-surface-page` | 2027-01-01 | C212 (5) |
-| `bg-surface-1` | `bg-surface-area` | 2027-01-01 | C212 (5) |
-| `bg-surface-transparent-overlay` | `bg-surface-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-surface-transparent-select` | `bg-surface-state-select` | 2027-01-01 | C212 (5) |
-| `bg-tertiary-transparent-overlay` | `bg-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-tertiary-transparent-select` | `bg-tertiary-state-select` | 2027-01-01 | C212 (5) |
-| `bg-warning-transparent-overlay` | `bg-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-warning-transparent-select` | `bg-warning-state-select` | 2027-01-01 | C212 (5) |
-| `border-error-transparent-overlay` | `border-error-container-strong` | 2027-01-01 | C212 (5) |
-| `border-primary-transparent-overlay` | `border-primary-container-strong` | 2027-01-01 | C212 (5) |
-| `border-secondary-transparent-overlay` | `border-secondary-container-strong` | 2027-01-01 | C212 (5) |
-| `border-success-transparent-overlay` | `border-success-container-strong` | 2027-01-01 | C212 (5) |
-| `border-surface-0` | `border-surface-page` | 2027-01-01 | C212 (5) |
-| `border-surface-1` | `border-surface-area` | 2027-01-01 | C212 (5) |
-| `border-surface-overlay` | `border-surface-veil` | 2027-01-01 | C212 (5) |
-| `border-surface-transparent-overlay` | `border-surface-container-strong` | 2027-01-01 | C212 (5) |
-| `border-tertiary-transparent-overlay` | `border-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `border-warning-transparent-overlay` | `border-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `color-on-disable` | `color-on-surface-disabled` | 2027-01-01 | C212 (5) |
-| `drop-shadow-error-transparent-overlay` | `drop-shadow-error-container-strong` | 2027-01-01 | C212 (5) |
-| `drop-shadow-error-transparent-select` | `drop-shadow-error-state-select` | 2027-01-01 | C212 (5) |
-| `drop-shadow-primary-transparent-overlay` | `drop-shadow-primary-container-strong` | 2027-01-01 | C212 (5) |
-| `drop-shadow-primary-transparent-select` | `drop-shadow-primary-state-select` | 2027-01-01 | C212 (5) |
-| `drop-shadow-secondary-transparent-overlay` | `drop-shadow-secondary-container-strong` | 2027-01-01 | C212 (5) |
-| `drop-shadow-secondary-transparent-select` | `drop-shadow-secondary-state-select` | 2027-01-01 | C212 (5) |
-| `drop-shadow-success-transparent-overlay` | `drop-shadow-success-container-strong` | 2027-01-01 | C212 (5) |
-| `drop-shadow-success-transparent-select` | `drop-shadow-success-state-select` | 2027-01-01 | C212 (5) |
-| `drop-shadow-surface-0` | `drop-shadow-surface-page` | 2027-01-01 | C212 (5) |
-| `drop-shadow-surface-1` | `drop-shadow-surface-area` | 2027-01-01 | C212 (5) |
-| `drop-shadow-tertiary-transparent-overlay` | `drop-shadow-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `drop-shadow-tertiary-transparent-select` | `drop-shadow-tertiary-state-select` | 2027-01-01 | C212 (5) |
-| `drop-shadow-warning-transparent-overlay` | `drop-shadow-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `drop-shadow-warning-transparent-select` | `drop-shadow-warning-state-select` | 2027-01-01 | C212 (5) |
-| `fill-disable` | `fill-surface-disabled` | 2027-01-01 | C212 (5) |
-| `fill-error-transparent-overlay` | `fill-error-container-strong` | 2027-01-01 | C212 (5) |
-| `fill-error-transparent-select` | `fill-error-state-select` | 2027-01-01 | C212 (5) |
-| `fill-primary-transparent-overlay` | `fill-primary-container-strong` | 2027-01-01 | C212 (5) |
-| `fill-primary-transparent-select` | `fill-primary-state-select` | 2027-01-01 | C212 (5) |
-| `fill-secondary-transparent-overlay` | `fill-secondary-container-strong` | 2027-01-01 | C212 (5) |
-| `fill-secondary-transparent-select` | `fill-secondary-state-select` | 2027-01-01 | C212 (5) |
-| `fill-success-transparent-overlay` | `fill-success-container-strong` | 2027-01-01 | C212 (5) |
-| `fill-success-transparent-select` | `fill-success-state-select` | 2027-01-01 | C212 (5) |
-| `fill-surface-0` | `fill-surface-page` | 2027-01-01 | C212 (5) |
-| `fill-surface-1` | `fill-surface-area` | 2027-01-01 | C212 (5) |
-| `fill-surface-transparent-overlay` | `fill-surface-container-strong` | 2027-01-01 | C212 (5) |
-| `fill-surface-transparent-select` | `fill-surface-state-select` | 2027-01-01 | C212 (5) |
-| `fill-tertiary-transparent-overlay` | `fill-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `fill-tertiary-transparent-select` | `fill-tertiary-state-select` | 2027-01-01 | C212 (5) |
-| `fill-warning-transparent-overlay` | `fill-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `fill-warning-transparent-select` | `fill-warning-state-select` | 2027-01-01 | C212 (5) |
-| `placeholder-on-disable` | `placeholder-on-surface-disabled` | 2027-01-01 | C212 (5) |
-| `ring-error-transparent-overlay` | `ring-error-container-strong` | 2027-01-01 | C212 (5) |
-| `ring-offset-error-transparent-overlay` | `ring-offset-error-container-strong` | 2027-01-01 | C212 (5) |
-| `ring-offset-primary-transparent-overlay` | `ring-offset-primary-container-strong` | 2027-01-01 | C212 (5) |
-| `ring-offset-secondary-transparent-overlay` | `ring-offset-secondary-container-strong` | 2027-01-01 | C212 (5) |
-| `ring-offset-success-transparent-overlay` | `ring-offset-success-container-strong` | 2027-01-01 | C212 (5) |
-| `ring-offset-surface-0` | `ring-offset-surface-page` | 2027-01-01 | C212 (5) |
-| `ring-offset-surface-1` | `ring-offset-surface-area` | 2027-01-01 | C212 (5) |
-| `ring-offset-surface-overlay` | `ring-offset-surface-veil` | 2027-01-01 | C212 (5) |
-| `ring-offset-surface-transparent-overlay` | `ring-offset-surface-container-strong` | 2027-01-01 | C212 (5) |
-| `ring-offset-tertiary-transparent-overlay` | `ring-offset-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `ring-offset-warning-transparent-overlay` | `ring-offset-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `ring-primary-transparent-overlay` | `ring-primary-container-strong` | 2027-01-01 | C212 (5) |
-| `ring-secondary-transparent-overlay` | `ring-secondary-container-strong` | 2027-01-01 | C212 (5) |
-| `ring-success-transparent-overlay` | `ring-success-container-strong` | 2027-01-01 | C212 (5) |
-| `ring-surface-0` | `ring-surface-page` | 2027-01-01 | C212 (5) |
-| `ring-surface-1` | `ring-surface-area` | 2027-01-01 | C212 (5) |
-| `ring-surface-overlay` | `ring-surface-veil` | 2027-01-01 | C212 (5) |
-| `ring-surface-transparent-overlay` | `ring-surface-container-strong` | 2027-01-01 | C212 (5) |
-| `ring-tertiary-transparent-overlay` | `ring-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `ring-warning-transparent-overlay` | `ring-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `stripe-surface-transparent-overlay` | `stripe-surface-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-error-transparent` | `bg-error-state` | 2027-01-01 | C212 (5) |
-| `bg-primary-transparent` | `bg-primary-state` | 2027-01-01 | C212 (5) |
-| `bg-secondary-transparent` | `bg-secondary-state` | 2027-01-01 | C212 (5) |
-| `bg-success-transparent` | `bg-success-state` | 2027-01-01 | C212 (5) |
-| `bg-surface` | `bg-surface-area` | 2027-01-01 | C212 (5) |
-| `bg-surface-transparent` | `bg-surface-state` | 2027-01-01 | C212 (5) |
-| `bg-tertiary-transparent` | `bg-tertiary-state` | 2027-01-01 | C212 (5) |
-| `bg-warning-transparent` | `bg-warning-state` | 2027-01-01 | C212 (5) |
-| `border-surface` | `border-surface-area` | 2027-01-01 | C212 (5) |
-| `drop-shadow-surface` | `drop-shadow-surface-area` | 2027-01-01 | C212 (5) |
-| `fill-error-transparent` | `fill-error-state` | 2027-01-01 | C212 (5) |
-| `fill-primary-transparent` | `fill-primary-state` | 2027-01-01 | C212 (5) |
-| `fill-secondary-transparent` | `fill-secondary-state` | 2027-01-01 | C212 (5) |
-| `fill-success-transparent` | `fill-success-state` | 2027-01-01 | C212 (5) |
-| `fill-surface` | `fill-surface-area` | 2027-01-01 | C212 (5) |
-| `fill-surface-transparent` | `fill-surface-state` | 2027-01-01 | C212 (5) |
-| `fill-tertiary-transparent` | `fill-tertiary-state` | 2027-01-01 | C212 (5) |
-| `fill-warning-transparent` | `fill-warning-state` | 2027-01-01 | C212 (5) |
-| `ring-offset-surface` | `ring-offset-surface-area` | 2027-01-01 | C212 (5) |
-| `ring-surface` | `ring-surface-area` | 2027-01-01 | C212 (5) |
-| `color-white` | `color-on-surface-inverse` | 2027-01-01 | C212 (5) |
-| `color-black` | `color-on-surface` | 2027-01-01 | C212 (5) |
-| `color-gray` | `color-on-surface-variant` | 2027-01-01 | C212 (5) |
-| `color-gray-0` | `color-on-surface-inverse` | 2027-01-01 | C212 (5) |
-| `color-gray-1` | `color-on-surface-inverse` | 2027-01-01 | C212 (5) |
-| `color-gray-2` | `color-on-surface-inverse` | 2027-01-01 | C212 (5) |
-| `color-gray-3` | `color-on-surface-inverse` | 2027-01-01 | C212 (5) |
-| `color-gray-4` | `color-on-surface-variant` | 2027-01-01 | C212 (5) |
-| `color-gray-5` | `color-on-surface-variant` | 2027-01-01 | C212 (5) |
-| `color-gray-6` | `color-on-surface-variant` | 2027-01-01 | C212 (5) |
-| `color-gray-7` | `color-on-surface-variant` | 2027-01-01 | C212 (5) |
-| `color-gray-8` | `color-on-surface` | 2027-01-01 | C212 (5) |
-| `color-gray-9` | `color-on-surface` | 2027-01-01 | C212 (5) |
-| `color-red` | `color-error` | 2027-01-01 | C212 (5) |
-| `color-red-0` | `color-on-error` | 2027-01-01 | C212 (5) |
-| `color-red-1` | `color-on-error` | 2027-01-01 | C212 (5) |
-| `color-red-2` | `color-on-error` | 2027-01-01 | C212 (5) |
-| `color-red-3` | `color-error` | 2027-01-01 | C212 (5) |
-| `color-red-4` | `color-error` | 2027-01-01 | C212 (5) |
-| `color-red-5` | `color-error` | 2027-01-01 | C212 (5) |
-| `color-red-6` | `color-error` | 2027-01-01 | C212 (5) |
-| `color-red-7` | `color-error` | 2027-01-01 | C212 (5) |
-| `color-red-8` | `color-error` | 2027-01-01 | C212 (5) |
-| `color-red-9` | `color-error` | 2027-01-01 | C212 (5) |
-| `color-orange` | `color-warning` | 2027-01-01 | C212 (5) |
-| `color-orange-0` | `color-on-warning` | 2027-01-01 | C212 (5) |
-| `color-orange-1` | `color-on-warning` | 2027-01-01 | C212 (5) |
-| `color-orange-2` | `color-on-warning` | 2027-01-01 | C212 (5) |
-| `color-orange-3` | `color-on-warning` | 2027-01-01 | C212 (5) |
-| `color-orange-4` | `color-warning` | 2027-01-01 | C212 (5) |
-| `color-orange-5` | `color-warning` | 2027-01-01 | C212 (5) |
-| `color-orange-6` | `color-warning` | 2027-01-01 | C212 (5) |
-| `color-orange-7` | `color-warning` | 2027-01-01 | C212 (5) |
-| `color-orange-8` | `color-warning` | 2027-01-01 | C212 (5) |
-| `color-orange-9` | `color-warning` | 2027-01-01 | C212 (5) |
-| `color-yellow` | `color-on-warning` | 2027-01-01 | C212 (5) |
-| `color-yellow-0` | `color-on-warning` | 2027-01-01 | C212 (5) |
-| `color-yellow-1` | `color-on-warning` | 2027-01-01 | C212 (5) |
-| `color-yellow-2` | `color-on-warning` | 2027-01-01 | C212 (5) |
-| `color-yellow-3` | `color-on-warning` | 2027-01-01 | C212 (5) |
-| `color-yellow-4` | `color-on-warning` | 2027-01-01 | C212 (5) |
-| `color-yellow-5` | `color-on-warning` | 2027-01-01 | C212 (5) |
-| `color-yellow-6` | `color-on-warning` | 2027-01-01 | C212 (5) |
-| `color-yellow-7` | `color-warning` | 2027-01-01 | C212 (5) |
-| `color-yellow-8` | `color-warning` | 2027-01-01 | C212 (5) |
-| `color-yellow-9` | `color-warning` | 2027-01-01 | C212 (5) |
-| `color-green` | `color-success` | 2027-01-01 | C212 (5) |
-| `color-green-0` | `color-on-success` | 2027-01-01 | C212 (5) |
-| `color-green-1` | `color-on-success` | 2027-01-01 | C212 (5) |
-| `color-green-2` | `color-on-success` | 2027-01-01 | C212 (5) |
-| `color-green-3` | `color-on-success` | 2027-01-01 | C212 (5) |
-| `color-green-4` | `color-success` | 2027-01-01 | C212 (5) |
-| `color-green-5` | `color-success` | 2027-01-01 | C212 (5) |
-| `color-green-6` | `color-success` | 2027-01-01 | C212 (5) |
-| `color-green-7` | `color-success` | 2027-01-01 | C212 (5) |
-| `color-green-8` | `color-success` | 2027-01-01 | C212 (5) |
-| `color-green-9` | `color-on-success-container` | 2027-01-01 | C212 (5) |
-| `color-blue` | `color-primary` | 2027-01-01 | C212 (5) |
-| `color-blue-0` | `color-on-primary` | 2027-01-01 | C212 (5) |
-| `color-blue-1` | `color-on-primary` | 2027-01-01 | C212 (5) |
-| `color-blue-2` | `color-on-primary` | 2027-01-01 | C212 (5) |
-| `color-blue-3` | `color-primary` | 2027-01-01 | C212 (5) |
-| `color-blue-4` | `color-primary` | 2027-01-01 | C212 (5) |
-| `color-blue-5` | `color-primary` | 2027-01-01 | C212 (5) |
-| `color-blue-6` | `color-primary` | 2027-01-01 | C212 (5) |
-| `color-blue-7` | `color-primary` | 2027-01-01 | C212 (5) |
-| `color-blue-8` | `color-on-primary-container` | 2027-01-01 | C212 (5) |
-| `color-blue-9` | `color-on-primary-container` | 2027-01-01 | C212 (5) |
-| `color-purple` | `color-tertiary` | 2027-01-01 | C212 (5) |
-| `color-purple-0` | `color-on-tertiary` | 2027-01-01 | C212 (5) |
-| `color-purple-1` | `color-on-tertiary` | 2027-01-01 | C212 (5) |
-| `color-purple-2` | `color-on-tertiary` | 2027-01-01 | C212 (5) |
-| `color-purple-3` | `color-tertiary` | 2027-01-01 | C212 (5) |
-| `color-purple-4` | `color-tertiary` | 2027-01-01 | C212 (5) |
-| `color-purple-5` | `color-tertiary` | 2027-01-01 | C212 (5) |
-| `color-purple-6` | `color-tertiary` | 2027-01-01 | C212 (5) |
-| `color-purple-7` | `color-tertiary` | 2027-01-01 | C212 (5) |
-| `color-purple-8` | `color-on-tertiary-container` | 2027-01-01 | C212 (5) |
-| `color-purple-9` | `color-on-tertiary-container` | 2027-01-01 | C212 (5) |
-| `color-pink` | `color-tertiary` | 2027-01-01 | C212 (5) |
-| `color-pink-0` | `color-on-tertiary` | 2027-01-01 | C212 (5) |
-| `color-pink-1` | `color-on-tertiary` | 2027-01-01 | C212 (5) |
-| `color-pink-2` | `color-on-tertiary` | 2027-01-01 | C212 (5) |
-| `color-pink-3` | `color-tertiary` | 2027-01-01 | C212 (5) |
-| `color-pink-4` | `color-tertiary` | 2027-01-01 | C212 (5) |
-| `color-pink-5` | `color-tertiary` | 2027-01-01 | C212 (5) |
-| `color-pink-6` | `color-tertiary` | 2027-01-01 | C212 (5) |
-| `color-pink-7` | `color-tertiary` | 2027-01-01 | C212 (5) |
-| `color-pink-8` | `color-tertiary` | 2027-01-01 | C212 (5) |
-| `color-pink-9` | `color-tertiary` | 2027-01-01 | C212 (5) |
-| `bg-white` | `bg-surface-page` | 2027-01-01 | C212 (5) |
-| `bg-black` | `bg-surface-inverse` | 2027-01-01 | C212 (5) |
-| `bg-gray` | `bg-surface-inverse` | 2027-01-01 | C212 (5) |
-| `bg-gray-0` | `bg-surface-area` | 2027-01-01 | C212 (5) |
-| `bg-gray-1` | `bg-surface-area` | 2027-01-01 | C212 (5) |
-| `bg-gray-2` | `bg-surface-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-gray-3` | `bg-surface-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-gray-4` | `bg-surface-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-gray-5` | `bg-surface-inverse` | 2027-01-01 | C212 (5) |
-| `bg-gray-6` | `bg-surface-inverse` | 2027-01-01 | C212 (5) |
-| `bg-gray-7` | `bg-surface-inverse` | 2027-01-01 | C212 (5) |
-| `bg-gray-8` | `bg-surface-inverse` | 2027-01-01 | C212 (5) |
-| `bg-gray-9` | `bg-surface-inverse` | 2027-01-01 | C212 (5) |
-| `bg-red` | `bg-error` | 2027-01-01 | C212 (5) |
-| `bg-red-0` | `bg-error-container` | 2027-01-01 | C212 (5) |
-| `bg-red-1` | `bg-error-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-red-2` | `bg-error-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-red-3` | `bg-error-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-red-4` | `bg-error` | 2027-01-01 | C212 (5) |
-| `bg-red-5` | `bg-error` | 2027-01-01 | C212 (5) |
-| `bg-red-6` | `bg-error` | 2027-01-01 | C212 (5) |
-| `bg-red-7` | `bg-error` | 2027-01-01 | C212 (5) |
-| `bg-red-8` | `bg-error` | 2027-01-01 | C212 (5) |
-| `bg-red-9` | `bg-error` | 2027-01-01 | C212 (5) |
-| `bg-orange` | `bg-warning` | 2027-01-01 | C212 (5) |
-| `bg-orange-0` | `bg-warning-container` | 2027-01-01 | C212 (5) |
-| `bg-orange-1` | `bg-warning-container` | 2027-01-01 | C212 (5) |
-| `bg-orange-2` | `bg-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-orange-3` | `bg-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-orange-4` | `bg-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-orange-5` | `bg-warning` | 2027-01-01 | C212 (5) |
-| `bg-orange-6` | `bg-warning` | 2027-01-01 | C212 (5) |
-| `bg-orange-7` | `bg-warning` | 2027-01-01 | C212 (5) |
-| `bg-orange-8` | `bg-warning` | 2027-01-01 | C212 (5) |
-| `bg-orange-9` | `bg-warning` | 2027-01-01 | C212 (5) |
-| `bg-yellow` | `bg-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-yellow-0` | `bg-warning-container` | 2027-01-01 | C212 (5) |
-| `bg-yellow-1` | `bg-warning-container` | 2027-01-01 | C212 (5) |
-| `bg-yellow-2` | `bg-warning-container` | 2027-01-01 | C212 (5) |
-| `bg-yellow-3` | `bg-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-yellow-4` | `bg-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-yellow-5` | `bg-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-yellow-6` | `bg-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-yellow-7` | `bg-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-yellow-8` | `bg-warning` | 2027-01-01 | C212 (5) |
-| `bg-yellow-9` | `bg-warning` | 2027-01-01 | C212 (5) |
-| `bg-green` | `bg-success` | 2027-01-01 | C212 (5) |
-| `bg-green-0` | `bg-success-container` | 2027-01-01 | C212 (5) |
-| `bg-green-1` | `bg-success-container` | 2027-01-01 | C212 (5) |
-| `bg-green-2` | `bg-success-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-green-3` | `bg-success-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-green-4` | `bg-success-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-green-5` | `bg-success` | 2027-01-01 | C212 (5) |
-| `bg-green-6` | `bg-success` | 2027-01-01 | C212 (5) |
-| `bg-green-7` | `bg-success` | 2027-01-01 | C212 (5) |
-| `bg-green-8` | `bg-success` | 2027-01-01 | C212 (5) |
-| `bg-green-9` | `bg-success` | 2027-01-01 | C212 (5) |
-| `bg-blue` | `bg-primary` | 2027-01-01 | C212 (5) |
-| `bg-blue-0` | `bg-primary-container` | 2027-01-01 | C212 (5) |
-| `bg-blue-1` | `bg-primary-container` | 2027-01-01 | C212 (5) |
-| `bg-blue-2` | `bg-primary-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-blue-3` | `bg-primary-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-blue-4` | `bg-primary` | 2027-01-01 | C212 (5) |
-| `bg-blue-5` | `bg-primary` | 2027-01-01 | C212 (5) |
-| `bg-blue-6` | `bg-primary` | 2027-01-01 | C212 (5) |
-| `bg-blue-7` | `bg-primary` | 2027-01-01 | C212 (5) |
-| `bg-blue-8` | `bg-primary` | 2027-01-01 | C212 (5) |
-| `bg-blue-9` | `bg-primary` | 2027-01-01 | C212 (5) |
-| `bg-purple` | `bg-tertiary` | 2027-01-01 | C212 (5) |
-| `bg-purple-0` | `bg-tertiary-container` | 2027-01-01 | C212 (5) |
-| `bg-purple-1` | `bg-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-purple-2` | `bg-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-purple-3` | `bg-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-purple-4` | `bg-tertiary` | 2027-01-01 | C212 (5) |
-| `bg-purple-5` | `bg-tertiary` | 2027-01-01 | C212 (5) |
-| `bg-purple-6` | `bg-tertiary` | 2027-01-01 | C212 (5) |
-| `bg-purple-7` | `bg-tertiary` | 2027-01-01 | C212 (5) |
-| `bg-purple-8` | `bg-tertiary` | 2027-01-01 | C212 (5) |
-| `bg-purple-9` | `bg-tertiary` | 2027-01-01 | C212 (5) |
-| `bg-pink` | `bg-tertiary` | 2027-01-01 | C212 (5) |
-| `bg-pink-0` | `bg-tertiary-container` | 2027-01-01 | C212 (5) |
-| `bg-pink-1` | `bg-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-pink-2` | `bg-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-pink-3` | `bg-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `bg-pink-4` | `bg-tertiary` | 2027-01-01 | C212 (5) |
-| `bg-pink-5` | `bg-tertiary` | 2027-01-01 | C212 (5) |
-| `bg-pink-6` | `bg-tertiary` | 2027-01-01 | C212 (5) |
-| `bg-pink-7` | `bg-tertiary` | 2027-01-01 | C212 (5) |
-| `bg-pink-8` | `bg-tertiary` | 2027-01-01 | C212 (5) |
-| `bg-pink-9` | `bg-tertiary` | 2027-01-01 | C212 (5) |
-| `border-white` | `border-surface-page` | 2027-01-01 | C212 (5) |
-| `border-black` | `border-on-surface` | 2027-01-01 | C212 (5) |
-| `border-gray` | `border-on-surface-variant` | 2027-01-01 | C212 (5) |
-| `border-gray-0` | `border-surface-page` | 2027-01-01 | C212 (5) |
-| `border-gray-1` | `border-surface-page` | 2027-01-01 | C212 (5) |
-| `border-gray-2` | `border-outline-variant` | 2027-01-01 | C212 (5) |
-| `border-gray-3` | `border-outline-variant` | 2027-01-01 | C212 (5) |
-| `border-gray-4` | `border-outline` | 2027-01-01 | C212 (5) |
-| `border-gray-5` | `border-on-surface-variant` | 2027-01-01 | C212 (5) |
-| `border-gray-6` | `border-on-surface-variant` | 2027-01-01 | C212 (5) |
-| `border-gray-7` | `border-on-surface-variant` | 2027-01-01 | C212 (5) |
-| `border-gray-8` | `border-on-surface` | 2027-01-01 | C212 (5) |
-| `border-gray-9` | `border-on-surface` | 2027-01-01 | C212 (5) |
-| `border-red` | `border-error` | 2027-01-01 | C212 (5) |
-| `border-red-0` | `border-error-container` | 2027-01-01 | C212 (5) |
-| `border-red-1` | `border-error-container-strong` | 2027-01-01 | C212 (5) |
-| `border-red-2` | `border-error-container-strong` | 2027-01-01 | C212 (5) |
-| `border-red-3` | `border-error-container-strong` | 2027-01-01 | C212 (5) |
-| `border-red-4` | `border-error` | 2027-01-01 | C212 (5) |
-| `border-red-5` | `border-error` | 2027-01-01 | C212 (5) |
-| `border-red-6` | `border-error` | 2027-01-01 | C212 (5) |
-| `border-red-7` | `border-error` | 2027-01-01 | C212 (5) |
-| `border-red-8` | `border-error` | 2027-01-01 | C212 (5) |
-| `border-red-9` | `border-error` | 2027-01-01 | C212 (5) |
-| `border-orange` | `border-warning` | 2027-01-01 | C212 (5) |
-| `border-orange-0` | `border-warning-container` | 2027-01-01 | C212 (5) |
-| `border-orange-1` | `border-warning-container` | 2027-01-01 | C212 (5) |
-| `border-orange-2` | `border-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `border-orange-3` | `border-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `border-orange-4` | `border-warning` | 2027-01-01 | C212 (5) |
-| `border-orange-5` | `border-warning` | 2027-01-01 | C212 (5) |
-| `border-orange-6` | `border-warning` | 2027-01-01 | C212 (5) |
-| `border-orange-7` | `border-warning` | 2027-01-01 | C212 (5) |
-| `border-orange-8` | `border-warning` | 2027-01-01 | C212 (5) |
-| `border-orange-9` | `border-warning` | 2027-01-01 | C212 (5) |
-| `border-yellow` | `border-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `border-yellow-0` | `border-warning-container` | 2027-01-01 | C212 (5) |
-| `border-yellow-1` | `border-warning-container` | 2027-01-01 | C212 (5) |
-| `border-yellow-2` | `border-warning-container` | 2027-01-01 | C212 (5) |
-| `border-yellow-3` | `border-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `border-yellow-4` | `border-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `border-yellow-5` | `border-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `border-yellow-6` | `border-warning-container-strong` | 2027-01-01 | C212 (5) |
-| `border-yellow-7` | `border-warning` | 2027-01-01 | C212 (5) |
-| `border-yellow-8` | `border-warning` | 2027-01-01 | C212 (5) |
-| `border-yellow-9` | `border-warning` | 2027-01-01 | C212 (5) |
-| `border-green` | `border-success` | 2027-01-01 | C212 (5) |
-| `border-green-0` | `border-success-container` | 2027-01-01 | C212 (5) |
-| `border-green-1` | `border-success-container` | 2027-01-01 | C212 (5) |
-| `border-green-2` | `border-success-container-strong` | 2027-01-01 | C212 (5) |
-| `border-green-3` | `border-success-container-strong` | 2027-01-01 | C212 (5) |
-| `border-green-4` | `border-success` | 2027-01-01 | C212 (5) |
-| `border-green-5` | `border-success` | 2027-01-01 | C212 (5) |
-| `border-green-6` | `border-success` | 2027-01-01 | C212 (5) |
-| `border-green-7` | `border-success` | 2027-01-01 | C212 (5) |
-| `border-green-8` | `border-success` | 2027-01-01 | C212 (5) |
-| `border-green-9` | `border-success` | 2027-01-01 | C212 (5) |
-| `border-blue` | `border-primary` | 2027-01-01 | C212 (5) |
-| `border-blue-0` | `border-primary-container` | 2027-01-01 | C212 (5) |
-| `border-blue-1` | `border-primary-container` | 2027-01-01 | C212 (5) |
-| `border-blue-2` | `border-primary-container-strong` | 2027-01-01 | C212 (5) |
-| `border-blue-3` | `border-primary-container-strong` | 2027-01-01 | C212 (5) |
-| `border-blue-4` | `border-primary` | 2027-01-01 | C212 (5) |
-| `border-blue-5` | `border-primary` | 2027-01-01 | C212 (5) |
-| `border-blue-6` | `border-primary` | 2027-01-01 | C212 (5) |
-| `border-blue-7` | `border-primary` | 2027-01-01 | C212 (5) |
-| `border-blue-8` | `border-primary` | 2027-01-01 | C212 (5) |
-| `border-blue-9` | `border-primary` | 2027-01-01 | C212 (5) |
-| `border-purple` | `border-tertiary` | 2027-01-01 | C212 (5) |
-| `border-purple-0` | `border-tertiary-container` | 2027-01-01 | C212 (5) |
-| `border-purple-1` | `border-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `border-purple-2` | `border-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `border-purple-3` | `border-tertiary` | 2027-01-01 | C212 (5) |
-| `border-purple-4` | `border-tertiary` | 2027-01-01 | C212 (5) |
-| `border-purple-5` | `border-tertiary` | 2027-01-01 | C212 (5) |
-| `border-purple-6` | `border-tertiary` | 2027-01-01 | C212 (5) |
-| `border-purple-7` | `border-tertiary` | 2027-01-01 | C212 (5) |
-| `border-purple-8` | `border-tertiary` | 2027-01-01 | C212 (5) |
-| `border-purple-9` | `border-tertiary` | 2027-01-01 | C212 (5) |
-| `border-pink` | `border-tertiary` | 2027-01-01 | C212 (5) |
-| `border-pink-0` | `border-tertiary-container` | 2027-01-01 | C212 (5) |
-| `border-pink-1` | `border-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `border-pink-2` | `border-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `border-pink-3` | `border-tertiary-container-strong` | 2027-01-01 | C212 (5) |
-| `border-pink-4` | `border-tertiary` | 2027-01-01 | C212 (5) |
-| `border-pink-5` | `border-tertiary` | 2027-01-01 | C212 (5) |
-| `border-pink-6` | `border-tertiary` | 2027-01-01 | C212 (5) |
-| `border-pink-7` | `border-tertiary` | 2027-01-01 | C212 (5) |
-| `border-pink-8` | `border-tertiary` | 2027-01-01 | C212 (5) |
-| `border-pink-9` | `border-tertiary` | 2027-01-01 | C212 (5) |
-| `placeholder-disable` | `placeholder-on-surface-disabled` | 2027-01-01 | C212 (5) |
-| `color-disable` | `color-on-surface-disabled` | 2027-01-01 | C212 (5) |
-| все классы модуля `mix-blend-mode` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `filter-brightness` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `filter-contrast` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `filter-grayscale` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `filter-hue-rotate` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `filter-invert` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `filter-opacity` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `filter-saturate` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `filter-sepia` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `backdrop-filer-hue-rotate` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `backdrop-filter-brightness` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `backdrop-filter-contrast` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `backdrop-filter-grayscale` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `backdrop-filter-invert` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `backdrop-filter-opacity` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `backdrop-filter-saturate` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `backdrop-filter-sepia` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `mask-clip` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `mask-composite` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `mask-mode` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `mask-origin` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `mask-position` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `mask-repeat` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `mask-size` | без замены | 2027-01-01 | C187 (5) |
-| все классы модуля `mask-type` | без замены | 2027-01-01 | C187 (5) |
-| `gr1-transparent` | `from-transparent` | 2027-01-01 | C212 (1) |
-| `gr1-current` | `from-current` | 2027-01-01 | C212 (1) |
-| `gr1-inherit` | `from-inherit` | 2027-01-01 | C212 (1) |
-| `gr1-surface-0` | `from-surface-page` | 2027-01-01 | C212 (1) |
-| `gr1-surface-page` | `from-surface-page` | 2027-01-01 | C212 (1) |
-| `gr1-surface-1` | `from-surface-area` | 2027-01-01 | C212 (1) |
-| `gr1-surface-area` | `from-surface-area` | 2027-01-01 | C212 (1) |
-| `gr1-on-surface` | `from-on-surface` | 2027-01-01 | C212 (1) |
-| `gr1-primary` | `from-primary` | 2027-01-01 | C212 (1) |
-| `gr1-primary-container` | `from-primary-container` | 2027-01-01 | C212 (1) |
-| `gr1-secondary` | `from-secondary` | 2027-01-01 | C212 (1) |
-| `gr1-secondary-container` | `from-secondary-container` | 2027-01-01 | C212 (1) |
-| `gr1-tertiary` | `from-tertiary` | 2027-01-01 | C212 (1) |
-| `gr1-tertiary-container` | `from-tertiary-container` | 2027-01-01 | C212 (1) |
-| `gr1-success` | `from-success` | 2027-01-01 | C212 (1) |
-| `gr1-warning` | `from-warning` | 2027-01-01 | C212 (1) |
-| `gr1-info` | `from-info` | 2027-01-01 | C212 (1) |
-| `gr2-transparent` | `via-transparent` | 2027-01-01 | C212 (1) |
-| `gr2-current` | `via-current` | 2027-01-01 | C212 (1) |
-| `gr2-inherit` | `via-inherit` | 2027-01-01 | C212 (1) |
-| `gr2-surface-0` | `via-surface-page` | 2027-01-01 | C212 (1) |
-| `gr2-surface-page` | `via-surface-page` | 2027-01-01 | C212 (1) |
-| `gr2-surface-1` | `via-surface-area` | 2027-01-01 | C212 (1) |
-| `gr2-surface-area` | `via-surface-area` | 2027-01-01 | C212 (1) |
-| `gr2-on-surface` | `via-on-surface` | 2027-01-01 | C212 (1) |
-| `gr2-primary` | `via-primary` | 2027-01-01 | C212 (1) |
-| `gr2-primary-container` | `via-primary-container` | 2027-01-01 | C212 (1) |
-| `gr2-secondary` | `via-secondary` | 2027-01-01 | C212 (1) |
-| `gr2-secondary-container` | `via-secondary-container` | 2027-01-01 | C212 (1) |
-| `gr2-tertiary` | `via-tertiary` | 2027-01-01 | C212 (1) |
-| `gr2-tertiary-container` | `via-tertiary-container` | 2027-01-01 | C212 (1) |
-| `gr2-success` | `via-success` | 2027-01-01 | C212 (1) |
-| `gr2-warning` | `via-warning` | 2027-01-01 | C212 (1) |
-| `gr2-info` | `via-info` | 2027-01-01 | C212 (1) |
-| `gr3-transparent` | `to-transparent` | 2027-01-01 | C212 (1) |
-| `gr3-current` | `to-current` | 2027-01-01 | C212 (1) |
-| `gr3-inherit` | `to-inherit` | 2027-01-01 | C212 (1) |
-| `gr3-surface-0` | `to-surface-page` | 2027-01-01 | C212 (1) |
-| `gr3-surface-page` | `to-surface-page` | 2027-01-01 | C212 (1) |
-| `gr3-surface-1` | `to-surface-area` | 2027-01-01 | C212 (1) |
-| `gr3-surface-area` | `to-surface-area` | 2027-01-01 | C212 (1) |
-| `gr3-on-surface` | `to-on-surface` | 2027-01-01 | C212 (1) |
-| `gr3-primary` | `to-primary` | 2027-01-01 | C212 (1) |
-| `gr3-primary-container` | `to-primary-container` | 2027-01-01 | C212 (1) |
-| `gr3-secondary` | `to-secondary` | 2027-01-01 | C212 (1) |
-| `gr3-secondary-container` | `to-secondary-container` | 2027-01-01 | C212 (1) |
-| `gr3-tertiary` | `to-tertiary` | 2027-01-01 | C212 (1) |
-| `gr3-tertiary-container` | `to-tertiary-container` | 2027-01-01 | C212 (1) |
-| `gr3-success` | `to-success` | 2027-01-01 | C212 (1) |
-| `gr3-warning` | `to-warning` | 2027-01-01 | C212 (1) |
-| `gr3-info` | `to-info` | 2027-01-01 | C212 (1) |
-| `from-surface-0` | `from-surface-page` | 2027-01-01 | C212 (1) |
-| `from-surface-1` | `from-surface-area` | 2027-01-01 | C212 (1) |
-| `via-surface-0` | `via-surface-page` | 2027-01-01 | C212 (1) |
-| `via-surface-1` | `via-surface-area` | 2027-01-01 | C212 (1) |
-| `to-surface-0` | `to-surface-page` | 2027-01-01 | C212 (1) |
-| `to-surface-1` | `to-surface-area` | 2027-01-01 | C212 (1) |
-| `gr1-surface-2` | `from-surface-area` | 2027-01-01 | C212 (1) |
-| `gr2-surface-2` | `via-surface-area` | 2027-01-01 | C212 (1) |
-| `gr3-surface-2` | `to-surface-area` | 2027-01-01 | C212 (1) |
-| `from-surface-2` | `from-surface-area` | 2027-01-01 | C212 (1) |
-| `via-surface-2` | `via-surface-area` | 2027-01-01 | C212 (1) |
-| `to-surface-2` | `to-surface-area` | 2027-01-01 | C212 (1) |
-| `gr-line-2` | `bg-gradient-to-r` | 2027-01-01 | C212 (1) |
-| `gr-line-3` | `bg-gradient-to-r` | 2027-01-01 | C212 (1) |
-| `gr-radial-2` | `gradient-glow` | 2027-01-01 | C212 (1) |
-| `gr-radial-3` | `gradient-glow` | 2027-01-01 | C212 (1) |
-| `gr-conic-2` | без замены | 2027-01-01 | C212 (1) |
-| `gr-conic-3` | без замены | 2027-01-01 | C212 (1) |
-| `from-, via-, to-<role>-<tone>` (семейство) | `…-…` той же ступени | 2027-01-01 | C212 (1) |
-| `from-, via-<hue>-<tone>` (семейство) | `gradient-color-…` той же ступени | 2027-01-01 | C212 (1) |
-| `to-<hue>-<tone>` (семейство) | `gradient-to-…` той же ступени | 2027-01-01 | C212 (1) |
-| `from-, via-neutral-<tone>` (семейство) | `gradient-color-gray` | 2027-01-01 | C212 (1) |
-| `to-neutral-<tone>` (семейство) | `gradient-to-gray` | 2027-01-01 | C212 (1) |
-| `ease-in` | `ease-exit` | 2027-01-01 | C187 (6) |
-| `ease-out` | `ease-enter` | 2027-01-01 | C187 (6) |
-| `ease-in-out` | `ease-move` | 2027-01-01 | C187 (6) |
-| `animation-from-bottom` | без замены | 2027-01-01 | C187 (6) |
-| `animation-from-left` | без замены | 2027-01-01 | C187 (6) |
-| `animation-from-right` | без замены | 2027-01-01 | C187 (6) |
-| все классы модуля `transition-delay` | без замены | 2027-01-01 | C187 (6) |
-| все классы модуля `will-change` | без замены | 2027-01-01 | C187 (6) |
-| `sf-tab` | `sf-tabs` | 2027-01-01 | C187 (8) |
-| `sf-emoji` | без замены | 2027-01-01 | C187 (8) |
-| `sf-outline` | без замены | 2027-01-01 | C187 (8) |
-| `sf-hide-show` | без замены | 2027-01-01 | C187 (8) |
-| `justify-start` | `content-main-start` | 2027-01-01 | C212 (2) |
-| `justify-end` | `content-main-end` | 2027-01-01 | C212 (2) |
-| `justify-center` | `content-main-center` | 2027-01-01 | C212 (2) |
-| `justify-between` | `content-main-between` | 2027-01-01 | C212 (2) |
-| `justify-around` | `content-main-around` | 2027-01-01 | C212 (2) |
-| `justify-evenly` | `content-main-evenly` | 2027-01-01 | C212 (2) |
-| `start-start` | `content-main-start` `items-cross-start` | 2027-01-01 | C212 (2) |
-| `start-center` | `content-main-start` `items-cross-center` | 2027-01-01 | C212 (2) |
-| `start-end` | `content-main-start` `items-cross-end` | 2027-01-01 | C212 (2) |
-| `center-start` | `content-main-center` `items-cross-start` | 2027-01-01 | C212 (2) |
-| `center-center` | `content-main-center` `items-cross-center` | 2027-01-01 | C212 (2) |
-| `center-end` | `content-main-center` `items-cross-end` | 2027-01-01 | C212 (2) |
-| `end-start` | `content-main-end` `items-cross-start` | 2027-01-01 | C212 (2) |
-| `end-center` | `content-main-end` `items-cross-center` | 2027-01-01 | C212 (2) |
-| `end-end` | `content-main-end` `items-cross-end` | 2027-01-01 | C212 (2) |
-| `sf-doc-example` | без замены | 2027-01-01 | C187 (8) |
-| `sf-doc-pair` | без замены | 2027-01-01 | C187 (8) |
-| `sf-doc-source` | без замены | 2027-01-01 | C187 (8) |
-| `sf-doc-lead` | без замены | 2027-01-01 | C187 (8) |
-| `sf-doc-code` | без замены | 2027-01-01 | C187 (8) |
-| `sf-doc-checkerboard` | без замены | 2027-01-01 | C187 (8) |
-| `sf-doc-stripes` | без замены | 2027-01-01 | C187 (8) |
-| `editor--default` | `sf-editor-overlay` | 2027-01-01 | C170 |
-| `sf-tabs--full` | `sf-tabs` | 2027-01-01 | C96 (1) |
-| `sf-step--stage-default` | `sf-step--state-ahead` | 2027-01-01 | C187 (1), C134, C101 |
-| `sf-step--stage-completed` | `sf-step--state-done` | 2027-01-01 | C187 (1), C134, C101 |
-| `sf-step--stage-error` | `sf-step--state-error` | 2027-01-01 | C187 (1), C134, C101 |
-| `sf-steps-separator--directional` | без замены | 2027-01-01 | C187 (1), C134, C101 |
-| `sf-page-number--circle` | `sf-page-number--square` | 2027-01-01 | C237 |
-| `sf-menu--framed` | `sf-menu` | 2027-01-01 | C238 |
-| `sf-online-indicator--offline` | без замены | 2027-01-01 | C152 (5), C185 (8) |
-| `sf-avatar-group--size-1/4` | `sf-avatar-group` | 2027-01-01 | C152 (6) |
-| `sf-avatar-group--size-1/3` | `sf-avatar-group` | 2027-01-01 | C152 (6) |
-| `sf-avatar-group--size-1/2` | `sf-avatar-group` | 2027-01-01 | C152 (6) |
-| `sf-avatar-card--portrait-9x16` | `sf-avatar-card--portrait` | 2027-01-01 | C230 |
-| `print-block` | `print-only` | 2027-01-01 | C212 (6) |
-| `print-inline` | `print-only` | 2027-01-01 | C212 (6) |
-| `print-inline-block` | `print-only` | 2027-01-01 | C212 (6) |
-| `print-flex` | `print-only` | 2027-01-01 | C212 (6) |
-| `print-inline-flex` | `print-only` | 2027-01-01 | C212 (6) |
-| `print-table` | `print-only` | 2027-01-01 | C212 (6) |
-| `print-visible-none` | `print-invisible` | 2027-01-01 | C212 (6) |
-| `layout-col-auto` | без замены | 2027-01-01 | C212 |
-| `grid-row-auto` | `row-auto` | 2027-01-01 | C212 |
-| `grid-row-span-1` | `row-span-1` | 2027-01-01 | C212 |
-| `grid-row-span-2` | `row-span-2` | 2027-01-01 | C212 |
-| `grid-row-span-3` | `row-span-3` | 2027-01-01 | C212 |
-| `grid-row-span-4` | `row-span-4` | 2027-01-01 | C212 |
-| `grid-row-span-5` | `row-span-5` | 2027-01-01 | C212 |
-| `grid-row-span-6` | `row-span-6` | 2027-01-01 | C212 |
-| `grid-row-span-full` | `row-span-full` | 2027-01-01 | C212 |
-| `-m-auto` | без замены | 2027-01-01 | IN-4 (RG-UT-L) |
-| `-m-top-auto` | без замены | 2027-01-01 | IN-4 (RG-UT-L) |
-| `-m-bottom-auto` | без замены | 2027-01-01 | IN-4 (RG-UT-L) |
-| `-m-inline-start-auto` | без замены | 2027-01-01 | IN-4 (RG-UT-L) |
-| `-m-inline-end-auto` | без замены | 2027-01-01 | IN-4 (RG-UT-L) |
-| `-m-inline-auto` | без замены | 2027-01-01 | IN-4 (RG-UT-L) |
-| `-m-block-auto` | без замены | 2027-01-01 | IN-4 (RG-UT-L) |
-| `bg-left` | `bg-inline-start` | 2027-01-01 | C212 |
-| `bg-left-top` | `bg-inline-start-top` | 2027-01-01 | C212 |
-| `bg-left-bottom` | `bg-inline-start-bottom` | 2027-01-01 | C212 |
-| `bg-right` | `bg-inline-end` | 2027-01-01 | C212 |
-| `bg-right-top` | `bg-inline-end-top` | 2027-01-01 | C212 |
-| `bg-right-bottom` | `bg-inline-end-bottom` | 2027-01-01 | C212 |
-| `blur` | `blur-medium` | 2027-01-01 | C212 |
-| `backdrop-blur` | `backdrop-blur-medium` | 2027-01-01 | C212 |
-| `radius-square` | `radius-0` | 2027-01-01 | C212 |
-| `radius-top-square` | `radius-top-0` | 2027-01-01 | C212 |
-| `radius-bottom-square` | `radius-bottom-0` | 2027-01-01 | C212 |
-| `radius-inline-start-square` | `radius-inline-start-0` | 2027-01-01 | C212 |
-| `radius-inline-end-square` | `radius-inline-end-0` | 2027-01-01 | C212 |
-| `radius-top-inline-start-square` | `radius-top-inline-start-0` | 2027-01-01 | C212 |
-| `radius-top-inline-end-square` | `radius-top-inline-end-0` | 2027-01-01 | C212 |
-| `radius-bottom-inline-start-square` | `radius-bottom-inline-start-0` | 2027-01-01 | C212 |
-| `radius-bottom-inline-end-square` | `radius-bottom-inline-end-0` | 2027-01-01 | C212 |
-| `tracking-no-tracking` | `tracking-normal` | 2027-01-01 | C212 |
-| `aspect-9x16` | `aspect-3x4` | 2027-01-01 | C264 |
-| `aspect-1x2` | `aspect-3x4` | 2027-01-01 | C264 |
-| `aspect-2x3` | `aspect-3x4` | 2027-01-01 | C264 |
-| `aspect-2x1` | `aspect-16x9` | 2027-01-01 | C264 |
-| `aspect-3x1` | `aspect-21x9` | 2027-01-01 | C264 |
-| `aspect-4x1` | `aspect-21x9` | 2027-01-01 | C264 |
-| `scroll-mt-*` (семейство) | `scroll-m-top-…` той же ступени | 2027-01-01 | C266 |
-| `scroll-mb-*` (семейство) | `scroll-m-bottom-…` той же ступени | 2027-01-01 | C266 |
-| `scroll-my-*` (семейство) | `scroll-m-block-…` той же ступени | 2027-01-01 | C266 |
-| `scroll-pt-*` (семейство) | `scroll-p-top-…` той же ступени | 2027-01-01 | C266 |
-| `scroll-pb-*` (семейство) | `scroll-p-bottom-…` той же ступени | 2027-01-01 | C266 |
-| `scroll-pl-*` (семейство) | `scroll-p-inline-start-…` той же ступени | 2027-01-01 | C266 |
-| `scroll-pr-*` (семейство) | `scroll-p-inline-end-…` той же ступени | 2027-01-01 | C266 |
-| `scroll-px-*` (семейство) | `scroll-p-x-…` той же ступени | 2027-01-01 | C266 |
-| `scroll-py-*` (семейство) | `scroll-p-y-…` той же ступени | 2027-01-01 | C266 |
-| `pointer-event-*` (семейство) | `pointer-events-…` той же ступени | 2027-01-01 | C268 |
-| `scale-1/4` | `scale-80` | 2027-01-01 | C271 |
-| `scale-1/3` | `scale-90` | 2027-01-01 | C271 |
-| `scale-1/2` | `scale-95` | 2027-01-01 | C271 |
-| `scale-1` | `scale-100` | 2027-01-01 | C271 |
-| `scale-2` | `scale-105` | 2027-01-01 | C271 |
-| `scale-3` | `scale-110` | 2027-01-01 | C271 |
-| `scale-4` | `scale-120` | 2027-01-01 | C271 |
-| `scale-x-1/4` | `scale-x-80` | 2027-01-01 | C271 |
-| `scale-x-1/3` | `scale-x-90` | 2027-01-01 | C271 |
-| `scale-x-1/2` | `scale-x-95` | 2027-01-01 | C271 |
-| `scale-x-1` | `scale-x-100` | 2027-01-01 | C271 |
-| `scale-x-2` | `scale-x-105` | 2027-01-01 | C271 |
-| `scale-x-3` | `scale-x-110` | 2027-01-01 | C271 |
-| `scale-x-4` | `scale-x-120` | 2027-01-01 | C271 |
-| `scale-y-1/4` | `scale-y-80` | 2027-01-01 | C271 |
-| `scale-y-1/3` | `scale-y-90` | 2027-01-01 | C271 |
-| `scale-y-1/2` | `scale-y-95` | 2027-01-01 | C271 |
-| `scale-y-1` | `scale-y-100` | 2027-01-01 | C271 |
-| `scale-y-2` | `scale-y-105` | 2027-01-01 | C271 |
-| `scale-y-3` | `scale-y-110` | 2027-01-01 | C271 |
-| `scale-y-4` | `scale-y-120` | 2027-01-01 | C271 |
-| все классы модуля `transform-skew` | без замены | 2027-01-01 | C272 |
-| `d1` | `sf-display-1` | 2027-01-01 | C274 |
-| `display1` | `sf-display-1` | 2027-01-01 | C274 |
-| `d2` | `sf-display-2` | 2027-01-01 | C274 |
-| `display2` | `sf-display-2` | 2027-01-01 | C274 |
-| `d3` | `sf-display-3` | 2027-01-01 | C274 |
-| `display3` | `sf-display-3` | 2027-01-01 | C274 |
-| `d4` | `sf-display-4` | 2027-01-01 | C274 |
-| `display4` | `sf-display-4` | 2027-01-01 | C274 |
-| `d5` | `sf-display-5` | 2027-01-01 | C274 |
-| `display5` | `sf-display-5` | 2027-01-01 | C274 |
-| `d6` | `sf-display-6` | 2027-01-01 | C274 |
-| `display6` | `sf-display-6` | 2027-01-01 | C274 |
-| `text` | `text-1` | 2027-01-01 | C274 |
-| `text-medium` | `text-1` | 2027-01-01 | C274 |
-| `text-small` | `text-1/2` | 2027-01-01 | C274 |
-| `text-large` | `text-2` | 2027-01-01 | C274 |
-| `label` | `text-1/3` | 2027-01-01 | C274 |
-| `label-medium` | `text-1/3` | 2027-01-01 | C274 |
-| `label-small` | `text-1/4` | 2027-01-01 | C274 |
-| `label-large` | `sf-label-large` | 2027-01-01 | C274 |
-| `body-text` | `text-1` | 2027-01-01 | C274 |
-| `body-text-medium` | `text-1` | 2027-01-01 | C274 |
-| `body-text-small` | `text-1/2` | 2027-01-01 | C274 |
-| `body-text-large` | `text-2` | 2027-01-01 | C274 |
-| все классы модуля `scroll-slider-color` | без замены | 2027-01-01 | C208 (2), (3) |
-| все классы модуля `scroll-slider-width` | без замены | 2027-01-01 | C208 (2), (3) |
-| все классы модуля `scroll-backdrop-width` | без замены | 2027-01-01 | C208 (2), (3) |
-| все классы модуля `scroll-hover` | без замены | 2027-01-01 | C210 (5) |
-| все классы модуля `scroll-subtle` | без замены | 2027-01-01 | C210 (5) |
-| все классы модуля `scroll-backdrop-color` | без замены | 2027-01-01 | C210 (5) |
-| все классы модуля `scroll-backdrop-radius` | без замены | 2027-01-01 | C210 (5) |
-| все классы модуля `scroll-slider-radius` | без замены | 2027-01-01 | C210 (5) |
-| `scrollbar` | без замены | 2027-01-01 | C210 (5) |
+```text
+table-sm                            →  data-sf-density="compact"  (C185 (2))
+table-small                         →  data-sf-density="compact"  (C185 (2))
+wrap-none                           →  text-nowrap  (C186 (8))
+text-break-word                     →  text-break  (C186 (8))
+text-break-all                      →  text-break  (C186 (8))
+t-ellipsis                          →  truncate  (C186 (8))
+t-clip                              →  truncate  (C186 (8))
+max-w-prose                         →  measure  (C212 (3))
+regular                             →  weight-regular  (C212 (3))
+weight-4                            →  weight-regular  (C212 (3))
+weight-5                            →  weight-medium  (C212 (3))
+bold                                →  weight-bold  (C212 (3))
+weight-7                            →  weight-bold  (C212 (3))
+weight-1                            →  weight-regular  (C212 (3))
+weight-2                            →  weight-regular  (C212 (3))
+weight-3                            →  weight-regular  (C212 (3))
+lighter                             →  weight-regular  (C212 (3))
+weight-6                            →  weight-medium  (C212 (3))
+weight-8                            →  weight-bold  (C212 (3))
+weight-9                            →  weight-bold  (C212 (3))
+bolder                              →  weight-bold  (C212 (3))
+line-tight                          →  line-N  (C212 (3))
+line-snug                           →  line-N  (C212 (3))
+line-normal                         →  line-N  (C212 (3))
+line-relaxed                        →  line-N  (C212 (3))
+line-loose                          →  line-N  (C212 (3))
+line-none                           →  line-N  (C212 (3))
+все классы модуля margin-ext        →  без замены  (C187 (2))
+все классы модуля padding-ext       →  без замены  (C187 (2))
+все классы модуля scroll-margin-ext  →  без замены  (C187 (2))
+все классы модуля scroll-padding-ext  →  без замены  (C187 (2))
+все классы модуля background-size-ext  →  без замены  (C187 (2))
+все классы модуля transform-translate-ext  →  без замены  (C187 (2))
+w-1/1                               →  w-full  (C212 (4))
+w-10/12                             →  w-5/6  (C212 (4))
+w-2/12                              →  w-1/6  (C212 (4))
+w-2/4                               →  w-1/2  (C212 (4))
+w-2/6                               →  w-1/3  (C212 (4))
+w-3/12                              →  w-1/4  (C212 (4))
+w-3/6                               →  w-1/2  (C212 (4))
+w-4/12                              →  w-1/3  (C212 (4))
+w-4/6                               →  w-2/3  (C212 (4))
+w-6/12                              →  w-1/2  (C212 (4))
+w-8/12                              →  w-2/3  (C212 (4))
+w-9/12                              →  w-3/4  (C212 (4))
+basis-1/1                           →  basis-full  (C212 (4))
+basis-10/12                         →  basis-5/6  (C212 (4))
+basis-2/12                          →  basis-1/6  (C212 (4))
+basis-2/4                           →  basis-1/2  (C212 (4))
+basis-2/6                           →  basis-1/3  (C212 (4))
+basis-3/12                          →  basis-1/4  (C212 (4))
+basis-3/6                           →  basis-1/2  (C212 (4))
+basis-4/12                          →  basis-1/3  (C212 (4))
+basis-4/6                           →  basis-2/3  (C212 (4))
+basis-6/12                          →  basis-1/2  (C212 (4))
+basis-8/12                          →  basis-2/3  (C212 (4))
+basis-9/12                          →  basis-3/4  (C212 (4))
+h-2/4                               →  h-1/2  (C212 (4))
+h-2/6                               →  h-1/3  (C212 (4))
+h-3/6                               →  h-1/2  (C212 (4))
+h-4/6                               →  h-2/3  (C212 (4))
+h-screen-2/4                        →  h-screen-1/2  (C212 (4))
+top-10/12                           →  top-5/6  (C212 (4))
+top-2/12                            →  top-1/6  (C212 (4))
+top-2/4                             →  top-1/2  (C212 (4))
+top-2/6                             →  top-1/3  (C212 (4))
+top-3/12                            →  top-1/4  (C212 (4))
+top-3/6                             →  top-1/2  (C212 (4))
+top-4/12                            →  top-1/3  (C212 (4))
+top-4/6                             →  top-2/3  (C212 (4))
+top-6/12                            →  top-1/2  (C212 (4))
+top-8/12                            →  top-2/3  (C212 (4))
+top-9/12                            →  top-3/4  (C212 (4))
+bottom-10/12                        →  bottom-5/6  (C212 (4))
+bottom-2/12                         →  bottom-1/6  (C212 (4))
+bottom-2/4                          →  bottom-1/2  (C212 (4))
+bottom-2/6                          →  bottom-1/3  (C212 (4))
+bottom-3/12                         →  bottom-1/4  (C212 (4))
+bottom-3/6                          →  bottom-1/2  (C212 (4))
+bottom-4/12                         →  bottom-1/3  (C212 (4))
+bottom-4/6                          →  bottom-2/3  (C212 (4))
+bottom-6/12                         →  bottom-1/2  (C212 (4))
+bottom-8/12                         →  bottom-2/3  (C212 (4))
+bottom-9/12                         →  bottom-3/4  (C212 (4))
+inline-start-10/12                  →  inline-start-5/6  (C212 (4))
+inline-start-2/12                   →  inline-start-1/6  (C212 (4))
+inline-start-2/4                    →  inline-start-1/2  (C212 (4))
+inline-start-2/6                    →  inline-start-1/3  (C212 (4))
+inline-start-3/12                   →  inline-start-1/4  (C212 (4))
+inline-start-3/6                    →  inline-start-1/2  (C212 (4))
+inline-start-4/12                   →  inline-start-1/3  (C212 (4))
+inline-start-4/6                    →  inline-start-2/3  (C212 (4))
+inline-start-6/12                   →  inline-start-1/2  (C212 (4))
+inline-start-8/12                   →  inline-start-2/3  (C212 (4))
+inline-start-9/12                   →  inline-start-3/4  (C212 (4))
+inline-end-10/12                    →  inline-end-5/6  (C212 (4))
+inline-end-2/12                     →  inline-end-1/6  (C212 (4))
+inline-end-2/4                      →  inline-end-1/2  (C212 (4))
+inline-end-2/6                      →  inline-end-1/3  (C212 (4))
+inline-end-3/12                     →  inline-end-1/4  (C212 (4))
+inline-end-3/6                      →  inline-end-1/2  (C212 (4))
+inline-end-4/12                     →  inline-end-1/3  (C212 (4))
+inline-end-4/6                      →  inline-end-2/3  (C212 (4))
+inline-end-6/12                     →  inline-end-1/2  (C212 (4))
+inline-end-8/12                     →  inline-end-2/3  (C212 (4))
+inline-end-9/12                     →  inline-end-3/4  (C212 (4))
+g-0                                 →  gap-0  (C212 (4))
+g-1                                 →  gap-1  (C212 (4))
+g-1/2                               →  gap-1/2  (C212 (4))
+g-1/3                               →  gap-1/3  (C212 (4))
+g-1/4                               →  gap-1/4  (C212 (4))
+g-2                                 →  gap-2  (C212 (4))
+g-3                                 →  gap-3  (C212 (4))
+g-4                                 →  gap-4  (C212 (4))
+g-5                                 →  gap-5  (C212 (4))
+g-6                                 →  gap-6  (C212 (4))
+g-7                                 →  gap-7  (C212 (4))
+g-8                                 →  gap-8  (C212 (4))
+g-x-0                               →  gap-x-0  (C212 (4))
+g-x-1                               →  gap-x-1  (C212 (4))
+g-x-1/2                             →  gap-x-1/2  (C212 (4))
+g-x-1/3                             →  gap-x-1/3  (C212 (4))
+g-x-1/4                             →  gap-x-1/4  (C212 (4))
+g-x-2                               →  gap-x-2  (C212 (4))
+g-x-3                               →  gap-x-3  (C212 (4))
+g-x-4                               →  gap-x-4  (C212 (4))
+g-x-5                               →  gap-x-5  (C212 (4))
+g-x-6                               →  gap-x-6  (C212 (4))
+g-x-7                               →  gap-x-7  (C212 (4))
+g-x-8                               →  gap-x-8  (C212 (4))
+g-y-0                               →  gap-y-0  (C212 (4))
+g-y-1                               →  gap-y-1  (C212 (4))
+g-y-1/2                             →  gap-y-1/2  (C212 (4))
+g-y-1/3                             →  gap-y-1/3  (C212 (4))
+g-y-1/4                             →  gap-y-1/4  (C212 (4))
+g-y-2                               →  gap-y-2  (C212 (4))
+g-y-3                               →  gap-y-3  (C212 (4))
+g-y-4                               →  gap-y-4  (C212 (4))
+g-y-5                               →  gap-y-5  (C212 (4))
+g-y-6                               →  gap-y-6  (C212 (4))
+g-y-7                               →  gap-y-7  (C212 (4))
+g-y-8                               →  gap-y-8  (C212 (4))
+w-20                                →  w-1/5  (C212 (4))
+w-25                                →  w-1/4  (C212 (4))
+w-40                                →  w-2/5  (C212 (4))
+w-50                                →  w-1/2  (C212 (4))
+w-60                                →  w-3/5  (C212 (4))
+w-75                                →  w-3/4  (C212 (4))
+w-80                                →  w-4/5  (C212 (4))
+basis-20                            →  basis-1/5  (C212 (4))
+basis-25                            →  basis-1/4  (C212 (4))
+basis-40                            →  basis-2/5  (C212 (4))
+basis-50                            →  basis-1/2  (C212 (4))
+basis-60                            →  basis-3/5  (C212 (4))
+basis-75                            →  basis-3/4  (C212 (4))
+basis-80                            →  basis-4/5  (C212 (4))
+basis-100                           →  basis-full  (C212 (4))
+h-content-min                       →  h-min  (C212 (4))
+h-content-max                       →  h-max  (C212 (4))
+col-gap-* (семейство)               →  gap-x-… (той же ступени)  (C212 (4))
+row-gap-* (семейство)               →  gap-y-… (той же ступени)  (C212 (4))
+w-1                                 →  w-1/12  (C212 (4))
+w-2                                 →  w-1/12  (C212 (4))
+w-3                                 →  w-1/12  (C212 (4))
+w-4                                 →  w-1/12  (C212 (4))
+w-5                                 →  w-1/12  (C212 (4))
+w-6                                 →  w-1/12  (C212 (4))
+w-7                                 →  w-1/12  (C212 (4))
+w-8                                 →  w-1/12  (C212 (4))
+w-9                                 →  w-1/12  (C212 (4))
+w-10                                →  w-1/12  (C212 (4))
+w-11                                →  w-1/12  (C212 (4))
+w-12                                →  w-1/12  (C212 (4))
+w-13                                →  w-1/6  (C212 (4))
+w-14                                →  w-1/6  (C212 (4))
+w-15                                →  w-1/6  (C212 (4))
+w-16                                →  w-1/6  (C212 (4))
+w-17                                →  w-1/6  (C212 (4))
+w-18                                →  w-1/6  (C212 (4))
+w-19                                →  w-1/5  (C212 (4))
+w-21                                →  w-1/5  (C212 (4))
+w-22                                →  w-1/5  (C212 (4))
+w-23                                →  w-1/4  (C212 (4))
+w-24                                →  w-1/4  (C212 (4))
+w-26                                →  w-1/4  (C212 (4))
+w-27                                →  w-1/4  (C212 (4))
+w-28                                →  w-1/4  (C212 (4))
+w-29                                →  w-1/4  (C212 (4))
+w-30                                →  w-1/3  (C212 (4))
+w-31                                →  w-1/3  (C212 (4))
+w-32                                →  w-1/3  (C212 (4))
+w-33                                →  w-1/3  (C212 (4))
+w-34                                →  w-1/3  (C212 (4))
+w-35                                →  w-1/3  (C212 (4))
+w-36                                →  w-1/3  (C212 (4))
+w-37                                →  w-2/5  (C212 (4))
+w-38                                →  w-2/5  (C212 (4))
+w-39                                →  w-2/5  (C212 (4))
+w-41                                →  w-5/12  (C212 (4))
+w-42                                →  w-5/12  (C212 (4))
+w-43                                →  w-5/12  (C212 (4))
+w-44                                →  w-5/12  (C212 (4))
+w-45                                →  w-5/12  (C212 (4))
+w-46                                →  w-1/2  (C212 (4))
+w-47                                →  w-1/2  (C212 (4))
+w-48                                →  w-1/2  (C212 (4))
+w-49                                →  w-1/2  (C212 (4))
+w-51                                →  w-1/2  (C212 (4))
+w-52                                →  w-1/2  (C212 (4))
+w-53                                →  w-1/2  (C212 (4))
+w-54                                →  w-1/2  (C212 (4))
+w-55                                →  w-7/12  (C212 (4))
+w-56                                →  w-7/12  (C212 (4))
+w-57                                →  w-7/12  (C212 (4))
+w-58                                →  w-7/12  (C212 (4))
+w-59                                →  w-7/12  (C212 (4))
+w-61                                →  w-3/5  (C212 (4))
+w-62                                →  w-3/5  (C212 (4))
+w-63                                →  w-3/5  (C212 (4))
+w-64                                →  w-2/3  (C212 (4))
+w-65                                →  w-2/3  (C212 (4))
+w-66                                →  w-2/3  (C212 (4))
+w-67                                →  w-2/3  (C212 (4))
+w-68                                →  w-2/3  (C212 (4))
+w-69                                →  w-2/3  (C212 (4))
+w-70                                →  w-2/3  (C212 (4))
+w-71                                →  w-3/4  (C212 (4))
+w-72                                →  w-3/4  (C212 (4))
+w-73                                →  w-3/4  (C212 (4))
+w-74                                →  w-3/4  (C212 (4))
+w-76                                →  w-3/4  (C212 (4))
+w-77                                →  w-3/4  (C212 (4))
+w-78                                →  w-4/5  (C212 (4))
+w-79                                →  w-4/5  (C212 (4))
+w-81                                →  w-4/5  (C212 (4))
+w-82                                →  w-5/6  (C212 (4))
+w-83                                →  w-5/6  (C212 (4))
+w-84                                →  w-5/6  (C212 (4))
+w-85                                →  w-5/6  (C212 (4))
+w-86                                →  w-5/6  (C212 (4))
+w-87                                →  w-5/6  (C212 (4))
+w-88                                →  w-11/12  (C212 (4))
+w-89                                →  w-11/12  (C212 (4))
+w-90                                →  w-11/12  (C212 (4))
+w-91                                →  w-11/12  (C212 (4))
+w-92                                →  w-11/12  (C212 (4))
+w-93                                →  w-11/12  (C212 (4))
+w-94                                →  w-11/12  (C212 (4))
+w-95                                →  w-11/12  (C212 (4))
+w-96                                →  w-full  (C212 (4))
+w-97                                →  w-full  (C212 (4))
+w-98                                →  w-full  (C212 (4))
+w-99                                →  w-full  (C212 (4))
+space-x-reverse                     →  без замены  (C212 (4))
+space-y-reverse                     →  без замены  (C212 (4))
+basis-1                             →  basis-1/12  (C212 (4))
+basis-2                             →  basis-1/12  (C212 (4))
+basis-3                             →  basis-1/12  (C212 (4))
+basis-4                             →  basis-1/12  (C212 (4))
+basis-5                             →  basis-1/12  (C212 (4))
+basis-6                             →  basis-1/12  (C212 (4))
+basis-7                             →  basis-1/12  (C212 (4))
+basis-8                             →  basis-1/12  (C212 (4))
+basis-9                             →  basis-1/12  (C212 (4))
+basis-10                            →  basis-1/12  (C212 (4))
+basis-11                            →  basis-1/12  (C212 (4))
+basis-12                            →  basis-1/12  (C212 (4))
+basis-13                            →  basis-1/6  (C212 (4))
+basis-14                            →  basis-1/6  (C212 (4))
+basis-15                            →  basis-1/6  (C212 (4))
+basis-16                            →  basis-1/6  (C212 (4))
+basis-17                            →  basis-1/6  (C212 (4))
+basis-18                            →  basis-1/6  (C212 (4))
+basis-19                            →  basis-1/5  (C212 (4))
+basis-21                            →  basis-1/5  (C212 (4))
+basis-22                            →  basis-1/5  (C212 (4))
+basis-23                            →  basis-1/4  (C212 (4))
+basis-24                            →  basis-1/4  (C212 (4))
+basis-26                            →  basis-1/4  (C212 (4))
+basis-27                            →  basis-1/4  (C212 (4))
+basis-28                            →  basis-1/4  (C212 (4))
+basis-29                            →  basis-1/4  (C212 (4))
+basis-30                            →  basis-1/3  (C212 (4))
+basis-31                            →  basis-1/3  (C212 (4))
+basis-32                            →  basis-1/3  (C212 (4))
+basis-33                            →  basis-1/3  (C212 (4))
+basis-34                            →  basis-1/3  (C212 (4))
+basis-35                            →  basis-1/3  (C212 (4))
+basis-36                            →  basis-1/3  (C212 (4))
+basis-37                            →  basis-2/5  (C212 (4))
+basis-38                            →  basis-2/5  (C212 (4))
+basis-39                            →  basis-2/5  (C212 (4))
+basis-41                            →  basis-5/12  (C212 (4))
+basis-42                            →  basis-5/12  (C212 (4))
+basis-43                            →  basis-5/12  (C212 (4))
+basis-44                            →  basis-5/12  (C212 (4))
+basis-45                            →  basis-5/12  (C212 (4))
+basis-46                            →  basis-1/2  (C212 (4))
+basis-47                            →  basis-1/2  (C212 (4))
+basis-48                            →  basis-1/2  (C212 (4))
+basis-49                            →  basis-1/2  (C212 (4))
+basis-51                            →  basis-1/2  (C212 (4))
+basis-52                            →  basis-1/2  (C212 (4))
+basis-53                            →  basis-1/2  (C212 (4))
+basis-54                            →  basis-1/2  (C212 (4))
+basis-55                            →  basis-7/12  (C212 (4))
+basis-56                            →  basis-7/12  (C212 (4))
+basis-57                            →  basis-7/12  (C212 (4))
+basis-58                            →  basis-7/12  (C212 (4))
+basis-59                            →  basis-7/12  (C212 (4))
+basis-61                            →  basis-3/5  (C212 (4))
+basis-62                            →  basis-3/5  (C212 (4))
+basis-63                            →  basis-3/5  (C212 (4))
+basis-64                            →  basis-2/3  (C212 (4))
+basis-65                            →  basis-2/3  (C212 (4))
+basis-66                            →  basis-2/3  (C212 (4))
+basis-67                            →  basis-2/3  (C212 (4))
+basis-68                            →  basis-2/3  (C212 (4))
+basis-69                            →  basis-2/3  (C212 (4))
+basis-70                            →  basis-2/3  (C212 (4))
+basis-71                            →  basis-3/4  (C212 (4))
+basis-72                            →  basis-3/4  (C212 (4))
+basis-73                            →  basis-3/4  (C212 (4))
+basis-74                            →  basis-3/4  (C212 (4))
+basis-76                            →  basis-3/4  (C212 (4))
+basis-77                            →  basis-3/4  (C212 (4))
+basis-78                            →  basis-4/5  (C212 (4))
+basis-79                            →  basis-4/5  (C212 (4))
+basis-81                            →  basis-4/5  (C212 (4))
+basis-82                            →  basis-5/6  (C212 (4))
+basis-83                            →  basis-5/6  (C212 (4))
+basis-84                            →  basis-5/6  (C212 (4))
+basis-85                            →  basis-5/6  (C212 (4))
+basis-86                            →  basis-5/6  (C212 (4))
+basis-87                            →  basis-5/6  (C212 (4))
+basis-88                            →  basis-11/12  (C212 (4))
+basis-89                            →  basis-11/12  (C212 (4))
+basis-90                            →  basis-11/12  (C212 (4))
+basis-91                            →  basis-11/12  (C212 (4))
+basis-92                            →  basis-11/12  (C212 (4))
+basis-93                            →  basis-11/12  (C212 (4))
+basis-94                            →  basis-11/12  (C212 (4))
+basis-95                            →  basis-11/12  (C212 (4))
+basis-96                            →  basis-full  (C212 (4))
+basis-97                            →  basis-full  (C212 (4))
+basis-98                            →  basis-full  (C212 (4))
+basis-99                            →  basis-full  (C212 (4))
+space-x-* (семейство)               →  gap-x-… (той же ступени)  (C212 (4))
+space-y-* (семейство)               →  gap-y-… (той же ступени)  (C212 (4))
+m-, p-, scroll-m-, scroll-p- <a0-i9> (семейство)  →  …-… (той же ступени)  (C212 (4))
+-scroll-m-, -scroll-p- <a0-i9> (семейство)  →  без замены  (C212 (4))
+ring-3                              →  ring-2  (C187 (3))
+ring-4                              →  ring-2  (C187 (3))
+все классы модуля ring-opacity      →  без замены  (C187 (3))
+divider-* (семейство)               →  divide-… (той же ступени)  (C187 (4))
+все классы модуля divider-opacity   →  divide-outline-variant  (C187 (4))
+bg-disable                          →  bg-surface-disabled  (C212 (5))
+bg-error-transparent-overlay        →  bg-error-container-strong  (C212 (5))
+bg-error-transparent-select         →  bg-error-state-select  (C212 (5))
+bg-primary-transparent-overlay      →  bg-primary-container-strong  (C212 (5))
+bg-primary-transparent-select       →  bg-primary-state-select  (C212 (5))
+bg-secondary-transparent-overlay    →  bg-secondary-container-strong  (C212 (5))
+bg-secondary-transparent-select     →  bg-secondary-state-select  (C212 (5))
+bg-success-transparent-overlay      →  bg-success-container-strong  (C212 (5))
+bg-success-transparent-select       →  bg-success-state-select  (C212 (5))
+bg-surface-0                        →  bg-surface-page  (C212 (5))
+bg-surface-1                        →  bg-surface-area  (C212 (5))
+bg-surface-transparent-overlay      →  bg-surface-container-strong  (C212 (5))
+bg-surface-transparent-select       →  bg-surface-state-select  (C212 (5))
+bg-tertiary-transparent-overlay     →  bg-tertiary-container-strong  (C212 (5))
+bg-tertiary-transparent-select      →  bg-tertiary-state-select  (C212 (5))
+bg-warning-transparent-overlay      →  bg-warning-container-strong  (C212 (5))
+bg-warning-transparent-select       →  bg-warning-state-select  (C212 (5))
+border-error-transparent-overlay    →  border-error-container-strong  (C212 (5))
+border-primary-transparent-overlay  →  border-primary-container-strong  (C212 (5))
+border-secondary-transparent-overlay  →  border-secondary-container-strong  (C212 (5))
+border-success-transparent-overlay  →  border-success-container-strong  (C212 (5))
+border-surface-0                    →  border-surface-page  (C212 (5))
+border-surface-1                    →  border-surface-area  (C212 (5))
+border-surface-overlay              →  border-surface-veil  (C212 (5))
+border-surface-transparent-overlay  →  border-surface-container-strong  (C212 (5))
+border-tertiary-transparent-overlay  →  border-tertiary-container-strong  (C212 (5))
+border-warning-transparent-overlay  →  border-warning-container-strong  (C212 (5))
+color-on-disable                    →  color-on-surface-disabled  (C212 (5))
+drop-shadow-error-transparent-overlay  →  drop-shadow-error-container-strong  (C212 (5))
+drop-shadow-error-transparent-select  →  drop-shadow-error-state-select  (C212 (5))
+drop-shadow-primary-transparent-overlay  →  drop-shadow-primary-container-strong  (C212 (5))
+drop-shadow-primary-transparent-select  →  drop-shadow-primary-state-select  (C212 (5))
+drop-shadow-secondary-transparent-overlay  →  drop-shadow-secondary-container-strong  (C212 (5))
+drop-shadow-secondary-transparent-select  →  drop-shadow-secondary-state-select  (C212 (5))
+drop-shadow-success-transparent-overlay  →  drop-shadow-success-container-strong  (C212 (5))
+drop-shadow-success-transparent-select  →  drop-shadow-success-state-select  (C212 (5))
+drop-shadow-surface-0               →  drop-shadow-surface-page  (C212 (5))
+drop-shadow-surface-1               →  drop-shadow-surface-area  (C212 (5))
+drop-shadow-tertiary-transparent-overlay  →  drop-shadow-tertiary-container-strong  (C212 (5))
+drop-shadow-tertiary-transparent-select  →  drop-shadow-tertiary-state-select  (C212 (5))
+drop-shadow-warning-transparent-overlay  →  drop-shadow-warning-container-strong  (C212 (5))
+drop-shadow-warning-transparent-select  →  drop-shadow-warning-state-select  (C212 (5))
+fill-disable                        →  fill-surface-disabled  (C212 (5))
+fill-error-transparent-overlay      →  fill-error-container-strong  (C212 (5))
+fill-error-transparent-select       →  fill-error-state-select  (C212 (5))
+fill-primary-transparent-overlay    →  fill-primary-container-strong  (C212 (5))
+fill-primary-transparent-select     →  fill-primary-state-select  (C212 (5))
+fill-secondary-transparent-overlay  →  fill-secondary-container-strong  (C212 (5))
+fill-secondary-transparent-select   →  fill-secondary-state-select  (C212 (5))
+fill-success-transparent-overlay    →  fill-success-container-strong  (C212 (5))
+fill-success-transparent-select     →  fill-success-state-select  (C212 (5))
+fill-surface-0                      →  fill-surface-page  (C212 (5))
+fill-surface-1                      →  fill-surface-area  (C212 (5))
+fill-surface-transparent-overlay    →  fill-surface-container-strong  (C212 (5))
+fill-surface-transparent-select     →  fill-surface-state-select  (C212 (5))
+fill-tertiary-transparent-overlay   →  fill-tertiary-container-strong  (C212 (5))
+fill-tertiary-transparent-select    →  fill-tertiary-state-select  (C212 (5))
+fill-warning-transparent-overlay    →  fill-warning-container-strong  (C212 (5))
+fill-warning-transparent-select     →  fill-warning-state-select  (C212 (5))
+placeholder-on-disable              →  placeholder-on-surface-disabled  (C212 (5))
+ring-error-transparent-overlay      →  ring-error-container-strong  (C212 (5))
+ring-offset-error-transparent-overlay  →  ring-offset-error-container-strong  (C212 (5))
+ring-offset-primary-transparent-overlay  →  ring-offset-primary-container-strong  (C212 (5))
+ring-offset-secondary-transparent-overlay  →  ring-offset-secondary-container-strong  (C212 (5))
+ring-offset-success-transparent-overlay  →  ring-offset-success-container-strong  (C212 (5))
+ring-offset-surface-0               →  ring-offset-surface-page  (C212 (5))
+ring-offset-surface-1               →  ring-offset-surface-area  (C212 (5))
+ring-offset-surface-overlay         →  ring-offset-surface-veil  (C212 (5))
+ring-offset-surface-transparent-overlay  →  ring-offset-surface-container-strong  (C212 (5))
+ring-offset-tertiary-transparent-overlay  →  ring-offset-tertiary-container-strong  (C212 (5))
+ring-offset-warning-transparent-overlay  →  ring-offset-warning-container-strong  (C212 (5))
+ring-primary-transparent-overlay    →  ring-primary-container-strong  (C212 (5))
+ring-secondary-transparent-overlay  →  ring-secondary-container-strong  (C212 (5))
+ring-success-transparent-overlay    →  ring-success-container-strong  (C212 (5))
+ring-surface-0                      →  ring-surface-page  (C212 (5))
+ring-surface-1                      →  ring-surface-area  (C212 (5))
+ring-surface-overlay                →  ring-surface-veil  (C212 (5))
+ring-surface-transparent-overlay    →  ring-surface-container-strong  (C212 (5))
+ring-tertiary-transparent-overlay   →  ring-tertiary-container-strong  (C212 (5))
+ring-warning-transparent-overlay    →  ring-warning-container-strong  (C212 (5))
+stripe-surface-transparent-overlay  →  stripe-surface-container-strong  (C212 (5))
+bg-error-transparent                →  bg-error-state  (C212 (5))
+bg-primary-transparent              →  bg-primary-state  (C212 (5))
+bg-secondary-transparent            →  bg-secondary-state  (C212 (5))
+bg-success-transparent              →  bg-success-state  (C212 (5))
+bg-surface                          →  bg-surface-area  (C212 (5))
+bg-surface-transparent              →  bg-surface-state  (C212 (5))
+bg-tertiary-transparent             →  bg-tertiary-state  (C212 (5))
+bg-warning-transparent              →  bg-warning-state  (C212 (5))
+border-surface                      →  border-surface-area  (C212 (5))
+drop-shadow-surface                 →  drop-shadow-surface-area  (C212 (5))
+fill-error-transparent              →  fill-error-state  (C212 (5))
+fill-primary-transparent            →  fill-primary-state  (C212 (5))
+fill-secondary-transparent          →  fill-secondary-state  (C212 (5))
+fill-success-transparent            →  fill-success-state  (C212 (5))
+fill-surface                        →  fill-surface-area  (C212 (5))
+fill-surface-transparent            →  fill-surface-state  (C212 (5))
+fill-tertiary-transparent           →  fill-tertiary-state  (C212 (5))
+fill-warning-transparent            →  fill-warning-state  (C212 (5))
+ring-offset-surface                 →  ring-offset-surface-area  (C212 (5))
+ring-surface                        →  ring-surface-area  (C212 (5))
+color-white                         →  color-on-surface-inverse  (C212 (5))
+color-black                         →  color-on-surface  (C212 (5))
+color-gray                          →  color-on-surface-variant  (C212 (5))
+color-gray-0                        →  color-on-surface-inverse  (C212 (5))
+color-gray-1                        →  color-on-surface-inverse  (C212 (5))
+color-gray-2                        →  color-on-surface-inverse  (C212 (5))
+color-gray-3                        →  color-on-surface-inverse  (C212 (5))
+color-gray-4                        →  color-on-surface-variant  (C212 (5))
+color-gray-5                        →  color-on-surface-variant  (C212 (5))
+color-gray-6                        →  color-on-surface-variant  (C212 (5))
+color-gray-7                        →  color-on-surface-variant  (C212 (5))
+color-gray-8                        →  color-on-surface  (C212 (5))
+color-gray-9                        →  color-on-surface  (C212 (5))
+color-red                           →  color-error  (C212 (5))
+color-red-0                         →  color-on-error  (C212 (5))
+color-red-1                         →  color-on-error  (C212 (5))
+color-red-2                         →  color-on-error  (C212 (5))
+color-red-3                         →  color-error  (C212 (5))
+color-red-4                         →  color-error  (C212 (5))
+color-red-5                         →  color-error  (C212 (5))
+color-red-6                         →  color-error  (C212 (5))
+color-red-7                         →  color-error  (C212 (5))
+color-red-8                         →  color-error  (C212 (5))
+color-red-9                         →  color-error  (C212 (5))
+color-orange                        →  color-warning  (C212 (5))
+color-orange-0                      →  color-on-warning  (C212 (5))
+color-orange-1                      →  color-on-warning  (C212 (5))
+color-orange-2                      →  color-on-warning  (C212 (5))
+color-orange-3                      →  color-on-warning  (C212 (5))
+color-orange-4                      →  color-warning  (C212 (5))
+color-orange-5                      →  color-warning  (C212 (5))
+color-orange-6                      →  color-warning  (C212 (5))
+color-orange-7                      →  color-warning  (C212 (5))
+color-orange-8                      →  color-warning  (C212 (5))
+color-orange-9                      →  color-warning  (C212 (5))
+color-yellow                        →  color-on-warning  (C212 (5))
+color-yellow-0                      →  color-on-warning  (C212 (5))
+color-yellow-1                      →  color-on-warning  (C212 (5))
+color-yellow-2                      →  color-on-warning  (C212 (5))
+color-yellow-3                      →  color-on-warning  (C212 (5))
+color-yellow-4                      →  color-on-warning  (C212 (5))
+color-yellow-5                      →  color-on-warning  (C212 (5))
+color-yellow-6                      →  color-on-warning  (C212 (5))
+color-yellow-7                      →  color-warning  (C212 (5))
+color-yellow-8                      →  color-warning  (C212 (5))
+color-yellow-9                      →  color-warning  (C212 (5))
+color-green                         →  color-success  (C212 (5))
+color-green-0                       →  color-on-success  (C212 (5))
+color-green-1                       →  color-on-success  (C212 (5))
+color-green-2                       →  color-on-success  (C212 (5))
+color-green-3                       →  color-on-success  (C212 (5))
+color-green-4                       →  color-success  (C212 (5))
+color-green-5                       →  color-success  (C212 (5))
+color-green-6                       →  color-success  (C212 (5))
+color-green-7                       →  color-success  (C212 (5))
+color-green-8                       →  color-success  (C212 (5))
+color-green-9                       →  color-on-success-container  (C212 (5))
+color-blue                          →  color-primary  (C212 (5))
+color-blue-0                        →  color-on-primary  (C212 (5))
+color-blue-1                        →  color-on-primary  (C212 (5))
+color-blue-2                        →  color-on-primary  (C212 (5))
+color-blue-3                        →  color-primary  (C212 (5))
+color-blue-4                        →  color-primary  (C212 (5))
+color-blue-5                        →  color-primary  (C212 (5))
+color-blue-6                        →  color-primary  (C212 (5))
+color-blue-7                        →  color-primary  (C212 (5))
+color-blue-8                        →  color-on-primary-container  (C212 (5))
+color-blue-9                        →  color-on-primary-container  (C212 (5))
+color-purple                        →  color-tertiary  (C212 (5))
+color-purple-0                      →  color-on-tertiary  (C212 (5))
+color-purple-1                      →  color-on-tertiary  (C212 (5))
+color-purple-2                      →  color-on-tertiary  (C212 (5))
+color-purple-3                      →  color-tertiary  (C212 (5))
+color-purple-4                      →  color-tertiary  (C212 (5))
+color-purple-5                      →  color-tertiary  (C212 (5))
+color-purple-6                      →  color-tertiary  (C212 (5))
+color-purple-7                      →  color-tertiary  (C212 (5))
+color-purple-8                      →  color-on-tertiary-container  (C212 (5))
+color-purple-9                      →  color-on-tertiary-container  (C212 (5))
+color-pink                          →  color-tertiary  (C212 (5))
+color-pink-0                        →  color-on-tertiary  (C212 (5))
+color-pink-1                        →  color-on-tertiary  (C212 (5))
+color-pink-2                        →  color-on-tertiary  (C212 (5))
+color-pink-3                        →  color-tertiary  (C212 (5))
+color-pink-4                        →  color-tertiary  (C212 (5))
+color-pink-5                        →  color-tertiary  (C212 (5))
+color-pink-6                        →  color-tertiary  (C212 (5))
+color-pink-7                        →  color-tertiary  (C212 (5))
+color-pink-8                        →  color-tertiary  (C212 (5))
+color-pink-9                        →  color-tertiary  (C212 (5))
+bg-white                            →  bg-surface-page  (C212 (5))
+bg-black                            →  bg-surface-inverse  (C212 (5))
+bg-gray                             →  bg-surface-inverse  (C212 (5))
+bg-gray-0                           →  bg-surface-area  (C212 (5))
+bg-gray-1                           →  bg-surface-area  (C212 (5))
+bg-gray-2                           →  bg-surface-container-strong  (C212 (5))
+bg-gray-3                           →  bg-surface-container-strong  (C212 (5))
+bg-gray-4                           →  bg-surface-container-strong  (C212 (5))
+bg-gray-5                           →  bg-surface-inverse  (C212 (5))
+bg-gray-6                           →  bg-surface-inverse  (C212 (5))
+bg-gray-7                           →  bg-surface-inverse  (C212 (5))
+bg-gray-8                           →  bg-surface-inverse  (C212 (5))
+bg-gray-9                           →  bg-surface-inverse  (C212 (5))
+bg-red                              →  bg-error  (C212 (5))
+bg-red-0                            →  bg-error-container  (C212 (5))
+bg-red-1                            →  bg-error-container-strong  (C212 (5))
+bg-red-2                            →  bg-error-container-strong  (C212 (5))
+bg-red-3                            →  bg-error-container-strong  (C212 (5))
+bg-red-4                            →  bg-error  (C212 (5))
+bg-red-5                            →  bg-error  (C212 (5))
+bg-red-6                            →  bg-error  (C212 (5))
+bg-red-7                            →  bg-error  (C212 (5))
+bg-red-8                            →  bg-error  (C212 (5))
+bg-red-9                            →  bg-error  (C212 (5))
+bg-orange                           →  bg-warning  (C212 (5))
+bg-orange-0                         →  bg-warning-container  (C212 (5))
+bg-orange-1                         →  bg-warning-container  (C212 (5))
+bg-orange-2                         →  bg-warning-container-strong  (C212 (5))
+bg-orange-3                         →  bg-warning-container-strong  (C212 (5))
+bg-orange-4                         →  bg-warning-container-strong  (C212 (5))
+bg-orange-5                         →  bg-warning  (C212 (5))
+bg-orange-6                         →  bg-warning  (C212 (5))
+bg-orange-7                         →  bg-warning  (C212 (5))
+bg-orange-8                         →  bg-warning  (C212 (5))
+bg-orange-9                         →  bg-warning  (C212 (5))
+bg-yellow                           →  bg-warning-container-strong  (C212 (5))
+bg-yellow-0                         →  bg-warning-container  (C212 (5))
+bg-yellow-1                         →  bg-warning-container  (C212 (5))
+bg-yellow-2                         →  bg-warning-container  (C212 (5))
+bg-yellow-3                         →  bg-warning-container-strong  (C212 (5))
+bg-yellow-4                         →  bg-warning-container-strong  (C212 (5))
+bg-yellow-5                         →  bg-warning-container-strong  (C212 (5))
+bg-yellow-6                         →  bg-warning-container-strong  (C212 (5))
+bg-yellow-7                         →  bg-warning-container-strong  (C212 (5))
+bg-yellow-8                         →  bg-warning  (C212 (5))
+bg-yellow-9                         →  bg-warning  (C212 (5))
+bg-green                            →  bg-success  (C212 (5))
+bg-green-0                          →  bg-success-container  (C212 (5))
+bg-green-1                          →  bg-success-container  (C212 (5))
+bg-green-2                          →  bg-success-container-strong  (C212 (5))
+bg-green-3                          →  bg-success-container-strong  (C212 (5))
+bg-green-4                          →  bg-success-container-strong  (C212 (5))
+bg-green-5                          →  bg-success  (C212 (5))
+bg-green-6                          →  bg-success  (C212 (5))
+bg-green-7                          →  bg-success  (C212 (5))
+bg-green-8                          →  bg-success  (C212 (5))
+bg-green-9                          →  bg-success  (C212 (5))
+bg-blue                             →  bg-primary  (C212 (5))
+bg-blue-0                           →  bg-primary-container  (C212 (5))
+bg-blue-1                           →  bg-primary-container  (C212 (5))
+bg-blue-2                           →  bg-primary-container-strong  (C212 (5))
+bg-blue-3                           →  bg-primary-container-strong  (C212 (5))
+bg-blue-4                           →  bg-primary  (C212 (5))
+bg-blue-5                           →  bg-primary  (C212 (5))
+bg-blue-6                           →  bg-primary  (C212 (5))
+bg-blue-7                           →  bg-primary  (C212 (5))
+bg-blue-8                           →  bg-primary  (C212 (5))
+bg-blue-9                           →  bg-primary  (C212 (5))
+bg-purple                           →  bg-tertiary  (C212 (5))
+bg-purple-0                         →  bg-tertiary-container  (C212 (5))
+bg-purple-1                         →  bg-tertiary-container-strong  (C212 (5))
+bg-purple-2                         →  bg-tertiary-container-strong  (C212 (5))
+bg-purple-3                         →  bg-tertiary-container-strong  (C212 (5))
+bg-purple-4                         →  bg-tertiary  (C212 (5))
+bg-purple-5                         →  bg-tertiary  (C212 (5))
+bg-purple-6                         →  bg-tertiary  (C212 (5))
+bg-purple-7                         →  bg-tertiary  (C212 (5))
+bg-purple-8                         →  bg-tertiary  (C212 (5))
+bg-purple-9                         →  bg-tertiary  (C212 (5))
+bg-pink                             →  bg-tertiary  (C212 (5))
+bg-pink-0                           →  bg-tertiary-container  (C212 (5))
+bg-pink-1                           →  bg-tertiary-container-strong  (C212 (5))
+bg-pink-2                           →  bg-tertiary-container-strong  (C212 (5))
+bg-pink-3                           →  bg-tertiary-container-strong  (C212 (5))
+bg-pink-4                           →  bg-tertiary  (C212 (5))
+bg-pink-5                           →  bg-tertiary  (C212 (5))
+bg-pink-6                           →  bg-tertiary  (C212 (5))
+bg-pink-7                           →  bg-tertiary  (C212 (5))
+bg-pink-8                           →  bg-tertiary  (C212 (5))
+bg-pink-9                           →  bg-tertiary  (C212 (5))
+border-white                        →  border-surface-page  (C212 (5))
+border-black                        →  border-on-surface  (C212 (5))
+border-gray                         →  border-on-surface-variant  (C212 (5))
+border-gray-0                       →  border-surface-page  (C212 (5))
+border-gray-1                       →  border-surface-page  (C212 (5))
+border-gray-2                       →  border-outline-variant  (C212 (5))
+border-gray-3                       →  border-outline-variant  (C212 (5))
+border-gray-4                       →  border-outline  (C212 (5))
+border-gray-5                       →  border-on-surface-variant  (C212 (5))
+border-gray-6                       →  border-on-surface-variant  (C212 (5))
+border-gray-7                       →  border-on-surface-variant  (C212 (5))
+border-gray-8                       →  border-on-surface  (C212 (5))
+border-gray-9                       →  border-on-surface  (C212 (5))
+border-red                          →  border-error  (C212 (5))
+border-red-0                        →  border-error-container  (C212 (5))
+border-red-1                        →  border-error-container-strong  (C212 (5))
+border-red-2                        →  border-error-container-strong  (C212 (5))
+border-red-3                        →  border-error-container-strong  (C212 (5))
+border-red-4                        →  border-error  (C212 (5))
+border-red-5                        →  border-error  (C212 (5))
+border-red-6                        →  border-error  (C212 (5))
+border-red-7                        →  border-error  (C212 (5))
+border-red-8                        →  border-error  (C212 (5))
+border-red-9                        →  border-error  (C212 (5))
+border-orange                       →  border-warning  (C212 (5))
+border-orange-0                     →  border-warning-container  (C212 (5))
+border-orange-1                     →  border-warning-container  (C212 (5))
+border-orange-2                     →  border-warning-container-strong  (C212 (5))
+border-orange-3                     →  border-warning-container-strong  (C212 (5))
+border-orange-4                     →  border-warning  (C212 (5))
+border-orange-5                     →  border-warning  (C212 (5))
+border-orange-6                     →  border-warning  (C212 (5))
+border-orange-7                     →  border-warning  (C212 (5))
+border-orange-8                     →  border-warning  (C212 (5))
+border-orange-9                     →  border-warning  (C212 (5))
+border-yellow                       →  border-warning-container-strong  (C212 (5))
+border-yellow-0                     →  border-warning-container  (C212 (5))
+border-yellow-1                     →  border-warning-container  (C212 (5))
+border-yellow-2                     →  border-warning-container  (C212 (5))
+border-yellow-3                     →  border-warning-container-strong  (C212 (5))
+border-yellow-4                     →  border-warning-container-strong  (C212 (5))
+border-yellow-5                     →  border-warning-container-strong  (C212 (5))
+border-yellow-6                     →  border-warning-container-strong  (C212 (5))
+border-yellow-7                     →  border-warning  (C212 (5))
+border-yellow-8                     →  border-warning  (C212 (5))
+border-yellow-9                     →  border-warning  (C212 (5))
+border-green                        →  border-success  (C212 (5))
+border-green-0                      →  border-success-container  (C212 (5))
+border-green-1                      →  border-success-container  (C212 (5))
+border-green-2                      →  border-success-container-strong  (C212 (5))
+border-green-3                      →  border-success-container-strong  (C212 (5))
+border-green-4                      →  border-success  (C212 (5))
+border-green-5                      →  border-success  (C212 (5))
+border-green-6                      →  border-success  (C212 (5))
+border-green-7                      →  border-success  (C212 (5))
+border-green-8                      →  border-success  (C212 (5))
+border-green-9                      →  border-success  (C212 (5))
+border-blue                         →  border-primary  (C212 (5))
+border-blue-0                       →  border-primary-container  (C212 (5))
+border-blue-1                       →  border-primary-container  (C212 (5))
+border-blue-2                       →  border-primary-container-strong  (C212 (5))
+border-blue-3                       →  border-primary-container-strong  (C212 (5))
+border-blue-4                       →  border-primary  (C212 (5))
+border-blue-5                       →  border-primary  (C212 (5))
+border-blue-6                       →  border-primary  (C212 (5))
+border-blue-7                       →  border-primary  (C212 (5))
+border-blue-8                       →  border-primary  (C212 (5))
+border-blue-9                       →  border-primary  (C212 (5))
+border-purple                       →  border-tertiary  (C212 (5))
+border-purple-0                     →  border-tertiary-container  (C212 (5))
+border-purple-1                     →  border-tertiary-container-strong  (C212 (5))
+border-purple-2                     →  border-tertiary-container-strong  (C212 (5))
+border-purple-3                     →  border-tertiary  (C212 (5))
+border-purple-4                     →  border-tertiary  (C212 (5))
+border-purple-5                     →  border-tertiary  (C212 (5))
+border-purple-6                     →  border-tertiary  (C212 (5))
+border-purple-7                     →  border-tertiary  (C212 (5))
+border-purple-8                     →  border-tertiary  (C212 (5))
+border-purple-9                     →  border-tertiary  (C212 (5))
+border-pink                         →  border-tertiary  (C212 (5))
+border-pink-0                       →  border-tertiary-container  (C212 (5))
+border-pink-1                       →  border-tertiary-container-strong  (C212 (5))
+border-pink-2                       →  border-tertiary-container-strong  (C212 (5))
+border-pink-3                       →  border-tertiary-container-strong  (C212 (5))
+border-pink-4                       →  border-tertiary  (C212 (5))
+border-pink-5                       →  border-tertiary  (C212 (5))
+border-pink-6                       →  border-tertiary  (C212 (5))
+border-pink-7                       →  border-tertiary  (C212 (5))
+border-pink-8                       →  border-tertiary  (C212 (5))
+border-pink-9                       →  border-tertiary  (C212 (5))
+placeholder-disable                 →  placeholder-on-surface-disabled  (C212 (5))
+color-disable                       →  color-on-surface-disabled  (C212 (5))
+все классы модуля mix-blend-mode    →  без замены  (C187 (5))
+все классы модуля filter-brightness  →  без замены  (C187 (5))
+все классы модуля filter-contrast   →  без замены  (C187 (5))
+все классы модуля filter-grayscale  →  без замены  (C187 (5))
+все классы модуля filter-hue-rotate  →  без замены  (C187 (5))
+все классы модуля filter-invert     →  без замены  (C187 (5))
+все классы модуля filter-opacity    →  без замены  (C187 (5))
+все классы модуля filter-saturate   →  без замены  (C187 (5))
+все классы модуля filter-sepia      →  без замены  (C187 (5))
+все классы модуля backdrop-filer-hue-rotate  →  без замены  (C187 (5))
+все классы модуля backdrop-filter-brightness  →  без замены  (C187 (5))
+все классы модуля backdrop-filter-contrast  →  без замены  (C187 (5))
+все классы модуля backdrop-filter-grayscale  →  без замены  (C187 (5))
+все классы модуля backdrop-filter-invert  →  без замены  (C187 (5))
+все классы модуля backdrop-filter-opacity  →  без замены  (C187 (5))
+все классы модуля backdrop-filter-saturate  →  без замены  (C187 (5))
+все классы модуля backdrop-filter-sepia  →  без замены  (C187 (5))
+все классы модуля mask-clip         →  без замены  (C187 (5))
+все классы модуля mask-composite    →  без замены  (C187 (5))
+все классы модуля mask-mode         →  без замены  (C187 (5))
+все классы модуля mask-origin       →  без замены  (C187 (5))
+все классы модуля mask-position     →  без замены  (C187 (5))
+все классы модуля mask-repeat       →  без замены  (C187 (5))
+все классы модуля mask-size         →  без замены  (C187 (5))
+все классы модуля mask-type         →  без замены  (C187 (5))
+gr1-transparent                     →  from-transparent  (C212 (1))
+gr1-current                         →  from-current  (C212 (1))
+gr1-inherit                         →  from-inherit  (C212 (1))
+gr1-surface-0                       →  from-surface-page  (C212 (1))
+gr1-surface-page                    →  from-surface-page  (C212 (1))
+gr1-surface-1                       →  from-surface-area  (C212 (1))
+gr1-surface-area                    →  from-surface-area  (C212 (1))
+gr1-on-surface                      →  from-on-surface  (C212 (1))
+gr1-primary                         →  from-primary  (C212 (1))
+gr1-primary-container               →  from-primary-container  (C212 (1))
+gr1-secondary                       →  from-secondary  (C212 (1))
+gr1-secondary-container             →  from-secondary-container  (C212 (1))
+gr1-tertiary                        →  from-tertiary  (C212 (1))
+gr1-tertiary-container              →  from-tertiary-container  (C212 (1))
+gr1-success                         →  from-success  (C212 (1))
+gr1-warning                         →  from-warning  (C212 (1))
+gr1-info                            →  from-info  (C212 (1))
+gr2-transparent                     →  via-transparent  (C212 (1))
+gr2-current                         →  via-current  (C212 (1))
+gr2-inherit                         →  via-inherit  (C212 (1))
+gr2-surface-0                       →  via-surface-page  (C212 (1))
+gr2-surface-page                    →  via-surface-page  (C212 (1))
+gr2-surface-1                       →  via-surface-area  (C212 (1))
+gr2-surface-area                    →  via-surface-area  (C212 (1))
+gr2-on-surface                      →  via-on-surface  (C212 (1))
+gr2-primary                         →  via-primary  (C212 (1))
+gr2-primary-container               →  via-primary-container  (C212 (1))
+gr2-secondary                       →  via-secondary  (C212 (1))
+gr2-secondary-container             →  via-secondary-container  (C212 (1))
+gr2-tertiary                        →  via-tertiary  (C212 (1))
+gr2-tertiary-container              →  via-tertiary-container  (C212 (1))
+gr2-success                         →  via-success  (C212 (1))
+gr2-warning                         →  via-warning  (C212 (1))
+gr2-info                            →  via-info  (C212 (1))
+gr3-transparent                     →  to-transparent  (C212 (1))
+gr3-current                         →  to-current  (C212 (1))
+gr3-inherit                         →  to-inherit  (C212 (1))
+gr3-surface-0                       →  to-surface-page  (C212 (1))
+gr3-surface-page                    →  to-surface-page  (C212 (1))
+gr3-surface-1                       →  to-surface-area  (C212 (1))
+gr3-surface-area                    →  to-surface-area  (C212 (1))
+gr3-on-surface                      →  to-on-surface  (C212 (1))
+gr3-primary                         →  to-primary  (C212 (1))
+gr3-primary-container               →  to-primary-container  (C212 (1))
+gr3-secondary                       →  to-secondary  (C212 (1))
+gr3-secondary-container             →  to-secondary-container  (C212 (1))
+gr3-tertiary                        →  to-tertiary  (C212 (1))
+gr3-tertiary-container              →  to-tertiary-container  (C212 (1))
+gr3-success                         →  to-success  (C212 (1))
+gr3-warning                         →  to-warning  (C212 (1))
+gr3-info                            →  to-info  (C212 (1))
+from-surface-0                      →  from-surface-page  (C212 (1))
+from-surface-1                      →  from-surface-area  (C212 (1))
+via-surface-0                       →  via-surface-page  (C212 (1))
+via-surface-1                       →  via-surface-area  (C212 (1))
+to-surface-0                        →  to-surface-page  (C212 (1))
+to-surface-1                        →  to-surface-area  (C212 (1))
+gr1-surface-2                       →  from-surface-area  (C212 (1))
+gr2-surface-2                       →  via-surface-area  (C212 (1))
+gr3-surface-2                       →  to-surface-area  (C212 (1))
+from-surface-2                      →  from-surface-area  (C212 (1))
+via-surface-2                       →  via-surface-area  (C212 (1))
+to-surface-2                        →  to-surface-area  (C212 (1))
+gr-line-2                           →  bg-gradient-to-r  (C212 (1))
+gr-line-3                           →  bg-gradient-to-r  (C212 (1))
+gr-radial-2                         →  gradient-glow  (C212 (1))
+gr-radial-3                         →  gradient-glow  (C212 (1))
+gr-conic-2                          →  без замены  (C212 (1))
+gr-conic-3                          →  без замены  (C212 (1))
+from-, via-, to-<role>-<tone> (семейство)  →  …-… (той же ступени)  (C212 (1))
+from-, via-<hue>-<tone> (семейство)  →  gradient-color-… (той же ступени)  (C212 (1))
+to-<hue>-<tone> (семейство)         →  gradient-to-… (той же ступени)  (C212 (1))
+from-, via-neutral-<tone> (семейство)  →  gradient-color-gray  (C212 (1))
+to-neutral-<tone> (семейство)       →  gradient-to-gray  (C212 (1))
+ease-in                             →  ease-exit  (C187 (6))
+ease-out                            →  ease-enter  (C187 (6))
+ease-in-out                         →  ease-move  (C187 (6))
+animation-from-bottom               →  без замены  (C187 (6))
+animation-from-left                 →  без замены  (C187 (6))
+animation-from-right                →  без замены  (C187 (6))
+все классы модуля transition-delay  →  без замены  (C187 (6))
+все классы модуля will-change       →  без замены  (C187 (6))
+sf-tab                              →  sf-tabs  (C187 (8))
+sf-emoji                            →  без замены  (C187 (8))
+sf-outline                          →  без замены  (C187 (8))
+sf-hide-show                        →  без замены  (C187 (8))
+justify-start                       →  content-main-start  (C212 (2))
+justify-end                         →  content-main-end  (C212 (2))
+justify-center                      →  content-main-center  (C212 (2))
+justify-between                     →  content-main-between  (C212 (2))
+justify-around                      →  content-main-around  (C212 (2))
+justify-evenly                      →  content-main-evenly  (C212 (2))
+start-start                         →  content-main-start items-cross-start  (C212 (2))
+start-center                        →  content-main-start items-cross-center  (C212 (2))
+start-end                           →  content-main-start items-cross-end  (C212 (2))
+center-start                        →  content-main-center items-cross-start  (C212 (2))
+center-center                       →  content-main-center items-cross-center  (C212 (2))
+center-end                          →  content-main-center items-cross-end  (C212 (2))
+end-start                           →  content-main-end items-cross-start  (C212 (2))
+end-center                          →  content-main-end items-cross-center  (C212 (2))
+end-end                             →  content-main-end items-cross-end  (C212 (2))
+sf-doc-example                      →  без замены  (C187 (8))
+sf-doc-pair                         →  без замены  (C187 (8))
+sf-doc-source                       →  без замены  (C187 (8))
+sf-doc-lead                         →  без замены  (C187 (8))
+sf-doc-code                         →  без замены  (C187 (8))
+sf-doc-checkerboard                 →  без замены  (C187 (8))
+sf-doc-stripes                      →  без замены  (C187 (8))
+editor--default                     →  sf-editor-overlay  (C170)
+sf-tabs--full                       →  sf-tabs  (C96 (1))
+sf-step--stage-default              →  sf-step--state-ahead  (C187 (1), C134, C101)
+sf-step--stage-completed            →  sf-step--state-done  (C187 (1), C134, C101)
+sf-step--stage-error                →  sf-step--state-error  (C187 (1), C134, C101)
+sf-steps-separator--directional     →  без замены  (C187 (1), C134, C101)
+sf-page-number--circle              →  sf-page-number--square  (C237)
+sf-menu--framed                     →  sf-menu  (C238)
+sf-online-indicator--offline        →  без замены  (C152 (5), C185 (8))
+sf-avatar-group--size-1/4           →  sf-avatar-group  (C152 (6))
+sf-avatar-group--size-1/3           →  sf-avatar-group  (C152 (6))
+sf-avatar-group--size-1/2           →  sf-avatar-group  (C152 (6))
+sf-avatar-card--portrait-9x16       →  sf-avatar-card--portrait  (C230)
+print-block                         →  print-only  (C212 (6))
+print-inline                        →  print-only  (C212 (6))
+print-inline-block                  →  print-only  (C212 (6))
+print-flex                          →  print-only  (C212 (6))
+print-inline-flex                   →  print-only  (C212 (6))
+print-table                         →  print-only  (C212 (6))
+print-visible-none                  →  print-invisible  (C212 (6))
+layout-col-auto                     →  без замены  (C212)
+grid-row-auto                       →  row-auto  (C212)
+grid-row-span-1                     →  row-span-1  (C212)
+grid-row-span-2                     →  row-span-2  (C212)
+grid-row-span-3                     →  row-span-3  (C212)
+grid-row-span-4                     →  row-span-4  (C212)
+grid-row-span-5                     →  row-span-5  (C212)
+grid-row-span-6                     →  row-span-6  (C212)
+grid-row-span-full                  →  row-span-full  (C212)
+-m-auto                             →  без замены  (IN-4 (RG-UT-L))
+-m-top-auto                         →  без замены  (IN-4 (RG-UT-L))
+-m-bottom-auto                      →  без замены  (IN-4 (RG-UT-L))
+-m-inline-start-auto                →  без замены  (IN-4 (RG-UT-L))
+-m-inline-end-auto                  →  без замены  (IN-4 (RG-UT-L))
+-m-inline-auto                      →  без замены  (IN-4 (RG-UT-L))
+-m-block-auto                       →  без замены  (IN-4 (RG-UT-L))
+bg-left                             →  bg-inline-start  (C212)
+bg-left-top                         →  bg-inline-start-top  (C212)
+bg-left-bottom                      →  bg-inline-start-bottom  (C212)
+bg-right                            →  bg-inline-end  (C212)
+bg-right-top                        →  bg-inline-end-top  (C212)
+bg-right-bottom                     →  bg-inline-end-bottom  (C212)
+blur                                →  blur-medium  (C212)
+backdrop-blur                       →  backdrop-blur-medium  (C212)
+radius-square                       →  radius-0  (C212)
+radius-top-square                   →  radius-top-0  (C212)
+radius-bottom-square                →  radius-bottom-0  (C212)
+radius-inline-start-square          →  radius-inline-start-0  (C212)
+radius-inline-end-square            →  radius-inline-end-0  (C212)
+radius-top-inline-start-square      →  radius-top-inline-start-0  (C212)
+radius-top-inline-end-square        →  radius-top-inline-end-0  (C212)
+radius-bottom-inline-start-square   →  radius-bottom-inline-start-0  (C212)
+radius-bottom-inline-end-square     →  radius-bottom-inline-end-0  (C212)
+tracking-no-tracking                →  tracking-normal  (C212)
+aspect-9x16                         →  aspect-3x4  (C264)
+aspect-1x2                          →  aspect-3x4  (C264)
+aspect-2x3                          →  aspect-3x4  (C264)
+aspect-2x1                          →  aspect-16x9  (C264)
+aspect-3x1                          →  aspect-21x9  (C264)
+aspect-4x1                          →  aspect-21x9  (C264)
+scroll-mt-* (семейство)             →  scroll-m-top-… (той же ступени)  (C266)
+scroll-mb-* (семейство)             →  scroll-m-bottom-… (той же ступени)  (C266)
+scroll-my-* (семейство)             →  scroll-m-block-… (той же ступени)  (C266)
+scroll-pt-* (семейство)             →  scroll-p-top-… (той же ступени)  (C266)
+scroll-pb-* (семейство)             →  scroll-p-bottom-… (той же ступени)  (C266)
+scroll-pl-* (семейство)             →  scroll-p-inline-start-… (той же ступени)  (C266)
+scroll-pr-* (семейство)             →  scroll-p-inline-end-… (той же ступени)  (C266)
+scroll-px-* (семейство)             →  scroll-p-x-… (той же ступени)  (C266)
+scroll-py-* (семейство)             →  scroll-p-y-… (той же ступени)  (C266)
+pointer-event-* (семейство)         →  pointer-events-… (той же ступени)  (C268)
+scale-1/4                           →  scale-80  (C271)
+scale-1/3                           →  scale-90  (C271)
+scale-1/2                           →  scale-95  (C271)
+scale-1                             →  scale-100  (C271)
+scale-2                             →  scale-105  (C271)
+scale-3                             →  scale-110  (C271)
+scale-4                             →  scale-120  (C271)
+scale-x-1/4                         →  scale-x-80  (C271)
+scale-x-1/3                         →  scale-x-90  (C271)
+scale-x-1/2                         →  scale-x-95  (C271)
+scale-x-1                           →  scale-x-100  (C271)
+scale-x-2                           →  scale-x-105  (C271)
+scale-x-3                           →  scale-x-110  (C271)
+scale-x-4                           →  scale-x-120  (C271)
+scale-y-1/4                         →  scale-y-80  (C271)
+scale-y-1/3                         →  scale-y-90  (C271)
+scale-y-1/2                         →  scale-y-95  (C271)
+scale-y-1                           →  scale-y-100  (C271)
+scale-y-2                           →  scale-y-105  (C271)
+scale-y-3                           →  scale-y-110  (C271)
+scale-y-4                           →  scale-y-120  (C271)
+все классы модуля transform-skew    →  без замены  (C272)
+d1                                  →  sf-display-1  (C274)
+display1                            →  sf-display-1  (C274)
+d2                                  →  sf-display-2  (C274)
+display2                            →  sf-display-2  (C274)
+d3                                  →  sf-display-3  (C274)
+display3                            →  sf-display-3  (C274)
+d4                                  →  sf-display-4  (C274)
+display4                            →  sf-display-4  (C274)
+d5                                  →  sf-display-5  (C274)
+display5                            →  sf-display-5  (C274)
+d6                                  →  sf-display-6  (C274)
+display6                            →  sf-display-6  (C274)
+text                                →  text-1  (C274)
+text-medium                         →  text-1  (C274)
+text-small                          →  text-1/2  (C274)
+text-large                          →  text-2  (C274)
+label                               →  text-1/3  (C274)
+label-medium                        →  text-1/3  (C274)
+label-small                         →  text-1/4  (C274)
+label-large                         →  sf-label-large  (C274)
+body-text                           →  text-1  (C274)
+body-text-medium                    →  text-1  (C274)
+body-text-small                     →  text-1/2  (C274)
+body-text-large                     →  text-2  (C274)
+все классы модуля scroll-slider-color  →  без замены  (C208 (2), (3))
+все классы модуля scroll-slider-width  →  без замены  (C208 (2), (3))
+все классы модуля scroll-backdrop-width  →  без замены  (C208 (2), (3))
+все классы модуля scroll-hover      →  без замены  (C210 (5))
+все классы модуля scroll-subtle     →  без замены  (C210 (5))
+все классы модуля scroll-backdrop-color  →  без замены  (C210 (5))
+все классы модуля scroll-backdrop-radius  →  без замены  (C210 (5))
+все классы модуля scroll-slider-radius  →  без замены  (C210 (5))
+scrollbar                           →  без замены  (C210 (5))
+```
 
 ## Связь с другими частями
 
