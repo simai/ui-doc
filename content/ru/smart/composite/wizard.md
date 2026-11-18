@@ -329,12 +329,12 @@ wizard.addEventListener('sf-wizard-submit', async (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-wizard>`, контракт `smart.wizard` версии `1.5.3` |
-| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: Tab доходит до «Продолжить позже», доступных шагов хода, полей шага, затем до «Назад», «Пропустить» и главной кнопки; Enter в поле шага отправляет шаг, как главная кнопка; Escape закрывает окно в месте modal; при введённом и не отправленном сначала спрашивает. |
-| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/wizard` |
-| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-wizard` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/wizard` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-wizard` |
 
 ### `<sf-wizard-step>`
 
@@ -376,12 +376,12 @@ wizard.addEventListener('sf-wizard-submit', async (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-wizard-step>`, контракт `smart.wizard-step` версии `1.0.7` |
-| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; название компонент ставит сам; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/wizard-step` |
-| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-wizard-step` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/wizard-step` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-wizard-step` |
 
 ## См. также
 

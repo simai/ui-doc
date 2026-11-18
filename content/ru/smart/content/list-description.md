@@ -191,12 +191,12 @@ facts.addEventListener('sf-list-description-navigate', (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-list-description>`, контракт `smart.list-description` версии `1.3.4` |
-| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; желательна подпись или `aria-label`; с клавиатуры: Tab проходит в порядке чтения по действию каждого раздела, каждой метке справки, каждой ссылке значения, каждой кнопке копирования, действию каждого пункта и, с `overflow="truncate"`, по каждому обрезанному значению; Enter переходит по ссылке, копирует или выполняет действие. |
-| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/list-description` |
-| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-list-description` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/list-description` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-list-description` |
 
 ## См. также
 

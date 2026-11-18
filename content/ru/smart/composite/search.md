@@ -357,12 +357,12 @@ search.addEventListener('sf-search-navigate', (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-search>`, контракт `smart.search` версии `1.11.5` |
-| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как диалоговое окно; название компонент ставит сам; с клавиатуры: `Ctrl/Cmd+K` или `/` вне текстового поля открывают окно; `↓` и `↑` двигают выбор по результатам, `Enter` открывает выбранный; `Esc` очищает поле, а в пустом поле закрывает окно и возвращает фокус. |
-| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/search` |
-| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-search` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/search` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-search` |
 
 ## См. также
 

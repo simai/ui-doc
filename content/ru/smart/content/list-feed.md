@@ -210,12 +210,12 @@ feed.addEventListener('sf-list-feed-load-more', async (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-list-feed>`, контракт `smart.list-feed` версии `1.5.3` |
-| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`, `↑`, `↓`, `Home`, `End`. |
-| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/list-feed` |
-| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-list-feed` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/list-feed` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-list-feed` |
 
 ## См. также
 

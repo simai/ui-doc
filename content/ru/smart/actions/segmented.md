@@ -458,12 +458,12 @@ Tab на выбранном варианте. Стрелки, Home и End пер
 | | |
 |:---|:---|
 | Тег | `<sf-segmented>`, контракт `smart.segmented` версии `1.6.7` |
-| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа переключателей; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `←`, `→`, `↑`, `↓`, `Home`, `End`. |
-| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/segmented` |
-| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-segmented` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/segmented` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-segmented` |
 
 ### Для разработчика
 

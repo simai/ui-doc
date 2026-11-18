@@ -179,11 +179,11 @@ popover.addEventListener('sf-popover-closed', () => {
 | | |
 |:---|:---|
 | Тег | `<sf-popover>`, контракт `smart.popover` версии `1.7.3` |
-| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
-| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/popover` |
-| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-popover` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/popover` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-popover` |
 
 ## См. также
 

@@ -5,7 +5,7 @@ description: "Выбирает одно или несколько значени
 
 # Выпадающий список
 
-:badge[sf-dropdown]{variant=outline scheme=on-surface size=1/2} :badge[1.20.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-dropdown]{variant=outline scheme=on-surface size=1/2} :badge[1.20.4]{variant=outline scheme=on-surface size=1/2}
 
 Выпадающий список даёт выбрать одно или несколько значений из раскрывающегося
 списка с поиском. Берите его, когда вариантов больше, чем удобно показать
@@ -333,13 +333,13 @@ SIMAI Framework язык не запоминает.
 
 | | |
 |:---|:---|
-| Тег | `<sf-dropdown>`, контракт `smart.dropdown` версии `1.20.3` |
-| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
+| Тег | `<sf-dropdown>`, контракт `smart.dropdown` версии `1.20.4` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как поле со списком; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `↓`, `↑`, `Home`, `End`, `PageDown`, `PageUp`, `Enter`, `Пробел`, `Esc`. |
-| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/dropdown` |
-| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-dropdown` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/dropdown` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-dropdown` |
 
 ## См. также
 

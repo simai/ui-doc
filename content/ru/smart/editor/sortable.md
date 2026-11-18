@@ -259,12 +259,12 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 | | |
 |:---|:---|
 | Тег | `<sf-sortable>`, контракт `smart.sortable` версии `1.5.2` |
-| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; желательна подпись или `aria-label`; с клавиатуры: `Пробел`, `Enter`, `↑`, `↓`, `←`, `→`, `Esc`, `Tab`, `+`, `Home`, `End`. |
-| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/sortable` |
-| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-sortable` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/sortable` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-sortable` |
 
 ## См. также
 

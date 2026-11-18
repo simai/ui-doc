@@ -361,12 +361,12 @@ tree.items = await fetchFolders();
 | | |
 |:---|:---|
 | Тег | `<sf-tree>`, контракт `smart.tree` версии `2.4.1` |
-| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «меню» (сервер пишет `data-sf-skeleton="menu"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как дерево; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Пробел`; поиск по первым буквам. |
-| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/tree` |
-| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-tree` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/tree` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-tree` |
 
 ### `<sf-tree-item>`
 
@@ -433,12 +433,12 @@ tree.items = await fetchFolders();
 | | |
 |:---|:---|
 | Тег | `<sf-tree-item>`, контракт `smart.tree-item` версии `1.3.4` |
-| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «строка» (сервер пишет `data-sf-skeleton="line"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как пункт дерева; нужна подпись или `aria-label`; с клавиатуры: `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/tree-item` |
-| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-tree-item` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/tree-item` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-tree-item` |
 
 ## См. также
 

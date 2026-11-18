@@ -6,7 +6,7 @@ profile: reference
 
 # Календарь
 
-:badge[sf-datepicker]{variant=outline scheme=on-surface size=1/2} :badge[1.10.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-datepicker]{variant=outline scheme=on-surface size=1/2} :badge[1.11.0]{variant=outline scheme=on-surface size=1/2}
 
 Календарь показывает дни месяца, выбранную дату или период. Поведения у
 классов нет: перелистывание, выбор даты и
@@ -127,7 +127,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-datepicker` |
-| Части | `sf-datepicker-another-month`, `sf-datepicker-container`, `sf-datepicker-context`, `sf-datepicker-day`, `sf-datepicker-day-date`, `sf-datepicker-day-end`, `sf-datepicker-day-info`, `sf-datepicker-day-off`, `sf-datepicker-day-selected`, `sf-datepicker-day-special`, `sf-datepicker-day-start`, `sf-datepicker-day-today`, `sf-datepicker-dayline`, `sf-datepicker-dayline-date`, `sf-datepicker-indicator`, `sf-datepicker-main`, `sf-datepicker-period`, `sf-datepicker-preset`, `sf-datepicker-presets`, `sf-datepicker-ribbon`, `sf-datepicker-ribbon-month`, `sf-datepicker-ribbon-title`, `sf-datepicker-row`, `sf-datepicker-sheet-close`, `sf-datepicker-sheet-foot`, `sf-datepicker-sheet-head`, `sf-datepicker-sheet-presets`, `sf-datepicker-sheet-summary`, `sf-datepicker-sheet-title`, `sf-datepicker-sheet-today`, `sf-datepicker-sheet-weekdays`, `sf-datepicker-text`, `sf-datepicker-text-end`, `sf-datepicker-text-selected`, `sf-datepicker-text-start`, `sf-datepicker-time`, `sf-datepicker-time-separator`, `sf-datepicker-time-value`, `sf-datepicker-top`, `sf-datepicker-week`, `sf-datepicker-weekday`, `sf-datepicker-weekday-off`, `sf-datepicker-wrap` |
+| Части | `sf-datepicker-another-month`, `sf-datepicker-choice`, `sf-datepicker-container`, `sf-datepicker-context`, `sf-datepicker-day`, `sf-datepicker-day-date`, `sf-datepicker-day-end`, `sf-datepicker-day-info`, `sf-datepicker-day-off`, `sf-datepicker-day-selected`, `sf-datepicker-day-special`, `sf-datepicker-day-start`, `sf-datepicker-day-today`, `sf-datepicker-dayline`, `sf-datepicker-dayline-date`, `sf-datepicker-grid`, `sf-datepicker-indicator`, `sf-datepicker-main`, `sf-datepicker-period`, `sf-datepicker-preset`, `sf-datepicker-presets`, `sf-datepicker-ribbon`, `sf-datepicker-ribbon-month`, `sf-datepicker-ribbon-title`, `sf-datepicker-row`, `sf-datepicker-sheet-close`, `sf-datepicker-sheet-foot`, `sf-datepicker-sheet-head`, `sf-datepicker-sheet-presets`, `sf-datepicker-sheet-summary`, `sf-datepicker-sheet-title`, `sf-datepicker-sheet-today`, `sf-datepicker-sheet-weekdays`, `sf-datepicker-text`, `sf-datepicker-text-end`, `sf-datepicker-text-selected`, `sf-datepicker-text-start`, `sf-datepicker-time`, `sf-datepicker-time-part`, `sf-datepicker-time-separator`, `sf-datepicker-time-step`, `sf-datepicker-time-value`, `sf-datepicker-top`, `sf-datepicker-top--years`, `sf-datepicker-week`, `sf-datepicker-weekday`, `sf-datepicker-weekday-off`, `sf-datepicker-weekdays`, `sf-datepicker-wrap` |
 | Модификаторы | `sf-datepicker--inline`, `sf-datepicker--presets`, `sf-datepicker--range`, `sf-datepicker--sheet`, `sf-datepicker--time` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.

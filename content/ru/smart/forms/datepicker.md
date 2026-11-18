@@ -5,7 +5,7 @@ description: "Выбирает дату, дату со временем, вре�
 
 # Календарь
 
-:badge[sf-input-date]{variant=outline scheme=on-surface size=1/2} :badge[1.14.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-date]{variant=outline scheme=on-surface size=1/2} :badge[1.15.0]{variant=outline scheme=on-surface size=1/2}
 
 Календарь даёт выбрать одну дату или период с переходом по месяцам и годам, а
 также дату со временем или одно время суток. Берите его, когда дату удобнее
@@ -498,13 +498,13 @@ period.value = ['2026-10-01', '2026-10-31'];
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-date>`, контракт `smart.input-date` версии `1.14.3` |
-| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
+| Тег | `<sf-input-date>`, контракт `smart.input-date` версии `1.15.0` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; используется в продуктах. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как диалоговое окно; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Shift+Tab`, `Enter`, `Пробел`, `Esc`, `←`, `→`, `↑`, `↓`, `Home`, `End`, `PageUp`, `PageDown`. |
-| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/input-date` |
-| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-input-date` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/input-date` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-input-date` |
 
 ## См. также
 

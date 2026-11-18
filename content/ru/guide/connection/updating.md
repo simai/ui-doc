@@ -70,8 +70,8 @@ JavaScript и TypeScript, CSS и SCSS, Markdown, JSON. Инструмент и �
 на который проект переходит: `git checkout <build_inputs.source.commit>`. Более
 новый журнал может назвать каноническое имя, которого в целевом выпуске ещё
 нет, и `--apply` записал бы в проект имя, которое этот выпуск не знает. Для
-выпуска `ui-1ed6b6c9a040` это ревизия
-`acc113415d98032041f3fdbf3e2ba622c48465a1`.
+выпуска `ui-dc9fc39aeb26` это ревизия
+`1dd18375cbc23cf3392576d2e046fde52a047060`.
 
 Инструменту нужен только Node.js: зависимостей у него нет, устанавливать
 ничего не нужно.
@@ -169,7 +169,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
   `sf-property-view` и `sf-admin-menu`; запись журнала —
   `component-larena-package-move`. В поставке `ui` их нет; на странице они
   работают, только если она объявила пакет `pro`, например
-  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/7ae52020fef5dccb7613e778794613568369b91f/smart'}`
+  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/5fea21ce6c2aaae79189bca800185032577011c4/smart'}`
   (путь — по правилу из [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), и
   подключила его сборку, квитанция которой называет выпуск Framework на
   странице. Проект без Larena берёт сборку из выпуска `simai/ui-pro` (см. [Готовая сборка пакета `pro`](/ru/guide/introduction/structure/#готовая-сборка-пакета-pro)).
@@ -281,7 +281,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
 
 ## Новые имена тегов
 
-С выпуска `ui-1ed6b6c9a040` (`@simai-studio/ui` 5.20261117.1612) часть
+С выпуска `ui-dc9fc39aeb26` (`@simai-studio/ui` 5.20261118.1205) часть
 смарт-компонентов называется по-новому: сначала семейство, затем уточнение
 (`sf-input-date`, а не `sf-datepicker`). Прежний тег работает до 2027-01-01:
 Loader определяет его как псевдоним нового, поэтому страницы на прежних

@@ -590,13 +590,13 @@ menuButton.expanded = true; // aria-expanded="true" на кнопке внутр
 | | |
 |:---|:---|
 | Тег | `<sf-button>`, контракт `smart.button` версии `1.16.8` |
-| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`, `↓`, `↑`, `Esc`. |
 | [Документ макета](/ru/guide/layouts/building/smart-component/#декларативный-контракт) | узел `smart.button`; свойства — атрибуты из таблицы выше, кроме `root-class`, `root-style`, `cycle`, `menu` |
-| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/button` |
-| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-button` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/button` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-button` |
 
 ### Для разработчика
 

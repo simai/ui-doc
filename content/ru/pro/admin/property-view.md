@@ -5,7 +5,7 @@ description: "Показывает и правит поля одного объ�
 
 # Представление свойств
 
-:badge[sf-view-properties]{variant=outline scheme=on-surface size=1/2} :badge[1.16.8]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-view-properties]{variant=outline scheme=on-surface size=1/2} :badge[1.19.1]{variant=outline scheme=on-surface size=1/2}
 
 Представление свойств — карточка одного объекта: заказа, товара, профиля,
 настроек сайта. Поля сгруппированы в области, области — в разделы; человек
@@ -457,7 +457,7 @@ view: {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента пакета `pro` выпуска `pro-7ae52020fef5` над выпуском Framework `ui-1ed6b6c9a040` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента пакета `pro` выпуска `pro-5fea21ce6c2a` над выпуском Framework `ui-dc9fc39aeb26` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -465,7 +465,7 @@ view: {
 |:---|:---|
 | Тег | `<sf-view-properties>` |
 | Назначение | Поля одного объекта по разделам, группам и полям; каждое поле рисует набор рендереров своего типа, данные идут через отдельный порт приложения. Группа редактируется и сохраняется одной ревизией по кнопке, а значение ссылочного поля выбирается из кандидатов элемента постранично. Парный компонент к представлению данных: то показывает набор записей, этот — один объект. |
-| Контракт | `smart.view-properties`, версия `1.16.8` |
+| Контракт | `smart.view-properties`, версия `1.19.1` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -620,8 +620,8 @@ view: {
 
 ### Источник
 
-- `simai/ui-pro@7ae52020fef5dccb7613e778794613568369b91f:components/src/smart/view-properties`
-- `simai/ui-pro@7ae52020fef5dccb7613e778794613568369b91f:components/src/smart/view-properties/rule.js#name=cl-view-properties`
+- `simai/ui-pro@5fea21ce6c2aaae79189bca800185032577011c4:components/src/smart/view-properties`
+- `simai/ui-pro@5fea21ce6c2aaae79189bca800185032577011c4:components/src/smart/view-properties/rule.js#name=cl-view-properties`
 
 ## См. также
 

@@ -5,7 +5,7 @@ description: "Показывает выбранный или прикреплё�
 
 # Предпросмотр файла
 
-:badge[sf-file-preview]{variant=outline scheme=on-surface size=1/2} :badge[1.5.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-preview]{variant=outline scheme=on-surface size=1/2} :badge[1.5.4]{variant=outline scheme=on-surface size=1/2}
 
 Предпросмотр файла показывает один уже выбранный или прикреплённый файл:
 значок или миниатюру, имя, размер и две кнопки — скачать и удалить. Выбирают и
@@ -205,13 +205,13 @@ file.onDownload((event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-file-preview>`, контракт `smart.file-preview` версии `1.5.3` |
-| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
+| Тег | `<sf-file-preview>`, контракт `smart.file-preview` версии `1.5.4` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/file-preview` |
-| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-file-preview` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/file-preview` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-file-preview` |
 
 ## См. также
 

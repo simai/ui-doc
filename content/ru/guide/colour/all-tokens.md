@@ -736,6 +736,7 @@ description: "Полный список переменных, которые о�
 | `--sf-decoration--alfa` | `1` |
 | `--sf-drop-shadow--alfa` | `1` |
 | `--sf-empty` | `` |
+| `--sf-file-upload--box-text` | `0` · `1` |
 | `--sf-first-paint-bar--end` | `min(var(--sf-radius--ui), calc(var(--sf-first-paint-bar--height) / 2))` |
 | `--sf-first-paint-bar--height` | `calc(0.727em)` · `round(nearest, 0.727em, var(--sf-a2))` |
 | `--sf-first-paint-bar--mask-band` | `linear-gradient(black, black)` |
@@ -806,9 +807,9 @@ description: "Полный список переменных, которые о�
 | `--sf-inset--panel` | `var(--sf-space-2)` |
 | `--sf-inset--plate` | `var(--sf-space-1\/4)` |
 | `--sf-language--box` | `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/3--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` · `var(--sf-ui-3--control-height)` |
-| `--sf-language--field` | `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` |
+| `--sf-language--field` | `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/3--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` · `var(--sf-ui-3--control-height)` |
 | `--sf-language--field-box` | `calc(var(--sf-language--field-label) + var(--sf-space-1\/4) + var(--sf-language--field))` |
-| `--sf-language--field-label` | `var(--sf-text-height-1\/2)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1)` |
+| `--sf-language--field-label` | `var(--sf-text-height-1\/2)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1)` · `var(--sf-text-height-2)` |
 | `--sf-language--line` | `var(--sf-text-height-1)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1\/2)` · `var(--sf-text-height-2)` · `var(--sf-text-height-3)` |
 | `--sf-language--space-x` | `var(--sf-button-padding-inline, var(--sf-ui-1--space-x))` · `var(--sf-button-padding-inline, var(--sf-ui-1\/3--space-x))` · `var(--sf-button-padding-inline, var(--sf-ui-1\/2--space-x))` · `var(--sf-button-padding-inline, var(--sf-ui-2--space-x))` · `var(--sf-button-padding-inline, var(--sf-ui-3--space-x))` |
 | `--sf-language--text-x` | `var(--sf-ui-1--text-space-x)` · `var(--sf-ui-1\/3--text-space-x)` · `var(--sf-ui-1\/2--text-space-x)` · `var(--sf-ui-2--text-space-x)` · `var(--sf-ui-3--text-space-x)` |

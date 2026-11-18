@@ -215,12 +215,12 @@ description: "Вариант выпадающего списка и общая �
 | | |
 |:---|:---|
 | Тег | `<sf-list-item>`, контракт `smart.list-item` версии `1.6.2` |
-| Поставка | выпуск Framework `ui-1ed6b6c9a040` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; используется в продуктах. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «строка» (сервер пишет `data-sf-skeleton="line"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; нужна подпись или `aria-label`; с клавиатуры: `↓`, `↑`, `Home`, `End`, `→`, `←`, `Enter`, `Пробел`, `Esc`. |
-| Источник | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/smart/list-item` |
-| Правило классов | `simai/ui@1ed6b6c9a040bf5157cdaa2911db70c5d6196af1:distr/rule/rule.json#name=cl-list-item` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/list-item` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-list-item` |
 
 ## См. также
 

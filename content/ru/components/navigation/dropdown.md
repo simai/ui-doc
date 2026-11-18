@@ -6,7 +6,7 @@ profile: reference
 
 # Выпадающий список
 
-:badge[sf-dropdown]{variant=outline scheme=on-surface size=1/2} :badge[1.16.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-dropdown]{variant=outline scheme=on-surface size=1/2} :badge[1.16.2]{variant=outline scheme=on-surface size=1/2}
 
 Выпадающий список экономит место и даёт выбрать одно или несколько значений
 из набора вариантов; видимая подпись пункта отделена от его машинного
