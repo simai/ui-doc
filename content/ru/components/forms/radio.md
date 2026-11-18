@@ -77,11 +77,6 @@ profile: reference
 :::example {id="components/radio/position" label="Положение индикатора"}
 :::
 
-### Выбор начертания
-
-Выбор начертания и других коротких вариантов плитками делает не
-радиокнопка, а [сегментный переключатель](/ru/smart/actions/segmented/).
-
 ## Состояния
 
 Все состояния задаёт нативный input; класс на оболочке нужен только ошибке.
@@ -262,6 +257,7 @@ whenLoader(() => SF.Loader.ready('Radio', (Radio) => {
 
 ## См. также
 
+- [Сегментный переключатель](/ru/smart/actions/segmented/) — выбор начертания и других коротких вариантов плитками.
 - [Флажок](/ru/components/forms/checkbox/)
 - [Переключатель](/ru/components/forms/switch/)
 - [Радиокнопки — смарт-компонент](/ru/smart/forms/radio/)
