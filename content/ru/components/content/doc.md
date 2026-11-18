@@ -33,8 +33,11 @@ profile: reference
 - `sf-doc-source` — блок исходного кода на своей поверхности с прокруткой.
 - `sf-doc-lead` — вводный абзац.
 - `sf-doc-checkerboard` и `sf-doc-stripes` — служебные фоны.
-- `sf-doc-code` — моноширинный шрифт для встроенного фрагмента кода, как у
-  элемента `code`.
+- `sf-doc-code` — только моноширинный шрифт для встроенного фрагмента кода:
+  без плашки, полей и уменьшения, которые даёт элемент `code`.
+- Прежние имена `.example`, `.source`, `.t-lead`, `.t-source`, `.bg-stripes`,
+  `.bg-stripes-white`, `.bg-stripes-blue` и `.bg-checkered` лист выпуска ещё
+  рисует; в новой разметке пишите классы `sf-doc-*`.
 
 У компонента нет своего JavaScript: подсветку кода выполняет
 [Highlight](/ru/components/content/highlight/), копирование —
