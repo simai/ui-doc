@@ -221,7 +221,8 @@
         "page-header",
         "site-header",
         "search",
-        "profile-picker"
+        "profile-picker",
+        "wizard"
       ]
     }
   },

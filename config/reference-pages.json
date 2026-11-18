@@ -1986,6 +1986,10 @@
       "kind": "smart",
       "standard": 4
     },
+    "smart/composite/wizard.md": {
+      "kind": "smart",
+      "standard": 3
+    },
     "smart/actions/confirm-change.md": {
       "kind": "smart",
       "standard": 3
