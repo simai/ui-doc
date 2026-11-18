@@ -29,7 +29,7 @@ profile: reference
 
 ```html
 <button type="button" data-sf-modal-open="confirm">Удалить</button>
-<sf-modal modal-id="confirm" title="Удалить проект?">
+<sf-modal modal-id="confirm" heading="Удалить проект?" size="question">
   <p slot="content">Проект удаляется без возможности восстановления.</p>
   <button slot="footer" type="button" data-sf-modal-close>Отмена</button>
 </sf-modal>
@@ -38,23 +38,38 @@ profile: reference
 Открывающее действие связывается с окном атрибутом `data-sf-modal-open` со
 значением `modal-id` окна. Кнопки внутри закрывают конкретный экземпляр
 через `data-sf-modal-close`. Содержимое окна передают слоты `header`,
-`content` и `footer`; заголовок по умолчанию задаёт `title`. Действия в
-подвале стоят в конце строки, на одной средней линии; расстояние между ними
-задаёт `--sf-modal-footer-gap` (по умолчанию `--sf-space-1/2`). Утилита в
-`footer-class`, например `content-main-between`, сильнее этого порядка.
+`content` и `footer`; заголовок по умолчанию задаёт `heading`. Ответы в
+подвале стоят в начале строки: главный первым, затем остальные, тихая
+«Отмена» последней. Действие своего рода — печать, удаление записи —
+получает `data-apart` и стоит в дальнем конце. На телефоне ответы делят
+строку пополам, главный первым. Расстояние между ними задаёт
+`--sf-modal-footer-gap` (по умолчанию `--sf-space-1/3`). Утилита в
+`footer-class` сильнее этого порядка.
 
 ## Варианты
 
 ### Положение
 
-`center`, `inline-start`, `inline-end`, `top` и `bottom` меняют положение, но
-не поведение окна. Положения `inline-start` и `inline-end` — модальная
-боковая панель; панели, рядом с которыми страница остаётся доступной, делает
-[Боковая панель](/ru/smart/overlays/drawer/). Логические направления
-учитывают письмо справа налево; физические `left` и `right` — их синонимы
-для совместимости.
+`position` • по умолчанию `center` • [справочник](#атрибуты)
 
-:::example {id="components/modal/smart-positions" label="Результат"}
+Окно стоит в центре (`center`) или у верхней границы (`top`). Всё, что
+выезжает от края, — боковая панель и шторка снизу — делает
+[Боковая панель](/ru/smart/overlays/drawer/).
+
+:::example {id="components/modal/smart-positions" label="В центре и сверху"}
+:::
+
+### Размер
+
+`size` • по умолчанию `form` • [справочник](#атрибуты)
+
+Размер называет то, что в окне: `question` — один вопрос, `form` — короткая
+форма до пяти–семи полей, `wide` — таблица, сравнение или длинный текст,
+`full` — весь экран. `width` сильнее размера для окна, которому нужна
+своя ширина. На телефоне окно в центре до `form` — шторка снизу во всю
+ширину экрана; `wide` и форма больше трёх полей занимают весь экран.
+
+:::example {id="components/modal/smart-sizes" label="Окна question, form и wide"}
 :::
 
 ### Фон
@@ -126,7 +141,7 @@ profile: reference
 
 Разметка внутри `<sf-modal>` без атрибута `slot` тоже становится содержимым
 окна: она идёт после того, что передано в слот `content`, — так же, как у
-`sf-drawer`: `<sf-modal modal-id="about" title="О проекте"><p>…</p></sf-modal>`
+`sf-drawer`: `<sf-modal modal-id="about" heading="О проекте"><p>…</p></sf-modal>`
 показывает абзац в окне.
 
 Для удалённых источников приложение определяет разрешения, CSP, обработку
@@ -183,7 +198,7 @@ profile: reference
 
 ```html
 <div data-sf-overlay-container class="h-e6">
-  <sf-modal modal-id="preview" title="Пример">…</sf-modal>
+  <sf-modal modal-id="preview" heading="Пример">…</sf-modal>
 </div>
 ```
 
@@ -212,7 +227,7 @@ profile: reference
 ```js
 const modal = await SF.createAsync('modal', {
   modalId: 'confirm-delete',
-  title: 'Удалить проект?',
+  heading: 'Удалить проект?',
   html: '<p slot="content">Проект и его файлы удаляются без возможности восстановления.</p>',
   onAfterClose: () => refreshList(),
 });
@@ -223,7 +238,7 @@ modal.open();
 
 ## Доступность
 
-- Окну нужно доступное имя: видимый `title` или `aria-label`. Без них окно
+- Окну нужно доступное имя: видимый `heading` или `aria-label`. Без них окно
   называется общим словом на языке страницы — «Окно», по-английски «Dialog».
 - Открытое окно — `dialog` с `aria-modal="true"`. Фокус переходит на саму
   панель окна, а не на первое поле; `Tab` и `Shift+Tab` не выходят за его границы, остальная страница

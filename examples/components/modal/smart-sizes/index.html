@@ -1,0 +1,20 @@
+<div class="flex flex-wrap gap-2">
+  <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-size-question"><span class="sf-button-text-container">question</span></button>
+  <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-size-form"><span class="sf-button-text-container">form</span></button>
+  <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-size-wide"><span class="sf-button-text-container">wide</span></button>
+</div>
+
+<sf-modal modal-id="modal-size-question" heading="Отменить заказ № 1042?" size="question">
+  <p slot="content" class="m-0">Покупатель получит письмо об отмене.</p>
+  <sf-button slot="footer" text="Отменить заказ" status="danger"></sf-button>
+  <sf-button slot="footer" text="Не отменять" appearance="ghost" scheme="on-surface" data-sf-modal-close></sf-button>
+</sf-modal>
+<sf-modal modal-id="modal-size-form" heading="Новый склад">
+  <p slot="content" class="m-0">Окно по умолчанию: короткая задача, до пяти–семи полей.</p>
+  <sf-button slot="footer" text="Сохранить"></sf-button>
+  <sf-button slot="footer" text="Отмена" appearance="ghost" scheme="on-surface" data-sf-modal-close></sf-button>
+</sf-modal>
+<sf-modal modal-id="modal-size-wide" heading="Сравнение тарифов доставки" size="wide">
+  <p slot="content" class="m-0">Широкое окно — для чтения, таблицы или сравнения.</p>
+  <sf-button slot="footer" text="Закрыть" appearance="ghost" scheme="on-surface" data-sf-modal-close></sf-button>
+</sf-modal>
