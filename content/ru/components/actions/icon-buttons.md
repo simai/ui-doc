@@ -34,8 +34,8 @@ profile: reference
 
 ## Варианты
 
-Кнопку описывают независимые оси: вид, схема, содержимое, размер,
-плотность, радиус и сегменты. На каждой оси кнопка берёт одно значение.
+Кнопку описывают независимые оси: вид, схема, содержимое, размер, радиус
+и сегменты. На каждой оси кнопка берёт одно значение.
 
 ### Вид
 
@@ -47,6 +47,24 @@ profile: reference
 только при наведении.
 
 :::example {id="components/icon-buttons/variants" label="Виды кнопки с иконкой"}
+:::
+
+### Без фона
+
+`sf-icon-button--plain` • [справочник](#классы)
+
+Кнопка без фона — для значка внутри другого элемента: глаз пароля и очистка
+в поле, подсказка у заголовка, копирование в блоке кода. Подложки у неё нет
+ни в одном состоянии, меняется только цвет значка: в покое приглушённый
+(`--sf-on-surface-variant`), при наведении обычный (`--sf-on-surface`), при
+нажатии и у включённого переключателя — основной (`--sf-primary`, значок
+залитый). Кольцо фокуса и область нажатия — как у кнопки-значка того же
+размера. Вид всегда нейтральный, классы схемы на него не действуют: опасное
+или цветное действие остаётся `ghost` или `outline`. На панелях и в панелях
+инструментов берите вид с подложкой. В смарт-компоненте это
+`appearance="plain"`.
+
+:::example {id="components/icon-buttons/plain" label="Кнопки без фона"}
 :::
 
 ### Схема
@@ -73,7 +91,8 @@ profile: reference
 | Место | Вид и схема |
 |:---|:---|
 | Панель редактора, панель инструментов | `ghost` + `on-surface` |
-| Строка таблицы, шапка окна, очистка поля | `ghost` + `on-surface-variant` |
+| Строка таблицы, шапка окна | `ghost` + `on-surface-variant` |
+| Значок в поле, у заголовка, в блоке кода | `plain` |
 | «Добавить» в шапке списка | `default` + `primary` |
 | Удаление записи | `ghost` или `outline` + `danger`, затем подтверждение |
 
@@ -96,15 +115,6 @@ profile: reference
 :::example {id="components/icon-buttons/sizes" label="Размеры кнопки с иконкой"}
 :::
 
-### Плотность
-
-Плотность меняет внутренние отступы выбранного размера. Без класса отступы
-обычные; `spacing-compact` подходит плотным таблицам и панелям,
-`spacing-comfortable` и `spacing-spacious` — крупным одиночным действиям.
-
-:::example {id="components/icon-buttons/tightness" label="Плотность кнопки с иконкой"}
-:::
-
 ### Радиус
 
 Кнопка берёт смысловой радиус контрола (`radius-ui`). `radius-square`
@@ -119,8 +129,12 @@ profile: reference
 
 `segment-start`, `segment-middle` и `segment-end` соединяют соседние кнопки в
 один составной элемент: внутренние углы становятся прямыми, общие границы
-рисуются один раз. Выбранный сегмент обычно `outline`, остальные — `ghost`.
-Группе нужна семантика: `role="group"` и общее доступное имя.
+рисуются один раз. Так стоят независимые переключатели, например жирный,
+курсив и подчёркнутый: каждый включается сам по себе. Группе нужна
+семантика: `role="group"` и общее доступное имя. Обычно сегменты ставит
+[группа кнопок](/ru/components/actions/button-group/), вручную их не пишут.
+Выбор одного из нескольких (выравнивание, вид списка) — не сегменты, а
+[сегментный переключатель](/ru/smart/actions/segmented/).
 
 :::example {id="components/icon-buttons/segments" label="Сегменты"}
 :::
@@ -132,8 +146,13 @@ profile: reference
 ### Нажатая
 
 Класс `active` вместе с `aria-pressed="true"` оставляет кнопку-переключатель
-нажатой. Доступное имя при переключении не меняется: состояние сообщает
-`aria-pressed`.
+нажатой. Нажатой бывает только кнопка-переключатель в нейтральной схеме:
+`outline` или `ghost` с `on-surface` (или `on-surface-variant`) и кнопка без
+фона. У нажатой мягкая основная заливка и залитый значок
+(`sf-icon--filled`), так состояние видно не только цветом. Залитая, мягкая,
+опасная и основная кнопки под `aria-pressed` не меняются, а Framework пишет в
+консоль, что это не переключатель. Доступное имя при переключении не
+меняется: состояние сообщает `aria-pressed`.
 
 :::example {id="components/icon-buttons/state-active" label="Нажатая"}
 :::
@@ -201,8 +220,8 @@ profile: reference
 
 Разметка `sf-icon-button` работает без скрипта. Компонент регистрирует класс
 `IconButtons`, который собирает кнопку из параметров: `icon`, `size`, `type`
-(вид), `scheme`, `spacing` (`compact`, `comfortable`, `spacious`), `radius`,
-`disabled`, `loading` (спиннер на месте иконки, `aria-busy` и `disabled`);
+(вид: `default`, `tonal`, `outline`, `ghost`, `plain`), `scheme`, `height`
+(`low`, `high`, `highest`), `radius`, `disabled`, `loading` (спиннер на месте иконки, `aria-busy` и `disabled`);
 `attrs` переносятся на кнопку. Событий компонент не отправляет.
 `SF.Loader` появляется к событию `sf-loader-init` на `window`;
 `SF.Loader.ready('IconButtons', callback)` передаёт класс, когда он
@@ -213,7 +232,7 @@ const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener
 
 whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
   const button = new IconButtons({
-    param: {icon: 'edit', type: 'link', scheme: 'on-surface', size: '1'},
+    param: {icon: 'edit', type: 'ghost', scheme: 'on-surface', size: '1'},
     attrs: {'aria-label': 'Редактировать строку'},
   });
   document.querySelector('#row-actions').append(button.render());
