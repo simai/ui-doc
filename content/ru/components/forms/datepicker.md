@@ -30,7 +30,8 @@ profile: reference
   ширина на семь дней. Дайте ей `role="group"` и `aria-label` с месяцем.
 - `sf-datepicker-top` с утилитами `grid items-cross-center` делит шапку на три
   колонки: кнопка назад, `sf-datepicker-period` с названием месяца, кнопка
-  вперёд.
+  вперёд. Кнопки-стрелки — `sf-icon-button--size-1/2`, как у
+  смарт-календаря: шапка тогда той же высоты, что строка дней.
 - Дни недели — `sf-datepicker-weekday` в строке `grid grid-col-7`; строку
   скрывайте от вспомогательных технологий: полную дату называет кнопка дня.
 - День — `<button type="button" class="sf-datepicker-day">` с числом в
@@ -110,7 +111,10 @@ profile: reference
 - Кнопке дня нужна полная дата в `aria-label`: «15 сентября 2026». Число
   без месяца и года экранный диктор прочтёт без контекста.
 - Выбор, период, выходной и недоступность передавайте не только цветом:
-  `aria-pressed`, `disabled` и текст в `aria-label`.
+  `aria-pressed`, `disabled` и текст в `aria-label`. В статической разметке
+  на классах день — кнопка с `aria-pressed`;
+  [смарт-календарь](/ru/smart/forms/datepicker/) рисует дни таблицей `role="grid"`:
+  день — `role="gridcell"` с `aria-selected`, сегодня — `aria-current="date"`.
 - Сегодняшний день отмечайте `aria-current="date"` (или классом
   `sf-datepicker-day-today`): календарь обводит его рамкой.
 - Клавиатурную навигацию по дням (стрелки, Home, End, листание месяцев) классы
