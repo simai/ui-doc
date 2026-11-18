@@ -19,37 +19,6 @@ description: "Задаёт, насколько ползунок тоньше п�
 :::example {id="utilities/overscroll/scroll" label="Толщина ползунка"}
 :::
 
-## Классы
-
-| Класс | CSS | Значения |
-|:---|:---|:---|
-| `scroll-0` | `--sf-scroll-thumb-inset: var(--sf-0)` | — |
-| `scroll-thumb-0` | `--sf-scroll-thumb-inset: var(--sf-0)` | — |
-| `scroll-1` | `--sf-scroll-thumb-inset: var(--sf-a4)` | — |
-| `scroll-thumb-1` | `--sf-scroll-thumb-inset: var(--sf-a4)` | — |
-| `scroll-2` | `--sf-scroll-thumb-inset: var(--sf-a3)` | — |
-| `scroll-thumb-2` | `--sf-scroll-thumb-inset: var(--sf-a3)` | — |
-| `scroll-3` | `--sf-scroll-thumb-inset: var(--sf-a2)` | — |
-| `scroll-thumb-3` | `--sf-scroll-thumb-inset: var(--sf-a2)` | — |
-| `scroll-4` | `--sf-scroll-thumb-inset: var(--sf-a1)` | — |
-| `scroll-thumb-4` | `--sf-scroll-thumb-inset: var(--sf-a1)` | — |
-
-Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
-
-Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
-
-## Переменные
-
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
-
-| Переменная | Значение по умолчанию |
-|:---|:---|
-| `--sf-0` | `0` |
-| `--sf-a4` | `0.25rem` |
-| `--sf-a3` | `0.1875rem` |
-| `--sf-a2` | `0.125rem` |
-| `--sf-a1` | `0.0625rem` |
-
 ## Применение
 
 ### Шкала

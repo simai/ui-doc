@@ -37,7 +37,7 @@ description: "Заполняет фон элемента тонкими лини
 | `stripe-1` | `background-image: repeating-linear-gradient(90deg, var(--sf-stripe--color) 0 var(--sf-px), transparent var(--sf-px) var(--sf-stripe--size))` | — |
 | `stripe-2` | `background-image: repeating-linear-gradient(0deg, var(--sf-stripe--color) 0 var(--sf-px), transparent var(--sf-px) var(--sf-stripe--size))` | — |
 
-Прежние имена работают до 2027-01-01: `stripe-3` → `pattern-grid`, `stripe-4` → `pattern-hatch`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:stripe-1`.
 

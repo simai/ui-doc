@@ -35,7 +35,7 @@ description: "Убирает оформление, которое браузер
 текста задают классы.
 
 ```html
-<select class="appearance-none w-full p-x-2 p-y-1 border border-outline radius-ui bg-surface color-on-surface">
+<select class="appearance-none w-full p-x-2 p-y-1 border border-outline radius-ui bg-surface-area color-on-surface">
   <option>Москва</option>
   <option>Казань</option>
 </select>

@@ -38,13 +38,23 @@ description: "Задаёт высоту строки текста множите
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `line-{значение}` | `line-height: var(--sf-text--height-{значение})` | `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
-| `line-tight` | `line-height: 1.25` | — |
-| `line-snug` | `line-height: 1.375` | — |
-| `line-relaxed` | `line-height: 1.625` | — |
-| `line-loose` | `line-height: 2` | — |
-| `line-none` | `line-height: 1` | — |
-| `line-normal` | `line-height: 1.5` | — |
+| `line-1/4` | `line-height: var(--sf-text--height-1/4)` | — |
+| `line-1/3` | `line-height: var(--sf-text--height-1/3)` | — |
+| `line-1/2` | `line-height: var(--sf-text--height-1/2)` | — |
+| `line-1` | `line-height: var(--sf-text--height-1)` | — |
+| `line-2` | `line-height: var(--sf-text--height-2)` | — |
+| `line-3` | `line-height: var(--sf-text--height-3)` | — |
+| `line-4` | `line-height: var(--sf-text--height-4)` | — |
+| `line-5` | `line-height: var(--sf-text--height-5)` | — |
+| `line-6` | `line-height: var(--sf-text--height-6)` | — |
+| `line-7` | `line-height: var(--sf-text--height-7)` | — |
+| `line-8` | `line-height: var(--sf-text--height-8)` | — |
+| `line-9` | `line-height: var(--sf-text--height-9)` | — |
+| `line-10` | `line-height: var(--sf-text--height-10)` | — |
+| `line-11` | `line-height: var(--sf-text--height-11)` | — |
+| `line-12` | `line-height: var(--sf-text--height-12)` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:line-1/4`.
 

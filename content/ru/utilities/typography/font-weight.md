@@ -38,24 +38,13 @@ description: "Задаёт толщину начертания текста по
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `regular` | `font-weight: normal` | — |
-| `bold` | `font-weight: bold` | — |
-| `lighter` | `font-weight: lighter` | — |
-| `bolder` | `font-weight: bolder` | — |
-| `weight-1` | `font-weight: 100` | — |
-| `weight-2` | `font-weight: 200` | — |
-| `weight-3` | `font-weight: 300` | — |
-| `weight-4` | `font-weight: 400` | — |
-| `weight-5` | `font-weight: 500` | — |
-| `weight-6` | `font-weight: 600` | — |
-| `weight-7` | `font-weight: 700` | — |
-| `weight-8` | `font-weight: 800` | — |
-| `weight-9` | `font-weight: 900` | — |
 | `weight-regular` | `font-weight: var(--sf-weight--regular)` | — |
 | `weight-medium` | `font-weight: var(--sf-weight--medium)` | — |
 | `weight-bold` | `font-weight: var(--sf-weight--bold)` | — |
 
-Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — `hover:`. Например: `sm:regular`.
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
+
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — `hover:`. Например: `sm:weight-regular`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

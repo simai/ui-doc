@@ -22,11 +22,12 @@ description: "Задаёт, сохраняются ли в тексте проб
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `wrap-none` | `white-space: nowrap` | — |
 | `pre` | `white-space: pre` | — |
 | `pre-line` | `white-space: pre-line` | — |
 | `pre-wrap` | `white-space: pre-wrap` | — |
 | `whitespace-normal` | `white-space: normal` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 

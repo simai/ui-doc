@@ -21,9 +21,9 @@ description: "Обрезает текст, который не помещает�
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `t-ellipsis` | `text-overflow: ellipsis` | — |
-| `t-clip` | `text-overflow: clip` | — |
 | `truncate` | `overflow: hidden; white-space: nowrap; text-overflow: ellipsis` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 

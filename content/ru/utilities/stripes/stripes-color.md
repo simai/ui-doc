@@ -24,7 +24,7 @@ description: "Окрашивает линии полосатого фона цв
 | `stripe-current` | `--sf-stripe--color: var(--sf-current)` | — |
 | `stripe-inherit` | `--sf-stripe--color: var(--sf-inherit)` | — |
 
-Прежние имена работают до 2027-01-01: `stripe-on-surface` → `pattern-color-neutral`, `stripe-primary` → `pattern-color-primary`, `stripe-primary-container` → `pattern-color-primary`, `stripe-secondary` → `pattern-color-secondary`, `stripe-secondary-container` → `pattern-color-secondary`, `stripe-surface-container-strong` → `pattern-color-neutral`, `stripe-surface-transparent-overlay` → `pattern-color-neutral`, `stripe-tertiary` → `pattern-color-tertiary`, `stripe-tertiary-container` → `pattern-color-tertiary`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 

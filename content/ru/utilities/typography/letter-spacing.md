@@ -25,8 +25,9 @@ description: "Сжимает или разрежает расстояние ме
 | `tracking-wide` | `letter-spacing: var(--sf-text--tracking-wide)` | — |
 | `tracking-wider` | `letter-spacing: var(--sf-text--tracking-wider)` | — |
 | `tracking-widest` | `letter-spacing: var(--sf-text--tracking-widest)` | — |
-| `tracking-no-tracking` | `letter-spacing: var(--sf-text--tracking-no-tracking)` | — |
 | `tracking-normal` | `letter-spacing: var(--sf-text--tracking-no-tracking)` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 

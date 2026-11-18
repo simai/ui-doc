@@ -140,6 +140,34 @@ for (const record of journal.records ?? []) {
   }
 }
 
+// The pair's one table of retired class names (owner decision C187 (1),
+// src/core/js/retired-classes.table.js) retires names the journal does not
+// list as a utility record of its own: whole utility modules (filters, masks),
+// families (col-gap-*, space-x-*) and exact names. They leave the tables the
+// same way; the update guide lists every one of them with what to write
+// (scripts/build-retired-class-reference.mjs).
+const retiredExact = new Map();
+const retiredPatterns = [];
+const retiredSheets = new Set();
+try {
+  const text = execFileSync('git', ['-C', sourceRepo, 'show', `${releaseLock.build_inputs.source.commit}:src/core/js/retired-classes.table.js`], {encoding: 'utf8', maxBuffer: 64 << 20, stdio: ['ignore', 'pipe', 'ignore']});
+  const table = JSON.parse(text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1));
+  for (const record of table.records ?? []) {
+    for (const [name, to] of Object.entries(record.names ?? {})) retiredExact.set(name, {to, removeAfter: record.remove_after ?? null});
+    for (const pattern of record.patterns ?? []) retiredPatterns.push({re: new RegExp(pattern.pattern, 'u'), except: pattern.variants_except ? new RegExp(pattern.variants_except, 'u') : null, removeAfter: record.remove_after ?? null});
+    for (const sheet of Object.keys(record.sheets ?? {})) retiredSheets.add(sheet);
+  }
+} catch {
+  // A source without the table (before C187) retires nothing here.
+}
+const retiredClass = (name) => {
+  const base = name.slice(name.lastIndexOf(':') + 1);
+  if (retiredExact.has(base)) return true;
+  return retiredPatterns.some(({re, except}) => re.test(base) && !(except && except.test(name)));
+};
+const RETIRED_LINE = 'Прежние имена классов этого модуля и что писать вместо них — в руководстве'
+  + ' [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).';
+
 // ---- CSS ----------------------------------------------------------------------
 
 const unescape = (name) => name.replace(/\\(.)/gu, '$1');
@@ -260,7 +288,18 @@ const utilityClasses = (families) => {
       }
     }
   }
-  // Former names leave the table and are listed under it.
+  // Former names leave the table; the update guide lists them (D03).
+  const retiredSheetNames = new Set();
+  for (const family of families.filter((item) => retiredSheets.has(item))) {
+    for (const {selector} of rules(show(`distr/utility/${family}/default/css/default.css`) ?? '')) {
+      for (const part of splitSelector(selector)) {
+        const name = firstClass(part.trim());
+        if (name) retiredSheetNames.add(name);
+      }
+    }
+  }
+  const retired = [...byClass.keys()].filter((name) => !formerUtilities.has(name) && !goingUtilities.has(name) && (retiredClass(name) || retiredSheetNames.has(name)));
+  for (const name of retired) byClass.delete(name);
   const former = [...byClass.keys()].filter((name) => formerUtilities.has(name)).sort();
   for (const name of former) byClass.delete(name);
   const going = [...byClass.keys()].filter((name) => goingUtilities.has(name)).sort();
@@ -322,11 +361,7 @@ const utilityClasses = (families) => {
       lines.push(`| ${code(row.name)}${shown} | ${code(row.entry.css)} | — |`);
     }
   }
-  if (former.length) {
-    const dates = [...new Set(former.map((name) => formerUtilities.get(name).removeAfter).filter(Boolean))].sort();
-    const until = dates.length ? ` до ${dates.join(', ')}` : '';
-    lines.push('', `Прежние имена работают${until}: ${former.map((name) => `${code(name)} → ${code(formerUtilities.get(name).to)}`).join(', ')}. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).`);
-  }
+  if (former.length || retired.length) lines.push('', RETIRED_LINE);
   if (going.length) {
     const byRecord = new Map();
     for (const name of going) {
@@ -355,7 +390,9 @@ const utilityVariants = (families) => {
     for (const variant of tree(`distr/utility/${family}`).filter((name) => name !== 'default')) {
       const css = show(`distr/utility/${family}/${variant}/css/${variant}.css`);
       if (!css) continue;
-      const first = rules(css).find(({selector}) => firstClass(selector));
+      // The example names a current class: a retired one is not shown (D03).
+      const first = rules(css).find(({selector}) => firstClass(selector) && !retiredClass(firstClass(selector)))
+        ?? rules(css).find(({selector}) => firstClass(selector));
       if (!first) continue;
       const name = firstClass(first.selector);
       const prefix = name.includes(':') ? name.slice(0, name.lastIndexOf(':') + 1) : `${variant}:`;
@@ -744,7 +781,13 @@ for (const [page, entry] of Object.entries(settings.pages)) {
   const path = join(root, 'content/ru', page);
   const current = readFileSync(path, 'utf8');
   let next = current;
-  if (entry.kind === 'utility') {
+  if (entry.kind === 'utility' && entry.families.every((family) => retiredSheets.has(family))) {
+    // A page whose every module leaves is a short note on its going: no
+    // class or variable tables of what a reader should not write.
+    next = setSection(next, 'utility', 'Сводка', null);
+    next = setSection(next, 'utility', 'Классы', null);
+    next = setSection(next, 'utility', 'Переменные', null);
+  } else if (entry.kind === 'utility') {
     next = setSection(next, 'utility', 'Сводка', null);
     next = setSection(next, 'utility', 'Классы', [...utilityClasses(entry.families), ...utilityConditions(entry.families), '', SOURCE_NOTE]);
     next = setSection(next, 'utility', 'Переменные', utilityVariables(entry.families));

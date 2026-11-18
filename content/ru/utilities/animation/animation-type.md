@@ -43,10 +43,9 @@ description: "Проявляет элемент при отрисовке — и
 |:---|:---|:---|
 | `animation` | `animation-name: sf-animation-fade; animation-duration: var(--sf-duration-normal); animation-timing-function: var(--sf-ease-enter); animation-fill-mode: both; (prefers-reduced-motion: reduce): animation-duration: 0.01ms; animation-iteration-count: 1` | — |
 | `infinite` | `animation-iteration-count: infinite; (prefers-reduced-motion: reduce): animation-duration: 0.01ms; animation-iteration-count: 1` | — |
-| `animation-from-left` | `animation-name: sf-animation-from-left` | — |
-| `animation-from-right` | `animation-name: sf-animation-from-right` | — |
-| `animation-from-bottom` | `animation-name: sf-animation-from-bottom` | — |
 | `animation-on-view` (`.animation-on-view[data-sf-on-view=waiting]`) | `animation-play-state: paused; (prefers-reduced-motion: reduce): animation-play-state: running` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 

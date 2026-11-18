@@ -21,18 +21,14 @@ description: "Задаёт вид линий между соседними эл�
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `divider-solid` (`.divider-solid > :not([hidden]) ~ :not([hidden])`) | `border-style: solid` | — |
 | `divide-solid` (`.divide-solid > :not([hidden]) ~ :not([hidden])`) | `border-style: solid` | — |
-| `divider-dashed` (`.divider-dashed > :not([hidden]) ~ :not([hidden])`) | `border-style: dashed` | — |
 | `divide-dashed` (`.divide-dashed > :not([hidden]) ~ :not([hidden])`) | `border-style: dashed` | — |
-| `divider-dotted` (`.divider-dotted > :not([hidden]) ~ :not([hidden])`) | `border-style: dotted` | — |
 | `divide-dotted` (`.divide-dotted > :not([hidden]) ~ :not([hidden])`) | `border-style: dotted` | — |
-| `divider-double` (`.divider-double > :not([hidden]) ~ :not([hidden])`) | `border-style: double` | — |
 | `divide-double` (`.divide-double > :not([hidden]) ~ :not([hidden])`) | `border-style: double` | — |
-| `divider-none` (`.divider-none > :not([hidden]) ~ :not([hidden])`) | `border-style: none` | — |
 | `divide-none` (`.divide-none > :not([hidden]) ~ :not([hidden])`) | `border-style: none` | — |
-| `divider-hidden` (`.divider-hidden > :not([hidden]) ~ :not([hidden])`) | `border-style: hidden !important` | — |
 | `divide-hidden` (`.divide-hidden > :not([hidden]) ~ :not([hidden])`) | `border-style: hidden !important` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 

@@ -45,7 +45,8 @@ description: "Раскладывает содержимое блока по за
 | `layout-col-10` | `column-count: 10` | — |
 | `layout-col-11` | `column-count: 11` | — |
 | `layout-col-12` | `column-count: 12` | — |
-| `layout-col-auto` | `column-count: auto` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:layout-col-1`.
 

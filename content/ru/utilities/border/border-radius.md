@@ -56,17 +56,17 @@ description: "Скругляет углы элемента целиком, по 
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `radius-{значение}` | `border-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
+| `radius-{значение}` | `border-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `rounded` |
 | `radius-ui` | `border-radius: var(--sf-radius--ui)` | — |
 | `radius-surface` | `border-radius: var(--sf-radius--surface)` | — |
-| `radius-top-{значение}` | `border-start-start-radius: var(--sf-radius-{значение}); border-start-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
-| `radius-bottom-{значение}` | `border-end-start-radius: var(--sf-radius-{значение}); border-end-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
-| `radius-inline-start-{значение}` | `border-start-start-radius: var(--sf-radius-{значение}); border-end-start-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
-| `radius-inline-end-{значение}` | `border-start-end-radius: var(--sf-radius-{значение}); border-end-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
-| `radius-top-inline-start-{значение}` | `border-start-start-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
-| `radius-top-inline-end-{значение}` | `border-start-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
-| `radius-bottom-inline-start-{значение}` | `border-end-start-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
-| `radius-bottom-inline-end-{значение}` | `border-end-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
+| `radius-top-{значение}` | `border-start-start-radius: var(--sf-radius-{значение}); border-start-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `rounded` |
+| `radius-bottom-{значение}` | `border-end-start-radius: var(--sf-radius-{значение}); border-end-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `rounded` |
+| `radius-inline-start-{значение}` | `border-start-start-radius: var(--sf-radius-{значение}); border-end-start-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `rounded` |
+| `radius-inline-end-{значение}` | `border-start-end-radius: var(--sf-radius-{значение}); border-end-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `rounded` |
+| `radius-top-inline-start-{значение}` | `border-start-start-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `rounded` |
+| `radius-top-inline-end-{значение}` | `border-start-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `rounded` |
+| `radius-bottom-inline-start-{значение}` | `border-end-start-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `rounded` |
+| `radius-bottom-inline-end-{значение}` | `border-end-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `rounded` |
 | `radius-top-ui` | `border-start-start-radius: var(--sf-radius--ui); border-start-end-radius: var(--sf-radius--ui)` | — |
 | `radius-bottom-ui` | `border-end-start-radius: var(--sf-radius--ui); border-end-end-radius: var(--sf-radius--ui)` | — |
 | `radius-inline-start-ui` | `border-start-start-radius: var(--sf-radius--ui); border-end-start-radius: var(--sf-radius--ui)` | — |
@@ -83,6 +83,8 @@ description: "Скругляет углы элемента целиком, по 
 | `radius-top-inline-end-surface` | `border-start-end-radius: var(--sf-radius--surface)` | — |
 | `radius-bottom-inline-start-surface` | `border-end-start-radius: var(--sf-radius--surface)` | — |
 | `radius-bottom-inline-end-surface` | `border-end-end-radius: var(--sf-radius--surface)` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:radius-0`.
 

@@ -37,7 +37,7 @@ description: "Ставит элементу тень его места: на с�
 | `shadow-overlay` | `--sf-place-shadow: 0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color), 0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color); box-shadow: 0 0 transparent, var(--sf-place-shadow); box-shadow: var(--sf-ring-shadow, 0 0 transparent), var(--sf-place-shadow)` | — |
 | `shadow-modal` | `--sf-place-shadow: 0 var(--sf-a4) var(--sf-a8) var(--sf-shadow-key-color), 0 var(--sf-b6) var(--sf-c6) var(--sf-shadow-ambient-color); box-shadow: 0 0 transparent, var(--sf-place-shadow); box-shadow: var(--sf-ring-shadow, 0 0 transparent), var(--sf-place-shadow)` | — |
 
-Прежние имена работают до 2027-01-01: `shadow-0` → `shadow-flat`, `shadow-1` → `shadow-raised`, `shadow-2` → `shadow-overlay`, `shadow-3` → `shadow-overlay`, `shadow-4` → `shadow-modal`, `shadow-5` → `shadow-modal`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:shadow-flat`.
 

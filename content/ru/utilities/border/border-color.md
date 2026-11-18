@@ -42,7 +42,6 @@ description: "Окрашивает рамку элемента цветовой 
 |:---|:---|:---|
 | `border-{значение}` | `border-color: var(--sf-{значение})` | `transparent`, `current`, `outline` |
 | `border-outline-variant` | `border-color: var(--sf-outline-variant)` | — |
-| `border-surface` | `border-color: var(--sf-surface-area)` | — |
 | `border-surface-{значение}` | `border-color: var(--sf-surface-{значение})` | `page`, `area`, `veil`, `inverse` |
 | `border-{значение}-container` | `border-color: var(--sf-{значение}-container)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `border-{значение}-container-strong` | `border-color: var(--sf-{значение}-container-strong)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
@@ -50,7 +49,7 @@ description: "Окрашивает рамку элемента цветовой 
 | `border-on-surface-variant` | `border-color: var(--sf-on-surface-variant)` | — |
 | `border-{значение}` | `border-color: var(--sf-{значение}-outline)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info`, `hue` |
 
-Прежние имена работают до 2027-01-01: `border-error-transparent-overlay` → `border-error-container-strong`, `border-primary-transparent-overlay` → `border-primary-container-strong`, `border-secondary-transparent-overlay` → `border-secondary-container-strong`, `border-success-transparent-overlay` → `border-success-container-strong`, `border-surface-0` → `border-surface-page`, `border-surface-1` → `border-surface-area`, `border-surface-overlay` → `border-surface-veil`, `border-surface-transparent-overlay` → `border-surface-container-strong`, `border-tertiary-transparent-overlay` → `border-tertiary-container-strong`, `border-warning-transparent-overlay` → `border-warning-container-strong`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Другие классы записи `utility-c17-legacy-palette-classes` журнала уходят и работают до 2027-01-01; замена — класс оттенка рядом с ролевым классом: `border-on-surface` ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
 
@@ -110,7 +109,7 @@ description: "Окрашивает рамку элемента цветовой 
 | Выбранный элемент, фокус | `border-primary` |
 | Ошибка, предупреждение, успех, сведения | `border-error`, `border-warning`, `border-success`, `border-info` |
 | Рамка цвета текста | `border-current` |
-| Вырез вокруг аватара на заливке | `border-surface`, `border-surface-page` |
+| Вырез вокруг аватара на заливке | `border-surface-area`, `border-surface-page` |
 | Невидимая рамка, которая держит размер | `border-transparent` |
 
 Классы цвета не включают рамку: толщину задают классы

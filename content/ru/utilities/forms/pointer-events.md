@@ -24,9 +24,9 @@ description: "Делает элемент прозрачным для мыши �
 | Класс | CSS | Значения |
 |:---|:---|:---|
 | `pointer-events-none` | `pointer-events: none` | — |
-| `pointer-event-none` | `pointer-events: none` | — |
 | `pointer-events-auto` | `pointer-events: auto` | — |
-| `pointer-event-auto` | `pointer-events: auto` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 

@@ -45,7 +45,7 @@ description: "Заполняет фон элемента мелким узоро
 | `pattern-fade-clear` | `--sf-pattern--fade: radial-gradient(ellipse var(--sf-pattern--clear) at 50% 46%, transparent 0,transparent 45%, #000 100%); --sf-pattern--fade: radial-gradient(ellipse var(--sf-pattern--clear) at 50% 46%, transparent 0 45%, #000 100%)` | — |
 | `pattern-fade-down` | `--sf-pattern--fade: linear-gradient(to bottom, #000 0%, transparent 85%)` | — |
 
-Прежние имена работают до 2027-01-01: `pattern-1` → `pattern-grid`, `pattern-2` → `pattern-grid`, `pattern-3` → `pattern-dots`, `pattern-4` → `pattern-checker`, `pattern-5` → `pattern-hatch`, `pattern-6` → `pattern-dots`, `pattern-7` → `pattern-dots`, `pattern-8` → `pattern-grid`, `pattern-9` → `pattern-checker`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:pattern-1`.
 

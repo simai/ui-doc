@@ -115,7 +115,7 @@ description: "Задаёт размер шрифта вместе с высот�
 Размер, высоту строки и толщину для заголовков удобнее задавать вместе:
 
 ```html
-<h2 class="text-6 heading weight-7">Заголовок раздела</h2>
+<h2 class="text-6 heading weight-bold">Заголовок раздела</h2>
 <p class="text-1">Обычный текст абзаца.</p>
 <span class="text-1/2 color-on-surface-variant">Подпись</span>
 ```

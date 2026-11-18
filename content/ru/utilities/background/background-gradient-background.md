@@ -31,22 +31,8 @@ description: "Задаёт цвета точек градиента класса
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `gr1-{значение}` | `--sf-gradient--color-1: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning`, `info` |
-| `gr1-surface-{значение}` | `--sf-gradient--color-1: var(--sf-surface-{значение})` | `page`, `area`, `2` |
-| `gr1-on-surface` | `--sf-gradient--color-1: var(--sf-on-surface)` | — |
-| `gr1-{значение}-container` | `--sf-gradient--color-1: var(--sf-{значение}-container)` | `primary`, `secondary`, `tertiary` |
-| `gr2-{значение}` | `--sf-gradient--color-2: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning`, `info` |
-| `gr2-surface-page` | `--sf-gradient--color-2: var(--sf-surface-page)` | — |
-| `gr2-surface-area` | `--sf-gradient--color-2: var(--sf-surface-area)` | — |
-| `gr2-surface-2` | `--sf-gradient--color-2: var(--sf-surface-2)` | — |
-| `gr2-on-surface` | `--sf-gradient--color-2: var(--sf-on-surface)` | — |
-| `gr2-{значение}-container` | `--sf-gradient--color-2: var(--sf-{значение}-container)` | `primary`, `secondary`, `tertiary` |
-| `gr3-{значение}` | `--sf-gradient--color-3: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning`, `info` |
-| `gr3-surface-{значение}` | `--sf-gradient--color-3: var(--sf-surface-{значение})` | `page`, `area`, `2` |
-| `gr3-on-surface` | `--sf-gradient--color-3: var(--sf-on-surface)` | — |
-| `gr3-{значение}-container` | `--sf-gradient--color-3: var(--sf-{значение}-container)` | `primary`, `secondary`, `tertiary` |
 
-Прежние имена работают до 2027-01-01: `gr1-surface-0` → `gr1-surface-page`, `gr1-surface-1` → `gr1-surface-area`, `gr2-surface-0` → `gr2-surface-page`, `gr2-surface-1` → `gr2-surface-area`, `gr3-surface-0` → `gr3-surface-page`, `gr3-surface-1` → `gr3-surface-area`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 

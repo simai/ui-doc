@@ -60,16 +60,12 @@ description: "Задаёт высоту элемента: шагом шкалы 
 | `h-1/3` | `height: 33.333333%` | — |
 | `h-2/3` | `height: 66.666667%` | — |
 | `h-1/4` | `height: 25%` | — |
-| `h-2/4` | `height: 50%` | — |
 | `h-3/4` | `height: 75%` | — |
 | `h-1/5` | `height: 20%` | — |
 | `h-2/5` | `height: 40%` | — |
 | `h-3/5` | `height: 60%` | — |
 | `h-4/5` | `height: 80%` | — |
 | `h-1/6` | `height: 16.666667%` | — |
-| `h-2/6` | `height: 33.333333%` | — |
-| `h-3/6` | `height: 50%` | — |
-| `h-4/6` | `height: 66.666667%` | — |
 | `h-5/6` | `height: 83.333333%` | — |
 | `h-full` | `height: 100%` | — |
 | `h-screen` | `height: 100vh` | — |
@@ -78,14 +74,13 @@ description: "Задаёт высоту элемента: шагом шкалы 
 | `h-screen-1/3` | `height: 33.333333vh` | — |
 | `h-screen-2/3` | `height: 66.666667vh` | — |
 | `h-screen-1/4` | `height: 25vh` | — |
-| `h-screen-2/4` | `height: 50vh` | — |
 | `h-screen-3/4` | `height: 75vh` | — |
 | `h-{значение}` | `height: -webkit-{значение}-content; height: -moz-{значение}-content; height: {значение}-content` | `min`, `max`, `fit` |
-| `h-content-min` | `height: -webkit-min-content; height: -moz-min-content; height: min-content` | — |
-| `h-content-max` | `height: -webkit-max-content; height: -moz-max-content; height: max-content` | — |
 | `h-px` | `height: 1px` | — |
 | `h-0` | `height: 0` | — |
 | `h-{значение}` | `height: var(--sf-{значение})` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:h-auto`.
 
