@@ -379,7 +379,7 @@ modal.open();
 
 ## См. также
 
-- [Боковая панель](/ru/smart/overlays/drawer/) — немодальная и закреплённая боковые панели.
+- [Боковая панель](/ru/smart/overlays/drawer/) — всё, что выезжает от края экрана: панель с затемнением, немодальная, закреплённая и нижняя шторка.
 - [Всплывающая панель](/ru/smart/overlays/popover/) — небольшая панель у кнопки.
 - [Модальное окно на классах](/ru/components/overlays-media/modal/) — то же окно без тега `<sf-modal>`.
 - Рецепты: [«Выбор строк и общие действия»](/ru/recipes/remove/bulk-actions/), [«Окно с формой»](/ru/recipes/edit/dialog-form/), [«Удаление»](/ru/recipes/remove/delete/)
