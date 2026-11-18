@@ -30,17 +30,16 @@ description: "Набор автора блока: шаблон, генерато
   версия схемы 1): документы с блоком и то, что они рисуют.
 
 Набор лежит в репозитории SIMAI Framework, в папке
-[`kits/block/`](https://github.com/simai/ui-source/tree/4863a40e221cba7684cd0c7d860b286613d3e8c4/kits/block):
+[`kits/block/`](https://github.com/simai/ui-source/tree/acc113415d98032041f3fdbf3e2ba622c48465a1/kits/block):
 шаблон, с которого начинают, генератор и проверка, которую разработчик
-запускает на своём блоке. Набор вышел в паре `ui-8e1a016a28a0`; эти
-инструменты лежат вне исходников SIMAI Framework (`src/`), в поставку не
+запускает на своём блоке. Ссылка ведёт на исходник выпуска `ui-1ed6b6c9a040`,
+на котором собрана эта документация. Эти инструменты лежат вне исходников SIMAI Framework (`src/`), в поставку не
 собираются и версий модулей не меняют.
 
 Примеры блоков, сделанных только средствами набора, — `sample.quote`
 (цитата с автором) и `sample.cards` (блок с данными: место в каталоге,
 варианты, параметры раскладки, именованное место и привязка к хосту). Они
-лежат в `src/core/kits/block/` и с выпуска `ui-c3015f76bcc2` входят в
-поставку целиком: `distr/core/kits/block/sample-quote/` и
+лежат в `src/core/kits/block/` и входят в поставку целиком: `distr/core/kits/block/sample-quote/` и
 `distr/core/kits/block/sample-cards/` в пакете `@simai-studio/ui`. Хост может
 загрузить их с CDN, например
 `https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261117.1612/distr/core/kits/block/sample-quote/type.json`.
@@ -359,5 +358,5 @@ BLOCK_CHECK_PASS sample.quote@1.1.0 groups=5 cases=7 warnings=0
 - [Собственный тип](/ru/guide/layouts/reference/custom-type/) — регистрация типа и рендерера.
 - [Манифест типа](/ru/guide/layouts/reference/type-manifest/) — поля `simai.composition.type-manifest`.
 - [Диагностика](/ru/guide/layouts/reference/diagnostics/) — как читать коды ошибок документа.
-- [Набор автора блока на GitHub](https://github.com/simai/ui-source/tree/4863a40e221cba7684cd0c7d860b286613d3e8c4/kits/block) — шаблон, генератор и проверка.
-- [Примеры блоков на GitHub](https://github.com/simai/ui-source/tree/4863a40e221cba7684cd0c7d860b286613d3e8c4/src/core/kits/block) — `sample.quote` и `sample.cards`.
+- [Набор автора блока на GitHub](https://github.com/simai/ui-source/tree/acc113415d98032041f3fdbf3e2ba622c48465a1/kits/block) — шаблон, генератор и проверка.
+- [Примеры блоков на GitHub](https://github.com/simai/ui-source/tree/acc113415d98032041f3fdbf3e2ba622c48465a1/src/core/kits/block) — `sample.quote` и `sample.cards`.

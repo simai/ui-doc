@@ -29,11 +29,11 @@ Framework: поставляется пакетом `pro` из репозитор
 
 ### Подключение пакета
 
-Элементы `<sf-view-table>` и `<sf-view>` поставляет Larena, а не выпуск
-Framework: пакет компонентов Loader с именем `pro` из репозитория
-`simai/ui-pro` (лицензия PolyForm Small Business 1.0.0 или PolyForm
-Noncommercial 1.0.0, по запросу — коммерческая лицензия SIMAI; в составе
-Larena — лицензия Larena). В пакет входят ещё
+Элементы `<sf-view-table>` и `<sf-view>` поставляет не выпуск Framework, а
+пакет компонентов Loader с именем `pro` из репозитория `simai/ui-pro`
+(лицензия PolyForm Small Business 1.0.0 или PolyForm Noncommercial 1.0.0, по
+запросу — коммерческая лицензия SIMAI; в составе Larena — лицензия Larena).
+Larena берёт их из этого пакета. В пакет входят ещё
 [`<sf-view-properties>`](/ru/pro/admin/property-view/) и
 [`<sf-admin-menu>`](/ru/pro/admin/admin-menu/). Объявите
 пакет до подключения Core:
@@ -787,7 +787,7 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-1ed6b6c9a040` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов пакета `pro` выпуска `pro-7ae52020fef5` над выпуском Framework `ui-1ed6b6c9a040` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 

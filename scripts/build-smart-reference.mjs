@@ -123,6 +123,9 @@ for (const [name, projection] of Object.entries(lock.package_projections ?? {}))
       citation,
       rule: `${citation}/rule.js#name=cl-${folder}`,
       delivery: `пакет \`${name}\` (\`SF_BOOT_CONFIG.packages.${name}\`)`,
+      // A package's reference is built from the package's manifest, not the
+      // pair's: the section names the package release and the pair it runs on.
+      packageRelease: {name, release: `${name}-${source.revision.slice(0, 12)}`},
     });
   }
 }
@@ -831,7 +834,10 @@ const renderSection = (entries) => {
   const lines = [
     HEADING,
     '',
-    `Раздел собран из манифеста ${entries.length > 1 ? 'компонентов' : 'компонента'} выпуска ${code(pair)}`
+    (entries[0][1].packageRelease
+      ? `Раздел собран из манифеста ${entries.length > 1 ? 'компонентов' : 'компонента'} пакета ${code(entries[0][1].packageRelease.name)}`
+        + ` выпуска ${code(entries[0][1].packageRelease.release)} над выпуском Framework ${code(pair)}`
+      : `Раздел собран из манифеста ${entries.length > 1 ? 'компонентов' : 'компонента'} выпуска ${code(pair)}`)
       + ' и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.',
     '',
     'Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase:'
