@@ -368,6 +368,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `status="neutral"` | `status="clear"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `heading` | `title` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | метод `dismiss()` | `close()` | работает как псевдоним | — |
 
 #### `<sf-alert-bar>`
@@ -390,13 +391,13 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `tone="purple"` | `tone="violet"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `--sf-avatar-offline-background-color="var(--sf-on-surface-variant)"` | `--sf-avatar-offline-background-color="var(--sf-surface-place)"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `--sf-avatar-offline-overlay="none"` | `--sf-avatar-offline-overlay="linear-gradient(var(--sf-on-surface-disabled) 0 0)"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
-| `heading` | `title` | работает как псевдоним | 2026-12-01 |
+| `heading` | `title` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-avatar-group>`
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `fields` | `data` | работает как псевдоним | 2026-12-01 |
+| `fields` | `data` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-badge>`
 
@@ -544,7 +545,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `invalid` | `error` | работает как псевдоним | 2026-12-01 |
+| `invalid` | `error` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-confirm>`
 
@@ -586,7 +587,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 | событие `sf-drawer-close` | `drawer:before-close` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-drawer-closed` | `drawer:after-close` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-drawer-snapped` | `drawer:snap` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `heading` | `title` | работает как псевдоним | 2026-12-01 |
+| `heading` | `title` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-dropdown>`
 
@@ -636,7 +637,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `heading` | `title` | работает как псевдоним | 2026-12-01 |
+| `heading` | `title` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-file-download>`
 
@@ -660,7 +661,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `target=""" (default, same tab)"` | `target="_blank (default)"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | событие `sf-file-preview-download` | `sf-file-preview:download` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-file-preview-detach` | `sf-file-preview:remove` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `file-name` | `name` | работает как псевдоним | 2026-12-01 |
+| `file-name` | `name` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-file-upload>`
 
@@ -690,8 +691,8 @@ id?}` значит «перестать ждать», а `wait` принимае
 | событие `change` | `sf-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-gallery-closed` | `sf-close` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-gallery-opened` | `sf-open` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `heading` | `title` | работает как псевдоним | 2026-12-01 |
-| `backdrop-blur` | `blur` | работает как псевдоним | 2026-12-01 |
+| `heading` | `title` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `backdrop-blur` | `blur` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-header-page>`
 
@@ -715,7 +716,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 |:---|:---|:---|:---|
 | событие `sf-help-mark-opened` | `sf-help-mark-open` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-help-mark-closed` | `sf-help-mark-close` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `heading` | `title` | работает как псевдоним | 2026-12-01 |
+| `heading` | `title` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-icon>`
 
@@ -739,9 +740,9 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `size="1/2"` | `size="1/3"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `size="2"` | `size="3"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-field-reset` | `sf-field:reset` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `invalid` | `error` | работает как псевдоним | 2026-12-01 |
-| `icon-start` | `left-icon` | работает как псевдоним | 2026-12-01 |
-| `text-end` | `right-text` | работает как псевдоним | 2026-12-01 |
+| `invalid` | `error` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `icon-start` | `left-icon` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `text-end` | `right-text` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-input-code>`
 
@@ -750,7 +751,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `groups="layout"` | `groups="structure"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | событие `sf-input-code-completed` | `sf-code-input:complete` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-input-code-completed` | `sf-code-input-completed` | работает как псевдоним | — |
-| `invalid` | `error` | работает как псевдоним | — |
+| `invalid` | `error` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-input-color>`
 
@@ -787,6 +788,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 | событие `sf-input-image-detach` | `sf-image-field-detach` | работает как псевдоним | — |
 | событие `sf-input-image-library` | `sf-image-field-library` | работает как псевдоним | — |
 | событие `sf-input-image-rejected` | `sf-image-field-rejected` | работает как псевдоним | — |
+| `invalid` | `error` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-input-lookup>`
 
@@ -800,6 +802,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 |:---|:---|:---|:---|
 | событие `sf-field-reset` | `sf-field:reset` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-input-quantity-remove` | `sf-quantity-remove` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `invalid` | `error` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-input-textarea>`
 
@@ -807,8 +810,8 @@ id?}` значит «перестать ждать», а `wait` принимае
 |:---|:---|:---|:---|
 | `appearance` | `type` | принимается для совместимости | — |
 | событие `sf-field-reset` | `sf-field:reset` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `spell-check` | `spellcheck` | работает как псевдоним | 2026-12-01 |
-| `invalid` | `error` | работает как псевдоним | 2026-12-01 |
+| `spell-check` | `spellcheck` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `invalid` | `error` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-language>`
 
@@ -886,8 +889,8 @@ id?}` значит «перестать ждать», а `wait` принимае
 | событие `sf-modal-expand` | `modal:before-show` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-modal-content-upload` | `modal:before-content-upload` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-modal-content-uploaded` | `modal:after-content-upload` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `heading` | `title` | работает как псевдоним | 2026-12-01 |
-| `backdrop-blur` | `blur` | работает как псевдоним | 2026-12-01 |
+| `heading` | `title` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `backdrop-blur` | `blur` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `minimizable` | `hide` | работает как псевдоним | 2026-12-01 |
 | `dismissible` | `unclose` | работает как псевдоним | 2026-12-01 |
 
@@ -965,7 +968,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `invalid` | `error` | работает как псевдоним | 2026-12-01 |
+| `invalid` | `error` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-resizer>`
 
@@ -1008,7 +1011,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `precision` | `decimals` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | событие `change` | `sf-range-slider-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `change` | `onSliderChange` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `prefix-text` | `prefix` | работает как псевдоним | 2026-12-01 |
+| `prefix-text` | `prefix` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-sortable>`
 
@@ -1085,6 +1088,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `status="neutral"` | `status="default"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `status="info"` | `status="primary"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `heading` | `title` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-tooltip>`
 
@@ -1110,7 +1114,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 |:---|:---|:---|:---|
 | `kind` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-tree-item-open` | `sf-tree-item-click` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `label` | `text` | работает как псевдоним | 2026-12-01 |
+| `label` | `text` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-view>`
 

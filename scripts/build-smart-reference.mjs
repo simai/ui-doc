@@ -484,17 +484,28 @@ const collectLegacy = (folder, manifest) => {
   for (const [name, event] of Object.entries(manifest.events ?? {})) {
     if (event.alias_of) rows.add(`| событие ${code(event.alias_of)} | ${code(name)} | ${eventStage(name)} |`);
   }
+  // A setting the component's own aliases.json dates (`error` → `invalid`)
+  // while its manifest still declares it in prose the patterns above do not
+  // read («The error state; the same as invalid.»): an old name, so the guide.
+  const datedSettings = new Set();
+  const aliasText = show(sourceRepo, sourceCommit, `src/smart/${folder}/aliases.json`);
+  for (const alias of (aliasText ? JSON.parse(aliasText).aliases ?? [] : [])) {
+    if (alias.kind !== 'setting' || !alias.to || !Object.hasOwn(properties, alias.from) || !Object.hasOwn(properties, alias.to)) continue;
+    if (legacyNames.has(alias.from) || unlisted.includes(alias.from)) continue;
+    datedSettings.add(alias.from);
+    rows.add(`| ${code(alias.to)} | ${code(alias.from)} | ${STAGE.compat} | ${alias.remove_after ?? '—'} |`);
+  }
   const prose = proseAliases(manifest);
   for (const [name, target, until, written] of prose.inputs) {
     // The journal may already name the old spelling with its value.
     if (written && [...rows].some((row) => row.includes(`| ${code(written)} |`))) continue;
-    if (!legacyNames.has(name) && !unlisted.includes(name)) rows.add(`| ${code(target)} | ${code(written ?? name)} | работает как псевдоним | ${until} |`);
+    if (!legacyNames.has(name) && !unlisted.includes(name) && !datedSettings.has(name)) rows.add(`| ${code(target)} | ${code(written ?? name)} | работает как псевдоним | ${until} |`);
   }
   for (const [name, target, until] of prose.methods) rows.add(`| метод ${code(`${target}()`)} | ${code(`${name}()`)} | работает как псевдоним | ${until} |`);
   for (const [name, target, until] of prose.events) rows.add(`| событие ${code(target)} | ${code(name)} | работает как псевдоним | ${until} |`);
   if (rows.size) legacyByTag.set(tag, [...rows]);
   const aliasInputs = new Set(prose.inputs.map(([name]) => name));
-  return {current: inputs.filter(([name]) => !legacyNames.has(name) && !unlisted.includes(name) && !aliasInputs.has(name))};
+  return {current: inputs.filter(([name]) => !legacyNames.has(name) && !unlisted.includes(name) && !aliasInputs.has(name) && !datedSettings.has(name))};
 };
 
 const renderComponent = (folder, {manifest, citation, rule, delivery}, single) => {
