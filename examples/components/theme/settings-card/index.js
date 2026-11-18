@@ -19,11 +19,14 @@ const applyToCard = async (chosen) => {
   card.classList.toggle('theme-dark', theme === 'dark');
   card.classList.toggle('theme-light', theme !== 'dark');
   // What Core does for the controls on a page of your own.
-  root.querySelectorAll('.sf-theme-button').forEach((button) => {
-    const pressed = button.dataset.theme ? button.dataset.theme === chosen : theme === 'dark';
-    button.setAttribute('aria-pressed', String(pressed));
-    button.classList.toggle('active', pressed);
-    if (!button.dataset.theme) button.querySelector('.sf-icon').textContent = theme === 'dark' ? 'light_mode' : 'dark_mode';
+  root.querySelectorAll('.sf-theme-button[data-theme]').forEach((button) => {
+    const checked = button.dataset.theme === chosen;
+    button.setAttribute('role', 'radio');
+    button.setAttribute('aria-checked', String(checked));
+    button.classList.toggle('active', checked);
+  });
+  root.querySelectorAll('.sf-theme-button:not([data-theme])').forEach((button) => {
+    button.querySelector('.sf-icon').textContent = theme === 'dark' ? 'dark_mode' : 'light_mode';
   });
   const group = root.querySelector('sf-segmented[theme-switch]');
   if (group) group.value = chosen;
