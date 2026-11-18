@@ -152,5 +152,5 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | Доступность | Читается как список; название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`, `↑`, `↓`, `Home`, `End`, `Alt+ArrowUp`, `Alt+ArrowDown`, `Delete`, `Shift+F10`. |
-| Источник | `simai/ui-pro@b3f54d5da7ccaf05eaca2c296996980408dabbf0:components/src/smart/mail-structure` |
-| Правило классов | `simai/ui-pro@b3f54d5da7ccaf05eaca2c296996980408dabbf0:components/src/smart/mail-structure/rule.js#name=cl-mail-structure` |
+| Источник | `simai/ui-pro@7ae52020fef5dccb7613e778794613568369b91f:components/src/smart/mail-structure` |
+| Правило классов | `simai/ui-pro@7ae52020fef5dccb7613e778794613568369b91f:components/src/smart/mail-structure/rule.js#name=cl-mail-structure` |

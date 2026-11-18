@@ -127,7 +127,7 @@ API компонента (`SF.Input`, `SF.Tabs` и другие) описан н
 | `SF.Sortable` | [Перетаскивание](/ru/smart/editor/sortable/#методы) |
 | `SF.Spinner` | [Спиннер](/ru/components/feedback/spinner/#javascript) |
 | `SF.Switch` | [Переключатель](/ru/components/forms/switch/#javascript) |
-| `SF.Tab` | [Вкладки: прежние имена](/ru/components/navigation/tabs/#прежние-имена) |
+| `SF.Tab` | [Вкладки: прежняя вкладка](/ru/components/navigation/tabs/#прежняя-вкладка) |
 | `SF.Tabs` | [Вкладки](/ru/components/navigation/tabs/#javascript) |
 | `SF.Textarea` | [Многострочное поле](/ru/components/forms/textarea/#javascript) |
 | `SF.ThemePalette` | [Цвет: тема в коде](/ru/smart/forms/color/#тема-в-коде) |

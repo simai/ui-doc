@@ -260,8 +260,8 @@ Markdown текстовых областей; то же даёт действи�
 
 ### Источник
 
-- `simai/ui-pro@b3f54d5da7ccaf05eaca2c296996980408dabbf0:components/src/smart/editor`
-- `simai/ui-pro@b3f54d5da7ccaf05eaca2c296996980408dabbf0:components/src/smart/editor/rule.js#name=cl-editor`
+- `simai/ui-pro@7ae52020fef5dccb7613e778794613568369b91f:components/src/smart/editor`
+- `simai/ui-pro@7ae52020fef5dccb7613e778794613568369b91f:components/src/smart/editor/rule.js#name=cl-editor`
 
 ## См. также
 

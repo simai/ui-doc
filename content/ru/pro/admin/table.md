@@ -5,7 +5,7 @@ description: "Показывает серверную коллекцию таб�
 
 # Представление данных
 
-:badge[sf-view]{variant=outline scheme=on-surface size=1/2} :badge[1.12.6]{variant=outline scheme=on-surface size=1/2} :badge[sf-view-table]{variant=outline scheme=on-surface size=1/2} :badge[1.20.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-view]{variant=outline scheme=on-surface size=1/2} :badge[1.12.6]{variant=outline scheme=on-surface size=1/2} :badge[sf-view-table]{variant=outline scheme=on-surface size=1/2} :badge[1.23.2]{variant=outline scheme=on-surface size=1/2}
 
 Представление данных показывает записи из базы таблицей: товары, заказы,
 пользователи. Над таблицей — поиск и фильтры, в строках — выбор и действия,
@@ -916,8 +916,8 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@b3f54d5da7ccaf05eaca2c296996980408dabbf0:components/src/smart/view`
-- `simai/ui-pro@b3f54d5da7ccaf05eaca2c296996980408dabbf0:components/src/smart/view/rule.js#name=cl-view`
+- `simai/ui-pro@7ae52020fef5dccb7613e778794613568369b91f:components/src/smart/view`
+- `simai/ui-pro@7ae52020fef5dccb7613e778794613568369b91f:components/src/smart/view/rule.js#name=cl-view`
 
 ### `<sf-view-table>`
 
@@ -925,7 +925,7 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 |:---|:---|
 | Тег | `<sf-view-table>` |
 | Назначение | Полное представление коллекции с серверными данными: поиск, фильтры, настройки таблицы, действия над строками и массовые действия, пагинация. |
-| Контракт | `smart.view-table`, версия `1.20.4` |
+| Контракт | `smart.view-table`, версия `1.23.2` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -1096,8 +1096,8 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@b3f54d5da7ccaf05eaca2c296996980408dabbf0:components/src/smart/view-table`
-- `simai/ui-pro@b3f54d5da7ccaf05eaca2c296996980408dabbf0:components/src/smart/view-table/rule.js#name=cl-view-table`
+- `simai/ui-pro@7ae52020fef5dccb7613e778794613568369b91f:components/src/smart/view-table`
+- `simai/ui-pro@7ae52020fef5dccb7613e778794613568369b91f:components/src/smart/view-table/rule.js#name=cl-view-table`
 
 ## См. также
 
