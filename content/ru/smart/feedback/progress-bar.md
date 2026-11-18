@@ -112,13 +112,14 @@ description: "Показывает известный ход процесса с
 ### Обновление из скрипта
 
 Меняйте `value` по мере хода процесса: компонент обновляет полосу и
-`aria-valuenow` без перерисовки. `setProgress(n)` делает то же, а
-`getProgress()` возвращает текущее значение числом.
+`aria-valuenow` без перерисовки. Если известны сделанное и всё, вызовите
+действие `chunk({done, total})`: полоса покажет `done` из `total` в процентах
+(`total` по умолчанию 100). Текущее значение читайте из `value`.
 
 ```js
 const progress = document.querySelector('sf-progress-bar');
 upload.addEventListener('progress', (event) => {
-  progress.setProgress(Math.round((event.loaded / event.total) * 100));
+  progress.chunk({done: event.loaded, total: event.total});
 });
 upload.addEventListener('load', () => {
   progress.setAttribute('status', 'success');
