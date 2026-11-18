@@ -200,6 +200,11 @@
       "component": "placeholder",
       "blocks": [
         "sf-placeholder"
+      ],
+      "aliases": [
+        "sf-placeholder-right",
+        "sf-placeholder-top",
+        "sf-placeholder-top-text"
       ]
     },
     "components/feedback/progress-bar.md": {

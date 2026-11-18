@@ -512,7 +512,7 @@ const formerClasses = (() => {
   return out;
 })();
 
-const componentClasses = (component, block, elsewhere = null, others = []) => {
+const componentClasses = (component, block, elsewhere = null, others = [], aliases = []) => {
   const css = show(`distr/component/${component}/css/${component}.css`);
   if (!css) throw new Error(`no stylesheet for component ${component}`);
   const names = new Set();
@@ -536,6 +536,9 @@ const componentClasses = (component, block, elsewhere = null, others = []) => {
     }
   }
   for (const name of [...names]) if (formerClasses.has(name) || !currentUse.has(name)) names.delete(name);
+  // Presentation aliases a component keeps for existing markup with no journal
+  // record (config `aliases`): a page shows only what to write today (D03).
+  for (const name of aliases) names.delete(name);
   // A page that lists several blocks gives each class to the longest block it
   // belongs to: sf-verification-form-hint is the form's part, not the code's.
   const owns = (other, name) => name === other || name.startsWith(`${other}-`) || name.startsWith(`${other}__`);
@@ -755,8 +758,8 @@ for (const [page, entry] of Object.entries(settings.pages)) {
     // numbers); each gets its own class table, and the variables are joined.
     const blocks = entry.blocks ?? [entry.block];
     const classes = blocks.length === 1
-      ? componentClasses(entry.component, blocks[0], entry.elsewhere ?? null)
-      : blocks.flatMap((block, index) => [...(index ? [''] : []), `**${code(block)}**`, '', ...componentClasses(entry.component, block, null, blocks)]);
+      ? componentClasses(entry.component, blocks[0], entry.elsewhere ?? null, [], entry.aliases ?? [])
+      : blocks.flatMap((block, index) => [...(index ? [''] : []), `**${code(block)}**`, '', ...componentClasses(entry.component, block, null, blocks, entry.aliases ?? [])]);
     // `classes_note` (config) is a line under the table the CSS cannot say:
     // which rows another component sets (the Smart download row's states).
     next = setSection(next, 'component', 'Классы', [...classes, '', SOURCE_NOTE, ...(entry.classes_note ? ['', entry.classes_note] : [])]);

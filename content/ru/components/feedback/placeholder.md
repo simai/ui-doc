@@ -80,7 +80,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-placeholder` |
-| Части | `sf-placeholder-right`, `sf-placeholder-top`, `sf-placeholder-top-text`, `sf-placeholder__actions`, `sf-placeholder__content`, `sf-placeholder__description`, `sf-placeholder__header`, `sf-placeholder__title`, `sf-placeholder__visual` |
+| Части | `sf-placeholder__actions`, `sf-placeholder__content`, `sf-placeholder__description`, `sf-placeholder__header`, `sf-placeholder__title`, `sf-placeholder__visual` |
 | Модификаторы | `sf-placeholder--column`, `sf-placeholder--row` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
