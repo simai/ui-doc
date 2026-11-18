@@ -57,13 +57,14 @@ description: "Раскрывающиеся секции из данных или
 
 ### Поверхность
 
-`appearance` • по умолчанию `default` • [справочник](#атрибуты)
+`appearance` • по умолчанию `flush` • [справочник](#атрибуты)
 
-`appearance` выбирает вид: `default` — секции на заливке, `outline` — тонкая
-рамка без заливки, `flush` — без заливки и скругления, секции разделены
-линией; для панелей и списков.
+`appearance` выбирает вид: `flush` (по умолчанию) — без заливки и
+скругления, секции разделены линией, спокойно на странице, в карточке и в
+панели; `default` — секции на заливке; `outline` — тонкая рамка без
+заливки. Аккордеон внутри раздела рисует линии при любом виде.
 
-:::example {id="smart-components/accordion/appearance" label="Виды default, outline и flush"}
+:::example {id="smart-components/accordion/appearance" label="Виды flush, default и outline"}
 :::
 
 ### Размер
