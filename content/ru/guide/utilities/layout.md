@@ -24,7 +24,7 @@ description: "Раскладка — расстановка элементов �
 
 ```html
 <span class="sf-radio-button-box flex">…</span>
-<span class="sf-radio-button-box flex justify-center items-cross-center">…</span>
+<span class="sf-radio-button-box flex content-main-center items-cross-center">…</span>
 ```
 
 В первой строке точка радиокнопки окажется в углу кольца, во второй — по
@@ -99,7 +99,7 @@ description: "Раскладка — расстановка элементов �
 | Выравнивание одного элемента | `self-cross-center`, `self-main-end` |
 
 ```html
-<div class="flex items-cross-center justify-between gap-1">
+<div class="flex items-cross-center content-main-between gap-1">
   <span>Заголовок</span>
   <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1">
     <span class="sf-button-text-container">Действие</span>
@@ -174,7 +174,7 @@ description: "Раскладка — расстановка элементов �
 
 ```html
 <header class="border-bottom-1 border-outline-variant">
-  <div class="container m-inline-auto p-y-2 flex flex-wrap items-cross-center justify-between gap-2">
+  <div class="container m-inline-auto p-y-2 flex flex-wrap items-cross-center content-main-between gap-2">
     <a href="/">Название проекта</a>
     <nav aria-label="Основное меню">
       <ul class="list-none m-0 p-0 flex flex-wrap gap-2">

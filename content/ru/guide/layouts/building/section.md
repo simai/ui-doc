@@ -37,7 +37,7 @@ description: "Секция `layout.section` группирует смыслов�
 ```html
 <section class="p-y-8" data-sf-composition-id="intro">
   <div class="container m-inline-auto" data-sf-composition-part="frame">
-    <div class="space-y-3" data-sf-composition-part="content">
+    <div class="gap-y-3" data-sf-composition-part="content">
       <h1 data-sf-composition-id="title">О компании</h1>
     </div>
   </div>

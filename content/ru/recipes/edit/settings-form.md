@@ -109,7 +109,7 @@ description: "Страница настроек записи или прилож
 <!-- Рецепт SIMAI Framework «Форма настроек», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Корень экрана админки — data-sf-density="compact"; заголовок — sf-header-page с путём через запись.
-2. Форма — колонка max-w-h0; каждый раздел — section.sf-card с h2 class="m-0 text-1 weight-6".
+2. Форма — колонка max-w-h0; каждый раздел — section.sf-card с h2 class="m-0 text-1 weight-medium".
 3. Каждое поле с label над полем; placeholder — только образец формата; пояснение — hint. Поля с рамкой (вид по умолчанию), appearance="filled" не берём. Части одного ответа (город и индекс) — в одной строке flex flex-wrap gap-1; ширина по ответу задаёт обёртка поля: индекс в div class="w-e6", город в div class="flex-auto w-f6".
 4. Обязательное поле — required и error-message; при ошибке страница ставит invalid и фокус в поле. Общей плашки ошибок над формой нет.
 5. Выбор одного — sf-radio в fieldset с legend; включить и выключить — sf-switch с label и description.
@@ -121,12 +121,12 @@ description: "Страница настроек записи или прилож
   </sf-header-page>
   <form id="settings-form" class="flex flex-col gap-3 max-w-h0" novalidate>
     <section class="sf-card" aria-labelledby="settings-main">
-      <h2 id="settings-main" class="m-0 text-1 weight-6">Основное</h2>
+      <h2 id="settings-main" class="m-0 text-1 weight-medium">Основное</h2>
       <sf-input id="settings-name" name="name" label="Название сайта" required error-message="Введите название"></sf-input>
       <sf-input name="domain" label="Адрес" input-type="url" placeholder="https://example.ru" hint="С этого адреса сайт открывается у посетителей"></sf-input>
     </section>
     <section class="sf-card" aria-labelledby="settings-access">
-      <h2 id="settings-access" class="m-0 text-1 weight-6">Доступ</h2>
+      <h2 id="settings-access" class="m-0 text-1 weight-medium">Доступ</h2>
       <fieldset class="border-0 p-0 m-0 flex flex-col gap-2">
         <legend class="p-0 m-bottom-1 text-1/2 color-on-surface-variant">Кто видит сайт</legend>
         <sf-radio name="access" value="all" label="Все посетители" checked></sf-radio>
@@ -135,7 +135,7 @@ description: "Страница настроек записи или прилож
       <sf-switch name="index" label="Показывать в поисковых системах" checked></sf-switch>
     </section>
     <section class="sf-card" aria-labelledby="settings-address">
-      <h2 id="settings-address" class="m-0 text-1 weight-6">Адрес для писем</h2>
+      <h2 id="settings-address" class="m-0 text-1 weight-medium">Адрес для писем</h2>
       <sf-input name="street" label="Улица, дом"></sf-input>
       <div class="flex flex-wrap gap-1">
         <div class="flex-auto w-f6"><sf-input name="city" label="Город"></sf-input></div>

@@ -99,7 +99,7 @@ description: "Уведомления под колокольчиком в шап
 Правила:
 1. Колокольчик — sf-button-icon icon="notifications" appearance="ghost" scheme="on-surface" aria-label="Уведомления"; badge-count — число непрочитанных, badge-label — то же словами; 0 — значка нет.
 2. Панель — sf-popover label="Уведомления" placement="bottom-end" width="min(var(--sf-g4), calc(100vw - var(--sf-space-4)))": колокольчик в slot="trigger", панель в slot="content". Колокольчик — последний элемент строки, у её конечного края: поповер не сдвигается в пределы экрана, и только так панель помещается на телефоне.
-3. Шапка панели: h2 class="flex-1 m-0 text-1 weight-6" и sf-button appearance="ghost" scheme="on-surface" size="1/2" «Прочитать все» (disabled, когда нечего читать); под ней sf-segmented size="1/2" full-width «Все / Непрочитанные» с count.
+3. Шапка панели: h2 class="flex-1 m-0 text-1 weight-medium" и sf-button appearance="ghost" scheme="on-surface" size="1/2" «Прочитать все» (disabled, когда нечего читать); под ней sf-segmented size="1/2" full-width «Все / Непрочитанные» с count.
 4. Строки — sf-list group-by="day" size="1/2" в обёртке max-h-g4 overflow-auto: text — что случилось, supporting — с чем, date — ISO; непрочитанная — badge {text: 'Новое', tone: 'info'}.
 5. sf-list-open: открыть событие и отметить прочитанным; пересчитать badge-count и count.
 6. Результат действия самого человека — sf-toast, не строка этого списка. -->
@@ -107,7 +107,7 @@ description: "Уведомления под колокольчиком в шап
   <sf-button-icon slot="trigger" icon="notifications" appearance="ghost" scheme="on-surface" badge-count="2" badge-label="2 непрочитанных" aria-label="Уведомления"></sf-button-icon>
   <div slot="content" class="flex flex-col">
     <div class="flex items-cross-center gap-2 p-x-2 p-top-2 p-bottom-1">
-      <h2 class="flex-1 m-0 text-1 weight-6">Уведомления</h2>
+      <h2 class="flex-1 m-0 text-1 weight-medium">Уведомления</h2>
       <sf-button appearance="ghost" scheme="on-surface" size="1/2" text="Прочитать все"></sf-button>
     </div>
     <div class="p-x-2 p-bottom-1">

@@ -160,7 +160,7 @@ description: "Как дать скопировать ключ, команду, �
 8. Отказ браузера (code "denied"): кнопка сама выделяет текст и пишет над собой «Выделено — нажмите Ctrl+C» (⌘C на Mac); своей подсказки рядом не ставьте. -->
 <div data-sf-density="compact">
   <section class="sf-card max-w-g8" aria-labelledby="key-heading">
-    <h2 id="key-heading" class="m-0 text-1 weight-6">Ключ доступа к API</h2>
+    <h2 id="key-heading" class="m-0 text-1 weight-medium">Ключ доступа к API</h2>
     <sf-input label="API-ключ" name="api-key" readonly root-class="max-w-sm" default-value="demo-test-key-51Hq7Lr9Xc4Vb1Nm8Pz3TqA2xY6wE0rT8uI3oP5aS7dF">
       <sf-button-copy slot="end" value="demo-test-key-51Hq7Lr9Xc4Vb1Nm8Pz3TqA2xY6wE0rT8uI3oP5aS7dF" label="Скопировать API-ключ"></sf-button-copy>
     </sf-input>

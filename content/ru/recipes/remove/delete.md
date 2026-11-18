@@ -135,7 +135,7 @@ description: "Как удалять по-разному в зависимост�
     <form slot="content" data-delete-form class="flex flex-col" novalidate>
       <div class="bg-surface-container radius-surface p-1 flex flex-col gap-1/2">
         <p class="m-0">Удалятся сайт, 3 базы данных, 1,2 ГБ файлов и 14 резервных копий.</p>
-        <p class="m-0 weight-5">Вернуть будет нельзя.</p>
+        <p class="m-0 weight-medium">Вернуть будет нельзя.</p>
       </div>
       <div class="m-top-2"><sf-input name="confirm" label="Чтобы подтвердить, введите shop-example" autocomplete="off" error-message="Введите shop-example — так вы подтверждаете удаление"></sf-input></div>
       <div class="m-top-3 flex flex-wrap gap-2">

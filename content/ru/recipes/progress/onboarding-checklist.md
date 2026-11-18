@@ -140,14 +140,14 @@ description: "Список дел для начала работы с отмет
 7. «Всё готово» — сразу после последней отметки; при следующем входе список не показывается. «Скрыть список» — sf-button appearance="ghost" scheme="on-surface", вернуть — из меню помощи.
 8. Дело ведёт в пустой раздел — там sf-empty-state kind="first-use" с одним действием. Админка — data-sf-density="compact". -->
 <section class="sf-card flex flex-col gap-1" data-sf-density="compact" aria-labelledby="start-title">
-  <div class="flex justify-between items-cross-baseline gap-1">
-    <h3 id="start-title" class="m-0 text-1 weight-6">Первые шаги</h3>
+  <div class="flex content-main-between items-cross-baseline gap-1">
+    <h3 id="start-title" class="m-0 text-1 weight-medium">Первые шаги</h3>
     <span class="text-1/2 color-on-surface-variant" aria-hidden="true">3 из 5</span>
   </div>
   <p class="m-0 text-1/2 color-on-surface-variant">Сайт заработает, когда сделаете эти пять дел. Порядок любой.</p>
   <sf-progress-bar value="60" label="Первые шаги" value-text="3 из 5 задач"></sf-progress-bar>
   <sf-list id="start-list" label="Задачи для начала"></sf-list>
-  <div class="flex justify-end"><sf-button appearance="ghost" scheme="on-surface" text="Скрыть список"></sf-button></div>
+  <div class="flex content-main-end"><sf-button appearance="ghost" scheme="on-surface" text="Скрыть список"></sf-button></div>
   <p class="sr-only" role="status" id="start-live"></p>
 </section>
 <script type="module">

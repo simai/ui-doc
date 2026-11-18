@@ -134,7 +134,7 @@ description: "Первый экран, который говорит, что э�
     <p class="hero-eyebrow">SIMAI Framework 5</p>
     <h1 class="title-9">Сайты и админки <span class="hero-accent">на одной основе</span></h1>
     <p class="hero-lead">Компоненты, темы и рецепты для сайтов Larena, порталов и документации.</p>
-    <div class="flex flex-wrap justify-center gap-1/3">
+    <div class="flex flex-wrap content-main-center gap-1/3">
       <sf-button text="Начать" icon-end="arrow_forward" href="/start/"></sf-button>
       <sf-button text="Документация" appearance="outline" href="/docs/"></sf-button>
     </div>
@@ -142,7 +142,7 @@ description: "Первый экран, который говорит, что э�
 </section>
 <aside class="promo bg-primary-container color-on-primary-container" aria-label="Предложение">
   <span class="sf-icon" aria-hidden="true">rocket_launch</span>
-  <div><p class="m-0 weight-5">Подключите свой домен</p><p class="m-0 text-1/2">Бесплатно на тарифе «Бизнес».</p></div>
+  <div><p class="m-0 weight-medium">Подключите свой домен</p><p class="m-0 text-1/2">Бесплатно на тарифе «Бизнес».</p></div>
   <sf-button size="1/2" text="Подключить" href="/domain/"></sf-button>
   <sf-button-close size="1/2" aria-label="Скрыть предложение"></sf-button-close>
 </aside>
