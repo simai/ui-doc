@@ -512,7 +512,7 @@ const formerClasses = (() => {
   return out;
 })();
 
-const componentClasses = (component, block, elsewhere = null) => {
+const componentClasses = (component, block, elsewhere = null, others = []) => {
   const css = show(`distr/component/${component}/css/${component}.css`);
   if (!css) throw new Error(`no stylesheet for component ${component}`);
   const names = new Set();
@@ -536,6 +536,10 @@ const componentClasses = (component, block, elsewhere = null) => {
     }
   }
   for (const name of [...names]) if (formerClasses.has(name) || !currentUse.has(name)) names.delete(name);
+  // A page that lists several blocks gives each class to the longest block it
+  // belongs to: sf-verification-form-hint is the form's part, not the code's.
+  const owns = (other, name) => name === other || name.startsWith(`${other}-`) || name.startsWith(`${other}__`);
+  for (const name of [...names]) if (others.some((other) => other.length > block.length && owns(other, name))) names.delete(name);
   const foreign = elsewhere ? [...names].filter((name) => !ownUse.has(name) || (elsewhere.classes ?? []).includes(name)).sort() : [];
   for (const name of foreign) names.delete(name);
   const sorted = [...names].sort();
@@ -741,7 +745,7 @@ for (const [page, entry] of Object.entries(settings.pages)) {
     const blocks = entry.blocks ?? [entry.block];
     const classes = blocks.length === 1
       ? componentClasses(entry.component, blocks[0], entry.elsewhere ?? null)
-      : blocks.flatMap((block, index) => [...(index ? [''] : []), `**${code(block)}**`, '', ...componentClasses(entry.component, block)]);
+      : blocks.flatMap((block, index) => [...(index ? [''] : []), `**${code(block)}**`, '', ...componentClasses(entry.component, block, null, blocks)]);
     // `classes_note` (config) is a line under the table the CSS cannot say:
     // which rows another component sets (the Smart download row's states).
     next = setSection(next, 'component', 'Классы', [...classes, '', SOURCE_NOTE, ...(entry.classes_note ? ['', entry.classes_note] : [])]);

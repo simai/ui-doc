@@ -198,7 +198,7 @@ whenLoader(() => SF.Loader.ready('Tree', () => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-tree` |
-| Части | `sf-tree-check`, `sf-tree-chevron`, `sf-tree-group`, `sf-tree-item`, `sf-tree-item--error`, `sf-tree-item--hidden`, `sf-tree-item--holds-current`, `sf-tree-item--loading`, `sf-tree-item--mark`, `sf-tree-item--more`, `sf-tree-item-container`, `sf-tree-item-name`, `sf-tree-item-note`, `sf-tree-item-retry`, `sf-tree-item-spinner`, `sf-tree-node-icon`, `sf-tree-toggle-spacer` |
+| Части | `sf-tree-check`, `sf-tree-chevron`, `sf-tree-group`, `sf-tree-node-icon`, `sf-tree-toggle-spacer` |
 | Модификаторы | `sf-tree--static` |
 | Размеры | `sf-tree--size-1/2`, `sf-tree--size-2` |
 

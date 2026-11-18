@@ -320,8 +320,10 @@
       "kind": "component",
       "component": "verification",
       "blocks": [
-        "sf-verification"
-      ]
+        "sf-verification",
+        "sf-verification-form"
+      ],
+      "badge": "sf-verification"
     },
     "components/internal/admin-menu.md": {
       "kind": "component",
