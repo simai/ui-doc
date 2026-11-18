@@ -55,9 +55,6 @@
   },
   "page_transforms": [
     {
-      "command": ["node", "scripts/highlight-code.mjs"]
-    },
-    {
       "command": ["node", "scripts/code-copy-root.mjs"]
     },
     {
@@ -103,7 +100,7 @@
   },
   "reader_preferences": {
     "enabled": true,
-    "view": "side-panel",
+    "view": "menu",
     "groups": [
       {
         "id": "appearance",

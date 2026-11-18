@@ -129,7 +129,7 @@ jobs:
       # documentation build remains reproducible.
       - run: composer validate --no-check-publish
       - run: composer install --no-interaction --prefer-source
-      # Build-time tools of the site (Shiki colours the built code blocks).
+      # Build-time tools of the site (playwright-core for the browser audits).
       - run: npm ci --no-audit --no-fund
       # The runtime lives inside vendor/simai/docara: materialize after every
       # composer install.

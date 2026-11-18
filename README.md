@@ -50,12 +50,9 @@ node scripts/audit-utility-executable-examples.mjs /absolute/path/to/exact-core 
 ```
 
 `scripts/build-documentation.php` runs the build with every step in order.
-Code blocks are coloured at build time with Shiki (`page_transforms` in
-`docara.json` runs `scripts/highlight-code.mjs` before Docara measures the
-pages): GitHub's light and dark themes,
-the grammars VS Code uses; the Framework's Highlight component
-skips a block coloured that way. Shiki is the one npm dependency
-(`package.json`, exact version).
+Code blocks are coloured in the browser by the Framework's Highlight
+component, in the Framework's own code palette (`--sf-highlight-*`), as on any
+SIMAI Framework page; the site does not colour code itself.
 
 The site is pinned to one Framework release (release lock v2, `ui-<12>`:
 Core and Smart from the same `simai/ui` commit, Smart in `distr/smart`) and
