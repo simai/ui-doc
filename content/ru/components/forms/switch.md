@@ -32,6 +32,11 @@ profile: reference
 - `sf-switch-inner` — бегунок. Он декоративный и получает `aria-hidden="true"`.
 - Текст — в `sf-switch-container-wrap`: подпись `sf-switch-text` внутри
   `sf-switch-container` и `sf-switch-top`, пояснение — `sf-switch-description`.
+- Классовый переключатель — строка текста: шаг строк в списке настроек
+  задаёт контейнер. Готовая группа с шагом строк по стандарту (40 на размере
+  `1`, 60 с пояснением, 32 в компактной области) —
+  [выбор из вариантов](/ru/smart/forms/input-choice/) `sf-input-choice` с
+  `appearance="list"` или смарт-переключатели.
 
 ## Варианты
 
@@ -71,8 +76,10 @@ profile: reference
 ### Состав
 
 Подпись обязательна: она даёт переключателю доступное имя. Пояснение добавляет
-`sf-switch-description`, значок подсказки — `sf-icon` в `sf-switch-top` рядом с
-подписью. Атрибуты `data-sf-switch-on-text` и `data-sf-switch-off-text` на
+`sf-switch-description`. Подсказку ставят знаком
+[«?»](/ru/smart/feedback/help-mark/) `sf-help-mark` в `sf-switch-top` рядом с
+подписью: это отдельная кнопка, она открывает подсказку и не переключает
+настройку. Скрипт компонента сам связывает подпись и пояснение с input. Атрибуты `data-sf-switch-on-text` и `data-sf-switch-off-text` на
 оболочке задают два текста пояснения: скрипт подставляет нужный при каждом
 переключении. Оба атрибута нужны вместе.
 
