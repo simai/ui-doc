@@ -6,7 +6,7 @@ const initialize = async () => {
   if (!failed || !limit || failed.dataset.exampleReady === 'true') return;
   failed.dataset.exampleReady = 'true';
   failed.message = {id: 'msg_07', role: 'assistant', status: 'failed', text: 'Не удалось получить ответ.'};
-  limit.message = {id: 'msg_06', role: 'assistant', status: 'limit', text: 'Лимит вопросов на месяц исчерпан.'};
+  limit.message = {id: 'msg_06', role: 'assistant', status: 'limit', text: 'Лимит вопросов на месяц исчерпан.', limit_resets_at: '2026-12-01T00:00:00Z'};
 };
 
 initialize();
