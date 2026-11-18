@@ -5,6 +5,8 @@ const initialize = async () => {
   const limit = document.querySelector('#chat-message-limit');
   if (!failed || !limit || failed.dataset.exampleReady === 'true') return;
   failed.dataset.exampleReady = 'true';
+  // The chat window marks its latest answer so; a message alone gets the mark from its page.
+  failed.classList.add('sf-chat-message--last');
   failed.message = {id: 'msg_07', role: 'assistant', status: 'failed', text: 'Не удалось получить ответ.'};
   limit.message = {id: 'msg_06', role: 'assistant', status: 'limit', text: 'Лимит вопросов на месяц исчерпан.', limit_resets_at: '2026-12-01T00:00:00Z'};
 };
