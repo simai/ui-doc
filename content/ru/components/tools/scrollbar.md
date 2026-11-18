@@ -70,7 +70,7 @@ profile: reference
 :::example {id="components/scrollbar/horizontal" label="Горизонтальная прокрутка"}
 :::
 
-## Поведение
+## Применение
 
 ### Затухание у края
 
