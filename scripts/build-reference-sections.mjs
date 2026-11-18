@@ -484,20 +484,60 @@ const utilityVariables = (families) => {
 
 // ---- component section -------------------------------------------------------------
 
-const componentClasses = (component, block) => {
+// `elsewhere` (config) names another component drawn on the same block: a
+// class that appears only in selectors holding `elsewhere.marker` belongs to
+// it (sf-segmented draws its track on .sf-button-group, G3) and is named in
+// one line pointing at that page instead of the table.
+// Class names the change journal keeps only as former names (kind class,
+// stage compat, a single class in `from`, not moved back later): the copy
+// block sf-clipboard and sf-clipboard-surface (C48, C217). A page names only
+// what to write today (D03), so they leave every row, and so does a class
+// that appears only in selectors beside a former one (sf-clipboard--inline
+// only undoes the old .btn-clipboard placement).
+const formerClasses = (() => {
+  const out = new Set();
+  const moves = new Map();
+  journal.records.forEach((record, index) => {
+    if (record.kind !== 'class') return;
+    for (const item of record.items ?? []) if (item.from && item.to) moves.set(`${item.from}>${item.to}`, index);
+  });
+  journal.records.forEach((record, index) => {
+    if (record.kind !== 'class' || record.stage !== 'compat') return;
+    for (const item of record.items ?? []) {
+      if (!item.from || !/^[a-z0-9_/-]+$/u.test(item.from)) continue;
+      if (item.to && (moves.get(`${item.to}>${item.from}`) ?? -1) > index) continue;
+      out.add(item.from);
+    }
+  });
+  return out;
+})();
+
+const componentClasses = (component, block, elsewhere = null) => {
   const css = show(`distr/component/${component}/css/${component}.css`);
   if (!css) throw new Error(`no stylesheet for component ${component}`);
   const names = new Set();
+  const ownUse = new Set();
+  const currentUse = new Set();
   for (const {selector} of rules(css)) {
-    for (const match of selector.matchAll(/\.((?:[a-zA-Z0-9_-]|\\.)+)/gu)) {
-      const name = unescape(match[1]);
-      // An escaped selector inside an attribute (`:has(.x\\[class*…\\])`) is not a
-      // class a reader writes; a class name holds letters, digits, -, _ and /.
-      if (!/^[a-z0-9_/-]+$/u.test(name)) continue;
-      // Parts are `block-…` or BEM `block__…`.
-      if (name === block || name.startsWith(`${block}-`) || name.startsWith(`${block}__`)) names.add(name);
+    for (const piece of splitSelector(selector)) {
+      for (const match of piece.matchAll(/\.((?:[a-zA-Z0-9_-]|\\.)+)/gu)) {
+        const name = unescape(match[1]);
+        // An escaped selector inside an attribute (`:has(.x\\[class*…\\])`) is not a
+        // class a reader writes; a class name holds letters, digits, -, _ and /.
+        if (!/^[a-z0-9_/-]+$/u.test(name)) continue;
+        // Parts are `block-…` or BEM `block__…`.
+        if (name === block || name.startsWith(`${block}-`) || name.startsWith(`${block}__`)) {
+          names.add(name);
+          if (!elsewhere || !piece.includes(elsewhere.marker)) ownUse.add(name);
+          const beside = [...piece.matchAll(/\.((?:[a-zA-Z0-9_-]|\\.)+)/gu)].map((other) => unescape(other[1]));
+          if (!beside.some((other) => other !== name && formerClasses.has(other))) currentUse.add(name);
+        }
+      }
     }
   }
+  for (const name of [...names]) if (formerClasses.has(name) || !currentUse.has(name)) names.delete(name);
+  const foreign = elsewhere ? [...names].filter((name) => !ownUse.has(name) || (elsewhere.classes ?? []).includes(name)).sort() : [];
+  for (const name of foreign) names.delete(name);
   const sorted = [...names].sort();
   // Modifiers the change journal keeps only for compatibility are left out:
   // a page shows only what to write today (D03); the names guide lists them.
@@ -513,6 +553,7 @@ const componentClasses = (component, block) => {
     ...row('Части', parts),
     ...row('Модификаторы', modifiers),
     ...row('Размеры', sizes),
+    ...(foreign.length ? ['', `${elsewhere.lead} ${foreign.map(code).join(', ')}. ${elsewhere.tail}`] : []),
   ];
 };
 
@@ -699,9 +740,11 @@ for (const [page, entry] of Object.entries(settings.pages)) {
     // numbers); each gets its own class table, and the variables are joined.
     const blocks = entry.blocks ?? [entry.block];
     const classes = blocks.length === 1
-      ? componentClasses(entry.component, blocks[0])
+      ? componentClasses(entry.component, blocks[0], entry.elsewhere ?? null)
       : blocks.flatMap((block, index) => [...(index ? [''] : []), `**${code(block)}**`, '', ...componentClasses(entry.component, block)]);
-    next = setSection(next, 'component', 'Классы', [...classes, '', SOURCE_NOTE]);
+    // `classes_note` (config) is a line under the table the CSS cannot say:
+    // which rows another component sets (the Smart download row's states).
+    next = setSection(next, 'component', 'Классы', [...classes, '', SOURCE_NOTE, ...(entry.classes_note ? ['', entry.classes_note] : [])]);
     next = setSection(next, 'component', 'Переменные', componentVariablesSection(entry.component, blocks));
   }
   if (entry.kind === 'component') {

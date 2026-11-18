@@ -473,6 +473,16 @@ Tab на выбранном варианте. Стрелки, Home и End пер
 **Тема.** Переключатель темы меняет тему через загрузчик Framework
 (`SF.Loader.setTheme`); без загрузчика выбор не меняется.
 
+**Классы дорожки.** Переключатель рисует дорожку на блоке
+[группы кнопок](/ru/components/actions/button-group/) `sf-button-group` и
+ставит ему свои классы: вид `sf-button-group--segmented`, сегменты
+`sf-button-group-segment`, плашку `sf-button-group-plate`, число
+`sf-button-group-count`, а также схемы, скругления, размеры и состояния
+дорожки (`--primary`, `--secondary`, `--on-surface`, `--backdrop-color`,
+`--backdrop-media`, `--plate-raised`, `--radius-*`, `--size-*`,
+`--full-width`, `--folded`, `sf-button-group-narrow`). Их задают атрибуты
+`<sf-segmented>`, а не разметка вручную.
+
 **Прежние имена.** До 2027-01-01 работает прежний тег `sf-button-group`, а
 `appearance` принимает прежние значения `segmented` и `default`; новая
 разметка пишет `sf-segmented`, `track` и `buttons`.

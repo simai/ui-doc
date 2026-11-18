@@ -226,7 +226,7 @@ unread" и "new". В имени всегда точное число: при `99
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-avatar` |
-| Части | `sf-avatar-anchor`, `sf-avatar-badge`, `sf-avatar-badge--company`, `sf-avatar-badge--size-1`, `sf-avatar-badge--size-1/2`, `sf-avatar-badge--size-1/3`, `sf-avatar-badge--size-1/4`, `sf-avatar-badge--size-2`, `sf-avatar-badge--size-3`, `sf-avatar-badge--verified`, `sf-avatar-badge-glyph`, `sf-avatar-badge-plate`, `sf-avatar-card`, `sf-avatar-card--portrait`, `sf-avatar-card--portrait-9x16`, `sf-avatar-card--square`, `sf-avatar-card-content`, `sf-avatar-card-image`, `sf-avatar-card-initials`, `sf-avatar-card-placeholder`, `sf-avatar-card-placeholder--text`, `sf-avatar-card-portrait`, `sf-avatar-card-row`, `sf-avatar-card-square`, `sf-avatar-card-title`, `sf-avatar-group`, `sf-avatar-group--size-1/2`, `sf-avatar-group--size-1/3`, `sf-avatar-group--size-1/4`, `sf-avatar-group--size-md`, `sf-avatar-group--size-sm`, `sf-avatar-group--size-xs`, `sf-avatar-group-avatars`, `sf-avatar-group-list`, `sf-avatar-group-list-item`, `sf-avatar-group-list-name`, `sf-avatar-group-more`, `sf-avatar-image`, `sf-avatar-label-group`, `sf-avatar-label-group--size-1`, `sf-avatar-label-group--size-1/2`, `sf-avatar-label-group--size-1/3`, `sf-avatar-label-group--size-1/4`, `sf-avatar-label-group--size-2`, `sf-avatar-label-group--size-3`, `sf-avatar-label-group-container`, `sf-avatar-label-group-text`, `sf-avatar-label-group-title`, `sf-avatar-text` |
+| Части | `sf-avatar-anchor`, `sf-avatar-badge`, `sf-avatar-badge--company`, `sf-avatar-badge--size-1`, `sf-avatar-badge--size-1/2`, `sf-avatar-badge--size-1/3`, `sf-avatar-badge--size-1/4`, `sf-avatar-badge--size-2`, `sf-avatar-badge--size-3`, `sf-avatar-badge--verified`, `sf-avatar-badge-glyph`, `sf-avatar-badge-plate`, `sf-avatar-card`, `sf-avatar-card--portrait`, `sf-avatar-card--square`, `sf-avatar-card-content`, `sf-avatar-card-image`, `sf-avatar-card-initials`, `sf-avatar-card-placeholder`, `sf-avatar-card-placeholder--text`, `sf-avatar-card-portrait`, `sf-avatar-card-row`, `sf-avatar-card-square`, `sf-avatar-card-title`, `sf-avatar-group`, `sf-avatar-group-avatars`, `sf-avatar-group-list`, `sf-avatar-group-list-item`, `sf-avatar-group-list-name`, `sf-avatar-group-more`, `sf-avatar-image`, `sf-avatar-label-group`, `sf-avatar-label-group--size-1`, `sf-avatar-label-group--size-1/2`, `sf-avatar-label-group--size-1/3`, `sf-avatar-label-group--size-1/4`, `sf-avatar-label-group--size-2`, `sf-avatar-label-group--size-3`, `sf-avatar-label-group-container`, `sf-avatar-label-group-text`, `sf-avatar-label-group-title`, `sf-avatar-text` |
 | Модификаторы | `sf-avatar--expressive`, `sf-avatar--line-1`, `sf-avatar--line-1/2`, `sf-avatar--line-2`, `sf-avatar--picture`, `sf-avatar--placeholder`, `sf-avatar--square`, `sf-avatar--text` |
 | Размеры | `sf-avatar--size-1`, `sf-avatar--size-1/2`, `sf-avatar--size-1/3`, `sf-avatar--size-1/4`, `sf-avatar--size-2`, `sf-avatar--size-3` |
 
@@ -235,7 +235,7 @@ unread" и "new". В имени всегда точное число: при `99
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-online-indicator` |
-| Модификаторы | `sf-online-indicator--away`, `sf-online-indicator--offline`, `sf-online-indicator--online` |
+| Модификаторы | `sf-online-indicator--away`, `sf-online-indicator--online` |
 | Размеры | `sf-online-indicator--size-1`, `sf-online-indicator--size-1/2`, `sf-online-indicator--size-1/3`, `sf-online-indicator--size-1/4`, `sf-online-indicator--size-2`, `sf-online-indicator--size-3` |
 
 **`sf-add-button`**

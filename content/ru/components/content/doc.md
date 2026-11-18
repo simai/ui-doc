@@ -84,7 +84,6 @@ profile: reference
 
 | Что | Классы |
 |:---|:---|
-| Части | `sf-doc-checkerboard`, `sf-doc-code`, `sf-doc-example`, `sf-doc-lead`, `sf-doc-pair`, `sf-doc-source`, `sf-doc-stripes` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

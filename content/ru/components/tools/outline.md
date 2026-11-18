@@ -66,7 +66,6 @@ profile: reference
 
 | Что | Классы |
 |:---|:---|
-| Блок | `sf-outline` |
 | Части | `sf-outline__link`, `sf-outline__list` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.

@@ -80,7 +80,6 @@ whenLoader(() => SF.Loader.ready('Emoji', (Emoji) => {
 
 | Что | Классы |
 |:---|:---|
-| Блок | `sf-emoji` |
 | Размеры | `sf-emoji--size-1`, `sf-emoji--size-1/2`, `sf-emoji--size-1/3`, `sf-emoji--size-2`, `sf-emoji--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.

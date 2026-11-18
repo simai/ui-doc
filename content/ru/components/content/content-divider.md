@@ -102,7 +102,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-divider` |
-| Части | `sf-divider-borders`, `sf-divider-button`, `sf-divider-button--left`, `sf-divider-button--right`, `sf-divider-button--solo`, `sf-divider-button-square--left`, `sf-divider-button-square--right`, `sf-divider-buttons`, `sf-divider-content`, `sf-divider-content--bold`, `sf-divider-content-border`, `sf-divider-horizontal`, `sf-divider-vertical` |
+| Части | `sf-divider-borders`, `sf-divider-button--left`, `sf-divider-button--right`, `sf-divider-button--solo`, `sf-divider-button-square--left`, `sf-divider-button-square--right`, `sf-divider-buttons`, `sf-divider-content`, `sf-divider-content--bold`, `sf-divider-horizontal`, `sf-divider-vertical` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
