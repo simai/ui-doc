@@ -28,8 +28,9 @@ profile: reference
 - Оболочка — `<label class="sf-country-code">` с классом размера и утилитами
   `flex flex-col`; на ней же настройки в атрибутах `data-*`. Скрипт компонента
   находит поля по `.sf-country-code`.
-- `sf-country-code-left` с пустым `sf-country-code-flag-icon` и значком
-  `expand_more` — кнопка выбора страны. Флаг скрипт рисует сам, а кнопке ставит
+- `sf-country-code-left` с пустым `sf-country-code-flag-icon` и стрелкой
+  `<i class="sf-icon sf-country-code-caret">arrow_drop_down</i>` — кнопка
+  выбора страны. Флаг скрипт рисует сам, а кнопке ставит
   роль `button` и доступное имя.
 - Нативный `<input type="tel">` хранит номер вместе с кодом, `name` и
   `required` и участвует в `FormData`, проверке и сбросе формы. Код страны в
@@ -54,12 +55,16 @@ profile: reference
 :::example {id="components/country-code/modes" label="Выбор страны"}
 :::
 
+Если введённый код не называет ни одну страну, скрипт ставит оболочке
+`sf-country-code--unknown`: на месте флага остаётся пустая рамка, а кнопка
+страны называет код неизвестным.
+
 ### Размер
 
-`sf-country-code--size-1/2`, `sf-country-code--size-1`, `sf-country-code--size-2` • [справочник](#классы)
+`sf-country-code--size-1/3`, `sf-country-code--size-1/2`, `sf-country-code--size-1`, `sf-country-code--size-2`, `sf-country-code--size-3` • [справочник](#классы)
 
-Три ступени — `sf-country-code--size-1/2`, `sf-country-code--size-1` и
-`sf-country-code--size-2`, как у текстового поля. Размер меняет подпись,
+Пять ступеней — от `sf-country-code--size-1/3` до `sf-country-code--size-3`,
+как у текстового поля: высота поля равна кнопке той же ступени. Размер меняет подпись,
 рамку, флаг и список вместе.
 
 :::example {id="components/country-code/sizes" label="Размеры поля кода страны"}

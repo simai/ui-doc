@@ -68,9 +68,8 @@ profile: reference
 
 ### Положение подписи
 
-`data-text-position` для подписи (по умолчанию `bottom`) и
-`data-tooltip-position` для подсказки (по умолчанию `top`) ставят её над или
-под ручкой.
+`data-tooltip-position` ставит подсказку над ручкой (`top`, по умолчанию)
+или под ней (`bottom`).
 
 :::example {id="components/range-slider/label-position" label="Положение подписи"}
 :::
@@ -87,21 +86,34 @@ profile: reference
 ### Шаг и точность
 
 `data-step` задаёт шаг, в том числе в экспоненциальной записи (`1e-3`); число
-знаков подписи берётся из шага. `data-decimals` меняет только видимую
+знаков подписи берётся из шага. `data-precision` меняет только видимую
 точность: значение в событиях и для вспомогательных технологий остаётся
-полным.
+полным. Число записывается по языку страницы, `data-locale` задаёт другой
+язык, а `data-grouping="false"` убирает разделитель тысяч — для года или
+кода.
 
 :::example {id="components/range-slider/precision" label="Шаг и точность"}
 :::
 
 ### Управление с клавиатуры
 
-По умолчанию ручка получает фокус и двигается стрелками, Home и End.
+По умолчанию ручка получает фокус и двигается стрелками на шаг, Home и End —
+к краям шкалы, PageUp, PageDown и стрелки с Shift — на крупный шаг: десять
+шагов или значение `data-page-step`.
 `data-keyboard="false"` убирает ручку из порядка фокуса — только если
 приложение даёт другой способ ввести то же значение с клавиатуры, например
 поле рядом.
 
 :::example {id="components/range-slider/keyboard" label="Ручка с клавиатурой и без"}
+:::
+
+### Отметки шага
+
+`data-ticks="true"` ставит на шкалу точку на каждом шаге — когда шагов не
+больше двадцати. Отметки декоративные и скрыты от вспомогательных
+технологий.
+
+:::example {id="components/range-slider/ticks" label="Отметки шага"}
 :::
 
 ## Состояния
@@ -117,6 +129,15 @@ profile: reference
 переподключите слайдер через `SF.RangeSlider.unbind` и `SF.RangeSlider.bind`.
 
 :::example {id="components/range-slider/state-disabled" label="Недоступные слайдеры"}
+:::
+
+### Только чтение
+
+Атрибут `readonly`, класс `readonly` или `data-readonly="true"` на блоке
+оставляет ручки в порядке фокуса, но значение не меняется ни мышью, ни
+клавишами; ручки получают `aria-readonly="true"`.
+
+:::example {id="components/range-slider/state-readonly" label="Только чтение"}
 :::
 
 ### Фокус
