@@ -98,9 +98,8 @@ picker.addEventListener('sf-profile-picker-select', (event) => openProfile(event
 | `sf-profile-picker-delete` | `{id}` | удалить |
 | `sf-profile-picker-reset` | `{id}` | сбросить к стандартному |
 
-Прежние имена событий — `sf-profile-select`, `sf-profile-create`,
-`sf-profile-rename`, `sf-profile-delete` и `sf-profile-reset` — приходят
-следом с полями из таблицы.
+Прежние имена событий — в руководстве
+[Прежние имена](/ru/guide/smart-components/names/).
 
 ## Доступность
 
