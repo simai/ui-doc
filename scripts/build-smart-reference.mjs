@@ -716,6 +716,9 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
     for (const [attribute, property] of Object.entries(PROPERTY_EXCEPTIONS[folder] ?? {})) {
       lines.push(`Свойство атрибута ${code(attribute)} называется ${code(property)}.`);
     }
+    // An attribute with no property (config/smart-reference.json
+    // `property_notes`): the general sentence above does not hold for it.
+    for (const note of settings.property_notes?.[folder] ?? []) lines.push(note);
     lines.push('');
   }
   const methods = Object.entries(manifest.methods ?? {}).filter(([name]) => !isProseAlias(manifest, 'methods', name));

@@ -165,5 +165,10 @@
       "--sf-copy-button-success-color": "Цвет значка и подписи после удачного копирования",
       "--sf-copy-button-error-color": "Цвет значка и подписи, когда скопировать не удалось"
     }
+  },
+  "property_notes": {
+    "change": [
+      "`before` и `after` — только атрибутом; из скрипта — свойство `changes`."
+    ]
   }
 }
