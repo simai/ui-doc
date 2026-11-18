@@ -4366,15 +4366,15 @@
             "schema_version": 2,
             "package": "pro",
             "requires": "ui-dc9fc39aeb26",
-            "mount": "_docara/framework-packages/pro/5fea21ce6c2aaae79189bca800185032577011c4",
+            "mount": "_docara/framework-packages/pro/a57887949f9a93ec59120c341d935cd0914b8807",
             "receipt": {
                 "schema": "simai.framework.product-package-receipt",
                 "schema_version": 1,
                 "package_source": {
                     "repository": "simai/ui-pro",
-                    "revision": "5fea21ce6c2aaae79189bca800185032577011c4",
+                    "revision": "a57887949f9a93ec59120c341d935cd0914b8807",
                     "path": "components",
-                    "tree": "fa6a31b9ed76de4050350b51592cc74dbe098490"
+                    "tree": "6556b3196033743f70c152972e0f996365369749"
                 },
                 "framework_source": {
                     "repository": "simai/ui-source",
@@ -4384,8 +4384,8 @@
                     "repository": "simai/ui-builder",
                     "revision": "ba79e739d1f9e2568d27e030606e8f95ce91b380"
                 },
-                "manifest_sha256": "a0f834d3b85f2a9aa91a6c29754c7cc2f6237ef6d7f9960077622d41fdc42200",
-                "archive_sha256": "1c5dce9880b08e06fbb31e8eb77adf42cefbab3d806c27b920d16a2c4a3d8245"
+                "manifest_sha256": "f3422a10f6ce0fb87b79d48fbd2bbdd79b2b1c4ce2077b3f20df36ea4a67382c",
+                "archive_sha256": "7dcf56e071fbf01069ced1c54501598f2ce7b86384cbc9ec0006a7b7b0cc72f5"
             },
             "files": {
                 "smart/admin-menu/css/admin-menu.css": {
@@ -4566,10 +4566,10 @@
                     "sha256": "883cc4cbbf9c0bd79f31d2ff89f0995fd6eea900ff2492b39a84295725556ad7"
                 },
                 "smart/view-properties/js/view-properties.js": {
-                    "sha256": "182dcebdaa4537a52001a5c8f9aa8cb72de60d83e14064de27484e33455dff54"
+                    "sha256": "889ce7f25179436a2b983f39113566d4db1e47edf39a9c82d0bdba7f8cf58080"
                 },
                 "smart/view-properties/js/view-properties.min.js": {
-                    "sha256": "ba8b50299241018535a8f560db808ed835ce322b307385fc71ba15b20dec644d"
+                    "sha256": "46b50cb6cc43ad26d30e522feca90caa27849d8aa4c6df0e253d1f129c2cdd92"
                 },
                 "smart/view-table/css/view-table.css": {
                     "sha256": "8c85cebaaaf61808445c71eb7dcf0a2545496b1e24f93ac2dd2dc1ace2885f6f"

@@ -238,5 +238,5 @@ Tab не входят. Клавиши дерева и панели — у `sf-ed
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: `Tab`, `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Esc`. |
-| Источник | `simai/ui-pro@5fea21ce6c2aaae79189bca800185032577011c4:components/src/smart/mail-canvas` |
-| Правило классов | `simai/ui-pro@5fea21ce6c2aaae79189bca800185032577011c4:components/src/smart/mail-canvas/rule.js#name=cl-mail-canvas` |
+| Источник | `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/mail-canvas` |
+| Правило классов | `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/mail-canvas/rule.js#name=cl-mail-canvas` |
