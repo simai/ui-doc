@@ -64,12 +64,14 @@ profile: reference
 
 ### Стрелки
 
-`sf-slider-arrows`, `sf-slider-arrows--plate` • [справочник](#классы)
+`sf-slider-arrows`, `sf-slider-arrows--plate`, `sf-slider-arrows--light`, `sf-slider-arrows--dark` • [справочник](#классы)
 
 `sf-slider-arrows` без модификатора — тихие стрелки без подложки, для
 карточек на фоне страницы. `sf-slider-arrows--plate` кладёт каждую стрелку на
 плашку всплывающего слоя с тенью, чтобы она читалась поверх любого
-изображения.
+изображения. `sf-slider-arrows--light` — светлые круги с тёмными стрелками в
+обеих темах: под стрелкой лежит светлая поверхность, наведение и нажатие
+ложатся поверх неё. `sf-slider-arrows--dark` — тёмные круги.
 
 :::example {id="components/slider/arrows" label="Стрелки"}
 :::
