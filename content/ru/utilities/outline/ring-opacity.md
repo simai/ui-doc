@@ -1,67 +1,12 @@
 ---
 title: "Прозрачность кольца"
-description: "Прячет кольцо, сохраняя его толщину, или возвращает ему полный цвет — сразу или в состоянии."
+description: "Уходящие классы: рисуют до 2027-01-01, в новой разметке не берите."
 ---
 
 # Прозрачность кольца
 
-Классы `ring-opacity-*` задают непрозрачность цвета
-[кольца](/ru/utilities/outline/ring/). Берите `ring-opacity-0`, чтобы
-спрятать кольцо, и `ring-opacity-full` с префиксом состояния, чтобы показать
-его при наведении или фокусе.
+Классы `ring-opacity-*` уходят из SIMAI Framework (C187 (3)): они рисуют, как рисовали,
+до 2027-01-01, а первое использование на странице Loader записывает в
+`SF.deprecations`. В новой разметке их не берите.
 
-## Пример
-
-Под каждым образцом — класс прозрачности; кольцо задают `ring-4
-ring-primary`. Наведите указатель на кнопку.
-
-:::example {id="utilities/outline/ring-opacity" label="ring-opacity-full, ring-opacity-0 и hover:"}
-:::
-
-## Классы
-
-| Класс | CSS | Значения |
-|:---|:---|:---|
-| `ring-opacity-1` | `--sf-ring--alpha: 0.1` | — |
-| `ring-opacity-2` | `--sf-ring--alpha: 0.2` | — |
-| `ring-opacity-3` | `--sf-ring--alpha: 0.3` | — |
-| `ring-opacity-4` | `--sf-ring--alpha: 0.4` | — |
-| `ring-opacity-5` | `--sf-ring--alpha: 0.5` | — |
-| `ring-opacity-6` | `--sf-ring--alpha: 0.6` | — |
-| `ring-opacity-7` | `--sf-ring--alpha: 0.7` | — |
-| `ring-opacity-8` | `--sf-ring--alpha: 0.8` | — |
-| `ring-opacity-9` | `--sf-ring--alpha: 0.9` | — |
-| `ring-opacity-full` | `--sf-ring--alpha: 1` | — |
-| `ring-opacity-0` | `--sf-ring--alpha: 0` | — |
-
-Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `focus-visible:`, `focus:`, `hover:`. Например: `focus-visible:ring-opacity-1`.
-
-Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
-
-## Применение
-
-| Класс | Непрозрачность кольца |
-| :--- | :--- |
-| `ring-opacity-full` | полная — значение по умолчанию |
-| `ring-opacity-0` | кольцо прозрачно |
-
-Класс меняет переменную `--sf-ring--alfa`, которую читают классы толщины
-кольца.
-
-```html
-<button class="ring-2 ring-primary ring-opacity-0 focus-visible:ring-opacity-full">Далее</button>
-```
-
-## Ограничения
-
-- `ring-opacity-1` … `ring-opacity-9` в выпуске убирают кольцо, а не
-  делают его полупрозрачным: процент из токена умножается на процент, и
-  браузер отбрасывает такой цвет. Для бледного кольца берите мягкий цвет,
-  например `ring-primary-container`.
-- Префиксов ширины экрана у семейства нет; есть состояния `hover:`, `focus:`
-  и `focus-visible:`.
-
-## См. также
-
-- [Кольцо выбора](/ru/utilities/outline/ring/)
-- [Внутреннее кольцо](/ru/utilities/outline/ring-inset/)
+Кольцо рисуется ролью цвета в полную силу, толщина — `ring-0`, `ring-1`, `ring-2`.
