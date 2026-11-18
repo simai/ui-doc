@@ -45,10 +45,12 @@ profile: reference
 
 `sf-divider-content--bold`, `sf-divider-content--small` • [справочник](#классы)
 
-`sf-divider-content` ставит текст посередине линии. `sf-divider-content--bold`
-набирает его жирным — для названия раздела; `sf-divider-content--small` —
-мелким второстепенным текстом; `sf-divider-content-border` обводит подпись
-рамкой, как плашку.
+`sf-divider-content` ставит текст посередине линии: мелкий приглушённый текст
+14/20 (на телефоне и в компактной области 12/16), без рамки.
+`sf-divider-content--bold` набирает его жирным — для названия раздела.
+Прежние имена `sf-divider-content--small` и `sf-divider-content-border`
+рисуют ту же обычную подпись: рамки у подписи больше нет. Они работают до
+2027-01-01 и отмечаются в `SF.deprecations`.
 
 :::example {id="components/content-divider/content" label="Подписи на линии"}
 :::
@@ -59,8 +61,11 @@ profile: reference
 
 `sf-divider-buttons` ставит на линию обычные
 [кнопки](/ru/components/actions/buttons/) `sf-button` и
-[кнопки с иконкой](/ru/components/actions/icon-buttons/) `sf-icon-button` и
-держит между ними промежуток. Так в редакторах вставляют блок или меняют
+[кнопки с иконкой](/ru/components/actions/icon-buttons/) `sf-icon-button`
+размера 1/2 с видом `outline` и держит между ними промежуток 8 px (в
+компактной области 4). Прежние кнопки `sf-divider-button` (с `--left`,
+`--right` и `--solo`) работают до 2027-01-01 и отмечаются в
+`SF.deprecations`; пишите `sf-button`. Так в редакторах вставляют блок или меняют
 порядок блоков.
 
 :::example {id="components/content-divider/buttons" label="Кнопки на линии"}
