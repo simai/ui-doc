@@ -1,8 +1,12 @@
 <div class="query-container">
-  <div class="grid grid-col-1 cq-md:grid-col-3 gap-4">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-4">
     <div class="flex flex-col gap-2">
       <sf-input label="Поиск" icon-start="search" placeholder="Название документа" hint="По названию и автору"></sf-input>
       <span class="text-1/2 color-on-surface-variant text-nowrap self-center">icon-start</span>
+    </div>
+    <div class="flex flex-col gap-2">
+      <sf-input label="Адрес сайта" text-start="https://" placeholder="posuda.ru" hint="Без www"></sf-input>
+      <span class="text-1/2 color-on-surface-variant text-nowrap self-center">text-start</span>
     </div>
     <div class="flex flex-col gap-2">
       <sf-input label="Стоимость" value="1500" text-end="₽" hint="Цена за месяц"></sf-input>
