@@ -132,7 +132,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-steps` |
-| Части | `sf-steps-container`, `sf-steps-count`, `sf-steps-count-label`, `sf-steps-count-line`, `sf-steps-count-position`, `sf-steps-separator--directional` |
+| Части | `sf-steps-container`, `sf-steps-count`, `sf-steps-count-label`, `sf-steps-count-line`, `sf-steps-count-position` |
 | Модификаторы | `sf-steps--auto`, `sf-steps--layout-column`, `sf-steps--layout-count`, `sf-steps--layout-row`, `sf-steps--marker-dot`, `sf-steps--marker-number` |
 | Размеры | `sf-steps--size-1`, `sf-steps--size-1/2` |
 
