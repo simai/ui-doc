@@ -61,6 +61,9 @@
       "command": ["node", "scripts/example-frame-permissions.mjs"]
     },
     {
+      "command": ["node", "scripts/example-tabs-inset.mjs"]
+    },
+    {
       "command": ["node", "scripts/inline-code-wrap.mjs"]
     },
     {
