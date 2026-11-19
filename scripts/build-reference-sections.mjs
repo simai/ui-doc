@@ -375,9 +375,15 @@ const utilityClasses = (families) => {
       const until = removeAfter ? ` до ${removeAfter}` : '';
       // No count: the number changes between releases (D19).
       if (!names.length) continue;
-      const replacement = sample
-        ? `; замена — класс оттенка рядом с ролевым классом: ${code(sample[1].replace(/\bsf-hue-[a-z]+/u, 'sf-hue-{оттенок}'))}`
-        : ' без замены';
+      // A record whose items name a hue class keeps the hue sentence; one whose
+      // items name a role (C212 (5): palette tones are variables, each legacy
+      // class names the role nearest its tone) shows one role as the example;
+      // the retired name itself is not printed (audit-colour-legacy).
+      const replacement = !sample
+        ? ' без замены'
+        : /\bsf-hue-[a-z]+/u.test(sample[1])
+          ? `; замена — класс оттенка рядом с ролевым классом: ${code(sample[1].replace(/\bsf-hue-[a-z]+/u, 'sf-hue-{оттенок}'))}`
+          : `; замена — ролевой класс, ближайший по тону, например ${code(sample[1])}`;
       lines.push('', `Другие классы записи \`${id}\` журнала уходят${sample ? '' : replacement} и работают${until}${sample ? replacement : ''} ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.`);
     }
   }
