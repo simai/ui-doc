@@ -693,6 +693,44 @@ id?}` значит «перестать ждать», а `wait` принимае
 | событие `sf-gallery-opened` | `sf-open` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `heading` | `title` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `backdrop-blur` | `blur` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| — | `modal-id` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `text` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `arrows` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `dots` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `thumbs` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `space-between` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `speed` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `button-type` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `button-size` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `dots-type` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `dots-size` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `thumbs-class` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `thumb-class` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `slide-class` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `inline-class` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `overlay` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `show-header` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `show-close` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `close-on-esc` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `close-on-overlay` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `preserve-scroll-gap` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `position` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `fullscreen` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `width` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `height` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `blur-type` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `overlay-class` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `close-class` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `surface-class` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `surface-padding` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `panel-class` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `header-class` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `body-class` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `content-class` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `footer-class` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `getModal()` | снято: ничего не делает, отмечается в `SF.deprecations` | 2026-12-01 |
+| — | `getInlineSlider()` | снято: ничего не делает, отмечается в `SF.deprecations` | 2026-12-01 |
+| — | `getLightboxSlider()` | снято: ничего не делает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-header-page>`
 
@@ -1056,6 +1094,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `scheme="(none)"` | `scheme="outline"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `scheme="(none)"` | `scheme="link"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | событие `sf-tabs-change` | `sf-tab-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| — | `scheme` | снято: ничего не делает, отмечается в `SF.deprecations` | 2027-01-01 |
 
 #### `<sf-tag>`
 
@@ -1148,6 +1187,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 | событие `sf-view-properties-state` | `sf-property-view-state` | работает как псевдоним | — |
 | событие `sf-view-properties-address-copy` | `sf-property-view-address-copy` | работает как псевдоним | — |
 | событие `sf-view-properties-favourite` | `sf-property-view-favourite` | работает как псевдоним | — |
+| — | `unplaced-hint-text` | снято: ничего не делает, отмечается в `SF.deprecations` | — |
 
 #### `<sf-view-table>`
 

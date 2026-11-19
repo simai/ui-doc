@@ -341,7 +341,6 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 | `type` | строка | пусто | `underline`, `pills`, `full`, `vertical` | Вид: без type или underline — линия (по умолчанию: линия primary 2 px под выбранной подписью, текст on-surface), pills — плашка (выбранная вкладка на primary-container), vertical — колонка меню (текущая вкладка на заливке текущего пункта меню, подписи в начале; на телефоне — линия с «Ещё»). full снят: всегда рисует линию с fit (пишется в SF.deprecations до 2027-01-01). |
 | `size` | строка | `1` | `1/2`, `1`, `2` | — |
 | `variant` | строка | `buttons` | — | — |
-| `scheme` | строка | `default` | — | Снято: вкладки рисуют один вид на тип, какая бы ни была схема, поэтому default, outline и link выглядят одинаково; outline и link пишутся в SF.deprecations до 2027-01-01. Значение не выбирает цвет по смыслу; свои шаблоны могут его читать. |
 | `top-position` | строка | `start` | — | — |
 | `active-index` | целое число | `0` | от 0 | — |
 | `top-class` | строка | пусто | — | — |

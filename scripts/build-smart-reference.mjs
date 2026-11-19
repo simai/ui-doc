@@ -436,7 +436,26 @@ const proseAliases = (manifest) => {
     events: pick(Object.entries(manifest.events ?? {}).filter(([, event]) => !event.alias_of), manifest.events, 'summary'),
   };
 };
-const isProseAlias = (manifest, kind, name) => proseAliases(manifest)[kind].some(([alias]) => alias === name);
+// A manifest entry may be retired: it is still read and noted in
+// SF.deprecations, but draws or does nothing («Retired (owner decision C150,
+// 2026-11-14; until 2027-01-01): …», «Retired (2026-12-01): … returns null and
+// is noted.»). The page describes the current version only (owner D02, D03):
+// a retired attribute, method or event leaves the page for the names guide.
+const RETIRED_PROSE = /^Retired\b/u;
+const retiredUntil = (text) => /until (\d{4}-\d{2}-\d{2})/u.exec(String(text ?? ''))?.[1]
+  ?? /^Retired \((\d{4}-\d{2}-\d{2})\)/u.exec(String(text ?? ''))?.[1] ?? '—';
+const retiredEntries = (manifest) => {
+  const pick = (entries, field) => entries
+    .filter(([, entry]) => RETIRED_PROSE.test(String(entry?.[field] ?? '')))
+    .map(([name, entry]) => [name, retiredUntil(entry[field])]);
+  return {
+    inputs: pick(Object.entries(manifest.inputs?.properties ?? {}), 'description'),
+    methods: pick(Object.entries(manifest.methods ?? {}), 'summary'),
+    events: pick(Object.entries(manifest.events ?? {}), 'summary'),
+  };
+};
+const isProseAlias = (manifest, kind, name) => proseAliases(manifest)[kind].some(([alias]) => alias === name)
+  || retiredEntries(manifest)[kind].some(([retired]) => retired === name);
 const collectLegacy = (folder, manifest) => {
   const tag = manifest.custom_element;
   const properties = manifest.inputs?.properties ?? {};
@@ -506,9 +525,16 @@ const collectLegacy = (folder, manifest) => {
   }
   for (const [name, target, until] of prose.methods) rows.add(`| метод ${code(`${target}()`)} | ${code(`${name}()`)} | работает как псевдоним | ${until} |`);
   for (const [name, target, until] of prose.events) rows.add(`| событие ${code(target)} | ${code(name)} | работает как псевдоним | ${until} |`);
+  const retired = retiredEntries(manifest);
+  const RETIRED_STAGE = 'снято: ничего не делает, отмечается в `SF.deprecations`';
+  const named = (written) => [...rows].some((row) => row.includes(`| ${written} |`));
+  for (const [name, until] of retired.inputs) if (!named(code(name))) rows.add(`| — | ${code(name)} | ${RETIRED_STAGE} | ${until} |`);
+  for (const [name, until] of retired.methods) if (!named(code(`${name}()`))) rows.add(`| — | ${code(`${name}()`)} | ${RETIRED_STAGE} | ${until} |`);
+  for (const [name, until] of retired.events) if (!named(code(name))) rows.add(`| — | ${code(name)} | ${RETIRED_STAGE} | ${until} |`);
   if (rows.size) legacyByTag.set(tag, [...rows]);
   const aliasInputs = new Set(prose.inputs.map(([name]) => name));
-  return {current: inputs.filter(([name]) => !legacyNames.has(name) && !unlisted.includes(name) && !aliasInputs.has(name) && !datedSettings.has(name))};
+  const retiredInputs = new Set(retired.inputs.map(([name]) => name));
+  return {current: inputs.filter(([name]) => !legacyNames.has(name) && !unlisted.includes(name) && !aliasInputs.has(name) && !datedSettings.has(name) && !retiredInputs.has(name))};
 };
 
 const renderComponent = (folder, {manifest, citation, rule, delivery}, single) => {
