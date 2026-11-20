@@ -6,7 +6,7 @@ profile: reference
 
 # Акцентная иконка
 
-:badge[sf-featured-icon]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-featured-icon]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Акцентная иконка ставит [иконку](/ru/components/content/icons/) на цветную
 подложку и выделяет тему карточки, раздела, статуса или пустого состояния.
@@ -23,24 +23,29 @@ profile: reference
 Минимальную разметку показывает пример выше: `<span class="sf-featured-icon">`
 с иконкой `<i class="sf-icon">` внутри.
 
-- Без модификаторов подложка круглая, мягкого тона, основного цвета и
-  размера `1`; модификаторы меняют каждую ось отдельно.
+- Без модификаторов подложка — серый круг `--sf-surface-container` со
+  значком приглушённого цвета `--sf-on-surface-variant`, размера `1`;
+  основной и другие цвета — по выбору. Модификаторы меняют каждую ось
+  отдельно.
+- Значок стоит в 12 px от текста рядом (`gap-1/2`; на телефоне и в
+  компактной области 8).
 - Размер и цвет иконки задаёт подложка: классы размера на `sf-icon` не
   нужны.
 
 ## Варианты
 
-### Интенсивность
+### Вид
 
-`sf-featured-icon--soft`, `sf-featured-icon--medium`, `sf-featured-icon--solid` • [справочник](#классы)
+`sf-featured-icon--soft`, `sf-featured-icon--solid` • [справочник](#классы)
 
-`sf-featured-icon--soft` — мягкий тон по умолчанию, для большинства карточек;
-`sf-featured-icon--medium` — тон насыщеннее; `sf-featured-icon--solid` —
-полная заливка цветом роли, для одного главного акцента;
-`sf-featured-icon--elevated` — нейтральная подложка с тенью и иконкой цвета
-роли.
+Видов два: `sf-featured-icon--soft` — мягкий тон по умолчанию, для
+большинства карточек; `sf-featured-icon--solid` — полная заливка цветом
+роли, для одного главного акцента. Прежние имена `--medium`, `--light`,
+`--mid`, `--modern` и `--elevated` рисуют мягкий тон, `--dark` — заливку;
+они работают до 2027-01-01 и отмечаются в `SF.deprecations`. Тени у значка
+нет.
 
-:::example {id="components/featured-icon/tones" label="Интенсивность"}
+:::example {id="components/featured-icon/tones" label="Мягкий тон и заливка"}
 :::
 
 ### Цвет
@@ -102,7 +107,7 @@ profile: reference
 |:---|:---|:---|
 | `--sf-featured-icon--background-color` | `var(--sf-featured-icon--container)` | `background-color` |
 | `--sf-featured-icon--box-shadow` | `none` | `box-shadow` |
-| `--sf-featured-icon--container` | `var(--sf-surface-container)` | `--sf-featured-icon--background-color`, `border` |
+| `--sf-featured-icon--container` | `var(--sf-surface-container)` | `--sf-featured-icon--background-color`, `border-color` |
 | `--sf-featured-icon--foreground-color` | `var(--sf-featured-icon--on-container)` | `--sf-icon--color` |
 | `--sf-featured-icon--icon-size` | `var(--sf-text-height-1)` | `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `--sf-featured-icon--padding` |
 | `--sf-featured-icon--on-container` | `var(--sf-on-surface-variant)` | `--sf-featured-icon--foreground-color` |

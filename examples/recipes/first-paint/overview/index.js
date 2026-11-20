@@ -33,7 +33,7 @@
   };
   const realTiles = () => {
     tiles.removeAttribute('aria-busy');
-    tiles.innerHTML = TILES.map(([value, label]) => `<div class="news-tile"><span class="text-2 weight-5">${value}</span><span class="text-1/2 color-on-surface-variant">${label}</span></div>`).join('');
+    tiles.innerHTML = TILES.map(([value, label]) => `<div class="news-tile"><span class="text-2 weight-medium">${value}</span><span class="text-1/2 color-on-surface-variant">${label}</span></div>`).join('');
   };
   const firstFrame = () => {
     place.querySelector('sf-empty-state')?.remove();

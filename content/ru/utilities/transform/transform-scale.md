@@ -40,27 +40,29 @@ description: "Уменьшает или увеличивает элемент ц
 | `scale-0` | `transform: scale(0)` | — |
 | `scale-x-0` | `transform: scaleX(0)` | — |
 | `scale-y-0` | `transform: scaleY(0)` | — |
-| `scale-1/4` | `transform: scale(0.8)` | — |
-| `scale-x-1/4` | `transform: scaleX(0.8)` | — |
-| `scale-y-1/4` | `transform: scaleY(0.8)` | — |
-| `scale-1/3` | `transform: scale(0.9)` | — |
-| `scale-x-1/3` | `transform: scaleX(0.9)` | — |
-| `scale-y-1/3` | `transform: scaleY(0.9)` | — |
-| `scale-1/2` | `transform: scale(0.95)` | — |
-| `scale-x-1/2` | `transform: scaleX(0.95)` | — |
-| `scale-y-1/2` | `transform: scaleY(0.95)` | — |
-| `scale-1` | `transform: scale(1)` | — |
-| `scale-x-1` | `transform: scaleX(1)` | — |
-| `scale-y-1` | `transform: scaleY(1)` | — |
-| `scale-2` | `transform: scale(1.05)` | — |
-| `scale-x-2` | `transform: scaleX(1.05)` | — |
-| `scale-y-2` | `transform: scaleY(1.05)` | — |
-| `scale-3` | `transform: scale(1.1)` | — |
-| `scale-x-3` | `transform: scaleX(1.1)` | — |
-| `scale-y-3` | `transform: scaleY(1.1)` | — |
-| `scale-4` | `transform: scale(1.2)` | — |
-| `scale-x-4` | `transform: scaleX(1.2)` | — |
-| `scale-y-4` | `transform: scaleY(1.2)` | — |
+| `scale-80` | `transform: scale(0.8)` | — |
+| `scale-x-80` | `transform: scaleX(0.8)` | — |
+| `scale-y-80` | `transform: scaleY(0.8)` | — |
+| `scale-90` | `transform: scale(0.9)` | — |
+| `scale-x-90` | `transform: scaleX(0.9)` | — |
+| `scale-y-90` | `transform: scaleY(0.9)` | — |
+| `scale-95` | `transform: scale(0.95)` | — |
+| `scale-x-95` | `transform: scaleX(0.95)` | — |
+| `scale-y-95` | `transform: scaleY(0.95)` | — |
+| `scale-100` | `transform: scale(1)` | — |
+| `scale-x-100` | `transform: scaleX(1)` | — |
+| `scale-y-100` | `transform: scaleY(1)` | — |
+| `scale-105` | `transform: scale(1.05)` | — |
+| `scale-x-105` | `transform: scaleX(1.05)` | — |
+| `scale-y-105` | `transform: scaleY(1.05)` | — |
+| `scale-110` | `transform: scale(1.1)` | — |
+| `scale-x-110` | `transform: scaleX(1.1)` | — |
+| `scale-y-110` | `transform: scaleY(1.1)` | — |
+| `scale-120` | `transform: scale(1.2)` | — |
+| `scale-x-120` | `transform: scaleX(1.2)` | — |
+| `scale-y-120` | `transform: scaleY(1.2)` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:scale-0`.
 

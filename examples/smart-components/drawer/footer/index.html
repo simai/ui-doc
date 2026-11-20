@@ -1,0 +1,21 @@
+<div data-sf-overlay-container>
+  <div class="flex flex-col gap-2 p-3 radius-3 bg-surface-container">
+    <div class="flex flex-wrap gap-2">
+      <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-drawer="open" aria-controls="drawer-example-filters">
+        <span class="sf-button-text-container">Фильтры</span>
+      </button>
+    </div>
+    <p class="m-0">Модальная панель — обычная настройка по умолчанию: затемнение, фокус внутри панели, первое поле получает фокус. Кнопки — в подвале, прижатом к низу.</p>
+  </div>
+  <sf-drawer id="drawer-example-filters" placement="inline-end" size="1/2" heading="Фильтры">
+    <div class="flex flex-col gap-2">
+      <sf-input name="client" label="Клиент" placeholder="Имя или компания"></sf-input>
+      <sf-input name="city" label="Город" default-value="Казань"></sf-input>
+      <sf-checkbox name="paid" label="Только оплаченные" checked></sf-checkbox>
+    </div>
+    <div slot="footer">
+      <sf-button text="Применить (2)" data-drawer="close" aria-controls="drawer-example-filters"></sf-button>
+      <sf-button text="Сбросить" appearance="ghost" scheme="on-surface"></sf-button>
+    </div>
+  </sf-drawer>
+</div>

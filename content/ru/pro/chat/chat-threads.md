@@ -127,7 +127,7 @@ list.addEventListener('sf-chat-threads-load-more', async () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-24d64b7f6eb7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента пакета `pro` выпуска `pro-a57887949f9a` над выпуском Framework `ui-dc9fc39aeb26` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -200,5 +200,5 @@ list.addEventListener('sf-chat-threads-load-more', async () => {
 
 ### Источник
 
-- `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/chat-threads`
-- `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/chat-threads/rule.js#name=cl-chat-threads`
+- `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/chat-threads`
+- `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/chat-threads/rule.js#name=cl-chat-threads`

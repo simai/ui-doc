@@ -6,13 +6,16 @@ profile: reference
 
 # Шаги
 
-:badge[sf-steps]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-steps]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
 
 Шаги показывают, где человек находится в процессе, который проходит сам, —
 оформлении заказа, публикации, настройке, — и отмечают пройденные, текущий и
 будущие этапы. Берите их для трёх и
 более этапов с постоянным порядком; для разделов без порядка подходят
-[вкладки](/ru/components/navigation/tabs/).
+[вкладки](/ru/components/navigation/tabs/). Для шагов в тексте инструкции —
+«1. Откройте настройки, 2. Нажмите…» — берите
+[инструкцию](/ru/components/content/procedure/): её номер выглядит как метка
+шагов, но собирать инструкцию из `sf-steps` не нужно.
 
 ## Пример
 
@@ -74,12 +77,22 @@ profile: reference
 :::example {id="components/step/state-current" label="Колонка со второй строкой"}
 :::
 
+В раскладке «счёт» корень держит над списком часть `sf-steps-count`: строку
+`sf-steps-count-line` с позицией «Шаг 2 из 4 ·» и подписью текущего шага, а
+под ней [полосу хода](/ru/components/feedback/progress-bar/) ступени 1/3.
+Список шагов в этой раскладке скрыт.
+
+:::example {id="components/step/count" label="Шаг 2 из 4"}
+:::
+
 ### Размер
 
 `sf-steps--size-1/2`, `sf-step--size-1/2` • [справочник](#классы)
 
 Размер 1 — по умолчанию, метка 24 px. `1/2` — для узкой панели или плотного
-экрана: метка 20 px и мелкий текст. Класс ставят и корню, и каждому шагу.
+экрана: метка 20 px и мелкий текст. Метка равна строке текста своей ступени,
+поэтому в компактной плотности и на телефоне метка размера 1 тоже 20 px.
+Класс ставят и корню, и каждому шагу.
 
 :::example {id="components/step/sizes" label="Размеры 1/2 и 1"}
 :::
@@ -119,7 +132,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-steps` |
-| Части | `sf-steps-container`, `sf-steps-count`, `sf-steps-count-label`, `sf-steps-count-line`, `sf-steps-count-position`, `sf-steps-separator--directional` |
+| Части | `sf-steps-container`, `sf-steps-count`, `sf-steps-count-label`, `sf-steps-count-line`, `sf-steps-count-position` |
 | Модификаторы | `sf-steps--auto`, `sf-steps--layout-column`, `sf-steps--layout-count`, `sf-steps--layout-row`, `sf-steps--marker-dot`, `sf-steps--marker-number` |
 | Размеры | `sf-steps--size-1`, `sf-steps--size-1/2` |
 
@@ -142,7 +155,7 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-steps-gap` | Промежуток между двумя шагами в строке: линия заканчивается на таком расстоянии до следующей отметки — столько же, сколько отступ шага после подписи. | `var(--sf-space-1\/3)` |
+| `--sf-steps-gap` | Промежуток между двумя шагами в строке: линия кончается на таком расстоянии перед следующим маркером — таком же, как промежуток шага после подписи. | `var(--sf-space-1\/3)` |
 | `--sf-steps-separator-color` | Линия между двумя шагами после текущего. | `var(--sf-outline-variant)` |
 | `--sf-steps-step-color` | Подпись и номер шага впереди или пропущенного. | `var(--sf-on-surface-variant)` |
 | `--sf-steps-step-border-color` | Контур пустой отметки (шаг впереди или пропущенный). | `var(--sf-outline)` |
@@ -168,8 +181,8 @@ profile: reference
 | `--sf-step--line-height` | `var(--sf-text-height-1)` | `line-height`, `height`, `block-size`, `margin-top`, `margin-bottom`, `margin-block`, `top`, `inset-block-start`, `bottom`, `inset-block-end` |
 | `--sf-step--marker` | `var(--sf-text-height-1)` | `width`, `inline-size`, `height`, `block-size`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `grid-template-columns`, `margin-top`, `margin-bottom`, `margin-block`, `top`, `inset-block-start`, `bottom`, `inset-block-end`, `inset-inline-start`, `--sf-step--marker-reach` |
 | `--sf-step--marker-reach` | не задана; задают модификаторы, например `.sf-steps--marker-number .sf-step`: `var(--sf-step--marker)` | `top`, `inset-block-start`, `bottom`, `inset-block-end` |
-| `--sf-step--progress` | `var(--sf-steps-completed-icon-color, var(--sf-primary))` | `border-color`, `background-color`, `outline`, `color`, `--sf-icon--color` |
-| `--sf-step--ring` | `calc(var(--sf-px) * 2)` | `gap`, `outline`, `outline-offset`, `border`, `padding-top`, `padding-bottom`, `padding-block`, `--sf-step--marker-reach` |
+| `--sf-step--progress` | `var(--sf-steps-completed-icon-color, var(--sf-primary))` | `outline`, `border-color`, `background-color`, `color`, `--sf-icon--color` |
+| `--sf-step--ring` | `calc(var(--sf-px) * 2)` | `gap`, `outline`, `outline-offset`, `border-width`, `padding-top`, `padding-bottom`, `padding-block`, `--sf-step--marker-reach` |
 | `--sf-step--small-height` | `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-step--small-size` | `var(--sf-text-size-1/2)` | `font-size` |
 

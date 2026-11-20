@@ -77,7 +77,7 @@ Loader.
 |:---|:---|:---|
 | `window.sfPath` | Адрес папки `distr/` поставки | Папка `distr/`, из которой загружен скрипт ядра (`core/js/core.js` или `core.min.js`); если ядро не может определить свой адрес — незакреплённая ветка `main` репозитория `simai/ui` на CDN, с предупреждением в консоли |
 | `window.sfSmartPath` | Адрес папки, в которой лежит `smart/`, если смарт-компоненты отдаются не из `distr/smart/` | Равен `sfPath`: смарт-компоненты берутся из `<sfPath>/smart/` |
-| `window.SF_BOOT_CONFIG` | Настройки запуска: `preloader`, `theme` (принимает только `false` — выключает автоматический выбор темы, см. [Темы](/ru/guide/colour/themes/#как-выбирается-тема-на-странице)), `icons`, `smart`, `packages` (см. [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), `minified` (см. [Сжатые файлы](/ru/guide/connection/loader/#сжатые-файлы)), `spinner` (вид спиннера на странице, см. [Вид страницы](/ru/components/feedback/spinner/#вид-страницы)), `cacheVersion`, `pluginListVersion` | Пустой объект |
+| `window.SF_BOOT_CONFIG` | Настройки запуска: `preloader`, `theme` (принимает только `false` — выключает автоматический выбор темы, см. [Темы](/ru/guide/colour/themes/#как-выбирается-тема-на-странице)), `icons`, `smart`, `packages` (см. [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), `minified` (см. [Сжатые файлы](/ru/guide/connection/loader/#сжатые-файлы)), `spinner` (прежний вид спиннера на странице; у спиннера один вид, см. [Спиннер](/ru/components/feedback/spinner/#разметка)), `cacheVersion`, `pluginListVersion` | Пустой объект |
 | `window.SF_PRELOADED` | План заранее подключённых модулей (см. [Готовый план для рабочей сборки](/ru/guide/connection/loader/#готовый-план-для-рабочей-сборки)) | Нет |
 | `window.SF_SMART_TEMPLATE_PATH` | Папка внешних шаблонов смарт-компонентов проекта (см. [Свои компоненты проекта: где граница](#свои-компоненты-проекта-где-граница)) | `/local/smart/templates` |
 
@@ -101,7 +101,7 @@ Loader.
 `pluginListVersion` — любые непустые строки: Loader сравнивает их с
 сохранёнными в `localStorage` как есть (см. [Кеш и версии адресов](/ru/guide/connection/loader/#кеш-и-версии-адресов)). Для своей
 копии поставки обеим меткам дают идентификатор выпуска, например
-`ui-24d64b7f6eb7`. При переходе на другой выпуск метки меняются вместе с ним:
+`ui-dc9fc39aeb26`. При переходе на другой выпуск метки меняются вместе с ним:
 Loader очищает сохранённые списки модулей, а адреса модулей получают новый
 параметр `sf_v`.
 
@@ -109,8 +109,8 @@ Loader очищает сохранённые списки модулей, а а�
 <script>
   window.sfPath = '/assets/simai-framework/ui/distr/';
   window.SF_BOOT_CONFIG = {
-    cacheVersion: 'ui-24d64b7f6eb7',
-    pluginListVersion: 'ui-24d64b7f6eb7',
+    cacheVersion: 'ui-dc9fc39aeb26',
+    pluginListVersion: 'ui-dc9fc39aeb26',
   };
 </script>
 ```
@@ -163,11 +163,11 @@ npm с версией выпуска (см. [CDN или своя копия](#cd
 
 ```bash
 git clone https://github.com/simai/ui.git simai-ui
-git -C simai-ui archive --format=tar 24d64b7f6eb7a782d648dbb5b44f7eb763ec815b distr | shasum -a 256
-# равно runtime_sources.core.archive_sha256 в записи simai-ui/contracts/releases/ui-24d64b7f6eb7.lock.json
+git -C simai-ui archive --format=tar dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74 distr | shasum -a 256
+# равно runtime_sources.core.archive_sha256 в записи simai-ui/contracts/releases/ui-dc9fc39aeb26.lock.json
 # и полю runtime.ui.sha256 в /ai/framework-lock.json этого сайта
 mkdir -p public/assets/simai-framework/ui
-git -C simai-ui archive --format=tar 24d64b7f6eb7a782d648dbb5b44f7eb763ec815b distr | tar -x -C public/assets/simai-framework/ui
+git -C simai-ui archive --format=tar dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74 distr | tar -x -C public/assets/simai-framework/ui
 ```
 
 Каталог появляется как `public/assets/simai-framework/ui/distr/`.
@@ -176,16 +176,16 @@ git -C simai-ui archive --format=tar 24d64b7f6eb7a782d648dbb5b44f7eb763ec815b di
 и версия пакета стоит во всех трёх адресах сразу:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261117.1311/distr/core/css/core.css">
-<script>window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261117.1311/distr/';</script>
-<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261117.1311/distr/core/js/core.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261118.1205/distr/core/css/core.css">
+<script>window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261118.1205/distr/';</script>
+<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261118.1205/distr/core/js/core.js"></script>
 ```
 
-`5.20261117.1311` — версия пакета для выпуска `ui-24d64b7f6eb7`. Версию другого
+`5.20261118.1205` — версия пакета для выпуска `ui-dc9fc39aeb26`. Версию другого
 выпуска и правило, по которому она получается из коммита выпуска, —
 см. [Пакет npm](/ru/guide/connection/delivery/#пакет-npm). Тот же пакет
 отдаёт unpkg: адреса вида
-`https://unpkg.com/@simai-studio/ui@5.20261117.1311/distr/` работают так же. Готовая
+`https://unpkg.com/@simai-studio/ui@5.20261118.1205/distr/` работают так же. Готовая
 страница — в быстром старте (см. [Страница на Core](/ru/guide/introduction/quick-start/#страница-на-core)).
 
 В пакете npm у модулей утилит, компонентов и смарт-компонентов есть только

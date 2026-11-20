@@ -131,7 +131,7 @@ description: "Корзина, доставка, оплата и подтверж
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Оформление заказа», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Оформление заказа», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Ход — sf-steps navigation="visited" с items Корзина, Доставка, Оплата, Подтверждение; на узком — layout="count".
 2. Способы доставки и оплаты — sf-input-choice layout="list": label, caption, price, term, badge; недоступный — disabled с причиной в caption.

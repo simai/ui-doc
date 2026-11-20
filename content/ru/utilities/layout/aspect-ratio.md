@@ -16,12 +16,7 @@ description: "Задаёт элементу постоянную пропорц�
 У всех образцов одинаковая ширина, высоту задаёт только класс. Подпись над
 образцом — класс, который на нём стоит.
 
-:::example {id="utilities/layout/aspect-ratio" label="Квадрат и горизонтальные пропорции"}
-:::
-
-### Вертикальные пропорции
-
-:::example {id="utilities/layout/aspect-ratio-portrait" label="Вертикальные пропорции"}
+:::example {id="utilities/layout/aspect-ratio" label="Пропорции"}
 :::
 
 ### Пропорция и ширина экрана
@@ -37,16 +32,14 @@ description: "Задаёт элементу постоянную пропорц�
 | Класс | CSS | Значения |
 |:---|:---|:---|
 | `aspect-1x1` | `aspect-ratio: 1 / 1` | — |
-| `aspect-1x2` | `aspect-ratio: 1 / 2` | — |
-| `aspect-2x1` | `aspect-ratio: 2 / 1` | — |
-| `aspect-2x3` | `aspect-ratio: 2 / 3` | — |
-| `aspect-3x1` | `aspect-ratio: 3 / 1` | — |
-| `aspect-3x2` | `aspect-ratio: 3 / 2` | — |
-| `aspect-3x4` | `aspect-ratio: 3 / 4` | — |
-| `aspect-4x1` | `aspect-ratio: 4 / 1` | — |
 | `aspect-4x3` | `aspect-ratio: 4 / 3` | — |
+| `aspect-3x2` | `aspect-ratio: 3 / 2` | — |
 | `aspect-16x9` | `aspect-ratio: 16 / 9` | — |
-| `aspect-9x16` | `aspect-ratio: 9 / 16` | — |
+| `aspect-21x9` | `aspect-ratio: 21 / 9` | — |
+| `aspect-3x4` | `aspect-ratio: 3 / 4` | — |
+| `aspect-auto` | `aspect-ratio: auto` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:aspect-1x1`.
 
@@ -71,9 +64,13 @@ description: "Задаёт элементу постоянную пропорц�
 - `aspect-1x1` — аватары, иконки, плитки каталога.
 - `aspect-4x3`, `aspect-3x2` — фотографии в альбомной ориентации.
 - `aspect-16x9` — видео и обложки.
-- `aspect-3x4`, `aspect-2x3` — портреты, обложки книг.
-- `aspect-9x16` — вертикальное видео.
-- `aspect-2x1`, `aspect-3x1`, `aspect-4x1` — баннеры и полосы.
+- `aspect-21x9` — широкие баннеры и полосы.
+- `aspect-3x4` — портреты, обложки книг.
+- `aspect-auto` — снять пропорцию, например на узком экране.
+
+Список пропорций тот же, что у картинок. `aspect-1x2`, `aspect-2x1`,
+`aspect-2x3`, `aspect-3x1`, `aspect-4x1` и `aspect-9x16` — прежние классы;
+они работают до 2027-01-01.
 
 ### Разная пропорция на разных экранах
 
@@ -88,7 +85,8 @@ description: "Задаёт элементу постоянную пропорц�
 - Содержимое, которое выше вычисленной высоты, растягивает элемент. Чтобы
   пропорция сохранялась, добавьте [`overflow-hidden`](/ru/utilities/layout/overflow/)
   или [`min-h-0`](/ru/utilities/sizes/min-height/).
-- Набор пропорций фиксирован: классов вроде `aspect-21x9` нет.
+- Набор пропорций фиксирован. Другую пропорцию задают свойством
+  `aspect-ratio` в стилях проекта.
 
 ## См. также
 

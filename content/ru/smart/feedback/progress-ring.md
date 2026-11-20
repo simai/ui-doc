@@ -5,7 +5,7 @@ description: "Показывает долю выполненного кольц�
 
 # Кольцо прогресса
 
-:badge[sf-progress-ring]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-ring]{variant=outline scheme=on-surface size=1/2} :badge[1.6.3]{variant=outline scheme=on-surface size=1/2}
 
 Кольцо прогресса показывает значение от 0 до 100 кольцом размером с элемент
 управления: в панели инструментов, в боковой полосе, вокруг аватара. Для
@@ -210,16 +210,17 @@ ring.setAttribute('value-text', 'Файлы загружены');
 
 | | |
 |:---|:---|
-| Тег | `<sf-progress-ring>`, контракт `smart.progress-ring` версии `1.6.0` |
-| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
+| Тег | `<sf-progress-ring>`, контракт `smart.progress-ring` версии `1.6.3` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как шкала; нужна подпись или `aria-label`. |
-| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/progress-ring` |
-| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-progress-ring` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/progress-ring` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-progress-ring` |
 
 ## См. также
 
 - [Прогресс](/ru/smart/feedback/progress-bar/) — полоса для длинной задачи в теле страницы.
 - [Шкала прогресса](/ru/smart/feedback/progress-scale/) — крупные шаги вместо процента.
 - [Спиннер](/ru/smart/feedback/spinner/) — когда доля неизвестна и места под кольцо нет.
+- Рецепты: [«Загрузка файлов с прогрессом»](/ru/recipes/progress/file-upload-progress/)

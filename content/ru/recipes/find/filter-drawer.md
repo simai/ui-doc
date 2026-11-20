@@ -97,7 +97,7 @@ description: "Отбор списка по нескольким признака
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Фильтры в шторке», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Фильтры в шторке», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Панель — sf-drawer modal="false" placement="inline-end" size="1/2" heading="Фильтры"; кнопка — sf-button appearance="outline" scheme="on-surface" icon-start="filter_list" data-drawer="toggle" aria-controls="<id панели>".
 2. Признак из нескольких значений — sf-checkbox в fieldset с legend; из одного — sf-radio в fieldset, первый вариант «Любой».
@@ -120,12 +120,12 @@ description: "Отбор списка по нескольким признака
   <sf-drawer id="orders-filters" modal="false" placement="inline-end" size="1/2" heading="Фильтры">
     <form id="filters-form" class="flex flex-col gap-3">
       <fieldset class="border-0 p-0 m-0 flex flex-col gap-1">
-        <legend class="p-0 m-bottom-1 weight-6">Статус</legend>
+        <legend class="p-0 m-bottom-1 weight-medium">Статус</legend>
         <sf-checkbox name="status" value="new" label="Новый"></sf-checkbox>
         <sf-checkbox name="status" value="paid" label="Оплачен" checked></sf-checkbox>
       </fieldset>
       <fieldset class="border-0 p-0 m-0 flex flex-col gap-1">
-        <legend class="p-0 m-bottom-1 weight-6">Доставка</legend>
+        <legend class="p-0 m-bottom-1 weight-medium">Доставка</legend>
         <sf-radio name="delivery" value="any" label="Любая" checked></sf-radio>
         <sf-radio name="delivery" value="courier" label="Курьером"></sf-radio>
       </fieldset>

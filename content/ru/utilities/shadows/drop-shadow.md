@@ -44,7 +44,7 @@ description: "Отбрасывает тень места по контуру в�
 | `drop-shadow-overlay` | `box-shadow: none; filter: drop-shadow(0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color)) drop-shadow(0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color))` | — |
 | `drop-shadow-modal` | `box-shadow: none; filter: drop-shadow(0 var(--sf-a4) var(--sf-a8) var(--sf-shadow-key-color)) drop-shadow(0 var(--sf-b6) var(--sf-c6) var(--sf-shadow-ambient-color))` | — |
 
-Прежние имена работают до 2027-01-01: `drop-shadow-0` → `drop-shadow-flat`, `drop-shadow-1` → `drop-shadow-raised`, `drop-shadow-2` → `drop-shadow-overlay`, `drop-shadow-3` → `drop-shadow-overlay`, `drop-shadow-4` → `drop-shadow-modal`, `drop-shadow-5` → `drop-shadow-modal`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:drop-shadow-flat`.
 

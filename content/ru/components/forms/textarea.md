@@ -6,7 +6,7 @@ profile: reference
 
 # Многострочное поле
 
-:badge[sf-textarea]{variant=outline scheme=on-surface size=1/2} :badge[1.8.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-textarea]{variant=outline scheme=on-surface size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
 
 Многострочное поле принимает комментарий, описание или другой свободный текст с
 переносами строк. Для короткого значения в одну строку берите
@@ -76,11 +76,13 @@ profile: reference
 
 ### Размер
 
-`sf-textarea--size-1/2`, `sf-textarea--size-1`, `sf-textarea--size-2` • [справочник](#классы)
+`sf-textarea--size-1/3`, `sf-textarea--size-1/2`, `sf-textarea--size-1`, `sf-textarea--size-2`, `sf-textarea--size-3` • [справочник](#классы)
 
-Три ступени — `sf-textarea--size-1/2`, `sf-textarea--size-1` и
-`sf-textarea--size-2`, как у поля ввода и других полей форм. Размер меняет
-подпись, текст, подсказку и отступы вместе. Берите ступень полей и кнопок той
+Пять ступеней — `sf-textarea--size-1/3`, `sf-textarea--size-1/2`,
+`sf-textarea--size-1`, `sf-textarea--size-2` и `sf-textarea--size-3`, как у
+поля ввода и кнопок: одна строка поля равна полю ввода той же ступени
+(28, 32, 40, 48 и 56 px на компьютере). Размер меняет подпись, текст,
+подсказку и отступы вместе. Берите ступень полей и кнопок той
 же формы.
 
 На сенсорном телефоне текст поля не меньше 16 px, чтобы iOS Safari не
@@ -128,12 +130,34 @@ profile: reference
 переносит строку. Из скрипта те же настройки задают `autoGrow`,
 `minRows` и `maxRows`.
 
-Счётчик знаков `sf-textarea-count` стоит в конце строки подсказки тем же
-текстом и цветом; после предела он красится цветом ошибки, а поле получает
-рамку ошибки (`sf-textarea--over`). Смарт-поле показывает счётчик само, когда
-введено 80 % предела.
-
 :::example {id="components/textarea/auto-grow" label="Высота по тексту"}
+:::
+
+### Счётчик знаков
+
+`sf-textarea--over` • [справочник](#классы)
+
+Счётчик стоит в конце строки под полем: строку собирает `sf-textarea-message`,
+в ней пояснение `sf-textarea-hint-text-wrap` и счётчик `sf-textarea-count` с
+цифрами одной ширины. Видимый счётчик скрыт от диктора; для диктора число
+знаков пишут в невидимый `sf-textarea-count-said` с `aria-live="polite"`
+сразу после оболочки. Когда текст длиннее предела, поставьте оболочке
+`sf-textarea--over` вместе с `error`: первый красит счётчик цветом ошибки,
+второй даёт рамку ошибки. Смарт-поле показывает счётчик само, когда введено
+80 % предела, и ставит оба класса.
+
+:::example {id="components/textarea/counter" label="Счётчик знаков"}
+:::
+
+### Код
+
+`sf-textarea--code` • [справочник](#классы)
+
+`sf-textarea--code` пишет текст моноширинным шрифтом кода, без переноса
+строк: длинная строка прокручивается внутри поля вбок. Проверку орфографии
+класс не выключает — поставьте `<textarea>` атрибут `spellcheck="false"`.
+
+:::example {id="components/textarea/code" label="Поле для кода"}
 :::
 
 ### Маска
@@ -162,8 +186,9 @@ profile: reference
 ### Только чтение
 
 Нативный `readonly` оставляет поле в порядке фокуса и позволяет выделить и
-скопировать текст; значение отправляется с формой. Фон поля становится
-приглушённым.
+скопировать текст; значение отправляется с формой. Подложки у такого поля нет
+в обоих видах, рамка светлее (`--sf-outline-variant`), наведение его не
+меняет.
 
 :::example {id="components/textarea/state-readonly" label="Только чтение"}
 :::
@@ -180,12 +205,10 @@ profile: reference
 
 ### Фокус
 
-`sf-textarea--pointer-focus` • [справочник](#классы)
-
-При переходе клавишей Tab поле получает кольцо фокуса по `:focus-visible`. При
-нажатии мышью скрипт ставит оболочке `sf-textarea--pointer-focus`, и кольцо не
-рисуется. В примере фокус показан классом `focus-visible` на `<textarea>`;
-смену заливки на фон поверхности даёт только настоящий фокус.
+Фокус одинаковый после нажатия мышью и после клавиши Tab: рамка поля
+становится цветом фокуса и толщиной 2 px внутрь, снаружи кольца нет. Поле с
+заливкой в фокусе получает фон поверхности, как поле с границей. Нажмите в
+поле примера или перейдите в него клавишей Tab.
 
 :::example {id="components/textarea/state-focus" label="Поле в фокусе"}
 :::
@@ -310,8 +333,8 @@ whenLoader(() => SF.Loader.ready('Textarea', (Textarea) => {
 | `--sf-textarea-text--font-weight` | не задана; задают модификаторы, например `.sf-textarea .sf-textarea-text`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-textarea-text--line-height` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 .sf-textarea-text`: `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-textarea-textarea--background-color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-textarea-background-color, var(--sf-transparent))` | `background-color` |
-| `--sf-textarea-textarea--border` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-px) solid` | `border`, `border-color`, `border-bottom-color`, `border-block-end-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `--sf-textarea-textarea--line-color` |
-| `--sf-textarea-textarea--border-color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-textarea-border-color, var(--sf-outline))` | `border-color`, `border-bottom-color`, `border-block-end-color`, `--sf-textarea-textarea--line-color` |
+| `--sf-textarea-textarea--border` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-px) solid` | `border`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `--sf-textarea-textarea--line-color`, `border-color`, `border-bottom-color`, `border-block-end-color` |
+| `--sf-textarea-textarea--border-color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-textarea-border-color, var(--sf-outline))` | `--sf-textarea-textarea--line-color`, `border-color`, `border-bottom-color`, `border-block-end-color` |
 | `--sf-textarea-textarea--border-end-end-radius` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-textarea--radius)` | `border-end-end-radius` |
 | `--sf-textarea-textarea--border-end-start-radius` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-textarea--radius)` | `border-end-start-radius` |
 | `--sf-textarea-textarea--border-start-end-radius` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-textarea--radius)` | `border-start-end-radius` |

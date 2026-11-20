@@ -6,7 +6,7 @@ profile: reference
 
 # Разделитель
 
-:badge[sf-divider]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-divider]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Разделитель отделяет соседние части содержимого или действий линией. Для
 простой границы между разделами достаточно `<hr>`; компонент нужен, когда
@@ -45,10 +45,12 @@ profile: reference
 
 `sf-divider-content--bold`, `sf-divider-content--small` • [справочник](#классы)
 
-`sf-divider-content` ставит текст посередине линии. `sf-divider-content--bold`
-набирает его жирным — для названия раздела; `sf-divider-content--small` —
-мелким второстепенным текстом; `sf-divider-content-border` обводит подпись
-рамкой, как плашку.
+`sf-divider-content` ставит текст посередине линии: мелкий приглушённый текст
+14/20 (на телефоне и в компактной области 12/16), без рамки.
+`sf-divider-content--bold` набирает его жирным — для названия раздела.
+Прежние имена `sf-divider-content--small` и `sf-divider-content-border`
+рисуют ту же обычную подпись: рамки у подписи больше нет. Они работают до
+2027-01-01 и отмечаются в `SF.deprecations`.
 
 :::example {id="components/content-divider/content" label="Подписи на линии"}
 :::
@@ -59,8 +61,11 @@ profile: reference
 
 `sf-divider-buttons` ставит на линию обычные
 [кнопки](/ru/components/actions/buttons/) `sf-button` и
-[кнопки с иконкой](/ru/components/actions/icon-buttons/) `sf-icon-button` и
-держит между ними промежуток. Так в редакторах вставляют блок или меняют
+[кнопки с иконкой](/ru/components/actions/icon-buttons/) `sf-icon-button`
+размера 1/2 с видом `outline` и держит между ними промежуток 8 px (в
+компактной области 4). Прежние кнопки `sf-divider-button` (с `--left`,
+`--right` и `--solo`) работают до 2027-01-01 и отмечаются в
+`SF.deprecations`; пишите `sf-button`. Так в редакторах вставляют блок или меняют
 порядок блоков.
 
 :::example {id="components/content-divider/buttons" label="Кнопки на линии"}
@@ -102,7 +107,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-divider` |
-| Части | `sf-divider-borders`, `sf-divider-button`, `sf-divider-button--left`, `sf-divider-button--right`, `sf-divider-button--solo`, `sf-divider-button-square--left`, `sf-divider-button-square--right`, `sf-divider-buttons`, `sf-divider-content`, `sf-divider-content--bold`, `sf-divider-content-border`, `sf-divider-horizontal`, `sf-divider-vertical` |
+| Части | `sf-divider-borders`, `sf-divider-button--left`, `sf-divider-button--right`, `sf-divider-button--solo`, `sf-divider-button-square--left`, `sf-divider-button-square--right`, `sf-divider-buttons`, `sf-divider-content`, `sf-divider-content--bold`, `sf-divider-horizontal`, `sf-divider-vertical` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -116,10 +121,10 @@ profile: reference
 | `--sf-divider--border-color` | `var(
       --sf-divider-borders--border-color,
       var(--sf-outline-variant)
-    )` | `border-top`, `border-bottom`, `border-block` |
+    )` | `border-top-color`, `border-bottom-color`, `border-block-color` |
 | `--sf-divider--gap` | `var(--sf-space-1/2)` | `gap` |
 | `--sf-divider--length` | `var(--sf-text-height-1)` | `min-height`, `min-block-size` |
-| `--sf-divider--thickness` | `var(--sf-px)` | `height`, `block-size`, `width`, `inline-size`, `border-top`, `border-bottom`, `border-block`, `border`, `border-inline-end-width` |
+| `--sf-divider--thickness` | `var(--sf-px)` | `height`, `block-size`, `width`, `inline-size`, `border-top-width`, `border-bottom-width`, `border-block-width`, `border-width`, `border-inline-end-width` |
 | `--sf-divider-buttons--gap` | не задана; задают модификаторы, например `.sf-divider-buttons`: `var(--sf-gap--actions)` | `gap` |
 | `--sf-divider-content--background-color` | `var(--sf-transparent)` | `background-color` |
 | `--sf-divider-content--color` | `var(--sf-on-surface-variant)` | `color` |

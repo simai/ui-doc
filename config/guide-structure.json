@@ -216,6 +216,11 @@
      "slug": "person/icons",
      "title": "Значки на выбор",
      "order": 20
+    },
+    {
+     "slug": "person/display-settings",
+     "title": "Настройки отображения",
+     "order": 30
     }
    ]
   },
@@ -350,11 +355,6 @@
      "slug": "default-text",
      "title": "Текст по умолчанию",
      "order": 55
-    },
-    {
-     "slug": "languages",
-     "title": "Языки",
-     "order": 95
     },
     {
      "slug": "language-file",

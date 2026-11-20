@@ -6,7 +6,7 @@ profile: reference
 
 # Код страны
 
-:badge[sf-country-code]{variant=outline scheme=on-surface size=1/2} :badge[1.10.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-country-code]{variant=outline scheme=on-surface size=1/2} :badge[1.12.0]{variant=outline scheme=on-surface size=1/2}
 
 Поле кода страны принимает номер телефона вместе с международным кодом: флаг
 показывает страну, список позволяет её сменить, маска форматирует номер по
@@ -28,8 +28,9 @@ profile: reference
 - Оболочка — `<label class="sf-country-code">` с классом размера и утилитами
   `flex flex-col`; на ней же настройки в атрибутах `data-*`. Скрипт компонента
   находит поля по `.sf-country-code`.
-- `sf-country-code-left` с пустым `sf-country-code-flag-icon` и значком
-  `expand_more` — кнопка выбора страны. Флаг скрипт рисует сам, а кнопке ставит
+- `sf-country-code-left` с пустым `sf-country-code-flag-icon` и стрелкой
+  `<i class="sf-icon sf-country-code-caret">arrow_drop_down</i>` — кнопка
+  выбора страны. Флаг скрипт рисует сам, а кнопке ставит
   роль `button` и доступное имя.
 - Нативный `<input type="tel">` хранит номер вместе с кодом, `name` и
   `required` и участвует в `FormData`, проверке и сбросе формы. Код страны в
@@ -54,12 +55,16 @@ profile: reference
 :::example {id="components/country-code/modes" label="Выбор страны"}
 :::
 
+Если введённый код не называет ни одну страну, скрипт ставит оболочке
+`sf-country-code--unknown`: на месте флага остаётся пустая рамка, а кнопка
+страны называет код неизвестным.
+
 ### Размер
 
-`sf-country-code--size-1/2`, `sf-country-code--size-1`, `sf-country-code--size-2` • [справочник](#классы)
+`sf-country-code--size-1/3`, `sf-country-code--size-1/2`, `sf-country-code--size-1`, `sf-country-code--size-2`, `sf-country-code--size-3` • [справочник](#классы)
 
-Три ступени — `sf-country-code--size-1/2`, `sf-country-code--size-1` и
-`sf-country-code--size-2`, как у текстового поля. Размер меняет подпись,
+Пять ступеней — от `sf-country-code--size-1/3` до `sf-country-code--size-3`,
+как у текстового поля: высота поля равна кнопке той же ступени. Размер меняет подпись,
 рамку, флаг и список вместе.
 
 :::example {id="components/country-code/sizes" label="Размеры поля кода страны"}
@@ -91,14 +96,15 @@ profile: reference
 
 ## Состояния
 
-Недоступность и фокус задаёт нативное поле, открытый список — класс `open`,
-который скрипт ставит сам. Наведение компонент показывает сам.
+Недоступность и фокус задаёт нативное поле, ошибку — класс `error` на
+оболочке, открытый список — класс `open`, который скрипт ставит сам. Наведение компонент показывает сам.
 
 ### Список открыт
 
 Нажатие на флаг, Enter, пробел или стрелка на кнопке страны открывают список;
 оболочка получает класс `open`. Выбор страны, Escape, нажатие вне поля или уход
-фокуса закрывают его.
+фокуса закрывают его. В примере список открывает скрипт, нажимая кнопку
+страны, как это сделал бы человек.
 
 :::example {id="components/country-code/state-open" label="Открытый список стран"}
 :::
@@ -111,10 +117,22 @@ profile: reference
 :::example {id="components/country-code/state-disabled" label="Недоступное поле"}
 :::
 
+### Ошибка
+
+Класс `error` на оболочке окрашивает рамку поля и строку под ним
+`sf-country-code-hint` цветом ошибки: подсказка становится сообщением об
+ошибке. Свяжите её с полем через `aria-describedby` и поставьте полю
+`aria-invalid="true"`.
+
+:::example {id="components/country-code/state-error" label="Неверный номер"}
+:::
+
 ### Фокус
 
-При переходе клавишей Tab рамка получает кольцо фокуса по `:focus-visible`. В
-примере фокус показан классом `focus-visible` на поле.
+Фокус одинаковый после нажатия мышью и после клавиши Tab, как у текстовых
+полей: рамка поля становится цветом фокуса и толщиной 2 px внутрь. Кнопка
+страны и строки списка при переходе клавишами получают свою рамку фокуса.
+Нажмите в поле примера или перейдите в него клавишей Tab.
 
 :::example {id="components/country-code/state-focus" label="Поле в фокусе"}
 :::
@@ -213,7 +231,7 @@ whenLoader(() => SF.Loader.ready('CountryCode', (CountryCode) => {
 | `--sf-country-code--flag-height` | `var(--sf-space-1)` | `--sf-country-code-flag-icon--height`, `--sf-country-code-flag-icon--width`, `--sf-icon--width`, `--sf-country-code-flag--height`, `--sf-country-code-flag--width` |
 | `--sf-country-code--inset` | `var(--sf-space-1)` | `--sf-country-code-field--padding-inline-end`, `--sf-country-code-field--padding-inline-start`, `--sf-country-code--flag-height`, `padding-inline`, `--sf-country-code-item--padding-inline-start`, `--sf-country-code-item--padding-inline-end` |
 | `--sf-country-code-field--background-color` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-field`: `var(--sf-country-code-background-color, var(--sf-transparent))` | `background-color` |
-| `--sf-country-code-field--border` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-field`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
+| `--sf-country-code-field--border` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-field`: `var(--sf-px) solid` | `border`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-color` |
 | `--sf-country-code-field--border-color` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-field`: `var(--sf-country-code-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-country-code-field--border-end-end-radius` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-field`: `var(--sf-country-code-radius, var(--sf-ui-radius-default))` | `border-end-end-radius` |
 | `--sf-country-code-field--border-end-start-radius` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-field`: `var(--sf-country-code-radius, var(--sf-ui-radius-default))` | `border-end-start-radius` |

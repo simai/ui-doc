@@ -6,7 +6,7 @@ profile: reference
 
 # Шаги инструкции
 
-:badge[sf-procedure]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-procedure]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Шаги инструкции показывают нумерованную последовательность действий, которую
 читают сверху вниз: установку, настройку, перенос. В каждом шаге может быть
@@ -37,7 +37,10 @@ profile: reference
 высоты остаются соединены.
 
 Индикатор того, на каком экране процесса находится человек, — другой
-компонент, `sf-steps`; шаги инструкции — это читаемое содержимое.
+компонент, [`sf-steps`](/ru/components/navigation/step/); шаги инструкции —
+это читаемое содержимое. Номер шага инструкции выглядит так же, как метка
+`sf-steps`: пустой кружок с номером высотой со строку текста (24 px, на
+телефоне и в компактной области 20).
 
 Блок содержимого `content.steps` рисуется этим компонентом: `props.current`
 отмечает шаги до него выполненными, а его — текущим; `props.layout` —
@@ -87,12 +90,12 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-procedure-marker-background-color` | Заливка отметки шага; по умолчанию нет — пустой круг, как отметка `sf-steps` (C194); завершённый или текущий шаг рисует свою. Прежнее имя `--sf-procedure-marker-background` до 2027-01-01 ещё читается — после этого (именование C16, `src/core/contracts/token-aliases.v1.json`). | `transparent` |
-| `--sf-procedure-marker-color` | Номер в отметке шага впереди; цвет пояснения, как у отметки `sf-steps`. Завершённый шаг рисует галочку, текущий — свой номер цветом `on-primary`. | `var(--sf-on-surface-variant)` |
+| `--sf-procedure-marker-background-color` | Заливка маркера шага; по умолчанию нет — пустой круг, как маркер sf-steps; у выполненного и текущего шага своя. Прежнее имя --sf-procedure-marker-background читается под этим до 2027-01-01. | `transparent` |
+| `--sf-procedure-marker-color` | Номер в маркере предстоящего шага; цвет пояснения, как у маркера sf-steps. Выполненный шаг рисует галочку, текущий — свой номер цветом on-primary. | `var(--sf-on-surface-variant)` |
 | `--sf-procedure-line-color` | Цвет линии от маркера к следующему. | `var(--sf-outline-variant)` |
 | `--sf-procedure-line-width` | Толщина линии между маркерами. | `var(--sf-px)` |
 | `--sf-procedure-gap` | Промежуток между шагами. | `var(--sf-content--space-related)` |
-| `--sf-procedure-indent` | Промежуток между отметкой и содержимым шага: 12 при любой ширине и плотности, как от отметки до подписи у `sf-steps`. | `calc(var(--sf-a8) + var(--sf-procedure--ring) * 2)` |
+| `--sf-procedure-indent` | Промежуток между маркером и содержимым шага: 12 на любой ширине и в любой плотности, как от маркера до подписи у sf-steps. | `calc(var(--sf-a8) + var(--sf-procedure--ring) * 2)` |
 
 ```css
 .sf-procedure {

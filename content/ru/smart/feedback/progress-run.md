@@ -5,7 +5,7 @@ description: "Долгое задание глазами человека: ша�
 
 # Ход выполнения
 
-:badge[sf-progress-run]{variant=outline scheme=on-surface size=1/2} :badge[1.4.6]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-run]{variant=outline scheme=on-surface size=1/2} :badge[1.5.4]{variant=outline scheme=on-surface size=1/2}
 
 Показывает долгое задание так, как его видит человек: создание сайта,
 обновление, резервную копию и восстановление, импорт, публикацию, установку
@@ -233,13 +233,13 @@ run.addEventListener('sf-progress-run-retry', () => job.start());
 
 | | |
 |:---|:---|
-| Тег | `<sf-progress-run>`, контракт `smart.progress-run` версии `1.4.6` |
-| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
+| Тег | `<sf-progress-run>`, контракт `smart.progress-run` версии `1.5.4` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: Tab проходит по ссылке на ошибки, журналам шагов, переключателю вывода, выводу, копированию, скачиванию и действиям по порядку; Enter или пробел нажимает кнопку; Enter переходит по ссылке на ошибки. |
-| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/progress-run` |
-| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-progress-run` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/progress-run` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-progress-run` |
 
 ## См. также
 
@@ -247,3 +247,4 @@ run.addEventListener('sf-progress-run-retry', () => job.start());
 - [Шаги](/ru/smart/navigation/steps/) — шаги, которые проходит человек.
 - [Кнопка копирования](/ru/smart/actions/copy-button/) — то же копирование
   отдельно.
+- Рецепты: [«Долгая операция»](/ru/recipes/progress/long-job/), [«Загрузка файлов с прогрессом»](/ru/recipes/progress/file-upload-progress/)

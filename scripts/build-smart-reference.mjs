@@ -123,6 +123,9 @@ for (const [name, projection] of Object.entries(lock.package_projections ?? {}))
       citation,
       rule: `${citation}/rule.js#name=cl-${folder}`,
       delivery: `пакет \`${name}\` (\`SF_BOOT_CONFIG.packages.${name}\`)`,
+      // A package's reference is built from the package's manifest, not the
+      // pair's: the section names the package release and the pair it runs on.
+      packageRelease: {name, release: `${name}-${source.revision.slice(0, 12)}`},
     });
   }
 }
@@ -433,7 +436,26 @@ const proseAliases = (manifest) => {
     events: pick(Object.entries(manifest.events ?? {}).filter(([, event]) => !event.alias_of), manifest.events, 'summary'),
   };
 };
-const isProseAlias = (manifest, kind, name) => proseAliases(manifest)[kind].some(([alias]) => alias === name);
+// A manifest entry may be retired: it is still read and noted in
+// SF.deprecations, but draws or does nothing («Retired (owner decision C150,
+// 2026-11-14; until 2027-01-01): …», «Retired (2026-12-01): … returns null and
+// is noted.»). The page describes the current version only (owner D02, D03):
+// a retired attribute, method or event leaves the page for the names guide.
+const RETIRED_PROSE = /^Retired\b/u;
+const retiredUntil = (text) => /until (\d{4}-\d{2}-\d{2})/u.exec(String(text ?? ''))?.[1]
+  ?? /^Retired \((\d{4}-\d{2}-\d{2})\)/u.exec(String(text ?? ''))?.[1] ?? '—';
+const retiredEntries = (manifest) => {
+  const pick = (entries, field) => entries
+    .filter(([, entry]) => RETIRED_PROSE.test(String(entry?.[field] ?? '')))
+    .map(([name, entry]) => [name, retiredUntil(entry[field])]);
+  return {
+    inputs: pick(Object.entries(manifest.inputs?.properties ?? {}), 'description'),
+    methods: pick(Object.entries(manifest.methods ?? {}), 'summary'),
+    events: pick(Object.entries(manifest.events ?? {}), 'summary'),
+  };
+};
+const isProseAlias = (manifest, kind, name) => proseAliases(manifest)[kind].some(([alias]) => alias === name)
+  || retiredEntries(manifest)[kind].some(([retired]) => retired === name);
 const collectLegacy = (folder, manifest) => {
   const tag = manifest.custom_element;
   const properties = manifest.inputs?.properties ?? {};
@@ -484,17 +506,35 @@ const collectLegacy = (folder, manifest) => {
   for (const [name, event] of Object.entries(manifest.events ?? {})) {
     if (event.alias_of) rows.add(`| событие ${code(event.alias_of)} | ${code(name)} | ${eventStage(name)} |`);
   }
+  // A setting the component's own aliases.json dates (`error` → `invalid`)
+  // while its manifest still declares it in prose the patterns above do not
+  // read («The error state; the same as invalid.»): an old name, so the guide.
+  const datedSettings = new Set();
+  const aliasText = show(sourceRepo, sourceCommit, `src/smart/${folder}/aliases.json`);
+  for (const alias of (aliasText ? JSON.parse(aliasText).aliases ?? [] : [])) {
+    if (alias.kind !== 'setting' || !alias.to || !Object.hasOwn(properties, alias.from) || !Object.hasOwn(properties, alias.to)) continue;
+    if (legacyNames.has(alias.from) || unlisted.includes(alias.from)) continue;
+    datedSettings.add(alias.from);
+    rows.add(`| ${code(alias.to)} | ${code(alias.from)} | ${STAGE.compat} | ${alias.remove_after ?? '—'} |`);
+  }
   const prose = proseAliases(manifest);
   for (const [name, target, until, written] of prose.inputs) {
     // The journal may already name the old spelling with its value.
     if (written && [...rows].some((row) => row.includes(`| ${code(written)} |`))) continue;
-    if (!legacyNames.has(name) && !unlisted.includes(name)) rows.add(`| ${code(target)} | ${code(written ?? name)} | работает как псевдоним | ${until} |`);
+    if (!legacyNames.has(name) && !unlisted.includes(name) && !datedSettings.has(name)) rows.add(`| ${code(target)} | ${code(written ?? name)} | работает как псевдоним | ${until} |`);
   }
   for (const [name, target, until] of prose.methods) rows.add(`| метод ${code(`${target}()`)} | ${code(`${name}()`)} | работает как псевдоним | ${until} |`);
   for (const [name, target, until] of prose.events) rows.add(`| событие ${code(target)} | ${code(name)} | работает как псевдоним | ${until} |`);
+  const retired = retiredEntries(manifest);
+  const RETIRED_STAGE = 'снято: ничего не делает, отмечается в `SF.deprecations`';
+  const named = (written) => [...rows].some((row) => row.includes(`| ${written} |`));
+  for (const [name, until] of retired.inputs) if (!named(code(name))) rows.add(`| — | ${code(name)} | ${RETIRED_STAGE} | ${until} |`);
+  for (const [name, until] of retired.methods) if (!named(code(`${name}()`))) rows.add(`| — | ${code(`${name}()`)} | ${RETIRED_STAGE} | ${until} |`);
+  for (const [name, until] of retired.events) if (!named(code(name))) rows.add(`| — | ${code(name)} | ${RETIRED_STAGE} | ${until} |`);
   if (rows.size) legacyByTag.set(tag, [...rows]);
   const aliasInputs = new Set(prose.inputs.map(([name]) => name));
-  return {current: inputs.filter(([name]) => !legacyNames.has(name) && !unlisted.includes(name) && !aliasInputs.has(name))};
+  const retiredInputs = new Set(retired.inputs.map(([name]) => name));
+  return {current: inputs.filter(([name]) => !legacyNames.has(name) && !unlisted.includes(name) && !aliasInputs.has(name) && !datedSettings.has(name) && !retiredInputs.has(name))};
 };
 
 const renderComponent = (folder, {manifest, citation, rule, delivery}, single) => {
@@ -716,6 +756,9 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
     for (const [attribute, property] of Object.entries(PROPERTY_EXCEPTIONS[folder] ?? {})) {
       lines.push(`Свойство атрибута ${code(attribute)} называется ${code(property)}.`);
     }
+    // An attribute with no property (config/smart-reference.json
+    // `property_notes`): the general sentence above does not hold for it.
+    for (const note of settings.property_notes?.[folder] ?? []) lines.push(note);
     lines.push('');
   }
   const methods = Object.entries(manifest.methods ?? {}).filter(([name]) => !isProseAlias(manifest, 'methods', name));
@@ -817,7 +860,10 @@ const renderSection = (entries) => {
   const lines = [
     HEADING,
     '',
-    `Раздел собран из манифеста ${entries.length > 1 ? 'компонентов' : 'компонента'} выпуска ${code(pair)}`
+    (entries[0][1].packageRelease
+      ? `Раздел собран из манифеста ${entries.length > 1 ? 'компонентов' : 'компонента'} пакета ${code(entries[0][1].packageRelease.name)}`
+        + ` выпуска ${code(entries[0][1].packageRelease.release)} над выпуском Framework ${code(pair)}`
+      : `Раздел собран из манифеста ${entries.length > 1 ? 'компонентов' : 'компонента'} выпуска ${code(pair)}`)
       + ' и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.',
     '',
     'Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase:'

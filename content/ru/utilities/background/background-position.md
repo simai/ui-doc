@@ -46,12 +46,6 @@ description: "Ставит фоновое изображение в угол, к
 | `bg-center` | `background-position: center` | — |
 | `bg-center-top` | `background-position: center top` | — |
 | `bg-center-bottom` | `background-position: center bottom` | — |
-| `bg-left` | `background-position: left` | — |
-| `bg-left-top` | `background-position: left top` | — |
-| `bg-left-bottom` | `background-position: left bottom` | — |
-| `bg-right` | `background-position: right` | — |
-| `bg-right-top` | `background-position: right top` | — |
-| `bg-right-bottom` | `background-position: right bottom` | — |
 | `bg-inline-start` | `background-position: left` | — |
 | `bg-inline-start-bottom` | `background-position: left bottom` | — |
 | `bg-inline-start-top` | `background-position: left top` | — |
@@ -61,6 +55,8 @@ description: "Ставит фоновое изображение в угол, к
 | `bg-inline-end-top` | `background-position: right top` | — |
 | `bg-inline-end-center` | `background-position: right center` | — |
 | `bg-top` | `background-position: top` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:bg-bottom`.
 

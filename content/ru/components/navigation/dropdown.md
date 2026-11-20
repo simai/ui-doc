@@ -6,7 +6,7 @@ profile: reference
 
 # Выпадающий список
 
-:badge[sf-dropdown]{variant=outline scheme=on-surface size=1/2} :badge[1.15.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-dropdown]{variant=outline scheme=on-surface size=1/2} :badge[1.16.2]{variant=outline scheme=on-surface size=1/2}
 
 Выпадающий список экономит место и даёт выбрать одно или несколько значений
 из набора вариантов; видимая подпись пункта отделена от его машинного
@@ -85,6 +85,15 @@ profile: reference
 :::example {id="components/dropdown/sizes" label="Размеры 1/2, 1 и 2"}
 :::
 
+### Плотность
+
+В компактной плотности (`data-sf-density="compact"` на области или на
+`<html>`) поле и строки списка становятся на ступень ниже вместе с текстом:
+поле ступени 1 — 32 px вместо 40.
+
+:::example {id="components/dropdown/density" label="Обычная и компактная плотность"}
+:::
+
 ### Пункты списка
 
 Пункт содержит текст (`sf-list-item--text`), иконку (`sf-list-item--icon`),
@@ -113,7 +122,9 @@ profile: reference
 Поиск — шапка списка `sf-list-search` без рамки: иконка и текст поиска
 стоят ровно над иконками и текстом строк, под шапкой линия на всю ширину.
 Шапка стоит на месте, прокручиваются только строки. Поиск фильтрует пункты
-по видимой подписи; машинные значения он не меняет.
+по видимой подписи; машинные значения он не меняет. Ставьте поиск в список
+от десяти строк; в коротком списке из нескольких пунктов он не нужен — это
+касается и смарт-компонента `<sf-dropdown>`.
 
 ```html
 <div class="sf-list sf-list--size-1 flex flex-col">
@@ -179,6 +190,17 @@ profile: reference
 :::example {id="components/dropdown/states" label="Обязательный"}
 :::
 
+### Ошибка
+
+Класс `error` на корне рисует ошибку так же, как у [поля ввода](/ru/components/forms/inputs/):
+рамка и подпись цвета ошибки, под полем — сообщение `sf-dropdown-message`
+на ступень мельче текста поля, без иконки. Свяжите сообщение с полем через
+`aria-describedby` и поставьте полю `aria-invalid="true"`. Состояние ошибки
+держится и при наведении, фокусе и открытом списке.
+
+:::example {id="components/dropdown/error" label="Ошибка выбора"}
+:::
+
 ## Доступность
 
 - Видимая подпись `sf-dropdown-label` — имя поля; скрипт связывает с ней
@@ -233,7 +255,7 @@ document.querySelector('.sf-dropdown').addEventListener('change', (event) => {
 | `--sf-dropdown--tag-radius` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-tag-container`: `var(--sf-tag-radius, max(var(--sf-radius-1/2), var(--sf-dropdown--line-radius) - var(--sf-space-1/4)))` | `--sf-tag--border-top-left-radius`, `--sf-tag--border-top-right-radius`, `--sf-tag--border-bottom-left-radius`, `--sf-tag--border-bottom-right-radius` |
 | `--sf-dropdown--value-inset` | `calc(var(--sf-dropdown--inset) + max(calc(var(--sf-px) * 0), var(--sf-dropdown--line-radius) - var(--sf-radius-1/2)) / 2)` | `--sf-dropdown-field--padding-inline-start` |
 | `--sf-dropdown-field--background-color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--outlined.sf-dropdown--text:not(:has(> .sf-dropdown-field > :disabled)) .sf-dropdown-field`: `var(--sf-dropdown-background-color, var(--sf-transparent))` | `background-color` |
-| `--sf-dropdown-field--border` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-field`: `var(--sf-px) solid` | `border`, `border-color`, `border-bottom-color`, `border-block-end-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
+| `--sf-dropdown-field--border` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-field`: `var(--sf-px) solid` | `border`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-color`, `border-bottom-color`, `border-block-end-color` |
 | `--sf-dropdown-field--border-color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--outlined.sf-dropdown--text:not(:has(> .sf-dropdown-field > :disabled)) .sf-dropdown-field`: `var(--sf-dropdown-border-color, var(--sf-outline))` | `border-color`, `border-bottom-color`, `border-block-end-color` |
 | `--sf-dropdown-field--gap` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1/2 .sf-dropdown-field`: `var(--sf-space-1/4)` | `gap` |
 | `--sf-dropdown-field--line-color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--filled.sf-dropdown--text:not(:has(> .sf-dropdown-field > :disabled)) .sf-dropdown-field`: `var(--sf-dropdown-border-color, var(--sf-outline))` | `border-bottom-color`, `border-block-end-color` |

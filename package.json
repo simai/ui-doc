@@ -6,9 +6,6 @@
   "engines": {
     "node": ">=20.19"
   },
-  "dependencies": {
-    "shiki": "4.4.3"
-  },
   "devDependencies": {
     "playwright-core": "1.62.1"
   }

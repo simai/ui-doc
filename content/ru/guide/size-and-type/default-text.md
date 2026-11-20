@@ -128,5 +128,5 @@ description: "Как ядро оформляет текст без классо�
 
 ```html
 <p class="sf-h-4">Подзаголовок карточки</p>
-<span class="label-small">Обновлено вчера</span>
+<span class="text-1/4">Обновлено вчера</span>
 ```

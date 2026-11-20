@@ -303,8 +303,8 @@
       "label": "Переключатель"
     },
     "SF.Tab": {
-      "page": "/ru/components/navigation/tab/#javascript",
-      "label": "Вкладка (совместимость)"
+      "page": "/ru/components/navigation/tabs/#прежние-имена",
+      "label": "Вкладки: прежние имена"
     },
     "SF.Tabs": {
       "page": "/ru/components/navigation/tabs/#javascript",
@@ -351,17 +351,17 @@
       "label": "Цвет: тема в коде"
     },
     "SF.displaySettings": {
-      "text": "Настройки отображения, которые выбрал человек: размер текста, схема, интервалы, картинки, движение.",
-      "page": "/ru/guide/functions/person/",
+      "text": "Размер текста, цветовая схема, интервалы и движение, которые человек выбрал для сайта.",
+      "page": "/ru/guide/functions/person/display-settings/",
       "label": "Настройки отображения"
     },
     "SF.menu": {
       "text": "Открывает одно меню действий страницы у кнопки или в точке и отвечает выбранной строкой.",
-      "page": "/ru/smart/navigation/context-menu/",
-      "label": "Меню действий страницы"
+      "page": "/ru/smart/navigation/context-menu/#одно-меню-страницы",
+      "label": "Контекстное меню"
     },
     "SF.Gallery": {
-      "page": "/ru/smart/content/gallery/",
+      "page": "/ru/smart/content/gallery/#просмотр-без-галереи",
       "label": "Галерея"
     }
   }

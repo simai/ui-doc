@@ -5,7 +5,7 @@ description: "Показывает серверную коллекцию таб�
 
 # Представление данных
 
-:badge[sf-view]{variant=outline scheme=on-surface size=1/2} :badge[1.12.6]{variant=outline scheme=on-surface size=1/2} :badge[sf-view-table]{variant=outline scheme=on-surface size=1/2} :badge[1.20.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-view]{variant=outline scheme=on-surface size=1/2} :badge[1.12.6]{variant=outline scheme=on-surface size=1/2} :badge[sf-view-table]{variant=outline scheme=on-surface size=1/2} :badge[1.23.2]{variant=outline scheme=on-surface size=1/2}
 
 Представление данных показывает записи из базы таблицей: товары, заказы,
 пользователи. Над таблицей — поиск и фильтры, в строках — выбор и действия,
@@ -29,11 +29,11 @@ Framework: поставляется пакетом `pro` из репозитор
 
 ### Подключение пакета
 
-Элементы `<sf-view-table>` и `<sf-view>` поставляет Larena, а не выпуск
-Framework: пакет компонентов Loader с именем `pro` из репозитория
-`simai/ui-pro` (лицензия PolyForm Small Business 1.0.0 или PolyForm
-Noncommercial 1.0.0, по запросу — коммерческая лицензия SIMAI; в составе
-Larena — лицензия Larena). В пакет входят ещё
+Элементы `<sf-view-table>` и `<sf-view>` поставляет не выпуск Framework, а
+пакет компонентов Loader с именем `pro` из репозитория `simai/ui-pro`
+(лицензия PolyForm Small Business 1.0.0 или PolyForm Noncommercial 1.0.0, по
+запросу — коммерческая лицензия SIMAI; в составе Larena — лицензия Larena).
+Larena берёт их из этого пакета. В пакет входят ещё
 [`<sf-view-properties>`](/ru/pro/admin/property-view/) и
 [`<sf-admin-menu>`](/ru/pro/admin/admin-menu/). Объявите
 пакет до подключения Core:
@@ -787,7 +787,7 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-24d64b7f6eb7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов пакета `pro` выпуска `pro-a57887949f9a` над выпуском Framework `ui-dc9fc39aeb26` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -916,8 +916,8 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/view`
-- `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/view/rule.js#name=cl-view`
+- `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/view`
+- `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/view/rule.js#name=cl-view`
 
 ### `<sf-view-table>`
 
@@ -925,7 +925,7 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 |:---|:---|
 | Тег | `<sf-view-table>` |
 | Назначение | Полное представление коллекции с серверными данными: поиск, фильтры, настройки таблицы, действия над строками и массовые действия, пагинация. |
-| Контракт | `smart.view-table`, версия `1.20.4` |
+| Контракт | `smart.view-table`, версия `1.23.2` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -1096,5 +1096,9 @@ table.addEventListener('sf-view-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/view-table`
-- `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/view-table/rule.js#name=cl-view-table`
+- `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/view-table`
+- `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/view-table/rule.js#name=cl-view-table`
+
+## См. также
+
+- Рецепты: [«Выбор строк и общие действия»](/ru/recipes/remove/bulk-actions/), [«Панель над списком»](/ru/recipes/find/list-toolbar/)

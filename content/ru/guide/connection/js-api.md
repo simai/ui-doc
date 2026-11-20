@@ -26,7 +26,7 @@ API компонента (`SF.Input`, `SF.Tabs` и другие) описан н
 
 ## Имена по уровням
 
-Раздел собран из контракта выпуска `ui-24d64b7f6eb7` (`core/contracts/public-js-api.json`) и обновляется вместе с выпуском.
+Раздел собран из контракта выпуска `ui-dc9fc39aeb26` (`core/contracts/public-js-api.json`) и обновляется вместе с выпуском.
 
 ### Ядро
 
@@ -42,7 +42,7 @@ API компонента (`SF.Input`, `SF.Tabs` и другие) описан н
 | `SF.copyFeedback` | Отклик копирования для своей кнопки: галочка, «Скопировано» для диктора, подсказка при отказе. | [Копирование текста](/ru/guide/functions/actions/copy-text/) |
 | `SF.copyText` | Кладёт текст в буфер обмена. | [Копирование текста](/ru/guide/functions/actions/copy-text/) |
 | `SF.deprecations` | Прежние имена, которые ещё принимаются, и чем их заменить. | [Жизненный цикл изменений](/ru/guide/connection/change-lifecycle/) |
-| `SF.displaySettings` | Настройки отображения, которые выбрал человек: размер текста, схема, интервалы, картинки, движение. | [Настройки отображения](/ru/guide/functions/person/) |
+| `SF.displaySettings` | Размер текста, цветовая схема, интервалы и движение, которые человек выбрал для сайта. | [Настройки отображения](/ru/guide/functions/person/display-settings/) |
 | `SF.EarlyPort` | Порты, объявленные в разметке: первый запрос до кода компонента. | [Данные с сервера](/ru/guide/smart-components/data/) |
 | `SF.Effects` | Прежнее имя движка фоновых эффектов; новое — `SF.package('effects')`. | [Фоновые эффекты](/ru/guide/layouts/building/background-effects/) |
 | `SF.format` | Даты, дни, числа и размеры файлов на языке страницы. | [Даты, числа и размеры](/ru/guide/functions/text/format/) |
@@ -50,7 +50,7 @@ API компонента (`SF.Input`, `SF.Tabs` и другие) описан н
 | `SF.language` | Язык всей страницы и слова, добавленные для компонентов. | [Язык страницы](/ru/guide/functions/text/language/) |
 | `SF.loadRuntime` | Загружает общую среду смарт-компонентов; её вызывает Loader. | [Загрузка и общая среда](/ru/guide/smart-components/runtime/) |
 | `SF.Mask` | Маска ввода у поля и форматирование значения по маске. | [Маска поля](/ru/guide/functions/text/mask/) |
-| `SF.menu` | Открывает одно меню действий страницы у кнопки или в точке и отвечает выбранной строкой. | [Меню действий страницы](/ru/smart/navigation/context-menu/) |
+| `SF.menu` | Открывает одно меню действий страницы у кнопки или в точке и отвечает выбранной строкой. | [Контекстное меню](/ru/smart/navigation/context-menu/#одно-меню-страницы) |
 | `SF.notifications` | Настройки области уведомлений и показанные сообщения. | [Уведомления](/ru/guide/functions/actions/notify/) |
 | `SF.notify` | Показывает сообщение в области уведомлений страницы. | [Уведомления](/ru/guide/functions/actions/notify/) |
 | `SF.package` | Отдаёт API набора компонентов: функции, которые набор зарегистрировал. | [API набора](/ru/guide/functions/loading/package/) |
@@ -113,7 +113,7 @@ API компонента (`SF.Input`, `SF.Tabs` и другие) описан н
 | `SF.fieldRenderers` | [Поля по типу свойства](/ru/guide/smart-components/field-renderers/) |
 | `SF.FileUpload` | [Загрузка файлов](/ru/components/forms/file-upload/#javascript) |
 | `SF.Flag` | [Флаг](/ru/components/content/flag/#javascript) |
-| `SF.Gallery` | [Галерея](/ru/smart/content/gallery/) |
+| `SF.Gallery` | [Галерея](/ru/smart/content/gallery/#просмотр-без-галереи) |
 | `SF.Highlight` | [Подсветка кода](/ru/components/content/highlight/#javascript) |
 | `SF.InlineEditor` | [Inline-редактор](/ru/smart/editor/inline-editor/#методы) |
 | `SF.Input` | [Текстовые поля](/ru/components/forms/inputs/#javascript) |
@@ -127,7 +127,7 @@ API компонента (`SF.Input`, `SF.Tabs` и другие) описан н
 | `SF.Sortable` | [Перетаскивание](/ru/smart/editor/sortable/#методы) |
 | `SF.Spinner` | [Спиннер](/ru/components/feedback/spinner/#javascript) |
 | `SF.Switch` | [Переключатель](/ru/components/forms/switch/#javascript) |
-| `SF.Tab` | [Вкладка (совместимость)](/ru/components/navigation/tab/#javascript) |
+| `SF.Tab` | [Вкладки: прежние имена](/ru/components/navigation/tabs/#прежние-имена) |
 | `SF.Tabs` | [Вкладки](/ru/components/navigation/tabs/#javascript) |
 | `SF.Textarea` | [Многострочное поле](/ru/components/forms/textarea/#javascript) |
 | `SF.ThemePalette` | [Цвет: тема в коде](/ru/smart/forms/color/#тема-в-коде) |

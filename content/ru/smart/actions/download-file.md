@@ -5,7 +5,7 @@ description: "Показывает файл для скачивания с им�
 
 # Скачивание файла
 
-:badge[sf-file-download]{variant=outline scheme=on-surface size=1/2} :badge[1.5.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-download]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Скачивание файла показывает файл, который можно скачать: знак скачивания,
 имя, тип и размер. С адресом это обычная ссылка на файл, без адреса — кнопка, по которой
@@ -252,13 +252,13 @@ file.addEventListener('sf-file-download-request', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-file-download>`, контракт `smart.file-download` версии `1.5.5` |
-| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
+| Тег | `<sf-file-download>`, контракт `smart.file-download` версии `1.6.0` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как ссылка; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/file-download` |
-| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-file-download` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/file-download` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-file-download` |
 
 ## См. также
 

@@ -6,7 +6,7 @@ profile: reference
 
 # Загрузка файлов
 
-:badge[sf-file-upload]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-upload]{variant=outline scheme=on-surface size=1/2} :badge[1.7.1]{variant=outline scheme=on-surface size=1/2}
 
 Загрузка файлов принимает один или несколько файлов через системное окно или
 перетаскиванием и показывает список выбранных файлов с ходом передачи. Сами
@@ -30,14 +30,19 @@ profile: reference
   `tabindex="0"` и добавляет скрытый `<input type="file">`: нажатие на зону
   открывает системное окно.
 - `accept` и `multiple` на зоне (или `data-accept` и `data-multiple`)
-  передаются в системное окно. Из перетащенных файлов скрипт оставляет те,
-  что названы в `accept`, остальные сообщает событием
-  `sf-file-upload:reject` (`event.detail.files`). Проверку на сервере это не
-  заменяет.
+  передаются в системное окно. Скрипт проверяет `accept` и при выборе через
+  окно, и при перетаскивании: файл другого типа он не берёт.
+- Пределы задают атрибуты зоны в байтах: `data-max-size` и `data-min-size` —
+  размер одного файла, `data-max-files` — сколько файлов в списке (вместе с
+  `multiple`), `data-max-total-size` — общий размер списка. Файл, который не
+  прошёл проверку, в список не попадает: причину скрипт пишет под зоной в
+  сообщение `sf-file-upload-message` (`role="status"`) и отправляет событие
+  `sf-file-upload:reject`. Проверку на сервере это не заменяет.
 - Текст зоны становится её доступным именем; зоне без текста нужен
   `aria-label`.
 - Список `sf-file-upload-files` скрипт заполняет пунктами `sf-upload-progress`
-  с прогрессом передачи. Он лежит сразу за зоной или внутри неё; список в
+  сам: значок типа файла, имя, строка размера или состояния, кнопки. Пункты
+  вручную не пишут — их задаёт `SF.FileUpload.setItems` (см. «JavaScript»). Он лежит сразу за зоной или внутри неё; список в
   другом месте страницы задаёт селектор в `data-target`.
 
 ## Варианты
@@ -66,9 +71,9 @@ profile: reference
 ### Один или несколько файлов
 
 Без `multiple` окно выбирает один файл, а перетаскивание берёт первый из
-брошенных. С `multiple` компонент принимает весь набор. Новый выбор заменяет
-прежний список, отмена системного окна его не меняет; один и тот же файл можно
-выбрать повторно.
+брошенных и сообщает под зоной об остальных. С `multiple` новый выбор
+добавляет файлы к списку, а файл, который уже в списке, второй раз не
+принимается. Отмена системного окна список не меняет.
 
 :::example {id="components/file-upload/selection" label="Один и много"}
 :::
@@ -77,6 +82,17 @@ profile: reference
 
 Состояние пункта списка задаёт приложение полем `state` (см. JavaScript), зоны
 — нативный атрибут `disabled` или класс. Наведение компонент показывает сам.
+
+### Выбран
+
+`sf-upload-progress--ready` • [справочник](#классы)
+
+Только что выбранный файл ещё не передан: в пункте имя, размер и кнопка
+удаления, полосы нет. В этом состоянии пункт остаётся, пока приложение не
+начнёт передачу и не поставит `process`.
+
+:::example {id="components/file-upload/state-ready" label="Выбранный файл"}
+:::
 
 ### Передача
 
@@ -92,9 +108,10 @@ profile: reference
 
 `sf-upload-progress--done` • [справочник](#классы)
 
-`sf-upload-progress--done` — передача завершена, вместо кнопки удаления стоит
-отметка. Значение 100 само по себе не означает успех: состояние `done`
-приложение ставит после ответа сервера.
+`sf-upload-progress--done` — передача завершена: под именем «84 КБ ·
+загружен», рядом отметка цвета успеха и кнопка удаления, полосы нет.
+Значение 100 само по себе не означает успех: состояние `done` приложение
+ставит после ответа сервера.
 
 :::example {id="components/file-upload/state-done" label="Переданный файл"}
 :::
@@ -103,9 +120,11 @@ profile: reference
 
 `sf-upload-progress--error` • [справочник](#классы)
 
-`sf-upload-progress--error` — передача не удалась: значок окрашен цветом
-ошибки, под именем кнопка повтора `sf-upload-progress-repeat`. Причину ошибки
-пишите в строку размера или в текст кнопки.
+`sf-upload-progress--error` — передача не удалась: вместо значка типа —
+знак ошибки, под именем «Не загрузился: причина», рядом кнопка удаления и
+кнопка повтора `sf-upload-progress-repeat`. Причину задаёт поле
+`errorMessage`, подпись кнопки повтора — `retryText` (по умолчанию
+«Повторить»).
 
 :::example {id="components/file-upload/state-error" label="Ошибка передачи"}
 :::
@@ -154,10 +173,12 @@ profile: reference
 | `sf-file-upload:file-error` | пункт перешёл в `error` | `item`, `index`, `items` |
 | `sf-file-upload:file-complete` | пункт перешёл в `done` | `item`, `index`, `items` |
 | `sf-file-upload:complete` | все пункты в `done` | `items` |
+| `sf-file-upload:reject` | файл не прошёл проверку и не добавлен | `files` — отклонённые `File`, `rejected` — по записи на файл (`file`, `name`, `reason`: `type`, `empty`, `size`, `min-size`, `count`, `total` или `duplicate`, `message` — текст под зоной), `accept`, `source` |
 
 Пункт списка — объект с полями `name`, `fileSize` (текст размера), `progress`
-(от 0 до 100), `state` (`process`, `done`, `error`), `errorMessage` (текст
-кнопки повтора) и `file` — выбранный `File`. Удаление убирает пункт из
+(от 0 до 100), `state` (`ready`, `process`, `done`, `error`), `errorMessage`
+(причина ошибки во второй строке пункта), `retryText` (подпись кнопки
+повтора) и `file` — выбранный `File`. Удаление убирает пункт из
 списка, повтор возвращает его в `process` с нулевым прогрессом; запрос
 отменяет или повторяет приложение.
 
@@ -192,7 +213,7 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
   const items = event.detail.files;
   for (const [index, item] of items.entries()) {
     const response = await fetch('/upload', {method: 'POST', body: item.file});
-    items[index] = {...item, progress: 100, state: response.ok ? 'done' : 'error', errorMessage: 'Повторить'};
+    items[index] = {...item, progress: 100, state: response.ok ? 'done' : 'error', errorMessage: 'сервер не ответил'};
     SF.FileUpload.setItems(upload, items);
   }
 });

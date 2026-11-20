@@ -2,18 +2,18 @@
   <div class="flex"><sf-segmented id="order-state" size="1/2" aria-label="Что ответил сервер" value="shipping"
     items='[{"value":"packed","label":"Собран"},{"value":"shipping","label":"В доставке"},{"value":"late","label":"Задерживается"},{"value":"cancelled","label":"Отменён"},{"value":"done","label":"Получен"}]'></sf-segmented></div>
   <div class="flex flex-col gap-1/4">
-    <h3 class="m-0 text-2 weight-5">Заказ № 48 215</h3>
+    <h3 class="m-0 text-2 weight-medium">Заказ № 48 215</h3>
     <p class="m-0 text-1/2 color-on-surface-variant">от 12 ноября · 5 070 ₽ · курьером</p>
   </div>
   <div id="order-notice"></div>
   <div class="query-container">
     <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
       <div class="flex flex-col gap-1 min-w-0">
-        <h4 class="m-0 text-1 weight-5">Где заказ</h4>
+        <h4 class="m-0 text-1 weight-medium">Где заказ</h4>
         <sf-steps id="order-steps" layout="column" aria-label="Статус заказа"></sf-steps>
       </div>
       <div class="flex flex-col gap-1 min-w-0">
-        <h4 class="m-0 text-1 weight-5">История</h4>
+        <h4 class="m-0 text-1 weight-medium">История</h4>
         <sf-list-timeline id="order-history" now="2026-11-14T15:00:00+03:00" collapse="3" label="История заказа"></sf-list-timeline>
       </div>
     </div>

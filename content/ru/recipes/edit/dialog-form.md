@@ -121,7 +121,7 @@ description: "Короткая форма в окне: два-три поля, �
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Окно с формой», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Окно с формой», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Окно — sf-modal с heading-действием, initial-focus="first", close-on-overlay="false". Полей не больше пяти, одной колонкой, подпись над полем.
 2. Форма — <form slot="content" novalidate>; главная кнопка подвала — sf-button native-type="submit" form="<id формы>"; Enter в однострочном поле тоже отправляет.

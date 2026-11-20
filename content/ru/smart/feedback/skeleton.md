@@ -5,7 +5,7 @@ description: "Занимает место будущего содержимог�
 
 # Скелетон
 
-:badge[sf-skeleton]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-skeleton]{variant=outline scheme=on-surface size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
 
 Скелетон занимает место содержимого, которое ещё загружается, серыми фигурами:
 строками текста, аватаром, изображением, карточкой. Страница не прыгает, когда
@@ -45,9 +45,9 @@ description: "Занимает место будущего содержимог�
 скруглены, как кнопки и поля (`--sf-radius--ui`), блок — как карточка
 (`--sf-radius--surface`). Круг, квадрат и блок без `width` и `height` — это
 квадрат своей ступени: на размере `1` он той же высоты, что кнопка и
-аватар. `type="icon"` делает ширину равной высоте — вместе с
-`kind="circle"` получается место под аватар или иконку, как в разделе
-«Пример».
+аватар; круг без `type` — место под аватар, как в разделе «Пример».
+`type="icon"` делает фигуру размером с иконку своей ступени — место под
+значок.
 
 :::example {id="smart-components/skeleton/kind" label="Формы фигуры"}
 :::
@@ -151,15 +151,16 @@ region.removeAttribute('aria-busy');
 
 | | |
 |:---|:---|
-| Тег | `<sf-skeleton>`, контракт `smart.skeleton` версии `1.3.1` |
-| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
+| Тег | `<sf-skeleton>`, контракт `smart.skeleton` версии `1.3.2` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; желательна подпись или `aria-label`. |
-| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/skeleton` |
-| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-skeleton` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/skeleton` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-skeleton` |
 
 ## См. также
 
 - [Скелетон](/ru/components/feedback/skeleton/) — фигуры загрузки на классах.
 - [Спиннер](/ru/smart/feedback/spinner/) — ожидание без известной раскладки.
+- Рецепты: [«Выбор карточками»](/ru/recipes/find/choice-cards/), [«Первый кадр страницы»](/ru/recipes/progress/first-paint/)

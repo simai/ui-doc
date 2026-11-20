@@ -6,7 +6,7 @@ profile: reference
 
 # Заполнитель
 
-:badge[sf-placeholder]{variant=outline scheme=on-surface size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-placeholder]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Заполнитель объясняет пустое состояние: данных нет, поиск ничего не нашёл или
 раздел не заполнен. Для ожидания данных берите
@@ -80,7 +80,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-placeholder` |
-| Части | `sf-placeholder-right`, `sf-placeholder-top`, `sf-placeholder-top-text`, `sf-placeholder__actions`, `sf-placeholder__content`, `sf-placeholder__description`, `sf-placeholder__header`, `sf-placeholder__title`, `sf-placeholder__visual` |
+| Части | `sf-placeholder__actions`, `sf-placeholder__content`, `sf-placeholder__description`, `sf-placeholder__header`, `sf-placeholder__title`, `sf-placeholder__visual` |
 | Модификаторы | `sf-placeholder--column`, `sf-placeholder--row` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.

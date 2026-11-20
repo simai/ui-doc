@@ -5,7 +5,7 @@ description: "Открывает небольшую панель у кнопки
 
 # Всплывающая панель
 
-:badge[sf-popover]{variant=outline scheme=on-surface size=1/2} :badge[1.6.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-popover]{variant=outline scheme=on-surface size=1/2} :badge[1.7.3]{variant=outline scheme=on-surface size=1/2}
 
 Всплывающая панель открывается рядом с кнопкой: фильтр, настройки поля, список
 того, что можно добавить. Она закрывается по `Escape` и нажатию снаружи и
@@ -37,7 +37,9 @@ description: "Открывает небольшую панель у кнопки
 принадлежат её содержимому.
 
 Поверхность получает фон, радиус, тень и собственную прокрутку, когда
-содержимое выше доступного места. Отступы внутри задаёт содержимое.
+содержимое выше доступного места. Отступы внутри задаёт содержимое; сама
+поверхность держит только поле `--sf-focus-room` (4 px), чтобы кольцо
+фокуса крайнего элемента не обрезалось, и с тем же полем прокручивается.
 
 ## Варианты
 
@@ -176,14 +178,15 @@ popover.addEventListener('sf-popover-closed', () => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-popover>`, контракт `smart.popover` версии `1.6.5` |
-| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
+| Тег | `<sf-popover>`, контракт `smart.popover` версии `1.7.3` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
-| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/popover` |
-| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-popover` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/popover` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-popover` |
 
 ## См. также
 
 - [Контекстное меню](/ru/smart/navigation/context-menu/) — меню действий над объектом.
 - [Боковая панель](/ru/smart/overlays/drawer/) — боковая панель рабочего места.
+- Рецепты: [«Список уведомлений»](/ru/recipes/notify/notifications/)

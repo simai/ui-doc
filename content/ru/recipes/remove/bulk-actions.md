@@ -100,7 +100,7 @@ description: "Как отметить несколько строк и сдел�
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Выбор строк и общие действия», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Выбор строк и общие действия», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Таблица Pro sf-view-table toolbar="false" quick-actions="edit,view" row-actions-visible="always"; bulkActions не задавать — строку выбора собирает страница.
 2. По sf-view-table-select (detail.ids): ids.length > 0 — панель над списком скрыть, показать строку «Выбрано N» · «Снять выбор» (ghost on-surface) и действия через 8: обычные — outline on-surface, «Удалить» — outline status="danger" последней.
@@ -108,7 +108,7 @@ description: "Как отметить несколько строк и сдел�
 4. Удаление — sf-modal size="question" initial-focus="safe" с sf-confirm status="danger" destructive appearance="window": question «Удалить N новостей?», consequence — что пропадёт и можно ли вернуть, accept-text «Удалить N новостей».
 5. После — SF.notify({status: 'neutral', icon: 'delete', title: 'Удалено N новостей', action: {label: 'Отменить'}}); выбор снять (clearSelection). -->
 <div id="selection-bar" class="flex flex-wrap items-cross-center gap-1" hidden>
-  <div class="flex items-cross-center gap-1/3"><span id="selected-count" class="weight-5" aria-live="polite"></span><sf-button appearance="ghost" scheme="on-surface" text="Снять выбор"></sf-button></div>
+  <div class="flex items-cross-center gap-1/3"><span id="selected-count" class="weight-medium" aria-live="polite"></span><sf-button appearance="ghost" scheme="on-surface" text="Снять выбор"></sf-button></div>
   <div class="flex flex-wrap gap-1/3">
     <sf-button appearance="outline" scheme="on-surface" text="Опубликовать"></sf-button>
     <sf-button appearance="outline" scheme="on-surface" status="danger" icon-start="delete" text="Удалить"></sf-button>

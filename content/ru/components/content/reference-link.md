@@ -6,7 +6,7 @@ profile: reference
 
 # Справочная ссылка
 
-:badge[sf-reference-link]{variant=outline scheme=on-surface size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-reference-link]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Справочная ссылка показывает переход вместе с коротким пояснением: путём,
 источником, идентификатором записи. Вся карточка — область нажатия. Для
@@ -21,8 +21,10 @@ profile: reference
 ## Разметка
 
 Минимальную разметку показывает пример выше. Части вложены так:
-`sf-reference-link` → `sf-reference-link-left` с иконкой `sf-icon` и ссылкой
-`<a>`, затем пояснение `sf-reference-link-text`.
+`sf-reference-link` → `sf-reference-link__main` с иконкой
+`sf-reference-link__icon` и ссылкой `sf-reference-link__link`, затем путь или
+номер записи `sf-reference-link__meta`. Прежние имена частей
+`sf-reference-link-left` и `sf-reference-link-text` тоже читаются.
 
 - Ссылка — настоящий `<a href>`; её область нажатия растягивается на всю
   карточку.
@@ -36,8 +38,9 @@ profile: reference
 
 `sf-reference-link--size-1/2` • [справочник](#классы)
 
-Без класса размера пояснение стоит под ссылкой, с отступом на ширину
-иконки, — для карточки в колонке. `sf-reference-link--size-1/2`, `--size-1`
+Без класса размера это карточка для колонки: путь или номер записи стоит под
+именем одной строкой ступени 1/2 приглушённым цветом и начинается там же, где
+имя; длинное имя занимает две строки и обрезается многоточием. `sf-reference-link--size-1/2`, `--size-1`
 и `--size-2` ставят ссылку и пояснение в одну строку и согласуют отступы и
 текст с полями той же ступени.
 
@@ -67,9 +70,38 @@ profile: reference
 :::example {id="components/reference-link/plain" label="Ссылка в рамке и без рамки"}
 :::
 
+### В тексте
+
+`sf-reference-link--inline` • [справочник](#классы)
+
+`sf-reference-link--inline` на корне `<span>` ставит ссылку в предложение: она
+идёт с текстом, переносится вместе с ним и берёт его размер, без рамки и
+отступов. Иконку и первое слово имени кладите вместе в
+`sf-reference-link__start` без пробела между ними — тогда в узкой строке
+иконка не остаётся одна в конце строки. Имя `sf-reference-link__label` в
+тексте подчёркнуто всегда, номер `sf-reference-link__number` — приглушённый и
+не переносится. В карточке и строке подчёркивание появляется только под
+указателем и с клавиатуры. Посещённый цвет ссылка в тексте берёт только
+внутри `data-sf-visited="on"`.
+
+:::example {id="components/reference-link/inline" label="Справочная ссылка в тексте"}
+:::
+
 ## Состояния
 
 Наведение и нажатие карточка показывает сама: фон и рамка меняют цвет.
+
+### Удалена или нет доступа
+
+`sf-reference-link--gone` • [справочник](#классы)
+
+Если запись удалена или к ней нет доступа, ссылки нет: корень получает
+`sf-reference-link--gone`, иконка — `link_off`, а после имени в
+`sf-reference-link__reason` стоит причина («удалена», «нет доступа»). Слова и
+иконка — приглушённого цвета.
+
+:::example {id="components/reference-link/gone" label="Удалённая запись и запись без доступа"}
+:::
 
 ### Недоступна
 
@@ -93,8 +125,10 @@ profile: reference
 
 - Текст ссылки описывает, куда она ведёт; путь в пояснении не заменяет
   доступное имя.
-- Ссылка в новой вкладке сообщает об этом в тексте или доступном имени и
-  получает `rel="noopener"`.
+- Ссылка в новую вкладку получает `rel="noopener"`, после слов — знак
+  `<i class="sf-reference-link__tab sf-icon" aria-hidden="true">arrow_outward</i>`
+  и скрытые для глаза слова `sf-reference-link__tab-words` «(откроется в новой
+  вкладке)» для экранного диктора. Смарт-компонент пишет их сам.
 - Недоступная ссылка — не ссылка: без `href` она не получает фокус.
 - В режиме высокой контрастности кольцо фокуса берёт системный цвет
   выделения.
@@ -140,7 +174,7 @@ profile: reference
 |:---|:---|:---|
 | `--sf-reference-link--accent` | `var(--sf-primary)` | `color` |
 | `--sf-reference-link--background-color` | `var(--sf-reference-link-background-color, transparent)` | `background-color` |
-| `--sf-reference-link--border-color` | `var(--sf-reference-link-border-color, var(--sf-outline-variant))` | `border` |
+| `--sf-reference-link--border-color` | `var(--sf-reference-link-border-color, var(--sf-outline-variant))` | `border-color` |
 | `--sf-reference-link--font-size` | не задана; задают модификаторы, например `.sf-reference-link.sf-reference-link--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-reference-link--gap` | `var(--sf-space-1)` | `gap`, `padding-inline-end` |
 | `--sf-reference-link--line-height` | не задана; задают модификаторы, например `.sf-reference-link.sf-reference-link--size-1/2`: `var(--sf-text-height-1/2)` | `line-height`, `height`, `block-size`, `width`, `inline-size`, `font-size`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `padding-inline-start` |

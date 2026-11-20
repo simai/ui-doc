@@ -106,7 +106,7 @@ description: "Столбец разделов слева и шапка стра�
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Каркас админки», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Каркас админки», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Всё приложение — data-sf-density="compact".
 2. Слева столбец 16rem с sf-menu appearance="navigation": группы {group: true, label, items}, значки только на первом уровне, два уровня, current — текущий раздел; много разделов — search.

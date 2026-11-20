@@ -96,12 +96,12 @@ description: "Страница одной записи: путь назад к �
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Карточка записи», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Карточка записи», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Корень экрана админки — data-sf-density="compact".
 2. sf-header-page: heading — название записи; sf-breadcrumbs в slot="path", последний пункт без href.
 3. В slot="actions": переход — sf-button appearance="outline" scheme="on-surface" href; остальное — sf-button-icon icon="more_horiz" с aria-label и aria-haspopup="menu", открывает sf-menu-context popup; опасный пункт — danger: true, последним, после separator.
-4. Раздел — section.sf-card: h2 class="m-0 text-1 weight-6" и sf-button appearance="ghost" scheme="on-surface" icon-start="edit" text="Изменить".
+4. Раздел — section.sf-card: h2 class="m-0 text-1 weight-medium" и sf-button appearance="ghost" scheme="on-surface" icon-start="edit" text="Изменить".
 5. Сведения — sf-list-description empty-text="Не указан"; состояние — status у строки; путь и ключ — mono и copy. Не поля readonly и не таблица с рамками.
 6. История — sf-list-timeline size="1/2" рядом со сведениями (md:grid-col-3, сведения md:col-span-2), на узком экране под ними. -->
 <div data-sf-density="compact">
@@ -115,7 +115,7 @@ description: "Страница одной записи: путь назад к �
     <div class="grid grid-col-1 md:grid-col-3 gap-3 items-cross-start">
       <section class="sf-card md:col-span-2" aria-labelledby="record-facts">
         <div class="flex items-cross-center gap-2">
-          <h2 id="record-facts" class="flex-1 m-0 text-1 weight-6">Сведения</h2>
+          <h2 id="record-facts" class="flex-1 m-0 text-1 weight-medium">Сведения</h2>
           <sf-button appearance="ghost" scheme="on-surface" icon-start="edit" text="Изменить"></sf-button>
         </div>
         <sf-list-description empty-text="Не указан">
@@ -128,7 +128,7 @@ description: "Страница одной записи: путь назад к �
         </sf-list-description>
       </section>
       <section class="sf-card" aria-labelledby="record-history">
-        <h2 id="record-history" class="m-0 text-1 weight-6">История</h2>
+        <h2 id="record-history" class="m-0 text-1 weight-medium">История</h2>
         <sf-list-timeline size="1/2" label="История сайта">
           <script type="application/json" data-sf-settings>{"items": [
             {"id": "h1", "time": "2026-11-10T04:00:00+03:00", "status": "success", "title": "Резервная копия создана"}

@@ -31,18 +31,14 @@ description: "Прижимает элементы флекс-контейнер�
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `justify-start` | `justify-content: flex-start` | — |
 | `content-main-start` | `justify-content: flex-start` | — |
-| `justify-end` | `justify-content: flex-end` | — |
 | `content-main-end` | `justify-content: flex-end` | — |
-| `justify-center` | `justify-content: center` | — |
 | `content-main-center` | `justify-content: center` | — |
-| `justify-between` | `justify-content: space-between` | — |
 | `content-main-between` | `justify-content: space-between` | — |
-| `justify-around` | `justify-content: space-around` | — |
 | `content-main-around` | `justify-content: space-around` | — |
-| `justify-evenly` | `justify-content: space-evenly` | — |
 | `content-main-evenly` | `justify-content: space-evenly` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:justify-start`.
 

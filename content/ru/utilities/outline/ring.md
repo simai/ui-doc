@@ -43,7 +43,6 @@ description: "Рисует кольцо вокруг элемента тенью
 |:---|:---|:---|
 | `ring-{значение}` | `--sf-ring-color: var(--sf-{значение})` | `transparent`, `current`, `outline` |
 | `ring-outline-variant` | `--sf-ring-color: var(--sf-outline-variant)` | — |
-| `ring-surface` | `--sf-ring-color: var(--sf-surface-area)` | — |
 | `ring-surface-{значение}` | `--sf-ring-color: var(--sf-surface-{значение})` | `page`, `area`, `veil`, `inverse` |
 | `ring-{значение}-container` | `--sf-ring-color: var(--sf-{значение}-container)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `ring-{значение}-container-strong` | `--sf-ring-color: var(--sf-{значение}-container-strong)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
@@ -52,7 +51,6 @@ description: "Рисует кольцо вокруг элемента тенью
 | `ring-{значение}` | `--sf-ring-color: var(--sf-{значение}-outline)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `ring-offset-{значение}` | `--sf-ring-offset-color: var(--sf-{значение})` | `transparent`, `current`, `outline` |
 | `ring-offset-outline-variant` | `--sf-ring-offset-color: var(--sf-outline-variant)` | — |
-| `ring-offset-surface` | `--sf-ring-offset-color: var(--sf-surface-area)` | — |
 | `ring-offset-surface-{значение}` | `--sf-ring-offset-color: var(--sf-surface-{значение})` | `page`, `area`, `veil`, `inverse` |
 | `ring-offset-{значение}-container` | `--sf-ring-offset-color: var(--sf-{значение}-container)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `ring-offset-{значение}-container-strong` | `--sf-ring-offset-color: var(--sf-{значение}-container-strong)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
@@ -70,7 +68,7 @@ description: "Рисует кольцо вокруг элемента тенью
         color-mix(
             in srgb,
             transparent,
-            var(--sf-ring-color, currentColor)
+            var(--sf-ring-color, var(--sf-focus--color, var(--sf-focus)))
             calc(var(--sf-ring--alpha, var(--sf-ring--alfa, 1)) * 100%)
         ),
         0 0 0 var(--sf-ring-offset-width, 0px)
@@ -81,29 +79,7 @@ description: "Рисует кольцо вокруг элемента тенью
         color-mix(
             in srgb,
             transparent,
-            var(--sf-ring-color, currentColor)
-            calc(var(--sf-ring--alpha, var(--sf-ring--alfa, 1)) * 100%)
-        ),
-        0 0 0 var(--sf-ring-offset-width, 0px)
-        var(--sf-ring-offset-color, transparent); box-shadow: var(--sf-ring-shadow), 0 0 transparent; box-shadow: var(--sf-ring-shadow), var(--sf-place-shadow, 0 0 transparent)` | — |
-| `ring-3` | `--sf-ring-width: var(--sf-a3); --sf-ring-shadow:
-        var(--sf-ring-inset, ) 0 0 0
-        calc(var(--sf-ring-width) + var(--sf-ring-offset-width, 0px))
-        color-mix(
-            in srgb,
-            transparent,
-            var(--sf-ring-color, currentColor)
-            calc(var(--sf-ring--alpha, var(--sf-ring--alfa, 1)) * 100%)
-        ),
-        0 0 0 var(--sf-ring-offset-width, 0px)
-        var(--sf-ring-offset-color, transparent); box-shadow: var(--sf-ring-shadow), 0 0 transparent; box-shadow: var(--sf-ring-shadow), var(--sf-place-shadow, 0 0 transparent)` | — |
-| `ring-4` | `--sf-ring-width: var(--sf-a4); --sf-ring-shadow:
-        var(--sf-ring-inset, ) 0 0 0
-        calc(var(--sf-ring-width) + var(--sf-ring-offset-width, 0px))
-        color-mix(
-            in srgb,
-            transparent,
-            var(--sf-ring-color, currentColor)
+            var(--sf-ring-color, var(--sf-focus--color, var(--sf-focus)))
             calc(var(--sf-ring--alpha, var(--sf-ring--alfa, 1)) * 100%)
         ),
         0 0 0 var(--sf-ring-offset-width, 0px)
@@ -114,13 +90,13 @@ description: "Рисует кольцо вокруг элемента тенью
         color-mix(
             in srgb,
             transparent,
-            var(--sf-ring-color, currentColor)
+            var(--sf-ring-color, var(--sf-focus--color, var(--sf-focus)))
             calc(var(--sf-ring--alpha, var(--sf-ring--alfa, 1)) * 100%)
         ),
         0 0 0 var(--sf-ring-offset-width, 0px)
         var(--sf-ring-offset-color, transparent); box-shadow: var(--sf-ring-shadow), 0 0 transparent; box-shadow: var(--sf-ring-shadow), var(--sf-place-shadow, 0 0 transparent)` | — |
 
-Прежние имена работают до 2027-01-01: `ring-error-transparent-overlay` → `ring-error-container-strong`, `ring-offset-error-transparent-overlay` → `ring-offset-error-container-strong`, `ring-offset-primary-transparent-overlay` → `ring-offset-primary-container-strong`, `ring-offset-secondary-transparent-overlay` → `ring-offset-secondary-container-strong`, `ring-offset-success-transparent-overlay` → `ring-offset-success-container-strong`, `ring-offset-surface-0` → `ring-offset-surface-page`, `ring-offset-surface-1` → `ring-offset-surface-area`, `ring-offset-surface-overlay` → `ring-offset-surface-veil`, `ring-offset-surface-transparent-overlay` → `ring-offset-surface-container-strong`, `ring-offset-tertiary-transparent-overlay` → `ring-offset-tertiary-container-strong`, `ring-offset-warning-transparent-overlay` → `ring-offset-warning-container-strong`, `ring-primary-transparent-overlay` → `ring-primary-container-strong`, `ring-secondary-transparent-overlay` → `ring-secondary-container-strong`, `ring-success-transparent-overlay` → `ring-success-container-strong`, `ring-surface-0` → `ring-surface-page`, `ring-surface-1` → `ring-surface-area`, `ring-surface-overlay` → `ring-surface-veil`, `ring-surface-transparent-overlay` → `ring-surface-container-strong`, `ring-tertiary-transparent-overlay` → `ring-tertiary-container-strong`, `ring-warning-transparent-overlay` → `ring-warning-container-strong`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `focus-visible:`, `focus:`, `hover:`. Например: `focus-visible:ring-transparent`.
 
@@ -171,6 +147,8 @@ description: "Рисует кольцо вокруг элемента тенью
 | `--sf-a4` | `0.25rem` |
 | `--sf-0` | `0` |
 | `--sf-ring-inset` | задаётся темой |
+| `--sf-focus--color` | `var(--sf-focus)` |
+| `--sf-focus` | `light-dark(var(--sf-primary-50), var(--sf-primary-90))` |
 | `--sf-ring--alpha` | задаётся темой |
 | `--sf-ring--alfa` | задаётся темой |
 | `--sf-place-shadow` | задаётся темой |

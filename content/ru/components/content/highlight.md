@@ -6,7 +6,7 @@ profile: reference
 
 # Подсветка кода
 
-:badge[sf-highlight]{variant=outline scheme=on-surface size=1/2} :badge[1.7.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-highlight]{variant=outline scheme=on-surface size=1/2} :badge[1.10.0]{variant=outline scheme=on-surface size=1/2}
 
 Подсветка кода раскрашивает синтаксис в блоках `pre code` и оформляет их
 поверхностью с панелью: название языка и кнопка копирования. Берите её для
@@ -43,9 +43,21 @@ profile: reference
 `data-chrome` на `code` или на оболочке задаёт панель над кодом: `auto` (по
 умолчанию) — название языка и кнопка копирования; `none` — только код, для
 коротких фрагментов внутри текста; `static` — без панели и без обёртки
-прокрутки, когда страница строит их сама.
+прокрутки, когда страница строит их сама. У блока `static` Framework не
+даёт ни прокрутки, ни фокуса: длинную строку с клавиатуры можно прочитать,
+только если страница сама даст блоку `tabindex="0"` и прокрутку, как в
+примере.
 
 :::example {id="components/highlight/chrome" label="Блок с панелью и без неё"}
+:::
+
+### Имя файла
+
+`data-title` на `code`, на `pre` или на оболочке ставит в панель имя файла на
+место названия языка; подсветка по-прежнему идёт по `data-lang`. У блока
+терминала (`sf-highlight--terminal`) имя файла встаёт на место его подписи, значок остаётся.
+
+:::example {id="components/highlight/title" label="Имя файла в панели"}
 :::
 
 ### Перенос длинных строк
@@ -163,3 +175,4 @@ await SF.Highlight.refresh(block, 'const total = price * count;');
 
 - [Копирование](/ru/components/actions/clipboard/)
 - [Документ](/ru/components/content/doc/)
+- Рецепты: [«Копирование»](/ru/recipes/notify/copy/)

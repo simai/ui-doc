@@ -99,43 +99,45 @@ JavaScript поля делает связи сам: выдаёт контрол�
 Пример ниже — форма регистрации: три поля, флажок и кнопка отправки одной
 ступени `1`, поэтому поля и кнопка одной высоты и с общими краями; индикатор
 флажка начинается у того же края, что поля и кнопка.
-Промежуток между частями формы — `gap-2`: это та же ступень `--sf-space-2`,
-что у токена связанных частей `--sf-content--space-related`. Ширину
+Между полями — `gap-1` (`--sf-space-1`), между полями и кнопкой — `gap-3`
+(`--sf-space-3`), как во всех формах. Ширину
 одноколоночной формы ограничивает мера строки: класс `measure` (около 65
 знаков) не даёт полям растянуться на весь широкий экран
 ([Длина строки](/ru/utilities/typography/text-max-width/)).
 
 ```html
-<form class="signup-form measure flex flex-col gap-2" action="/signup" method="post" novalidate>
-  <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
-    <span class="sf-input-label flex"><span class="sf-input-text">Имя</span><span class="sf-input-required" aria-hidden="true">*</span></span>
-    <span class="sf-input-field items-cross-center transition flex">
-      <input type="text" name="name" autocomplete="name" required>
-    </span>
-    <span class="sf-input-hint-text-wrap">Как к вам обращаться</span>
-  </label>
+<form class="signup-form measure flex flex-col gap-3" action="/signup" method="post" novalidate>
+  <div class="flex flex-col gap-1">
+    <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
+      <span class="sf-input-label flex"><span class="sf-input-text">Имя</span><span class="sf-input-required" aria-hidden="true">*</span></span>
+      <span class="sf-input-field items-cross-center transition flex">
+        <input type="text" name="name" autocomplete="name" required>
+      </span>
+      <span class="sf-input-hint-text-wrap">Как к вам обращаться</span>
+    </label>
 
-  <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
-    <span class="sf-input-label flex"><span class="sf-input-text">Электронная почта</span><span class="sf-input-required" aria-hidden="true">*</span></span>
-    <span class="sf-input-field items-cross-center transition flex">
-      <i class="sf-icon" aria-hidden="true">mail</i>
-      <input type="email" name="email" autocomplete="email" placeholder="name@example.com" required>
-    </span>
-    <span class="sf-input-hint-text-wrap">Пришлём на этот адрес подтверждение</span>
-  </label>
+    <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
+      <span class="sf-input-label flex"><span class="sf-input-text">Электронная почта</span><span class="sf-input-required" aria-hidden="true">*</span></span>
+      <span class="sf-input-field items-cross-center transition flex">
+        <i class="sf-icon" aria-hidden="true">mail</i>
+        <input type="email" name="email" autocomplete="email" placeholder="name@example.com" required>
+      </span>
+      <span class="sf-input-hint-text-wrap">Пришлём на этот адрес подтверждение</span>
+    </label>
 
-  <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
-    <span class="sf-input-label flex"><span class="sf-input-text">Пароль</span><span class="sf-input-required" aria-hidden="true">*</span></span>
-    <span class="sf-input-field items-cross-center transition flex">
-      <input type="password" name="password" autocomplete="new-password" minlength="8" required>
-    </span>
-    <span class="sf-input-hint-text-wrap">Не короче восьми символов</span>
-  </label>
+    <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
+      <span class="sf-input-label flex"><span class="sf-input-text">Пароль</span><span class="sf-input-required" aria-hidden="true">*</span></span>
+      <span class="sf-input-field items-cross-center transition flex">
+        <input type="password" name="password" autocomplete="new-password" minlength="8" required>
+      </span>
+      <span class="sf-input-hint-text-wrap">Не короче восьми символов</span>
+    </label>
 
-  <label class="sf-checkbox sf-checkbox--size-1 flex">
-    <span class="sf-checkbox-box transition flex"><input type="checkbox" name="news" value="yes"><span class="sf-icon" aria-hidden="true"></span></span>
-    <span class="sf-checkbox-container flex flex-col"><span class="sf-checkbox-top flex"><span class="sf-checkbox-label">Получать новости</span></span></span>
-  </label>
+    <label class="sf-checkbox sf-checkbox--size-1 flex">
+      <span class="sf-checkbox-box transition flex"><input type="checkbox" name="news" value="yes"><span class="sf-icon" aria-hidden="true"></span></span>
+      <span class="sf-checkbox-container flex flex-col"><span class="sf-checkbox-top flex"><span class="sf-checkbox-label">Получать новости</span></span></span>
+    </label>
+  </div>
 
   <button type="submit" class="sf-button sf-button--default sf-button--primary sf-button--size-1 w-full sm:w-fit">
     <span class="sf-button-text-container">Зарегистрироваться</span>

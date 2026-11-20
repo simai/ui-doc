@@ -6,7 +6,7 @@ profile: reference
 
 # Карусель
 
-:badge[sf-carousel]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-carousel]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
 
 `sf-carousel` — прежнее имя [слайдера контента](/ru/components/overlays-media/slider/).
 Во Framework теперь один слайдер: `sf-slider`. Карусель работает до
@@ -28,6 +28,13 @@ profile: reference
 | кнопки `sf-carousel-switch` | стрелки слайдера |
 | пагинация `sf-carousel-pagination` | точки слайдера и счётчик |
 | кнопка `sf-carousel-rotation` | автопрокрутка слайдера с паузой |
+| `data-delay` | `data-autoplay-delay` (прежнее слово читается и у слайдера) |
+| высота `--sf-carousel--block-size` | пропорция `data-ratio` (`16/9`, `4/3`, `3/2`, `1/1`, `21/9`): слайд заполняет рамку этой пропорции |
+| вид кнопок `sf-carousel-switch--media` | стрелки на плашках `sf-slider-arrows--plate` |
+| вид пагинации `sf-carousel-pagination--*` | точки на плашке `sf-slider-dots--plate` |
+
+Пока страница не перенесена, карусель работает через тот же движок, что и
+слайдер: слова, клавиши и вид стрелок и точек у неё — слайдера.
 
 ## Доступность
 
@@ -39,8 +46,7 @@ profile: reference
 
 | Что | Классы |
 |:---|:---|
-| Блок | `sf-carousel` |
-| Части | `sf-carousel-pagination`, `sf-carousel-pagination--big`, `sf-carousel-pagination--no-background`, `sf-carousel-pagination--primary`, `sf-carousel-pagination-item`, `sf-carousel-pagination-item--active`, `sf-carousel-rotation`, `sf-carousel-slide`, `sf-carousel-slider`, `sf-carousel-switch`, `sf-carousel-switch--big`, `sf-carousel-switch--left`, `sf-carousel-switch--media`, `sf-carousel-switch--next`, `sf-carousel-switch--prev`, `sf-carousel-switch--primary`, `sf-carousel-switch--right` |
+| Части | `sf-carousel-pagination`, `sf-carousel-pagination--big`, `sf-carousel-pagination--no-background`, `sf-carousel-pagination--primary`, `sf-carousel-pagination-item`, `sf-carousel-pagination-item--active`, `sf-carousel-rotation`, `sf-carousel-switch`, `sf-carousel-switch--big`, `sf-carousel-switch--media`, `sf-carousel-switch--primary` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

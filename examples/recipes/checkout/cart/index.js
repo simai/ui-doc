@@ -52,7 +52,7 @@
     const label = document.createElement('span');
     label.textContent = chosen.length ? `Выбрано: ${goods(count)}` : 'Ничего не выбрано';
     const sum = document.createElement('span');
-    sum.className = 'wrap-none';
+    sum.className = 'text-nowrap';
     sum.textContent = money(total);
     summary.append(label, sum);
   };
@@ -81,7 +81,7 @@
     quantity.setAttribute('aria-label', `Количество: ${line.name}`);
     quantity.dataset.lineCount = line.id;
     const price = document.createElement('span');
-    price.className = 'wrap-none text-end';
+    price.className = 'text-nowrap text-end';
     price.style.minWidth = '6em';
     price.dataset.linePrice = line.id;
     price.textContent = money(line.price * line.count);

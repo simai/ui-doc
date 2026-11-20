@@ -25,9 +25,8 @@ description: "Задаёт, как переход набирает и сбрас
 | `ease-exit` | `transition-timing-function: var(--sf-ease-exit)` | — |
 | `ease-move` | `transition-timing-function: var(--sf-ease-move)` | — |
 | `ease-linear` | `transition-timing-function: linear` | — |
-| `ease-in` | `transition-timing-function: cubic-bezier(0.4, 0, 1, 1)` | — |
-| `ease-out` | `transition-timing-function: cubic-bezier(0, 0, 0.2, 1)` | — |
-| `ease-in-out` | `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 

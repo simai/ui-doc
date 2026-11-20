@@ -6,14 +6,16 @@ profile: reference
 
 # Количество
 
-:badge[sf-quantity]{variant=outline scheme=on-surface size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-quantity]{variant=outline scheme=on-surface size=1/2} :badge[1.9.2]{variant=outline scheme=on-surface size=1/2}
 
 Поле количества принимает число с клавиатуры или меняет его кнопками «минус» и
 «плюс» на заданный шаг. Подходит для количества товаров, мест, участников и
 других ограниченных числовых величин; для произвольного текста берите
 [текстовое поле](/ru/components/forms/inputs/).
-Простое числовое поле без кнопок, с единицей в поле, — у
-[смарт-поля количества](/ru/smart/forms/quantity/) (`steppers="none"`). Там
+Простое числовое поле без кнопок, с единицей в поле, рисуют классы
+`sf-quantity--steppers-none` (строка `sf-quantity-row`, единица
+`sf-quantity-unit` после числа); собирает такое поле
+[смарт-поле количества](/ru/smart/forms/quantity/) (`steppers="none"`). Там
 же режим строки корзины `removable`: на нижней границе вместо «−» стоит
 корзина, а страница предлагает «Вернуть».
 
@@ -34,10 +36,12 @@ profile: reference
   `sf-quantity-required` отмечает обязательное поле. Скрипт связывает подпись с
   полем через `aria-labelledby`.
 - Две кнопки `sf-quantity-count` — первая уменьшает, вторая увеличивает. Это
-  кнопки с иконкой (`sf-icon-button`) с `type="button"` и собственным
-  `aria-label`. Их цвет и размер задаёт `sf-quantity`, поэтому класса
-  `sf-icon-button--icon` им не нужно. Отдельная кнопка-иконка вне
-  `sf-quantity` получает цвета только вместе с `sf-icon-button--icon`.
+  тихие нейтральные кнопки с иконкой без подложки: `sf-icon-button--icon
+  sf-icon-button--ghost sf-icon-button--on-surface
+  sf-icon-button--on-surface-variant`, с `type="button"` и собственным
+  `aria-label`. Подложка появляется только под указателем. Размер кнопок
+  задаёт `sf-quantity`: они на ступень ниже поля, какой бы класс размера ни
+  стоял в разметке.
 - `<input type="text">` с `inputmode="numeric"` или `"decimal"` хранит значение
   и `name`; `min`, `max` и `step` задают диапазон и шаг. Тип `text` выбран
   потому, что поле показывает число в формате языка страницы.
@@ -46,13 +50,26 @@ profile: reference
 
 ### Размер
 
-`sf-quantity--size-1/2`, `sf-quantity--size-1`, `sf-quantity--size-2` • [справочник](#классы)
+`sf-quantity--size-1/3`, `sf-quantity--size-1/2`, `sf-quantity--size-1`, `sf-quantity--size-2`, `sf-quantity--size-3` • [справочник](#классы)
 
-Три ступени — `sf-quantity--size-1/2`, `sf-quantity--size-1` и
-`sf-quantity--size-2`, как у текстового поля. Размер меняет подпись, поле и
-кнопки вместе.
+Пять ступеней, как у текстового поля: на компьютере 28, 32, 40, 48 и 56 px.
+Высота поля совпадает с текстовым полем той же ступени; размер меняет
+подпись, поле и кнопки вместе.
 
 :::example {id="components/quantity/sizes" label="Размеры поля количества"}
+:::
+
+### Вид
+
+`sf-quantity--filled` • [справочник](#классы)
+
+По умолчанию поле отделено тонкой границей. `sf-quantity--filled` отделяет
+его тональной поверхностью без рамки, с линией снизу — как
+`sf-input--filled`: для плотных форм и панелей. Под указателем заливка
+темнеет на шаг, пока в поле печатают, оно получает обычную границу, у
+ошибки и недоступного поля — свои заливки. В одной форме держите один вид.
+
+:::example {id="components/quantity/variants" label="Поле с границей и с заливкой"}
 :::
 
 ### Границы и шаг
@@ -119,9 +136,12 @@ profile: reference
 
 ### Ошибка
 
-Класс `error` на оболочке окрашивает рамку и кнопки цветом ошибки. Своего узла
-для сообщения у компонента нет: добавьте текст ошибки под полем и свяжите его с
-input через `aria-describedby`, сам input получает `aria-invalid="true"`.
+Класс `error` на оболочке окрашивает рамку цветом ошибки; кнопки «минус» и
+«плюс» остаются своего цвета. Текст ошибки кладите в строку под полем
+`sf-quantity-hint-text-wrap` с `data-field-message="error"`: она красится
+цветом ошибки, а скрипт сам отмечает input `aria-invalid="true"` и связывает
+с ним сообщение (`aria-describedby` и `aria-errormessage`). Без ошибки та же
+строка — постоянное пояснение под полем.
 
 :::example {id="components/quantity/state-error" label="Поле с ошибкой"}
 :::
@@ -132,8 +152,8 @@ input через `aria-describedby`, сам input получает `aria-invalid
 
 При переходе клавишей Tab рамка поля или кнопка получает кольцо фокуса по
 `:focus-visible`. При нажатии мышью скрипт ставит оболочке
-`sf-quantity--pointer-focus`, и кольцо не рисуется. В примере фокус показан
-классом `focus-visible` на input.
+`sf-quantity--pointer-focus`, и кольцо не рисуется. Перейдите в поле примера
+клавишей Tab.
 
 :::example {id="components/quantity/state-focus" label="Поле в фокусе"}
 :::
@@ -217,7 +237,7 @@ whenLoader(() => SF.Loader.ready('Quantity', (Quantity) => {
 | `--sf-quantity-color` | Цвет числа в поле; у недоступного поля свой. | `var(--sf-on-surface)` |
 | `--sf-quantity-padding-inline` | Отступ внутри поля перед «−» и после «+»: по умолчанию равен зазору кнопок сверху и снизу, поэтому они стоят на одном расстоянии от всех краёв. | `calc((var(--sf-ui-1--control-height) - var(--sf-ui-1\/2--control-height)) / 2 - var(--sf-px))`; зависит от размера |
 | `--sf-quantity-padding-block` | Внутренний отступ поля над и под содержимым. | `calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px))`; зависит от размера |
-| `--sf-quantity-gap` | Расстояние между кнопками шага и числом. Значение по умолчанию у компонента на классах; у `sf-input-quantity` — 0, кнопки прилегают к числу (C53). | `var(--sf-space-2)` |
+| `--sf-quantity-gap` | Промежуток между кнопками и числом. Значение классового компонента; у sf-input-quantity — 0, кнопки стоят вплотную к числу. | `var(--sf-space-2)` |
 | `--sf-quantity-stepper-radius` | Скругление углов кнопок «−» и «+». | `var(--sf-radius-1\/2)` |
 | `--sf-quantity-invalid-border-color` | Рамка поля при ошибке. | `var(--sf-error)` |
 
@@ -247,8 +267,8 @@ whenLoader(() => SF.Loader.ready('Quantity', (Quantity) => {
 | `--sf-quantity-input--font-size` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-wrap`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-quantity-input--font-weight` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-wrap`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-quantity-input--line-height` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-wrap`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-quantity-input--padding-inline-end` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 input`: `var(--sf-ui-1--text-space-x)` | `padding-inline-end` |
-| `--sf-quantity-input--padding-inline-start` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 input`: `var(--sf-ui-1--text-space-x)` | `padding-inline-start` |
+| `--sf-quantity-input--padding-inline-end` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 input`: `var(--sf-ui-1--text-space-x)` | `padding-inline-end`, `width`, `inline-size` |
+| `--sf-quantity-input--padding-inline-start` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 input`: `var(--sf-ui-1--text-space-x)` | `padding-inline-start`, `width`, `inline-size` |
 | `--sf-quantity-label--background-color` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-label`: `transparent` | `background-color` |
 | `--sf-quantity-label--gap` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-label`: `var(--sf-space-1/4)` | `gap` |
 | `--sf-quantity-placeholder--color` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap input::-webkit-input-placeholder`: `var(--sf-on-surface-variant)` | `color` |
@@ -267,7 +287,7 @@ whenLoader(() => SF.Loader.ready('Quantity', (Quantity) => {
 | `--sf-quantity-text--line-height` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-text`: `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-quantity-wrap--background-color` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap`: `var(--sf-quantity-background-color, var(--sf-transparent))` | `background-color` |
 | `--sf-quantity-wrap--block-size` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-wrap`: `var(--sf-ui-1--control-height)` | `height`, `block-size` |
-| `--sf-quantity-wrap--border` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap`: `var(--sf-quantity-border-width, var(--sf-px)) solid` | `border`, `border-color`, `border-bottom-color`, `border-block-end-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `--sf-quantity-wrap--line-color` |
+| `--sf-quantity-wrap--border` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap`: `var(--sf-quantity-border-width, var(--sf-px)) solid` | `border`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-color`, `border-bottom-color`, `border-block-end-color`, `--sf-quantity-wrap--line-color` |
 | `--sf-quantity-wrap--border-color` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap`: `var(--sf-quantity-border-color, var(--sf-outline))` | `border-color`, `border-bottom-color`, `border-block-end-color`, `--sf-quantity-wrap--line-color` |
 | `--sf-quantity-wrap--border-end-end-radius` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap`: `var(--sf-quantity-radius, var(--sf-radius--ui))` | `border-end-end-radius` |
 | `--sf-quantity-wrap--border-end-start-radius` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap`: `var(--sf-quantity-radius, var(--sf-radius--ui))` | `border-end-start-radius` |

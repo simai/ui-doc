@@ -379,6 +379,15 @@ async function browserAudit() {
         let unstyledLeft = 0;
         try {
           for (let attempt = 0; attempt < 4; attempt += 1) {
+          // A sandboxed frame out of view is not rendered, so a pending CSS
+          // transition never runs and a styled control still reads the
+          // browser's own colours: finish the transitions before measuring
+          // (DEV docs batch B, 2026-11-15: skipped 202 -> 14 on 23 pages).
+          await frame.evaluate(() => {
+            for (const animation of document.getAnimations()) {
+              if (globalThis.CSSTransition && animation instanceof CSSTransition) animation.finish();
+            }
+          }).catch(() => {});
           const result = await frame.evaluate(({NORMAL, LARGE, inFrame, theme, base, debug}) => {
             const parse = (text) => {
               const m = String(text).match(/rgba?\(([^)]+)\)/);

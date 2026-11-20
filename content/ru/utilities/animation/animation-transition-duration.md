@@ -60,7 +60,7 @@ description: "Задаёт, сколько длится плавный пере�
 классы `ease-*` и `delay-*`:
 
 ```html
-<a class="duration-fast ease-out hover:color-primary" href="#">Ссылка</a>
+<a class="duration-fast ease-enter hover:color-primary" href="#">Ссылка</a>
 ```
 
 ### Длительность у классов transition-*

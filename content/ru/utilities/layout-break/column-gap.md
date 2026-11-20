@@ -24,18 +24,8 @@ description: "Задаёт расстояние между колонками п
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `col-gap-0` | `column-gap: var(--sf-space-0)` | — |
-| `col-gap-1/4` | `column-gap: var(--sf-space-1/4)` | — |
-| `col-gap-1/3` | `column-gap: var(--sf-space-1/3)` | — |
-| `col-gap-1/2` | `column-gap: var(--sf-space-1/2)` | — |
-| `col-gap-1` | `column-gap: var(--sf-space-1)` | — |
-| `col-gap-2` | `column-gap: var(--sf-space-2)` | — |
-| `col-gap-3` | `column-gap: var(--sf-space-3)` | — |
-| `col-gap-4` | `column-gap: var(--sf-space-4)` | — |
-| `col-gap-5` | `column-gap: var(--sf-space-5)` | — |
-| `col-gap-6` | `column-gap: var(--sf-space-6)` | — |
-| `col-gap-7` | `column-gap: var(--sf-space-7)` | — |
-| `col-gap-8` | `column-gap: var(--sf-space-8)` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:col-gap-0`.
 

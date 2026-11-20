@@ -6,7 +6,7 @@ profile: reference
 
 # Прогресс
 
-:badge[sf-progress-bar]{variant=outline scheme=on-surface size=1/2} :badge[1.4.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-bar]{variant=outline scheme=on-surface size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
 
 Индикатор прогресса показывает ход операции, когда долю выполненного можно
 выразить от 0 до 100 процентов. Для операции без известного процента берите
@@ -33,8 +33,9 @@ profile: reference
 - Дорожка у всех полос одна — нейтральная заливка места, концы скруглены на
   любой толщине.
 - `data-meter="true"` превращает полосу в шкалу количества (`role="meter"`):
-  занятое место в хранилище, израсходованная квота. У шкалы всегда есть
-  значение.
+  занятое место в хранилище, израсходованная квота. У шкалы количества объём
+  всегда известен: с `data-meter="true"` атрибут `data-indeterminate` не
+  действует.
 - Имя полосы задаёт `data-label`; `data-value-text` заменяет число в
   объявлении экранного диктора, например «3 файла из 5».
 
@@ -93,9 +94,10 @@ profile: reference
 
 `data-paused="true"` показывает, что работа остановлена: скрипт ставит
 `sf-progress-bar--paused`, и бегущий отрезок неопределённой полосы
-замирает. Цвет предупреждения задайте сами — `data-tone="warning"`, а
-`data-value-text` пусть скажет экранному диктору «35 %, на паузе». Рядом
-напишите словами, почему работа стоит и как её продолжить.
+замирает. Полоса на паузе рисуется цветом предупреждения, если её статус
+спокойнее (`error` остаётся ошибкой), а экранный диктор слышит «35 %, на
+паузе» — `data-value-text` для этого не нужен. Рядом напишите словами,
+почему работа стоит и как её продолжить.
 
 :::example {id="components/progress-bar/paused" label="Работа на паузе"}
 :::
@@ -117,7 +119,8 @@ profile: reference
 Скрипт компонента находит блоки `.sf-progress-bar` при загрузке страницы и
 рисует их по атрибутам. Чтобы изменить уже нарисованную полосу, вызовите
 `SF.ProgressBar.setState(element, state)`: поля `value`, `status`,
-`textPosition`, `size`, `label` и `valueText` меняют то же, что и атрибуты.
+`textPosition`, `size`, `label`, `valueText`, `indeterminate`, `paused` и
+`meter` меняют то же, что и атрибуты.
 `SF.ProgressBar.getState(element)` возвращает текущие значения этих полей.
 Обе функции принимают блок или любой элемент внутри него.
 
@@ -146,7 +149,7 @@ whenLoader(() => SF.Loader.ready('ProgressBar', (ProgressBar) => {
 ```
 
 Параметры: `value`, `size` (`1/3`, `1/2`, `1`, `2`, `3`), `textPosition`,
-`status`, `label`, `valueText`. Событий компонент не отправляет.
+`status`, `label`, `valueText`, `indeterminate`, `paused`, `meter`. Событий компонент не отправляет.
 
 ## Классы
 
@@ -167,13 +170,13 @@ whenLoader(() => SF.Loader.ready('ProgressBar', (ProgressBar) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-progress-bar-fill-color` | Заполненная часть; статус задаёт свой цвет, если эта переменная не задана. | `var(--sf-on-surface-variant)`; зависит от статуса |
+| `--sf-progress-bar-fill-color` | Заполненная часть: без статуса — основной цвет темы, у статуса свой цвет, если эта переменная не задана. | `var(--sf-primary)`; зависит от статуса |
 | `--sf-progress-bar-track-color` | Дорожка под заполненной частью. | `var(--sf-surface-container)` |
 | `--sf-progress-bar-height` | Толщина дорожки. | `var(--sf-a8)`; зависит от размера |
 | `--sf-progress-bar-radius` | Углы дорожки и заполненной части. | `var(--sf-radius-circle)` |
 | `--sf-progress-bar-color` | Видимый процент. | `var(--sf-on-surface-variant)` |
 | `--sf-progress-bar-gap` | Расстояние между дорожкой и процентом. | `var(--sf-space-1/3)`; зависит от размера |
-| `--sf-progress-bar-track-size` | Собственная ширина дорожки в виде `inline` (решение владельца C203): 64, если переменная не задана; число стоит рядом с дорожкой, а не в ней. | `var(--sf-d6)`; зависит от inline |
+| `--sf-progress-bar-track-size` | Собственная ширина дорожки в строчном виде: 64, если не задана; число стоит рядом с дорожкой, а не на ней. | `var(--sf-d6)`; зависит от inline |
 
 ```css
 .sf-progress-bar {

@@ -6,7 +6,7 @@ profile: reference
 
 # Карточка
 
-:badge[sf-card]{variant=outline scheme=on-surface size=1/2} :badge[1.8.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-card]{variant=outline scheme=on-surface size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
 
 Карточка собирает несколько блоков содержимого — заголовок, абзац, список,
 действие — в одну отдельную область с тонкой границей и скруглёнными углами.
@@ -110,3 +110,7 @@ profile: reference
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-card--radius` | `var(--sf-card-radius, var(--sf-radius--surface))` | `border-radius`, `border-start-start-radius`, `border-start-end-radius` |
+
+## См. также
+
+- Рецепты: [«Карточка записи»](/ru/recipes/edit/record-card/), [«Обзор с плитками»](/ru/recipes/notify/dashboard/), [«Форма настроек»](/ru/recipes/edit/settings-form/)

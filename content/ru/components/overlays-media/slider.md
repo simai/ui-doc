@@ -6,12 +6,19 @@ profile: reference
 
 # Слайдер контента
 
-:badge[sf-slider]{variant=outline scheme=on-surface size=1/2} :badge[1.3.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-slider]{variant=outline scheme=on-surface size=1/2} :badge[1.4.2]{variant=outline scheme=on-surface size=1/2}
 
 Слайдер контента показывает изображения, карточки или другие равноправные
 слайды по одному и листает их стрелками и точками.
 Подходит, когда все слайды не нужно видеть сразу; обычный список или сетку
 слайдером не заменяют.
+
+Что когда брать: слайдер на классах — для статической разметки и шаблонов
+сервера; [смарт-слайдер](/ru/smart/content/slider/) `<sf-slider>` рисует ту же
+разметку сам и добавляет галерею с миниатюрами; карусель `sf-carousel` —
+[прежнее имя](/ru/components/overlays-media/carousel/) этого слайдера.
+[Движок перелистывания](/ru/components/tools/swiper/) напрямую берут только
+для своей ленты, которой не подходят ни стрелки, ни точки слайдера.
 
 ## Пример
 
@@ -32,8 +39,12 @@ profile: reference
   `sf-slider-button-prev` и `sf-slider-button-next` и своими `aria-label`.
 - Точки — пустой `sf-slider-dots ... sf-slider-pagination`: кнопки точек
   `sf-slider-dots-dot` по числу слайдов добавляет скрипт.
-- Стрелки и точки необязательны, но без них слайды листаются только из кода
-  или клавишами (см. JavaScript): перетаскивания жестом движок не знает.
+- Мышь, палец и перо листают слайды протяжкой: если отпустить дальше 15 %
+  слайда или смахнуть быстро, показывается соседний слайд, иначе лента
+  возвращается. Вертикальное движение прокручивает страницу, протяжка не
+  заканчивается щелчком по ссылке под ней, а поля внутри слайда сохраняют
+  свои клавиши. `data-swiper-allow-touch-move="false"` выключает протяжку,
+  `data-swiper-simulate-touch="false"` — только мышью.
 - Слайды, которых не видно, скрипт делает недоступными (`inert`): ссылки и
   кнопки внутри них не получают фокус.
 - Миниатюры `sf-slider-thumbnail` в ленте `sf-slider-thumbnails` — кнопки:
@@ -64,12 +75,14 @@ profile: reference
 
 ### Стрелки
 
-`sf-slider-arrows`, `sf-slider-arrows--plate` • [справочник](#классы)
+`sf-slider-arrows`, `sf-slider-arrows--plate`, `sf-slider-arrows--light`, `sf-slider-arrows--dark` • [справочник](#классы)
 
 `sf-slider-arrows` без модификатора — тихие стрелки без подложки, для
 карточек на фоне страницы. `sf-slider-arrows--plate` кладёт каждую стрелку на
 плашку всплывающего слоя с тенью, чтобы она читалась поверх любого
-изображения.
+изображения. `sf-slider-arrows--light` — светлые круги с тёмными стрелками в
+обеих темах: под стрелкой лежит светлая поверхность, наведение и нажатие
+ложатся поверх неё. `sf-slider-arrows--dark` — тёмные круги.
 
 :::example {id="components/slider/arrows" label="Стрелки"}
 :::
@@ -78,7 +91,8 @@ profile: reference
 
 `sf-slider-dots--plate`, `sf-slider-dots--bare` • [справочник](#классы)
 
-Точки — 8 px, текущая вытянута в полоску 24 × 8 основного цвета.
+Точки — 8 px при любом размере, текущая вытянута в полоску 24 × 8 основного
+цвета.
 `sf-slider-dots--plate` кладёт их на плашку поверх картинки,
 `sf-slider-dots--bare` ставит в начало строки под карточками. Точки — одна
 остановка клавиши Tab: дальше по слайдам ведут стрелки, Home и End. От восьми
@@ -94,6 +108,17 @@ profile: reference
 важны.
 
 :::example {id="components/slider/loop" label="Слайдер с краями и по кругу"}
+:::
+
+### Автопрокрутка, пропорция и счётчик
+
+Слайдер с `data-autoplay` листает сам только с кнопкой паузы
+`sf-slider-rotation` в `sf-slider-rotation-place`: над картинкой она стоит в
+верхнем конечном углу, на плашке. `data-ratio="16/9"` держит ленту в этой
+пропорции: слайд заполняет рамку. От восьми слайдов вместо точек стоит
+счётчик «2 / 12».
+
+:::example {id="components/slider/autoplay" label="Восемь слайдов с паузой и пропорцией 16/9"}
 :::
 
 ## Состояния
@@ -123,8 +148,12 @@ profile: reference
 - Стрелкам нужны понятные `aria-label`: «Предыдущий слайд», «Следующий слайд».
   Точки получают имена «Перейти к слайду 1» и так далее на языке страницы,
   текущая точка — `aria-current="true"`.
-- Каждый слайд получает `role="group"` и имя «1 / 3»; скрытые слайды —
-  `aria-hidden="true"`.
+- Слайдер — область (`role="region"`) с описанием «карусель» и именем:
+  `aria-label` или `aria-labelledby` страницы, иначе `data-label`, иначе
+  «Слайды».
+- Каждый слайд — группа с описанием «слайд» и именем по месту: «2 из 5».
+  Другие слова задают `data-slide-label` (`{n}`, `{count}`) и
+  `data-slide-roledescription`.
 - Порядок слайдов в разметке — порядок чтения. Важную информацию не прячьте
   только внутри слайдера.
 - Видимые слайды остаются в порядке Tab, скрытые выходят из него.
@@ -132,7 +161,8 @@ profile: reference
   выключается.
 - Автопрокрутку (`data-autoplay="true"`) включайте только вместе с видимой
   кнопкой паузы: скрипт останавливает её при фокусе внутри слайдера и на
-  скрытой вкладке.
+  скрытой вкладке. Кнопка меняет значок и имя: «Остановить прокрутку» и
+  «Запустить прокрутку».
 
 ## JavaScript
 
@@ -228,7 +258,7 @@ swiper?.on('slideChange', () => console.log(swiper.realIndex));
 | `--sf-slider-dots-dot--border-end-start-radius` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `var(--sf-radius-circle)` | `border-end-start-radius` |
 | `--sf-slider-dots-dot--border-start-end-radius` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `var(--sf-radius-circle)` | `border-start-end-radius` |
 | `--sf-slider-dots-dot--border-start-start-radius` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `var(--sf-radius-circle)` | `border-start-start-radius` |
-| `--sf-slider-dots-dot--color` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-on-surface)` | `color`, `--sf-slider-dots-dot--background-color` |
+| `--sf-slider-dots-dot--color` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-on-surface)` | `--sf-slider-dots-dot--background-color`, `color` |
 | `--sf-slider-dots-dot--height` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-a8)` | `padding-top`, `padding-bottom`, `height` |
 | `--sf-slider-dots-dot--target-size` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-ui-1/3--control-height)` | `padding-inline-start`, `padding-top`, `padding-inline-end`, `padding-bottom`, `height`, `min-height`, `min-block-size` |
 | `--sf-slider-dots-dot--width` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-a8)` | `padding-inline-start`, `padding-inline-end`, `width` |

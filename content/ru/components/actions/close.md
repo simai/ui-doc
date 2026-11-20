@@ -6,7 +6,7 @@ profile: reference
 
 # Кнопка закрытия
 
-:badge[sf-close]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button-close]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка закрытия закрывает окно, панель, уведомление или убирает тег. Здесь —
 её классы для своей разметки; обычно берут смарт-компонент
@@ -54,9 +54,18 @@ profile: reference
 соседних кнопок с иконкой; `sf-button-close--radius-rounded` делает пятно
 круглым. `sf-button-close--plain` — без пятна: при наведении темнеет только
 крестик, фокус показывает кольцо; так закрывают тег, очищают поле, убирают
-строку. `sf-button-close--media` — тёмный полупрозрачный круг с белым
+строку (очистку поля рисует [кнопка-значок без фона](/ru/components/actions/icon-buttons/#без-фона)).
+`sf-button-close--media` — тёмный полупрозрачный круг с белым
 крестиком поверх фото и видео, одинаковый в обеих темах. Цвет крестика
 задаёт `sf-button-close--on-surface` или `sf-button-close--on-surface-variant`.
+На цветной плашке поставьте `sf-button-close--backdrop-color`: крестик берёт
+цвет текста плашки, пятно при наведении — из того же цвета, а недоступный
+крестик гаснет до половины этого цвета.
+
+Своё значение цвета задаёт публичная переменная `--sf-close-color`. По
+умолчанию у знака без кнопки она `--sf-on-surface-variant`; в кнопке цвет
+крестика задаёт её вид (`--on-surface`, `--on-surface-variant` или цвет
+плашки), а переменная, если задана, важнее вида.
 
 :::example {id="components/close/appearance" label="Виды кнопки закрытия"}
 :::
@@ -104,11 +113,20 @@ profile: reference
 
 ## Классы
 
+**`sf-close`**
+
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-close` |
 | Части | `sf-close-icon` |
 | Размеры | `sf-close--size-1`, `sf-close--size-1/2`, `sf-close--size-1/3`, `sf-close--size-1/4`, `sf-close--size-2`, `sf-close--size-3`, `sf-close--size-4`, `sf-close--size-5`, `sf-close--size-6`, `sf-close--size-7` |
+
+**`sf-button-close`**
+
+| Что | Классы |
+|:---|:---|
+| Блок | `sf-button-close` |
+| Модификаторы | `sf-button-close--backdrop-color`, `sf-button-close--ghost`, `sf-button-close--media`, `sf-button-close--on-surface-variant`, `sf-button-close--plain`, `sf-button-close--radius-rounded` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -134,7 +152,7 @@ profile: reference
 
 ### Устройство
 
-Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-close`); переменную без него задают только модификаторы.
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-close`, `.sf-button-close`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
@@ -152,6 +170,8 @@ profile: reference
 | `--sf-close-icon--mask-repeat` | не задана; задают модификаторы, например `.sf-close .sf-close-icon`: `no-repeat` | `mask-repeat` |
 | `--sf-close-icon--mask-size` | не задана; задают модификаторы, например `.sf-close .sf-close-icon`: `contain` | `mask-size` |
 | `--sf-close-icon--width` | не задана; задают модификаторы, например `.sf-close.sf-close--size-1 .sf-close-icon`: `var(--sf-text-size-1)` | `width` |
+| `--sf-button-close--base` | не задана; задают модификаторы, например `.sf-icon-button.sf-button-close.sf-button-close--plain`: `var(--sf-on-surface)` | `--sf-button-close--ink` |
+| `--sf-button-close--ink` | не задана; задают модификаторы, например `.sf-icon-button.sf-button-close`: `var(--sf-on-surface)` | `--sf-close-icon--background-color` |
 
 ## См. также
 

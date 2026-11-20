@@ -13,7 +13,7 @@ const initialize = async () => {
   await Promise.all(['sf-menu-context', 'sf-button-icon', 'sf-pagination'].map((tag) => customElements.whenDefined(tag)));
   // Arabic is not shipped with the components: the page registers its words.
   SF.language.registerAll('ar', {
-    'sf-pagination': {pagesLabel: 'الصفحات:', totalLabel: 'المجموع:', previousLabel: 'الصفحة السابقة', nextLabel: 'الصفحة التالية', lastLabel: 'الأخيرة'},
+    'sf-pagination': {'pages-label': 'الصفحات:', 'total-label': 'المجموع:', 'previous-label': 'الصفحة السابقة', 'next-label': 'الصفحة التالية', 'last-label': 'الأخيرة'},
   });
   const anchor = root.querySelector('[data-language-anchor]');
   const menu = root.querySelector('sf-menu-context');

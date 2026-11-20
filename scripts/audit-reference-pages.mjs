@@ -114,7 +114,11 @@ for (const [page, entry] of Object.entries(settings.pages)) {
     add('section_order', {headings: known});
   }
   // A component with no stylesheet of its own (`css: false`) has no classes.
-  const required = entry.css === false ? standard.required.filter((heading) => heading !== 'Классы') : standard.required;
+  // A utility page whose classes the pair retires (C187 (1)) is a short note
+  // on their going: it teaches nothing to write, so it has no sections.
+  const retiringNote = entry.kind === 'utility' && /^description:\s*"Уходящие классы:/mu.test(front);
+  const required = retiringNote ? []
+    : entry.css === false ? standard.required.filter((heading) => heading !== 'Классы') : standard.required;
   for (const heading of required) {
     if (!headings.includes(heading)) add('section_missing', {heading});
   }

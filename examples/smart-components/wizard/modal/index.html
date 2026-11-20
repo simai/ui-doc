@@ -1,0 +1,15 @@
+<sf-button id="wizard-csv-open" text="Импорт CSV" appearance="outline" scheme="on-surface"></sf-button>
+<sf-wizard place="modal" for="wizard-csv-open" heading="Импорт контактов" later>
+  <sf-wizard-step name="source" label="Источник" type="form"
+    description="Откуда взять контакты.">
+    <form>
+      <sf-input name="url" label="Адрес файла" input-type="url" placeholder="https://example.ru/contacts.csv" required></sf-input>
+    </form>
+  </sf-wizard-step>
+  <sf-wizard-step name="fields" label="Поля" type="info">
+    <p class="m-0">Колонки файла совпадут с полями: имя, почта, телефон.</p>
+  </sf-wizard-step>
+  <sf-wizard-step name="done" label="Готово" type="result">
+    <p class="m-0">Импорт поставлен в очередь.</p>
+  </sf-wizard-step>
+</sf-wizard>

@@ -396,7 +396,7 @@
     },
     {
       "from": "ru/components/reference/tab",
-      "to": "ru/components/navigation/tab"
+      "to": "ru/components/navigation/tabs"
     },
     {
       "from": "ru/components/reference/tabs",
@@ -472,7 +472,7 @@
     },
     {
       "from": "ru/components/tab",
-      "to": "ru/components/navigation/tab"
+      "to": "ru/components/navigation/tabs"
     },
     {
       "from": "ru/components/tabs",
@@ -916,7 +916,7 @@
     },
     {
       "from": "ru/framework-components/reference/tab",
-      "to": "ru/components/navigation/tab"
+      "to": "ru/components/navigation/tabs"
     },
     {
       "from": "ru/framework-components/reference/tabs",
@@ -992,7 +992,7 @@
     },
     {
       "from": "ru/framework-components/tab",
-      "to": "ru/components/navigation/tab"
+      "to": "ru/components/navigation/tabs"
     },
     {
       "from": "ru/framework-components/tabs",
@@ -1188,7 +1188,7 @@
     },
     {
       "from": "ru/guide/architecture/complex-smart-components",
-      "to": "ru/guide/introduction/levels"
+      "to": "ru/guide/smart-components/assemblies"
     },
     {
       "from": "ru/guide/composition",
@@ -1904,11 +1904,11 @@
     },
     {
       "from": "ru/reference/standards/composite-component",
-      "to": "ru/guide/standards/map"
+      "to": "ru/guide/standards/map#составной-компонент-simai-composite-component"
     },
     {
       "from": "ru/reference/standards/dynamic-composite-component",
-      "to": "ru/guide/standards/map"
+      "to": "ru/guide/standards/map#динамический-составной-компонент-simai-dynamic-composite-component"
     },
     {
       "from": "ru/smart-components/actions/fab",
@@ -2180,23 +2180,23 @@
     },
     {
       "from": "ru/standards/composite-component",
-      "to": "ru/guide/standards/map"
+      "to": "ru/guide/standards/map#составной-компонент-simai-composite-component"
     },
     {
       "from": "ru/standards/composite-host-port",
-      "to": "ru/guide/standards/map"
+      "to": "ru/guide/standards/map#порт-хоста-simai-composite-host-port"
     },
     {
       "from": "ru/standards/composition-recipe",
-      "to": "ru/guide/standards/map"
+      "to": "ru/guide/standards/map#recipe-simai-composition-recipe"
     },
     {
       "from": "ru/standards/dynamic-composite-component",
-      "to": "ru/guide/standards/map"
+      "to": "ru/guide/standards/map#динамический-составной-компонент-simai-dynamic-composite-component"
     },
     {
       "from": "ru/standards/smart-component-manifest",
-      "to": "ru/guide/standards/map"
+      "to": "ru/guide/standards/map#манифест-смарт-компонента-simai-smart-component-manifest"
     },
     {
       "from": "ru/standards/standard-contract",
@@ -2468,11 +2468,11 @@
     },
     {
       "from": "ru/guide/architecture/components",
-      "to": "ru/guide/introduction/levels"
+      "to": "ru/guide/components"
     },
     {
       "from": "ru/guide/architecture/composite-smart-components",
-      "to": "ru/guide/introduction/levels"
+      "to": "ru/guide/smart-components/assemblies"
     },
     {
       "from": "ru/guide/architecture/core",
@@ -2484,7 +2484,7 @@
     },
     {
       "from": "ru/guide/architecture/layouts",
-      "to": "ru/guide/introduction/levels"
+      "to": "ru/guide/layouts"
     },
     {
       "from": "ru/guide/architecture/overview",
@@ -2492,7 +2492,7 @@
     },
     {
       "from": "ru/guide/architecture/smart-components",
-      "to": "ru/guide/introduction/levels"
+      "to": "ru/guide/smart-components"
     },
     {
       "from": "ru/guide/architecture/standards",
@@ -2500,23 +2500,23 @@
     },
     {
       "from": "ru/guide/architecture/standards/composite-component",
-      "to": "ru/guide/standards/map"
+      "to": "ru/guide/standards/map#составной-компонент-simai-composite-component"
     },
     {
       "from": "ru/guide/architecture/standards/composite-host-port",
-      "to": "ru/guide/standards/map"
+      "to": "ru/guide/standards/map#порт-хоста-simai-composite-host-port"
     },
     {
       "from": "ru/guide/architecture/standards/composition-recipe",
-      "to": "ru/guide/standards/map"
+      "to": "ru/guide/standards/map#recipe-simai-composition-recipe"
     },
     {
       "from": "ru/guide/architecture/standards/dynamic-composite-component",
-      "to": "ru/guide/standards/map"
+      "to": "ru/guide/standards/map#динамический-составной-компонент-simai-dynamic-composite-component"
     },
     {
       "from": "ru/guide/architecture/standards/smart-component-manifest",
-      "to": "ru/guide/standards/map"
+      "to": "ru/guide/standards/map#манифест-смарт-компонента-simai-smart-component-manifest"
     },
     {
       "from": "ru/guide/architecture/standards/standard-contract",
@@ -2524,7 +2524,7 @@
     },
     {
       "from": "ru/guide/architecture/utilities",
-      "to": "ru/guide/introduction/levels"
+      "to": "ru/guide/utilities"
     },
     {
       "from": "ru/guide/components/examples",
@@ -2556,7 +2556,7 @@
     },
     {
       "from": "ru/guide/fundamentals",
-      "to": "ru/guide/colour"
+      "to": "ru/guide"
     },
     {
       "from": "ru/guide/fundamentals/adaptive-sizing",
@@ -2720,7 +2720,7 @@
     },
     {
       "from": "ru/guide/fundamentals/languages",
-      "to": "ru/guide/size-and-type/languages"
+      "to": "ru/guide/size-and-type/language"
     },
     {
       "from": "ru/guide/fundamentals/layout-classes",
@@ -4953,6 +4953,18 @@
     {
       "from": "en/utilities/typography/word-break",
       "to": "ru/utilities/typography/word-break"
+    },
+    {
+      "from": "ru/guide/size-and-type/languages",
+      "to": "ru/guide/size-and-type/language"
+    },
+    {
+      "from": "ru/components/navigation/tab",
+      "to": "ru/components/navigation/tabs"
+    },
+    {
+      "from": "ru/guide/practical",
+      "to": "ru/guide/standards/ai"
     }
   ]
 }

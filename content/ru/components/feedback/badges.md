@@ -6,7 +6,7 @@ profile: reference
 
 # Бейджи
 
-:badge[sf-badge]{variant=outline scheme=on-surface size=1/2} :badge[1.10.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-badge]{variant=outline scheme=on-surface size=1/2} :badge[1.11.1]{variant=outline scheme=on-surface size=1/2}
 
 Бейдж показывает короткий статус, категорию или счётчик рядом с объектом. Он
 дополняет основное содержимое и не заменяет кнопку, фильтр или
@@ -30,6 +30,18 @@ profile: reference
 - Текст — в `sf-badge-text`: он не переносится и обрезается многоточием, если
   бейджу не хватает места.
 - Иконка необязательна и ставится до или после текста.
+
+Ещё классы, которые меняют бейдж:
+
+- `sf-badge--line-text` — бейдж по строке соседнего текста: высота — строка
+  этого текста, число — его кегль, без своего размера. Одна цифра — круг
+  высотой в строку.
+- `sf-badge--disabled` — бейдж внутри элемента, которым сейчас нельзя
+  пользоваться (карточка выбора, строка меню): он берёт цвета недоступного
+  состояния при любом виде.
+- `sf-badge--dot` — бейдж на якоре без числа: точка ступени якоря.
+- `sf-badge-spinner` — место спиннера вместо иконки, пока работа идёт;
+  размер бейджа при этом не меняется.
 
 ## Варианты
 
@@ -68,7 +80,8 @@ profile: reference
 — высотой 24, 28 и 32 px на компьютере и на телефоне; кегль, отступы и иконка
 меняются вместе. Бейджи одного размера одной высоты в любом виде, поэтому
 `tonal`, `outline` и `main` рядом стоят ровно. Берите ступень окружающих
-элементов управления.
+элементов управления. Счётчик из одной цифры — всегда круг: добавьте
+`sf-badge--figure`, и ширина бейджа станет равна высоте.
 
 :::example {id="components/badges/sizes" label="Размеры бейджа"}
 :::
@@ -94,7 +107,9 @@ profile: reference
 
 Иконка в `sf-badge-icon-container` стоит в логическом начале или конце бейджа
 и берёт цвет и размер бейджа. Бейдж из одной иконки и сокращённый счётчик
-получают полный текст в `sr-only`.
+получают полный текст в `sr-only`. `sf-badge--icon-only` оставляет одну
+иконку: бейдж становится квадратным, а текст остаётся скрытой копией —
+именем бейджа.
 
 :::example {id="components/badges/icons" label="Бейджи с иконками"}
 :::
@@ -146,11 +161,11 @@ profile: reference
 
 | Шаг якоря | Счётчик | Точка | Кольцо |
 |:---|:---|:---|:---|
-| `1/3` | рисуется точкой | 6px | 1px |
+| `1/4`, `1/3` | рисуется точкой | 6px | 1px |
 | `1/2` | рисуется точкой | 8px | 2px |
-| `1` | высота 16px | 10px | 2px |
-| `2` | высота 20px | 12px | 2px |
-| `3` | высота 24px | 14px | 2px |
+| `1` | высота 16px | 12px | 2px |
+| `2` | высота 16px | 12px | 2px |
+| `3` | высота 16px | 16px | 2px |
 
 Значения — при корневом размере шрифта 16px. Шаг кнопки-иконки и обёртки —
 её размер `--size-N`. Аватары `1/4` и `1/3` и аватары по строке текста
@@ -159,15 +174,9 @@ profile: reference
 имени и во всплывающей подсказке. Цифры табличные: один знак — круг, два и три
 — бейдж растёт вширь.
 
-По умолчанию счётчик и точка окрашены ролью ошибки — заливка `--sf-error`, цифры
-`--sf-on-error`, тот же цвет, что у `sf-badge--main sf-badge--error`, в светлой
-и тёмной теме. Другой цвет задают обычные классы цвета бейджа со сплошной
-заливкой: `sf-badge--main` и роль — `sf-badge--primary`, `sf-badge--success`,
-`sf-badge--neutral` и другие. Тональный вид полупрозрачен и на якоре
-теряется, поэтому для счётчика берите `sf-badge--main`.
-
-:::example {id="components/badges/anchored-colours" label="Цвет бейджа на якоре"}
-:::
+Счётчик и точка на якоре всегда окрашены ролью ошибки — заливка `--sf-error`,
+цифры `--sf-on-error`, в светлой и тёмной теме: число на якоре — это
+внимание. Классы цвета бейджа на якоре цвет не меняют.
 
 От якоря бейдж отделяет кольцо
 цвета поверхности под якорем. Цвет кольца — `--sf-badge-ring-color`, если её
@@ -249,14 +258,14 @@ profile: reference
 | `--sf-badge--anchored-max` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `none` | `max-width`, `max-inline-size` |
 | `--sf-badge--anchored-padding` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-a4)` | `padding-left`, `padding-right`, `padding-inline` |
 | `--sf-badge--anchored-size` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-badge--anchored-count)` | `height`, `block-size`, `min-height`, `min-block-size`, `min-width`, `min-inline-size`, `line-height` |
-| `--sf-badge--background-color` | `var(--sf-badge-background-color, var(--sf-surface-container))` | `background-color`, `background-image`, `--sf-dot-item--background-color` |
+| `--sf-badge--background-color` | `var(--sf-badge-background-color, var(--sf-surface-container))` | `background-image`, `background-color`, `--sf-dot-item--background-color` |
 | `--sf-badge--border-bottom-width` | `var(--sf-badge-border-width, var(--sf-a0))` | `padding-bottom`, `padding-block-end`, `border-bottom-width`, `--sf-badge--line-box` |
 | `--sf-badge--border-color` | `var(--sf-badge-border-color, transparent)` | `border-color` |
 | `--sf-badge--border-inline-end-width` | `var(--sf-badge-border-width, var(--sf-a0))` | `padding-inline-end`, `border-inline-end-width` |
 | `--sf-badge--border-inline-start-width` | `var(--sf-badge-border-width, var(--sf-a0))` | `padding-inline-start`, `border-inline-start-width` |
 | `--sf-badge--border-style` | не задана; задают модификаторы, например `.sf-badge--outline`: `solid` | `border-style` |
 | `--sf-badge--border-top-width` | `var(--sf-badge-border-width, var(--sf-a0))` | `padding-top`, `padding-block-start`, `border-top-width`, `--sf-badge--line-box` |
-| `--sf-badge--color` | `var(--sf-badge-color, var(--sf-on-surface))` | `color`, `--sf-icon--color`, `--sf-badge-text--color` |
+| `--sf-badge--color` | `var(--sf-badge-color, var(--sf-on-surface))` | `--sf-icon--color`, `--sf-badge-text--color`, `color` |
 | `--sf-badge--font-size` | `var(--sf-text-size-1/3)` | `font-size`, `--sf-icon--font-size`, `--sf-badge-text--font-size` |
 | `--sf-badge--gap` | `var(--sf-badge-gap, var(--sf-space-1/4))` | `gap` |
 | `--sf-badge--line-1` | `var(--sf-c2)` | `--sf-badge--line-height` |

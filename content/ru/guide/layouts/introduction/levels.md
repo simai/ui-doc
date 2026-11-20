@@ -68,10 +68,7 @@ Framework поставляет базовые типы, на которых мо
 | `element.button`, `element.button-icon`, `element.badge`, `element.icon` | кнопка (с `href` — ссылка с видом кнопки), кнопка-значок, метка, значок | `<sf-button>`, `<sf-button-icon>`, `<sf-badge>`, `<sf-icon>` |
 | `form.form`, `form.input`, `form.textarea`, `form.checkbox`, `form.switch`, `form.select`, `form.button-submit` | форма вокруг своих блоков (настройка `method`: `post` или `get`) и её поля; поле без подписи берёт слово по своему имени (`name`, `phone`, `email`, `message`) или «Поле» на языке документа | `<form>`, `<sf-input>`, `<sf-input-textarea>`, `<sf-checkbox>`, `<sf-switch>`, `<sf-dropdown>`, `<sf-button>` отправки формы |
 
-Типы `layout.container`, `layout.grid`, `layout.spacer`, `layout.area` и
-`element.*` появились в выпуске `ui-c3015f76bcc2` (`core.runtime` 1.26.0), типы
-`form.*` — с `core.runtime` 1.27.0. Вариант `accent` секции
-(`layout.section` 1.3.0) задаёт фон `accent` — `bg-primary color-on-primary`,
+Вариант `accent` секции (`layout.section`) задаёт фон `accent` — `bg-primary color-on-primary`,
 и текст внутри такого блока берёт роли `on-primary`.
 
 Полный перечень с допустимыми значениями — в реестре типов

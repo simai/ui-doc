@@ -99,7 +99,7 @@ description: "Как добавить файлы и видеть долю каж
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Загрузка файлов с прогрессом», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Загрузка файлов с прогрессом», выпуск ui-1ed6b6c9a040.
 Правила:
 1. sf-file-upload multiple с formats, accept, max-size; строки — items[] {id, name, fileSize, state: process|done|error, progress, errorMessage, retryText: 'Повторить'}.
 2. Загрузку ведёт uploader страницы или сервер; ошибку строки пишите причиной («связь прервалась на 62 %»), sf-file-upload-retry повторяет.

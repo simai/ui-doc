@@ -12,7 +12,7 @@ const initializeToastContainer = () => {
     const toast = document.createElement('sf-toast');
     toast.setAttribute('status', 'success');
     toast.setAttribute('icon', 'check_circle');
-    toast.setAttribute('title', 'Черновик сохранён');
+    toast.setAttribute('heading', 'Черновик сохранён');
     toast.setAttribute('duration', '5000');
     toast.setAttribute('close-label', 'Закрыть сообщение');
     container.append(toast);

@@ -23,8 +23,10 @@ description: "Делает элемент прозрачным для мыши �
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `pointer-event-none` | `pointer-events: none` | — |
-| `pointer-event-auto` | `pointer-events: auto` | — |
+| `pointer-events-none` | `pointer-events: none` | — |
+| `pointer-events-auto` | `pointer-events: auto` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
@@ -45,9 +47,8 @@ description: "Делает элемент прозрачным для мыши �
 `pointer-events-none` наследуется. Чтобы внутри такого блока снова принимал
 указатель один элемент, поставьте ему `pointer-events-auto`.
 
-Классы в таблице выше записаны как `pointer-event-none` и `pointer-event-auto`;
-Loader переводит в них `pointer-events-none` и `pointer-events-auto`, поэтому
-работают оба написания. Пишите `pointer-events-*`, как в CSS.
+Имя класса повторяет свойство CSS: `pointer-events-*`. `pointer-event-none` и
+`pointer-event-auto` — прежние имена; они работают до 2027-01-01.
 
 ## Ограничения
 

@@ -1,0 +1,17 @@
+{
+  "$comment": "Defaults and summaries the pair draws where its public-variables contract says otherwise (Framework DF-1). Remove an entry once the contract agrees.",
+  "variables": {
+    "--sf-progress-bar-fill-color": {
+      "default": "var(--sf-primary)",
+      "summary_ru": "Заполненная часть: без статуса — основной цвет темы, у статуса свой цвет, если эта переменная не задана."
+    },
+    "--sf-progress-scale-fill-color": {
+      "default": "var(--sf-primary)",
+      "summary_ru": "Заполненные сегменты: без статуса — основной цвет темы, у статуса свой цвет, если эта переменная не задана."
+    },
+    "--sf-spinner-color": {
+      "default": "var(--sf-on-surface-variant)",
+      "summary_ru": "Дуга: у отдельного спиннера — тихий цвет места, внутри кнопки или другого элемента — его цвет, если не задано."
+    }
+  }
+}

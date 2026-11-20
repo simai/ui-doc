@@ -6,7 +6,7 @@ profile: reference
 
 # Документ
 
-:badge[sf-doc]{variant=outline scheme=on-surface size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-doc]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Компонент оформляет служебные поверхности технической документации:
 область примера, исходный код под ней, вводный абзац и фоны для показа
@@ -33,8 +33,11 @@ profile: reference
 - `sf-doc-source` — блок исходного кода на своей поверхности с прокруткой.
 - `sf-doc-lead` — вводный абзац.
 - `sf-doc-checkerboard` и `sf-doc-stripes` — служебные фоны.
-- `sf-doc-code` — моноширинный шрифт для встроенного фрагмента кода, как у
-  элемента `code`.
+- `sf-doc-code` — только моноширинный шрифт для встроенного фрагмента кода:
+  без плашки, полей и уменьшения, которые даёт элемент `code`.
+- Прежние имена `.example`, `.source`, `.t-lead`, `.t-source`, `.bg-stripes`,
+  `.bg-stripes-white`, `.bg-stripes-blue` и `.bg-checkered` лист выпуска ещё
+  рисует; в новой разметке пишите классы `sf-doc-*`.
 
 У компонента нет своего JavaScript: подсветку кода выполняет
 [Highlight](/ru/components/content/highlight/), копирование —
@@ -84,7 +87,6 @@ profile: reference
 
 | Что | Классы |
 |:---|:---|
-| Части | `sf-doc-checkerboard`, `sf-doc-code`, `sf-doc-example`, `sf-doc-lead`, `sf-doc-pair`, `sf-doc-source`, `sf-doc-stripes` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

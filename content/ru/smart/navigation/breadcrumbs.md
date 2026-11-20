@@ -5,7 +5,7 @@ description: "Показывает путь от корня сайта до те
 
 # Хлебные крошки
 
-:badge[sf-breadcrumbs]{variant=outline scheme=on-surface size=1/2} :badge[1.2.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-breadcrumbs]{variant=outline scheme=on-surface size=1/2} :badge[1.2.8]{variant=outline scheme=on-surface size=1/2}
 
 Хлебные крошки показывают, где в иерархии сайта находится страница: ссылки на
 разделы выше и название текущей страницы в конце; длинный путь сворачивается
@@ -54,12 +54,13 @@ description: "Показывает путь от корня сайта до те
 
 ### Длинный путь
 
-`max-items` • по умолчанию `4` • [справочник](#атрибуты)
+`max-items` • по умолчанию `0` • [справочник](#атрибуты)
 
-Если пунктов больше `max-items` (по умолчанию 4), середина пути сворачивается
-в кнопку «…»: остаются первый пункт и два последних. Скрытые пункты кнопка
-передаёт в событии нажатия, в поле `item.hiddenItems`. `max-items` меньше 3
-отключает сворачивание.
+Путь сворачивается, когда ему не хватает места в одну строку: середина уходит
+в кнопку «…», остаются первый пункт и последние. Скрытые пункты кнопка
+передаёт в событии нажатия, в поле `item.hiddenItems`. `max-items` от 3 —
+необязательный потолок по числу пунктов: путь сворачивается и тогда, когда
+пунктов больше; `0` (по умолчанию) — без потолка.
 
 :::example {id="smart-components/breadcrumbs/long-path" label="Длинный путь"}
 :::
@@ -188,16 +189,17 @@ crumbs.onItemClick((item) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-breadcrumbs>`, контракт `smart.breadcrumbs` версии `1.2.7` |
-| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
+| Тег | `<sf-breadcrumbs>`, контракт `smart.breadcrumbs` версии `1.2.8` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «строка» (сервер пишет `data-sf-skeleton="line"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как навигация; нужна подпись или `aria-label`; с клавиатуры: `Tab`; `Enter` на ссылках; `Enter` или `Пробел` на кнопке «…». |
-| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/breadcrumbs` |
-| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-breadcrumbs` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/breadcrumbs` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-breadcrumbs` |
 
 ## См. также
 
 - [Шаги](/ru/smart/navigation/steps/) — этапы последовательного процесса.
 - [Дерево](/ru/smart/navigation/tree/) — вся иерархия разделов сразу.
 - [Хлебные крошки на классах](/ru/components/navigation/breadcrumbs/) — тот же путь в статической разметке.
+- Рецепты: [«Каркас админки»](/ru/recipes/navigate/admin-frame/), [«Карточка записи»](/ru/recipes/edit/record-card/), [«Список записей»](/ru/recipes/find/resource-list/)

@@ -5,7 +5,7 @@ description: "Даёт административному приложению �
 
 # Меню администратора
 
-:badge[sf-admin-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.14.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-admin-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.14.1]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-admin-menu>` — боковая навигация административного приложения: вложенные
 разделы, поиск, компактный режим и настройка порядка и видимости пунктов.
@@ -100,16 +100,21 @@ Framework: поставляется пакетом `pro` из репозитор
 `event.detail` `{compact, source}`: по нему оболочка приложения меняет ширину
 своей колонки.
 
-Счётчик пункта (`badge`) окрашен ролью ошибки в обоих режимах. В компактном
-режиме значок пункта стоит на шаге `1/2`, поэтому счётчик переходит на его
-верхний угол точкой размером 8px, а число остаётся в имени пункта. Как точка и
-число ведут себя на якоре, описано в разделе
+Счётчик пункта (`badge`) окрашен ролью ошибки в обоих режимах. Где он стоит в
+свёрнутом меню, зависит от того, откуда меню берёт пункты:
+
+- меню из пунктов разметки (`<sf-admin-menu-item>`, как в примере ниже)
+  переносит счётчик на верхний угол значка пункта, число остаётся видно;
+- меню из навигационного порта ставит значок на шаг `1/2`, поэтому на углу
+  стоит точка, а число и слова о нём уходят в имя пункта («Заказы, 3»).
+
+Как точка и число ведут себя на якоре, описано в разделе
 [Бейдж на якоре](/ru/components/feedback/badges/#бейдж-на-якоре).
 
 Меню в примере открыто свёрнутым: наведите указатель на значок, чтобы
 увидеть подпись, и разверните меню кнопкой свёртывания.
 
-:::example {id="smart-components/admin-menu/compact" label="Свёрнутое меню и счётчик точкой"}
+:::example {id="smart-components/admin-menu/compact" label="Свёрнутое меню и счётчик на значке"}
 :::
 
 ### Меню в колонке с ручкой ширины
@@ -166,7 +171,12 @@ menu.addEventListener('sf-admin-menu-compact-change', ({detail}) => {
 ### Настройки пунктов
 
 Пока `settings` включён, человек может скрывать и показывать пункты и менять
-их порядок. Где хранятся настройки, решает `persistence-mode`:
+их порядок. `settings` включён по умолчанию, поэтому меню из пунктов разметки
+само дорисовывает внизу строки «Избранное» и «Настройки меню», а при
+`collapsible` — кнопку свёртывания рядом с ними. Чтобы этих строк не было,
+задайте `settings="false"` и не включайте `collapsible`. В узкой колонке
+подпись «Настройки меню» переносится на вторую строку. Избранное с отметками
+у строк работает только в навигационном порте (возможность `favourites`). Где хранятся настройки, решает `persistence-mode`:
 
 - `local` — в `localStorage` браузера под ключом, который строится из `id`
   меню. Задайте меню `id`, если на сайте их несколько.
@@ -203,10 +213,10 @@ profile})` фиксирует сохранение, `applySettingsError(error)` 
 |:---|:---|:---|
 | — | меню и переход по строкам | `navigation.load`, `item.open` |
 | `site-switch` | выбор сайта, если сайтов больше одного | `site.switch`, `sites.search` |
-| `search` | поиск по `Cmd+K` или `Ctrl+K` | `search.query`, `search.choose` |
+| `search` | окно поиска [`sf-search`](/ru/smart/composite/search/) по `Cmd+K` или `Ctrl+K`: разделы, записи и команды, группы приложения как фильтры, недавние запросы, клавиши через [`sf-kbd`](/ru/components/content/kbd/) | `search.query`, `search.choose` |
 | `favourites` | звезда у строк и блок избранного | `favourite.toggle` |
 | `menu-profiles` | профили меню и режим правки | `view.profile`, `view.create`, `view.rename`, `view.delete`, `view.save`, `view.reset` |
-| `preferences` | тема, язык и свёрнутое меню как настройки человека | `preference.theme`, `preference.language`, `preference.compact` |
+| `preferences` | тема, язык и свёрнутое меню как настройки человека; тема — строка [`sf-settings`](/ru/smart/navigation/settings/) в меню профиля, варианты на уровень глубже | `preference.theme`, `preference.language`, `preference.compact` |
 | `sign-out` | выход в меню профиля | `session.sign-out` |
 
 Ответ на намерение — объект с полем `answer`: `applied`, `refused` или
@@ -277,7 +287,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-24d64b7f6eb7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента пакета `pro` выпуска `pro-a57887949f9a` над выпуском Framework `ui-dc9fc39aeb26` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -285,7 +295,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 |:---|:---|
 | Тег | `<sf-admin-menu>` |
 | Назначение | Вложенная навигация администратора с поиском, компактным режимом и редактируемыми личными или системными настройками. |
-| Контракт | `smart.admin-menu`, версия `1.14.0` |
+| Контракт | `smart.admin-menu`, версия `1.14.1` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -386,8 +396,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### Источник
 
-- `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/admin-menu`
-- `simai/ui-pro@0f8512da5188fecf74261cfcac9f29ec42c025ca:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
+- `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/admin-menu`
+- `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
 
 ## См. также
 

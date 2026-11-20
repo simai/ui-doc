@@ -1,53 +1,21 @@
 ---
 title: "Промежутки"
-description: "Задаёт одинаковое расстояние между соседними дочерними элементами, не трогая крайние."
+description: "Уходящие классы: рисуют до 2027-01-01, в новой разметке не берите."
 ---
 
 # Промежутки
 
-Классы `space-x-*` и `space-y-*` ставятся на родителя и дают каждому
-дочернему элементу, кроме первого, внешний отступ со стороны предыдущего
-соседа. Берите их, когда между элементами нужен ровный шаг в обычном потоке блоков.
+Классы `space-x-*` и `space-y-*` уходят из SIMAI Framework (C212 (4)): они рисуют, как рисовали,
+до 2027-01-01, а первое использование на странице Loader записывает в
+`SF.deprecations`. В новой разметке их не берите.
 
-## Пример
-
-### По строке
-
-`space-x-*` добавляет отступ в начале строки каждому элементу, кроме
-первого. Подпись над образцом — класс на пунктирном родителе.
-
-:::example {id="utilities/indents/space" label="space-x-0 … space-x-4"}
-:::
-
-### По вертикали
-
-`space-y-*` добавляет отступ сверху каждому элементу, кроме первого.
-
-:::example {id="utilities/indents/space-y" label="space-y-1/4 … space-y-3"}
-:::
-
-### Обратный порядок
-
-Когда флекс-контейнер разворачивает порядок (`flex-row-reverse`,
-`flex-col-reverse`), первый элемент в разметке оказывается последним на
-экране, и отступ встаёт не с той стороны. `space-x-reverse` и
-`space-y-reverse` переносят отступ на другую сторону элемента.
-
-:::example {id="utilities/indents/space-reverse" label="space-x-reverse и space-y-reverse"}
-:::
-
+Промежутки между детьми задаёт `gap-x-N` или `gap-y-N` на родителе-флексбоксе или сетке; `space-x-reverse` и `space-y-reverse` уходят вместе с ними. См. [Промежутки между элементами](/ru/utilities/grid-and-flexbox-utilities/gap/).
 ## Классы
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `space-x-0` (`.space-x-0 > * + *`) | `--sf-space--reverse-x: 0; margin-inline-end: calc(var(--sf-space-0) * var(--sf-space--reverse-x)); margin-inline-start: calc(var(--sf-space-0) * (1 - var(--sf-space--reverse-x)))` | — |
-| `space-y-0` (`.space-y-0 > * + *`) | `--sf-space--reverse-y: 0; margin-top: calc(var(--sf-space-0) * (1 - var(--sf-space--reverse-y))); margin-bottom: calc(var(--sf-space-0) * var(--sf-space--reverse-y))` | — |
-| `space-x-{значение}` (`.space-x-{значение} > * + *`) | `--sf-space--reverse-x: 0; margin-inline-end: calc(var(--sf-space-{значение}) * var(--sf-space--reverse-x)); margin-inline-start: calc(var(--sf-space-{значение}) * (1 - var(--sf-space--reverse-x)))` | `1/4`, `1/3`, `1/2`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
-| `space-y-{значение}` (`.space-y-{значение} > * + *`) | `--sf-space--reverse-y: 0; margin-top: calc(var(--sf-space-{значение}) * (1 - var(--sf-space--reverse-y))); margin-bottom: calc(var(--sf-space-{значение}) * var(--sf-space--reverse-y))` | `1/4`, `1/3`, `1/2`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
-| `space-x-1` (`.space-x-1 > * + *`) | `--sf-space--reverse-x: 0; margin-inline-end: calc(var(--sf-space-1) * var(--sf-space--reverse-x)); margin-inline-start: calc(var(--sf-space-1) * (1 - var(--sf-space--reverse-x)))` | — |
-| `space-y-1` (`.space-y-1 > * + *`) | `--sf-space--reverse-y: 0; margin-top: calc(var(--sf-space-1) * (1 - var(--sf-space--reverse-y))); margin-bottom: calc(var(--sf-space-1) * var(--sf-space--reverse-y))` | — |
-| `space-x-reverse` (`.space-x-reverse > * + *`) | `--sf-space--reverse-x: 1` | — |
-| `space-y-reverse` (`.space-y-reverse > * + *`) | `--sf-space--reverse-y: 1` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:space-x-0`.
 
@@ -73,53 +41,3 @@ description: "Задаёт одинаковое расстояние между 
 | `--sf-space-8` | `var(--sf-d2); от ширины lg: var(--sf-e0)` |
 
 В CSS косую черту в имени экранируют: `var(--sf-space-1\/4)`.
-
-## Применение
-
-### Промежутки или gap
-
-Во флекс- и грид-контейнере для того же результата удобнее `gap-*`: он не
-меняет отступы самих элементов и правильно работает при переносе строк.
-`space-*` подходит для обычного потока блоков и для контейнеров, где
-отступы нужны только по одной оси.
-
-```html
-<article class="space-y-2">
-  <h2>Заголовок</h2>
-  <p>Первый абзац</p>
-  <p>Второй абзац</p>
-</article>
-```
-
-### Обратный порядок
-
-Класс `space-*-reverse` ставится вместе с размером на того же родителя:
-
-```html
-<div class="flex flex-row-reverse space-x-2 space-x-reverse">
-  <button type="button">Отмена</button>
-  <button type="button">Сохранить</button>
-</div>
-```
-
-### Ширина экрана
-
-Шкала совпадает с `m-*` и `p-*` (`--sf-space-*`) и подрастает от ширины
-`lg`. С префиксом ширины промежуток меняется от указанной ширины и шире:
-`space-y-1 md:space-y-3`.
-
-## Ограничения
-
-- Промежуток — это внешний отступ дочерних элементов. Собственный отступ
-  ребёнка по той же стороне (`m-top-*` при `space-y-*`) с ним конфликтует.
-- При переносе строк (`flex-wrap`) первый элемент новой строки тоже получает
-  отступ в начале строки, и края рядов не выравниваются. Здесь берите `gap-*`.
-- Класс размера с префиксом ширины сбрасывает обратный порядок: к
-  `space-x-reverse md:space-x-3` добавьте `md:space-x-reverse`.
-- У семейства нет префиксов состояния.
-
-## См. также
-
-- [Внешний отступ](/ru/utilities/indents/margin/)
-- [Внутренний отступ](/ru/utilities/indents/padding/)
-- [Промежутки во флексе и гриде](/ru/utilities/grid-and-flexbox-utilities/gap/)

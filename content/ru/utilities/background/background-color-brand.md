@@ -35,9 +35,9 @@ description: "Заливает элемент фирменным цветом с
 | `bg-whatsapp` | `background-color: #30B944` | — |
 | `bg-instagram` | `background-color: #d6249f; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)` | — |
 | `bg-wechat` | `background-color: #2CAD19` | — |
-| `bg-tiktok` | `background-color: #000000` | — |
+| `bg-tiktok` | `background-color: #000000; .bg-tiktok:not(.focus-visible) { outline: var(--sf-line--border) solid light-dark(transparent, var(--sf-outline-variant)); outline-offset: calc(-1 * var(--sf-line--border)) }; .bg-tiktok:not(:focus-visible) { outline: var(--sf-line--border) solid light-dark(transparent, var(--sf-outline-variant)); outline-offset: calc(-1 * var(--sf-line--border)) }` | — |
 | `bg-sinaweibo` | `background-color: #E32429` | — |
-| `bg-qq` | `background-color: #000000` | — |
+| `bg-qq` | `background-color: #000000; .bg-qq:not(.focus-visible) { outline: var(--sf-line--border) solid light-dark(transparent, var(--sf-outline-variant)); outline-offset: calc(-1 * var(--sf-line--border)) }; .bg-qq:not(:focus-visible) { outline: var(--sf-line--border) solid light-dark(transparent, var(--sf-outline-variant)); outline-offset: calc(-1 * var(--sf-line--border)) }` | — |
 | `bg-telegram` | `background-color: #36A7E7` | — |
 | `bg-snapchat` | `background-color: #FDFC02` | — |
 | `bg-kuaishou` | `background-color: #F74908` | — |
@@ -53,13 +53,22 @@ description: "Заливает элемент фирменным цветом с
 | `bg-viber` | `background-color: #7360F2` | — |
 | `bg-vimeo` | `background-color: #1AB7EA` | — |
 | `bg-ok` | `background-color: #EE8208` | — |
-| `bg-tumblr` | `background-color: #001935` | — |
+| `bg-tumblr` | `background-color: #001935; .bg-tumblr:not(.focus-visible) { outline: var(--sf-line--border) solid light-dark(transparent, var(--sf-outline-variant)); outline-offset: calc(-1 * var(--sf-line--border)) }; .bg-tumblr:not(:focus-visible) { outline: var(--sf-line--border) solid light-dark(transparent, var(--sf-outline-variant)); outline-offset: calc(-1 * var(--sf-line--border)) }` | — |
 | `bg-behance` | `background-color: #0057FF` | — |
 | `bg-soundcloud` | `background-color: #FF5500` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:bg-fb`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-line--border` | `var(--sf-px)` |
+| `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
 
 ## Применение
 

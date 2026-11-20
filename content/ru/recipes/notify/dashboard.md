@@ -94,12 +94,12 @@ description: "Первый экран админки: сначала то, чт�
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Обзор с плитками», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Обзор с плитками», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Порядок: sf-header-page, sf-list-attention, ряд плиток, последние события.
 2. sf-list-attention — на странице, не в карточке: без проблем он не рисуется. У проблемы status (error, warning, info), title, одно action: {label, href} или {label, event}.
 3. Плитки — sf-tile-metric в div.sf-tile-metric-grid, до четырёх; --sf-tile-metric-min-width: var(--sf-f6), чтобы четыре плитки не вставали три и одна. У каждой previous и period-text; для лимитов — max, warning-at, error-at. Плохой рост — better="down". status вручную — только с hint о проблеме. href — отчёт.
-4. События — sf-list-timeline size="1/2" density="compact" group="none" в section.sf-card с h2 class="m-0 text-1 weight-6".
+4. События — sf-list-timeline size="1/2" density="compact" group="none" в section.sf-card с h2 class="m-0 text-1 weight-medium".
 5. Не стопка sf-alert над экраном и не зелёный статус на всех плитках. -->
 <div data-sf-density="compact">
   <div class="flex flex-col gap-3">
@@ -116,7 +116,7 @@ description: "Первый экран админки: сначала то, чт�
       <sf-tile-metric label="Диск" value="91" max="100" format="integer" unit="ГБ" warning-at="80" error-at="95" hint="Копиям не хватает места" href="/disk/"></sf-tile-metric>
     </div>
     <section class="sf-card" aria-labelledby="overview-events">
-      <h2 id="overview-events" class="m-0 text-1 weight-6">Последние события</h2>
+      <h2 id="overview-events" class="m-0 text-1 weight-medium">Последние события</h2>
       <sf-list-timeline size="1/2" density="compact" group="none" label="Последние события">
         <script type="application/json" data-sf-settings>{"items": [
           {"id": "e1", "time": "2026-11-10T11:42:00+03:00", "title": "Новый заказ 1042", "text": "3 490 ₽"}

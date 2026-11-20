@@ -106,7 +106,7 @@ description: "Что стоит под списком: сколько всего
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Низ списка», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Низ списка», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Вид перехода по списку: админка — sf-pagination appearance="field"; каталог — "numbers" со ссылками ?page= от сервера; число неизвестно — "arrows" (count-known="false", has-next); курсор — "cursor"; лента — "more" отдельно по центру.
 2. Админка, одна строка: диапазон «41–60 из 240» простой строкой тихим цветом · sf-button «По 20» (appearance="ghost" scheme="on-surface" с menu) · sf-pagination у дальнего края: с заданным appearance она рисует только переход. Промежуток gap-1/3.

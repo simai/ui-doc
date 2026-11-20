@@ -5,7 +5,7 @@ description: "Даёт править текст заголовков и абз�
 
 # Inline-редактор
 
-:badge[sf-editor-inline]{variant=outline scheme=on-surface size=1/2} :badge[1.11.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-editor-inline]{variant=outline scheme=on-surface size=1/2} :badge[1.12.2]{variant=outline scheme=on-surface size=1/2}
 
 Inline-редактор даёт править текст заголовков и абзацев (`content.heading` и
 `content.paragraph`) прямо на странице. Доступно то, что есть в модели
@@ -47,7 +47,20 @@ content: полужирный, курсив, код, ссылки и встро�
 - `marks` — разрешённое оформление, подмножество `strong`, `em`, `code`,
   `strike`;
 - `links` — `false` отключает ссылки;
-- `messages` — свои подписи панели форматирования.
+- `messages` — свои подписи панели форматирования;
+- `toolbar` — когда видна панель форматирования: `'selection'` (по
+  умолчанию) — только пока выделен текст, над выделением; `'session'` — всю
+  правку, над элементом. На телефоне (уже `md`) панель — полоска значков над
+  экранной клавиатурой на всё время правки, при любом значении;
+- `enter` — что делает `Enter`: `'save'` (по умолчанию) сохраняет правку;
+  `'new-block'` — «Enter — новый блок» для блочных редакторов: сохраняется
+  текст до курсора, а текст после него приходит в `next` события
+  `sf-editor-inline-change`, чтобы приложение создало из него следующий блок.
+  `Shift+Enter` — перенос строки, уход фокуса сохраняет в обоих случаях.
+
+Панель форматирования — значковые кнопки размера `1/2` группами
+(оформление, затем ссылка) через 4, между группами разделитель; что не
+помещается, уходит в ⋯ «Ещё».
 
 Вызов возвращает `{element, commit, cancel, value}`: `commit()` и `cancel()`
 завершают правку из кода, `value()` возвращает текущую модель.
@@ -65,7 +78,7 @@ content: полужирный, курсив, код, ссылки и встро�
 
 - `sf-editor-inline-input` — `{id, content}` после каждого изменения;
 - `sf-editor-inline-change` — `{id, content}` по `Enter` или при уходе
-  фокуса;
+  фокуса; при `enter: 'new-block'` по `Enter` — `{id, content, next}`;
 - `sf-editor-inline-cancel` — `{id}` по `Escape`; исходный HTML элемента
   возвращается без изменений.
 
@@ -122,8 +135,13 @@ canvas.addEventListener('sf-editor-inline-change', (event) => {
 - `Ctrl+Z` отменяет шаг правки, `Ctrl+Shift+Z` и `Ctrl+Y` возвращают его.
 - У кнопок панели форматирования есть `aria-pressed` и подсказка с
   сочетанием клавиш.
-- `Enter` сохраняет, `Escape` отменяет, уход фокуса сохраняет. Ввод через IME
-  не прерывается.
+- Панель форматирования — одна остановка `Tab`: `Tab` возвращается к кнопке,
+  на которой человек был, `←` и `→` идут между кнопками по направлению строки,
+  `Home` и `End` — к крайним, с конца переход идёт к началу. `Escape` в панели
+  возвращает к тексту. Поле и кнопки окна ссылки работают как обычно.
+- `Enter` сохраняет (с `enter: 'new-block'` — сохраняет и отдаёт остаток в
+  `next`), `Escape` отменяет, уход фокуса сохраняет. Ввод через IME не
+  прерывается.
 - Подписи панели берутся на языке страницы (русском или английском).
 
 ## Справочник
@@ -142,7 +160,7 @@ canvas.addEventListener('sf-editor-inline-change', (event) => {
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `edit(args: object)` | объект | Начинает правку элемента холста (`SF.Composition.startInlineEdit`): параметры `content`, `nodeId`, `label`, `marks`, `links`, `messages`, `toolbar` (`selection` — только пока выделен текст, над выделением, по умолчанию; `session` — панель на всё время правки, над элементом), `enter` (`save` — Enter сохраняет, по умолчанию; `new-block` — Enter сохраняет текст до курсора, а остальное отправляет как `next`, как «Enter — новый блок» в редакторе блоков). На телефоне панель — полоса значков над экранной клавиатурой на всё время правки. |
+| `edit(args: object)` | объект | Начинает правку элемента холста (`SF.Composition.startInlineEdit`): параметры `content`, `nodeId`, `label`, `marks`, `links`, `messages`, `toolbar` (`selection` — только пока выделен текст, над выделением, по умолчанию; `session` — панель на всю правку, над элементом), `enter` (`save` — Enter сохраняет, по умолчанию; `new-block` — Enter сохраняет текст до курсора, а остальное отправляет как `next`, «Enter — новый блок» блочного редактора). На телефоне панель — полоса иконок над экранной клавиатурой на всю правку. |
 
 ### События
 
@@ -151,20 +169,20 @@ canvas.addEventListener('sf-editor-inline-change', (event) => {
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `sf-editor-inline-input` | `{ id: string\|null, content: array }` | Текст изменился во время правки; отправляется на редактируемом элементе. |
-| `sf-editor-inline-change` | `{ id: string\|null, content: array }` | Правка сохранена (Enter или фокус ушёл): содержимое для сохранения; отправляется на изменённом элементе. С `enter: 'new-block'` Enter сохраняет текст до курсора, а `detail` несёт ещё и `next` — текст после курсора для следующего блока приложения. |
+| `sf-editor-inline-change` | `{ id: string\|null, content: array }` | Правка сохранена (Enter или уход фокуса): содержимое для сохранения; отправляется на правленом элементе. С `enter: 'new-block'` Enter сохраняет текст до курсора, а `detail` несёт ещё `next` — текст после него для следующего блока хоста. |
 | `sf-editor-inline-cancel` | `{ id: string\|null }` | Правка отменена (Escape): элемент показывает свой прежний HTML; отправляется на редактируемом элементе. |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-editor-inline>`, контракт `smart.editor-inline` версии `1.11.3` |
-| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
+| Тег | `<sf-editor-inline>`, контракт `smart.editor-inline` версии `1.12.2` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; название компонент ставит сам; с клавиатуры: `Ctrl/Cmd+B`, `Ctrl/Cmd+I`, `Ctrl/Cmd+E`, `Ctrl/Cmd+K`, `Ctrl/Cmd+Z`, `Ctrl/Cmd+Shift+Z`, `Ctrl/Cmd+Y`, `Enter`, `Shift+Enter`, `Esc`. |
-| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/editor-inline` |
-| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-editor-inline` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/editor-inline` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-editor-inline` |
 
 ## См. также
 

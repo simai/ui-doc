@@ -6,7 +6,7 @@ profile: reference
 
 # Календарь
 
-:badge[sf-datepicker]{variant=outline scheme=on-surface size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-datepicker]{variant=outline scheme=on-surface size=1/2} :badge[1.11.0]{variant=outline scheme=on-surface size=1/2}
 
 Календарь показывает дни месяца, выбранную дату или период. Поведения у
 классов нет: перелистывание, выбор даты и
@@ -30,7 +30,8 @@ profile: reference
   ширина на семь дней. Дайте ей `role="group"` и `aria-label` с месяцем.
 - `sf-datepicker-top` с утилитами `grid items-cross-center` делит шапку на три
   колонки: кнопка назад, `sf-datepicker-period` с названием месяца, кнопка
-  вперёд.
+  вперёд. Кнопки-стрелки — `sf-icon-button--size-1/2`, как у
+  смарт-календаря: шапка тогда той же высоты, что строка дней.
 - Дни недели — `sf-datepicker-weekday` в строке `grid grid-col-7`; строку
   скрывайте от вспомогательных технологий: полную дату называет кнопка дня.
 - День — `<button type="button" class="sf-datepicker-day">` с числом в
@@ -46,6 +47,8 @@ profile: reference
 доступным для выбора. `sf-datepicker-another-month` приглушает дни соседнего
 месяца в первой и последней неделе. `sf-datepicker-day-info` под числом
 показывает короткую подпись дня: число мест, событий или цену.
+`sf-datepicker-day-special` ставит под числом точку — у праздника или дня
+с событием.
 
 :::example {id="components/datepicker/day-kinds" label="Вид дня"}
 :::
@@ -108,8 +111,12 @@ profile: reference
 - Кнопке дня нужна полная дата в `aria-label`: «15 сентября 2026». Число
   без месяца и года экранный диктор прочтёт без контекста.
 - Выбор, период, выходной и недоступность передавайте не только цветом:
-  `aria-pressed`, `disabled` и текст в `aria-label`.
-- Сегодняшний день отмечайте `aria-current="date"`.
+  `aria-pressed`, `disabled` и текст в `aria-label`. В статической разметке
+  на классах день — кнопка с `aria-pressed`;
+  [смарт-календарь](/ru/smart/forms/datepicker/) рисует дни таблицей `role="grid"`:
+  день — `role="gridcell"` с `aria-selected`, сегодня — `aria-current="date"`.
+- Сегодняшний день отмечайте `aria-current="date"` (или классом
+  `sf-datepicker-day-today`): календарь обводит его рамкой.
 - Клавиатурную навигацию по дням (стрелки, Home, End, листание месяцев) классы
   не дают: её даёт Smart Datepicker или ваш код.
 - В режиме принудительных цветов выбранные и недоступные дни рисуются
@@ -120,7 +127,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-datepicker` |
-| Части | `sf-datepicker-another-month`, `sf-datepicker-container`, `sf-datepicker-context`, `sf-datepicker-day`, `sf-datepicker-day-date`, `sf-datepicker-day-end`, `sf-datepicker-day-info`, `sf-datepicker-day-off`, `sf-datepicker-day-selected`, `sf-datepicker-day-special`, `sf-datepicker-day-start`, `sf-datepicker-day-today`, `sf-datepicker-dayline`, `sf-datepicker-dayline-date`, `sf-datepicker-indicator`, `sf-datepicker-main`, `sf-datepicker-period`, `sf-datepicker-preset`, `sf-datepicker-presets`, `sf-datepicker-ribbon`, `sf-datepicker-ribbon-month`, `sf-datepicker-ribbon-title`, `sf-datepicker-row`, `sf-datepicker-sheet-close`, `sf-datepicker-sheet-foot`, `sf-datepicker-sheet-head`, `sf-datepicker-sheet-presets`, `sf-datepicker-sheet-summary`, `sf-datepicker-sheet-title`, `sf-datepicker-sheet-today`, `sf-datepicker-sheet-weekdays`, `sf-datepicker-text`, `sf-datepicker-text-end`, `sf-datepicker-text-selected`, `sf-datepicker-text-start`, `sf-datepicker-time`, `sf-datepicker-time-separator`, `sf-datepicker-time-value`, `sf-datepicker-top`, `sf-datepicker-week`, `sf-datepicker-weekday`, `sf-datepicker-weekday-off`, `sf-datepicker-wrap` |
+| Части | `sf-datepicker-another-month`, `sf-datepicker-choice`, `sf-datepicker-container`, `sf-datepicker-context`, `sf-datepicker-day`, `sf-datepicker-day-date`, `sf-datepicker-day-end`, `sf-datepicker-day-info`, `sf-datepicker-day-off`, `sf-datepicker-day-selected`, `sf-datepicker-day-special`, `sf-datepicker-day-start`, `sf-datepicker-day-today`, `sf-datepicker-dayline`, `sf-datepicker-dayline-date`, `sf-datepicker-grid`, `sf-datepicker-indicator`, `sf-datepicker-main`, `sf-datepicker-period`, `sf-datepicker-preset`, `sf-datepicker-presets`, `sf-datepicker-ribbon`, `sf-datepicker-ribbon-month`, `sf-datepicker-ribbon-title`, `sf-datepicker-row`, `sf-datepicker-sheet-close`, `sf-datepicker-sheet-foot`, `sf-datepicker-sheet-head`, `sf-datepicker-sheet-presets`, `sf-datepicker-sheet-summary`, `sf-datepicker-sheet-title`, `sf-datepicker-sheet-today`, `sf-datepicker-sheet-weekdays`, `sf-datepicker-text`, `sf-datepicker-text-end`, `sf-datepicker-text-selected`, `sf-datepicker-text-start`, `sf-datepicker-time`, `sf-datepicker-time-part`, `sf-datepicker-time-separator`, `sf-datepicker-time-step`, `sf-datepicker-time-value`, `sf-datepicker-top`, `sf-datepicker-top--years`, `sf-datepicker-week`, `sf-datepicker-weekday`, `sf-datepicker-weekday-off`, `sf-datepicker-weekdays`, `sf-datepicker-wrap` |
 | Модификаторы | `sf-datepicker--inline`, `sf-datepicker--presets`, `sf-datepicker--range`, `sf-datepicker--sheet`, `sf-datepicker--time` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -153,7 +160,7 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-datepicker--background-color` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `var(--sf-surface-place, var(--sf-surface-popup))` | `background-color`, `--sf-surface-place`, `--sf-surface-place-solid`, `--sf-surface-place-ground`, `--sf-datepicker-context--background-color` |
+| `--sf-datepicker--background-color` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `var(--sf-surface-place, var(--sf-surface-popup))` | `--sf-datepicker-context--background-color`, `background-color`, `--sf-surface-place`, `--sf-surface-place-solid`, `--sf-surface-place-ground` |
 | `--sf-datepicker--border-bottom-left-radius` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `var(--sf-0)` | `border-end-start-radius` |
 | `--sf-datepicker--border-bottom-right-radius` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `var(--sf-0)` | `border-end-end-radius` |
 | `--sf-datepicker--border-top-left-radius` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--sheet`: `var(--sf-0)` | `border-start-start-radius` |

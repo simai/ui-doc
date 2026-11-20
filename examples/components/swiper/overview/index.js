@@ -5,6 +5,7 @@ document.querySelectorAll('[data-swiper-demo="overview"]').forEach((demo) => {
     new window.Swiper(demo.querySelector('.swiper'), {
       keyboard: true,
       speed: reducedMotion ? 0 : 300,
+      spaceBetween: 12,
       navigation: {
         prevEl: demo.querySelector('[data-swiper-prev]'),
         nextEl: demo.querySelector('[data-swiper-next]'),

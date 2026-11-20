@@ -6,7 +6,7 @@ profile: reference
 
 # Группа кнопок
 
-:badge[sf-button-group]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button-group]{variant=outline scheme=on-surface size=1/2} :badge[1.6.1]{variant=outline scheme=on-surface size=1/2}
 
 Группа объединяет несколько связанных кнопок в один компактный элемент: соседние
 границы сливаются, внешние углы сохраняют радиус кнопок. Берите её для близких
@@ -26,15 +26,18 @@ profile: reference
 [кнопки](/ru/components/actions/buttons/) `sf-button`.
 
 - Кнопки лежат прямыми потомками контейнера: группа соединяет только их.
+  Кнопки-значки `sf-icon-button` соединяются так же, как кнопки с подписью.
 - Контейнеру нужно доступное имя — `aria-label` или `aria-labelledby`.
   Роль `group` скрипт компонента ставит сам, если роли нет.
 - Скрипт расставляет кнопкам классы сегментов `segment-start`,
   `segment-middle` и `segment-end` по их порядку и обновляет их при
   добавлении и удалении кнопок. Писать эти классы вручную не нужно.
-- Все кнопки группы берут один размер и одну схему; вид может отличаться,
-  например у выбранного действия.
-- Группа не переносится на новую строку: если кнопки не помещаются по ширине,
-  она прокручивается по горизонтали.
+- Все кнопки группы берут один размер и одну схему. Контур у группы один:
+  тонкая серая рамка вокруг всех кнопок и одна линия на стыке, какой бы вид ни
+  был у кнопок. Вид кнопки меняет только её заливку, поэтому прозрачная кнопка
+  в группе выглядит как кнопка с рамкой.
+- Кнопку с меню собирают не группой, а
+  [разделённой кнопкой](/ru/components/actions/buttons/#кнопка-с-меню).
 
 ## Варианты
 
@@ -47,6 +50,34 @@ profile: reference
 сам переносит значение в `data-orientation`.
 
 :::example {id="components/button-group/orientation" label="Ориентация"}
+:::
+
+### Кнопки-значки
+
+Группа соединяет и кнопки-значки: так собирают панель форматирования. На
+стыке одна линия, внутренние углы прямые, снаружи радиус кнопок. В одной
+группе можно смешать кнопки-значки и кнопки с подписью одного размера.
+
+:::example {id="components/button-group/icon-buttons" label="Кнопки-значки в группе"}
+:::
+
+### Не помещается по ширине
+
+Если группа шире своего контейнера, она сама встаёт в столбец на всю ширину
+и рисуется как вертикальная: общий контур, одна линия на стыке. Когда места
+снова хватает, группа возвращается в ряд. Вбок группа не прокручивается.
+Группу с заданным `data-orientation` скрипт не переставляет.
+
+Чтобы группа оставалась в один ряд, поставьте ей `overflow="more"`: кнопки,
+которые не помещаются, уходят в последний сегмент «Ещё» (⋯) того же размера и
+вида. Он открывает меню со значками и названиями ушедших кнопок; пункт меню
+нажимает саму кнопку. Уходят с конца. Порядок задаёт атрибут `priority` у
+кнопки: `priority="1"` — самая важная, чем больше число, тем раньше уходит,
+кнопка без атрибута уходит первой, `priority="pin"` не уходит никогда.
+Главная и нажатая кнопки тоже остаются в ряду. Ушедшей кнопке скрипт ставит
+класс `sf-button-group-out`, писать его вручную не нужно.
+
+:::example {id="components/button-group/overflow" label="Узкий контейнер: в столбец и «Ещё»"}
 :::
 
 ## Состояния
@@ -117,9 +148,9 @@ whenLoader(() => SF.Loader.ready('ButtonGroup', () => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-button-group` |
-| Части | `sf-button-group-count`, `sf-button-group-icon-only`, `sf-button-group-label--hidden`, `sf-button-group-narrow`, `sf-button-group-out`, `sf-button-group-plate`, `sf-button-group-segment` |
-| Модификаторы | `sf-button-group--backdrop-color`, `sf-button-group--backdrop-media`, `sf-button-group--folded`, `sf-button-group--full-width`, `sf-button-group--on-surface`, `sf-button-group--plate-raised`, `sf-button-group--primary`, `sf-button-group--radius-default`, `sf-button-group--radius-rounded`, `sf-button-group--radius-square`, `sf-button-group--secondary`, `sf-button-group--segmented` |
-| Размеры | `sf-button-group--size-1/2`, `sf-button-group--size-1/3`, `sf-button-group--size-2`, `sf-button-group--size-3` |
+| Части | `sf-button-group-out` |
+
+В том же файле стилей лежат классы дорожки [Сегментного переключателя](/ru/smart/actions/segmented/#для-разработчика): их ставит `sf-segmented`, это не настройки группы — `sf-button-group--backdrop-color`, `sf-button-group--backdrop-media`, `sf-button-group--folded`, `sf-button-group--full-width`, `sf-button-group--on-surface`, `sf-button-group--plate-raised`, `sf-button-group--primary`, `sf-button-group--radius-default`, `sf-button-group--radius-rounded`, `sf-button-group--radius-square`, `sf-button-group--secondary`, `sf-button-group--segmented`, `sf-button-group--size-1/2`, `sf-button-group--size-1/3`, `sf-button-group--size-2`, `sf-button-group--size-3`, `sf-button-group-count`, `sf-button-group-icon-only`, `sf-button-group-label--hidden`, `sf-button-group-narrow`, `sf-button-group-plate`, `sf-button-group-segment`. Группе кнопок они не нужны.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

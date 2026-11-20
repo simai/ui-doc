@@ -175,8 +175,10 @@ JavaScript обычного компонента сам находит свои 
 ### Каскадные слои
 
 Стили компонентов лежат в каскадных слоях Framework (порядок слоёв — см. [Каскадные слои](/ru/guide/colour/cascade-layers/)):
-`sf.reset`, `sf.tokens`, `sf.base`, `sf.utilities`, `sf.components`,
-`sf.overrides`, `sf.states`. Основное оформление — в `sf.components`, реакции на
+`sf.reset`, `sf.tokens`, `sf.base`, `sf.paint`, `sf.utilities`, `sf.components`,
+`sf.overrides`, `sf.states`. Заливка, край и цвет — в `sf.paint`, до утилит,
+поэтому утилита цвета перекрашивает компонент; геометрия — в `sf.components`,
+после утилит. Реакции на
 наведение, фокус, нажатие и недоступность — в `sf.states`. Слой состояний стоит
 последним, поэтому состояние всегда видно, даже если вариант задан более
 длинным селектором.

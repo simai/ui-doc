@@ -6,7 +6,7 @@ profile: reference
 
 # Код подтверждения
 
-:badge[sf-verification]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-verification]{variant=outline scheme=on-surface size=1/2} :badge[1.8.1]{variant=outline scheme=on-surface size=1/2}
 
 Код подтверждения принимает одноразовый код из сообщения или приложения и
 показывает его по отдельным ячейкам. Под ячейками лежит одно нативное поле,
@@ -21,7 +21,7 @@ profile: reference
 ## Разметка
 
 Минимальную разметку показывает пример выше. Части вложены так:
-`label.sf-verification-form` → подпись `sf-verification-form-label`,
+`div.sf-verification-form` → подпись `label.sf-verification-form-label`,
 `sf-verification` с `input.sf-verification-input` и подсказка
 `sf-verification-form-hint`.
 
@@ -36,7 +36,13 @@ profile: reference
   прозрачное и лежит поверх ячеек. Скрипт ставит ему `maxlength` по длине кода,
   `autocomplete="one-time-code"`, а для цифрового кода — `inputmode="numeric"`,
   если их нет.
+- Подпись — `label` с `for`, указывающим на `id` поля. Подсказка лежит рядом
+  с подписью, а не внутри неё, и связана с полем через `aria-describedby`:
+  так диктор называет поле только подписью, а подсказку читает как описание.
 - Подпись и подсказка необязательны, но без подписи полю нужен `aria-label`.
+- `sf-verification-separator` — короткая черта между группами ячеек, а
+  `sf-verification-form-wrap` — прежняя разметка с отдельным полем на каждую
+  ячейку; CSS пока рисует её, новой разметке они не нужны.
 
 ## Варианты
 
@@ -54,12 +60,13 @@ profile: reference
 
 ### Размер
 
-`sf-verification--size-1/2`, `sf-verification--size-1`, `sf-verification--size-2` • [справочник](#классы)
+`sf-verification--size-1/3`, `sf-verification--size-1/2`, `sf-verification--size-1`, `sf-verification--size-2`, `sf-verification--size-3` • [справочник](#классы)
 
-Три ступени — `sf-verification--size-1/2`, `sf-verification--size-1` и
-`sf-verification--size-2` на рамке и такие же
-`sf-verification-form--size-*` на оболочке. Размер меняет ячейки и текст в
-них; берите ступень полей той же формы.
+Пять ступеней — от `sf-verification--size-1/3` до `sf-verification--size-3`
+на рамке и такие же `sf-verification-form--size-*` на оболочке. Ячейка равна
+по высоте кнопке и полю той же ступени: 28, 32, 40, 48 и 56 px, на телефоне
+24, 28, 36, 44 и 52 px. Размер меняет ячейки и текст в них; берите ступень
+полей той же формы.
 
 :::example {id="components/verification/sizes" label="Размеры кода"}
 :::
@@ -111,9 +118,11 @@ profile: reference
 
 ### Фокус
 
-Когда поле в фокусе, рамка ячеек получает кольцо фокуса. В примере фокус
-показан классом `focus-visible` на поле, который CSS компонента читает наравне
-с `:focus-visible`.
+Фокус показывает текущая ячейка — та, в которую попадёт следующий символ.
+Он одинаковый после нажатия мышью и после клавиши Tab, как у текстовых полей:
+рамка ячейки становится цветом фокуса и толщиной 2 px внутрь, снаружи кольца
+нет, размер ячейки не меняется. Нажмите в поле примера или перейдите в него
+клавишей Tab.
 
 :::example {id="components/verification/state-focus" label="Код в фокусе"}
 :::
@@ -127,7 +136,7 @@ profile: reference
 - Цифры кода всегда идут слева направо, в том числе при письме справа налево.
 - Подсказка говорит, сколько символов ввести и где взять код; ошибку
   сообщайте текстом.
-- В режиме принудительных цветов ячейки и кольцо фокуса рисуются системными
+- В режиме принудительных цветов ячейки и рамка фокуса рисуются системными
   цветами.
 
 ## JavaScript
@@ -153,12 +162,23 @@ document.addEventListener('verification:complete', (event) => {
 
 ## Классы
 
+**`sf-verification`**
+
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-verification` |
-| Части | `sf-verification-cell`, `sf-verification-cells`, `sf-verification-form`, `sf-verification-form--filled`, `sf-verification-form--size-1`, `sf-verification-form--size-1/2`, `sf-verification-form--size-1/3`, `sf-verification-form--size-2`, `sf-verification-form--size-3`, `sf-verification-form-hint`, `sf-verification-form-label`, `sf-verification-form-wrap`, `sf-verification-input`, `sf-verification-separator` |
+| Части | `sf-verification-cell`, `sf-verification-cells`, `sf-verification-input`, `sf-verification-separator` |
 | Модификаторы | `sf-verification--filled` |
 | Размеры | `sf-verification--size-1`, `sf-verification--size-1/2`, `sf-verification--size-1/3`, `sf-verification--size-2`, `sf-verification--size-3` |
+
+**`sf-verification-form`**
+
+| Что | Классы |
+|:---|:---|
+| Блок | `sf-verification-form` |
+| Части | `sf-verification-form-hint`, `sf-verification-form-label`, `sf-verification-form-wrap` |
+| Модификаторы | `sf-verification-form--filled` |
+| Размеры | `sf-verification-form--size-1`, `sf-verification-form--size-1/2`, `sf-verification-form--size-1/3`, `sf-verification-form--size-2`, `sf-verification-form--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -187,12 +207,12 @@ document.addEventListener('verification:complete', (event) => {
 
 ### Устройство
 
-Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-verification`); переменную без него задают только модификаторы.
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-verification`, `.sf-verification-form`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-verification--border-width` | `var(--sf-verification-border-width, var(--sf-px))` | `border` |
-| `--sf-verification--cell-size` | `var(--sf-verification-cell-size, var(--sf-ui-1--control-height))` | `width`, `inline-size`, `height`, `block-size` |
+| `--sf-verification--border-width` | `var(--sf-verification-border-width, var(--sf-px))` | `border-width` |
+| `--sf-verification--cell-size` | `var(--sf-verification-cell-size, var(--sf-ui-1--control-height))` | `flex`, `min-width`, `min-inline-size`, `height`, `block-size` |
 | `--sf-verification--font-size` | не задана; задают модификаторы, например `.sf-verification--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-verification--gap` | `var(--sf-verification-gap, var(--sf-space-1/3))` | `gap` |
 | `--sf-verification--line-height` | не задана; задают модификаторы, например `.sf-verification--size-1/2`: `var(--sf-text-height-1/2)` | `line-height`, `height`, `block-size` |

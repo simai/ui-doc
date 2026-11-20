@@ -57,7 +57,6 @@ description: "Задаёт заливку фигур SVG цветом роли �
 |:---|:---|:---|
 | `fill-{значение}` | `fill: var(--sf-{значение})` | `transparent`, `current`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `fill-surface-{значение}` | `fill: var(--sf-surface-{значение})` | `page`, `area`, `2`, `3`, `4`, `inverse`, `disabled` |
-| `fill-surface` | `fill: var(--sf-surface-area)` | — |
 | `fill-surface-inverse-fixed` | `fill: var(--sf-surface-inverse-fixed)` | — |
 | `fill-{значение}-container` | `fill: var(--sf-{значение}-container)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `fill-on-surface` | `fill: var(--sf-on-surface)` | — |
@@ -70,7 +69,7 @@ description: "Задаёт заливку фигур SVG цветом роли �
 | `hover:fill-{значение}-state` (`.hover:fill-{значение}-state:hover`) | `fill: var(--sf-{значение}-state-hover)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `hover:fill-{значение}` (`.hover:fill-{значение}:hover`) | `fill: var(--sf-{значение}-hover)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 
-Прежние имена работают до 2027-01-01: `fill-disable` → `fill-surface-disabled`, `fill-error-transparent-overlay` → `fill-error-container-strong`, `fill-error-transparent-select` → `fill-error-state-select`, `fill-primary-transparent-overlay` → `fill-primary-container-strong`, `fill-primary-transparent-select` → `fill-primary-state-select`, `fill-secondary-transparent-overlay` → `fill-secondary-container-strong`, `fill-secondary-transparent-select` → `fill-secondary-state-select`, `fill-success-transparent-overlay` → `fill-success-container-strong`, `fill-success-transparent-select` → `fill-success-state-select`, `fill-surface-0` → `fill-surface-page`, `fill-surface-1` → `fill-surface-area`, `fill-surface-transparent-overlay` → `fill-surface-container-strong`, `fill-surface-transparent-select` → `fill-surface-state-select`, `fill-tertiary-transparent-overlay` → `fill-tertiary-container-strong`, `fill-tertiary-transparent-select` → `fill-tertiary-state-select`, `fill-warning-transparent-overlay` → `fill-warning-container-strong`, `fill-warning-transparent-select` → `fill-warning-state-select`, `hover:fill-error-transparent` → `hover:fill-error-state`, `hover:fill-primary-transparent` → `hover:fill-primary-state`, `hover:fill-secondary-transparent` → `hover:fill-secondary-state`, `hover:fill-success-transparent` → `hover:fill-success-state`, `hover:fill-surface-transparent` → `hover:fill-surface-state`, `hover:fill-tertiary-transparent` → `hover:fill-tertiary-state`, `hover:fill-warning-transparent` → `hover:fill-warning-state`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:fill-surface-container`.
 
@@ -162,8 +161,6 @@ description: "Задаёт заливку фигур SVG цветом роли �
 | крупная фигура, фон иллюстрации | `fill-*-container` |
 | нейтральная графика | `fill-on-surface`, `fill-on-surface-variant`, `fill-surface-*` |
 | подсветка поверх другой графики | `fill-*-state-select`, `fill-*-container-strong` |
-
-`fill-surface` — то же, что `fill-surface-area`.
 
 ### Значок цвета текста
 

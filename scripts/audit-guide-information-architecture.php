@@ -141,8 +141,19 @@ foreach ($redirectRows as $row) {
 foreach ($redirects as $from => $to) {
     $check($from !== $to && ! isset($redirects[$to]), 'redirect_chain_or_cycle', ['from' => $from, 'to' => $to]);
     if (str_starts_with($to, 'ru/guide')) {
-        $page = 'content/' . $to;
-        $check($read($page . '.md') !== null || $read($page . '/index.md') !== null, 'redirect_target_missing', ['from' => $from, 'to' => $to]);
+        // A target may name a section of the page (page#anchor): the page must
+        // exist and one of its headings must give that anchor.
+        [$target, $anchor] = array_pad(explode('#', $to, 2), 2, null);
+        $page = 'content/' . $target;
+        $markdown = $read($page . '.md') ?? $read($page . '/index.md');
+        $check($markdown !== null, 'redirect_target_missing', ['from' => $from, 'to' => $to]);
+        if ($markdown !== null && $anchor !== null) {
+            preg_match_all('/^#{2,6}\s+(.+?)\s*$/mu', $markdown, $headings);
+            // Docara's heading id: lower case, every run of other characters one hyphen.
+            $slugs = array_map(static fn (string $heading): string => trim((string) preg_replace(
+                '/[^\p{L}\p{N}\p{M}]+/u', '-', mb_strtolower($heading, 'UTF-8')), '-'), $headings[1]);
+            $check(in_array($anchor, $slugs, true), 'redirect_anchor_missing', ['from' => $from, 'to' => $to]);
+        }
     }
 }
 

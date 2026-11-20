@@ -77,10 +77,6 @@ description: "Задаёт способ позиционирования, коо
 | `inline-end-1/4` | `inset-inline-end: 25%` | — |
 | `bottom-1/4` | `bottom: 25%` | — |
 | `inline-start-1/4` | `inset-inline-start: 25%` | — |
-| `top-2/4` | `top: 50%` | — |
-| `inline-end-2/4` | `inset-inline-end: 50%` | — |
-| `bottom-2/4` | `bottom: 50%` | — |
-| `inline-start-2/4` | `inset-inline-start: 50%` | — |
 | `top-3/4` | `top: 75%` | — |
 | `inline-end-3/4` | `inset-inline-end: 75%` | — |
 | `bottom-3/4` | `bottom: 75%` | — |
@@ -105,18 +101,6 @@ description: "Задаёт способ позиционирования, коо
 | `inline-end-1/6` | `inset-inline-end: 16.666667%` | — |
 | `bottom-1/6` | `bottom: 16.666667%` | — |
 | `inline-start-1/6` | `inset-inline-start: 16.666667%` | — |
-| `top-2/6` | `top: 33.333333%` | — |
-| `inline-end-2/6` | `inset-inline-end: 33.333333%` | — |
-| `bottom-2/6` | `bottom: 33.333333%` | — |
-| `inline-start-2/6` | `inset-inline-start: 33.333333%` | — |
-| `top-3/6` | `top: 50%` | — |
-| `inline-end-3/6` | `inset-inline-end: 50%` | — |
-| `bottom-3/6` | `bottom: 50%` | — |
-| `inline-start-3/6` | `inset-inline-start: 50%` | — |
-| `top-4/6` | `top: 66.666667%` | — |
-| `inline-end-4/6` | `inset-inline-end: 66.666667%` | — |
-| `bottom-4/6` | `bottom: 66.666667%` | — |
-| `inline-start-4/6` | `inset-inline-start: 66.666667%` | — |
 | `top-5/6` | `top: 83.333333%` | — |
 | `inline-end-5/6` | `inset-inline-end: 83.333333%` | — |
 | `bottom-5/6` | `bottom: 83.333333%` | — |
@@ -125,42 +109,14 @@ description: "Задаёт способ позиционирования, коо
 | `inline-end-1/12` | `inset-inline-end: 8.333333%` | — |
 | `bottom-1/12` | `bottom: 8.333333%` | — |
 | `inline-start-1/12` | `inset-inline-start: 8.333333%` | — |
-| `top-2/12` | `top: 16.666667%` | — |
-| `inline-end-2/12` | `inset-inline-end: 16.666667%` | — |
-| `bottom-2/12` | `bottom: 16.666667%` | — |
-| `inline-start-2/12` | `inset-inline-start: 16.666667%` | — |
-| `top-3/12` | `top: 25%` | — |
-| `inline-end-3/12` | `inset-inline-end: 25%` | — |
-| `bottom-3/12` | `bottom: 25%` | — |
-| `inline-start-3/12` | `inset-inline-start: 25%` | — |
-| `top-4/12` | `top: 33.333333%` | — |
-| `inline-end-4/12` | `inset-inline-end: 33.333333%` | — |
-| `bottom-4/12` | `bottom: 33.333333%` | — |
-| `inline-start-4/12` | `inset-inline-start: 33.333333%` | — |
 | `top-5/12` | `top: 41.666667%` | — |
 | `inline-end-5/12` | `inset-inline-end: 41.666667%` | — |
 | `bottom-5/12` | `bottom: 41.666667%` | — |
 | `inline-start-5/12` | `inset-inline-start: 41.666667%` | — |
-| `top-6/12` | `top: 50%` | — |
-| `inline-end-6/12` | `inset-inline-end: 50%` | — |
-| `bottom-6/12` | `bottom: 50%` | — |
-| `inline-start-6/12` | `inset-inline-start: 50%` | — |
 | `top-7/12` | `top: 58.333333%` | — |
 | `inline-end-7/12` | `inset-inline-end: 58.333333%` | — |
 | `bottom-7/12` | `bottom: 58.333333%` | — |
 | `inline-start-7/12` | `inset-inline-start: 58.333333%` | — |
-| `top-8/12` | `top: 66.666667%` | — |
-| `inline-end-8/12` | `inset-inline-end: 66.666667%` | — |
-| `bottom-8/12` | `bottom: 66.666667%` | — |
-| `inline-start-8/12` | `inset-inline-start: 66.666667%` | — |
-| `top-9/12` | `top: 75%` | — |
-| `inline-end-9/12` | `inset-inline-end: 75%` | — |
-| `bottom-9/12` | `bottom: 75%` | — |
-| `inline-start-9/12` | `inset-inline-start: 75%` | — |
-| `top-10/12` | `top: 83.333333%` | — |
-| `inline-end-10/12` | `inset-inline-end: 83.333333%` | — |
-| `bottom-10/12` | `bottom: 83.333333%` | — |
-| `inline-start-10/12` | `inset-inline-start: 83.333333%` | — |
 | `top-11/12` | `top: 91.666667%` | — |
 | `inline-end-11/12` | `inset-inline-end: 91.666667%` | — |
 | `bottom-11/12` | `bottom: 91.666667%` | — |
@@ -201,6 +157,8 @@ description: "Задаёт способ позиционирования, коо
 | `absolute` | `position: absolute` | — |
 | `relative` | `position: relative` | — |
 | `sticky` | `position: sticky` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:top-0`.
 

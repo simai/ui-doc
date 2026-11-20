@@ -69,11 +69,10 @@ description: "Окрашивает текст цветовой ролью тем
 | `color-on-{значение}` | `color: var(--sf-on-{значение})` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info`, `hue` |
 | `color-on-surface-{значение}` | `color: var(--sf-on-surface-{значение})` | `fixed`, `variant`, `inverse`, `disabled` |
 | `color-on-surface-inverse-fixed` | `color: var(--sf-on-surface-inverse-fixed)` | — |
-| `color-disable` | `color: var(--sf-surface-disabled)` | — |
 | `color-on-{значение}-container` | `color: var(--sf-on-{значение}-container)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info`, `hue` |
 | `color-on-{значение}-container-graphic` | `color: var(--sf-on-{значение}-container-graphic)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info`, `hue` |
 
-Прежние имена работают до 2027-01-01: `color-on-disable` → `color-on-surface-disabled`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Другие классы записи `utility-c17-legacy-palette-classes` журнала уходят и работают до 2027-01-01; замена — ролевой класс, ближайший по тону, например `color-on-surface` ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
 
@@ -162,6 +161,10 @@ description: "Окрашивает текст цветовой ролью тем
 
 На цветном фоне роли берите в паре с фоном: на `bg-primary` —
 `color-on-primary`, на `bg-primary-container` — `color-on-primary-container`.
+Пара работает и тогда, когда `color-on-primary` стоит на вложенном элементе:
+на сильном фоне `bg-<роль>` элемент с этим классом получает цвет текста фона,
+а не цвет самого фона. Встроенный `code` на цветной плашке сам берёт её
+чернила и подложку из её цвета — отдельный класс цвета ему не нужен.
 Вариант с окончанием `-graphic` предназначен для значков и графики на
 контейнере; для текста берите вариант без него.
 
@@ -185,7 +188,7 @@ description: "Окрашивает текст цветовой ролью тем
 
 - `color-secondary` — акцентная роль, а не уровень важности текста. Для
   вспомогательного текста берите `color-on-surface-variant`.
-- `color-disable` — почти прозрачный цвет заливки недоступного элемента, текст
+- `color-on-surface-disabled` — почти прозрачный цвет заливки недоступного элемента, текст
   с ним не читается. Цвет текста недоступного элемента — `color-on-surface-disabled`.
 - Готового класса для токена `--sf-on-surface-muted` нет. Он слабее
   `--sf-on-surface-variant`; если проекту нужен такой уровень, объявите свой

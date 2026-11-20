@@ -1,0 +1,23 @@
+<sf-wizard id="wizard-site" heading="Новый сайт">
+  <sf-wizard-step name="name" label="Название" type="form"
+    description="Так сайт будет называться в панели и в заголовке страниц.">
+    <form>
+      <sf-input name="title" label="Название сайта" required></sf-input>
+    </form>
+  </sf-wizard-step>
+  <sf-wizard-step name="template" label="Шаблон" type="info">
+    <p class="m-0">Шаблон «Магазин»: каталог, корзина и оплата уже настроены.</p>
+  </sf-wizard-step>
+  <sf-wizard-step name="check" label="Проверка" type="review"
+    description="Проверьте, что получится, и примените.">
+    <ul class="sf-wizard-plan">
+      <li><span><b>Название</b> — из первого шага</span>
+        <sf-button appearance="ghost" size="1/2" text="Изменить" data-wizard-step="name"></sf-button></li>
+      <li><span><b>Шаблон</b> — «Магазин»</span>
+        <sf-button appearance="ghost" size="1/2" text="Изменить" data-wizard-step="template"></sf-button></li>
+    </ul>
+  </sf-wizard-step>
+  <sf-wizard-step name="done" label="Готово" type="result">
+    <p class="m-0">Сайт создан.</p>
+  </sf-wizard-step>
+</sf-wizard>

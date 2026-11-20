@@ -1,16 +1,24 @@
 ---
 title: "Оглавление"
-description: "Показывает разделы длинной страницы списком якорных ссылок с отметкой текущего."
+description: "Уходящий класс оглавления: работает до 2027-01-01; оглавление страницы — sf-contents."
 profile: reference
 ---
 
 # Оглавление
 
-:badge[sf-outline]{variant=outline scheme=on-surface size=1/2} :badge[1.1.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-outline]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
-Оглавление показывает разделы длинной страницы списком якорных ссылок и
-отмечает текущий раздел. Для навигации между страницами берите меню или
-хлебные крошки.
+`sf-outline` уходит из SIMAI Framework (его имя совпадает с цветовой ролью
+`--sf-outline`): классы рисуют, как рисовали, до 2027-01-01, а первое
+использование на странице записывается в `SF.deprecations`. Оглавление
+страницы — [Оглавление](/ru/smart/navigation/contents/) `<sf-contents>`: оно
+само отмечает текущий раздел при прокрутке.
+
+| Было | Стало |
+|:---|:---|
+| `nav.sf-outline` со списками `sf-outline__list` | `<sf-contents>` |
+
+Ниже описана прежняя разметка — для страниц, которые ещё её используют.
 
 ## Пример
 
@@ -35,8 +43,9 @@ profile: reference
 
 ### Текущий раздел
 
-Ссылка с `aria-current="location"` получает полосу основного цвета в начале
-строки, заливку и среднее начертание. Ставьте его ровно одной ссылке — на
+Ссылка с `aria-current="location"` получает заливку
+`--sf-primary-container-active` и цвет текста `--sf-on-primary-container`;
+полосы в начале строки нет. Ставьте его ровно одной ссылке — на
 раздел, который сейчас на экране; атрибут `data-sf-outline-active` оформляет
 ссылку так же, но экранный диктор его не объявляет.
 
@@ -59,14 +68,13 @@ profile: reference
 - Текущий раздел отмечает `aria-current="location"`: экранный диктор объявляет
   его, а не только цвет.
 - Порядок ссылок совпадает с порядком заголовков на странице.
-- Полоса текущего раздела стоит в логическом начале строки и зеркалится при
+- Отступ вложенного уровня стоит в логическом начале строки и зеркалится при
   письме справа налево.
 
 ## Классы
 
 | Что | Классы |
 |:---|:---|
-| Блок | `sf-outline` |
 | Части | `sf-outline__link`, `sf-outline__list` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -85,10 +93,11 @@ profile: reference
 | `--sf-outline--hover-background` | `var(--sf-surface-container-hover)` | `background-color` |
 | `--sf-outline--hover-color` | `var(--sf-on-surface)` | `color` |
 | `--sf-outline--indent` | `var(--sf-space-2)` | `padding-inline-start` |
-| `--sf-outline--indicator-width` | `var(--sf-a2)` | `padding-inline-start`, `border-inline-start` |
+| `--sf-outline--indicator-width` | `var(--sf-a2)` | `padding-inline-start`, `border-inline-start-width` |
 | `--sf-outline--link-padding-block` | `var(--sf-space-1/4)` | `padding-top`, `padding-bottom`, `padding-block` |
 | `--sf-outline--link-padding-inline` | `var(--sf-space-1)` | `padding-inline`, `padding-inline-start` |
 
 ## См. также
 
 - [Полоса прокрутки](/ru/components/tools/scrollbar/)
+- [Оглавление `<sf-contents>`](/ru/smart/navigation/contents/)

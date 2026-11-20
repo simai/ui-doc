@@ -3,8 +3,8 @@
   "rule": "D22",
   "palette": {
     "file": "distr/core/css/core.css",
-    "sha256": "107519748f664a63634abba766c56aae872dccbef469da343cb2fbc5da2468b0",
-    "pair": "ui-994f9db407fa"
+    "sha256": "8410e87ac6e80bc8980968c438bc9faea230ce832ee96f123cc92bbe5a9ec793",
+    "pair": "ui-1ed6b6c9a040"
   },
   "sets": [
     "place",

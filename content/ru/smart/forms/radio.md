@@ -5,7 +5,7 @@ description: "Даёт выбрать ровно один вариант из в
 
 # Радиокнопки
 
-:badge[sf-radio]{variant=outline scheme=on-surface size=1/2} :badge[1.3.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-radio]{variant=outline scheme=on-surface size=1/2} :badge[1.4.3]{variant=outline scheme=on-surface size=1/2}
 
 Радиокнопки дают выбрать один вариант из группы взаимоисключающих, где все
 варианты видны сразу. Для независимых вариантов берите
@@ -47,10 +47,10 @@ description: "Даёт выбрать ровно один вариант из в
 
 `description`, `help` • [справочник](#атрибуты)
 
-`description` — пояснение под названием. `help` выводит рядом с названием
-значок с указанным именем; экранный диктор его не читает.
+`description` — пояснение под названием. `help` ставит после названия знак «?» с пояснением, которое нужно не всем:
+оно открывается по нажатию, а знак называется по подписи («Подробнее: …»).
 
-:::example {id="smart-components/radio/composition" label="Название, пояснение и значок"}
+:::example {id="smart-components/radio/composition" label="Название, пояснение и знак «?»"}
 :::
 
 ## Состояния
@@ -143,6 +143,7 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 | `label` | строка | пусто | — | — |
 | `description` | строка | пусто | — | — |
 | `help` | строка | пусто | — | Пояснение за кнопкой «?» (sf-help-mark) после текста подписи: через --sf-space-1/4 после последнего слова подписи, на её последней строке, если подпись переносится; нажатие на кнопку открывает пояснение и никогда не меняет элемент. В слот help можно положить своё sf-help-mark. |
+| `position` | строка | `start` | `start`, `end` | Логическое место индикатора относительно текста, как у sf-checkbox (C251): `end` ставит его после колонки текста, в конце строки; справа налево следует направлению документа. |
 | `disabled` | да/нет | нет | — | — |
 | `name` | строка | пусто | — | — |
 | `value` | строка | `on` | — | Что отправляет выбранная радиокнопка; без значения — "on", как у родной радиокнопки. |
@@ -183,16 +184,17 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 
 | | |
 |:---|:---|
-| Тег | `<sf-radio>`, контракт `smart.radio` версии `1.3.5` |
-| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
+| Тег | `<sf-radio>`, контракт `smart.radio` версии `1.4.3` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как радиокнопка; нужна подпись или `aria-label`; с клавиатуры: `Tab`; стрелки; `Пробел`. |
-| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/radio` |
-| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-radio` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/radio` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-radio` |
 
 ## См. также
 
 - [Флажок](/ru/smart/forms/checkbox/) — независимые варианты.
 - [Выпадающий список](/ru/smart/navigation/dropdown/) — один вариант из длинного списка.
 - [Радиокнопки на классах](/ru/components/forms/radio/) — та же радиокнопка в статической разметке.
+- Рецепты: [«Фильтры в шторке»](/ru/recipes/find/filter-drawer/), [«Форма настроек»](/ru/recipes/edit/settings-form/)

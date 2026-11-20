@@ -5,7 +5,7 @@ description: "Рисует поверхность короткой подска�
 
 # Подсказка
 
-:badge[sf-tooltip]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tooltip]{variant=outline scheme=on-surface size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
 
 Подсказка показывает короткий текст рядом с элементом: значение ручки
 слайдера, пояснение к числу, сочетание клавиш. Сама она не следит, на что
@@ -49,14 +49,9 @@ description: "Рисует поверхность короткой подска�
 :::example {id="smart-components/tooltip/appearance" label="Светлая и тёмная поверхность"}
 :::
 
-### Размер
-
-У подсказки один размер: мелкий текст 12/16 и поля 4 × 8 px, у элемента
-любого размера. Атрибут `size` — прежнее имя, которое ничего не рисует; размер,
-отличный от `1/3`, отмечается в `SF.deprecations`.
-
-:::example {id="smart-components/tooltip/size" label="Размер подсказки"}
-:::
+Размер у подсказки один: текст 12/16, поля 4 × 8 px, у элемента любого
+размера. `size` — прежняя настройка, которая ничего не рисует: значение,
+отличное от `1/3`, отмечается в `SF.deprecations` до 2027-01-01.
 
 ### Положение стрелки
 
@@ -72,30 +67,14 @@ description: "Рисует поверхность короткой подска�
 
 ## Поведение
 
-### Подсказка у триггера
+### Подсказка у элемента
 
-Связка `data-tooltip` с `<sf-tooltip>` не работает: контроллер подсказки
-показывает и располагает сам элемент `<sf-tooltip>`, у которого нет
-собственного блока, и поверхность остаётся под триггером шириной в него.
-Для подсказки при наведении и фокусе пишите поверхность классами
-`sf-tooltip`, как на странице [Подсказка](/ru/components/overlays-media/tooltip/).
-
-```html
-<span class="sf-tooltip-anchor">
-  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1"
-    data-tooltip="save-tooltip" aria-describedby="save-tooltip">
-    <span class="sf-button-text-container">Сохранить</span>
-  </button>
-  <span id="save-tooltip" class="sf-tooltip sf-tooltip--dark sf-tooltip--arrow-bottom-center" hidden>
-    <span class="sf-tooltip-content flex flex-col">
-      <span class="sf-tooltip-wrap flex flex-col">
-        <span class="sf-tooltip-text">Сохранить изменения</span>
-      </span>
-      <span class="sf-tooltip-tail" aria-hidden="true"></span>
-    </span>
-  </span>
-</span>
-```
+Подсказку при наведении и фокусе показывают сами элементы.
+[Кнопка-иконка](/ru/smart/actions/icon-buttons/#атрибуты) показывает своё имя
+подсказкой Framework без отдельной разметки (атрибут `tooltip`). Для своей
+подсказки у любого триггера пишите поверхность классами `sf-tooltip`, как на
+странице [Подсказка](/ru/components/overlays-media/tooltip/), и связывайте её
+с элементом через `data-tooltip` и `aria-describedby`.
 
 ## Доступность
 
@@ -117,7 +96,7 @@ description: "Рисует поверхность короткой подска�
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
 | `appearance` | строка | `dark` | `light`, `dark` | Вид подсказки: dark — обратная поверхность (обычная подсказка, по умолчанию), light — приподнятая светлая поверхность. |
-| `size` | строка | `1/3` | `1/3`, `1/2`, `1`, `2`, `3` | Прежнее имя, которое ничего не рисует (решение владельца C160 (3), до 2027-01-01): все подсказки одного размера, текст 12/16, отступы 4 × 8. Размер, отличный от 1/3, отмечается в `SF.deprecations`. |
+| `size` | строка | `1/3` | `1/3`, `1/2`, `1`, `2`, `3` | Прежнее имя, которое ничего не рисует (C160 (3), до 2027-01-01): у всех подсказок один размер — текст 12/16, отступы 4 × 8. Размер, отличный от `1/3`, отмечается в `SF.deprecations`. |
 | `arrow` | строка | `none` | `none`, `top-center`, `bottom-center`, `inline-start`, `inline-end`, `bottom-inline-start`, `bottom-inline-end` | Логическое расположение хвоста. |
 | `text` | строка | пусто | — | Короткое основное описание. |
 | `supporting-text` | строка | пусто | — | Необязательное дополнительное описание. |
@@ -145,13 +124,13 @@ description: "Рисует поверхность короткой подска�
 
 | | |
 |:---|:---|
-| Тег | `<sf-tooltip>`, контракт `smart.tooltip` версии `1.5.0` |
-| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
+| Тег | `<sf-tooltip>`, контракт `smart.tooltip` версии `1.5.1` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Выпущен; используется в продуктах. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как подсказка; название компонент ставит сам; с клавиатуры: `Esc` закрывает открытую подсказку, фокус остаётся на месте. |
-| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/tooltip` |
-| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-tooltip` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/tooltip` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-tooltip` |
 
 ## См. также
 

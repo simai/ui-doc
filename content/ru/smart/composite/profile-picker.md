@@ -5,7 +5,7 @@ description: "Выбирает, создаёт, переименовывает, 
 
 # Выбор профиля
 
-:badge[sf-profile-picker]{variant=outline scheme=on-surface size=1/2} :badge[1.7.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-profile-picker]{variant=outline scheme=on-surface size=1/2} :badge[1.8.3]{variant=outline scheme=on-surface size=1/2}
 
 Выбор профиля даёт одно место для работы с профилями: профилями меню, видами
 записи и всем, у чего есть профили. В свёрнутом виде это кнопка, похожая на
@@ -98,9 +98,8 @@ picker.addEventListener('sf-profile-picker-select', (event) => openProfile(event
 | `sf-profile-picker-delete` | `{id}` | удалить |
 | `sf-profile-picker-reset` | `{id}` | сбросить к стандартному |
 
-Прежние имена событий — `sf-profile-select`, `sf-profile-create`,
-`sf-profile-rename`, `sf-profile-delete` и `sf-profile-reset` — приходят
-следом с полями из таблицы.
+Прежние имена событий — в руководстве
+[Прежние имена](/ru/guide/smart-components/names/).
 
 ## Доступность
 
@@ -116,7 +115,7 @@ picker.addEventListener('sf-profile-picker-select', (event) => openProfile(event
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
 | `label` | строка | — | — | Как здесь называется профиль («Профиль», «Вид»); без значения — «Профиль» на языке страницы. |
-| `size` | строка | `1` | `1/2`, `1` | Ступень кнопки открытия, строк и панели: по умолчанию 1, поэтому компактная админка получает меньшую ступень из `data-sf-density`, а телефон — из лестницы (решение владельца C22: никаких 1/2, написанных вручную ради компактности); 1/2 всё ещё рисуется, если задано. |
+| `size` | строка | `1` | `1/2`, `1` | Ступень открывающего элемента, строк и панели: `1` по умолчанию, поэтому компактная админка получает меньшую ступень от `data-sf-density`, а телефон — от лестницы (C22: без ручного `1/2` ради компактности); `1/2` всё ещё рисуется, если его задать. |
 | `resettable` | да/нет | нет | — | Показывает внизу «Сбросить к стандартному». |
 | `message` | строка | пусто | — | Почему приложение отказало в последнем действии; показывается в панели. |
 | `disabled` | да/нет | нет | — | — |
@@ -158,13 +157,13 @@ picker.addEventListener('sf-profile-picker-select', (event) => openProfile(event
 
 | | |
 |:---|:---|
-| Тег | `<sf-profile-picker>`, контракт `smart.profile-picker` версии `1.7.7` |
-| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
+| Тег | `<sf-profile-picker>`, контракт `smart.profile-picker` версии `1.8.3` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как меню; желательна подпись или `aria-label`; с клавиатуры: `↑`, `↓`, `Home`, `End`, `Enter`, `Пробел`, `F2`, `Delete`, `Esc`. |
-| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/profile-picker` |
-| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-profile-picker` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/profile-picker` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-profile-picker` |
 
 ## См. также
 

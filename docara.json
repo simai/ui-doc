@@ -55,19 +55,22 @@
   },
   "page_transforms": [
     {
-      "command": ["node", "scripts/highlight-code.mjs"]
-    },
-    {
       "command": ["node", "scripts/code-copy-root.mjs"]
     },
     {
       "command": ["node", "scripts/example-frame-permissions.mjs"]
     },
     {
+      "command": ["node", "scripts/example-tabs-inset.mjs"]
+    },
+    {
       "command": ["node", "scripts/inline-code-wrap.mjs"]
     },
     {
       "command": ["node", "scripts/reference-name-column.mjs"]
+    },
+    {
+      "command": ["php", "scripts/publish-framework-language-files.php"]
     }
   ],
   "base_url": "/",
@@ -100,7 +103,7 @@
   },
   "reader_preferences": {
     "enabled": true,
-    "view": "side-panel",
+    "view": "menu",
     "groups": [
       {
         "id": "appearance",

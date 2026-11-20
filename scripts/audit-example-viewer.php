@@ -15,13 +15,20 @@ if (! is_file($page)) {
     foreach ([
         'data-docara-example-viewer' => 'viewer_button_missing',
         'data-docara-example-viewports' => 'viewport_group_missing',
-        'data-docara-example-viewport="desktop"' => 'desktop_viewport_missing',
-        'data-docara-example-viewport="tablet"' => 'tablet_viewport_missing',
-        'data-docara-example-viewport="mobile"' => 'mobile_viewport_missing',
         '"examples.viewer":"Проверить адаптивность"' => 'viewer_translation_missing',
     ] as $needle => $code) {
         if (! str_contains($html, $needle)) {
             $blockers[] = ['code' => $code, 'path' => $page];
+        }
+    }
+    // Since Docara 3.18.0 the width switch is one sf-segmented whose items
+    // attribute (JSON, HTML-escaped) names the three widths; before it was
+    // three buttons with data-docara-example-viewport. Either form passes.
+    foreach (['desktop', 'tablet', 'mobile'] as $viewport) {
+        $button = 'data-docara-example-viewport="' . $viewport . '"';
+        $item = '/(?:&quot;|&#34;|")value(?:&quot;|&#34;|")\\s*:\\s*(?:&quot;|&#34;|")' . $viewport . '(?:&quot;|&#34;|")/u';
+        if (! str_contains($html, $button) && preg_match($item, $html) !== 1) {
+            $blockers[] = ['code' => $viewport . '_viewport_missing', 'path' => $page];
         }
     }
 }

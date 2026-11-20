@@ -109,4 +109,5 @@ description: "Смарт-компоненты по задачам интерфе
 - [Шапка сайта](/ru/smart/composite/site-header/)
 - [Поиск по сайту](/ru/smart/composite/search/)
 - [Выбор профиля](/ru/smart/composite/profile-picker/)
+- [Мастер](/ru/smart/composite/wizard/)
 

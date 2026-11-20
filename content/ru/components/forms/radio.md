@@ -6,7 +6,7 @@ profile: reference
 
 # Радиокнопки
 
-:badge[sf-radio-button]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-radio-button]{variant=outline scheme=on-surface size=1/2} :badge[1.6.1]{variant=outline scheme=on-surface size=1/2}
 
 Радиокнопки выбирают ровно один вариант из группы, когда все варианты нужно
 показать сразу. Для независимых параметров берите
@@ -36,6 +36,11 @@ profile: reference
 - Текст — в `sf-radio-button-container`: подпись `sf-radio-button-text` внутри
   `sf-radio-button-top` или прямо в контейнере, пояснение —
   `sf-radio-button-description`.
+- Классовая радиокнопка — строка текста: шаг строк в группе задаёт
+  контейнер. Готовая группа с шагом строк по стандарту (40 на размере `1`,
+  60 с пояснением, 32 в компактной области) —
+  [выбор из вариантов](/ru/smart/forms/input-choice/) `sf-input-choice` с
+  `appearance="list"` или смарт-радиокнопки.
 
 ## Варианты
 
@@ -54,9 +59,10 @@ profile: reference
 ### Состав
 
 Подпись обязательна: она даёт кнопке доступное имя. Пояснение добавляет
-`sf-radio-button-description`, значок подсказки — `sf-icon` в
-`sf-radio-button-top` рядом с подписью; размер значка следует за размером
-кнопки.
+`sf-radio-button-description`. Подсказку ставят знаком
+[«?»](/ru/smart/feedback/help-mark/) `sf-help-mark` в `sf-radio-button-top`
+рядом с подписью: это отдельная кнопка, она открывает подсказку и не меняет
+выбор. Скрипт компонента сам связывает подпись и пояснение с input.
 
 :::example {id="components/radio/composition" label="Подпись, пояснение и значок"}
 :::
@@ -69,26 +75,6 @@ profile: reference
 `content-main-between`.
 
 :::example {id="components/radio/position" label="Положение индикатора"}
-:::
-
-### Образцы шрифта
-
-`sf-radio-group--font` • [справочник](#классы)
-
-Вид `font` показывает варианты плитками с образцом текста вместо круглых
-индикаторов — для выбора начертания или шрифта. Группу оборачивает
-`sf-radio-button sf-radio-wrap--type-font` с классом размера; плитки лежат в
-`sf-radio-group--font`, каждая — `label.sf-radio-button.sf-radio-button--type-font`
-с образцом `sf-radio-text` и input.
-
-- Input каждой плитки скрывается классом `sr-only` и получает `aria-label`:
-  образец декоративный и имени не даёт.
-- `data-sf-radio-descriptions` на обёртке — JSON-массив пояснений, а
-  `data-sf-radio-font-index` на input — номер плитки. По ним скрипт ставит
-  `active` на образец выбранной плитки и пишет её пояснение в
-  `sf-radio-button-description`.
-
-:::example {id="components/radio/types" label="Образцы шрифта"}
 :::
 
 ## Состояния
@@ -116,8 +102,8 @@ profile: reference
 ### Ошибка
 
 Класс `error` на оболочке окрашивает рамку индикатора цветом ошибки. Текст
-ошибки кладите в пояснение и связывайте с input через `aria-describedby`, сам
-input получает `aria-invalid="true"`.
+ошибки кладите в пояснение: скрипт свяжет его с input сам. Input получает
+`aria-invalid="true"`.
 
 :::example {id="components/radio/state-error" label="Радиокнопка с ошибкой"}
 :::
@@ -185,26 +171,22 @@ whenLoader(() => SF.Loader.ready('Radio', (Radio) => {
 |:---|:---|
 | Блок | `sf-radio-button` |
 | Части | `sf-radio-button-box`, `sf-radio-button-container`, `sf-radio-button-description`, `sf-radio-button-mark`, `sf-radio-button-text`, `sf-radio-button-top` |
-| Модификаторы | `sf-radio-button--type-font` |
 | Размеры | `sf-radio-button--size-1`, `sf-radio-button--size-1/2`, `sf-radio-button--size-2` |
 
 **`sf-radio-wrap`**
 
 | Что | Классы |
 |:---|:---|
-| Модификаторы | `sf-radio-wrap--type-font` |
 
 **`sf-radio-group`**
 
 | Что | Классы |
 |:---|:---|
-| Модификаторы | `sf-radio-group--font` |
 
 **`sf-radio-text`**
 
 | Что | Классы |
 |:---|:---|
-| Блок | `sf-radio-text` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -242,7 +224,7 @@ whenLoader(() => SF.Loader.ready('Radio', (Radio) => {
 | `--sf-radio-button--easing` | `var(--sf-ease-move)` | `transition-timing-function`, `transition` |
 | `--sf-radio-button--gap` | не задана; задают модификаторы, например `.sf-radio-button--size-1/2`: `var(--sf-radio-button-gap, var(--sf-space-1/2))` | `gap` |
 | `--sf-radio-button-box--background-color` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-radio-button-background-color, transparent)` | `background-color` |
-| `--sf-radio-button-box--border` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-style`, `border-width`, `inset-inline-end` |
+| `--sf-radio-button-box--border` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-px) solid` | `border`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-style`, `border-width`, `border-color`, `inset-inline-end` |
 | `--sf-radio-button-box--border-color` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-radio-button-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-radio-button-box--border-end-end-radius` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-radius-circle)` | `border-end-end-radius` |
 | `--sf-radio-button-box--border-end-start-radius` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-radius-circle)` | `border-end-start-radius` |
@@ -275,6 +257,7 @@ whenLoader(() => SF.Loader.ready('Radio', (Radio) => {
 
 ## См. также
 
+- [Сегментный переключатель](/ru/smart/actions/segmented/) — выбор начертания и других коротких вариантов плитками.
 - [Флажок](/ru/components/forms/checkbox/)
 - [Переключатель](/ru/components/forms/switch/)
 - [Радиокнопки — смарт-компонент](/ru/smart/forms/radio/)

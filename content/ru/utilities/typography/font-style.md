@@ -34,7 +34,7 @@ description: "Делает текст наклонным или снимает �
 
 ```html
 <p class="italic color-on-surface-variant">Подпись к иллюстрации</p>
-<em class="italic-none weight-7">Выделение жирным вместо наклона</em>
+<em class="italic-none weight-bold">Выделение жирным вместо наклона</em>
 ```
 
 ## Ограничения

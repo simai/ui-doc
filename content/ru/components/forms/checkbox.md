@@ -6,7 +6,7 @@ profile: reference
 
 # Флажок
 
-:badge[sf-checkbox]{variant=outline scheme=on-surface size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-checkbox]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Флажок включает независимый параметр или выбирает несколько значений из
 списка. Для одного выбора из взаимоисключающих вариантов берите
@@ -53,10 +53,12 @@ profile: reference
 ### Состав
 
 Подпись обязательна: она даёт флажку доступное имя. Пояснение добавляет
-`sf-checkbox-description`, значок подсказки — `sf-icon` в `sf-checkbox-top`
-рядом с подписью; размер значка следует за размером флажка. Скрипт
-компонента пояснение с input не связывает: дайте пояснению `id` и напишите
-на input `aria-describedby` с этим `id` сами.
+`sf-checkbox-description`. Подсказку ставят знаком
+[«?»](/ru/smart/feedback/help-mark/) `sf-help-mark` в `sf-checkbox-top` рядом с
+подписью: это отдельная кнопка, она открывает подсказку и не ставит отметку.
+Простой значок `sf-icon` в подписи подсказкой не работает. Скрипт компонента
+сам связывает подпись и пояснение с input (`aria-labelledby` и
+`aria-describedby`); `id`, которые вы поставили, он сохраняет.
 
 :::example {id="components/checkbox/composition" label="Подпись, пояснение и значок"}
 :::
@@ -105,8 +107,8 @@ profile: reference
 ### Ошибка
 
 Класс `error` на оболочке окрашивает рамку индикатора цветом ошибки. Текст
-ошибки кладите в пояснение и связывайте с input через `aria-describedby`,
-сам input получает `aria-invalid="true"`.
+ошибки кладите в пояснение: скрипт свяжет его с input сам. Input получает
+`aria-invalid="true"`.
 
 :::example {id="components/checkbox/state-error" label="Флажок с ошибкой"}
 :::
@@ -134,6 +136,11 @@ profile: reference
 
 :::example {id="components/checkbox/group" label="Группа флажков"}
 :::
+
+Классовый флажок — строка текста: шаг строк в группе задаёт контейнер.
+Готовая группа с шагом строк по стандарту (40 на размере `1`, 60 с
+пояснением, 32 в компактной области) — [выбор из вариантов](/ru/smart/forms/input-choice/)
+`sf-input-choice` с `appearance="list"` или смарт-флажки.
 
 ## JavaScript
 
@@ -213,7 +220,7 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 | `--sf-checkbox--easing` | `var(--sf-ease-move)` | `transition`, `transition-timing-function` |
 | `--sf-checkbox--gap` | не задана; задают модификаторы, например `.sf-checkbox--size-1/2`: `var(--sf-checkbox-gap, var(--sf-space-1/2))` | `gap` |
 | `--sf-checkbox-box--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-background-color, var(--sf-surface-place))` | `background-color` |
-| `--sf-checkbox-box--border` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-border-width, var(--sf-px)) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
+| `--sf-checkbox-box--border` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-border-width, var(--sf-px)) solid` | `border`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-color` |
 | `--sf-checkbox-box--border-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-checkbox-box--border-end-end-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-radius, var(--sf-radius--ui))` | `border-end-end-radius` |
 | `--sf-checkbox-box--border-end-start-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-radius, var(--sf-radius--ui))` | `border-end-start-radius` |

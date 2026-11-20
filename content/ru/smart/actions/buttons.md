@@ -5,7 +5,7 @@ description: "Запускает действие кнопкой с подпис
 
 # Кнопки
 
-:badge[sf-button]{variant=outline scheme=on-surface size=1/2} :badge[1.16.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button]{variant=outline scheme=on-surface size=1/2} :badge[1.16.8]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка запускает действие: сохранить, отправить, открыть окно. Вид, цвет,
 размер, иконки и индикатор загрузки задаются атрибутами. Берите её там, где
@@ -335,11 +335,7 @@ exportButton.addEventListener('sf-button-select', (event) => download(event.deta
 :::example {id="smart-components/buttons/loading-sizes" label="Загрузка по размерам" preview=inline}
 :::
 
-Вид спиннера один на всю страницу; как его выбрать —
-[Спиннер](/ru/smart/feedback/spinner/#вид-страницы).
-
-:::example {id="smart-components/buttons/loading-looks" label="Виды спиннера" preview=inline}
-:::
+Вид у [спиннера](/ru/smart/feedback/spinner/) один — дуга.
 
 ### Включённая и выключенная
 
@@ -550,7 +546,7 @@ menuButton.expanded = true; // aria-expanded="true" на кнопке внутр
 | `shortcut` | строка | пусто | — | Сочетание клавиш в конце кнопки, мягкими плашками цвета подписи: слова через `+`, например `mod+k` (⌘K на Mac, Ctrl K в остальных системах), `shift+mod+p`, `shift+/`, `/` или `escape`. `mod` — Cmd на Mac и Ctrl в остальных системах. Странице стилизовать клавиши не нужно; сочетание также записывается в `aria-keyshortcuts`. Пусто — без клавиш. |
 | `shortcut-listen` | да/нет | нет | — | Сочетание из `shortcut` нажимает кнопку с любого места страницы. Сочетание без `mod`, `ctrl`, `alt` или `meta` не срабатывает, пока человек печатает в поле. |
 | `expanded` | да/нет | нет | — | Для кнопки, которая открывает панель или меню: `true` — открыто, `false` — закрыто. Экранный диктор сообщает это; без атрибута ничего не сообщает. |
-| `pressed` | да/нет | нет | — | Кнопка-переключатель: `pressed` — включена и выглядит нажатой (заливка основного контейнера, без видимой границы, значок залит) — только у переключателя: `outline` или `ghost` в нейтральной схеме; другой вид сохраняет свой облик с `aria-pressed`, а консоль один раз сообщает, что это не переключатель; один выбор из нескольких — sf-segmented. `pressed="false"` — выключена. Без атрибута кнопка обычная. |
+| `pressed` | да/нет | нет | — | Включена ли эта кнопка-переключатель: `aria-pressed` у внутренней кнопки и вид нажатой — заливка `primary-container`, её цвет, без видимой рамки, иконка залита (C12), только у переключателя: `outline` или `ghost` в нейтральной схеме (C211 (1)); другой вид сохраняет свой с `aria-pressed`, а консоль один раз говорит, что это не переключатель; один выбор из нескольких — sf-segmented. `pressed="false"` — выключено; без атрибута кнопка не переключатель и ничего не сообщается. |
 | `text-pressed` | строка | пусто | — | Подпись, пока переключатель включён, например «В избранном» вместо «В избранное». Если задана, состояние говорит сама подпись. |
 | `theme-cycle` | строка | пусто | — | Готовый переключатель темы: по нажатию — следующая тема. Пустой атрибут — три значения в порядке владельца: сначала тема, противоположная видимой, потом другая, потом «как в системе» (D11d); `"light dark"` — два значения, каждое нажатие меняет видимую тему. Значки `contrast`, `light_mode` и `dark_mode`, слова — на языке страницы («Тема: светлая. Нажмите — тёмная»). Рядом с ним `cycle` не действует. |
 | `split` | да/нет | нет | — | С menu: разделённая кнопка — часть с подписью действует (press), а квадратная часть со стрелкой той же высоты с именем «Другие варианты: <подпись>» открывает меню под собой, выровненное по концу. Две остановки Tab; на стрелке Enter, Space и ArrowDown открывают меню на первой строке, ArrowUp — на последней, Escape закрывает и возвращает фокус на стрелку. Части соединены как группа кнопок: внутренние углы прямые, шов 1 px. Только главный вид (default primary) и обычный (outline); другой вид или опасная кнопка рисуются кнопкой меню с одним предупреждением в консоли. Главное действие в меню не повторяется. Без пунктов меню split — обычная кнопка. |
@@ -593,14 +589,14 @@ menuButton.expanded = true; // aria-expanded="true" на кнопке внутр
 
 | | |
 |:---|:---|
-| Тег | `<sf-button>`, контракт `smart.button` версии `1.16.3` |
-| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
+| Тег | `<sf-button>`, контракт `smart.button` версии `1.16.8` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`, `↓`, `↑`, `Esc`. |
 | [Документ макета](/ru/guide/layouts/building/smart-component/#декларативный-контракт) | узел `smart.button`; свойства — атрибуты из таблицы выше, кроме `root-class`, `root-style`, `cycle`, `menu` |
-| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/button` |
-| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-button` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/button` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-button` |
 
 ### Для разработчика
 
@@ -635,3 +631,4 @@ tag.getAttribute('value'); // 'save' — уходит с формой
 - [Кнопки на классах](/ru/components/actions/buttons/) — та же кнопка в статической разметке.
 - [Спиннер](/ru/smart/feedback/spinner/) — вид спиннера на странице.
 - [Клавиши](/ru/components/content/kbd/) — как рисуются клавиши сочетания.
+- Рецепты: [«Выбор карточками»](/ru/recipes/find/choice-cards/), [«Выбор строк и общие действия»](/ru/recipes/remove/bulk-actions/), [«Карточка записи»](/ru/recipes/edit/record-card/), [«Копирование»](/ru/recipes/notify/copy/), [«Низ списка»](/ru/recipes/find/list-bottom/), [«Окно с формой»](/ru/recipes/edit/dialog-form/), [«Оформление заказа»](/ru/recipes/edit/checkout/), [«Оформление: цвет и тема»](/ru/recipes/edit/brand-theme/), [«Панель над списком»](/ru/recipes/find/list-toolbar/), [«Первые шаги»](/ru/recipes/progress/onboarding-checklist/), [«Первый кадр страницы»](/ru/recipes/progress/first-paint/), [«Первый экран сайта и промо»](/ru/recipes/decorate/hero-and-promo/), [«Пустой раздел и первое действие»](/ru/recipes/progress/empty-state/), [«Сохранение и ошибки в форме»](/ru/recipes/edit/save-and-errors/), [«Список записей»](/ru/recipes/find/resource-list/), [«Список уведомлений»](/ru/recipes/notify/notifications/), [«Удаление»](/ru/recipes/remove/delete/), [«Фильтры в шторке»](/ru/recipes/find/filter-drawer/), [«Форма настроек»](/ru/recipes/edit/settings-form/)

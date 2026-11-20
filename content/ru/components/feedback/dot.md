@@ -6,7 +6,7 @@ profile: reference
 
 # Точка состояния
 
-:badge[sf-dot]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-dot]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Точка состояния цветом показывает, доступен ли человек или сервис, идёт ли
 работа и чем она закончилась. Она подходит для строк списка и других мест, где
@@ -23,8 +23,11 @@ profile: reference
 Минимальную разметку показывает пример выше: блок `sf-dot` с одной частью
 `sf-dot-item` внутри.
 
-- `sf-dot` — строчный контейнер с небольшим отступом вокруг точки; на нём
-  размер и статус.
+- `sf-dot` — строчный контейнер, равный кругу: вокруг точки отступа нет. На
+  нём размер, статус и форма.
+- Слово пишите внутри `sf-dot`, после `sf-dot-item`: оно встаёт на
+  промежуток метки в строке — 12 px, в компактной области и на телефоне 8.
+  Тогда точку скрывайте от диктора на `sf-dot-item`, а слово он прочитает.
 - `sf-dot-item` — сама точка. Без неё блок пуст.
 - Без класса статуса точка окрашена основным цветом, без размера — ступенью
   `1`.
@@ -46,13 +49,29 @@ profile: reference
 
 ### Размер
 
-`sf-dot--size-1/3`, `sf-dot--size-1/2`, `sf-dot--size-1` • [справочник](#классы)
+`sf-dot--size-1/4`, `sf-dot--size-1/3`, `sf-dot--size-1/2`, `sf-dot--size-1`, `sf-dot--size-2`, `sf-dot--size-3` • [справочник](#классы)
 
-Четыре ступени — `sf-dot--size-1/3`, `sf-dot--size-1/2`, `sf-dot--size-1` и
-`sf-dot--size-2` — меняют диаметр точки. Берите ступень текста, рядом с
-которым стоит точка.
+Шесть ступеней меняют диаметр точки. Берите ступень текста, рядом с которым
+стоит точка. Цветная точка не бывает меньше 6 px.
+
+| Ступень | `1/4` | `1/3` | `1/2` | `1` | `2` | `3` |
+|:---|:---|:---|:---|:---|:---|:---|
+| Диаметр, px | 6 | 6 | 6 | 8 | 12 | 16 |
 
 :::example {id="components/dot/overview" label="Размеры точки"}
+:::
+
+### Форма
+
+`sf-dot--ring`, `sf-dot--hollow` • [справочник](#классы)
+
+Состояние читается не только по цвету, но и по форме. Сплошная точка — по
+умолчанию: готово, включено, статус. `sf-dot--ring` — текущее: точка с
+кольцом своего цвета снаружи, через зазор фона. `sf-dot--hollow` — то, что
+впереди, или «отошёл»: кольцо внутри края без заливки, размер точки тот же.
+Полая точка без статуса — серая, со статусом — его цвета.
+
+:::example {id="components/dot/forms" label="Три формы точки"}
 :::
 
 ## Доступность
@@ -84,7 +103,7 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-dot-item--background-color` | `var(--sf-primary)` | `background-color`, `box-shadow` |
+| `--sf-dot-item--background-color` | `var(--sf-primary)` | `box-shadow`, `background-color` |
 | `--sf-dot-item--border-radius` | не задана; задают модификаторы, например `.sf-dot .sf-dot-item`: `var(--sf-radius-circle)` | `border-radius` |
 | `--sf-dot-item--ring` | `var(--sf-a2)` | `box-shadow`, `gap`, `outline`, `outline-offset` |
 | `--sf-dot-item--size` | `var(--sf-a8)` | `height`, `block-size`, `width`, `inline-size` |

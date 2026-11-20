@@ -6,7 +6,7 @@ profile: reference
 
 # Плавающая кнопка
 
-:badge[sf-fab]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-fab]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Плавающая кнопка (FAB) — круглая кнопка с иконкой для одного главного и
 частого действия экрана: создать запись, написать сообщение. Для обычного

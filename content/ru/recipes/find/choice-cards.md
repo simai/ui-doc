@@ -122,7 +122,7 @@ description: "Выбрать один или несколько варианто
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Выбор карточками», выпуск ui-994f9db407fa.
+<!-- Рецепт SIMAI Framework «Выбор карточками», выпуск ui-1ed6b6c9a040.
 Правила:
 1. Выбор с пояснением, ценой или сроком — sf-input-choice с label. Строки (доставка, оплата) — layout="list"; плитки (тарифы, модули) — layout="tile"; по виду (шаблоны) — layout="picture". Несколько сразу — multiple.
 2. Карточка — запись items: value, label, caption, price, term, badge, icon, image, disabled. Недоступный вариант объясняет причину в caption.

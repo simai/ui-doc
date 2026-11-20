@@ -367,13 +367,13 @@ set.renderCellField(status, 'live');
 
 | Тип | Название | Варианты | Параметры | Просмотр | Правка | Ячейка | Фильтр |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| `string` | Строка | `phone` — Телефон, `password` — Пароль | `placeholder`, `mask`, `nullable`, `required`, `readonly` | есть | есть | своё | своё |
+| `string` | Строка | `phone` — Телефон, `password` — Пароль | `placeholder`, `mask`, `nullable`, `defaultCountry`, `required`, `readonly` | есть | есть | своё | своё |
 | `text` | Текст | — | `placeholder`, `required`, `readonly` | есть | есть | текстовый | своё |
 | `html` | Форматированный текст | — | `placeholder`, `required`, `readonly` | есть | есть | своё | текстовый |
 | `integer` | Целое число | `stepper` — Кнопками «−» и «+» | `unit`, `min`, `max`, `step`, `required`, `readonly` | есть | есть | своё | своё |
 | `number` | Число | `scale` — Шкала 0–100, `meter` — Доля предела, `stepper` — Кнопками «−» и «+» | `unit`, `min`, `max`, `step`, `precision`, `required`, `readonly` | есть | есть | своё | своё |
-| `date` | Дата | — | `required`, `readonly` | есть | есть | своё | своё |
-| `datetime` | Дата и время | — | `min`, `max`, `step`, `required`, `readonly` | есть | есть | своё | своё |
+| `date` | Дата | — | `min`, `max`, `format`, `required`, `readonly` | есть | есть | своё | своё |
+| `datetime` | Дата и время | — | `min`, `max`, `step`, `format`, `required`, `readonly` | есть | есть | своё | своё |
 | `time` | Время | — | `min`, `max`, `step`, `required`, `readonly` | есть | есть | своё | текстовый |
 | `boolean` | Да или нет | — | `trueText`, `falseText`, `required`, `readonly` | есть | есть | своё | своё |
 | `choice` | Одно из списка | `buttons` — Кнопками | `options`, `badgeAppearance`, `size`, `required`, `readonly` | есть | есть | своё | своё |
@@ -385,8 +385,8 @@ set.renderCellField(status, 'live');
 | `file` | Файл | `image` — Изображение, `image-card` — Изображение карточкой, `image-list` — Изображения списком | `accept`, `multiple`, `formats`, `uploadText`, `uploadSupportingText`, `uploadHint`, `required`, `readonly` | есть | есть | своё | своё |
 | `color` | Цвет | — | `swatches`, `required`, `readonly` | есть | есть | своё | своё |
 | `include` | Код | — | `language`, `required`, `readonly` | есть | есть | своё | текстовый |
-| `money` | Деньги | — | `currency`, `min`, `max`, `required`, `readonly` | нет | нет | своё | своё |
-| `percent` | Процент | — | `min`, `max`, `required`, `readonly` | нет | нет | своё | своё |
+| `money` | Деньги | — | `currency`, `currencies`, `currencyDisplay`, `min`, `max`, `placeholder`, `required`, `readonly` | есть | есть | своё | своё |
+| `percent` | Процент | — | `min`, `max`, `step`, `precision`, `placeholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `items` | Строки | — | `columns`, `minRows`, `maxRows`, `required`, `readonly` | нет | нет | своё | своё |
 | `compound` | Составное | — | `parts`, `required`, `readonly` | нет | нет | текстовый | текстовый |
 | `ru.requisites` | Реквизиты | — | `parts`, `required`, `readonly` | нет | нет | текстовый | текстовый |

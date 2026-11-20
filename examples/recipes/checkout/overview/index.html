@@ -5,13 +5,13 @@
     <div class="flex flex-col cq-md:flex-row gap-3">
       <div class="grow min-w-0 flex flex-col gap-1 max-w-g8">
         <section data-step="0" hidden class="flex flex-col gap-1">
-          <h3 class="m-0 text-2 weight-5">Корзина</h3>
-          <div class="flex content-main-between gap-1 p-y-1/2 border-bottom-1 border-bottom-solid border-outline-variant"><span>Пуэр «Старое дерево», 100 г <span class="color-on-surface-variant">· 2 шт.</span></span><span class="wrap-none">1 780 ₽</span></div>
-          <div class="flex content-main-between gap-1 p-y-1/2 border-bottom-1 border-bottom-solid border-outline-variant"><span>Чайник глиняный, 250 мл <span class="color-on-surface-variant">· 1 шт.</span></span><span class="wrap-none">2 400 ₽</span></div>
-          <div class="flex content-main-between gap-1 p-y-1/2"><span>Улун «Молочный», 50 г <span class="color-on-surface-variant">· 1 шт.</span></span><span class="wrap-none">540 ₽</span></div>
+          <h3 class="m-0 text-2 weight-medium">Корзина</h3>
+          <div class="flex content-main-between gap-1 p-y-1/2 border-bottom-1 border-bottom-solid border-outline-variant"><span>Пуэр «Старое дерево», 100 г <span class="color-on-surface-variant">· 2 шт.</span></span><span class="text-nowrap">1 780 ₽</span></div>
+          <div class="flex content-main-between gap-1 p-y-1/2 border-bottom-1 border-bottom-solid border-outline-variant"><span>Чайник глиняный, 250 мл <span class="color-on-surface-variant">· 1 шт.</span></span><span class="text-nowrap">2 400 ₽</span></div>
+          <div class="flex content-main-between gap-1 p-y-1/2"><span>Улун «Молочный», 50 г <span class="color-on-surface-variant">· 1 шт.</span></span><span class="text-nowrap">540 ₽</span></div>
         </section>
         <section data-step="1" class="flex flex-col gap-1">
-          <h3 class="m-0 text-2 weight-5">Доставка</h3>
+          <h3 class="m-0 text-2 weight-medium">Доставка</h3>
           <sf-input-choice id="delivery" layout="list" label="Способ доставки" name="delivery" required value="courier"></sf-input-choice>
           <sf-input-date id="delivery-day" label="День доставки" name="day" required min-date="2026-11-16" max-date="2026-11-30" hint="Ближайший — послезавтра."></sf-input-date>
           <sf-input-country label="Телефон" name="phone" required iso2="ru" preferred="ru,by,kz"></sf-input-country>
@@ -19,11 +19,11 @@
           <sf-input label="Получатель" name="name" required placeholder="Имя и фамилия" autocomplete="name"></sf-input>
         </section>
         <section data-step="2" hidden class="flex flex-col gap-1">
-          <h3 class="m-0 text-2 weight-5">Оплата</h3>
+          <h3 class="m-0 text-2 weight-medium">Оплата</h3>
           <sf-input-choice id="payment" layout="list" label="Способ оплаты" name="pay" required></sf-input-choice>
         </section>
         <section data-step="3" hidden class="flex flex-col gap-1">
-          <h3 class="m-0 text-2 weight-5">Подтверждение</h3>
+          <h3 class="m-0 text-2 weight-medium">Подтверждение</h3>
           <sf-list-description id="confirm-list" size="1/2"></sf-list-description>
           <sf-checkbox label="Согласен с условиями доставки и возврата" name="terms"></sf-checkbox>
         </section>
@@ -34,10 +34,10 @@
         </div>
       </div>
       <aside id="summary" aria-label="Ваш заказ" class="flex flex-col gap-1/2 p-1 radius-surface border border-outline-variant bg-surface-card self-cross-start">
-        <h3 class="m-0 text-1 weight-5">Ваш заказ</h3>
-        <div class="flex content-main-between gap-2"><span class="color-on-surface-variant">Товары, 4 шт.</span><span class="wrap-none">4 720 ₽</span></div>
-        <div class="flex content-main-between gap-2"><span class="color-on-surface-variant">Доставка</span><span id="sum-delivery" class="wrap-none">350 ₽</span></div>
-        <div class="flex content-main-between gap-2 weight-5"><span>Итого</span><span id="sum-total" class="wrap-none">5 070 ₽</span></div>
+        <h3 class="m-0 text-1 weight-medium">Ваш заказ</h3>
+        <div class="flex content-main-between gap-2"><span class="color-on-surface-variant">Товары, 4 шт.</span><span class="text-nowrap">4 720 ₽</span></div>
+        <div class="flex content-main-between gap-2"><span class="color-on-surface-variant">Доставка</span><span id="sum-delivery" class="text-nowrap">350 ₽</span></div>
+        <div class="flex content-main-between gap-2 weight-medium"><span>Итого</span><span id="sum-total" class="text-nowrap">5 070 ₽</span></div>
       </aside>
     </div>
   </div>

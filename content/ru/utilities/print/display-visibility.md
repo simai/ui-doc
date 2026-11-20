@@ -25,17 +25,12 @@ description: "Делает элемент невидимым или видимы
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `print-block` | `display: none; при печати: display: block` | — |
-| `print-inline-block` | `display: none; при печати: display: inline-block` | — |
-| `print-inline` | `display: none; при печати: display: inline` | — |
-| `print-flex` | `display: none; при печати: display: flex` | — |
-| `print-inline-flex` | `display: none; при печати: display: inline-flex` | — |
-| `print-table` | `display: none; при печати: display: table` | — |
 | `print-visible` | `при печати: visibility: visible` | — |
 | `print-hidden` | `при печати: display: none` | — |
 | `print-invisible` | `при печати: visibility: hidden` | — |
-| `print-visible-none` | `при печати: visibility: hidden` | — |
 | `print-only` | `при печати: display: none` | — |
+
+Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 

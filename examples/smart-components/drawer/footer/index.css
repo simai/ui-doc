@@ -1,0 +1,5 @@
+/* Пример держит свои панели: они открываются внутри этого блока
+   (data-sf-overlay-container) на его высоту. */
+[data-sf-overlay-container] {
+  min-block-size: 24rem;
+}

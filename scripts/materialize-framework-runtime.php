@@ -40,11 +40,11 @@ declare(strict_types=1);
  * into a Docara checkout, which never carries package bytes.
  */
 
-const UI_METADATA_REVISION = '74c5279c9ae54d07068ab8abac59ee87c416080d';
-const UI_RUNTIME_REVISION = '24d64b7f6eb7a782d648dbb5b44f7eb763ec815b';
-const SOURCE_REVISION = '40541c0c4fba6c24659907eb987c74f17a4fc46a';
-const BUILDER_REVISION = '16e9a81c1f2838f7cfeebbbd19654016743c9672';
-const RELEASE_LOCK = 'contracts/releases/ui-24d64b7f6eb7.lock.json';
+const UI_METADATA_REVISION = '7bd5312087bf002a9283190d29c96ee58ba33a57';
+const UI_RUNTIME_REVISION = 'dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74';
+const SOURCE_REVISION = '1dd18375cbc23cf3392576d2e046fde52a047060';
+const BUILDER_REVISION = 'ba79e739d1f9e2568d27e030606e8f95ce91b380';
+const RELEASE_LOCK = 'contracts/releases/ui-dc9fc39aeb26.lock.json';
 // The release on npm, the form the guide's CDN snippets use
 // (https://cdn.jsdelivr.net/npm/<package>@<version>/distr/...). The version is
 // derived from the release commit, never chosen: 5.<yyyymmdd>.<hhmm> of its
@@ -52,7 +52,7 @@ const RELEASE_LOCK = 'contracts/releases/ui-24d64b7f6eb7.lock.json';
 // the commit. scripts/sync-framework-documentation-versions.php checks the
 // version against UI_RUNTIME_REVISION and moves the snippets with it.
 const NPM_PACKAGE = '@simai-studio/ui';
-const NPM_VERSION = '5.20261117.1311';
+const NPM_VERSION = '5.20261118.1205';
 // Product component packages, each taken by its package receipt. The build is
 // reproducible, so the archive digest names the exact bytes. A package names
 // the ui-builder commit that built it: it may be newer than the one the
@@ -63,10 +63,10 @@ const NPM_VERSION = '5.20261117.1311';
 const PACKAGES = [
     'pro' => [
         'repository' => 'simai/ui-pro',
-        'revision' => '0f8512da5188fecf74261cfcac9f29ec42c025ca',
+        'revision' => 'a57887949f9a93ec59120c341d935cd0914b8807',
         'path' => 'components',
-        'archive_sha256' => '93b53a92590a868e2a140b4bb68024c1d785c9e60cfdc1244165a2672969abe3',
-        'builder' => '16e9a81c1f2838f7cfeebbbd19654016743c9672',
+        'archive_sha256' => '7dcf56e071fbf01069ced1c54501598f2ce7b86384cbc9ec0006a7b7b0cc72f5',
+        'builder' => 'ba79e739d1f9e2568d27e030606e8f95ce91b380',
     ],
 ];
 

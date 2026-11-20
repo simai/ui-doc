@@ -85,10 +85,20 @@ const legacyModifiers = (block, present) => {
       if (record.kind === 'value' && item.attribute === 'status' && own(item)) reversed.add(`${block}--${item.to}>${block}--${item.from}`);
     }
   }
+  // A class rename reversed by a later record is history (sf-upgrade's rule):
+  // sf-button--ghost -> sf-button--link (2026-10-09), then link -> ghost (C15,
+  // 2026-11-11). Without it both names counted as former and neither was
+  // listed among the modifiers.
+  const lastMove = new Map();
+  journal.records.forEach((record, index) => {
+    if (record.kind !== 'class') return;
+    for (const item of record.items ?? []) if (item.from && item.to) lastMove.set(`${item.from}>${item.to}`, index);
+  });
+  const reversedLater = (record, item) => (lastMove.get(`${item.to}>${item.from}`) ?? -1) > journal.records.indexOf(record);
   for (const record of journal.records) {
     for (const item of record.items ?? []) {
       if (!item.from || !item.to) continue;
-      if (record.kind === 'class' && item.from.startsWith(`${block}--`)) out.set(item.from, item.to);
+      if (record.kind === 'class' && item.from.startsWith(`${block}--`) && !reversedLater(record, item)) out.set(item.from, item.to);
       if (record.kind === 'value' && item.attribute === 'status' && (!item.component || own(item))) {
         const from = `${block}--${item.from}`;
         const to = `${block}--${item.to}`;
@@ -129,6 +139,34 @@ for (const record of journal.records ?? []) {
     formerUtilities.set(item.from, {to: item.to, removeAfter: record.remove_after ?? null});
   }
 }
+
+// The pair's one table of retired class names (owner decision C187 (1),
+// src/core/js/retired-classes.table.js) retires names the journal does not
+// list as a utility record of its own: whole utility modules (filters, masks),
+// families (col-gap-*, space-x-*) and exact names. They leave the tables the
+// same way; the update guide lists every one of them with what to write
+// (scripts/build-retired-class-reference.mjs).
+const retiredExact = new Map();
+const retiredPatterns = [];
+const retiredSheets = new Set();
+try {
+  const text = execFileSync('git', ['-C', sourceRepo, 'show', `${releaseLock.build_inputs.source.commit}:src/core/js/retired-classes.table.js`], {encoding: 'utf8', maxBuffer: 64 << 20, stdio: ['ignore', 'pipe', 'ignore']});
+  const table = JSON.parse(text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1));
+  for (const record of table.records ?? []) {
+    for (const [name, to] of Object.entries(record.names ?? {})) retiredExact.set(name, {to, removeAfter: record.remove_after ?? null});
+    for (const pattern of record.patterns ?? []) retiredPatterns.push({re: new RegExp(pattern.pattern, 'u'), except: pattern.variants_except ? new RegExp(pattern.variants_except, 'u') : null, removeAfter: record.remove_after ?? null});
+    for (const sheet of Object.keys(record.sheets ?? {})) retiredSheets.add(sheet);
+  }
+} catch {
+  // A source without the table (before C187) retires nothing here.
+}
+const retiredClass = (name) => {
+  const base = name.slice(name.lastIndexOf(':') + 1);
+  if (retiredExact.has(base)) return true;
+  return retiredPatterns.some(({re, except}) => re.test(base) && !(except && except.test(name)));
+};
+const RETIRED_LINE = 'Прежние имена классов этого модуля и что писать вместо них — в руководстве'
+  + ' [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).';
 
 // ---- CSS ----------------------------------------------------------------------
 
@@ -250,7 +288,18 @@ const utilityClasses = (families) => {
       }
     }
   }
-  // Former names leave the table and are listed under it.
+  // Former names leave the table; the update guide lists them (D03).
+  const retiredSheetNames = new Set();
+  for (const family of families.filter((item) => retiredSheets.has(item))) {
+    for (const {selector} of rules(show(`distr/utility/${family}/default/css/default.css`) ?? '')) {
+      for (const part of splitSelector(selector)) {
+        const name = firstClass(part.trim());
+        if (name) retiredSheetNames.add(name);
+      }
+    }
+  }
+  const retired = [...byClass.keys()].filter((name) => !formerUtilities.has(name) && !goingUtilities.has(name) && (retiredClass(name) || retiredSheetNames.has(name)));
+  for (const name of retired) byClass.delete(name);
   const former = [...byClass.keys()].filter((name) => formerUtilities.has(name)).sort();
   for (const name of former) byClass.delete(name);
   const going = [...byClass.keys()].filter((name) => goingUtilities.has(name)).sort();
@@ -312,11 +361,7 @@ const utilityClasses = (families) => {
       lines.push(`| ${code(row.name)}${shown} | ${code(row.entry.css)} | — |`);
     }
   }
-  if (former.length) {
-    const dates = [...new Set(former.map((name) => formerUtilities.get(name).removeAfter).filter(Boolean))].sort();
-    const until = dates.length ? ` до ${dates.join(', ')}` : '';
-    lines.push('', `Прежние имена работают${until}: ${former.map((name) => `${code(name)} → ${code(formerUtilities.get(name).to)}`).join(', ')}. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).`);
-  }
+  if (former.length || retired.length) lines.push('', RETIRED_LINE);
   if (going.length) {
     const byRecord = new Map();
     for (const name of going) {
@@ -351,7 +396,9 @@ const utilityVariants = (families) => {
     for (const variant of tree(`distr/utility/${family}`).filter((name) => name !== 'default')) {
       const css = show(`distr/utility/${family}/${variant}/css/${variant}.css`);
       if (!css) continue;
-      const first = rules(css).find(({selector}) => firstClass(selector));
+      // The example names a current class: a retired one is not shown (D03).
+      const first = rules(css).find(({selector}) => firstClass(selector) && !retiredClass(firstClass(selector)))
+        ?? rules(css).find(({selector}) => firstClass(selector));
       if (!first) continue;
       const name = firstClass(first.selector);
       const prefix = name.includes(':') ? name.slice(0, name.lastIndexOf(':') + 1) : `${variant}:`;
@@ -480,20 +527,67 @@ const utilityVariables = (families) => {
 
 // ---- component section -------------------------------------------------------------
 
-const componentClasses = (component, block) => {
+// `elsewhere` (config) names another component drawn on the same block: a
+// class that appears only in selectors holding `elsewhere.marker` belongs to
+// it (sf-segmented draws its track on .sf-button-group, G3) and is named in
+// one line pointing at that page instead of the table.
+// Class names the change journal keeps only as former names (kind class,
+// stage compat, a single class in `from`, not moved back later): the copy
+// block sf-clipboard and sf-clipboard-surface (C48, C217). A page names only
+// what to write today (D03), so they leave every row, and so does a class
+// that appears only in selectors beside a former one (sf-clipboard--inline
+// only undoes the old .btn-clipboard placement).
+const formerClasses = (() => {
+  const out = new Set();
+  const moves = new Map();
+  journal.records.forEach((record, index) => {
+    if (record.kind !== 'class') return;
+    for (const item of record.items ?? []) if (item.from && item.to) moves.set(`${item.from}>${item.to}`, index);
+  });
+  journal.records.forEach((record, index) => {
+    if (record.kind !== 'class' || record.stage !== 'compat') return;
+    for (const item of record.items ?? []) {
+      if (!item.from || !/^[a-z0-9_/-]+$/u.test(item.from)) continue;
+      if (item.to && (moves.get(`${item.to}>${item.from}`) ?? -1) > index) continue;
+      out.add(item.from);
+    }
+  });
+  return out;
+})();
+
+const componentClasses = (component, block, elsewhere = null, others = [], aliases = []) => {
   const css = show(`distr/component/${component}/css/${component}.css`);
   if (!css) throw new Error(`no stylesheet for component ${component}`);
   const names = new Set();
+  const ownUse = new Set();
+  const currentUse = new Set();
   for (const {selector} of rules(css)) {
-    for (const match of selector.matchAll(/\.((?:[a-zA-Z0-9_-]|\\.)+)/gu)) {
-      const name = unescape(match[1]);
-      // An escaped selector inside an attribute (`:has(.x\\[class*…\\])`) is not a
-      // class a reader writes; a class name holds letters, digits, -, _ and /.
-      if (!/^[a-z0-9_/-]+$/u.test(name)) continue;
-      // Parts are `block-…` or BEM `block__…`.
-      if (name === block || name.startsWith(`${block}-`) || name.startsWith(`${block}__`)) names.add(name);
+    for (const piece of splitSelector(selector)) {
+      for (const match of piece.matchAll(/\.((?:[a-zA-Z0-9_-]|\\.)+)/gu)) {
+        const name = unescape(match[1]);
+        // An escaped selector inside an attribute (`:has(.x\\[class*…\\])`) is not a
+        // class a reader writes; a class name holds letters, digits, -, _ and /.
+        if (!/^[a-z0-9_/-]+$/u.test(name)) continue;
+        // Parts are `block-…` or BEM `block__…`.
+        if (name === block || name.startsWith(`${block}-`) || name.startsWith(`${block}__`)) {
+          names.add(name);
+          if (!elsewhere || !piece.includes(elsewhere.marker)) ownUse.add(name);
+          const beside = [...piece.matchAll(/\.((?:[a-zA-Z0-9_-]|\\.)+)/gu)].map((other) => unescape(other[1]));
+          if (!beside.some((other) => other !== name && formerClasses.has(other))) currentUse.add(name);
+        }
+      }
     }
   }
+  for (const name of [...names]) if (formerClasses.has(name) || !currentUse.has(name)) names.delete(name);
+  // Presentation aliases a component keeps for existing markup with no journal
+  // record (config `aliases`): a page shows only what to write today (D03).
+  for (const name of aliases) names.delete(name);
+  // A page that lists several blocks gives each class to the longest block it
+  // belongs to: sf-verification-form-hint is the form's part, not the code's.
+  const owns = (other, name) => name === other || name.startsWith(`${other}-`) || name.startsWith(`${other}__`);
+  for (const name of [...names]) if (others.some((other) => other.length > block.length && owns(other, name))) names.delete(name);
+  const foreign = elsewhere ? [...names].filter((name) => !ownUse.has(name) || (elsewhere.classes ?? []).includes(name)).sort() : [];
+  for (const name of foreign) names.delete(name);
   const sorted = [...names].sort();
   // Modifiers the change journal keeps only for compatibility are left out:
   // a page shows only what to write today (D03); the names guide lists them.
@@ -509,6 +603,7 @@ const componentClasses = (component, block) => {
     ...row('Части', parts),
     ...row('Модификаторы', modifiers),
     ...row('Размеры', sizes),
+    ...(foreign.length ? ['', `${elsewhere.lead} ${foreign.map(code).join(', ')}. ${elsewhere.tail}`] : []),
   ];
 };
 
@@ -570,19 +665,30 @@ const ru = (text) => {
   untranslated.add(text);
   return text;
 };
+// What the pair draws where its contract says otherwise: a default or a summary
+// the release's public-variables contract gets wrong is written here, keyed by
+// variable name, until the contract is fixed (Framework DF-1). The page shows
+// what a reader sees, not what the contract claims.
+const publicOverrides = (() => {
+  const path = join(root, 'config/public-variable-overrides.json');
+  return existsSync(path) ? readJson(path).variables ?? {} : {};
+})();
 const VARIES = {appearance: 'вида', scheme: 'схемы', status: 'статуса', size: 'размера'};
 
 const publicVariablesSection = (entry) => {
-  const example = entry.variables.find((item) => item.role === 'radius') ?? entry.variables[0];
+  const picked = entry.variables.find((item) => item.role === 'radius') ?? entry.variables[0];
+  const example = {...picked, ...(publicOverrides[picked.name] ?? {})};
   return [
     `Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (${code(entry.selector)}) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.`,
     '',
     '| Переменная | Что задаёт | По умолчанию |',
     '|:---|:---|:---|',
-    ...entry.variables.map((item) => {
+    ...entry.variables.map((contractItem) => {
+      const item = {...contractItem, ...(publicOverrides[contractItem.name] ?? {})};
       const varies = (item.varies_with ?? []).map((name) => VARIES[name] ?? name);
       const fallback = `${code(item.default)}${varies.length ? `; зависит от ${varies.join(', ')}` : ''}`;
-      return `| ${code(item.name)} | ${ru(item.summary)} | ${fallback} |`;
+      const summary = publicOverrides[contractItem.name]?.summary_ru ?? ru(item.summary);
+      return `| ${code(item.name)} | ${summary} | ${fallback} |`;
     }),
     '',
     '```css',
@@ -681,7 +787,13 @@ for (const [page, entry] of Object.entries(settings.pages)) {
   const path = join(root, 'content/ru', page);
   const current = readFileSync(path, 'utf8');
   let next = current;
-  if (entry.kind === 'utility') {
+  if (entry.kind === 'utility' && entry.families.every((family) => retiredSheets.has(family))) {
+    // A page whose every module leaves is a short note on its going: no
+    // class or variable tables of what a reader should not write.
+    next = setSection(next, 'utility', 'Сводка', null);
+    next = setSection(next, 'utility', 'Классы', null);
+    next = setSection(next, 'utility', 'Переменные', null);
+  } else if (entry.kind === 'utility') {
     next = setSection(next, 'utility', 'Сводка', null);
     next = setSection(next, 'utility', 'Классы', [...utilityClasses(entry.families), ...utilityConditions(entry.families), '', SOURCE_NOTE]);
     next = setSection(next, 'utility', 'Переменные', utilityVariables(entry.families));
@@ -695,9 +807,11 @@ for (const [page, entry] of Object.entries(settings.pages)) {
     // numbers); each gets its own class table, and the variables are joined.
     const blocks = entry.blocks ?? [entry.block];
     const classes = blocks.length === 1
-      ? componentClasses(entry.component, blocks[0])
-      : blocks.flatMap((block, index) => [...(index ? [''] : []), `**${code(block)}**`, '', ...componentClasses(entry.component, block)]);
-    next = setSection(next, 'component', 'Классы', [...classes, '', SOURCE_NOTE]);
+      ? componentClasses(entry.component, blocks[0], entry.elsewhere ?? null, [], entry.aliases ?? [])
+      : blocks.flatMap((block, index) => [...(index ? [''] : []), `**${code(block)}**`, '', ...componentClasses(entry.component, block, null, blocks, entry.aliases ?? [])]);
+    // `classes_note` (config) is a line under the table the CSS cannot say:
+    // which rows another component sets (the Smart download row's states).
+    next = setSection(next, 'component', 'Классы', [...classes, '', SOURCE_NOTE, ...(entry.classes_note ? ['', entry.classes_note] : [])]);
     next = setSection(next, 'component', 'Переменные', componentVariablesSection(entry.component, blocks));
   }
   if (entry.kind === 'component') {

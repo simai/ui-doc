@@ -5,7 +5,7 @@ description: "Принимает одноразовый код из сообще
 
 # Код подтверждения
 
-:badge[sf-input-code]{variant=outline scheme=on-surface size=1/2} :badge[1.7.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-code]{variant=outline scheme=on-surface size=1/2} :badge[1.9.3]{variant=outline scheme=on-surface size=1/2}
 
 Код подтверждения — поле для одноразового кода из сообщения,
 приложения-генератора или письма: код показан по ячейкам, а с формой уходит
@@ -88,6 +88,10 @@ description: "Принимает одноразовый код из сообще
 
 `length` — сколько символов в коде, от 1 до 12; каждому символу — своя
 ячейка.
+
+Если ряд не помещается в колонку, ячейки сужаются под её ширину, но не уже
+28 px: ряд из 8 ячеек помещается в колонку телефона 328 px и не выходит за
+неё.
 
 :::example {id="smart-components/code-input/length" label="Коды из 4, 6 и 8 символов"}
 :::
@@ -195,7 +199,7 @@ code.addEventListener('sf-input-code-completed', async (event) => {
 | `appearance` | строка | `bordered` | `bordered`, `filled` | bordered: ячейки разделены рамкой; filled: ячейки на тоновой заливке, которые получают рамку, пока код в фокусе. |
 | `label` | строка | пусто | — | Видимая подпись; называет группу и поле. |
 | `hint` | строка | пусто | — | Текст под ячейками: сколько символов и откуда код. |
-| `help` | строка | пусто | — | Пояснение за знаком «?» (sf-help-mark) после текста подписи, как `help` у sf-input: на ступень меньше значения, как подпись; высота строки подписи не меняется. Знак назван по предмету («Подробнее: <подпись>»). Пусто или без подписи — знака нет. |
+| `help` | строка | пусто | — | Пояснение за «?» (sf-help-mark, вид C133) после текста подписи (C153 (8)), как `help` у sf-input: ступенью ниже значения, как подпись; строка подписи сохраняет высоту. Знак называется по теме («Подробнее: <подпись>»). Пусто или без подписи — знака нет. |
 | `required` | да/нет | нет | — | Форма требует целый код. |
 | `disabled` | да/нет | нет | — | — |
 | `readonly` | да/нет | нет | — | — |
@@ -236,13 +240,13 @@ code.addEventListener('sf-input-code-completed', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-code>`, контракт `smart.input-code` версии `1.7.0` |
-| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
+| Тег | `<sf-input-code>`, контракт `smart.input-code` версии `1.9.3` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Backspace`, `Delete`, `←`, `→`, `Home`, `End`. |
-| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/input-code` |
-| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-input-code` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/input-code` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-input-code` |
 
 ## См. также
 

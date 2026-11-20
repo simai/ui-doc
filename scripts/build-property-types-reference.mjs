@@ -8,8 +8,8 @@
 // PROPERTY_TYPES from src/smart/field-renderers/registry.js, each entry with the
 // modes the renderer maps hold for it (propertyModes → modesOf). This script
 // computes it the same way without a browser:
-//   - registry.js is read from ui-source at SOURCE_REVISION (with its words,
-//     ./lang) and imported as a module, which gives PROPERTY_TYPES and modesOf;
+//   - registry.js is read from ui-source at SOURCE_REVISION with its language
+//     words and imported as a module, which gives PROPERTY_TYPES and modesOf;
 //   - the keys of VIEW_RENDERERS, EDIT_RENDERERS, CELL_RENDERERS and
 //     FILTER_RENDERERS are parsed from index.js at the same revision, and the
 //     modes are the release's own modesOf over those keys;
@@ -28,9 +28,9 @@
 // (default ../ui).
 
 import {execFileSync} from 'node:child_process';
-import {existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync} from 'node:fs';
-import {dirname, join, resolve} from 'node:path';
+import {existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync} from 'node:fs';
 import {tmpdir} from 'node:os';
+import {dirname, join, resolve} from 'node:path';
 import {fileURLToPath, pathToFileURL} from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -73,19 +73,22 @@ const registrySource = show(sourceRoot, sourceRevision, 'src/smart/field-rendere
 const indexSource = show(sourceRoot, sourceRevision, 'src/smart/field-renderers/index.js');
 const bundle = show(uiRoot, runtimeRevision, 'distr/smart/field-renderers/js/field-renderers.js');
 
-// registry.js imports its words (./lang/index.mjs and the language JSON beside
-// it) since ui-source 10145e63b, so a data: URL cannot hold it: the folder is
-// laid out from the same revision into a temporary directory and imported
-// from there.
-const registryDirectory = mkdtempSync(join(tmpdir(), 'ui-doc-property-types-'));
-execFileSync('sh', ['-c', 'git -C "$1" archive "$2" src/smart/field-renderers | tar -x -C "$3"', 'sh',
-  sourceRoot, sourceRevision, registryDirectory]);
-let registry;
-try {
-  registry = await import(pathToFileURL(join(registryDirectory, 'src/smart/field-renderers/registry.js')).href);
-} finally {
-  rmSync(registryDirectory, {recursive: true, force: true});
+// Since the language-file release (owner decision C282) registry.js imports
+// its words (./lang/index.mjs, English built in) and reads the Russian names
+// from the words the ru language file registers for sf-field-renderers. The
+// module and its English words are laid in a temporary folder at
+// SOURCE_REVISION, and the ru file's words are registered the way the page
+// registers them, so the labels are the release's own.
+const moduleDir = mkdtempSync(join(tmpdir(), 'ui-doc-property-types-'));
+mkdirSync(join(moduleDir, 'lang'));
+writeFileSync(join(moduleDir, 'registry.js'), registrySource);
+for (const file of ['index.mjs', 'en.json']) {
+  writeFileSync(join(moduleDir, 'lang', file), show(sourceRoot, sourceRevision, `src/smart/field-renderers/lang/${file}`));
 }
+const ruWords = JSON.parse(show(sourceRoot, sourceRevision, 'src/smart/field-renderers/lang/ru.json')).runtime;
+globalThis.__sfPageLanguage = {registered: new Map([['sf-field-renderers', new Map([['ru', ruWords]])]])};
+const registry = await import(pathToFileURL(join(moduleDir, 'registry.js')).href);
+rmSync(moduleDir, {recursive: true, force: true});
 const {PROPERTY_TYPES, modesOf} = registry;
 if (!Array.isArray(PROPERTY_TYPES) || !PROPERTY_TYPES.length || typeof modesOf !== 'function') {
   fail('registry.js no longer exports PROPERTY_TYPES and modesOf');

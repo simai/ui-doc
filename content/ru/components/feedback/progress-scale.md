@@ -6,14 +6,13 @@ profile: reference
 
 # Шкала прогресса
 
-:badge[sf-progress-scale]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-scale]{variant=outline scheme=on-surface size=1/2} :badge[1.7.1]{variant=outline scheme=on-surface size=1/2}
 
 Шкала делит ход операции на десять участков, по одному на каждые десять
 процентов. Она наглядна там, где обычная полоса выглядит слишком абстрактно:
 заполнение профиля, шаги настройки. Если значение меняется плавно, берите
-[индикатор прогресса](/ru/components/feedback/progress-bar/). Шкалу с другим
-числом участков — от 2 до 10, например «4 из 5» — рисует
-[смарт-шкала](/ru/smart/feedback/progress-scale/).
+[индикатор прогресса](/ru/components/feedback/progress-bar/). С атрибутом
+`data-steps` шкала становится уровнем из 2–10 участков, например «4 из 5».
 
 ## Пример
 
@@ -35,6 +34,11 @@ profile: reference
   `sf-progress-scale--size-*`, `sf-progress-scale--<статус>` и
   `sf-progress-scale--<десяток>` и снимает остальные, поэтому эти классы руками
   не пишут.
+- `data-steps` от 2 до 10 делает шкалу уровнем из стольких участков — см.
+  [Уровень](#уровень).
+- `data-warning-at` и `data-error-at` — пороги в процентах: от первого шкала
+  рисуется цветом предупреждения, от второго — цветом ошибки, если
+  `data-tone` не задаёт статус серьёзнее.
 - `data-show-text="false"` скрывает подпись с числом.
 - Имя шкалы задаёт `data-label`, текст для экранного диктора вместо числа —
   `data-value-text`.
@@ -48,6 +52,20 @@ profile: reference
 `error`.
 
 :::example {id="components/progress-scale/status" label="Статусы шкалы"}
+:::
+
+### Уровень
+
+`sf-progress-scale--level` • [справочник](#классы)
+
+`data-steps` от 2 до 10 задаёт число участков, и шкала показывает уровень, а
+не процент: при `data-steps="5"` и `data-value="80"` горят четыре участка, в
+конце строки — «4 из 5», а экранный диктор слышит 4 из 5. Участки, как и
+проценты, считаются с округлением вниз. `data-value-text` ставит своё слово
+на место числа, например «Хороший» для надёжности пароля. Класс
+`sf-progress-scale--level` скрипт ставит сам.
+
+:::example {id="components/progress-scale/level" label="Уровень из пяти участков"}
 :::
 
 ### Размер
@@ -85,7 +103,9 @@ profile: reference
 Скрипт компонента находит блоки `.sf-progress-scale` при загрузке страницы и
 в добавленной позже разметке. Чтобы изменить уже нарисованную шкалу, вызовите
 `SF.ProgressScale.setState(element, state)`: поля `value`, `size`, `status`,
-`showText`, `label` и `valueText` меняют то же, что и атрибуты.
+`showText`, `label`, `valueText`, `meter`, `steps`, `warningAt` и `errorAt`
+меняют то
+же, что и атрибуты.
 `SF.ProgressScale.getState(element)` возвращает текущие значения.
 
 :::example {id="components/progress-scale/update" label="Изменение значения из скрипта"}
@@ -109,7 +129,8 @@ whenLoader(() => SF.Loader.ready('ProgressScale', (ProgressScale) => {
 }));
 ```
 
-Параметры: `value`, `size`, `status`, `showText`, `label`, `valueText`.
+Параметры: `value`, `size`, `status`, `showText`, `label`, `valueText`,
+`meter`, `steps`, `warningAt`, `errorAt`.
 Событий компонент не отправляет.
 
 ## Классы
@@ -131,7 +152,7 @@ whenLoader(() => SF.Loader.ready('ProgressScale', (ProgressScale) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-progress-scale-fill-color` | Заполненные сегменты; статус задаёт свой цвет, если эта переменная не задана. | `var(--sf-on-surface-variant)`; зависит от статуса |
+| `--sf-progress-scale-fill-color` | Заполненные сегменты: без статуса — основной цвет темы, у статуса свой цвет, если эта переменная не задана. | `var(--sf-primary)`; зависит от статуса |
 | `--sf-progress-scale-track-color` | Ещё не заполненные сегменты. | `var(--sf-surface-container)` |
 | `--sf-progress-scale-segment-gap` | Расстояние между десятью сегментами. | `var(--sf-a2)` |
 | `--sf-progress-scale-radius` | Углы каждого сегмента. | `var(--sf-radius-1/3)` |

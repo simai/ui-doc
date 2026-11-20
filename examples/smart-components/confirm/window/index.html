@@ -1,0 +1,12 @@
+<div class="flex flex-wrap gap-2">
+  <sf-button text="Удалить меню" appearance="outline" status="danger" data-sf-modal-open="confirm-window-menu"></sf-button>
+</div>
+
+<sf-modal modal-id="confirm-window-menu" heading="Удалить меню «Главное»?" size="question">
+  <sf-confirm slot="content" id="confirm-window" appearance="window" status="danger"
+      question="Удалить меню «Главное»?" confirm-id="menu-1" accept-text="Удалить меню"
+      consequence="30 дней меню лежит в корзине — оттуда его можно вернуть.">
+    <p slot="description">Меню пропадёт с трёх сайтов: shop, b2b и blog. Два представления, которые на него ссылаются, станут стандартными.</p>
+    <sf-checkbox slot="options" name="menu-now" label="Удалить сразу, без корзины"></sf-checkbox>
+  </sf-confirm>
+</sf-modal>

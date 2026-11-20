@@ -5,7 +5,7 @@ description: "Факты парами «подпись — значение»: �
 
 # Список сведений
 
-:badge[sf-list-description]{variant=outline scheme=on-surface size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-description]{variant=outline scheme=on-surface size=1/2} :badge[1.3.4]{variant=outline scheme=on-surface size=1/2}
 
 Показывает факты парами «подпись — значение»: сводку сайта, сведения о
 сервере, шапку записи, параметры задания, данные лицензии. Значение может
@@ -29,8 +29,8 @@ description: "Факты парами «подпись — значение»: �
 <sf-list-description label="Сведения о сайте">
   <script type="application/json" data-sf-settings>
     {"items": [
-      {"label": "Адрес", "value": "demo-static.test", "href": "https://demo-static.test/"},
-      {"label": "Корень сайта", "value": "/var/www/demo-static/public", "mono": true, "copy": true},
+      {"label": "Адрес", "value": "posuda.ru", "href": "https://posuda.ru/"},
+      {"label": "Корень сайта", "value": "/var/www/posuda/public", "mono": true, "copy": true},
       {"label": "Сертификат", "value": "Действует до 12 декабря", "status": "success",
        "hint": "Let's Encrypt, продлевается сам"}
     ]}
@@ -155,7 +155,7 @@ facts.addEventListener('sf-list-description-navigate', (event) => {
 |:---|:---|:---|:---|:---|
 | `label` | строка | пусто | — | Имя списка для экранного диктора, если над ним нет заголовка, который его называет. |
 | `size` | строка | `1` | `1/2`, `1`, `2` | Размер списка: от него зависят подпись, значение, пояснение и высота строки. `1/2` — для боковой панели. |
-| `layout` | строка | `auto` | `auto`, `columns`, `stacked`, `grid` | `columns` — подписи в своей колонке (шириной по самой длинной подписи, до `--sf-list-description-label-width`), значения рядом; `stacked` — каждая подпись над своим значением; `auto` — колонки, а в колонке 20rem и уже (боковая панель 20rem) и на телефоне (уже `md`) — друг над другом, рядом — начиная с боковой панели 24rem (решение владельца C180 (3)); `grid` — сводка под заголовком записи: подпись над значением, столько колонок шириной 11rem, сколько помещается, но не больше `columns`, каждое значение в одну строку с многоточием и полным текстом в `title`. |
+| `layout` | строка | `auto` | `auto`, `columns`, `stacked`, `grid` | `columns` — подписи в своей колонке (шириной с самую длинную подпись, до `--sf-list-description-label-width`), значения рядом; `stacked` — каждая подпись над своим значением; `auto` — колонки, а в колонке 20rem и уже (боковая панель 20rem) и на телефоне (уже `md`) — друг над другом, рядом — с боковой панели 24rem (C180 (3)); `grid` — сводка под заголовком записи: каждая подпись над значением, столько колонок, сколько помещается по 11rem, но не больше `columns`, каждое значение в одну строку с многоточием и полным текстом в `title`. |
 | `columns` | строка | `4` | `1`, `2`, `3`, `4` | При `layout="grid"` — наибольшее число колонок (столько, сколько помещается по 11rem). |
 | `dividers` | да/нет | нет | — | Тонкая линия между строками. |
 | `overflow` | строка | `wrap` | `wrap`, `truncate` | Значение длиннее колонки: `wrap` переносит его на новые строки в любом месте, так что путь и хеш тоже переносятся; `truncate` держит его в одну строку с многоточием, а целиком значение видно в подсказке под указателем и пока оно в фокусе. |
@@ -190,13 +190,13 @@ facts.addEventListener('sf-list-description-navigate', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list-description>`, контракт `smart.list-description` версии `1.2.2` |
-| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
+| Тег | `<sf-list-description>`, контракт `smart.list-description` версии `1.3.4` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; желательна подпись или `aria-label`; с клавиатуры: Tab проходит в порядке чтения по действию каждого раздела, каждой метке справки, каждой ссылке значения, каждой кнопке копирования, действию каждого пункта и, с `overflow="truncate"`, по каждому обрезанному значению; Enter переходит по ссылке, копирует или выполняет действие. |
-| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/list-description` |
-| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-list-description` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/list-description` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-list-description` |
 
 ## См. также
 
@@ -204,3 +204,4 @@ facts.addEventListener('sf-list-description-navigate', (event) => {
   действия, переименование.
 - [Требует внимания](/ru/smart/feedback/list-attention/) — проблемы, которым
   нужен человек.
+- Рецепты: [«Карточка записи»](/ru/recipes/edit/record-card/), [«Оформление заказа»](/ru/recipes/edit/checkout/)

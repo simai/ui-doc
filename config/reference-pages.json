@@ -8,7 +8,15 @@
       "component": "button-group",
       "blocks": [
         "sf-button-group"
-      ]
+      ],
+      "elsewhere": {
+        "marker": "segmented",
+        "classes": [
+          "sf-button-group-narrow"
+        ],
+        "lead": "В том же файле стилей лежат классы дорожки [Сегментного переключателя](/ru/smart/actions/segmented/#для-разработчика): их ставит `sf-segmented`, это не настройки группы —",
+        "tail": "Группе кнопок они не нужны."
+      }
     },
     "components/actions/buttons.md": {
       "kind": "component",
@@ -26,15 +34,18 @@
       "kind": "component",
       "component": "close",
       "blocks": [
-        "sf-close"
-      ]
+        "sf-close",
+        "sf-button-close"
+      ],
+      "badge": "sf-button-close"
     },
     "components/actions/download-file.md": {
       "kind": "component",
       "component": "download-file",
       "blocks": [
         "sf-download-file"
-      ]
+      ],
+      "classes_note": "Состояния подготовки и ошибки (`--preparing`, `--offer`, `--ready`, `--error`, `--retry-icon`, `--narrow` и части `__ring`, `__spinner`, `__stack`, `__status`, `__reason`, `__tip`, `__live`, `__end`) рисует [смарт-компонент](/ru/smart/actions/download-file/) и ставит их сам; вручную их не пишут."
     },
     "components/actions/fab.md": {
       "kind": "component",
@@ -189,6 +200,11 @@
       "component": "placeholder",
       "blocks": [
         "sf-placeholder"
+      ],
+      "aliases": [
+        "sf-placeholder-right",
+        "sf-placeholder-top",
+        "sf-placeholder-top-text"
       ]
     },
     "components/feedback/progress-bar.md": {
@@ -309,8 +325,10 @@
       "kind": "component",
       "component": "verification",
       "blocks": [
-        "sf-verification"
-      ]
+        "sf-verification",
+        "sf-verification-form"
+      ],
+      "badge": "sf-verification"
     },
     "components/internal/admin-menu.md": {
       "kind": "component",
@@ -368,13 +386,6 @@
       "blocks": [
         "sf-steps",
         "sf-step"
-      ]
-    },
-    "components/navigation/tab.md": {
-      "kind": "component",
-      "component": "tab",
-      "blocks": [
-        "sf-tab"
       ]
     },
     "components/navigation/tabs.md": {
@@ -1975,9 +1986,13 @@
       "kind": "smart",
       "standard": 4
     },
+    "smart/composite/wizard.md": {
+      "kind": "smart",
+      "standard": 3
+    },
     "smart/actions/confirm-change.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
     "pro/chat/chat-composer.md": {
       "kind": "smart",

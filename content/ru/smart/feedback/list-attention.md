@@ -5,7 +5,7 @@ description: "Список проблем, которым нужен челов�
 
 # Требует внимания
 
-:badge[sf-list-attention]{variant=outline scheme=on-surface size=1/2} :badge[1.3.8]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-attention]{variant=outline scheme=on-surface size=1/2} :badge[1.4.4]{variant=outline scheme=on-surface size=1/2}
 
 Список проблем, которые ждут человека, на обзорном экране: здоровье сервера,
 проверки сайта, ошибки импорта и переноса, готовность к обновлению,
@@ -33,10 +33,10 @@ description: "Список проблем, которым нужен челов�
 <sf-list-attention label="Здоровье сервера">
   <script type="application/json" data-sf-settings>
     {"items": [
-      {"id": "down", "status": "error", "title": "demo-php.test не отвечает",
+      {"id": "down", "status": "error", "title": "shop.ru не отвечает",
        "text": "12 минут, код 502", "action": {"label": "Перезапустить", "event": "restart"}},
       {"id": "cert", "status": "warning", "title": "Сертификат истекает через 6 дней",
-       "action": {"label": "Продлить", "href": "/sites/demo-static/ssl/"}}
+       "action": {"label": "Продлить", "href": "/sites/posuda/ssl/"}}
     ]}
   </script>
 </sf-list-attention>
@@ -189,13 +189,13 @@ list.addEventListener('sf-list-attention-apply', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list-attention>`, контракт `smart.list-attention` версии `1.3.8` |
-| Поставка | выпуск Framework `ui-24d64b7f6eb7` |
+| Тег | `<sf-list-attention>`, контракт `smart.list-attention` версии `1.4.4` |
+| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: Tab проходит по ссылке объекта, действию и «⋯» каждого пункта по порядку, затем по «Проверить снова» и «Все проблемы» внизу; Enter переходит по ссылке, Enter или пробел нажимает кнопку; В меню «⋯» стрелки двигают выбор, Enter выбирает, Escape закрывает и возвращает фокус. |
-| Источник | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/smart/list-attention` |
-| Правило классов | `simai/ui@24d64b7f6eb7a782d648dbb5b44f7eb763ec815b:distr/rule/rule.json#name=cl-list-attention` |
+| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/list-attention` |
+| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-list-attention` |
 
 ## См. также
 
@@ -205,3 +205,4 @@ list.addEventListener('sf-list-attention-apply', async (event) => {
   страницы.
 - [Пустое состояние](/ru/smart/feedback/empty-state/) — что показать, когда
   данных нет.
+- Рецепты: [«Обзор с плитками»](/ru/recipes/notify/dashboard/)
