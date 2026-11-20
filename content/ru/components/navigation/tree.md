@@ -6,7 +6,7 @@ profile: reference
 
 # Дерево
 
-:badge[sf-tree]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tree]{variant=outline scheme=on-surface size=1/2} :badge[1.6.1]{variant=outline scheme=on-surface size=1/2}
 
 Дерево показывает вложенную иерархию — папки, разделы, категории — и даёт
 раскрывать и сворачивать ветви. Для навигации по страницам сайта с
@@ -270,7 +270,7 @@ whenLoader(() => SF.Loader.ready('Tree', () => {
 |:---|:---|:---|
 | `--sf-tree-item-gap` | Промежуток между шевроном, флажком, значком и именем; шаг уровня sf-tree следует за ним. | `var(--sf-space-1\/2)` |
 | `--sf-tree-item-name-color` | Цвет имени вне дерева; внутри дерева имя берёт цвет своей строки. | `var(--sf-primary)` |
-| `--sf-tree-item-icon-color` | Цвет шеврона и значка. | `currentColor` |
+| `--sf-tree-item-icon-color` | Цвет шеврона и значка. | `var(--sf-on-surface-variant)` |
 | `--sf-tree-item-drop-background-color` | Заливка узла, на который упадёт перетаскиваемое. | `var(--sf-primary-container)` |
 | `--sf-tree-item-drop-outline-color` | Пунктирное кольцо узла, на который упадёт перетаскиваемое. | `var(--sf-primary)` |
 

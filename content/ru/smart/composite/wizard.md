@@ -5,7 +5,7 @@ description: "Процесс из нескольких шагов, которы�
 
 # Мастер
 
-:badge[sf-wizard]{variant=outline scheme=on-surface size=1/2} :badge[1.5.3]{variant=outline scheme=on-surface size=1/2} :badge[sf-wizard-step]{variant=outline scheme=on-surface size=1/2} :badge[1.0.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-wizard]{variant=outline scheme=on-surface size=1/2} :badge[1.5.5]{variant=outline scheme=on-surface size=1/2} :badge[sf-wizard-step]{variant=outline scheme=on-surface size=1/2} :badge[1.0.8]{variant=outline scheme=on-surface size=1/2}
 
 Мастер — процесс из нескольких шагов, который человек проходит один раз, а
 продукт между шагами делает работу: первая настройка сервера, установщик,
@@ -328,13 +328,13 @@ wizard.addEventListener('sf-wizard-submit', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-wizard>`, контракт `smart.wizard` версии `1.5.3` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-wizard>`, контракт `smart.wizard` версии `1.5.5` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
-| Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: Tab доходит до «Продолжить позже», доступных шагов хода, полей шага, затем до «Назад», «Пропустить» и главной кнопки; Enter в поле шага отправляет шаг, как главная кнопка; Escape закрывает окно в месте modal; при введённом и не отправленном сначала спрашивает. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/wizard` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-wizard` |
+| Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: Tab доходит до «Продолжить позже», доступных шагов хода, полей шага, затем до «Назад», «Пропустить» и главной кнопки; Enter в поле шага отправляет шаг, как главная кнопка; Escape выходит из окна (места `modal` и `drawer`) так же, как его ×: «продолжить позже» — черновик сохраняется, ничего не спрашивается; `close` с `{reason: escape}`. |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/wizard` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-wizard` |
 
 ### `<sf-wizard-step>`
 
@@ -375,13 +375,13 @@ wizard.addEventListener('sf-wizard-submit', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-wizard-step>`, контракт `smart.wizard-step` версии `1.0.7` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-wizard-step>`, контракт `smart.wizard-step` версии `1.0.8` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; название компонент ставит сам; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/wizard-step` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-wizard-step` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/wizard-step` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-wizard-step` |
 
 ## См. также
 

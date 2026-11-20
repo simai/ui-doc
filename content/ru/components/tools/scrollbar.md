@@ -6,7 +6,7 @@ profile: reference
 
 # Полоса прокрутки
 
-:badge[sf-scrollbar]{variant=outline scheme=on-surface size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-scrollbar]{variant=outline scheme=on-surface size=1/2} :badge[1.5.2]{variant=outline scheme=on-surface size=1/2}
 
 У всех прокручиваемых областей SIMAI Framework одна полоса, и подключать её
 не нужно: каждая область, которая прокручивается, получает её сама. Полоса

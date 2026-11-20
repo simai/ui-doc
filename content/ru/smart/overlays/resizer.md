@@ -5,7 +5,7 @@ description: "Ручка на краю панели: ширину меняют �
 
 # Изменение ширины
 
-:badge[sf-resizer]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-resizer]{variant=outline scheme=on-surface size=1/2} :badge[1.5.2]{variant=outline scheme=on-surface size=1/2}
 
 Изменение ширины — ручка на краю панели: ширину тянут мышью, пером или
 касанием, меняют стрелками с клавиатуры и возвращают двойным щелчком. Подходит
@@ -286,13 +286,13 @@ SF.Resizer.attach(table, {
 
 | | |
 |:---|:---|
-| Тег | `<sf-resizer>`, контракт `smart.resizer` версии `1.5.0` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-resizer>`, контракт `smart.resizer` версии `1.5.2` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как разделитель; желательна подпись или `aria-label`; с клавиатуры: `←`, `→`, `Home`, `End`, `PageUp`, `PageDown`, `Enter`. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/resizer` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-resizer` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/resizer` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-resizer` |
 
 ## См. также
 

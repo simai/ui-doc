@@ -5,7 +5,7 @@ description: "Показывает ожидание, длительность к
 
 # Спиннер
 
-:badge[sf-spinner]{variant=outline scheme=on-surface size=1/2} :badge[1.5.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-spinner]{variant=outline scheme=on-surface size=1/2} :badge[1.5.4]{variant=outline scheme=on-surface size=1/2}
 
 Спиннер показывает, что работа идёт, но сколько ещё ждать — неизвестно: запрос
 к серверу, подготовка отчёта. Если доля выполненного известна, берите
@@ -181,13 +181,13 @@ report.append(spinner);
 
 | | |
 |:---|:---|
-| Тег | `<sf-spinner>`, контракт `smart.spinner` версии `1.5.2` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-spinner>`, контракт `smart.spinner` версии `1.5.4` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как строка состояния; желательна подпись или `aria-label`. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/spinner` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-spinner` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/spinner` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-spinner` |
 
 ## См. также
 

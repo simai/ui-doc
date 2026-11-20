@@ -138,7 +138,7 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-close-color` | Цвет крестика: он рисуется заливкой маски; режим принудительных цветов сохраняет свой. | `var(--sf-on-surface-variant)` |
+| `--sf-close-color` | Цвет крестика: он рисуется заливкой маски; режим принудительных цветов сохраняет свой. | `var(--sf-on-surface)` |
 | `--sf-close-background-color` | Заливка под крестиком; по умолчанию нет — кнопка, в которой он стоит, рисует свою. | `transparent` |
 | `--sf-close-glyph-size` | Ширина и высота крестика. | `var(--sf-text-size-1/3)`; зависит от размера |
 | `--sf-close-padding-inline` | Отступ в начале и в конце крестика. | `var(--sf-a4)`; зависит от размера |
@@ -146,7 +146,7 @@ profile: reference
 
 ```css
 .sf-close {
-  --sf-close-color: var(--sf-on-surface-variant);
+  --sf-close-color: var(--sf-on-surface);
 }
 ```
 

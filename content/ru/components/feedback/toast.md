@@ -6,7 +6,7 @@ profile: reference
 
 # Всплывающие сообщения
 
-:badge[sf-toast]{variant=outline scheme=on-surface size=1/2} :badge[1.7.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-toast]{variant=outline scheme=on-surface size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
 
 Всплывающее сообщение коротко сообщает результат действия поверх интерфейса
 и не блокирует дальнейшую работу. Для постоянного текста внутри страницы
@@ -191,7 +191,7 @@ handle.close();
 |:---|:---|
 | Блок | `sf-toast` |
 | Части | `sf-toast-bottom`, `sf-toast-container`, `sf-toast-supporting-text`, `sf-toast-text`, `sf-toast-wrap` |
-| Модификаторы | `sf-toast--actions-under`, `sf-toast--error`, `sf-toast--info`, `sf-toast--neutral`, `sf-toast--success`, `sf-toast--warning` |
+| Модификаторы | `sf-toast--actions-under`, `sf-toast--error`, `sf-toast--success`, `sf-toast--warning` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -224,18 +224,18 @@ handle.close();
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-toast--background-color` | не задана; задают модификаторы, например `.sf-toast--neutral`: `var(--sf-toast-background-color, var(--sf-surface-container))` | `background-image` |
-| `--sf-toast--content-color` | не задана; задают модификаторы, например `.sf-toast--neutral`: `var(--sf-toast-color, var(--sf-on-surface))` | `--sf-close-icon--background-color`, `color`, `--sf-button-close--ink` |
+| `--sf-toast--background-color` | не задана; задают модификаторы, например `:is(.sf-toast--neutral, .sf-toast--default)`: `var(--sf-toast-background-color, var(--sf-surface-container))` | `background-image` |
+| `--sf-toast--content-color` | не задана; задают модификаторы, например `:is(.sf-toast--neutral, .sf-toast--default)`: `var(--sf-toast-color, var(--sf-on-surface))` | `--sf-close-icon--background-color`, `color`, `--sf-button-close--ink` |
 | `--sf-toast--lead` | `var(--sf-ui-1--space-y-tightness-low)` | `margin-top`, `margin-block-start`, `margin-inline-end`, `padding-top`, `padding-bottom`, `padding-block`, `padding-block-end` |
 | `--sf-toast-bottom--background-color` | не задана; задают модификаторы, например `.sf-toast .sf-toast-bottom`: `transparent` | `background-color` |
 | `--sf-toast-container--background-color` | не задана; задают модификаторы, например `.sf-toast .sf-toast-container`: `transparent` | `background-color` |
 | `--sf-toast-container--gap` | не задана; задают модификаторы, например `.sf-toast .sf-toast-container`: `var(--sf-space-1/2)` | `gap` |
-| `--sf-toast-supporting-text--color` | не задана; задают модификаторы, например `.sf-toast.sf-toast--neutral .sf-toast-supporting-text`: `var(--sf-toast-color, var(--sf-on-surface))` | `color` |
+| `--sf-toast-supporting-text--color` | не задана; задают модификаторы, например `.sf-toast:is(.sf-toast--neutral, .sf-toast--default) .sf-toast-supporting-text`: `var(--sf-toast-color, var(--sf-on-surface))` | `color` |
 | `--sf-toast-supporting-text--font-family` | не задана; задают модификаторы, например `.sf-toast .sf-toast-supporting-text`: `var(--sf-text--family)` | `font-family` |
 | `--sf-toast-supporting-text--font-size` | не задана; задают модификаторы, например `.sf-toast .sf-toast-supporting-text`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-toast-supporting-text--font-weight` | не задана; задают модификаторы, например `.sf-toast .sf-toast-supporting-text`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-toast-supporting-text--line-height` | не задана; задают модификаторы, например `.sf-toast .sf-toast-supporting-text`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-toast-text--color` | не задана; задают модификаторы, например `.sf-toast.sf-toast--neutral .sf-toast-text`: `var(--sf-toast-color, var(--sf-on-surface))` | `color` |
+| `--sf-toast-text--color` | не задана; задают модификаторы, например `.sf-toast:is(.sf-toast--neutral, .sf-toast--default) .sf-toast-text`: `var(--sf-toast-color, var(--sf-on-surface))` | `color` |
 | `--sf-toast-text--font-family` | не задана; задают модификаторы, например `.sf-toast .sf-toast-text`: `var(--sf-text--family)` | `font-family` |
 | `--sf-toast-text--font-size` | не задана; задают модификаторы, например `.sf-toast .sf-toast-text`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-toast-text--font-weight` | не задана; задают модификаторы, например `.sf-toast .sf-toast-text`: `var(--sf-font-weight-medium)` | `font-weight` |

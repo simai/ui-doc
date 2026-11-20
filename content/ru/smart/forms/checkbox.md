@@ -5,7 +5,7 @@ description: "Даёт отметить один или несколько не�
 
 # Флажок
 
-:badge[sf-checkbox]{variant=outline scheme=on-surface size=1/2} :badge[1.5.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-checkbox]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Флажок даёт независимый выбор: каждый вариант отмечают или снимают отдельно от
 остальных. Для одного варианта из нескольких берите
@@ -181,6 +181,7 @@ terms.setChecked(false);
 | `name` | строка | пусто | — | — |
 | `value` | строка | `on` | — | Что отправляет отмеченный флажок; без значения — "on", как у родного флажка. |
 | `invalid` | да/нет | нет | — | Показанное состояние ошибки: вид ошибки и `aria-invalid` на родном поле ввода. |
+| `error-message` | строка | пусто | — | Текст под элементом, пока он в состоянии ошибки, цветом ошибки: что не так, как это говорят все поля семейства (`sf-input`, `sf-input-choice`); он описывает родной элемент управления. Без `invalid` ничего не рисуется. |
 | `checked` | да/нет | нет | — | — |
 | `indeterminate` | да/нет | нет | — | Смешанное визуальное состояние чекбокса, обобщающего связанные варианты. |
 | `aria-label` | строка | пусто | — | Доступное имя чекбокса без видимой подписи. |
@@ -222,13 +223,13 @@ terms.setChecked(false);
 
 | | |
 |:---|:---|
-| Тег | `<sf-checkbox>`, контракт `smart.checkbox` версии `1.5.5` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-checkbox>`, контракт `smart.checkbox` версии `1.6.0` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как флажок; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Пробел`. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/checkbox` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-checkbox` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/checkbox` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-checkbox` |
 
 ## См. также
 

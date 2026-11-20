@@ -5,7 +5,7 @@ description: "Голова рабочей страницы приложения:
 
 # Шапка страницы
 
-:badge[sf-header-page]{variant=outline scheme=on-surface size=1/2} :badge[1.9.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-header-page]{variant=outline scheme=on-surface size=1/2} :badge[1.9.4]{variant=outline scheme=on-surface size=1/2}
 
 Шапка страницы — голова рабочей страницы приложения: путь, заголовок, звезда
 избранного, действия страницы и её вкладки. У приложения с боковым меню —
@@ -225,13 +225,13 @@ header.addEventListener('sf-header-page-toggle', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-header-page>`, контракт `smart.header-page` версии `1.9.3` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-header-page>`, контракт `smart.header-page` версии `1.9.4` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; название компонент ставит сам; с клавиатуры: `Tab` доходит до звезды и действий; `Enter` или `Пробел` ставят и снимают звезду. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/header-page` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-header-page` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/header-page` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-header-page` |
 
 ## См. также
 

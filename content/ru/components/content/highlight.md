@@ -6,7 +6,7 @@ profile: reference
 
 # Подсветка кода
 
-:badge[sf-highlight]{variant=outline scheme=on-surface size=1/2} :badge[1.10.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-highlight]{variant=outline scheme=on-surface size=1/2} :badge[1.11.0]{variant=outline scheme=on-surface size=1/2}
 
 Подсветка кода раскрашивает синтаксис в блоках `pre code` и оформляет их
 поверхностью с панелью: название языка и кнопка копирования. Берите её для
@@ -139,7 +139,7 @@ await SF.Highlight.refresh(block, 'const total = price * count;');
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-highlight` |
-| Части | `sf-highlight__head`, `sf-highlight__language`, `sf-highlight__status`, `sf-highlight__wrap`, `sf-highlight__wrap-toggle` |
+| Части | `sf-highlight__head`, `sf-highlight__language`, `sf-highlight__language-text`, `sf-highlight__status`, `sf-highlight__wrap`, `sf-highlight__wrap-toggle` |
 | Модификаторы | `sf-highlight--terminal`, `sf-highlight--wrap` |
 
 **`sf-code-surface`**

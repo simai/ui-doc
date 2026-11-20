@@ -5,7 +5,7 @@ description: "Момент времени так, как удобно месту
 
 # Время
 
-:badge[sf-time]{variant=outline scheme=on-surface size=1/2} :badge[1.8.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-time]{variant=outline scheme=on-surface size=1/2} :badge[1.8.3]{variant=outline scheme=on-surface size=1/2}
 
 Время показывает момент так, как удобно месту: в первый час — «28 минут
 назад», сегодня — часы, вчера — «вчера, 19:40», в этом году — день и месяц,
@@ -176,13 +176,13 @@ description: "Момент времени так, как удобно месту
 
 | | |
 |:---|:---|
-| Тег | `<sf-time>`, контракт `smart.time` версии `1.8.2` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-time>`, контракт `smart.time` версии `1.8.3` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Роль `time`; желательна подпись или `aria-label`; с клавиатуры: `Tab` доходит до времени с подсказкой (не внутри ссылки или кнопки) и показывает полный момент; `Escape` прячет подсказку. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/time` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-time` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/time` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-time` |
 
 ## См. также
 

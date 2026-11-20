@@ -6,7 +6,7 @@ profile: reference
 
 # Иконки
 
-:badge[sf-icon]{variant=outline scheme=on-surface size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-icon]{variant=outline scheme=on-surface size=1/2} :badge[1.4.2]{variant=outline scheme=on-surface size=1/2}
 
 Иконка — небольшой знак, который помогает быстрее узнать действие или
 раздел: корзина у «Удалить», шестерёнка у «Настройки». Берите её рядом с

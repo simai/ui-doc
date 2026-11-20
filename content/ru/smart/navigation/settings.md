@@ -5,7 +5,7 @@ description: "Компактная панель настроек: переклю
 
 # Настройки
 
-:badge[sf-settings]{variant=outline scheme=on-surface size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-settings]{variant=outline scheme=on-surface size=1/2} :badge[1.9.1]{variant=outline scheme=on-surface size=1/2}
 
 Настройки — компактная панель с несколькими настройками, которые человек
 меняет на месте: тема и размер текста у читалки, плотность таблицы, звук в
@@ -318,13 +318,13 @@ applyTheme(settings.values.theme);
 
 | | |
 |:---|:---|
-| Тег | `<sf-settings>`, контракт `smart.settings` версии `1.8.0` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-settings>`, контракт `smart.settings` версии `1.9.1` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как меню; название компонент ставит сам; с клавиатуры: `Tab` ставит фокус на панель (одна остановка), стрелки переходят по строкам, `Home` и `End` — к первой и последней; `Enter` или `Пробел` переключают, выбирают вариант или открывают вложенный список, `→` уходит внутрь, `←` и `Esc` возвращают назад; ползунок двигают `←` и `→`, `Esc` на верхнем уровне закрывает панель и возвращает фокус на кнопку. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/settings` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-settings` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/settings` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-settings` |
 
 ## См. также
 

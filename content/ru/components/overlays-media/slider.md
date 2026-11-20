@@ -6,7 +6,7 @@ profile: reference
 
 # Слайдер контента
 
-:badge[sf-slider]{variant=outline scheme=on-surface size=1/2} :badge[1.4.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-slider]{variant=outline scheme=on-surface size=1/2} :badge[1.4.4]{variant=outline scheme=on-surface size=1/2}
 
 Слайдер контента показывает изображения, карточки или другие равноправные
 слайды по одному и листает их стрелками и точками.
@@ -220,7 +220,7 @@ swiper?.on('slideChange', () => console.log(swiper.realIndex));
 | `--sf-slider-arrow-offset-inline` | Насколько стрелки отстоят от краёв. | `var(--sf-space-1)` |
 | `--sf-slider-dots-offset-block` | Насколько точки отстоят от нижнего края. | `var(--sf-space-1)` |
 | `--sf-slider-thumbnail-size` | Сторона миниатюры. | `var(--sf-d2)` |
-| `--sf-slider-thumbnail-radius` | Углы миниатюры. | `var(--sf-radius-square)` |
+| `--sf-slider-thumbnail-radius` | Углы миниатюры. | `var(--sf-radius--ui)` |
 
 ```css
 .sf-slider {
@@ -251,7 +251,7 @@ swiper?.on('slideChange', () => console.log(swiper.realIndex));
 | `--sf-slider-dots--padding-inline-end` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-ui-1--space-y)` | `padding-inline-end` |
 | `--sf-slider-dots--padding-inline-start` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-ui-1--space-y)` | `padding-inline-start` |
 | `--sf-slider-dots--padding-top` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-ui-1--space-y)` | `padding-top` |
-| `--sf-slider-dots-dot--active-color` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--plate`: `var(--sf-primary)` | `--sf-slider-dots-dot--background-color`, `color` |
+| `--sf-slider-dots-dot--active-color` | не задана; задают модификаторы, например `.sf-slider-dots:is(.sf-slider-dots--plate, .sf-slider-dots--bare)`: `var(--sf-primary)` | `--sf-slider-dots-dot--background-color`, `color` |
 | `--sf-slider-dots-dot--active-width` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-c2)` | `width` |
 | `--sf-slider-dots-dot--background-color` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `transparent` | `background-color` |
 | `--sf-slider-dots-dot--border-end-end-radius` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `var(--sf-radius-circle)` | `border-end-end-radius` |

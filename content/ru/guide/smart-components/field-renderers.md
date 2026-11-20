@@ -77,13 +77,13 @@ const set = await SF.whenFieldRenderers();
 |:---|:---|
 | `key` | имя поля; элемент формы получает `name` вида `sf_field_<key>`, фильтр — `sf_filter_<key>` |
 | `label` | подпись: `aria-label` или `label` элемента правки, подпись цвета |
-| `variant` | вариант типа: `phone` и `password` у строки, `scale` и `stepper` у числа, `buttons` у выбора одного из списка, `badges`, `checklist` и `select` у нескольких значений, `image`, `image-card`, `image-list` у файла |
-| `options` | варианты выбора: `{value, label}`, вместо `label` допустим `text`; цвет метки — `color` или `scheme` (схема Framework или hex). Если `options` нет, набор берёт `filter.options`, затем `constraints.options` |
+| `variant` | вариант типа: `stepper`, `scale` и `meter` у числа, `buttons` у выбора одного из списка, `badges`, `checklist` и `select` у нескольких значений, `image`, `image-card`, `image-list` у файла |
+| `options` | варианты выбора: `{value, label}`, вместо `label` допустим `text`; цвет метки — `color` (схема Framework или hex). Если `options` нет, набор берёт `filter.options`, затем `constraints.options` |
 | `required` | атрибут `required` элемента правки у строки, текста, числа, даты, выбора из списка, выбора записи и кода; у логического поля — флажок вместо пары кнопок в форме с кнопкой «Сохранить» и переключатель, когда значение применяется сразу (`apply: 'instant'`); у цвета запрещает очистку |
 | `readonly` | `true` у любого типа: `renderEditField` возвращает то же, что просмотр, а не выключенный элемент формы |
 | `unit` | единица после числа в просмотре |
 | `placeholder` | подсказка в пустой строке, тексте, выборе записи и пустом выпадающем списке выбора одного или нескольких значений |
-| `mask` | маска простой строки (порт представления записи 1.16.0): образец `mask-pattern` [поля ввода](/ru/smart/forms/inputs/). Варианты `phone` и `password` маску не читают |
+| `mask` | маска простой строки (порт представления записи 1.16.0): образец `mask-pattern` [поля ввода](/ru/smart/forms/inputs/). Типы `phone` и `password` маску не читают |
 | `nullable` | `false` у строки с маской: очищенное поле передаёт `""`, а не `null` |
 | `size` | ступень размера выбора вариантом `buttons`: `1/2`, `1` или `2`; без неё — размер панели |
 | `searchPlaceholder` | подсказка поиска в выборе записи |
@@ -106,8 +106,9 @@ const set = await SF.whenFieldRenderers();
 
 | Тип | Значение |
 |:---|:---|
-| `string`, `text`, `include` | строка; у варианта `password` — `{set: true}` или `{set: false}`, сам пароль хост не передаёт |
-| `integer`, `number` | число; у числа можно передать и десятичную строку (`"1500.50"`); у варианта `scale` — от 0 до 100, иначе значение остаётся текстом |
+| `string`, `text`, `include` | строка |
+| `password` | `{set: true}` или `{set: false}`, сам пароль хост не передаёт |
+| `number` | число; можно передать и десятичную строку (`"1500.50"`); у варианта `scale` — от 0 до 100, иначе значение остаётся текстом |
 | `date` | строка даты `ГГГГ-ММ-ДД` или даты со временем; правка меняет день и сохраняет время |
 | `datetime` | дата и время ISO 8601: `2026-11-15T10:30:00`, с секундами, долями секунды и часовым поясом или без них; одна дата `ГГГГ-ММ-ДД` тоже читается |
 | `time` | время суток `чч:мм`, а если хост хранит секунды — `чч:мм:сс` с долями секунды |
@@ -123,7 +124,7 @@ const set = await SF.whenFieldRenderers();
 Имена людей и записей хост передаёт уже готовыми: набор не превращает
 идентификатор в название.
 
-Типы `money`, `percent`, `items`, `compound` и `ru.requisites` показывает и
+Типы `money`, `percent`, `items`, `complex` и `ru.requisites` показывает и
 правит набор `view` (`sf-view-properties`, `sf-view-flow`); набор
 полей рисует для них только ячейку и фильтр. Деньги — `{amount, currency}` или
 одна сумма при заданном `currency`, «1 500,50 ₽»; процент — десятичная строка,
@@ -201,7 +202,7 @@ compose(stored, {date: '2026-11-16', time: ''});
 // {error: 'timeMissing'}
 ```
 
-Строка с вариантом `password` — пароль, который набор никогда не показывает.
+Тип `password` — пароль, который набор никогда не показывает.
 Хост передаёт не пароль, а признак `{set: true}` или `{set: false}`; `null` и
 отсутствие значения читаются как «не задан». Просмотр, ячейка и поле с
 `readonly: true` показывают только «Задан» или «Не задан» на языке страницы.
@@ -224,7 +225,7 @@ const host = {
     else changes[field.key] = value;
   },
 };
-const field = {key: 'secret', label: 'Пароль хранилища', propertyType: 'string', variant: 'password'};
+const field = {key: 'secret', label: 'Пароль хранилища', propertyType: 'password'};
 SF.render(set.renderEditField(field, {set: true}, host), document.querySelector('#secret'));
 ```
 
@@ -275,8 +276,9 @@ lit. `null` значит «показать значение как есть». 
 
 | Тип | Что получает `setFieldValue` |
 |:---|:---|
-| `string`, `text`, `include` | строку; у строки с маской — текст как он виден, вместе с постоянными знаками; у варианта `password` — введённый пароль или `undefined`, когда ввод стёрт |
-| `integer`, `number` | число или `null`, когда поле очищено; число, которое пришло строкой или объявило `precision`, — десятичную строку (`"1500.50"`), а не дробное число, и лишние знаки после запятой поле не принимает; у варианта `stepper` — число [поля количества](/ru/smart/forms/quantity/): шаг `step`, границы `min` и `max`, у числа — знаки `precision` (иначе из `step`, иначе два), у целого — без знаков после запятой |
+| `string`, `text`, `include` | строку; у строки с маской — текст как он виден, вместе с постоянными знаками |
+| `password` | введённый пароль или `undefined`, когда ввод стёрт |
+| `number` | число или `null`, когда поле очищено; число, которое пришло строкой или объявило `precision`, — десятичную строку (`"1500.50"`), а не дробное число, и лишние знаки после запятой поле не принимает; у варианта `stepper` — число [поля количества](/ru/smart/forms/quantity/): шаг `step`, границы `min` и `max`, у числа — знаки `precision` (иначе из `step`, иначе два), у целого — без знаков после запятой |
 | `date` | строку даты; у даты со временем — с прежним временем |
 | `datetime` | строку даты и времени ISO 8601, `null`, когда поле очищено, или `undefined`, когда значение вернулось к прежнему |
 | `time` | строку времени, `null`, когда поле очищено, или `undefined`, когда значение вернулось к прежнему |
@@ -367,26 +369,30 @@ set.renderCellField(status, 'live');
 
 | Тип | Название | Варианты | Параметры | Просмотр | Правка | Ячейка | Фильтр |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| `string` | Строка | `phone` — Телефон, `password` — Пароль | `placeholder`, `mask`, `nullable`, `defaultCountry`, `required`, `readonly` | есть | есть | своё | своё |
+| `string` | Строка | — | `placeholder`, `mask`, `nullable`, `required`, `readonly` | есть | есть | своё | своё |
+| `phone` | Телефон | — | `defaultCountry`, `required`, `readonly` | есть | есть | своё | своё |
+| `password` | Пароль | — | `placeholder`, `required`, `readonly` | есть | есть | своё | своё |
+| `url` | Адрес в интернете | — | `placeholder`, `required`, `readonly` | есть | есть | своё | своё |
+| `link` | Ссылка с текстом | — | `required`, `readonly` | есть | есть | своё | своё |
+| `ru.inn` | ИНН | — | `holder`, `placeholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `text` | Текст | — | `placeholder`, `required`, `readonly` | есть | есть | текстовый | своё |
 | `html` | Форматированный текст | — | `placeholder`, `required`, `readonly` | есть | есть | своё | текстовый |
-| `integer` | Целое число | `stepper` — Кнопками «−» и «+» | `unit`, `min`, `max`, `step`, `required`, `readonly` | есть | есть | своё | своё |
-| `number` | Число | `scale` — Шкала 0–100, `meter` — Доля предела, `stepper` — Кнопками «−» и «+» | `unit`, `min`, `max`, `step`, `precision`, `required`, `readonly` | есть | есть | своё | своё |
+| `number` | Число | `stepper` — Кнопками «−» и «+», `scale` — Шкала 0–100, `meter` — Доля предела | `decimals`, `unit`, `min`, `max`, `step`, `precision`, `low`, `high`, `optimum`, `required`, `readonly` | есть | есть | своё | своё |
 | `date` | Дата | — | `min`, `max`, `format`, `required`, `readonly` | есть | есть | своё | своё |
 | `datetime` | Дата и время | — | `min`, `max`, `step`, `format`, `required`, `readonly` | есть | есть | своё | своё |
-| `time` | Время | — | `min`, `max`, `step`, `required`, `readonly` | есть | есть | своё | текстовый |
+| `time` | Время | — | `min`, `max`, `step`, `required`, `readonly` | есть | есть | своё | своё |
 | `boolean` | Да или нет | — | `trueText`, `falseText`, `required`, `readonly` | есть | есть | своё | своё |
-| `choice` | Одно из списка | `buttons` — Кнопками | `options`, `badgeAppearance`, `size`, `required`, `readonly` | есть | есть | своё | своё |
-| `choices` | Несколько из списка | `badges` — Значками, `checklist` — Флажками, `select` — Выпадающим списком | `options`, `badgeAppearance`, `required`, `readonly` | есть | есть | своё | своё |
+| `choice` | Одно из списка | `buttons` — Кнопками | `options`, `required`, `readonly` | есть | есть | своё | своё |
+| `choices` | Несколько из списка | `badges` — Значками, `checklist` — Флажками, `select` — Выпадающим списком | `options`, `required`, `readonly` | есть | есть | своё | своё |
 | `user` | Пользователь | — | `placeholder`, `searchPlaceholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `record` | Запись | — | `placeholder`, `searchPlaceholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `relation` | Связь | — | `placeholder`, `searchPlaceholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `lookup` | Из справочника | — | `options`, `multiple`, `placeholder`, `searchPlaceholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `file` | Файл | `image` — Изображение, `image-card` — Изображение карточкой, `image-list` — Изображения списком | `accept`, `multiple`, `formats`, `uploadText`, `uploadSupportingText`, `uploadHint`, `required`, `readonly` | есть | есть | своё | своё |
-| `color` | Цвет | — | `swatches`, `required`, `readonly` | есть | есть | своё | своё |
-| `include` | Код | — | `language`, `required`, `readonly` | есть | есть | своё | текстовый |
+| `color` | Цвет | — | `required`, `readonly` | есть | есть | своё | своё |
+| `include` | Код | — | `required`, `readonly` | есть | есть | своё | текстовый |
 | `money` | Деньги | — | `currency`, `currencies`, `currencyDisplay`, `min`, `max`, `placeholder`, `required`, `readonly` | есть | есть | своё | своё |
-| `percent` | Процент | — | `min`, `max`, `step`, `precision`, `placeholder`, `required`, `readonly` | есть | есть | своё | своё |
+| `percent` | Процент | — | `decimals`, `min`, `max`, `step`, `precision`, `placeholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `items` | Строки | — | `columns`, `minRows`, `maxRows`, `required`, `readonly` | нет | нет | своё | своё |
-| `compound` | Составное | — | `parts`, `required`, `readonly` | нет | нет | текстовый | текстовый |
+| `complex` | Составное | — | `parts`, `required`, `readonly` | нет | нет | текстовый | текстовый |
 | `ru.requisites` | Реквизиты | — | `parts`, `required`, `readonly` | нет | нет | текстовый | текстовый |

@@ -6,7 +6,7 @@ profile: reference
 
 # Код подтверждения
 
-:badge[sf-verification]{variant=outline scheme=on-surface size=1/2} :badge[1.8.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-verification]{variant=outline scheme=on-surface size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
 
 Код подтверждения принимает одноразовый код из сообщения или приложения и
 показывает его по отдельным ячейкам. Под ячейками лежит одно нативное поле,
@@ -212,7 +212,7 @@ document.addEventListener('verification:complete', (event) => {
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-verification--border-width` | `var(--sf-verification-border-width, var(--sf-px))` | `border-width` |
-| `--sf-verification--cell-size` | `var(--sf-verification-cell-size, var(--sf-ui-1--control-height))` | `flex`, `min-width`, `min-inline-size`, `height`, `block-size` |
+| `--sf-verification--cell-size` | `var(--sf-verification-cell-size, var(--sf-ui-1--control-height))` | `flex`, `min-width`, `min-inline-size`, `width`, `inline-size`, `height`, `block-size` |
 | `--sf-verification--font-size` | не задана; задают модификаторы, например `.sf-verification--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-verification--gap` | `var(--sf-verification-gap, var(--sf-space-1/3))` | `gap` |
 | `--sf-verification--line-height` | не задана; задают модификаторы, например `.sf-verification--size-1/2`: `var(--sf-text-height-1/2)` | `line-height`, `height`, `block-size` |

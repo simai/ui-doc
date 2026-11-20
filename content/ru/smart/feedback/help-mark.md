@@ -5,7 +5,7 @@ description: "Знак «?» рядом с подписью: по нажатию
 
 # Подсказка «?»
 
-:badge[sf-help-mark]{variant=outline scheme=on-surface size=1/2} :badge[1.6.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-help-mark]{variant=outline scheme=on-surface size=1/2} :badge[1.6.4]{variant=outline scheme=on-surface size=1/2}
 
 Подсказка «?» стоит рядом с подписью и открывает короткое пояснение: что
 значит поле или настройка. Подпись, которая появляется при наведении на кнопку-иконку, собирайте на
@@ -158,13 +158,13 @@ description: "Знак «?» рядом с подписью: по нажатию
 
 | | |
 |:---|:---|
-| Тег | `<sf-help-mark>`, контракт `smart.help-mark` версии `1.6.3` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-help-mark>`, контракт `smart.help-mark` версии `1.6.4` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; желательна подпись или `aria-label`; с клавиатуры: `Enter`, `Пробел`, `Esc`, `Tab`. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/help-mark` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-help-mark` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/help-mark` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-help-mark` |
 
 ## См. также
 

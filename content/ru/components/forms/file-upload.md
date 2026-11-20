@@ -6,7 +6,7 @@ profile: reference
 
 # Загрузка файлов
 
-:badge[sf-file-upload]{variant=outline scheme=on-surface size=1/2} :badge[1.7.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-upload]{variant=outline scheme=on-surface size=1/2} :badge[1.8.1]{variant=outline scheme=on-surface size=1/2}
 
 Загрузка файлов принимает один или несколько файлов через системное окно или
 перетаскиванием и показывает список выбранных файлов с ходом передачи. Сами
@@ -226,7 +226,7 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-file-upload` |
-| Части | `sf-file-upload-block`, `sf-file-upload-block-text`, `sf-file-upload-bottom`, `sf-file-upload-drag`, `sf-file-upload-files`, `sf-file-upload-item`, `sf-file-upload-label`, `sf-file-upload-label--size-1`, `sf-file-upload-label--size-1/2`, `sf-file-upload-label--size-1/3`, `sf-file-upload-label--size-2`, `sf-file-upload-label--size-3`, `sf-file-upload-link`, `sf-file-upload-message`, `sf-file-upload-status`, `sf-file-upload-text` |
+| Части | `sf-file-upload-block`, `sf-file-upload-block-text`, `sf-file-upload-bottom`, `sf-file-upload-drag`, `sf-file-upload-error`, `sf-file-upload-error--size-1/2`, `sf-file-upload-error--size-2`, `sf-file-upload-files`, `sf-file-upload-item`, `sf-file-upload-label`, `sf-file-upload-label--size-1`, `sf-file-upload-label--size-1/2`, `sf-file-upload-label--size-1/3`, `sf-file-upload-label--size-2`, `sf-file-upload-label--size-3`, `sf-file-upload-link`, `sf-file-upload-message`, `sf-file-upload-status`, `sf-file-upload-text` |
 | Размеры | `sf-file-upload--size-1`, `sf-file-upload--size-1/2`, `sf-file-upload--size-1/3`, `sf-file-upload--size-2`, `sf-file-upload--size-3` |
 
 **`sf-upload-progress`**

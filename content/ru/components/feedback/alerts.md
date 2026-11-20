@@ -147,7 +147,7 @@ document.addEventListener('sf-alert-action', (event) => {
 |:---|:---|
 | Блок | `sf-alert` |
 | Части | `sf-alert-buttons`, `sf-alert-content`, `sf-alert-supporting-text`, `sf-alert-text`, `sf-alert-wrap` |
-| Модификаторы | `sf-alert--actions-under`, `sf-alert--default`, `sf-alert--error`, `sf-alert--flat`, `sf-alert--info`, `sf-alert--neutral`, `sf-alert--outlined`, `sf-alert--success`, `sf-alert--warning` |
+| Модификаторы | `sf-alert--actions-under`, `sf-alert--default`, `sf-alert--flat`, `sf-alert--info`, `sf-alert--outlined`, `sf-alert--success`, `sf-alert--warning` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -180,8 +180,8 @@ document.addEventListener('sf-alert-action', (event) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-alert--background-color` | не задана; задают модификаторы, например `.sf-alert.sf-alert--neutral.sf-alert--default`: `var(--sf-alert-background-color, var(--sf-surface-container))` | `background-color` |
-| `--sf-alert--border-color` | не задана; задают модификаторы, например `.sf-alert.sf-alert--neutral.sf-alert--default`: `var(--sf-alert-border-color, var(--sf-outline))` | `border-color` |
+| `--sf-alert--background-color` | не задана; задают модификаторы, например `.sf-alert:is(.sf-alert--neutral, .sf-alert--clear).sf-alert--default`: `var(--sf-alert-background-color, var(--sf-surface-container))` | `background-color` |
+| `--sf-alert--border-color` | не задана; задают модификаторы, например `.sf-alert:is(.sf-alert--neutral, .sf-alert--clear).sf-alert--default`: `var(--sf-alert-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-alert--color` | `var(--sf-alert-color, var(--sf-on-surface))` | `color`, `--sf-alert-supporting-text--color`, `--sf-alert-text--color`, `--sf-close-icon--background-color` |
 | `--sf-alert--lead` | `var(--sf-ui-1--space-y-tightness-low)` | `padding-top`, `padding-bottom`, `padding-block`, `padding-block-end`, `margin-top`, `margin-block-start`, `margin-inline-end` |
 | `--sf-alert--opacity` | не задана; задают модификаторы, например `.sf-alert.closing`: `0` | `opacity` |

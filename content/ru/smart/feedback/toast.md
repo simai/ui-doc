@@ -5,7 +5,7 @@ description: "Кратко сообщает результат действия 
 
 # Всплывающие сообщения
 
-:badge[sf-toast]{variant=outline scheme=on-surface size=1/2} :badge[1.4.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-toast]{variant=outline scheme=on-surface size=1/2} :badge[1.4.8]{variant=outline scheme=on-surface size=1/2}
 
 Всплывающее сообщение — короткий отклик на действие человека: «Изменения
 сохранены», «Файл удалён — Вернуть». Оно появляется в углу экрана и само
@@ -200,13 +200,13 @@ Toast отвечает за одно сообщение. Позицию на э�
 
 | | |
 |:---|:---|
-| Тег | `<sf-toast>`, контракт `smart.toast` версии `1.4.7` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-toast>`, контракт `smart.toast` версии `1.4.8` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как строка состояния; название компонент ставит сам; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/toast` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-toast` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/toast` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-toast` |
 
 ## См. также
 

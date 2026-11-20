@@ -6,7 +6,7 @@ profile: reference
 
 # Ссылка
 
-:badge[sf-link]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-link]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Ссылка ведёт на другую страницу, раздел страницы или файл. Для действия на
 текущей странице — сохранить, отправить, открыть окно — берите
@@ -122,6 +122,7 @@ profile: reference
 |:---|:---|
 | Блок | `sf-link` |
 | Части | `sf-link-content`, `sf-link-icon`, `sf-link__content`, `sf-link__icon` |
+| Модификаторы | `sf-link--navigation` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
