@@ -117,6 +117,11 @@ profile: reference
 :::example {id="components/dropdown/language" label="Выбор языка"}
 :::
 
+Готовый переключатель языка сайта — смарт-компонент
+[Выбор языка](/ru/smart/navigation/language/) (`sf-language`): он называет
+языки на самих языках, ведёт на адрес каждого языка и сам меняет язык
+страницы. Флагов в нём нет.
+
 ### Поиск
 
 Поиск — шапка списка `sf-list-search` без рамки: иконка и текст поиска
@@ -304,3 +309,4 @@ document.querySelector('.sf-dropdown').addEventListener('change', (event) => {
 
 - [Контекстное меню](/ru/components/navigation/context-menu/)
 - [Выпадающий список — смарт-компонент](/ru/smart/navigation/dropdown/)
+- [Выбор языка — смарт-компонент](/ru/smart/navigation/language/)

@@ -253,6 +253,10 @@ view.value = 'archived';
 `change` страница вызывает `SF.language.use(value)` и сохраняет выбор:
 SIMAI Framework язык не запоминает.
 
+То же поле без своего кода даёт [Выбор языка](/ru/smart/navigation/language/)
+с `mode="field"`: он сам вызывает `SF.language.use()` и с `remember="site"`
+запоминает выбор.
+
 :::example {id="smart-components/dropdown/language" label="Язык"}
 :::
 
