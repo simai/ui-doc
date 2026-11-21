@@ -146,12 +146,8 @@ description: "Показывает короткую метку — катего�
 отправляет всплывающее событие `change`; в `event.detail.active` — новое
 состояние, сам тег — `event.target`.
 
-```js
-document.querySelector('.filters').addEventListener('change', (event) => {
-  if (event.target.localName !== 'sf-tag') return;
-  applyFilter(event.target.getAttribute('text'), event.detail.active);
-});
-```
+:::example {id="smart-components/tags/filter" label="Фильтр статей" preview=sandbox log="change" log_open=false}
+:::
 
 ### Удаление
 

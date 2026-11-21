@@ -123,6 +123,12 @@ file.onDownload((event) => {
 });
 ```
 
+В примере «сервер» подтверждает удаление через полсекунды, и только тогда
+строка исчезает; скачивание страница перехватывает и называет файл.
+
+:::example {id="smart-components/file-preview/remove" label="Удаление после ответа сервера" preview=sandbox log="sf-file-preview-download sf-file-preview-detach" log_open=true}
+:::
+
 ### Данные файла
 
 `getValue()` возвращает те же данные, что приходят в `event.detail.value`.

@@ -151,12 +151,11 @@ SIMAI: каталогу эффектов, сайтам документации 
 откроется; `sf-header-site-close` несёт причину: `close`, `escape`,
 `outside`, `cancelled` или `api`.
 
-```js
-const header = document.querySelector('sf-header-site');
-header.addEventListener('sf-header-site-opened', () => {
-  header.querySelector('[slot="sheet"]')?.replaceChildren(buildDocumentationTree());
-});
-```
+В примере страница строит дерево документации в слоте `sheet`, когда
+панель открылась в первый раз.
+
+:::example {id="smart-components/site-header/sheet" label="Панель заполняется при открытии" preview=sandbox log="sf-header-site-open sf-header-site-opened sf-header-site-close" log_open=true}
+:::
 
 Нажатие на затемнение, кнопка закрытия и выбор ссылки в панели тоже её
 закрывают; панель закрывается и тогда, когда окно стало шире `collapse`.

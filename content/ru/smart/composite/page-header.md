@@ -182,14 +182,8 @@ description: "Голова рабочей страницы приложения:
 событие, дождитесь ответа и задайте `star` по нему: так звезда не покажет
 состояние, которое не сохранилось.
 
-```js
-const header = document.querySelector('sf-header-page');
-header.addEventListener('sf-header-page-toggle', async (event) => {
-  event.preventDefault();
-  const saved = await saveFavourite(event.detail.on);
-  header.setAttribute('star', saved ? 'on' : 'off');
-});
-```
+:::example {id="smart-components/page-header/favourite" label="Избранное через сервер" preview=sandbox log="sf-header-page-toggle" log_open=true}
+:::
 
 Если та же страница отмечена в меню администратора, после ответа сервера
 попросите меню перечитать избранное методом `refresh()` у `<sf-admin-menu>`.
