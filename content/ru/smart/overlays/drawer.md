@@ -89,7 +89,10 @@ profile: reference
 быстро. Поля, кнопки и то, что само прокручивается вбок, жест не
 перехватывает.
 
-:::example {id="smart-components/drawer/sizes" label="Размер" preview=sandbox}
+Пример ниже нарисован в ширине рабочего стола, 1280 px, и в колонке
+прокручивается вбок: в окне уже 44rem все четыре панели заняли бы весь экран.
+
+:::example {id="smart-components/drawer/sizes" label="Размер" preview=sandbox viewport=desktop}
 :::
 
 ### Закреплённая панель
