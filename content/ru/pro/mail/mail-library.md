@@ -5,7 +5,7 @@ description: "Блоки, которые можно добавить в пись
 
 # Библиотека блоков письма
 
-:badge[sf-mail-library]{variant=outline scheme=on-surface size=1/2} :badge[1.0.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-library]{variant=outline scheme=on-surface size=1/2} :badge[1.0.8]{variant=outline scheme=on-surface size=1/2}
 
 Библиотека показывает блоки, которые можно добавить в письмо, по группам
 назначения, с чипами категорий, поиском по названию и описанию и вариантами шапки
@@ -149,9 +149,9 @@ library.addEventListener('sf-mail-library-replace', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-mail-library>`, контракт `smart.mail-library` версии `1.0.7` |
+| Тег | `<sf-mail-library>`, контракт `smart.mail-library` версии `1.0.8` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | Доступность | Читается как группа; название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/mail-library` |
-| Правило классов | `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/mail-library/rule.js#name=cl-mail-library` |
+| Источник | `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/mail-library` |
+| Правило классов | `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/mail-library/rule.js#name=cl-mail-library` |

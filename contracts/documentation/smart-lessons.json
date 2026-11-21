@@ -1,13 +1,13 @@
 {
   "schema": "ui-doc.smart-lessons-review.v1",
-  "source": "049a2ba3dc7d35cbec5c95eb495fab71eddac6f2",
-  "core": "b654460cad2ac1ffe146261f6c301be334d8e24d",
-  "smart": "b654460cad2ac1ffe146261f6c301be334d8e24d",
+  "source": "e7ea89e07a3a6494cd2e6d4b4dd2dfa3a4d560cf",
+  "core": "9ceecc24c988209abc7d09e22522eeb7b73f485e",
+  "smart": "9ceecc24c988209abc7d09e22522eeb7b73f485e",
   "source_files": {
     "src/core/js/smart-base.js": "cee36d961fdd248f4a8bdf20bbd7275437af0f13410319e64696aace6c9be3c7",
     "src/core/js/loader.js": "08e3f6e65f4960e78ae5e031dc242ac973d59d1892e87e2fbd9d7cc28f48c971",
-    "src/smart/field-renderers/index.js": "10defcf40a022bd86cd32235fb21649008e2e8cf8d94464d2c61a557214dddd8",
-    "src/smart/field-renderers/registry.js": "f71c1533c005cba4b5c27291dd91c003b8fb3491cfaa4e2d6624e6885d2a186a"
+    "src/smart/field-renderers/index.js": "ab4c7a3f5419e83ad7e557bc5de0bb81b7b2078588d987b23d1c24fe317da2fc",
+    "src/smart/field-renderers/registry.js": "512214e64c6f96bc03c114d0b7f55a5dcddfb4502a6e4c9409b66da7d3ad190b"
   },
   "lessons": [
     "page",

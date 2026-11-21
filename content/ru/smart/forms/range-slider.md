@@ -5,7 +5,7 @@ description: "Выбирает одно значение или две гран�
 
 # Слайдер диапазона
 
-:badge[sf-slider-range]{variant=outline scheme=on-surface size=1/2} :badge[1.7.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-slider-range]{variant=outline scheme=on-surface size=1/2} :badge[1.7.4]{variant=outline scheme=on-surface size=1/2}
 
 Слайдер диапазона — шкала с одной или двумя ручками для приблизительной
 настройки: цены, громкости, расстояния. Когда важно точное число, добавьте
@@ -271,13 +271,13 @@ price.setValue([10000, 30000]);
 
 | | |
 |:---|:---|
-| Тег | `<sf-slider-range>`, контракт `smart.slider-range` версии `1.7.3` |
-| Поставка | выпуск Framework `ui-b654460cad2a` |
+| Тег | `<sf-slider-range>`, контракт `smart.slider-range` версии `1.7.4` |
+| Поставка | выпуск Framework `ui-9ceecc24c988` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как ползунок; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `←`, `→`, `↑`, `↓`, `PageUp`, `PageDown`, `Home`, `End`. |
-| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/slider-range` |
-| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-slider-range` |
+| Источник | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/smart/slider-range` |
+| Правило классов | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/rule/rule.json#name=cl-slider-range` |
 
 ## См. также
 

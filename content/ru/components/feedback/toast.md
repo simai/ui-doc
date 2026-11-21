@@ -6,7 +6,7 @@ profile: reference
 
 # Всплывающие сообщения
 
-:badge[sf-toast]{variant=outline scheme=on-surface size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-toast]{variant=outline scheme=on-surface size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
 
 Всплывающее сообщение коротко сообщает результат действия поверх интерфейса
 и не блокирует дальнейшую работу. Для постоянного текста внутри страницы

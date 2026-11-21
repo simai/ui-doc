@@ -6,7 +6,7 @@ profile: reference
 
 # Модальное окно
 
-:badge[sf-modal]{variant=outline scheme=on-surface size=1/2} :badge[1.11.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-modal]{variant=outline scheme=on-surface size=1/2} :badge[1.11.1]{variant=outline scheme=on-surface size=1/2}
 
 Модальное окно показывает одну ограниченную задачу поверх страницы:
 подтверждение, короткую форму, подробности. Пока оно открыто, страница за ним
@@ -369,13 +369,13 @@ modal.open();
 
 | | |
 |:---|:---|
-| Тег | `<sf-modal>`, контракт `smart.modal` версии `1.11.0` |
-| Поставка | выпуск Framework `ui-b654460cad2a` |
+| Тег | `<sf-modal>`, контракт `smart.modal` версии `1.11.1` |
+| Поставка | выпуск Framework `ui-9ceecc24c988` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как диалоговое окно; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Shift+Tab`, `Esc`. |
-| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/modal` |
-| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-modal` |
+| Источник | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/smart/modal` |
+| Правило классов | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/rule/rule.json#name=cl-modal` |
 
 ## См. также
 

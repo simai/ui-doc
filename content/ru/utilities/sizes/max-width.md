@@ -67,6 +67,7 @@ description: "Ограничивает ширину элемента сверх�
 | `max-w-fit` | `max-width: -webkit-fit-content; max-width: -moz-fit-content; max-width: fit-content` | — |
 | `max-w-0` | `max-width: 0` | — |
 | `max-w-none` | `max-width: none` | — |
+| `max-w-measure-{значение}` | `max-width: var(--sf-measure-{значение})` | `20`, `28`, `36`, `44`, `52`, `64`, `80`, `96` |
 | `max-w-sm` | `max-width: var(--sf-g6)` | — |
 | `max-w-md` | `max-width: var(--sf-h1)` | — |
 | `max-w-lg` | `max-width: var(--sf-h5)` | — |
@@ -86,6 +87,14 @@ description: "Ограничивает ширину элемента сверх�
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
+| `--sf-measure-80` | `calc(80 * var(--sf-measure--char))` |
+| `--sf-measure-20` | `calc(20 * var(--sf-measure--char))` |
+| `--sf-measure-28` | `calc(28 * var(--sf-measure--char))` |
+| `--sf-measure-36` | `calc(36 * var(--sf-measure--char))` |
+| `--sf-measure-44` | `calc(44 * var(--sf-measure--char))` |
+| `--sf-measure-52` | `calc(52 * var(--sf-measure--char))` |
+| `--sf-measure-64` | `calc(64 * var(--sf-measure--char))` |
+| `--sf-measure-96` | `calc(96 * var(--sf-measure--char))` |
 | `--sf-g6` | `32rem` |
 | `--sf-h1` | `44rem` |
 | `--sf-h5` | `60rem` |

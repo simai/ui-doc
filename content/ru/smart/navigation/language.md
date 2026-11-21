@@ -5,7 +5,7 @@ description: "Переключает язык сайта: одна кнопка 
 
 # Выбор языка
 
-:badge[sf-language]{variant=outline scheme=on-surface size=1/2} :badge[1.7.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-language]{variant=outline scheme=on-surface size=1/2} :badge[1.7.2]{variant=outline scheme=on-surface size=1/2}
 
 Выбор языка — переключатель языка сайта. В шапке это одна кнопка со значком и
 кодом текущего языка — «RU ▾»; она открывает меню языков, а от восьми языков
@@ -327,13 +327,13 @@ picker.addEventListener('change', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-language>`, контракт `smart.language` версии `1.7.0` |
-| Поставка | выпуск Framework `ui-b654460cad2a` |
+| Тег | `<sf-language>`, контракт `smart.language` версии `1.7.2` |
+| Поставка | выпуск Framework `ui-9ceecc24c988` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа переключателей; название компонент ставит сам; с клавиатуры: В строке (mode="inline"): Tab доходит до выбранного языка; стрелки, Home и End переводят фокус между языками и ничего не выбирают; Enter или Space выбирают; Меню (auto с двух языков): Tab доходит до кнопки «RU ▾»; Enter или Space открывают меню; стрелки двигают, буква прыгает, Enter выбирает; Escape закрывает и возвращает фокус на кнопку; Поиск: поле получает фокус при открытии меню; стрелка вниз переводит к строкам. Меню открывается так, чтобы выбранный язык был виден; без поиска фокус получает выбранная строка. В шторке на телефоне (с числа языков search-from) поле фокус не получает — его получает выбранная строка. |
-| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/language` |
-| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-language` |
+| Источник | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/smart/language` |
+| Правило классов | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/rule/rule.json#name=cl-language` |
 
 ## См. также
 

@@ -6,7 +6,7 @@ profile: reference
 
 # Модальное окно
 
-:badge[sf-modal]{variant=outline scheme=on-surface size=1/2} :badge[1.7.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-modal]{variant=outline scheme=on-surface size=1/2} :badge[1.8.1]{variant=outline scheme=on-surface size=1/2}
 
 Модальное окно переводит пользователя к одной важной задаче поверх страницы:
 подтвердить действие, заполнить короткую форму. Страница за окном недоступна,
@@ -211,7 +211,7 @@ document.addEventListener('modal:before-close', (event) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-modal--body-inset` | не задана; задают модификаторы, например `[data-sf-modal-surface]`: `var(--sf-focus-room)` | `--sf-modal--body-outset`, `padding`, `--sf-modal--padding-end`, `--sf-modal-surface-padding`, `--sf-modal-surface-gap`, `padding-inline`, `gap`, `padding-bottom`, `padding-block-end` |
+| `--sf-modal--body-inset` | не задана; задают модификаторы, например `[data-sf-modal-surface]`: `var(--sf-focus-room)` | `--sf-modal--body-outset`, `padding`, `--sf-modal--padding-end`, `--sf-modal-surface-padding`, `--sf-modal-surface-gap`, `padding-inline`, `gap`, `padding-bottom`, `padding-block-end`, `padding-block`, `margin-bottom`, `margin-block-end` |
 | `--sf-modal--body-outset` | не задана; задают модификаторы, например `[data-sf-modal-surface]`: `0` | `margin-left`, `margin-right`, `margin-inline` |
 | `--sf-modal--frame` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-space-2)` | `margin-top`, `margin-block`, `--sf-modal--frame-block`, `--sf-modal--frame-inline`, `--sf-modal-surface-padding`, `padding-top`, `padding-block-start`, `padding-inline`, `padding-bottom`, `padding-block-end`, `padding-block`, `padding-inline-end`, `padding-inline-start`, `--sf-modal--body-outset`, `--sf-modal--question-block`, `--sf-modal--question-inline`, `--sf-modal--padding-end`, `padding` |
 | `--sf-modal--frame-block` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-padding-block, calc(var(--sf-modal--frame) - var(--sf-modal-surface-border-width)))` | `--sf-modal-surface-padding`, `--sf-modal--question-block` |

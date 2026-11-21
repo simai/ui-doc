@@ -33,9 +33,9 @@ Framework is open under Apache-2.0.
 3. Open the page — the loader fetches what the page uses.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261120.1816/distr/core/css/core.min.css">
-<script>window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261120.1816/distr/';</script>
-<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261120.1816/distr/core/js/core.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261121.928/distr/core/css/core.min.css">
+<script>window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261121.928/distr/';</script>
+<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261121.928/distr/core/js/core.min.js"></script>
 
 <sf-button text="Save"></sf-button>
 ```
@@ -80,7 +80,7 @@ Russian).
 
 ---
 
-**SIMAI Framework** · release `ui-b654460cad2a` ·
+**SIMAI Framework** · release `ui-9ceecc24c988` ·
 [GitHub](https://github.com/simai/ui-source) ·
 [Report a problem](https://github.com/simai/ui-source/issues) ·
 [Versions](/ru/guide/connection/versions/) ·

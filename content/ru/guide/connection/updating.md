@@ -70,8 +70,8 @@ JavaScript и TypeScript, CSS и SCSS, Markdown, JSON. Инструмент и �
 на который проект переходит: `git checkout <build_inputs.source.commit>`. Более
 новый журнал может назвать каноническое имя, которого в целевом выпуске ещё
 нет, и `--apply` записал бы в проект имя, которое этот выпуск не знает. Для
-выпуска `ui-b654460cad2a` это ревизия
-`049a2ba3dc7d35cbec5c95eb495fab71eddac6f2`.
+выпуска `ui-9ceecc24c988` это ревизия
+`e7ea89e07a3a6494cd2e6d4b4dd2dfa3a4d560cf`.
 
 Инструменту нужен только Node.js: зависимостей у него нет, устанавливать
 ничего не нужно.
@@ -169,7 +169,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
   `sf-property-view` и `sf-admin-menu`; запись журнала —
   `component-larena-package-move`. В поставке `ui` их нет; на странице они
   работают, только если она объявила пакет `pro`, например
-  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/d7c4cf661de08eee88ada0f292f805bdbd15aab3/smart'}`
+  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/f6c43828e5f22e65bc377806473007f01a0a51b8/smart'}`
   (путь — по правилу из [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), и
   подключила его сборку, квитанция которой называет выпуск Framework на
   странице. Проект без Larena берёт сборку из выпуска `simai/ui-pro` (см. [Готовая сборка пакета `pro`](/ru/guide/introduction/structure/#готовая-сборка-пакета-pro)).
@@ -281,7 +281,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
 
 ## Новые имена тегов
 
-С выпуска `ui-b654460cad2a` (`@simai-studio/ui` 5.20261120.1816) часть
+С выпуска `ui-9ceecc24c988` (`@simai-studio/ui` 5.20261121.928) часть
 смарт-компонентов называется по-новому: сначала семейство, затем уточнение
 (`sf-input-date`, а не `sf-datepicker`). Прежний тег работает до 2027-01-01:
 Loader определяет его как псевдоним нового, поэтому страницы на прежних
@@ -622,6 +622,9 @@ Framework (см. [Подтверждение изменения](/ru/smart/actio
 | `--sf-ring--alfa` | `--sf-ring--alpha` | 2027-01-01 | `token-ring-alpha-spelling` |
 | `--sf-avatar-offline-background-color` | без замены | 2027-01-01 | `token-avatar-offline-variables-retired` |
 | `--sf-avatar-offline-overlay` | без замены | 2027-01-01 | `token-avatar-offline-variables-retired` |
+| `--sf-text--measure` | `--sf-measure-80` | 2027-01-01 | `token-c396-text-measure` |
+| `--sf-text--measure-wide` | `--sf-measure-96` | 2027-01-01 | `token-c396-text-measure` |
+| `--sf-text--measure-narrow` | `--sf-measure-52` | 2027-01-01 | `token-c396-text-measure` |
 
 ## Прежние имена классов
 

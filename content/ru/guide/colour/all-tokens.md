@@ -374,9 +374,6 @@ description: "Полный список переменных, которые о�
 | `--sf-text--line-height-snug` | `1.375` |
 | `--sf-text--line-height-tight` | `1.25` |
 | `--sf-text--margin` | `var(--sf-space-1)` |
-| `--sf-text--measure` | `65ch` |
-| `--sf-text--measure-narrow` | `45ch` |
-| `--sf-text--measure-wide` | `80ch` |
 | `--sf-text--middle` | `0.3633em` |
 | `--sf-text--size` | `var(--sf-text--size-1)` |
 | `--sf-text--size-1` | `var(--sf-b4)` · `var(--sf-b6)` |
@@ -736,6 +733,9 @@ description: "Полный список переменных, которые о�
 | `--sf-decoration--alfa` | `1` |
 | `--sf-drop-shadow--alfa` | `1` |
 | `--sf-empty` | `` |
+| `--sf-field--width-long` | `var(--sf-measure-44)` |
+| `--sf-field--width-medium` | `var(--sf-measure-28)` |
+| `--sf-field--width-short` | `var(--sf-measure-20)` |
 | `--sf-file-upload--box-text` | `0` · `1` |
 | `--sf-first-paint-bar--end` | `min(var(--sf-radius--ui), calc(var(--sf-first-paint-bar--height) / 2))` |
 | `--sf-first-paint-bar--height` | `calc(0.727em)` · `round(nearest, 0.727em, var(--sf-a2))` |
@@ -835,6 +835,15 @@ description: "Полный список переменных, которые о�
 | `--sf-list-item--box-picture` | `0px` · `calc(var(--sf-list-item--box-line) + var(--sf-space-1\/2))` |
 | `--sf-list-item--box-size` | `var(--sf-text-size-1)` · `var(--sf-text-size-1\/3)` · `var(--sf-text-size-1\/2)` · `var(--sf-text-size-2)` · `var(--sf-text-size-3)` |
 | `--sf-list-item--box-two-line` | `max(var(--sf-list-item--box-next), calc(var(--sf-list-item--box-caption-step) + var(--sf-text-height-1\/3)))` · `var(--sf-list-item--box-next)` |
+| `--sf-measure--char` | `calc(var(--sf-text--size-1) / 2)` |
+| `--sf-measure-20` | `calc(20 * var(--sf-measure--char))` |
+| `--sf-measure-28` | `calc(28 * var(--sf-measure--char))` |
+| `--sf-measure-36` | `calc(36 * var(--sf-measure--char))` |
+| `--sf-measure-44` | `calc(44 * var(--sf-measure--char))` |
+| `--sf-measure-52` | `calc(52 * var(--sf-measure--char))` |
+| `--sf-measure-64` | `calc(64 * var(--sf-measure--char))` |
+| `--sf-measure-80` | `calc(80 * var(--sf-measure--char))` |
+| `--sf-measure-96` | `calc(96 * var(--sf-measure--char))` |
 | `--sf-micro--badge-1` | `var(--sf-b2)` |
 | `--sf-micro--badge-1/2` | `0.75rem` · `var(--sf-b2)` |
 | `--sf-micro--badge-1/3` | `0.5rem` · `var(--sf-a8)` |
@@ -869,9 +878,10 @@ description: "Полный список переменных, которые о�
 | `--sf-micro--tick` | `var(--sf-a4)` |
 | `--sf-on-paper` | `var(--sf-neutral-10)` · `var(--sf-scheme-text)` |
 | `--sf-on-scrim-control` | `var(--sf-on-surface-media)` |
-| `--sf-page-header--box` | `calc(var(--sf-page-header--box-path) + max(var(--sf-page-header--box-line), var(--sf-page-header--box-actions)) + var(--sf-page-header--box-tabs) + var(--sf-page-header--box-pad))` |
+| `--sf-page-header--box` | `calc(var(--sf-page-header--box-path) + max(var(--sf-page-header--box-line), var(--sf-page-header--box-actions), var(--sf-page-header--box-media)) + var(--sf-page-header--box-tabs) + var(--sf-page-header--box-pad))` |
 | `--sf-page-header--box-actions` | `calc(var(--sf-px) * 0)` · `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` |
-| `--sf-page-header--box-line` | `max(var(--sf-heading-4--height), var(--sf-ui-1\/2--control-height))` |
+| `--sf-page-header--box-line` | `max(var(--sf-heading-4--height), var(--sf-ui-1\/2--control-height))` · `max(calc(var(--sf-heading-4--height) + var(--sf-text-height-1\/3)), var(--sf-ui-1\/2--control-height))` |
+| `--sf-page-header--box-media` | `calc(var(--sf-px) * 0)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-1--control-height)` · `var(--sf-ui-2--control-height)` |
 | `--sf-page-header--box-pad` | `calc(var(--sf-px) * 0)` · `calc(var(--sf-space-1) + var(--sf-space-2))` · `var(--sf-space-1)` |
 | `--sf-page-header--box-path` | `calc(var(--sf-px) * 0)` · `calc(var(--sf-ui-1\/3--control-height) + var(--sf-page-header-gap, var(--sf-space-1\/2)))` |
 | `--sf-page-header--box-tabs` | `calc(var(--sf-px) * 0)` · `calc(var(--sf-page-header-gap, var(--sf-space-1\/2)) + var(--sf-page-header--box-tabs-strip))` |
@@ -916,15 +926,15 @@ description: "Полный список переменных, которые о�
 | `--sf-place--outer-primary-container-active` | `var(--sf-primary-container-active)` |
 | `--sf-place--outer-primary-container-hover` | `var(--sf-primary-container-hover)` |
 | `--sf-place--outer-primary-hover` | `var(--sf-primary-hover)` |
-| `--sf-popup--window-form-width` | `var(--sf-g8)` · `var(--sf-g6)` |
-| `--sf-popup--window-wide-width` | `var(--sf-h2)` · `var(--sf-h1)` |
-| `--sf-popup-form-wide-width` | `var(--sf-g2)` · `var(--sf-g1)` |
-| `--sf-popup-form-width` | `var(--sf-g0)` · `var(--sf-f8)` |
-| `--sf-popup-list-max-width` | `var(--sf-g0)` · `var(--sf-f8)` |
-| `--sf-popup-menu-max-width` | `var(--sf-f8)` · `var(--sf-f6)` |
-| `--sf-popup-menu-min-width` | `var(--sf-f0)` · `var(--sf-e8)` |
-| `--sf-popup-panel-width` | `var(--sf-g0)` · `var(--sf-f8)` |
-| `--sf-popup-question-width` | `var(--sf-g4)` · `var(--sf-g3)` |
+| `--sf-popup--window-form-width` | `var(--sf-measure-80)` |
+| `--sf-popup--window-wide-width` | `var(--sf-measure-96)` |
+| `--sf-popup-form-wide-width` | `var(--sf-measure-52)` |
+| `--sf-popup-form-width` | `var(--sf-measure-44)` |
+| `--sf-popup-list-max-width` | `var(--sf-measure-44)` |
+| `--sf-popup-menu-max-width` | `var(--sf-measure-36)` |
+| `--sf-popup-menu-min-width` | `var(--sf-measure-20)` |
+| `--sf-popup-panel-width` | `var(--sf-measure-44)` |
+| `--sf-popup-question-width` | `var(--sf-measure-52)` |
 | `--sf-px` | `1px` |
 | `--sf-reference-link--box` | `var(--sf-ui-3--control-height)` · `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` · `var(--sf-text-height-1)` · `calc(var(--sf-ui-1--control-height) - 2 * var(--sf-px))` · `calc(var(--sf-ui-1\/2--control-height) - 2 * var(--sf-px))` · `calc(var(--sf-ui-2--control-height) - 2 * var(--sf-px))` · `var(--sf-text-height-1\/2)` · `var(--sf-text-height-2)` |
 | `--sf-reference-link--box-line` | `var(--sf-text-height-1)` |

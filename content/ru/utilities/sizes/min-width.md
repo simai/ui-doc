@@ -39,10 +39,33 @@ description: "Не даёт элементу стать уже родителя 
 | `min-w-fit` | `min-width: -webkit-fit-content; min-width: -moz-fit-content; min-width: fit-content` | — |
 | `min-w-full` | `min-width: 100%` | — |
 | `min-w-0` | `min-width: 0` | — |
+| `min-w-measure-20` | `min-width: var(--sf-measure-20)` | — |
+| `min-w-measure-28` | `min-width: var(--sf-measure-28)` | — |
+| `min-w-measure-36` | `min-width: var(--sf-measure-36)` | — |
+| `min-w-measure-44` | `min-width: var(--sf-measure-44)` | — |
+| `min-w-measure-52` | `min-width: var(--sf-measure-52)` | — |
+| `min-w-measure-64` | `min-width: var(--sf-measure-64)` | — |
+| `min-w-measure-80` | `min-width: var(--sf-measure-80)` | — |
+| `min-w-measure-96` | `min-width: var(--sf-measure-96)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:min-w-min`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-measure-20` | `calc(20 * var(--sf-measure--char))` |
+| `--sf-measure-28` | `calc(28 * var(--sf-measure--char))` |
+| `--sf-measure-36` | `calc(36 * var(--sf-measure--char))` |
+| `--sf-measure-44` | `calc(44 * var(--sf-measure--char))` |
+| `--sf-measure-52` | `calc(52 * var(--sf-measure--char))` |
+| `--sf-measure-64` | `calc(64 * var(--sf-measure--char))` |
+| `--sf-measure-80` | `calc(80 * var(--sf-measure--char))` |
+| `--sf-measure-96` | `calc(96 * var(--sf-measure--char))` |
 
 ## Применение
 
