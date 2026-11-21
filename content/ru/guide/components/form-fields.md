@@ -105,88 +105,15 @@ JavaScript поля делает связи сам: выдаёт контрол�
 знаков) не даёт полям растянуться на весь широкий экран
 ([Длина строки](/ru/utilities/typography/text-max-width/)).
 
-```html
-<form class="signup-form measure flex flex-col gap-3" action="/signup" method="post" novalidate>
-  <div class="flex flex-col gap-1">
-    <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
-      <span class="sf-input-label flex"><span class="sf-input-text">Имя</span><span class="sf-input-required" aria-hidden="true">*</span></span>
-      <span class="sf-input-field items-cross-center transition flex">
-        <input type="text" name="name" autocomplete="name" required>
-      </span>
-      <span class="sf-input-hint-text-wrap">Как к вам обращаться</span>
-    </label>
-
-    <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
-      <span class="sf-input-label flex"><span class="sf-input-text">Электронная почта</span><span class="sf-input-required" aria-hidden="true">*</span></span>
-      <span class="sf-input-field items-cross-center transition flex">
-        <i class="sf-icon" aria-hidden="true">mail</i>
-        <input type="email" name="email" autocomplete="email" placeholder="name@example.com" required>
-      </span>
-      <span class="sf-input-hint-text-wrap">Пришлём на этот адрес подтверждение</span>
-    </label>
-
-    <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
-      <span class="sf-input-label flex"><span class="sf-input-text">Пароль</span><span class="sf-input-required" aria-hidden="true">*</span></span>
-      <span class="sf-input-field items-cross-center transition flex">
-        <input type="password" name="password" autocomplete="new-password" minlength="8" required>
-      </span>
-      <span class="sf-input-hint-text-wrap">Не короче восьми символов</span>
-    </label>
-
-    <label class="sf-checkbox sf-checkbox--size-1 flex">
-      <span class="sf-checkbox-box transition flex"><input type="checkbox" name="news" value="yes"><span class="sf-icon" aria-hidden="true"></span></span>
-      <span class="sf-checkbox-container flex flex-col"><span class="sf-checkbox-top flex"><span class="sf-checkbox-label">Получать новости</span></span></span>
-    </label>
-  </div>
-
-  <button type="submit" class="sf-button sf-button--default sf-button--primary sf-button--size-1 w-full sm:w-fit">
-    <span class="sf-button-text-container">Зарегистрироваться</span>
-  </button>
-</form>
-```
-
 Атрибут `novalidate` выключает всплывающие сообщения браузера, но не саму
 проверку: верно ли значение, решают `required`, `type`, `minlength` и
 `pattern`, а скрипт спрашивает об этом `checkValidity()`. Сообщения показывает поле — в своей части
-`sf-input-hint-text-wrap`, рядом с подсказкой:
+`sf-input-hint-text-wrap`, рядом с подсказкой. Попробуйте отправить форму
+пустой или уйти из поля, не заполнив его. Разметка и скрипт — на вкладках
+примера; здесь форма никуда не уходит, а показывает итог.
 
-```js
-const form = document.querySelector('.signup-form');
-const messages = {
-  name: 'Укажите имя',
-  email: 'Укажите адрес целиком, например ivan@example.com',
-  password: 'Пароль должен быть не короче восьми символов',
-};
-
-const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener('sf-loader-init', run, {once: true}));
-
-whenLoader(() => SF.Loader.ready('Inputs', () => {
-  const fields = [...form.querySelectorAll('.sf-input input')];
-  const hintOf = (input) => {
-    const field = input.closest('.sf-input');
-    return field.dataset.hint ?? field.querySelector('.sf-input-hint-text-wrap')?.textContent ?? '';
-  };
-  const hints = new Map(fields.map((input) => [input, hintOf(input)]));
-
-  const check = (input) => {
-    const valid = input.checkValidity();
-    SF.Input.setState(input, valid
-      ? {invalid: false, errorMessage: hints.get(input)}
-      : {invalid: true, errorMessage: messages[input.name]});
-    return valid;
-  };
-
-  fields.forEach((input) => input.addEventListener('blur', () => check(input)));
-
-  form.addEventListener('submit', (event) => {
-    const invalid = fields.filter((input) => !check(input));
-    if (invalid.length) {
-      event.preventDefault();
-      invalid[0].focus();
-    }
-  });
-}));
-```
+:::example {id="guide/form-fields/signup" label="Форма регистрации" preview=sandbox}
+:::
 
 Порядок работы такой:
 
@@ -202,7 +129,7 @@ whenLoader(() => SF.Loader.ready('Inputs', () => {
    тем же `SF.Input.setState` у нужного поля. Если сервер отдаёт страницу, где
    поле уже в ошибке, в части `sf-input-hint-text-wrap` лежит текст ошибки, а
    не подсказка. Такому полю приложение кладёт текст подсказки в атрибут
-   `data-hint` на оболочке `sf-input`: скрипт выше берёт подсказку оттуда и
+   `data-hint` на оболочке `sf-input`: скрипт примера берёт подсказку оттуда и
    вернёт её, когда поле исправят. `aria-invalid` и `aria-errormessage`
    скрипт поля ставит при загрузке сам; писать `aria-invalid` в разметке
    сервера нужно, только если страница должна работать без JavaScript.
