@@ -1,4 +1,4 @@
-// Every property type of the renderer set, and every variant, drawn by the set
+// Every property type of the renderer set, and every template, drawn by the set
 // itself in the view and in the edit. The list comes from the set's own
 // registry (SF.fieldRenderers.registry), so a type added to the release shows
 // up here without touching the page. The page is the host: it keeps the values,
@@ -32,19 +32,23 @@ const statuses = [
   {value: 'archived', label: 'В архиве'},
 ];
 
-// A sample field and value for a type and variant.
-function sample(type, variant) {
-  const field = {key: variant ? `${type}-${variant}` : type, propertyType: type, variant: variant || undefined};
+// A sample field and value for a type and template (null: the type's default).
+function sample(type, template) {
+  const field = {key: template ? `${type}-${template}` : type, propertyType: type, ...(template ? {template} : {})};
   switch (type) {
-    case 'string':
-      if (variant === 'phone') return [field, '+7 900 123-45-67'];
-      if (variant === 'password') return [field, {set: true}];
-      return [{...field, placeholder: 'Название'}, 'SIMAI: Платежи'];
+    case 'string': return [{...field, placeholder: 'Название'}, 'SIMAI: Платежи'];
+    case 'phone': return [field, '+79001234567'];
+    case 'password': return [field, {set: true}];
+    case 'url': return [field, 'https://simai.io'];
+    case 'link': return [field, {href: 'https://simai.io', text: 'SIMAI'}];
     case 'text': return [field, 'Приём платежей, возвраты и сверка с банком.'];
-    case 'integer': return [{...field, unit: 'шт.'}, 12];
-    case 'number': return variant === 'scale' ? [field, 64] : [{...field, unit: 'кг'}, 2.5];
+    case 'number':
+      if (template === 'scale' || template === 'meter') return [field, '64'];
+      return [{...field, unit: 'кг', decimals: 1}, '2.5'];
+    case 'percent': return [field, '64'];
     case 'date': return [field, '2026-10-25'];
     case 'datetime': return [field, '2026-10-25T10:30:00+03:00'];
+    case 'time': return [field, '10:30'];
     case 'boolean': return [field, true];
     case 'choice': return [{...field, options: statuses}, 'live'];
     case 'choices': return [{...field, options: statuses}, ['live', 'draft']];
@@ -53,15 +57,15 @@ function sample(type, variant) {
     case 'relation': return [field, records[0]];
     case 'lookup': return [{...field, options: regions}, regions[0]];
     case 'file':
-      if (variant && variant.startsWith('image')) {
+      if (template && template.startsWith('image')) {
         // A picture of the documentation set (D22), kept beside the example.
         const href = gallery.dataset.galleryPicture;
         const image = {label: 'Обложка.svg', mime: 'image/svg+xml', href};
-        return [{...field, multiple: variant === 'image-list'}, variant === 'image-list' ? [image, image] : image];
+        return [{...field, multiple: template === 'image_list'}, template === 'image_list' ? [image, image] : image];
       }
       return [field, {label: 'Договор.pdf', mime: 'application/pdf', size: 184320}];
     case 'color': return [field, '#005bbe'];
-    case 'include': return [{...field, language: 'html'}, '<sf-button>Сохранить</sf-button>'];
+    case 'include': return [{...field, templateParams: {language: 'html'}}, '<sf-button>Сохранить</sf-button>'];
     default: return [field, null];
   }
 }
@@ -74,7 +78,8 @@ async function start() {
 
   const rows = [];
   for (const entry of set.registry) {
-    for (const variant of [null, ...entry.variants]) {
+    for (const template of entry.templates) {
+      const variant = template.default ? null : template;
       const [field, value] = sample(entry.type, variant?.id);
       field.label = variant ? `${entry.label[lang]}: ${variant.label[lang]}` : entry.label[lang];
       rows.push({entry, variant, field, value});

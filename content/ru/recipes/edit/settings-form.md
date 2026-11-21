@@ -1,6 +1,6 @@
 ---
 title: "Форма настроек"
-description: "Страница настроек записи или приложения: разделы карточками, поля с подписями, переключатели, одна кнопка «Сохранить» и уведомление о результате."
+description: "Страница настроек записи или приложения: разделы карточками, поля с подписями, флажки, одна кнопка «Сохранить» и уведомление о результате."
 ---
 
 # Форма настроек
@@ -52,7 +52,7 @@ description: "Страница настроек записи или прилож
 ## Плотность
 
 Настройки в админке — в компактной плотности: `data-sf-density="compact"`
-на корне экрана опускает поля, переключатели и кнопки на ступень.
+на корне экрана опускает поля, флажки и кнопки на ступень.
 
 :::example {id="recipes/settings-form/density" label="Плотность" preview=sandbox}
 :::
@@ -65,7 +65,7 @@ description: "Страница настроек записи или прилож
 | Раздел | [Карточка](/ru/components/content/card/) | `section.sf-card` с заголовком `h2`; между карточками `gap-3`, внутри — отступы самой карточки; колонка формы не шире `max-w-h0` |
 | Текстовые поля | [Текстовое поле](/ru/smart/forms/inputs/), [Многострочное поле](/ru/smart/forms/textarea/) | `label` над полем; `hint` — пояснение; `required` и `error-message` — у обязательного |
 | Выбор одного | [Радиокнопки](/ru/smart/forms/radio/) | в `fieldset` с `legend`; у вариантов `description` |
-| Включить и выключить | [Переключатель](/ru/smart/forms/switch/) | `label` и `description` |
+| Включить и выключить | [Флажок](/ru/smart/forms/checkbox/) | `label` и `description`; в форме с кнопкой «Сохранить» — флажок, а не переключатель: переключатель действует сразу |
 | Части одного ответа | [Текстовое поле](/ru/smart/forms/inputs/) | город и индекс в одной строке `flex flex-wrap gap-1`; ширина по ответу задаёт обёртка поля: индекс `w-e6`, город `flex-auto w-f6` |
 | Ответы | [Кнопка](/ru/smart/actions/buttons/) | «Сохранить» — `native-type="submit"`, вид по умолчанию; «Отмена» — `native-type="reset"` `appearance="ghost"` `scheme="on-surface"` |
 | Результат | [Уведомление](/ru/smart/feedback/toast/) | `status="success"`, `duration="5000"`, в контейнере с `role="status"` в углу |
@@ -75,7 +75,7 @@ description: "Страница настроек записи или прилож
 - У каждого поля видимая подпись; подсказка и ошибка связаны с полем, и
   диктор читает их вместе с ним.
 - После «Сохранить» с ошибками фокус переходит на первое поле с ошибкой.
-- Группа переключателей «Кто видит сайт» — `fieldset` с `legend`.
+- Группа радиокнопок «Кто видит сайт» — `fieldset` с `legend`.
 - Результат сохранения объявляется: «Настройки сохранены».
 - Путь клавиатуры: поля по порядку разделов → «Сохранить» → «Отмена».
 
@@ -112,7 +112,7 @@ description: "Страница настроек записи или прилож
 2. Форма — колонка max-w-h0; каждый раздел — section.sf-card с h2 class="m-0 text-1 weight-medium".
 3. Каждое поле с label над полем; placeholder — только образец формата; пояснение — hint. Поля с рамкой (вид по умолчанию), appearance="filled" не берём. Части одного ответа (город и индекс) — в одной строке flex flex-wrap gap-1; ширина по ответу задаёт обёртка поля: индекс в div class="w-e6", город в div class="flex-auto w-f6".
 4. Обязательное поле — required и error-message; при ошибке страница ставит invalid и фокус в поле. Общей плашки ошибок над формой нет.
-5. Выбор одного — sf-radio в fieldset с legend; включить и выключить — sf-switch с label и description.
+5. Выбор одного — sf-radio в fieldset с legend; включить и выключить — sf-checkbox с label и description (в форме с «Сохранить» не sf-switch: он действует сразу).
 6. Одни ответы на форму, под последним разделом: sf-button native-type="submit" text="Сохранить" (вид по умолчанию) и sf-button native-type="reset" appearance="ghost" scheme="on-surface" text="Отмена". Не status="danger".
 7. Сохранено — sf-toast status="success" icon="check_circle" duration="5000" в контейнере role="status" в углу. -->
 <div data-sf-density="compact">
@@ -132,7 +132,7 @@ description: "Страница настроек записи или прилож
         <sf-radio name="access" value="all" label="Все посетители" checked></sf-radio>
         <sf-radio name="access" value="link" label="Только по ссылке" description="Сайт не попадает в поиск"></sf-radio>
       </fieldset>
-      <sf-switch name="index" label="Показывать в поисковых системах" checked></sf-switch>
+      <sf-checkbox name="index" label="Показывать в поисковых системах" checked></sf-checkbox>
     </section>
     <section class="sf-card" aria-labelledby="settings-address">
       <h2 id="settings-address" class="m-0 text-1 weight-medium">Адрес для писем</h2>
