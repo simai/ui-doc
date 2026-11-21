@@ -49,6 +49,27 @@ description: "Как показать, где сейчас заказ или з�
 :::example {id="recipes/order-status/variants-2" label="Заявка на отпуск" preview=sandbox}
 :::
 
+### Статусы в списке заказов
+
+В списке заказов статус — тональный [бейдж](/ru/components/feedback/badges/).
+Стадий больше, чем цветов: восемь стадий ложатся на четыре цвета статуса по
+смыслу. Ждёт действия человека — предупреждение, идёт своим ходом — сведения,
+доставлен — успех, отменён — ошибка. Название стадии говорит само, цвет
+только подсказывает. Раздел каталога — свой цвет из статической палитры через
+`--sf-badge-background-color`, как в [бейджах цветом из
+палитры](/ru/components/feedback/badges/#цвет-из-палитры); с цветами статуса
+он не смешивается.
+
+| Стадия | Цвет |
+|:---|:---|
+| Ждёт оплаты, Возврат | `warning` |
+| Оплачен, Собирается, Передан в доставку, В пути | `info` |
+| Доставлен | `success` |
+| Отменён | `error` |
+
+:::example {id="recipes/order-status/list-badges" label="Список заказов"}
+:::
+
 ## Состояния
 
 :::example {id="recipes/order-status/states" label="Состояния" preview=sandbox}
@@ -90,6 +111,7 @@ description: "Как показать, где сейчас заказ или з�
 | Статус в плотной карточке — точками | [Шаги](/ru/smart/navigation/steps/) | `marker="dot"`, `size="1/2"` |
 | История: кто, что, когда; «было → стало»; длинная серия свёрнута | [Лента событий](/ru/smart/content/list-timeline/) | `items[].actor`, `change`, `collapse` |
 | Задержка или отмена — над этапами | [Уведомление](/ru/smart/feedback/alert/) | `status="warning"` или `"error"`, причина в `supporting-text` |
+| Статус в списке заказов; раздел своим цветом | [Бейджи](/ru/components/feedback/badges/) | `sf-badge--tonal` и класс статуса; раздел — `--sf-badge-background-color: var(--sf-<оттенок>-50--alfa-24)` |
 
 ## Доступность
 
@@ -120,7 +142,8 @@ description: "Как показать, где сейчас заказ или з�
 3. Задержка: items[current].state = 'error', над этапами sf-alert status="warning" с новой датой и причиной.
 4. Отмена: этап отмены state: 'error' с причиной в text, следующие state: 'skipped' (пунктир); над этапами sf-alert status="error" «Заказ отменён <дата>» с причиной и тем, что будет с деньгами. Нового состояния не вводить.
 5. В плотной карточке — marker="dot" size="1/2".
-6. История — sf-list-timeline: actor, time, title, text или change {label, before, after}; collapse для серий. -->
+6. История — sf-list-timeline: actor, time, title, text или change {label, before, after}; collapse для серий.
+7. В списке заказов статус — бейдж sf-badge sf-badge--tonal с классом статуса по смыслу: ждёт человека — warning, идёт своим ходом — info, доставлен — success, отменён — error. Раздел — цвет оттенка палитры: --sf-badge-background-color: var(--sf-<оттенок>-50--alfa-24); --sf-badge-color: var(--sf-on-surface); свой код цвета не ставить. -->
 <sf-alert status="error" heading="Заказ отменён 12 ноября"
   supporting-text="Товара «Чайник глиняный» не оказалось на складе. Деньги вернутся на карту за 3 дня."></sf-alert>
 <sf-steps layout="column" aria-label="Статус заказа" current="1" items='[
