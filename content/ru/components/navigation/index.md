@@ -19,6 +19,7 @@ profile: reference
 | Действия над выбранным объектом | [Контекстное меню](/ru/components/navigation/context-menu/) |
 | Вложенная иерархия | [Дерево](/ru/components/navigation/tree/) |
 | Этапы процесса и текущий шаг | [Шаги](/ru/components/navigation/step/) |
+| Переключатель языка сайта | смарт-компонент [Выбор языка](/ru/smart/navigation/language/) |
 
 ## Все компоненты раздела
 
