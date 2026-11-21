@@ -428,8 +428,8 @@ view.dispatchEvent(new CustomEvent('sf-data-view-saved-view-intent', {
 `<sf-view>`: `setHostPort(host)` принимает объект с полями `version` и
 `capabilities` и методом `raise(intent, payload, {signal})`, который
 отвечает `{answer: 'applied' | 'conflict' | 'refused' | 'unavailable', …}`.
-`<sf-view>` говорит на порте `simai.dataview-port` версии 1.15.0 и
-принимает адаптеры версий от 1.0.0 до 1.15.0; манифест `<sf-view-table>` записывает
+`<sf-view>` говорит на порте `simai.dataview-port` версии 1.16.0 и
+принимает адаптеры версий от 1.0.0 до 1.16.0; манифест `<sf-view-table>` записывает
 версию порта 1.0.0. Если адаптер не передан, `<sf-view>` один раз
 запрашивает его событием `sf-host-port-request`.
 
@@ -446,6 +446,15 @@ view.dispatchEvent(new CustomEvent('sf-data-view-saved-view-intent', {
 `column_settings` только от хоста, который объявил `personal-column-settings`
 или `shared-column-settings`. Хост без них может не присылать
 `column_settings`, и представление рисует колонки как есть.
+Порт 1.16.0 добавляет уровни сохранённых видов и личное состояние человека:
+каждый сохранённый вид называет свой уровень — `system` (вид продукта),
+`shared` (для всех) или `personal` (свой), и меню видов группирует их по
+уровням; системный вид через порт не записывается — изменение человека
+сохраняется новым своим видом. Хост, объявивший `personal-preferences`, в
+первом ответе на `query.change` присылает `data.preferences` (число строк на
+странице, открыта ли зона вида, последний открытый вид и ревизию), а
+`preferences.save` передаёт только изменённое; гостю без этой возможности
+представление хранит состояние в браузере. Все добавления необязательны.
 У самой таблицы те же части включают и
 выключают атрибуты `creatable`, `settings-menu` и `filter-templates`.
 
