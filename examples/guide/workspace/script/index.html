@@ -1,0 +1,23 @@
+<div class="flex flex-col gap-2">
+  <div class="flex flex-wrap gap-2">
+    <sf-button id="workspace-list" text="Список" appearance="outline"></sf-button>
+    <sf-button id="workspace-main" text="Разговор" appearance="outline"></sf-button>
+    <sf-button id="workspace-panel" text="Панель" appearance="outline"></sf-button>
+  </div>
+  <div class="page-workspace-frame">
+    <div class="sf-workspace" id="workspace-script" data-sf-workspace-view="main">
+      <section class="sf-workspace-list p-2" aria-label="Разговоры">
+        <p><a href="#" aria-current="true">Выпуск документации</a></p>
+        <p><a href="#">Отпуск и перенос</a></p>
+      </section>
+      <section class="sf-workspace-main p-2" aria-label="Разговор">
+        <button class="sf-workspace-back" type="button">Назад к разговорам</button>
+        <p>Открытый разговор. Кнопки над рабочей областью меняют вид и панель из скрипта; на узкой ширине виден один экран.</p>
+      </section>
+      <aside class="sf-workspace-panel p-2" aria-label="Источники">
+        <p>Панель: источник или участники.</p>
+      </aside>
+    </div>
+  </div>
+  <p class="m-0 text-1/2 color-on-surface-variant" id="workspace-state" role="status"></p>
+</div>
