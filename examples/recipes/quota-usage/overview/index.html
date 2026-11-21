@@ -1,0 +1,27 @@
+<div id="quota-root" class="flex flex-col gap-3">
+  <div class="flex flex-col gap-3 p-3 radius-surface border border-outline-variant">
+    <div class="flex flex-wrap items-cross-center gap-2">
+      <div class="flex flex-col flex-1 min-w-0">
+        <h3 class="text-2 m-0">Тариф «Бизнес»</h3>
+        <span class="text-1/2 color-on-surface-variant">Оплачен до 12 декабря</span>
+      </div>
+      <sf-button size="1/2" appearance="outline" scheme="on-surface" text="Сменить тариф"></sf-button>
+    </div>
+    <div class="flex flex-col gap-1/3">
+      <sf-progress-bar meter text-position="top" value="60" warning-at="80" error-at="95" label="Сайты" value-text="60 %, 3 из 5 сайтов"></sf-progress-bar>
+      <span class="text-1/2 color-on-surface-variant" aria-hidden="true">3 из 5 сайтов</span>
+    </div>
+    <div class="flex flex-col gap-1/3">
+      <sf-progress-bar id="quota-disk" meter text-position="top" value="74" warning-at="80" error-at="95" label="Место" value-text="74 %, 7,4 из 10 ГБ"></sf-progress-bar>
+      <span class="text-1/2 color-on-surface-variant" id="quota-disk-help" aria-hidden="true">7,4 из 10 ГБ · свободно 2,6 ГБ</span>
+    </div>
+  </div>
+  <div class="flex items-cross-center gap-2 p-x-3">
+    <div class="flex flex-col flex-1 min-w-0">
+      <span>Место</span>
+      <span class="text-1/2 color-on-surface-variant" id="quota-row-help">7,4 из 10 ГБ</span>
+    </div>
+    <sf-progress-bar id="quota-row" inline meter value="74" warning-at="80" error-at="95" label="Место" value-text="74 %, 7,4 из 10 ГБ"></sf-progress-bar>
+  </div>
+  <sf-slider-range id="quota-used" label="Занято места, ГБ" min="0" max="10" step="0.1" value="7.4" field></sf-slider-range>
+</div>
