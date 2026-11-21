@@ -214,6 +214,9 @@ Framework: поставляется пакетом `pro` из репозитор
 На телефоне панель занимает весь экран. Колонка разделов никогда не держит
 горизонтальный ряд вкладок.
 
+:::example {id="smart-components/property-view/record-panel" label="Панель записи с разделами" preview=sandbox log_console=true log_open=false}
+:::
+
 Шапка панели предлагает то, что разрешило приложение:
 
 - закрытие — событие `sf-property-view-close` с
