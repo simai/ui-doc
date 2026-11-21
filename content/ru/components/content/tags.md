@@ -6,7 +6,7 @@ profile: reference
 
 # Теги
 
-:badge[sf-tag]{variant=outline scheme=on-surface size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tag]{variant=outline scheme=on-surface size=1/2} :badge[1.10.0]{variant=outline scheme=on-surface size=1/2}
 
 Тег компактно показывает категорию, выбранное значение, фильтр или статус.
 Сам по себе тег — надпись, а не действие: кнопкой становится только тег, который

@@ -6,7 +6,7 @@ profile: reference
 
 # Копирование
 
-:badge[sf-clipboard]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-clipboard]{variant=outline scheme=on-surface size=1/2} :badge[1.7.0]{variant=outline scheme=on-surface size=1/2}
 
 Любая кнопка может положить в буфер обмена готовое значение или текст другого
 элемента: команду, ключ, код заказа. Ставьте её рядом с текстом, который

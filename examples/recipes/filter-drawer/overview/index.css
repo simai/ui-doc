@@ -1,4 +1,6 @@
-/* The panel opens inside this block (data-sf-overlay-container) on its height. */
+/* The panel opens inside this block (data-sf-overlay-container) on its height:
+   tall enough for every group, the price boxes included, above the sticky
+   answers. */
 #filters-root {
-  min-block-size: var(--sf-h0);
+  min-block-size: var(--sf-h2);
 }

@@ -6,7 +6,7 @@ profile: reference
 
 # Выпадающий список
 
-:badge[sf-dropdown]{variant=outline scheme=on-surface size=1/2} :badge[1.18.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-dropdown]{variant=outline scheme=on-surface size=1/2} :badge[1.18.1]{variant=outline scheme=on-surface size=1/2}
 
 Выпадающий список экономит место и даёт выбрать одно или несколько значений
 из набора вариантов; видимая подпись пункта отделена от его машинного
@@ -83,6 +83,22 @@ profile: reference
 выпуск читает как `1/2` и `2` и пишет предупреждение в консоль.
 
 :::example {id="components/dropdown/sizes" label="Размеры 1/2, 1 и 2"}
+:::
+
+### Ширина
+
+`sf-field--width-short`, `sf-field--width-medium`, `sf-field--width-long` • [справочник](#классы)
+
+Ширину поля задают по значению, для которого оно сделано: `short` — 20 знаков
+лестницы ширин (дата, число, код), `medium` — 28 (имя, телефон), `long` — 44
+(путь, e-mail, адрес). Класс ставят на корень поля (`.sf-dropdown`): поле не шире
+этой ступени и не шире своего контейнера. Знаки следуют размеру текста,
+плотности и телефону: 160, 224 и 352 px при тексте 16, 140, 196 и 308 px в
+компактной плотности и на телефоне. Без класса поле занимает всю ширину
+контейнера. Смарт-компонент `sf-dropdown` пишет тот же класс настройкой
+`width="short | medium | long"`, поэтому ширина одинакова с первого кадра.
+
+:::example {id="components/dropdown/width" label="Ширина выпадающего списка"}
 :::
 
 ### Плотность

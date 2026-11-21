@@ -5,7 +5,7 @@ description: "Письма человека в редакторе: поиск п
 
 # Список писем
 
-:badge[sf-mail-letters]{variant=outline scheme=on-surface size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-letters]{variant=outline scheme=on-surface size=1/2} :badge[1.1.3]{variant=outline scheme=on-surface size=1/2}
 
 Список писем показывает письма человека в редакторе писем: поиск по названию,
 порядок и то, что предлагает строка, — «Открыть» и под ⋯ копия, переименование
@@ -149,9 +149,9 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-mail-letters>`, контракт `smart.mail-letters` версии `1.1.2` |
+| Тег | `<sf-mail-letters>`, контракт `smart.mail-letters` версии `1.1.3` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | Доступность | Читается как список; название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/mail-letters` |
-| Правило классов | `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/mail-letters/rule.js#name=cl-mail-letters` |
+| Источник | `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/mail-letters` |
+| Правило классов | `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/mail-letters/rule.js#name=cl-mail-letters` |

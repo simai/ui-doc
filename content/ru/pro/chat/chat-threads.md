@@ -5,7 +5,7 @@ description: "Разговоры человека, новые сверху: гр
 
 # Список разговоров
 
-:badge[sf-chat-threads]{variant=outline scheme=on-surface size=1/2} :badge[2.0.9]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-threads]{variant=outline scheme=on-surface size=1/2} :badge[2.0.10]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-threads>` — разговоры человека, новые сверху: с ассистентом или
 между людьми. Он группирует их по дню последнего изменения, отмечает
@@ -127,7 +127,7 @@ list.addEventListener('sf-chat-threads-load-more', async () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента пакета `pro` выпуска `pro-d7c4cf661de0` над выпуском Framework `ui-b654460cad2a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента пакета `pro` выпуска `pro-f6c43828e5f2` над выпуском Framework `ui-9ceecc24c988` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -135,7 +135,7 @@ list.addEventListener('sf-chat-threads-load-more', async () => {
 |:---|:---|
 | Тег | `<sf-chat-threads>` |
 | Назначение | Разговоры человека, новые сверху: по дням, открытый отмечен, переименование на месте, архив и действия через меню Framework, одна остановка Tab, следующая страница — по достижении конца. |
-| Контракт | `smart.chat-threads`, версия `2.0.9` |
+| Контракт | `smart.chat-threads`, версия `2.0.10` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -200,5 +200,5 @@ list.addEventListener('sf-chat-threads-load-more', async () => {
 
 ### Источник
 
-- `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/chat-threads`
-- `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/chat-threads/rule.js#name=cl-chat-threads`
+- `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/chat-threads`
+- `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/chat-threads/rule.js#name=cl-chat-threads`

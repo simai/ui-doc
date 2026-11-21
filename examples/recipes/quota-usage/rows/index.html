@@ -1,0 +1,38 @@
+<div class="flex flex-col gap-4">
+  <div class="flex flex-col gap-1">
+    <span class="text-1/2 color-on-surface-variant">Строка настроек</span>
+    <div class="flex flex-col gap-2 p-3 radius-surface border border-outline-variant">
+      <div class="flex items-cross-center gap-2">
+        <div class="flex flex-col flex-1 min-w-0"><span>Сайты</span><span class="text-1/2 color-on-surface-variant">3 из 5</span></div>
+        <sf-progress-bar inline meter value="60" warning-at="80" error-at="95" label="Сайты" value-text="60 %, 3 из 5 сайтов"></sf-progress-bar>
+      </div>
+      <div class="flex items-cross-center gap-2">
+        <div class="flex flex-col flex-1 min-w-0"><span>Место</span><span class="text-1/2 color-on-surface-variant">7,4 из 10 ГБ</span></div>
+        <sf-progress-bar inline meter value="74" warning-at="80" error-at="95" label="Место" value-text="74 %, 7,4 из 10 ГБ"></sf-progress-bar>
+      </div>
+      <div class="flex items-cross-center gap-2">
+        <div class="flex flex-col flex-1 min-w-0"><span>Пользователи</span><span class="text-1/2 color-on-surface-variant">19 из 20 · осталось одно место</span></div>
+        <sf-progress-bar inline meter value="95" warning-at="80" error-at="95" label="Пользователи" value-text="95 %, 19 из 20 пользователей"></sf-progress-bar>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <span class="text-1/2 color-on-surface-variant">Меню человека</span>
+    <div role="list" class="max-w-g4 radius-surface border border-outline-variant">
+      <sf-list-item kind="icon" icon="cloud" text="Тариф «Бизнес»" supporting="Осталось 2,6 ГБ"><span slot="trailing"><sf-progress-bar inline meter value="74" warning-at="80" error-at="95" label="Тариф «Бизнес», занято" value-text="74 %, осталось 2,6 ГБ"></sf-progress-bar></span></sf-list-item>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <span class="text-1/2 color-on-surface-variant">Таблица сайтов</span>
+    <div class="overflow-x-auto">
+      <table class="table m-bottom-0">
+        <thead><tr><th>Сайт</th><th>Место</th><th>Трафик</th></tr></thead>
+        <tbody>
+          <tr><td>shop.example.ru</td><td><sf-progress-bar inline meter value="62" warning-at="80" error-at="95" label="shop.example.ru, место" value-text="62 %, 3,1 из 5 ГБ"></sf-progress-bar></td><td><sf-progress-bar inline meter value="40" warning-at="80" error-at="95" label="shop.example.ru, трафик" value-text="40 %, 40 из 100 ГБ"></sf-progress-bar></td></tr>
+          <tr><td>blog.example.ru</td><td><sf-progress-bar inline meter value="86" warning-at="80" error-at="95" label="blog.example.ru, место" value-text="86 %, 4,3 из 5 ГБ"></sf-progress-bar></td><td><sf-progress-bar inline meter value="7" warning-at="80" error-at="95" label="blog.example.ru, трафик" value-text="7 %, 7 из 100 ГБ"></sf-progress-bar></td></tr>
+          <tr><td>docs.example.ru</td><td><sf-progress-bar inline meter value="98" warning-at="80" error-at="95" label="docs.example.ru, место" value-text="98 %, 4,9 из 5 ГБ"></sf-progress-bar></td><td><sf-progress-bar inline meter value="55" warning-at="80" error-at="95" label="docs.example.ru, трафик" value-text="55 %, 55 из 100 ГБ"></sf-progress-bar></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

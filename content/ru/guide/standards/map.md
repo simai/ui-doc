@@ -76,8 +76,8 @@ Recipe и вышел изданием 1.0.3. Динамический соста
 
 | Порт | Компонент | Текущая версия | Изданы |
 |:---|:---|:---|:---|
-| `simai.dataview-port` | `smart.view` (`sf-view`) | 1.15.0 | 1.0.0–1.15.0 |
-| `simai.property-view-port` | `smart.view-properties` (`sf-view-properties`) | 1.22.0 | 1.0.0–1.22.0 |
+| `simai.dataview-port` | `smart.view` (`sf-view`) | 1.16.0 | 1.0.0–1.16.0 |
+| `simai.property-view-port` | `smart.view-properties` (`sf-view-properties`) | 1.22.1 | 1.0.0–1.22.1 |
 | `simai.admin-navigation-port` | `smart.admin-menu` (`sf-admin-menu`) | 1.1.0 | 1.0.0–1.1.0 |
 | `simai.chat-port` | `smart.chat-window` (`sf-chat-window`) | 1.0.0 | 1.0.0 |
 | `simai.search-port` | `smart.search` (`sf-search`) | 1.2.0 | 1.0.0–1.2.0 |

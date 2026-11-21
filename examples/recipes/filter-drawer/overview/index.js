@@ -1,24 +1,34 @@
 // Filters live in a side panel; the list stays visible beside it. The apply
 // button counts what it will show before it is pressed, the chosen filters
 // stay above the list as tags that remove one each, and «Сбросить» clears
-// them all. Nothing is applied until «Показать».
+// them all. Nothing is applied until «Показать». The price is a range: in a
+// panel the slider puts its two boxes «от» and «до» under the track
+// (narrower than 26rem). Its block (measure-narrow) keeps it that narrow in a
+// panel as wide as a phone too, so the boxes stay under the track on every screen.
 const orders = [
-  {id: 'o1', text: 'Заказ 1042 · Анна Белова', supporting: '3 490 ₽ · Курьером', icon: 'receipt_long', status: 'new', delivery: 'courier'},
-  {id: 'o2', text: 'Заказ 1041 · Пётр Ильин', supporting: '12 900 ₽ · Самовывоз', icon: 'receipt_long', status: 'paid', delivery: 'pickup'},
-  {id: 'o3', text: 'Заказ 1040 · Мария Котова', supporting: '1 290 ₽ · Курьером', icon: 'receipt_long', status: 'sent', delivery: 'courier'},
-  {id: 'o4', text: 'Заказ 1039 · Олег Сафин', supporting: '6 750 ₽ · Курьером', icon: 'receipt_long', status: 'paid', delivery: 'courier'},
-  {id: 'o5', text: 'Заказ 1038 · Инна Ершова', supporting: '2 180 ₽ · Самовывоз', icon: 'receipt_long', status: 'cancelled', delivery: 'pickup'},
-  {id: 'o6', text: 'Заказ 1037 · Глеб Орлов', supporting: '940 ₽ · Курьером', icon: 'receipt_long', status: 'new', delivery: 'courier'},
-  {id: 'o7', text: 'Заказ 1036 · Вера Лаптева', supporting: '18 400 ₽ · Самовывоз', icon: 'receipt_long', status: 'sent', delivery: 'pickup'},
-  {id: 'o8', text: 'Заказ 1035 · Денис Уваров', supporting: '4 120 ₽ · Курьером', icon: 'receipt_long', status: 'paid', delivery: 'courier'},
+  {id: 'o1', text: 'Заказ 1042 · Анна Белова', supporting: '3 490 ₽ · Курьером', icon: 'receipt_long', status: 'new', delivery: 'courier', price: 3490},
+  {id: 'o2', text: 'Заказ 1041 · Пётр Ильин', supporting: '12 900 ₽ · Самовывоз', icon: 'receipt_long', status: 'paid', delivery: 'pickup', price: 12900},
+  {id: 'o3', text: 'Заказ 1040 · Мария Котова', supporting: '1 290 ₽ · Курьером', icon: 'receipt_long', status: 'sent', delivery: 'courier', price: 1290},
+  {id: 'o4', text: 'Заказ 1039 · Олег Сафин', supporting: '6 750 ₽ · Курьером', icon: 'receipt_long', status: 'paid', delivery: 'courier', price: 6750},
+  {id: 'o5', text: 'Заказ 1038 · Инна Ершова', supporting: '2 180 ₽ · Самовывоз', icon: 'receipt_long', status: 'cancelled', delivery: 'pickup', price: 2180},
+  {id: 'o6', text: 'Заказ 1037 · Глеб Орлов', supporting: '940 ₽ · Курьером', icon: 'receipt_long', status: 'new', delivery: 'courier', price: 940},
+  {id: 'o7', text: 'Заказ 1036 · Вера Лаптева', supporting: '18 400 ₽ · Самовывоз', icon: 'receipt_long', status: 'sent', delivery: 'pickup', price: 18400},
+  {id: 'o8', text: 'Заказ 1035 · Денис Уваров', supporting: '4 120 ₽ · Курьером', icon: 'receipt_long', status: 'paid', delivery: 'courier', price: 4120},
 ];
 const LABELS = {new: 'Новый', paid: 'Оплачен', sent: 'Отправлен', cancelled: 'Отменён', courier: 'Курьером', pickup: 'Самовывоз'};
 const plural = (n) => (n % 10 === 1 && n % 100 !== 11 ? 'заказ' : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 'заказа' : 'заказов');
 
-let applied = {status: [], delivery: 'any'};
+const PRICE = [0, 20000];
+const EMPTY = () => ({status: [], delivery: 'any', price: [...PRICE]});
+const money = (n) => `${n.toLocaleString('ru-RU')} ₽`;
+const priceLabel = ([low, high]) => (low > PRICE[0] && high < PRICE[1] ? `${money(low)} – ${money(high)}` : low > PRICE[0] ? `от ${money(low)}` : `до ${money(high)}`);
+const priceSet = (price) => price[0] > PRICE[0] || price[1] < PRICE[1];
 
-const matching = ({status, delivery}) => orders.filter((order) => (!status.length || status.includes(order.status))
-  && (delivery === 'any' || order.delivery === delivery));
+let applied = EMPTY();
+
+const matching = ({status, delivery, price}) => orders.filter((order) => (!status.length || status.includes(order.status))
+  && (delivery === 'any' || order.delivery === delivery)
+  && order.price >= price[0] && order.price <= price[1]);
 
 // The panel may move its content into its own surface: look the parts up
 // when they are needed rather than holding them from the start.
@@ -26,10 +36,12 @@ const part = (selector) => document.querySelector(selector);
 const draft = () => ({
   status: [...document.querySelectorAll('#filters-form sf-checkbox[name="status"]')].filter((box) => box.checked).map((box) => box.getAttribute('value')),
   delivery: [...document.querySelectorAll('#filters-form sf-radio[name="delivery"]')].find((radio) => radio.checked)?.getAttribute('value') ?? 'any',
+  price: String(part('#filters-price')?.value ?? PRICE.join(',')).split(',').map(Number),
 });
 const showDraft = (state) => {
   document.querySelectorAll('#filters-form sf-checkbox[name="status"]').forEach((box) => { box.checked = state.status.includes(box.getAttribute('value')); });
   document.querySelectorAll('#filters-form sf-radio[name="delivery"]').forEach((radio) => { radio.checked = radio.getAttribute('value') === state.delivery; });
+  part('#filters-price')?.setValue?.(state.price);
 };
 const countApply = () => {
   const n = matching(draft()).length;
@@ -40,17 +52,18 @@ const render = () => {
   part('#orders').setItems({items: matching(applied), options: {hasMore: false}});
   const tags = part('#filters-applied');
   tags.replaceChildren();
-  const chosen = [...applied.status.map((value) => ['status', value]), ...(applied.delivery === 'any' ? [] : [['delivery', applied.delivery]])];
+  const chosen = [...applied.status.map((value) => ['status', value]), ...(applied.delivery === 'any' ? [] : [['delivery', applied.delivery]]), ...(priceSet(applied.price) ? [['price', 'price']] : [])];
   chosen.forEach(([key, value]) => {
     const tag = document.createElement('sf-tag');
     tag.setAttribute('kind', 'default');
     tag.setAttribute('closable', '');
-    tag.setAttribute('text', LABELS[value]);
-    tag.setAttribute('close-label', `Убрать фильтр «${LABELS[value]}»`);
+    const text = key === 'price' ? priceLabel(applied.price) : LABELS[value];
+    tag.setAttribute('text', text);
+    tag.setAttribute('close-label', `Убрать фильтр «${text}»`);
     tag.addEventListener('sf-tag-close', () => {
-      applied = key === 'status'
-        ? {...applied, status: applied.status.filter((entry) => entry !== value)}
-        : {...applied, delivery: 'any'};
+      applied = key === 'status' ? {...applied, status: applied.status.filter((entry) => entry !== value)}
+        : key === 'price' ? {...applied, price: [...PRICE]}
+          : {...applied, delivery: 'any'};
       showDraft(applied);
       render();
     });
@@ -63,7 +76,7 @@ const render = () => {
     clear.setAttribute('size', '1/2');
     clear.setAttribute('text', 'Сбросить все');
     clear.addEventListener('click', () => {
-      applied = {status: [], delivery: 'any'};
+      applied = EMPTY();
       showDraft(applied);
       render();
     });
@@ -85,7 +98,7 @@ const settled = async (selector) => {
 };
 
 const initialize = async () => {
-  await Promise.all(['sf-list', 'sf-drawer', 'sf-button', 'sf-empty-state'].map((tag) => customElements.whenDefined(tag)));
+  await Promise.all(['sf-list', 'sf-drawer', 'sf-button', 'sf-empty-state', 'sf-slider-range'].map((tag) => customElements.whenDefined(tag)));
   const root = part('#filters-root');
   if (!root || root.dataset.exampleReady === 'true') return;
   root.dataset.exampleReady = 'true';
@@ -93,7 +106,7 @@ const initialize = async () => {
   const empty = await settled('#orders-empty');
   empty.actions = [{id: 'reset', text: 'Сбросить фильтры', appearance: 'outline'}];
   empty.addEventListener('sf-empty-state-action', () => {
-    applied = {status: [], delivery: 'any'};
+    applied = EMPTY();
     showDraft(applied);
     render();
   });
@@ -109,7 +122,7 @@ const initialize = async () => {
       part('#orders-filters').close?.();
       docara.example.log('apply', applied);
     } else if (button.id === 'filters-clear') {
-      showDraft({status: [], delivery: 'any'});
+      showDraft(EMPTY());
       countApply();
     }
   });

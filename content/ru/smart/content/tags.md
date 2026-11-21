@@ -5,7 +5,7 @@ description: "Показывает короткую метку — катего�
 
 # Теги
 
-:badge[sf-tag]{variant=outline scheme=on-surface size=1/2} :badge[1.12.6]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tag]{variant=outline scheme=on-surface size=1/2} :badge[1.12.7]{variant=outline scheme=on-surface size=1/2}
 
 Тег показывает одну короткую метку: категорию, выбранное значение, фильтр или
 статус. Он может быть статичным, переключаться нажатием и предлагать отдельную
@@ -253,13 +253,13 @@ tags.addEventListener('sf-tag-close', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-tag>`, контракт `smart.tag` версии `1.12.6` |
-| Поставка | выпуск Framework `ui-b654460cad2a` |
+| Тег | `<sf-tag>`, контракт `smart.tag` версии `1.12.7` |
+| Поставка | выпуск Framework `ui-9ceecc24c988` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; используется в продуктах. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/tag` |
-| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-tag` |
+| Источник | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/smart/tag` |
+| Правило классов | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/rule/rule.json#name=cl-tag` |
 
 ## См. также
 

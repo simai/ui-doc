@@ -5,7 +5,7 @@ description: "Оглавление одной страницы: разделы �
 
 # Оглавление
 
-:badge[sf-contents]{variant=outline scheme=on-surface size=1/2} :badge[1.8.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-contents]{variant=outline scheme=on-surface size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
 
 Оглавление показывает разделы одной страницы ссылками и отмечает текущий, пока
 читатель прокручивает текст. Есть четыре вида — для документации, справки,
@@ -320,13 +320,13 @@ contents.addEventListener('sf-contents-change', ({detail}) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-contents>`, контракт `smart.contents` версии `1.8.5` |
-| Поставка | выпуск Framework `ui-b654460cad2a` |
+| Тег | `<sf-contents>`, контракт `smart.contents` версии `1.9.0` |
+| Поставка | выпуск Framework `ui-9ceecc24c988` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как навигация; название компонент ставит сам; с клавиатуры: `Tab` по порядку проходит ссылки разделов; `Enter` на ссылке прокручивает к разделу и ставит туда фокус; Enter или Space на кнопке шторки открывает список; Escape закрывает его и возвращает фокус на кнопку. |
-| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/contents` |
-| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-contents` |
+| Источник | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/smart/contents` |
+| Правило классов | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/rule/rule.json#name=cl-contents` |
 
 ## См. также
 

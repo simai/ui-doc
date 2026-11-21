@@ -6,7 +6,7 @@ profile: reference
 
 # Многострочное поле
 
-:badge[sf-textarea]{variant=outline scheme=on-surface size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-textarea]{variant=outline scheme=on-surface size=1/2} :badge[1.9.1]{variant=outline scheme=on-surface size=1/2}
 
 Многострочное поле принимает комментарий, описание или другой свободный текст с
 переносами строк. Для короткого значения в одну строку берите
@@ -91,6 +91,22 @@ profile: reference
 `input`, `textarea` и `select` на странице.
 
 :::example {id="components/textarea/sizes" label="Размеры многострочного поля"}
+:::
+
+### Ширина
+
+`sf-field--width-short`, `sf-field--width-medium`, `sf-field--width-long` • [справочник](#классы)
+
+Ширину поля задают по значению, для которого оно сделано: `short` — 20 знаков
+лестницы ширин (дата, число, код), `medium` — 28 (имя, телефон), `long` — 44
+(путь, e-mail, адрес). Класс ставят на корень поля (`.sf-textarea`): поле не шире
+этой ступени и не шире своего контейнера. Знаки следуют размеру текста,
+плотности и телефону: 160, 224 и 352 px при тексте 16, 140, 196 и 308 px в
+компактной плотности и на телефоне. Без класса поле занимает всю ширину
+контейнера. Смарт-компонент `sf-input-textarea` пишет тот же класс настройкой
+`width="short | medium | long"`, поэтому ширина одинакова с первого кадра.
+
+:::example {id="components/textarea/width" label="Ширина многострочного поля"}
 :::
 
 ### Состав

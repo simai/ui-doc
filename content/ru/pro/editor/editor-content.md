@@ -5,7 +5,7 @@ description: "Страница набирается одним потоком: �
 
 # Редактор содержимого
 
-:badge[sf-editor-content]{variant=outline scheme=on-surface size=1/2} :badge[1.5.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-editor-content]{variant=outline scheme=on-surface size=1/2} :badge[1.5.4]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-editor-content>` — прежний редактор страниц SIMAI одним потоком текста:
 страница набирается как в обычном текстовом редакторе. Новые страницы делайте
@@ -210,7 +210,7 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента пакета `pro` выпуска `pro-d7c4cf661de0` над выпуском Framework `ui-b654460cad2a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента пакета `pro` выпуска `pro-f6c43828e5f2` над выпуском Framework `ui-9ceecc24c988` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -218,7 +218,7 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 |:---|:---|
 | Тег | `<sf-editor-content>` |
 | Назначение | Режим «Содержимое» редактора страниц SIMAI: страница набирается одним потоком поверх Composition Document (structured-content). Enter и Backspace делят и соединяют блоки, Markdown в начале строки и «/» меняют вид блока, «+» и ручка на поле слева (вне текста) добавляют, двигают блок и открывают его меню; каждое меню открывается у того, что его вызвало. Выделение показывает панель форматирования, Esc выбирает блоки, вставка становится блоками через html@1, по таблице ходит Tab. У выбранного блока над ним — быстрые настройки, остальное уходит в панель приложения (или во всплывающее окно). Картинку бросают, вставляют или выбирают прямо на странице, хранит её приложение. Элемент ничего не сохраняет: новый документ он отправляет в `change`. Единый редактор блоков — `sf-editor`; этот элемент остаётся без изменений до 2027-01-01, затем уходит из пакета. |
-| Контракт | `smart.editor-content`, версия `1.5.3` |
+| Контракт | `smart.editor-content`, версия `1.5.4` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | устаревший: замените до удаления |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -272,5 +272,5 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 
 ### Источник
 
-- `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/editor-content`
-- `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/editor-content/rule.js#name=cl-editor-content`
+- `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/editor-content`
+- `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/editor-content/rule.js#name=cl-editor-content`

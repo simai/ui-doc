@@ -18,7 +18,7 @@
           <sf-radio name="access" value="link" label="Только по ссылке" description="Сайт не попадает в поиск"></sf-radio>
           <sf-radio name="access" value="none" label="Никто" description="Посетители видят страницу «Сайт на обслуживании»"></sf-radio>
         </fieldset>
-        <sf-switch name="index" label="Показывать в поисковых системах" checked></sf-switch>
+        <sf-checkbox name="index" label="Показывать в поисковых системах" checked></sf-checkbox>
       </section>
       <section class="sf-card" aria-labelledby="settings-address">
         <h2 id="settings-address" class="m-0 text-1 weight-medium">Адрес для писем</h2>
@@ -30,8 +30,8 @@
       </section>
       <section class="sf-card" aria-labelledby="settings-notify">
         <h2 id="settings-notify" class="m-0 text-1 weight-medium">Уведомления</h2>
-        <sf-switch name="notify-down" label="Сайт не отвечает" description="Письмо и сообщение в мессенджер" checked></sf-switch>
-        <sf-switch name="notify-ssl" label="Сертификат скоро истечёт" description="За 14 дней до срока"></sf-switch>
+        <sf-checkbox name="notify-down" label="Сайт не отвечает" description="Письмо и сообщение в мессенджер" checked></sf-checkbox>
+        <sf-checkbox name="notify-ssl" label="Сертификат скоро истечёт" description="За 14 дней до срока"></sf-checkbox>
       </section>
       <div class="flex flex-wrap gap-2">
         <sf-button native-type="submit" text="Сохранить"></sf-button>

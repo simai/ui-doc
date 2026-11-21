@@ -6,7 +6,7 @@ profile: reference
 
 # Кнопки с иконкой
 
-:badge[sf-icon-button]{variant=outline scheme=on-surface size=1/2} :badge[1.19.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-icon-button]{variant=outline scheme=on-surface size=1/2} :badge[1.20.0]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка с иконкой запускает действие без видимой подписи: редактировать,
 удалить, открыть настройки. Берите её, когда иконка общепринята и места мало;
@@ -65,6 +65,24 @@ profile: reference
 `appearance="plain"`.
 
 :::example {id="components/icon-buttons/plain" label="Кнопки без фона"}
+:::
+
+### Переключатель
+
+`sf-icon-button--toggle` • [справочник](#классы)
+
+Тихая кнопка «включено — выключено» в ряду управления: переключатель вида,
+панели, избранного. Состояние показывает подложка, а не значок: значок в обоих
+состояниях остаётся контурным. Выключенная — без заливки и рамки, значок
+`--sf-on-surface-icon`, при наведении появляется ступень контейнера
+поверхности. Включённая (`aria-pressed="true"` или
+`sf-icon-button--pressed`) — мягкая заливка `--sf-primary-container` и тонкая
+рамка `--sf-primary` 1 px внутри кнопки, размер не меняется. Два признака
+вместо одного цвета: включённую видно и без различения цветов. Вид всегда
+нейтральный, классы схемы и статуса на него не действуют. В смарт-компоненте
+это `appearance="toggle"` у [sf-button-icon](/ru/smart/actions/icon-buttons/).
+
+:::example {id="components/icon-buttons/toggle" label="Переключатели"}
 :::
 
 ### Схема
@@ -245,7 +263,7 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 |:---|:---|
 | Блок | `sf-icon-button` |
 | Части | `sf-icon-button-spinner`, `sf-icon-button-state-loading` |
-| Модификаторы | `sf-icon-button--close`, `sf-icon-button--default`, `sf-icon-button--height-high`, `sf-icon-button--height-highest`, `sf-icon-button--height-low`, `sf-icon-button--icon`, `sf-icon-button--outline`, `sf-icon-button--plain`, `sf-icon-button--pressed`, `sf-icon-button--primary` |
+| Модификаторы | `sf-icon-button--close`, `sf-icon-button--default`, `sf-icon-button--height-high`, `sf-icon-button--height-highest`, `sf-icon-button--height-low`, `sf-icon-button--icon`, `sf-icon-button--outline`, `sf-icon-button--plain`, `sf-icon-button--pressed`, `sf-icon-button--primary`, `sf-icon-button--toggle` |
 | Размеры | `sf-icon-button--size-1`, `sf-icon-button--size-1/2`, `sf-icon-button--size-1/3`, `sf-icon-button--size-2`, `sf-icon-button--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -293,6 +311,7 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 | `--sf-icon-button--border-top-right-radius` | не задана; задают модификаторы, например `.sf-icon-button.segment-start`: `var(--sf-radius-square)` | `border-start-end-radius` |
 | `--sf-icon-button--border-top-width` | `var(--sf-icon-button-border-width, 0)` | `padding-top`, `border-top-width` |
 | `--sf-icon-button--border-width` | не задана; задают модификаторы, например `.sf-icon-button--outline:where(:not(.sf-icon-button--close))`: `var(--sf-icon-button-border-width, var(--sf-px))` | `border-width` |
+| `--sf-icon-button--box-shadow` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button.sf-icon-button.sf-icon-button.sf-icon-button.sf-icon-button--toggle:is(.sf-icon-button--pressed, [aria-pressed=true]):not(:disabled):not([aria-disabled=true]):not(.disabled)`: `inset 0 0 0 var(--sf-px) var(--sf-primary)` | `box-shadow` |
 | `--sf-icon-button--focus-ink` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button--default.sf-icon-button--primary:where(:not(.sf-icon-button--close))`: `var(--sf-on-primary)` | `--sf-icon-button--focus-inset` |
 | `--sf-icon-button--focus-inset` | не задана; задают модификаторы, например `.sf-icon-button:not(:disabled):not(.disabled).focus-visible`: `inset 0 0 0 var(--sf-focus--offset) var(--sf-icon-button--focus-ink, transparent)` | `box-shadow` |
 | `--sf-icon-button--on-place-ink` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button--default:is(.sf-icon-button--on-surface, .sf-icon-button--on-surface-variant, .sf-icon-button--secondary).sf-icon-button--icon`: `color-mix(in srgb, var(--sf-on-primary), var(--sf-place--ink) 0%)` | `--sf-icon--color` |

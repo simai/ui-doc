@@ -849,6 +849,43 @@
    ]
   },
   {
+   "slug": "accessibility",
+   "title": "Доступность",
+   "order": 85,
+   "pages": [
+    {
+     "slug": "what-framework-does",
+     "title": "Что SIMAI Framework делает за вас",
+     "order": 10
+    },
+    {
+     "slug": "standards",
+     "title": "Стандарты и заявление о соответствии",
+     "order": 20
+    },
+    {
+     "slug": "author-checklist",
+     "title": "Чек-лист автора",
+     "order": 30
+    },
+    {
+     "slug": "components",
+     "title": "Компоненты",
+     "order": 40
+    },
+    {
+     "slug": "display-settings",
+     "title": "Настройки отображения",
+     "order": 50
+    },
+    {
+     "slug": "statement-template",
+     "title": "Образец заявления о доступности",
+     "order": 60
+    }
+   ]
+  },
+  {
    "slug": "standards",
    "title": "Стандарты, качество и ИИ",
    "order": 90,

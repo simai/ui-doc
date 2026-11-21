@@ -1,0 +1,38 @@
+<form id="signup-form" class="measure flex flex-col gap-3" novalidate>
+  <div class="flex flex-col gap-1">
+    <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
+      <span class="sf-input-label flex"><span class="sf-input-text">Имя</span><span class="sf-input-required" aria-hidden="true">*</span></span>
+      <span class="sf-input-field items-cross-center transition flex">
+        <input type="text" name="name" autocomplete="name" required>
+      </span>
+      <span class="sf-input-hint-text-wrap">Как к вам обращаться</span>
+    </label>
+
+    <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
+      <span class="sf-input-label flex"><span class="sf-input-text">Электронная почта</span><span class="sf-input-required" aria-hidden="true">*</span></span>
+      <span class="sf-input-field items-cross-center transition flex">
+        <i class="sf-icon" aria-hidden="true">mail</i>
+        <input type="email" name="email" autocomplete="email" placeholder="name@example.com" required>
+      </span>
+      <span class="sf-input-hint-text-wrap">Пришлём на этот адрес подтверждение</span>
+    </label>
+
+    <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
+      <span class="sf-input-label flex"><span class="sf-input-text">Пароль</span><span class="sf-input-required" aria-hidden="true">*</span></span>
+      <span class="sf-input-field items-cross-center transition flex">
+        <input type="password" name="password" autocomplete="new-password" minlength="8" required>
+      </span>
+      <span class="sf-input-hint-text-wrap">Не короче восьми символов</span>
+    </label>
+
+    <label class="sf-checkbox sf-checkbox--size-1 flex">
+      <span class="sf-checkbox-box transition flex"><input type="checkbox" name="news" value="yes"><span class="sf-icon" aria-hidden="true"></span></span>
+      <span class="sf-checkbox-container flex flex-col"><span class="sf-checkbox-top flex"><span class="sf-checkbox-label">Получать новости</span></span></span>
+    </label>
+  </div>
+
+  <button type="submit" class="sf-button sf-button--default sf-button--primary sf-button--size-1 w-full sm:w-fit">
+    <span class="sf-button-text-container">Зарегистрироваться</span>
+  </button>
+  <p class="m-0" id="signup-result" role="status"></p>
+</form>

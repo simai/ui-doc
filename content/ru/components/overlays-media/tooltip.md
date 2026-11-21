@@ -6,7 +6,7 @@ profile: reference
 
 # Подсказка
 
-:badge[sf-tooltip]{variant=outline scheme=on-surface size=1/2} :badge[1.7.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tooltip]{variant=outline scheme=on-surface size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
 
 Подсказка показывает короткое пояснение к элементу при наведении указателя
 или фокусе с клавиатуры. Не переносите в неё сведения, без которых нельзя

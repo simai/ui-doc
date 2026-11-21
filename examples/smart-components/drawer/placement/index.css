@@ -1,5 +1,5 @@
-/* Пример держит свои панели: они открываются внутри этого блока
-   (data-sf-overlay-container) на его высоту. */
-[data-sf-overlay-container] {
+/* The panels open inside this area (data-sf-overlay-container), below their
+   buttons, so an open panel never covers the next button. */
+.page-panel-area {
   min-block-size: 24rem;
 }

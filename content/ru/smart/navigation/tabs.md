@@ -6,7 +6,7 @@ profile: reference
 
 # Вкладки
 
-:badge[sf-tabs]{variant=outline scheme=on-surface size=1/2} :badge[1.4.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tabs]{variant=outline scheme=on-surface size=1/2} :badge[1.4.8]{variant=outline scheme=on-surface size=1/2}
 
 Вкладки показывают несколько панелей одного уровня на одном месте: человек
 переключает их и смотрит по очереди. Вкладки задают строкой, разметкой внутри
@@ -395,13 +395,13 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 
 | | |
 |:---|:---|
-| Тег | `<sf-tabs>`, контракт `smart.tabs` версии `1.4.7` |
-| Поставка | выпуск Framework `ui-b654460cad2a` |
+| Тег | `<sf-tabs>`, контракт `smart.tabs` версии `1.4.8` |
+| Поставка | выпуск Framework `ui-9ceecc24c988` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как вкладки; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `←`, `→`, `↑`, `↓`, `Home`, `End`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/tabs` |
-| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-tabs` |
+| Источник | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/smart/tabs` |
+| Правило классов | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/rule/rule.json#name=cl-tabs` |
 
 ## См. также
 

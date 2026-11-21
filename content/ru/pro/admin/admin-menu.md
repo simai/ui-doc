@@ -5,7 +5,7 @@ description: "Даёт административному приложению �
 
 # Меню администратора
 
-:badge[sf-admin-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.14.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-admin-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.14.4]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-admin-menu>` — боковая навигация административного приложения: вложенные
 разделы, поиск, компактный режим и настройка порядка и видимости пунктов.
@@ -287,7 +287,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента пакета `pro` выпуска `pro-d7c4cf661de0` над выпуском Framework `ui-b654460cad2a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента пакета `pro` выпуска `pro-f6c43828e5f2` над выпуском Framework `ui-9ceecc24c988` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -295,7 +295,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 |:---|:---|
 | Тег | `<sf-admin-menu>` |
 | Назначение | Вложенная навигация администратора с поиском, компактным режимом и редактируемыми личными или системными настройками. |
-| Контракт | `smart.admin-menu`, версия `1.14.3` |
+| Контракт | `smart.admin-menu`, версия `1.14.4` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -396,8 +396,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### Источник
 
-- `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/admin-menu`
-- `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
+- `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/admin-menu`
+- `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
 
 ## См. также
 

@@ -6,7 +6,7 @@ profile: reference
 
 # Пагинация
 
-:badge[sf-pagination]{variant=outline scheme=on-surface size=1/2} :badge[1.6.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-pagination]{variant=outline scheme=on-surface size=1/2} :badge[1.7.0]{variant=outline scheme=on-surface size=1/2}
 
 Пагинация делит длинный список результатов на страницы, показывает текущую и
 даёт перейти к соседней или конкретной странице. Ставьте её сразу после
@@ -57,6 +57,18 @@ profile: reference
 
 В узкой колонке — на телефоне или в боковой панели — номера сужаются до
 своего числа, а строка остаётся одной строкой.
+
+Линия под строкой закрывает список, который стоит прямо на странице. Внутри
+места — карточки, серой подложки, блока `bg-surface-*`, пристёгнутой
+панели, всплывающего окна — список закрывает край или фон самого места,
+поэтому линия там прозрачна и не рисует второй черты в пикселе над рамкой.
+Пиксель остаётся, и высота строки не меняется. Цвет этой линии и линии строки
+«Показать ещё» задаёт публичная переменная `--sf-pagination-divider-color`;
+своя рамка страницы, которая не является местом, ставит её в `transparent`:
+
+```css
+.list-box { border: var(--sf-px) solid var(--sf-outline-variant); --sf-pagination-divider-color: transparent; }
+```
 
 ## Варианты
 
@@ -213,8 +225,9 @@ profile: reference
 | `--sf-pagination-left--gap` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-left`: `var(--sf-space-1)` | `gap` |
 | `--sf-pagination-main--background-color` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-main`: `transparent` | `background-color` |
 | `--sf-pagination-main--border-bottom-width` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-main`: `var(--sf-px)` | `border-bottom-width` |
-| `--sf-pagination-main--border-color` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-main`: `var(--sf-outline-variant)` | `border-color` |
+| `--sf-pagination-main--border-color` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-main`: `var(--sf-pagination-divider-color, var(--sf-pagination-main--line-on-place, var(--sf-outline-variant)))` | `border-color` |
 | `--sf-pagination-main--border-style` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-main`: `solid` | `border-style` |
+| `--sf-pagination-main--line-on-place` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-main`: `color-mix(in srgb, transparent, var(--sf-place--ink-variant) 0%)` | `--sf-pagination-main--border-color` |
 | `--sf-pagination-main--padding-bottom` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-main`: `var(--sf-pagination--padding-block)` | `padding-bottom` |
 | `--sf-pagination-main--padding-top` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-main`: `var(--sf-pagination--padding-block)` | `padding-top` |
 | `--sf-pagination-marked--background-color` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-marked`: `transparent` | `background-color` |
