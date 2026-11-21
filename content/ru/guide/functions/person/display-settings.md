@@ -66,4 +66,5 @@ SF.displaySettings.reset();                              // обычная ве�
 
 ## См. также
 
+- [Доступность](/ru/guide/accessibility/) — что SIMAI Framework делает за вас, стандарты и панель настроек отображения.
 - [Настройки вида](/ru/guide/functions/person/preferences/) — запомнить вид таблицы или списка.
