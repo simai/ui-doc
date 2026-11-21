@@ -1,15 +1,17 @@
 // The settings only keep the values; the page applies them: the theme as a
-// class on its area, the colour as a theme built from it (SF.ThemePalette,
-// loaded by data-sf-theme-palette on the area).
+// class on the outer block, the colour as a theme built from it on the inner
+// one (SF.ThemePalette, loaded by data-sf-theme-palette). The colour's area
+// follows the scheme around it, so the theme class goes one level up.
 
+const scheme = document.querySelector('#settings-theme-scheme');
 const page = document.querySelector('#settings-theme-page');
 const state = document.querySelector('#settings-theme-state');
 const themeNames = {system: 'как в системе', light: 'светлая', dark: 'тёмная'};
 let removeTheme = null;
 
 const applyTheme = (value) => {
-  page.classList.toggle('theme-light', value === 'light');
-  page.classList.toggle('theme-dark', value === 'dark');
+  scheme.classList.toggle('theme-light', value === 'light');
+  scheme.classList.toggle('theme-dark', value === 'dark');
 };
 
 // A palette hue comes by its name (blue), an own colour as a code (#00838f).
