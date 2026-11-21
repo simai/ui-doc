@@ -334,17 +334,13 @@ profile: reference
 получают только события своей панели; обычный слушатель на внешней панели
 услышит и вложенную, поэтому проверяйте `event.detail.drawerId`.
 
-```js
-const drawer = document.querySelector('#drawer-example-help');
+В примере панель знает, что в ней есть несохранённое (`unsaved`), а
+`onBeforeClose()` не даёт закрыть её крестиком, клавишей Escape или щелчком
+по затемнению, пока правки не сохранены или не отменены. Журнал под
+примером показывает запросы на закрытие и их причину.
 
-drawer.onBeforeClose((event) => {
-  if (hasUnsavedChanges()) event.preventDefault();
-});
-
-document.addEventListener('sf-drawer-opened', (event) => {
-  analytics.track('panel-open', event.detail.drawerId);
-});
-```
+:::example {id="smart-components/drawer/unsaved" label="Панель с несохранёнными правками" preview=sandbox log="sf-drawer-close sf-drawer-closed" log_open=true}
+:::
 
 ## Доступность
 

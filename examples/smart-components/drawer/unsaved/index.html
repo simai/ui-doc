@@ -1,0 +1,21 @@
+<div data-sf-overlay-container>
+  <div class="flex flex-col gap-2 p-3 radius-3 bg-surface-container">
+    <div class="flex flex-wrap gap-2">
+      <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-drawer="open" aria-controls="drawer-example-note">
+        <span class="sf-button-text-container">Заметка к заказу</span>
+      </button>
+    </div>
+    <p class="m-0" id="drawer-note-saved">Заметка: «Позвонить за час до доставки».</p>
+    <p class="m-0 color-on-surface-variant">Откройте панель, измените текст и попробуйте закрыть её крестиком, клавишей Escape или щелчком по затемнению.</p>
+  </div>
+  <sf-drawer id="drawer-example-note" placement="inline-end" size="1/2" heading="Заметка к заказу">
+    <div class="flex flex-col gap-2">
+      <sf-input-textarea id="drawer-note-text" name="note" label="Заметка" value="Позвонить за час до доставки"></sf-input-textarea>
+      <p class="m-0 color-error" id="drawer-note-warning" role="status"></p>
+    </div>
+    <div slot="footer">
+      <sf-button text="Сохранить" id="drawer-note-save"></sf-button>
+      <sf-button text="Не сохранять" appearance="ghost" scheme="on-surface" id="drawer-note-discard"></sf-button>
+    </div>
+  </sf-drawer>
+</div>
