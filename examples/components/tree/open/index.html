@@ -1,0 +1,23 @@
+<div class="flex flex-col gap-2">
+  <div id="tree-open-files" class="sf-tree" aria-label="Файлы проекта">
+    <div class="sf-tree-item" data-value="docs">
+      <div class="sf-tree-item-container flex items-cross-center"><button type="button" class="sf-icon-button sf-icon-button--ghost sf-icon-button--on-surface sf-icon-button--size-1/3" tabindex="-1" aria-hidden="true"><i class="sf-icon" aria-hidden="true">chevron_right</i></button><i class="sf-icon sf-tree-node-icon" aria-hidden="true">folder</i><span class="sf-tree-item-name">Документы</span></div>
+      <div class="sf-tree-group">
+        <div class="sf-tree-item" data-value="Договор.pdf"><div class="sf-tree-item-container flex items-cross-center"><span class="sf-tree-toggle-spacer" aria-hidden="true"></span><i class="sf-icon sf-tree-node-icon" aria-hidden="true">description</i><span class="sf-tree-item-name">Договор.pdf</span></div></div>
+        <div class="sf-tree-item" data-value="Смета.xlsx"><div class="sf-tree-item-container flex items-cross-center"><span class="sf-tree-toggle-spacer" aria-hidden="true"></span><i class="sf-icon sf-tree-node-icon" aria-hidden="true">table_chart</i><span class="sf-tree-item-name">Смета.xlsx</span></div></div>
+      </div>
+    </div>
+    <div class="sf-tree-item" data-value="images">
+      <div class="sf-tree-item-container flex items-cross-center"><button type="button" class="sf-icon-button sf-icon-button--ghost sf-icon-button--on-surface sf-icon-button--size-1/3" tabindex="-1" aria-hidden="true"><i class="sf-icon" aria-hidden="true">chevron_right</i></button><i class="sf-icon sf-tree-node-icon" aria-hidden="true">folder</i><span class="sf-tree-item-name">Изображения</span></div>
+      <div class="sf-tree-group">
+        <div class="sf-tree-item" data-value="Обложка.png"><div class="sf-tree-item-container flex items-cross-center"><span class="sf-tree-toggle-spacer" aria-hidden="true"></span><i class="sf-icon sf-tree-node-icon" aria-hidden="true">image</i><span class="sf-tree-item-name">Обложка.png</span></div></div>
+      </div>
+    </div>
+    <div class="sf-tree-item" data-value="README.md"><div class="sf-tree-item-container flex items-cross-center"><span class="sf-tree-toggle-spacer" aria-hidden="true"></span><i class="sf-icon sf-tree-node-icon" aria-hidden="true">article</i><span class="sf-tree-item-name">README.md</span></div></div>
+  </div>
+  <div class="flex flex-wrap gap-2">
+    <button type="button" class="sf-button sf-button--outline sf-button--primary sf-button--size-1" id="tree-open-docs"><span class="sf-button-text-container">Раскрыть «Документы»</span></button>
+    <button type="button" class="sf-button sf-button--ghost sf-button--on-surface sf-button--size-1" id="tree-close-docs"><span class="sf-button-text-container">Свернуть</span></button>
+  </div>
+  <p class="m-0 color-on-surface-variant" id="tree-open-result" role="status">Выберите файл и нажмите Enter: страница откроет его.</p>
+</div>

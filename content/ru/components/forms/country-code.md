@@ -164,10 +164,8 @@ profile: reference
 `dialCode` (выбрать страну). Изменение `value` и страны создаёт `input` и
 `change`.
 
-```js
-const field = document.querySelector('input[name="phone"]');
-SF.CountryCode.setState(field, {iso2: 'KZ'});
-```
+:::example {id="components/country-code/set-state" label="Страна из кода" preview=sandbox log="change" log_open=true}
+:::
 
 Компонент регистрирует класс `CountryCode`. `SF.Loader` появляется к событию
 `sf-loader-init` на `window`; `SF.Loader.ready('CountryCode', callback)`

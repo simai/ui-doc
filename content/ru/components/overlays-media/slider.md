@@ -187,16 +187,14 @@ profile: reference
 | `SF.Slider.refresh(root)` | пересчитывает слайдер после изменения слайдов |
 | `SF.Slider.unbind(root)` | отключает слайдер |
 
-```js
-const root = document.querySelector('.sf-slider');
-const swiper = SF.Slider.bind(root);
-swiper?.on('slideChange', () => console.log(swiper.realIndex));
-```
-
 `bind` возвращает `null`, пока движок Swiper не загружен; скрипт подключает
-слайдер сам, как только движок загрузится. Экземпляр создаёт события `slideChange`,
-`transitionEnd`, `autoplayStart` и `autoplayStop` и даёт методы
-`slideTo(index)`, `slideNext()` и `slidePrev()`.
+слайдер сам, как только движок загрузится. Экземпляр создаёт события
+`slideChange`, `transitionEnd`, `autoplayStart` и `autoplayStop` и даёт
+методы `slideTo(index)`, `slideNext()` и `slidePrev()`. В примере страница
+ждёт экземпляр и подписывает текущий слайд по событию `slideChange`.
+
+:::example {id="components/slider/slide-change" label="Номер слайда" preview=sandbox}
+:::
 
 ## Классы
 

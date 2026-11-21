@@ -1,0 +1,10 @@
+<div class="flex flex-col gap-2">
+  <div class="sf-verification-form sf-verification-form--size-1" data-length="6" data-mode="numeric">
+    <label class="sf-verification-form-label" for="verification-complete-code">Код из сообщения</label>
+    <span class="sf-verification sf-verification--size-1">
+      <input id="verification-complete-code" class="sf-verification-input" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" aria-describedby="verification-complete-hint">
+    </span>
+    <span class="sf-verification-form-hint" id="verification-complete-hint">Введите шесть цифр. Верный код в примере — 123456</span>
+  </div>
+  <p class="m-0" id="verification-complete-result" role="status"></p>
+</div>
