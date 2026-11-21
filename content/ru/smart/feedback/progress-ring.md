@@ -110,6 +110,9 @@ ring.setAttribute('status', 'success');
 ring.setAttribute('value-text', 'Файлы загружены');
 ```
 
+:::example {id="smart-components/progress-ring/upload" label="Файл за файлом" preview=sandbox}
+:::
+
 ### Кольцо вокруг картинки
 
 Кольцо вокруг аватара показывает долю и оставляет картинку на месте: кольцо

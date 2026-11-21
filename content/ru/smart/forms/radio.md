@@ -122,6 +122,12 @@ publish.addEventListener('change', (event) => {
 document.querySelector('sf-radio[value="draft"]').setChecked(true);
 ```
 
+В примере «По расписанию» показывает поле даты. Кнопка под группой отмечает
+черновик из кода: `change` при этом нет, и поле прячет сама страница.
+
+:::example {id="smart-components/radio/schedule" label="Поле по выбору" preview=sandbox log="change" log_open=false}
+:::
+
 ## Доступность
 
 - Каждой радиокнопке нужно видимое название в `label`: отдельного

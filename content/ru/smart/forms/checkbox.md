@@ -154,6 +154,13 @@ await terms.whenRendered();
 terms.setChecked(false);
 ```
 
+В примере флажок создан из скрипта: отметка открывает кнопку «Продолжить»
+по событию `change`, а снятие отметки из кода события не отправляет, поэтому
+кнопку закрывает сама страница.
+
+:::example {id="smart-components/checkbox/from-code" label="Флажок из скрипта" preview=sandbox log="change" log_open=false}
+:::
+
 ## Доступность
 
 - Каждому флажку нужно доступное имя: видимый `label` или, если подписи нет,

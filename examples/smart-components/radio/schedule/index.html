@@ -1,0 +1,14 @@
+<div class="flex flex-col gap-3">
+  <fieldset class="border-0 p-0 m-0" id="radio-schedule-group">
+    <legend class="m-bottom-2 weight-medium">Когда опубликовать?</legend>
+    <div class="flex flex-col gap-2">
+      <sf-radio name="publish" value="now" label="Сейчас" checked></sf-radio>
+      <sf-radio name="publish" value="later" label="По расписанию"></sf-radio>
+      <sf-radio name="publish" value="draft" label="Сохранить черновик"></sf-radio>
+    </div>
+  </fieldset>
+  <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col max-w-sm" id="radio-schedule-field" hidden><span class="sf-input-label flex"><span class="sf-input-text">Дата и время публикации</span></span><span class="sf-input-field items-cross-center transition flex"><input type="datetime-local" name="publish-at" value="2026-12-01T10:00"></span></label>
+  <div class="flex flex-wrap gap-2">
+    <sf-button id="radio-schedule-draft" text="Отложить как черновик" appearance="ghost" scheme="on-surface"></sf-button>
+  </div>
+</div>

@@ -101,6 +101,12 @@ region.replaceChildren(renderAuthor(author));
 region.removeAttribute('aria-busy');
 ```
 
+В примере ответ приходит через полторы секунды; кнопка возвращает скелетон и
+загружает карточку снова.
+
+:::example {id="smart-components/skeleton/replace" label="Карточка после ответа" preview=sandbox}
+:::
+
 ## Доступность
 
 - Фигуры скрыты от экранного диктора и не получают фокус: они ничего не

@@ -112,6 +112,12 @@ popover.addEventListener('sf-popover-closed', () => {
 });
 ```
 
+В примере поле поиска получает фокус, когда поверхность открылась, а список
+фильтруется, когда она закрылась.
+
+:::example {id="smart-components/popover/focus-field" label="Фокус в поле при открытии" preview=sandbox log="sf-popover-opened sf-popover-closed" log_open=false}
+:::
+
 ## Доступность
 
 - Поверхности нужно доступное имя: `label` на `<sf-popover>` передаётся ей
