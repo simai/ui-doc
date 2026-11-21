@@ -5,7 +5,7 @@ description: "Выбирает цвет из палитры SIMAI Framework, и�
 
 # Цвет
 
-:badge[sf-input-color]{variant=outline scheme=on-surface size=1/2} :badge[1.19.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-color]{variant=outline scheme=on-surface size=1/2} :badge[1.19.6]{variant=outline scheme=on-surface size=1/2}
 
 Поле цвета даёт выбрать цвет и показывает его образцом и кодом. По нажатию
 открывается окно цвета SIMAI Framework: палитра с названиями цветов, цвета,
@@ -339,13 +339,13 @@ Framework: файл `src/core/js/theme-palette.js` открытого репоз
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-color>`, контракт `smart.input-color` версии `1.19.4` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-input-color>`, контракт `smart.input-color` версии `1.19.6` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`, `Esc`. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/input-color` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-input-color` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/input-color` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-input-color` |
 
 ## См. также
 

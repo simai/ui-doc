@@ -6,7 +6,7 @@ profile: reference
 
 # Хлебные крошки
 
-:badge[sf-breadcrumbs]{variant=outline scheme=on-surface size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-breadcrumbs]{variant=outline scheme=on-surface size=1/2} :badge[1.3.6]{variant=outline scheme=on-surface size=1/2}
 
 Хлебные крошки показывают путь от главной страницы до текущей и дают перейти
 на любой родительский уровень. Это вторичная навигация: она дополняет

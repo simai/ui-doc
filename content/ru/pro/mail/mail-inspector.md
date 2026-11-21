@@ -5,7 +5,7 @@ description: "Заголовок с действиями, путь, вкладк
 
 # Панель свойств письма
 
-:badge[sf-mail-inspector]{variant=outline scheme=on-surface size=1/2} :badge[1.1.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-inspector]{variant=outline scheme=on-surface size=1/2} :badge[1.1.4]{variant=outline scheme=on-surface size=1/2}
 
 Панель свойств — правая колонка редактора писем, где человек настраивает
 выбранный блок: заголовок с действиями, путь, вкладки, разделы и все виды
@@ -250,9 +250,9 @@ panel.sections = [
 
 | | |
 |:---|:---|
-| Тег | `<sf-mail-inspector>`, контракт `smart.mail-inspector` версии `1.1.3` |
+| Тег | `<sf-mail-inspector>`, контракт `smart.mail-inspector` версии `1.1.4` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | Доступность | Роль `form`; название компонент ставит сам; с клавиатуры: `Tab`, `Esc`, `Enter`, `Пробел`, `Alt+ArrowUp`, `Alt+ArrowDown`, `Shift+F10`. |
-| Источник | `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/mail-inspector` |
-| Правило классов | `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector` |
+| Источник | `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/mail-inspector` |
+| Правило классов | `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector` |

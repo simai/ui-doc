@@ -1,6 +1,6 @@
 {
   "schema": "ui-doc.example-contrast-roles.v1",
-  "runtime_revision": "dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74",
+  "runtime_revision": "b654460cad2ac1ffe146261f6c301be334d8e24d",
   "note": "Written by scripts/audit-example-contrast.mjs --refresh-roles from the pinned SIMAI Framework distribution (core.css and utility.full.css), in .theme-light and .theme-dark. Refresh with every repin.",
   "themes": {
     "light": {

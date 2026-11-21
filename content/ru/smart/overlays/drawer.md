@@ -6,7 +6,7 @@ profile: reference
 
 # Боковая панель
 
-:badge[sf-drawer]{variant=outline scheme=on-surface size=1/2} :badge[1.17.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-drawer]{variant=outline scheme=on-surface size=1/2} :badge[1.18.1]{variant=outline scheme=on-surface size=1/2}
 
 Боковая панель — всё, что выезжает от края экрана: панель поверх страницы
 с затемнением (по умолчанию), немодальная панель (`modal="false"`),
@@ -435,13 +435,13 @@ document.addEventListener('sf-drawer-opened', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-drawer>`, контракт `smart.drawer` версии `1.17.3` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-drawer>`, контракт `smart.drawer` версии `1.18.1` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; используется в продуктах. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как диалоговое окно; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Shift+Tab`, `Esc`. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/drawer` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-drawer` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/drawer` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-drawer` |
 
 ## См. также
 

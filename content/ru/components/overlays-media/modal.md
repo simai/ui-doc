@@ -6,7 +6,7 @@ profile: reference
 
 # Модальное окно
 
-:badge[sf-modal]{variant=outline scheme=on-surface size=1/2} :badge[1.7.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-modal]{variant=outline scheme=on-surface size=1/2} :badge[1.7.2]{variant=outline scheme=on-surface size=1/2}
 
 Модальное окно переводит пользователя к одной важной задаче поверх страницы:
 подтвердить действие, заполнить короткую форму. Страница за окном недоступна,
@@ -190,12 +190,12 @@ document.addEventListener('modal:before-close', (event) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-modal-background-color` | Заливка панели; у затемнения фона — своя. | `var(--sf-surface-area)`; зависит от вида |
+| `--sf-modal-background-color` | Заливка панели; у затемнения фона — своя. | `var(--sf-surface-popup)`; зависит от вида |
 | `--sf-modal-border-color` | Цвет рамки панели. | `var(--sf-outline-variant, transparent)` |
 | `--sf-modal-border-width` | Толщина рамки панели со всех сторон. | `var(--sf-border-width, var(--sf-px))` |
 | `--sf-modal-radius` | Скругление углов панели; панель во весь экран остаётся прямоугольной. | `var(--sf-radius--surface)` |
-| `--sf-modal-padding-inline` | Отступ внутри панели до и после содержимого; атрибут `surface-padding` окна важнее. | `var(--sf-space-3)` |
-| `--sf-modal-padding-block` | Отступ внутри панели сверху и снизу от содержимого; атрибут `surface-padding` окна важнее. | `var(--sf-space-3)` |
+| `--sf-modal-padding-inline` | Отступ внутри панели до и после содержимого; атрибут `surface-padding` окна важнее. | `calc(var(--sf-space-2) - var(--sf-px))` |
+| `--sf-modal-padding-block` | Отступ внутри панели сверху и снизу от содержимого; атрибут `surface-padding` окна важнее. | `calc(var(--sf-space-2) - var(--sf-px))` |
 | `--sf-modal-gap` | Промежуток между шапкой, телом и подвалом. | `var(--sf-space-1)` |
 | `--sf-modal-footer-gap` | Расстояние между действиями подвала, которые стоят в конце. | `var(--sf-gap--actions)` |
 

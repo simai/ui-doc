@@ -6,7 +6,7 @@ profile: reference
 
 # Шкала прогресса
 
-:badge[sf-progress-scale]{variant=outline scheme=on-surface size=1/2} :badge[1.7.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-scale]{variant=outline scheme=on-surface size=1/2} :badge[1.7.2]{variant=outline scheme=on-surface size=1/2}
 
 Шкала делит ход операции на десять участков, по одному на каждые десять
 процентов. Она наглядна там, где обычная полоса выглядит слишком абстрактно:

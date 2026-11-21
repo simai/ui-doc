@@ -343,7 +343,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 ### Прежние имена по компонентам
 
-Раздел собран из манифестов выпуска `ui-dc9fc39aeb26` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
+Раздел собран из манифестов выпуска `ui-b654460cad2a` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
 
 #### `<sf-accordion>`
 
@@ -812,6 +812,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 |:---|:---|:---|:---|
 | `icon-start` | `left-icon` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `size` | `input-size` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `appearance` | `input-type` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | событие `change` | `sf-datepicker-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `change` | `sf-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
@@ -863,6 +864,9 @@ id?}` значит «перестать ждать», а `wait` принимае
 |:---|:---|:---|:---|
 | `groups="layout"` | `groups="structure"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `sf-pagination appearance="more"` | `has-more` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `requestMore()` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `moreFailed()` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `sf-list-load-more` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
 
 #### `<sf-list-attention>`
 
@@ -912,6 +916,9 @@ id?}` значит «перестать ждать», а `wait` принимае
 | событие `sf-menu-context-closed` | `sf-context-menu-closed` | работает как псевдоним | — |
 | событие `sf-menu-context-search` | `sf-context-menu-search` | работает как псевдоним | — |
 | событие `sf-menu-context-tab` | `sf-context-menu-tab` | работает как псевдоним | — |
+| — | `position` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | — |
+| — | `tooltip` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | — |
+| — | `tabs` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
 
 #### `<sf-modal>`
 
@@ -952,6 +959,31 @@ id?}` значит «перестать ждать», а `wait` принимае
 | событие `sf-pagination-size-change` | `sf-page-size-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-pagination-selection-clear` | `sf-selection-clear` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-pagination-load-more` | `sf-show-more` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| — | `bottom` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `top-class` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `bottom-class` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `pages-label` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `total-label` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `selected-label` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `selected-count` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `page-sizes` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `show-page-size` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `show-actions` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `actions` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `action` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `action-apply-text` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `show-action-for-all` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `action-for-all` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `action-for-all-label` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `actions-label` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `action-choose-label` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `actions-region-label` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `clear-selection-label` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `sf-pagination-size-change` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `sf-pagination-selection-clear` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `sf-pagination-action-change` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `sf-pagination-action-for-all-change` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
+| — | `sf-pagination-apply` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | 2027-01-01 |
 
 #### `<sf-popover>`
 
@@ -1050,6 +1082,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 | событие `change` | `sf-range-slider-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `change` | `onSliderChange` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `prefix-text` | `prefix` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| — | `text-position` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | — |
 
 #### `<sf-sortable>`
 
@@ -1079,6 +1112,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `items="items as JSON [{label, state}]"` | `items="label::flag\|label"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `items[i].state = "error"` | `error-step` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | событие `sf-steps-change` | `sf-step-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| — | `separator-icon` | прежнее: читается для совместимости, отмечается в `SF.deprecations` | — |
 
 #### `<sf-switch>`
 

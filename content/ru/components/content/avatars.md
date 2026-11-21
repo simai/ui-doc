@@ -255,7 +255,7 @@ unread" и "new". В имени всегда точное число: при `99
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-avatar-background-color` | Заливка под инициалами или заглушкой; изображение её закрывает. | `transparent`; зависит от вида |
+| `--sf-avatar-background-color` | Заливка под инициалами или заглушкой; изображение её закрывает. | `var(--sf-surface-container)`; зависит от вида |
 | `--sf-avatar-color` | Цвет инициалов и значка-заглушки. | `var(--sf-on-surface-variant)` |
 | `--sf-avatar-border-color` | Цвет рамки в покое; у наведения — свой. | `transparent` |
 | `--sf-avatar-border-width` | Ширина рамки со всех сторон. | `var(--sf-px)` |
@@ -280,12 +280,12 @@ unread" и "new". В имени всегда точное число: при `99
 | `--sf-avatar--border-color` | не задана; задают модификаторы, например `.disabled .sf-avatar`: `transparent` | `outline`, `border-color` |
 | `--sf-avatar--border-inline-end-width` | `var(--sf-avatar-border-width, var(--sf-px))` | `border-inline-end-width` |
 | `--sf-avatar--border-inline-start-width` | `var(--sf-avatar-border-width, var(--sf-px))` | `border-inline-start-width` |
-| `--sf-avatar--border-style` | не задана; задают модификаторы, например `button.sf-avatar:not(:disabled):not(.disabled):hover`: `solid` | `border-style` |
+| `--sf-avatar--border-style` | не задана; задают модификаторы, например `:is(button, a).sf-avatar:not(:disabled):not(.disabled):hover`: `solid` | `border-style` |
 | `--sf-avatar--border-top-left-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-avatar--square-radius))` | `border-start-start-radius` |
 | `--sf-avatar--border-top-right-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-avatar--square-radius))` | `border-start-end-radius` |
 | `--sf-avatar--border-top-width` | `var(--sf-avatar-border-width, var(--sf-px))` | `border-top-width` |
-| `--sf-avatar--border-width` | не задана; задают модификаторы, например `button.sf-avatar:not(:disabled):not(.disabled):hover`: `var(--sf-px)` | `border-width` |
-| `--sf-avatar--color` | не задана; задают модификаторы, например `.sf-avatar--text.sf-hue-red`: `var(--sf-avatar-color, var(--sf-on-hue-container))` | `color` |
+| `--sf-avatar--border-width` | не задана; задают модификаторы, например `:is(button, a).sf-avatar:not(:disabled):not(.disabled):hover`: `var(--sf-px)` | `border-width` |
+| `--sf-avatar--color` | не задана; задают модификаторы, например `.sf-avatar--text:is(.sf-hue-red, .sf-hue-orange, .sf-hue-amber, .sf-hue-yellow, .sf-hue-lime, .sf-hue-green, .sf-hue-teal, .sf-hue-cyan, .sf-hue-sky, .sf-hue-blue, .sf-hue-indigo, .sf-hue-violet, .sf-hue-purple, .sf-hue-pink, .sf-hue-brown, .sf-hue-gray, .sf-hue-primary, .sf-hue-secondary, .sf-hue-tertiary)`: `var(--sf-avatar-color, var(--sf-on-hue-container))` | `color` |
 | `--sf-avatar--font-size` | не задана; задают модификаторы, например `.sf-avatar--size-1`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-avatar--glyph-size` | не задана; задают модификаторы, например `.sf-avatar .sf-icon`: `calc(var(--sf-b2)
       + clamp(var(--sf-a0), (var(--sf-avatar--width) - var(--sf-c2) + var(--sf-a1)) * 1000, var(--sf-a4))

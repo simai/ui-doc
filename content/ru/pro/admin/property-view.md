@@ -5,7 +5,7 @@ description: "Показывает и правит поля одного объ�
 
 # Представление свойств
 
-:badge[sf-view-properties]{variant=outline scheme=on-surface size=1/2} :badge[1.20.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-view-properties]{variant=outline scheme=on-surface size=1/2} :badge[1.23.4]{variant=outline scheme=on-surface size=1/2}
 
 Представление свойств — карточка одного объекта: заказа, товара, профиля,
 настроек сайта. Поля сгруппированы в области, области — в разделы; человек
@@ -42,7 +42,7 @@ Framework: поставляется пакетом `pro` из репозитор
 
 Порт — объект с полями `version`, `capabilities` и методом
 `raise(intent, payload, {signal})`, который возвращает ответ приложения.
-Компонент принимает версии порта от `1.0.0` до `1.14.0`. Передайте порт
+Компонент принимает версии порта от `1.0.0` до `1.22.0`. Передайте порт
 методом `setHostPort` или в ответ на событие `sf-host-port-request`, которое
 компонент отправляет при подключении, пока порта у него нет.
 
@@ -457,7 +457,7 @@ view: {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента пакета `pro` выпуска `pro-a57887949f9a` над выпуском Framework `ui-dc9fc39aeb26` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента пакета `pro` выпуска `pro-d7c4cf661de0` над выпуском Framework `ui-b654460cad2a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -465,7 +465,7 @@ view: {
 |:---|:---|
 | Тег | `<sf-view-properties>` |
 | Назначение | Поля одного объекта по разделам, группам и полям; каждое поле рисует набор рендереров своего типа, данные идут через отдельный порт приложения. Группа редактируется и сохраняется одной ревизией по кнопке, а значение ссылочного поля выбирается из кандидатов элемента постранично. Парный компонент к представлению данных: то показывает набор записей, этот — один объект. |
-| Контракт | `smart.view-properties`, версия `1.20.1` |
+| Контракт | `smart.view-properties`, версия `1.23.4` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -619,8 +619,8 @@ view: {
 
 ### Источник
 
-- `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/view-properties`
-- `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/view-properties/rule.js#name=cl-view-properties`
+- `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/view-properties`
+- `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/view-properties/rule.js#name=cl-view-properties`
 
 ## См. также
 

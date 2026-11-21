@@ -5,7 +5,7 @@ description: "Выбирает ровно одно значение из нес�
 
 # Сегментный переключатель
 
-:badge[sf-segmented]{variant=outline scheme=on-surface size=1/2} :badge[1.6.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-segmented]{variant=outline scheme=on-surface size=1/2} :badge[1.8.1]{variant=outline scheme=on-surface size=1/2}
 
 Сегментный переключатель даёт выбрать ровно одно значение из нескольких и
 сразу его применяет: период отчёта, вид списка, фильтр, тему оформления. У
@@ -423,6 +423,8 @@ Tab на выбранном варианте. Стрелки, Home и End пер
 | `radius` | строка | пусто | пусто, `default`, `square`, `rounded` | Скругление, как у `sf-button`: пусто — скругление элементов управления. На дорожке плашка скруглена как кнопка с тем же значением, а дорожка — на свой отступ больше (`rounded` — обе в форме пилюли). |
 | `orientation` | строка | `horizontal` | `horizontal`, `vertical` | Направление: `horizontal` — кнопки в ряд, `vertical` — столбиком; стрелки на клавиатуре идут так же. |
 | `disabled` | да/нет | нет | — | Вся группа недоступна. |
+| `invalid` | да/нет | нет | — | Показанное состояние ошибки: край группы цветом ошибки (контур дорожки или рамка кнопок) и `aria-invalid` у группы радиокнопок. |
+| `error-message` | строка | пусто | — | Текст под элементом, пока он в состоянии ошибки, цветом ошибки: что не так, как это говорят все поля семейства (`sf-input`, `sf-input-choice`); он описывает родной элемент управления. Без `invalid` ничего не рисуется. |
 | `value` | строка | пусто | — | Значение выбранной кнопки. |
 | `aria-label` | строка | пусто | — | Название группы для экранного диктора. |
 | `items` | список: объект | `[]` | например `[{"value":"list","label":"List","icon":"list"},{"value":"grid","label":"Grid","icon":"grid_view"}]`, `[{"value":"all","label":"Все","count":24},{"value":"light","label":"Светлые","count":17},{"value":"dark","label":"Тёмные","count":7}]` | Кнопки группы списком: у каждой `value`, `label`, по желанию `lang`, `icon`, `count`, `icon-only`, `disabled` и `loading`. |
@@ -457,13 +459,13 @@ Tab на выбранном варианте. Стрелки, Home и End пер
 
 | | |
 |:---|:---|
-| Тег | `<sf-segmented>`, контракт `smart.segmented` версии `1.6.7` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-segmented>`, контракт `smart.segmented` версии `1.8.1` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа переключателей; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `←`, `→`, `↑`, `↓`, `Home`, `End`. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/segmented` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-segmented` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/segmented` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-segmented` |
 
 ### Для разработчика
 

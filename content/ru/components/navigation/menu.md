@@ -6,7 +6,7 @@ profile: reference
 
 # Меню
 
-:badge[sf-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.10.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.10.3]{variant=outline scheme=on-surface size=1/2}
 
 Меню ведёт по разделам сайта, раздела или личного кабинета и раскрывает
 группы вложенных разделов. Один компонент показывается вертикально в боковой
@@ -265,7 +265,7 @@ profile: reference
 |:---|:---|
 | Блок | `sf-menu` |
 | Части | `sf-menu-element`, `sf-menu-element--holds-current`, `sf-menu-element--level-1`, `sf-menu-element--level-2`, `sf-menu-element--level-3`, `sf-menu-element--level-4`, `sf-menu-element-external`, `sf-menu-element-icon`, `sf-menu-element-status`, `sf-menu-element-text`, `sf-menu-element-wrap`, `sf-menu-group-heading`, `sf-menu-group-label`, `sf-menu-item`, `sf-menu-item--group`, `sf-menu-item--has-submenu`, `sf-menu-region`, `sf-menu-region-column`, `sf-menu-region-columns`, `sf-menu-region-foot`, `sf-menu-region-head`, `sf-menu-region-link`, `sf-menu-region-list`, `sf-menu-region-list--small`, `sf-menu-region-small` |
-| Модификаторы | `sf-menu--bordered`, `sf-menu--documentation-tree`, `sf-menu--horizontal`, `sf-menu--indicator-fill`, `sf-menu--navigation`, `sf-menu--rail`, `sf-menu--scroll`, `sf-menu--scrollbar` |
+| Модификаторы | `sf-menu--documentation-tree`, `sf-menu--horizontal` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -301,12 +301,12 @@ profile: reference
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-menu--border-width` | не задана; задают модификаторы, например `.sf-menu.sf-menu--horizontal > .sf-menu-item > .sf-menu`: `var(--sf-px)` | `border-width`, `--sf-menu--line-border`, `--sf-menu-path--block-start`, `--sf-menu-path--block-end` |
-| `--sf-menu--gap` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation`: `var(--sf-menu-gap, var(--sf-space-1/4))` | `gap` |
+| `--sf-menu--gap` | не задана; задают модификаторы, например `.sf-menu:is(.sf-menu--navigation, :where(:not(.sf-menu--framed):not(.sf-menu--documentation-tree):not(.sf-menu .sf-menu)))`: `var(--sf-menu-gap, var(--sf-space-1/4))` | `gap` |
 | `--sf-menu--inset` | не задана; задают модификаторы, например `.sf-menu.sf-menu--horizontal > .sf-menu-item > .sf-menu`: `var(--sf-menu-horizontal-submenu--padding, calc(var(--sf-space-1/4) - var(--sf-px)))` | `padding-top`, `padding-bottom`, `padding-block`, `padding-inline`, `padding-inline-end`, `inset-inline-start`, `--sf-menu-path--block-start`, `--sf-menu-path--block-end` |
 | `--sf-menu--inset-block` | не задана; задают модификаторы, например `.sf-menu.sf-menu--horizontal > .sf-menu-item > .sf-menu`: `var(--sf-menu-horizontal-submenu--padding, var(--sf-space-1/4))` | `padding-top`, `padding-bottom`, `padding-block`, `--sf-menu-path--block-start`, `--sf-menu-path--block-end` |
-| `--sf-menu--line-border` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation.sf-menu--bordered:not(.sf-menu--horizontal):not(.sf-menu-item > .sf-menu)`: `var(--sf-menu--border-width, var(--sf-px))` | `inset-inline-start` |
+| `--sf-menu--line-border` | не задана; задают модификаторы, например `.sf-menu:is(.sf-menu--navigation, :where(:not(.sf-menu--framed):not(.sf-menu--documentation-tree):not(.sf-menu .sf-menu))).sf-menu--bordered:not(.sf-menu--horizontal):not(.sf-menu-item > .sf-menu)`: `var(--sf-menu--border-width, var(--sf-px))` | `inset-inline-start` |
 | `--sf-menu--radius` | не задана; задают модификаторы, например `.sf-menu.sf-menu--horizontal > .sf-menu-item > .sf-menu`: `var(--sf-menu-horizontal-submenu--radius, var(--sf-menu-submenu-radius, var(--sf-radius--surface)))` | `border-radius`, `--sf-menu-path--block-start`, `--sf-menu-path--block-end` |
-| `--sf-menu--row-padding` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation:not(.sf-menu--horizontal)`: `var(--sf-space-1/2)` | `--sf-menu-element--padding-inline-start`, `--sf-menu-element--padding-inline-end`, `padding-inline` |
+| `--sf-menu--row-padding` | не задана; задают модификаторы, например `.sf-menu:is(.sf-menu--navigation, :where(:not(.sf-menu--framed):not(.sf-menu--documentation-tree):not(.sf-menu .sf-menu))):not(.sf-menu--horizontal)`: `var(--sf-space-1/2)` | `--sf-menu-element--padding-inline-start`, `--sf-menu-element--padding-inline-end`, `padding-inline` |
 | `--sf-menu--split-end` | не задана; задают модификаторы, например `.sf-menu-element > button.sf-icon-button`: `min(var(--sf-menu--split-grow) / 2, var(--sf-menu-element--padding-right, var(--sf-menu-element--padding-inline-end, var(--sf-space-1))))` | `margin-inline-start`, `margin-inline-end`, `padding-inline-end`, `margin-inline` |
 | `--sf-menu--split-grow` | не задана; задают модификаторы, например `.sf-menu-element > button.sf-icon-button`: `calc(var(--sf-menu--split-plate) - var(--sf-menu-element--line-height, var(--sf-text-height-1)))` | `--sf-menu--split-end`, `margin-inline-start` |
 | `--sf-menu--split-plate` | не задана; задают модификаторы, например `.sf-menu-element > button.sf-icon-button`: `var(--sf-ui-1--control-height)` | `--sf-menu--split-grow`, `min-width`, `min-inline-size`, `width`, `inline-size`, `height`, `block-size` |
@@ -334,8 +334,8 @@ profile: reference
 | `--sf-menu-group-heading--border-width` | не задана; задают модификаторы, например `.sf-menu-group-heading`: `var(--sf-px)` | `padding-left`, `padding-right`, `padding-inline` |
 | `--sf-menu-item--background-color` | не задана; задают модификаторы, например `.sf-menu .sf-menu-item`: `transparent` | `background-color` |
 | `--sf-menu-item--gap` | не задана; задают модификаторы, например `.sf-menu .sf-menu-item`: `var(--sf-space-1/3)` | `gap` |
-| `--sf-menu-path--block-end` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation.sf-menu--bordered:not(.sf-menu--horizontal):not(.sf-menu-item > .sf-menu) > .sf-menu-item:last-child > .sf-menu-element`: `max(calc(var(--sf-px) * 0), calc(var(--sf-menu--radius, calc(var(--sf-px) * 0)) - var(--sf-menu--inset-block, var(--sf-menu--inset, calc(var(--sf-px) * 0))) - var(--sf-menu--border-width, var(--sf-px))))` | `bottom`, `inset-block` |
-| `--sf-menu-path--block-start` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation.sf-menu--bordered:not(.sf-menu--horizontal):not(.sf-menu-item > .sf-menu) > .sf-menu-item:first-child > .sf-menu-element`: `max(calc(var(--sf-px) * 0), calc(var(--sf-menu--radius-block-start, var(--sf-menu--radius, calc(var(--sf-px) * 0))) - var(--sf-menu--inset-block, var(--sf-menu--inset, calc(var(--sf-px) * 0))) - var(--sf-menu--border-width, var(--sf-px))))` | `top`, `inset-block` |
+| `--sf-menu-path--block-end` | не задана; задают модификаторы, например `.sf-menu:is(.sf-menu--navigation, :where(:not(.sf-menu--framed):not(.sf-menu--documentation-tree):not(.sf-menu .sf-menu))).sf-menu--bordered:not(.sf-menu--horizontal):not(.sf-menu-item > .sf-menu) > .sf-menu-item:last-child > .sf-menu-element`: `max(calc(var(--sf-px) * 0), calc(var(--sf-menu--radius, calc(var(--sf-px) * 0)) - var(--sf-menu--inset-block, var(--sf-menu--inset, calc(var(--sf-px) * 0))) - var(--sf-menu--border-width, var(--sf-px))))` | `bottom`, `inset-block` |
+| `--sf-menu-path--block-start` | не задана; задают модификаторы, например `.sf-menu:is(.sf-menu--navigation, :where(:not(.sf-menu--framed):not(.sf-menu--documentation-tree):not(.sf-menu .sf-menu))).sf-menu--bordered:not(.sf-menu--horizontal):not(.sf-menu-item > .sf-menu) > .sf-menu-item:first-child > .sf-menu-element`: `max(calc(var(--sf-px) * 0), calc(var(--sf-menu--radius-block-start, var(--sf-menu--radius, calc(var(--sf-px) * 0))) - var(--sf-menu--inset-block, var(--sf-menu--inset, calc(var(--sf-px) * 0))) - var(--sf-menu--border-width, var(--sf-px))))` | `top`, `inset-block` |
 
 ## См. также
 

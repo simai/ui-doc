@@ -5,7 +5,7 @@ description: "Принимает текст в несколько строк —
 
 # Многострочное поле
 
-:badge[sf-input-textarea]{variant=outline scheme=on-surface size=1/2} :badge[1.13.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-textarea]{variant=outline scheme=on-surface size=1/2} :badge[1.13.3]{variant=outline scheme=on-surface size=1/2}
 
 Многострочное поле принимает свободный текст в несколько строк: комментарий,
 описание задачи, отзыв, сообщение. Подпись, подсказка и сообщение об ошибке
@@ -309,13 +309,13 @@ details.focus();
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-textarea>`, контракт `smart.input-textarea` версии `1.13.2` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-input-textarea>`, контракт `smart.input-textarea` версии `1.13.3` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как текстовое поле; нужна подпись или `aria-label`; с клавиатуры: `Tab`; обычная правка многострочного текста. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/input-textarea` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-input-textarea` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/input-textarea` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-input-textarea` |
 
 ## См. также
 

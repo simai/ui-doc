@@ -16,9 +16,9 @@ const COLUMNS = [
   {key: 'name', label: 'Проект', role: 'title', sortable: true},
   {key: 'owner', label: 'Ответственный', sortable: true},
   {key: 'status', label: 'Состояние', property_type: 'choice', options: [
-    {value: 'active', label: 'В работе', scheme: 'primary'},
-    {value: 'paused', label: 'Приостановлен', scheme: 'warning'},
-    {value: 'done', label: 'Завершён', scheme: 'success'},
+    {value: 'active', label: 'В работе', color: 'primary'},
+    {value: 'paused', label: 'Приостановлен', color: 'warning'},
+    {value: 'done', label: 'Завершён', color: 'success'},
   ]},
   {key: 'updated_at', label: 'Изменён', property_type: 'datetime', sortable: true},
 ];

@@ -100,7 +100,7 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента пакета `pro` выпуска `pro-a57887949f9a` над выпуском Framework `ui-dc9fc39aeb26` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента пакета `pro` выпуска `pro-d7c4cf661de0` над выпуском Framework `ui-b654460cad2a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -147,8 +147,8 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/chat-interlocutor`
-- `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/chat-interlocutor/rule.js#name=cl-chat-interlocutor`
+- `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/chat-interlocutor`
+- `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/chat-interlocutor/rule.js#name=cl-chat-interlocutor`
 
 ## См. также
 

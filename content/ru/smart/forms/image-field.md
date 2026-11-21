@@ -5,7 +5,7 @@ description: "Даёт выбрать одно изображение: мини�
 
 # Поле изображения
 
-:badge[sf-input-image]{variant=outline scheme=on-surface size=1/2} :badge[1.10.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-image]{variant=outline scheme=on-surface size=1/2} :badge[1.10.6]{variant=outline scheme=on-surface size=1/2}
 
 Поле изображения принимает одно изображение в форме: логотип, обложку,
 фото товара или сотрудника. Оно показывает миниатюру с именем и размером
@@ -295,13 +295,13 @@ logo.addEventListener('sf-input-image-attach', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-image>`, контракт `smart.input-image` версии `1.10.5` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-input-image>`, контракт `smart.input-image` версии `1.10.6` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/input-image` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-input-image` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/input-image` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-input-image` |
 
 ## См. также
 

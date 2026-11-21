@@ -6,7 +6,7 @@ profile: reference
 
 # Контекстное меню
 
-:badge[sf-context-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.18.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-context-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.19.1]{variant=outline scheme=on-surface size=1/2}
 
 Контекстное меню — приподнятая панель с коротким списком действий над
 выбранным объектом: строкой таблицы, файлом, карточкой. Ширина панели
@@ -188,7 +188,7 @@ profile: reference
 | `--sf-context-menu--row-padding` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-space-1/2)` | `--sf-context-menu--inset-start`, `--sf-context-menu--inset-end`, `padding-left`, `padding-right`, `padding-inline` |
 | `--sf-context-menu--row-radius` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-row-radius, var(--sf-radius--ui))` | `border-radius` |
 | `--sf-context-menu--row-step` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `max(var(--sf-context-menu--row-height), var(--sf-d1))` | `padding-top`, `padding-bottom`, `padding-block` |
-| `--sf-context-menu--screen-inline-size` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content[data-sf-width=list]`: `var(--sf-context-menu-available-inline-size, calc(100vi - var(--sf-space-1)))` | `min-width`, `min-inline-size`, `max-width`, `max-inline-size` |
+| `--sf-context-menu--screen-inline-size` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content:is([data-sf-width=list], [data-sf-width=panel], [data-sf-width=form], [data-sf-width=form-wide])`: `var(--sf-context-menu-available-inline-size, calc(100vi - var(--sf-space-1)))` | `min-width`, `min-inline-size`, `max-width`, `max-inline-size` |
 | `--sf-context-menu--space-y` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-ui-1/2--space-y)` | `padding`, `min-width`, `min-inline-size` |
 | `--sf-context-menu--text-size` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-context-menu--thumb` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-scroll-thumb-width)` | `--sf-context-menu--track` |
@@ -203,7 +203,7 @@ profile: reference
 | `--sf-context-menu-content--padding-inline-start` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-padding-inline, var(--sf-space-1/4))` | `--sf-context-menu-content--edge-inline-start` |
 | `--sf-context-menu-content--padding-top` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-padding-block, var(--sf-space-1/4))` | `padding-top`, `min-height`, `min-block-size`, `padding-block`, `margin-top`, `margin-block-start` |
 | `--sf-context-menu-drill--inline-size` | не задана; задают модификаторы, например `.sf-context-menu.sf-context-menu--drill .sf-context-menu-content`: `var(--sf-context-menu-inline-size, var(--sf-popup-menu-max-width))` | `width`, `inline-size`, `max-width`, `max-inline-size` |
-| `--sf-context-menu-item--icon` | не задана; задают модификаторы, например `.sf-context-menu-item:not(:disabled):not(.sf-context-menu-item--disabled):hover`: `currentColor` | `--sf-icon--color` |
+| `--sf-context-menu-item--icon` | не задана; задают модификаторы, например `.sf-context-menu-item:not(:disabled):not(.sf-context-menu-item--disabled):is(:hover, :active, [aria-expanded=true])`: `currentColor` | `--sf-icon--color` |
 | `--sf-context-menu-panel--inline-size` | не задана; задают модификаторы, например `.sf-context-menu.sf-context-menu--panel .sf-context-menu-content`: `max(var(--sf-context-menu-trigger-inline-size, var(--sf-a0)), var(--sf-popup-panel-width))` | `width`, `inline-size` |
 | `--sf-context-menu-switch--direction` | не задана; задают модификаторы, например `.sf-context-menu-item-switch:dir(rtl)`: `-1` | `transform` |
 | `--sf-context-menu-switch--seat` | не задана; задают модификаторы, например `.sf-context-menu-item-switch`: `var(--sf-a2)` | `--sf-context-menu-switch--thumb`, `padding` |

@@ -6,7 +6,7 @@ profile: reference
 
 # Слайдер диапазона
 
-:badge[sf-range-slider]{variant=outline scheme=on-surface size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-range-slider]{variant=outline scheme=on-surface size=1/2} :badge[1.9.1]{variant=outline scheme=on-surface size=1/2}
 
 Слайдер диапазона выбирает одно значение или две границы перетаскиванием ручки
 по шкале. Подходит для приблизительной настройки цены, громкости или

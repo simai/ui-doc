@@ -6,7 +6,7 @@ profile: reference
 
 # Текстовые поля
 
-:badge[sf-input]{variant=outline scheme=on-surface size=1/2} :badge[1.12.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input]{variant=outline scheme=on-surface size=1/2} :badge[1.14.1]{variant=outline scheme=on-surface size=1/2}
 
 Текстовое поле принимает короткое значение в одну строку: имя, адрес почты,
 пароль или поисковый запрос. Для текста с переносами строк берите
@@ -276,7 +276,7 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 |:---|:---|
 | Блок | `sf-input` |
 | Части | `sf-input-count`, `sf-input-count-said`, `sf-input-field`, `sf-input-hint`, `sf-input-hint-text-wrap`, `sf-input-label`, `sf-input-left`, `sf-input-message`, `sf-input-required`, `sf-input-right`, `sf-input-shortcut`, `sf-input-start`, `sf-input-text` |
-| Модификаторы | `sf-input--bordered`, `sf-input--filled`, `sf-input--over`, `sf-input--radius-rounded`, `sf-input--radius-square` |
+| Модификаторы | `sf-input--bordered`, `sf-input--filled`, `sf-input--over`, `sf-input--plain`, `sf-input--radius-rounded`, `sf-input--radius-square` |
 | Размеры | `sf-input--size-1`, `sf-input--size-1/2`, `sf-input--size-1/3`, `sf-input--size-2`, `sf-input--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.

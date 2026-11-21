@@ -5,7 +5,7 @@ description: "Принимает одноразовый код из сообще
 
 # Код подтверждения
 
-:badge[sf-input-code]{variant=outline scheme=on-surface size=1/2} :badge[1.9.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-code]{variant=outline scheme=on-surface size=1/2} :badge[1.9.5]{variant=outline scheme=on-surface size=1/2}
 
 Код подтверждения — поле для одноразового кода из сообщения,
 приложения-генератора или письма: код показан по ячейкам, а с формой уходит
@@ -240,13 +240,13 @@ code.addEventListener('sf-input-code-completed', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-code>`, контракт `smart.input-code` версии `1.9.3` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-input-code>`, контракт `smart.input-code` версии `1.9.5` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Backspace`, `Delete`, `←`, `→`, `Home`, `End`. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/input-code` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-input-code` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/input-code` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-input-code` |
 
 ## См. также
 

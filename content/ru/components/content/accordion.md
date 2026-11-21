@@ -6,7 +6,7 @@ profile: reference
 
 # Аккордеон
 
-:badge[sf-accordion]{variant=outline scheme=on-surface size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-accordion]{variant=outline scheme=on-surface size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Аккордеон раскрывает и скрывает разделы содержимого под их заголовками.
 Берите его, чтобы сократить длинную страницу с независимыми разделами —
@@ -172,8 +172,8 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-accordion` |
-| Части | `sf-accordion-content`, `sf-accordion-heading`, `sf-accordion-lead`, `sf-accordion-summary`, `sf-accordion-title`, `sf-accordion-trigger` |
-| Модификаторы | `sf-accordion--flush`, `sf-accordion--legacy`, `sf-accordion--outline`, `sf-accordion--plus-minus`, `sf-accordion--static` |
+| Части | `sf-accordion-content`, `sf-accordion-group`, `sf-accordion-heading`, `sf-accordion-lead`, `sf-accordion-summary`, `sf-accordion-title`, `sf-accordion-trigger` |
+| Модификаторы | `sf-accordion--flush`, `sf-accordion--legacy`, `sf-accordion--outline`, `sf-accordion--plus-minus`, `sf-accordion--single`, `sf-accordion--static` |
 | Размеры | `sf-accordion--size-1`, `sf-accordion--size-1/2`, `sf-accordion--size-1/3`, `sf-accordion--size-2`, `sf-accordion--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
