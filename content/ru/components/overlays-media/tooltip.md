@@ -145,13 +145,13 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-tooltip-background-color` | Заливка подсказки вместе с хвостиком. | `var(--sf-surface-popup)`; зависит от вида |
-| `--sf-tooltip-color` | Цвет текста и поясняющего текста. | `var(--sf-on-surface)`; зависит от вида |
+| `--sf-tooltip-background-color` | Заливка подсказки вместе с хвостиком. | `var(--sf-surface-inverse)`; зависит от вида |
+| `--sf-tooltip-color` | Цвет текста и поясняющего текста. | `var(--sf-on-surface-inverse)`; зависит от вида |
 | `--sf-tooltip-border-color` | Цвет рамки; его читает каждый вид (тёмный рисует рамку, только когда задана толщина). | `var(--sf-outline-variant)`; зависит от вида |
-| `--sf-tooltip-border-width` | Толщина рамки со всех сторон: тонкая линия у светлого вида, у тёмного рамки нет, пока её не задали. | `var(--sf-px)`; зависит от вида |
+| `--sf-tooltip-border-width` | Толщина рамки со всех сторон: тонкая линия у светлого вида, у тёмного рамки нет, пока её не задали. | `0`; зависит от вида |
 | `--sf-tooltip-radius` | Скругление углов. | `var(--sf-radius--ui)` |
-| `--sf-tooltip-padding-inline` | Отступ до и после текста по строчной оси. | `var(--sf-ui-1--space-x)`; зависит от размера |
-| `--sf-tooltip-padding-block` | Отступ над и под текстом. | `var(--sf-ui-1--space-y-tightness-default)`; зависит от размера |
+| `--sf-tooltip-padding-inline` | Отступ до и после текста по строчной оси. | `var(--sf-a8)`; зависит от размера |
+| `--sf-tooltip-padding-block` | Отступ над и под текстом. | `var(--sf-a4)`; зависит от размера |
 | `--sf-tooltip-gap` | Промежуток между текстом и поясняющим текстом. | `var(--sf-space-1/4)` |
 
 ```css

@@ -204,7 +204,7 @@ profile: reference
 |:---|:---|
 | Блок | `sf-tag` |
 | Части | `sf-tag-action`, `sf-tag-check`, `sf-tag-color-icon`, `sf-tag-color-icon--hue`, `sf-tag-container`, `sf-tag-count` |
-| Модификаторы | `sf-tag--appearance-ghost`, `sf-tag--appearance-outline`, `sf-tag--appearance-surface`, `sf-tag--avatar`, `sf-tag--checkbox`, `sf-tag--color`, `sf-tag--default`, `sf-tag--error`, `sf-tag--height-high`, `sf-tag--height-highest`, `sf-tag--height-low`, `sf-tag--icon`, `sf-tag--info`, `sf-tag--inline`, `sf-tag--interactive`, `sf-tag--line-1`, `sf-tag--line-1/2`, `sf-tag--line-2`, `sf-tag--link`, `sf-tag--removable`, `sf-tag--success`, `sf-tag--warning` |
+| Модификаторы | `sf-tag--appearance-ghost`, `sf-tag--appearance-outline`, `sf-tag--appearance-surface`, `sf-tag--avatar`, `sf-tag--checkbox`, `sf-tag--color`, `sf-tag--default`, `sf-tag--error`, `sf-tag--icon`, `sf-tag--info`, `sf-tag--inline`, `sf-tag--interactive`, `sf-tag--line-1`, `sf-tag--line-1/2`, `sf-tag--line-2`, `sf-tag--link`, `sf-tag--removable`, `sf-tag--success`, `sf-tag--warning` |
 | Размеры | `sf-tag--size-1`, `sf-tag--size-1/2`, `sf-tag--size-1/3`, `sf-tag--size-2`, `sf-tag--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -222,7 +222,7 @@ profile: reference
 | `--sf-tag-radius` | Скругление углов. | `var(--sf-radius--ui)` |
 | `--sf-tag-padding-inline` | Отступ до и после содержимого; метка в строке сохраняет отступы своего хозяина. | `var(--sf-ui-1--space-x)`; зависит от размера |
 | `--sf-tag-padding-block` | Отступ сверху и снизу от содержимого; метка в строке сохраняет отступы своего хозяина. | `var(--sf-ui-1--space-y-tightness-default)`; зависит от размера, spacing |
-| `--sf-tag-gap` | Промежуток между частями метки (каждый размер ставит 0: подпись отделяет её собственная ступень). | `var(--sf-a1)`; зависит от размера |
+| `--sf-tag-gap` | Промежуток между частями метки (каждый размер ставит 0: подпись отделяет её собственная ступень). | `0`; зависит от размера |
 
 ```css
 .sf-tag {
@@ -236,9 +236,9 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-tag--background-color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color`: `var(--sf-tag-background-color, var(--sf-surface-container))` | `background-color` |
+| `--sf-tag--background-color` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3).sf-tag--color`: `var(--sf-tag-background-color, var(--sf-surface-container))` | `background-color` |
 | `--sf-tag--block` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-tag-padding-block, var(--sf-ui-1/3--space-y-tightness-default))` | `padding-top`, `padding-bottom`, `--sf-tag--picture-pad` |
-| `--sf-tag--box-shadow` | не задана; задают модификаторы, например `.sf-tag.sf-tag--appearance-outline.sf-tag--color`: `inset 0 0 0 var(--sf-px) var(--sf-surface-state-select)` | `box-shadow` |
+| `--sf-tag--box-shadow` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--appearance-outline, .sf-tag--appearance-surface):is(.sf-tag--color, .sf-tag--icon, .sf-tag--default, .sf-tag--avatar, .sf-tag--checkbox)`: `inset 0 0 0 var(--sf-px) var(--sf-surface-state-select)` | `box-shadow` |
 | `--sf-tag--close-size` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-micro--cross-1/3)` | `--sf-close-icon--height`, `--sf-close-icon--width` |
 | `--sf-tag--dot` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-micro--point-1/3)` | `--sf-tag-color-icon--height`, `--sf-tag-color-icon--width` |
 | `--sf-tag--edge` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-a8)` | `--sf-tag--inline-start`, `--sf-tag--inline-end` |
@@ -251,32 +251,32 @@ profile: reference
 | `--sf-tag--label-start` | не задана; задают модификаторы, например `.sf-tag.sf-tag--inline.sf-tag--inline`: `0` | `padding-inline-start` |
 | `--sf-tag--line` | не задана; задают модификаторы, например `.sf-tag.sf-tag--line-1/2`: `var(--sf-text-height-1/2)` | `--sf-tag--picture`, `line-height`, `--sf-tag--inline-line`, `min-height`, `min-block-size`, `height`, `block-size`, `width`, `inline-size`, `--sf-avatar--height`, `--sf-avatar--width`, `--sf-avatar--font-size`, `--sf-avatar--line-height` |
 | `--sf-tag--line-height` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-text-height-1/3)` | `--sf-tag--picture`, `line-height`, `min-height`, `min-block-size`, `height`, `block-size`, `width`, `inline-size`, `--sf-avatar--height`, `--sf-avatar--width`, `--sf-avatar--font-size`, `--sf-avatar--line-height` |
-| `--sf-tag--padding-bottom` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-bottom` |
-| `--sf-tag--padding-inline-end` | не задана; задают модификаторы, например `.sf-tag--size-1`: `var(--sf-ui-1--space-x)` | `padding-inline-end` |
-| `--sf-tag--padding-inline-start` | не задана; задают модификаторы, например `.sf-tag--size-1`: `var(--sf-ui-1--space-x)` | `padding-inline-start`, `--sf-tag-container--padding-inline-start` |
-| `--sf-tag--padding-top` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-top`, `--sf-tag--picture-pad` |
+| `--sf-tag--padding-bottom` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3).sf-tag--color`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-bottom` |
+| `--sf-tag--padding-inline-end` | не задана; задают модификаторы, например `:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3)`: `var(--sf-ui-1--space-x)` | `padding-inline-end` |
+| `--sf-tag--padding-inline-start` | не задана; задают модификаторы, например `:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3)`: `var(--sf-ui-1--space-x)` | `padding-inline-start`, `--sf-tag-container--padding-inline-start` |
+| `--sf-tag--padding-top` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3).sf-tag--color`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-top`, `--sf-tag--picture-pad` |
 | `--sf-tag--picture` | `calc(var(--sf-tag--line-height) + 2 * var(--sf-tag--picture-pad) - 2 * var(--sf-space-1/4))` | `--sf-tag--picture`, `--sf-tag--picture-pull`, `--sf-avatar--height`, `--sf-avatar--width`, `--sf-avatar--line-height`, `--sf-tag-color-icon--height`, `--sf-tag-color-icon--width`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `margin-top`, `margin-bottom`, `margin-block` |
 | `--sf-tag--picture-pad` | `var(--sf-tag--block, var(--sf-tag-padding-block, var(--sf-tag--padding-top)))` | `--sf-tag--picture`, `--sf-tag--picture-pull` |
 | `--sf-tag--picture-pull` | `calc(var(--sf-space-1/4) - var(--sf-tag--picture-pad))` | `margin-top`, `margin-bottom`, `margin-block` |
 | `--sf-tag-color-icon--border-radius` | не задана; задают модификаторы, например `.sf-tag.sf-tag--color .sf-tag-color-icon`: `var(--sf-radius-circle)` | `border-radius` |
-| `--sf-tag-color-icon--height` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1 .sf-tag-color-icon`: `var(--sf-text-height-1)` | `height` |
+| `--sf-tag-color-icon--height` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3) .sf-tag-color-icon`: `var(--sf-text-height-1)` | `height` |
 | `--sf-tag-color-icon--opacity` | не задана; задают модификаторы, например `.sf-tag.sf-tag--color.disabled .sf-tag-color-icon`: `var(--sf-opacity-30)` | `opacity` |
-| `--sf-tag-color-icon--width` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1 .sf-tag-color-icon`: `var(--sf-text-height-1)` | `width`, `margin-inline-start` |
+| `--sf-tag-color-icon--width` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3) .sf-tag-color-icon`: `var(--sf-text-height-1)` | `width`, `margin-inline-start` |
 | `--sf-tag-container--background-color` | не задана; задают модификаторы, например `.sf-tag .sf-tag-container`: `transparent` | `background-color` |
 | `--sf-tag-container--color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--color .sf-tag-container`: `var(--sf-tag-color, var(--sf-on-surface))` | `color` |
-| `--sf-tag-container--font-family` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-text--family)` | `font-family` |
-| `--sf-tag-container--font-size` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-text-size-1)` | `font-size` |
-| `--sf-tag-container--font-weight` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-font-weight-regular)` | `font-weight` |
-| `--sf-tag-container--line-height` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-tag-container--padding-inline-end` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-ui-1--space-x)` | `padding-inline-end` |
-| `--sf-tag-container--padding-inline-start` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-ui-1--space-x)` | `padding-inline-start` |
+| `--sf-tag-container--font-family` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3).sf-tag--color .sf-tag-container`: `var(--sf-text--family)` | `font-family` |
+| `--sf-tag-container--font-size` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3).sf-tag--color .sf-tag-container`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-tag-container--font-weight` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3).sf-tag--color .sf-tag-container`: `var(--sf-font-weight-regular)` | `font-weight` |
+| `--sf-tag-container--line-height` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3).sf-tag--color .sf-tag-container`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-tag-container--padding-inline-end` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3).sf-tag--color .sf-tag-container`: `var(--sf-ui-1--space-x)` | `padding-inline-end` |
+| `--sf-tag-container--padding-inline-start` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3).sf-tag--color .sf-tag-container`: `var(--sf-ui-1--space-x)` | `padding-inline-start` |
 | `--sf-tag-count--background-color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--default .sf-tag-count`: `transparent` | `background-color` |
 | `--sf-tag-count--color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--default .sf-tag-count`: `var(--sf-tag-color, var(--sf-on-surface))` | `color` |
-| `--sf-tag-count--font-family` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--default .sf-tag-count`: `var(--sf-text--family)` | `font-family` |
-| `--sf-tag-count--font-size` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--default .sf-tag-count`: `var(--sf-text-size-1)` | `font-size` |
-| `--sf-tag-count--font-weight` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--default .sf-tag-count`: `var(--sf-font-weight-regular)` | `font-weight` |
-| `--sf-tag-count--line-height` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--default .sf-tag-count`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-tag-count--padding-inline-end` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1 .sf-tag-count`: `var(--sf-space-1/3)` | `padding-inline-end` |
+| `--sf-tag-count--font-family` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3).sf-tag--default .sf-tag-count`: `var(--sf-text--family)` | `font-family` |
+| `--sf-tag-count--font-size` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3).sf-tag--default .sf-tag-count`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-tag-count--font-weight` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3).sf-tag--default .sf-tag-count`: `var(--sf-font-weight-regular)` | `font-weight` |
+| `--sf-tag-count--line-height` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3).sf-tag--default .sf-tag-count`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-tag-count--padding-inline-end` | не задана; задают модификаторы, например `.sf-tag:is(.sf-tag--size-1, .sf-tag--size-2, .sf-tag--size-3) .sf-tag-count`: `var(--sf-space-1/3)` | `padding-inline-end` |
 
 ## См. также
 

@@ -6,7 +6,7 @@ profile: reference
 
 # Бейджи
 
-:badge[sf-badge]{variant=outline scheme=on-surface size=1/2} :badge[1.11.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-badge]{variant=outline scheme=on-surface size=1/2} :badge[1.13.0]{variant=outline scheme=on-surface size=1/2}
 
 Бейдж показывает короткий статус, категорию или счётчик рядом с объектом. Он
 дополняет основное содержимое и не заменяет кнопку, фильтр или
@@ -213,8 +213,8 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-badge` |
-| Части | `sf-badge-anchor`, `sf-badge-anchor--round`, `sf-badge-anchor--rounded`, `sf-badge-anchor--size-1`, `sf-badge-anchor--size-1/2`, `sf-badge-anchor--size-1/3`, `sf-badge-anchor--size-2`, `sf-badge-anchor--size-3`, `sf-badge-anchor--square`, `sf-badge-anchored-text`, `sf-badge-icon-container`, `sf-badge-spinner`, `sf-badge-text`, `sf-badge-text-container` |
-| Модификаторы | `sf-badge--anchored`, `sf-badge--disabled`, `sf-badge--dot`, `sf-badge--error`, `sf-badge--figure`, `sf-badge--icon-only`, `sf-badge--info`, `sf-badge--line-1`, `sf-badge--line-1/2`, `sf-badge--line-2`, `sf-badge--line-text`, `sf-badge--main`, `sf-badge--neutral`, `sf-badge--on-surface`, `sf-badge--outline`, `sf-badge--primary`, `sf-badge--secondary`, `sf-badge--success`, `sf-badge--tertiary`, `sf-badge--tight`, `sf-badge--tonal`, `sf-badge--warning` |
+| Части | `sf-badge-anchor`, `sf-badge-anchor--round`, `sf-badge-anchor--rounded`, `sf-badge-anchor--size-1`, `sf-badge-anchor--size-1/2`, `sf-badge-anchor--size-1/3`, `sf-badge-anchor--size-2`, `sf-badge-anchor--size-3`, `sf-badge-anchor--square`, `sf-badge-anchored-text`, `sf-badge-divider`, `sf-badge-icon-container`, `sf-badge-spinner`, `sf-badge-text`, `sf-badge-text-container`, `sf-badge-value` |
+| Модификаторы | `sf-badge--anchored`, `sf-badge--disabled`, `sf-badge--dot`, `sf-badge--figure`, `sf-badge--info`, `sf-badge--line-1`, `sf-badge--line-1/2`, `sf-badge--line-2`, `sf-badge--line-text`, `sf-badge--main`, `sf-badge--neutral`, `sf-badge--on-surface`, `sf-badge--outline`, `sf-badge--primary`, `sf-badge--secondary`, `sf-badge--success`, `sf-badge--tertiary`, `sf-badge--tight`, `sf-badge--tonal`, `sf-badge--warning` |
 | Размеры | `sf-badge--size-1`, `sf-badge--size-1/2`, `sf-badge--size-1/3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -227,15 +227,16 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-badge-background-color` | Заливка бейджа. | `var(--sf-on-surface-variant)`; зависит от вида, схемы, статуса |
-| `--sf-badge-color` | Цвет текста и иконки. | `var(--sf-on-surface-inverse)`; зависит от вида, схемы, статуса |
-| `--sf-badge-border-color` | Цвет рамки; виден при ненулевой ширине рамки. | `transparent`; зависит от вида, схемы, статуса |
+| `--sf-badge-background-color` | Заливка бейджа. | `var(--sf-surface-container)`; зависит от вида, схемы, статуса |
+| `--sf-badge-color` | Цвет текста и иконки. | `var(--sf-on-surface)`; зависит от вида, схемы, статуса |
+| `--sf-badge-border-color` | Цвет рамки; виден, когда задана толщина рамки. В покое по умолчанию — графический цвет тонального края: он рисуется только там, где край просит место (инверсное место), а при толщине по умолчанию 0 не виден. | `var(--sf-on-neutral-container-graphic)`; зависит от вида, схемы, статуса |
 | `--sf-badge-border-width` | Толщина рамки со всех сторон, длина. Рамка рисуется внутри размера бейджа: отступ уступает ей свою ширину, поэтому бейдж одного размера одной высоты с рамкой и без неё. | `0`; зависит от вида |
 | `--sf-badge-radius` | Скругление углов. | `var(--sf-radius-circle)` |
 | `--sf-badge-padding-inline` | Отступ до и после текста: по умолчанию --sf-space-1/2 на любом размере; sf-badge--tight (sf-badge tight) берёт --sf-space-1/3; одна цифра и счётчик на классах берут --sf-space-1/4, чтобы цифра оставалась кругом; бейдж только со значком (sf-badge--icon-only) берёт вертикальный отступ и остаётся квадратом. | `var(--sf-space-1/2)`; зависит от размера, tight |
 | `--sf-badge-padding-block` | Отступ над и под текстом. | `var(--sf-ui-1/3--space-y-tightness-low)`; зависит от размера |
-| `--sf-badge-gap` | Промежуток между иконкой и текстом. | `var(--sf-space-1/4)` |
+| `--sf-badge-gap` | Расстояние между значком и текстом; у значка с именем и значением — расстояние по обе стороны от разделителя, там это `--sf-space-1/3`. | `var(--sf-space-1/4)` |
 | `--sf-badge-ring-color` | Кольцо, которое отделяет бейдж на аватаре, иконке или кнопке-иконке от якоря: цвет поверхности, на которой стоит якорь. Поверхности Framework (меню, списки, шторки, модальные окна, тосты) задают свой; задайте её там, где страница рисует собственную поверхность. | `var(--sf-surface-place)` |
+| `--sf-badge-divider-color` | Разделитель толщиной в один пиксель между именем и значением в одном значке («sf-wizard | 1.5.3»): цвет рамки значка у значка с рамкой, `--sf-outline` у залитого. | `var(--sf-outline)`; зависит от вида, схемы, статуса |
 
 ```css
 .sf-badge {
@@ -260,12 +261,13 @@ profile: reference
 | `--sf-badge--anchored-size` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-badge--anchored-count)` | `height`, `block-size`, `min-height`, `min-block-size`, `min-width`, `min-inline-size`, `line-height` |
 | `--sf-badge--background-color` | `var(--sf-badge-background-color, var(--sf-surface-container))` | `background-image`, `background-color`, `--sf-dot-item--background-color` |
 | `--sf-badge--border-bottom-width` | `var(--sf-badge-border-width, var(--sf-a0))` | `padding-bottom`, `padding-block-end`, `border-bottom-width`, `--sf-badge--line-box` |
-| `--sf-badge--border-color` | `var(--sf-badge-border-color, transparent)` | `border-color` |
+| `--sf-badge--border-color` | `var(--sf-badge-border-color, transparent)` | `--sf-badge--divider-color`, `border-color` |
 | `--sf-badge--border-inline-end-width` | `var(--sf-badge-border-width, var(--sf-a0))` | `padding-inline-end`, `border-inline-end-width` |
 | `--sf-badge--border-inline-start-width` | `var(--sf-badge-border-width, var(--sf-a0))` | `padding-inline-start`, `border-inline-start-width` |
 | `--sf-badge--border-style` | не задана; задают модификаторы, например `.sf-badge--outline`: `solid` | `border-style` |
 | `--sf-badge--border-top-width` | `var(--sf-badge-border-width, var(--sf-a0))` | `padding-top`, `padding-block-start`, `border-top-width`, `--sf-badge--line-box` |
-| `--sf-badge--color` | `var(--sf-badge-color, var(--sf-on-surface))` | `--sf-icon--color`, `--sf-badge-text--color`, `color` |
+| `--sf-badge--color` | `var(--sf-badge-color, var(--sf-on-surface))` | `--sf-badge--value-color`, `--sf-icon--color`, `--sf-badge-text--color`, `--sf-badge--divider-color`, `color` |
+| `--sf-badge--divider-color` | `var(--sf-badge-divider-color, var(--sf-outline))` | `background-color` |
 | `--sf-badge--font-size` | `var(--sf-text-size-1/3)` | `font-size`, `--sf-icon--font-size`, `--sf-badge-text--font-size` |
 | `--sf-badge--gap` | `var(--sf-badge-gap, var(--sf-space-1/4))` | `gap` |
 | `--sf-badge--line-1` | `var(--sf-c2)` | `--sf-badge--line-height` |
@@ -281,6 +283,8 @@ profile: reference
 | `--sf-badge--side-room` | `var(--sf-space-1/2)` | `--sf-badge--padding-inline-end`, `--sf-badge--padding-inline-start` |
 | `--sf-badge--side-tight` | `var(--sf-space-1/3)` | `--sf-badge--side-room` |
 | `--sf-badge--space-y-1` | `var(--sf-a4)` | `--sf-badge--padding-block` |
+| `--sf-badge--tonal-edge` | не задана; задают модификаторы, например `.sf-badge:where(.sf-badge--tonal, .sf-badge--main:not(.sf-badge--error):not(.sf-badge--danger), :not(.sf-badge--main):not(.sf-badge--tonal):not(.sf-badge--outline)):is(.sf-badge--neutral, .sf-badge--on-surface)`: `var(--sf-on-neutral-container-graphic)` | `--sf-badge--border-color` |
+| `--sf-badge--value-color` | `var(--sf-badge-color, var(--sf-badge--color))` | `color` |
 | `--sf-badge-anchor--radius` | не задана; задают модификаторы, например `.sf-badge-anchor`: `var(--sf-radius-square)` | `--sf-badge--anchor-radius` |
 | `--sf-badge-spinner--size` | `var(--sf-text-size-1/3)` | `--sf-loader-svg-width`, `--sf-loader-svg-height`, `width`, `inline-size`, `height`, `block-size` |
 | `--sf-badge-text--color` | не задана; задают модификаторы, например `.sf-badge.sf-badge--tonal .sf-badge-text`: `var(--sf-badge-color, var(--sf-badge--color))` | `color` |

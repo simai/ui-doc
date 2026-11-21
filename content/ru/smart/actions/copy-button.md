@@ -5,7 +5,7 @@ description: "Копирует значение или текст элемент
 
 # Кнопка копирования
 
-:badge[sf-button-copy]{variant=outline scheme=on-surface size=1/2} :badge[1.7.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button-copy]{variant=outline scheme=on-surface size=1/2} :badge[1.7.5]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка копирования кладёт в буфер обмена значение — ключ, команду, ссылку —
 и показывает, что всё получилось: значок на миг становится галочкой, а
@@ -299,13 +299,13 @@ document.addEventListener('sf-button-copy-copied', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-button-copy>`, контракт `smart.button-copy` версии `1.7.4` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-button-copy>`, контракт `smart.button-copy` версии `1.7.5` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/button-copy` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-button-copy` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/button-copy` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-button-copy` |
 
 ## См. также
 

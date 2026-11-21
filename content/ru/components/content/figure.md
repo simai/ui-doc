@@ -149,7 +149,7 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-figure--on` | не задана; задают модификаторы, например `.sf-figure-media:not(:has(> img))`: `var(--sf-style--expressive, 0)` | `background-size` |
+| `--sf-figure--on` | не задана; задают модификаторы, например `.sf-figure-media:not(:has(> :is(img, video, svg, canvas, iframe, picture)))`: `var(--sf-style--expressive, 0)` | `background-size` |
 | `--sf-figure--ramp` | не задана; задают модификаторы, например `.sf-figure.sf-figure--caption-over > .sf-figure-caption`: `calc(var(--sf-space-4) * 4)` | `padding-top`, `padding-block-start`, `background-image` |
 | `--sf-figure--ratio` | не задана; задают модификаторы, например `.sf-figure--ratio-1x1`: `1 / 1` | `aspect-ratio` |
 | `--sf-figure-grid--columns` | не задана; задают модификаторы, например `.sf-figure-grid`: `2` | `grid-template-columns` |

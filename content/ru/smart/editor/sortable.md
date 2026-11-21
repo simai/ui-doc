@@ -5,7 +5,7 @@ description: "Даёт переставлять элементы, перенос
 
 # Перетаскивание
 
-:badge[sf-sortable]{variant=outline scheme=on-surface size=1/2} :badge[1.5.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-sortable]{variant=outline scheme=on-surface size=1/2} :badge[1.7.3]{variant=outline scheme=on-surface size=1/2}
 
 Перетаскивание даёт переставлять элементы списка, переносить их в другие
 списки той же группы и копировать из библиотеки — мышью, пером, касанием и
@@ -253,18 +253,19 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 | `sf-sortable-move` | `{ item: string, from: string, to: string, index: number, mode: "move" \| "copy" }` | Просьба перенести (или скопировать) элемент в место: один ручной перенос, `{id, parent, position}` под именами item, to и index; применяет его приложение. |
 | `sf-sortable-state` | `{ state: "picked" \| "dropped" \| "cancelled", item: string }` | Шаг перетаскивания: взяли, отпустили или отменили. |
 | `sf-sortable-insert` | `{ index: integer, item: string, to: string }` | Просьба вставщика поставить новый элемент палитры в место; отменяемая. |
+| `sf-sortable-check` | `{ item: string, from: string, to: string, reason: string }` | Слово приложения о целевом списке до того, как пункт туда перейдёт (через «Переместить в» у ручки, перетаскивание или клавиши); отменяемое: `preventDefault()` отказывает, `detail.reason` объясняет причину на недоступной строке меню. |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-sortable>`, контракт `smart.sortable` версии `1.5.2` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-sortable>`, контракт `smart.sortable` версии `1.7.3` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; желательна подпись или `aria-label`; с клавиатуры: `Пробел`, `Enter`, `↑`, `↓`, `←`, `→`, `Esc`, `Tab`, `+`, `Home`, `End`. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/sortable` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-sortable` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/sortable` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-sortable` |
 
 ## См. также
 

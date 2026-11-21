@@ -58,10 +58,6 @@
     "sf-avatar-label-group-container": {
       "flexDirection": "column"
     },
-    "sf-badge": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
     "sf-badge-icon-container": {
       "justifyContent": "center",
       "alignItems": "center"
@@ -79,18 +75,6 @@
     "sf-breadcrumbs-item-container": {
       "alignItems": "center"
     },
-    "sf-button": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
-    "sf-button-text-container": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
-    "sf-checkbox-box": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
     "sf-checkbox-container": {
       "flexDirection": "column"
     },
@@ -98,52 +82,16 @@
       "justifyContent": "center",
       "alignItems": "center"
     },
-    "sf-close": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
-    "sf-context-menu-content": {
-      "flexDirection": "column"
-    },
     "sf-country-code": {
       "flexDirection": "column"
     },
-    "sf-country-code-field": {
-      "alignItems": "center"
-    },
-    "sf-country-code-item": {
-      "alignItems": "center"
-    },
     "sf-country-code-left": {
-      "alignItems": "center"
-    },
-    "sf-datepicker": {
-      "flexDirection": "column"
-    },
-    "sf-datepicker-day": {
-      "flexDirection": "column",
-      "alignItems": "center"
-    },
-    "sf-datepicker-text": {
-      "flexDirection": "column",
-      "justifyContent": "center",
       "alignItems": "center"
     },
     "sf-dropdown": {
       "flexDirection": "column"
     },
-    "sf-dropdown-field": {
-      "alignItems": "center"
-    },
     "sf-dropdown-tag-container": {
-      "alignItems": "center"
-    },
-    "sf-fab": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
-    "sf-file-upload": {
-      "flexDirection": "column",
       "alignItems": "center"
     },
     "sf-file-upload-block": {
@@ -153,32 +101,14 @@
       "flexDirection": "column",
       "alignItems": "center"
     },
-    "sf-icon-button": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
     "sf-input": {
       "flexDirection": "column"
     },
-    "sf-input-field": {
+    "sf-link-icon": {
       "alignItems": "center"
-    },
-    "sf-input-right": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
-    "sf-link__icon": {
-      "alignItems": "center"
-    },
-    "sf-list": {
-      "flexDirection": "column",
-      "alignItems": "end"
     },
     "sf-list-container": {
       "flexDirection": "column"
-    },
-    "sf-list-item": {
-      "alignItems": "center"
     },
     "sf-list-item-container": {
       "alignItems": "center"
@@ -197,11 +127,6 @@
     },
     "sf-menu-item": {
       "flexDirection": "column"
-    },
-    "sf-page-number": {
-      "flexDirection": "column",
-      "justifyContent": "center",
-      "alignItems": "center"
     },
     "sf-pagination": {
       "flexDirection": "column",
@@ -246,22 +171,10 @@
     "sf-quantity": {
       "flexDirection": "column"
     },
-    "sf-quantity-wrap": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
-    "sf-radio-button-box": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
     "sf-radio-button-container": {
       "flexDirection": "column"
     },
     "sf-radio-button-text": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
-    "sf-slider-dots": {
       "justifyContent": "center",
       "alignItems": "center"
     },
@@ -272,10 +185,9 @@
     "sf-switch-container-wrap": {
       "flexDirection": "column"
     },
-    "sf-switch-toggler": {
-      "alignItems": "center"
-    },
-    "sf-tag": {
+    "sf-tag--size-2": {
+      "flexDirection": "column",
+      "justifyContent": "center",
       "alignItems": "center"
     },
     "sf-tag-count": {
@@ -286,10 +198,6 @@
     "sf-textarea": {
       "flexDirection": "column"
     },
-    "sf-thumb-handle": {
-      "justifyContent": "center",
-      "alignItems": "center"
-    },
     "sf-toast-bottom": {
       "alignItems": "center"
     },
@@ -297,9 +205,6 @@
       "flexDirection": "column"
     },
     "sf-toast-wrap": {
-      "flexDirection": "column"
-    },
-    "sf-tooltip-content": {
       "flexDirection": "column"
     },
     "sf-tooltip-wrap": {

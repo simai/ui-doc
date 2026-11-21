@@ -34,9 +34,9 @@ description: "Включает привязку прокрутки у конте
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `snap-x` | `scroll-snap-type: x proximity; scroll-snap-type: x var(--sf-snap-strictness, proximity)` | — |
-| `snap-y` | `scroll-snap-type: y proximity; scroll-snap-type: y var(--sf-snap-strictness, proximity)` | — |
-| `snap-both` | `scroll-snap-type: both proximity; scroll-snap-type: both var(--sf-snap-strictness, proximity)` | — |
+| `snap-x` | `scroll-snap-type: x var(--sf-snap-strictness, proximity)` | — |
+| `snap-y` | `scroll-snap-type: y var(--sf-snap-strictness, proximity)` | — |
+| `snap-both` | `scroll-snap-type: both var(--sf-snap-strictness, proximity)` | — |
 | `snap-mandatory` | `--sf-snap-strictness: mandatory` | — |
 | `snap-proximity` | `--sf-snap-strictness: proximity` | — |
 | `snap-none` | `scroll-snap-type: none` | — |

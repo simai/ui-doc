@@ -72,7 +72,7 @@ description: "Рисует кольцо вокруг элемента тенью
             calc(var(--sf-ring--alpha, var(--sf-ring--alfa, 1)) * 100%)
         ),
         0 0 0 var(--sf-ring-offset-width, 0px)
-        var(--sf-ring-offset-color, transparent); box-shadow: var(--sf-ring-shadow), 0 0 transparent; box-shadow: var(--sf-ring-shadow), var(--sf-place-shadow, 0 0 transparent)` | — |
+        var(--sf-ring-offset-color, transparent); box-shadow: var(--sf-ring-shadow), var(--sf-place-shadow, 0 0 transparent)` | — |
 | `ring-2` | `--sf-ring-width: var(--sf-line--indicator); --sf-ring-shadow:
         var(--sf-ring-inset, ) 0 0 0
         calc(var(--sf-ring-width) + var(--sf-ring-offset-width, 0px))
@@ -83,7 +83,7 @@ description: "Рисует кольцо вокруг элемента тенью
             calc(var(--sf-ring--alpha, var(--sf-ring--alfa, 1)) * 100%)
         ),
         0 0 0 var(--sf-ring-offset-width, 0px)
-        var(--sf-ring-offset-color, transparent); box-shadow: var(--sf-ring-shadow), 0 0 transparent; box-shadow: var(--sf-ring-shadow), var(--sf-place-shadow, 0 0 transparent)` | — |
+        var(--sf-ring-offset-color, transparent); box-shadow: var(--sf-ring-shadow), var(--sf-place-shadow, 0 0 transparent)` | — |
 | `ring-0` | `--sf-ring-width: var(--sf-0); --sf-ring-shadow:
         var(--sf-ring-inset, ) 0 0 0
         calc(var(--sf-ring-width) + var(--sf-ring-offset-width, 0px))
@@ -94,7 +94,7 @@ description: "Рисует кольцо вокруг элемента тенью
             calc(var(--sf-ring--alpha, var(--sf-ring--alfa, 1)) * 100%)
         ),
         0 0 0 var(--sf-ring-offset-width, 0px)
-        var(--sf-ring-offset-color, transparent); box-shadow: var(--sf-ring-shadow), 0 0 transparent; box-shadow: var(--sf-ring-shadow), var(--sf-place-shadow, 0 0 transparent)` | — |
+        var(--sf-ring-offset-color, transparent); box-shadow: var(--sf-ring-shadow), var(--sf-place-shadow, 0 0 transparent)` | — |
 
 Прежние имена классов этого модуля и что писать вместо них — в руководстве [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-классов).
 

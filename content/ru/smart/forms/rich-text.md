@@ -5,7 +5,7 @@ description: "Даёт написать текст с заголовками, с
 
 # Форматированный текст
 
-:badge[sf-input-rich]{variant=outline scheme=on-surface size=1/2} :badge[1.10.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-rich]{variant=outline scheme=on-surface size=1/2} :badge[1.10.5]{variant=outline scheme=on-surface size=1/2}
 
 Форматированный текст — поле формы для текста с оформлением: абзацы, заголовки
 второго–четвёртого уровня, полужирный, курсив, ссылки, списки и цитаты, с
@@ -276,13 +276,13 @@ HTML уйдёт с формой.
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-rich>`, контракт `smart.input-rich` версии `1.10.2` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-input-rich>`, контракт `smart.input-rich` версии `1.10.5` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как текстовое поле; нужна подпись или `aria-label`; с клавиатуры: `Tab` ведёт на панель кнопок (одна остановка), затем в текст, а из текста — дальше из поля; `←`, `→`, `Home` и `End` переходят между кнопками панели; `Ctrl/Cmd+B` и `Ctrl/Cmd+I` включают и выключают полужирный и курсив, `Ctrl/Cmd+K` открывает поле ссылки; `Ctrl/Cmd+Z` отменяет, `Ctrl/Cmd+Shift+Z` и `Ctrl/Cmd+Y` повторяют; `Enter` в поле ссылки применяет адрес, `Esc` закрывает поле. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/input-rich` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-input-rich` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/input-rich` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-input-rich` |
 
 ## См. также
 

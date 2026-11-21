@@ -5,7 +5,7 @@ description: "Даёт административному приложению �
 
 # Меню администратора
 
-:badge[sf-admin-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.14.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-admin-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.14.3]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-admin-menu>` — боковая навигация административного приложения: вложенные
 разделы, поиск, компактный режим и настройка порядка и видимости пунктов.
@@ -203,7 +203,7 @@ profile})` фиксирует сохранение, `applySettingsError(error)` 
 
 Порт — объект с полями `port`, `version`, `capabilities` и методом
 `raise(intent, payload)`, который возвращает ответ приложения. Меню принимает
-порт `simai.admin-navigation-port` версии `1.0.0`; другой порт метод
+порт `simai.admin-navigation-port` версий `1.0.0` и `1.1.0`; другой порт метод
 `connectPort` отклоняет с ошибкой.
 
 `capabilities` перечисляет, что приложение умеет. Управление, за которым
@@ -287,7 +287,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента пакета `pro` выпуска `pro-a57887949f9a` над выпуском Framework `ui-dc9fc39aeb26` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента пакета `pro` выпуска `pro-d7c4cf661de0` над выпуском Framework `ui-b654460cad2a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -295,7 +295,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 |:---|:---|
 | Тег | `<sf-admin-menu>` |
 | Назначение | Вложенная навигация администратора с поиском, компактным режимом и редактируемыми личными или системными настройками. |
-| Контракт | `smart.admin-menu`, версия `1.14.1` |
+| Контракт | `smart.admin-menu`, версия `1.14.3` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -396,8 +396,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### Источник
 
-- `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/admin-menu`
-- `simai/ui-pro@a57887949f9a93ec59120c341d935cd0914b8807:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
+- `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/admin-menu`
+- `simai/ui-pro@d7c4cf661de08eee88ada0f292f805bdbd15aab3:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
 
 ## См. также
 

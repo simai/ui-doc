@@ -454,8 +454,25 @@ const retiredEntries = (manifest) => {
     events: pick(Object.entries(manifest.events ?? {}), 'summary'),
   };
 };
+// A deprecated entry still works and is noted in SF.deprecations, but it is the
+// former way («Deprecated until 2027-01-01 (…): the band of bulk choice is
+// sf-bulk-actions…», «Former: the glyph between steps…», «No effect since
+// 1.4.0: …»). It is history, not the current version (D02, D03): it leaves
+// the page for the names guide as the retired ones do.
+const DEPRECATED_PROSE = /^(?:Deprecated|Former|No effect)\b/u;
+const deprecatedEntries = (manifest) => {
+  const pick = (entries, field) => entries
+    .filter(([, entry]) => DEPRECATED_PROSE.test(String(entry?.[field] ?? '')))
+    .map(([name, entry]) => [name, aliasUntil(entry[field])]);
+  return {
+    inputs: pick(Object.entries(manifest.inputs?.properties ?? {}), 'description'),
+    methods: pick(Object.entries(manifest.methods ?? {}), 'summary'),
+    events: pick(Object.entries(manifest.events ?? {}), 'summary'),
+  };
+};
 const isProseAlias = (manifest, kind, name) => proseAliases(manifest)[kind].some(([alias]) => alias === name)
-  || retiredEntries(manifest)[kind].some(([retired]) => retired === name);
+  || retiredEntries(manifest)[kind].some(([retired]) => retired === name)
+  || deprecatedEntries(manifest)[kind].some(([deprecated]) => deprecated === name);
 const collectLegacy = (folder, manifest) => {
   const tag = manifest.custom_element;
   const properties = manifest.inputs?.properties ?? {};
@@ -531,9 +548,14 @@ const collectLegacy = (folder, manifest) => {
   for (const [name, until] of retired.inputs) if (!named(code(name))) rows.add(`| — | ${code(name)} | ${RETIRED_STAGE} | ${until} |`);
   for (const [name, until] of retired.methods) if (!named(code(`${name}()`))) rows.add(`| — | ${code(`${name}()`)} | ${RETIRED_STAGE} | ${until} |`);
   for (const [name, until] of retired.events) if (!named(code(name))) rows.add(`| — | ${code(name)} | ${RETIRED_STAGE} | ${until} |`);
+  const deprecated = deprecatedEntries(manifest);
+  const DEPRECATED_STAGE = 'прежнее: читается для совместимости, отмечается в `SF.deprecations`';
+  for (const [name, until] of deprecated.inputs) if (!named(code(name)) && !prose.inputs.some(([alias]) => alias === name)) rows.add(`| — | ${code(name)} | ${DEPRECATED_STAGE} | ${until} |`);
+  for (const [name, until] of deprecated.methods) if (!named(code(`${name}()`))) rows.add(`| — | ${code(`${name}()`)} | ${DEPRECATED_STAGE} | ${until} |`);
+  for (const [name, until] of deprecated.events) if (!named(code(name))) rows.add(`| — | ${code(name)} | ${DEPRECATED_STAGE} | ${until} |`);
   if (rows.size) legacyByTag.set(tag, [...rows]);
   const aliasInputs = new Set(prose.inputs.map(([name]) => name));
-  const retiredInputs = new Set(retired.inputs.map(([name]) => name));
+  const retiredInputs = new Set([...retired.inputs, ...deprecated.inputs].map(([name]) => name));
   return {current: inputs.filter(([name]) => !legacyNames.has(name) && !unlisted.includes(name) && !aliasInputs.has(name) && !datedSettings.has(name) && !retiredInputs.has(name))};
 };
 

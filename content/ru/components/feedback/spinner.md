@@ -6,7 +6,7 @@ profile: reference
 
 # Спиннер
 
-:badge[sf-loader]{variant=outline scheme=on-surface size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-loader]{variant=outline scheme=on-surface size=1/2} :badge[1.5.2]{variant=outline scheme=on-surface size=1/2}
 
 Спиннер показывает, что операция выполняется, когда процент завершения
 неизвестен. Если процент известен, берите

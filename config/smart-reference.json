@@ -42,7 +42,8 @@
     "theme-generator": "Leaving until 2027-01-01 (C84): sf-input-color variant=\"brand\" and variant=\"theme\" replace it; its page folded into smart/forms/color.md (DEV decision 2026-11-15), the old address redirects there. Its former names stay in the «Прежние имена» guide.",
     "display-settings": "No page yet (repin to ui-1ed6b6c9a040): the component is in the release and not described in the documentation; its page comes with its own docs pass, not with a repin.",
     "form": "No page yet (repin to ui-1ed6b6c9a040): the component is in the release and not described in the documentation; its page comes with its own docs pass, not with a repin.",
-    "tag-group": "No page yet (repin to ui-1ed6b6c9a040): the component is in the release and not described in the documentation; its page comes with its own docs pass, not with a repin."
+    "tag-group": "No page yet (repin to ui-1ed6b6c9a040): the component is in the release and not described in the documentation; its page comes with its own docs pass, not with a repin.",
+    "bulk-actions": "No page yet (repin to ui-b654460cad2a): the component is in the release and not described in the documentation; its page comes with its own docs pass, not with a repin. The list and pagination pages name it where a choice of rows shows its bar."
   },
   "suppress": {
     "popover": {

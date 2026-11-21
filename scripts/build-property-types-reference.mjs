@@ -134,7 +134,9 @@ const view = {true: 'есть', false: 'нет'};
 const own = {own: 'своё', text: 'текстовый'};
 const rows = PROPERTY_TYPES.map((entry) => {
   const modes = modesOf(entry.type, maps);
-  const variants = (entry.variants ?? []).map((variant) => `${code(variant.id)} — ${variant.label.ru}`).join(', ') || '—';
+  // The templates (C302): the field's `template`, the default one marked;
+  // `variants` is the registry's former list (image-card for image_card).
+  const variants = (entry.templates ?? []).map((one) => `${code(one.id)} — ${one.label.ru}${one.default ? ' (по умолчанию)' : ''}`).join(', ') || '—';
   const params = (entry.params ?? []).map(code).join(', ') || '—';
   return `| ${code(entry.type)} | ${entry.label.ru} | ${variants} | ${params} | ${view[modes.view]} | ${view[modes.edit]} | ${own[modes.cell]} | ${own[modes.filter]} |`;
 });
@@ -150,7 +152,7 @@ const section = `${heading}
 функция, и «текстовый», когда её нет: ячейка показывает значение как есть, а
 фильтр ищет по тексту.
 
-| Тип | Название | Варианты | Параметры | Просмотр | Правка | Ячейка | Фильтр |
+| Тип | Название | Шаблоны | Параметры | Просмотр | Правка | Ячейка | Фильтр |
 |:---|:---|:---|:---|:---|:---|:---|:---|
 ${rows.join('\n')}
 

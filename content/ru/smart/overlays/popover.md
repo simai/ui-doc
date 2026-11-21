@@ -5,7 +5,7 @@ description: "Открывает небольшую панель у кнопки
 
 # Всплывающая панель
 
-:badge[sf-popover]{variant=outline scheme=on-surface size=1/2} :badge[1.7.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-popover]{variant=outline scheme=on-surface size=1/2} :badge[1.10.3]{variant=outline scheme=on-surface size=1/2}
 
 Всплывающая панель открывается рядом с кнопкой: фильтр, настройки поля, список
 того, что можно добавить. Она закрывается по `Escape` и нажатию снаружи и
@@ -143,6 +143,7 @@ popover.addEventListener('sf-popover-closed', () => {
 | `surface-role` | строка | `dialog` | `dialog`, `menu`, `listbox`, `group` | Чем поверхность является для читателя: dialog, menu, listbox или group. Задаётся на sf-popover; поверхность получает role, а триггер — aria-haspopup. |
 | `unsaved` | да/нет | нет | — | — |
 | `open` | да/нет | нет | — | Показана ли поверхность. Отражается в атрибуте, поэтому потребитель может читать и задавать его. |
+| `anchor` | объект | `null` | — | Элемент, рядом с которым встаёт поверхность, вместо триггера: чип, заголовок столбца, ячейка — любой элемент управления. Когда поверхность закрывается, фокус возвращается к нему, а нажатие на него при открытой поверхности её закрывает (`reason` `close`). Без него поверхность встаёт рядом с хостом и его триггером. Только свойство. |
 
 #### Общие для всех компонентов
 
@@ -178,12 +179,12 @@ popover.addEventListener('sf-popover-closed', () => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-popover>`, контракт `smart.popover` версии `1.7.3` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-popover>`, контракт `smart.popover` версии `1.10.3` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/popover` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-popover` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/popover` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-popover` |
 
 ## См. также
 

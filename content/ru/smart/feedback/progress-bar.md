@@ -5,7 +5,7 @@ description: "Показывает известный ход процесса с
 
 # Прогресс
 
-:badge[sf-progress-bar]{variant=outline scheme=on-surface size=1/2} :badge[1.5.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-bar]{variant=outline scheme=on-surface size=1/2} :badge[1.5.6]{variant=outline scheme=on-surface size=1/2}
 
 Прогресс показывает ход процесса, у которого известна доля выполненного:
 загрузка файла, импорт, проверка. Когда доля неизвестна, берите
@@ -188,13 +188,13 @@ upload.addEventListener('load', () => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-progress-bar>`, контракт `smart.progress-bar` версии `1.5.4` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-progress-bar>`, контракт `smart.progress-bar` версии `1.5.6` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как индикатор прогресса; нужна подпись или `aria-label`. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/progress-bar` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-progress-bar` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/progress-bar` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-progress-bar` |
 
 ## См. также
 

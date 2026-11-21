@@ -5,7 +5,7 @@ description: "Показывает набор материалов слайде�
 
 # Галерея
 
-:badge[sf-gallery]{variant=outline scheme=on-surface size=1/2} :badge[1.5.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-gallery]{variant=outline scheme=on-surface size=1/2} :badge[1.5.4]{variant=outline scheme=on-surface size=1/2}
 
 Галерея показывает упорядоченный набор материалов — изображения, карточки,
 макеты — слайдером на странице и в окне на весь экран, и оба вида держат одно
@@ -202,13 +202,13 @@ current, total, open}`; `SF.Gallery.close()` закрывает его, а
 
 | | |
 |:---|:---|
-| Тег | `<sf-gallery>`, контракт `smart.gallery` версии `1.5.2` |
-| Поставка | выпуск Framework `ui-dc9fc39aeb26` |
+| Тег | `<sf-gallery>`, контракт `smart.gallery` версии `1.5.4` |
+| Поставка | выпуск Framework `ui-b654460cad2a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как список; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`, `←`, `→`, `Home`, `End`, `Esc`. |
-| Источник | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/smart/gallery` |
-| Правило классов | `simai/ui@dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74:distr/rule/rule.json#name=cl-gallery` |
+| Источник | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/smart/gallery` |
+| Правило классов | `simai/ui@b654460cad2ac1ffe146261f6c301be334d8e24d:distr/rule/rule.json#name=cl-gallery` |
 
 ## См. также
 

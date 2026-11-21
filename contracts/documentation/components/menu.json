@@ -3,16 +3,16 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "1dd18375cbc23cf3392576d2e046fde52a047060",
-    "core_revision": "dc9fc39aeb266bbd8fd2486f21da50d7d1d85d74",
+    "source_revision": "049a2ba3dc7d35cbec5c95eb495fab71eddac6f2",
+    "core_revision": "b654460cad2ac1ffe146261f6c301be334d8e24d",
     "source_files": {
       "src/component/menu/js/_menu.js": "0c366df3fcd9abd4fb7061cf03c4a12c26f9f303a61ec0f67b683086abe0d62f",
-      "src/component/menu/scss/_css__menu.scss": "a98e6e282eeb909787fa58685c36c319e80168935c9534ec9908d1cf4d8f8299",
+      "src/component/menu/scss/_css__menu.scss": "20aeb7d108d4621a614c5b77720b8b013de9e296dc7493b67dfb1805ed7dc7b0",
       "src/component/menu/scss/_css__menu_compact.scss": "8a7dbcaac751175df1581785a84a7ab71c7451259086b84400492ad59799f4a8",
       "src/component/menu/docs/docs.md": "ca15659ca1b160c625476c721e59b2324beac49856843dc0673b213a6713e2b4"
     },
     "generated_files": {
-      "distr/component/menu/css/menu.css": "d53101c97001e50c2bb23d124583f151e9262f33602227ec77101fff0d2642f8",
+      "distr/component/menu/css/menu.css": "60a3a1572bcb750abc8eb351ace19046f5101d5b7887f16a591cf8fbd93d8ecb",
       "distr/component/menu/js/menu.js": "05a7c63b1eeca736a8ee5a08ca82c7bdcb361d7b93807a443b640910dd9d3f81"
     }
   },
@@ -51,7 +51,7 @@
       ".sf-menu.sf-menu--horizontal",
       ".sf-menu.sf-menu--documentation-tree",
       "inset-inline-start: 100%",
-      ".sf-menu.sf-menu--rail"
+      ".sf-menu:is(.sf-menu--rail, .sf-menu--compact)"
     ],
     "distr/component/menu/js/menu.js": [
       "closeHorizontalSiblings",
