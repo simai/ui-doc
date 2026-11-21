@@ -66,7 +66,7 @@ description: "Отбор списка по нескольким признака
 | Панель | [Шторка](/ru/smart/overlays/drawer/) | `modal="false"` `placement="inline-end"` `size="1/2"`, `heading="Фильтры"` |
 | Признак из нескольких | [Флажок](/ru/smart/forms/checkbox/) | в `fieldset` с `legend` |
 | Признак из одного | [Радиокнопки](/ru/smart/forms/radio/) | в `fieldset`, первый вариант — «Любая» |
-| Цена «от – до» | [Слайдер диапазона](/ru/smart/forms/range-slider/) | `field`, `label="Цена, ₽"`, `root-class="measure-narrow"`: два поля «от» и «до» под дорожкой поровну и в панели во весь экран телефона, единица — в подписи; `lower-label`, `upper-label` |
+| Цена «от – до» | [Слайдер диапазона](/ru/smart/forms/range-slider/) | `field`, `label="Цена, ₽"`, в блоке `measure-narrow`: два поля «от» и «до» под дорожкой поровну и в панели во весь экран телефона, единица — в подписи; `lower-label`, `upper-label` |
 | Ответы панели | [Кнопка](/ru/smart/actions/buttons/) | «Показать N заказов» — вид по умолчанию, число пересчитывается при каждом выборе; «Сбросить» — `appearance="ghost"` `scheme="on-surface"` |
 | Выбранные фильтры | [Тег](/ru/smart/content/tags/) | `kind="default"` `closable`, `close-label` с названием; за ними «Сбросить все» `appearance="ghost"` `size="1/2"` |
 | Ничего не подошло | [Пустое состояние](/ru/smart/feedback/empty-state/) | в слоте `empty` списка, `kind="nothing-found"`, действие «Сбросить фильтры» |
@@ -107,7 +107,7 @@ description: "Отбор списка по нескольким признака
 4. Применённые фильтры — над списком: sf-tag kind="default" closable с close-label, затем sf-button appearance="ghost" scheme="on-surface" size="1/2" «Сбросить все». Нет фильтров — ряда нет.
 5. Ничего не подошло — sf-empty-state slot="empty" kind="nothing-found" с действием «Сбросить фильтры».
 6. Панель может перенести своё содержимое: ищите поля в момент события, слушатели — на document.
-7. Цена — sf-slider-range field label="Цена, ₽" lower-label="Цена от" upper-label="Цена до": с root-class="measure-narrow" поля «от» и «до» встают под дорожкой в любой панели, и во весь экран телефона; единицу пишите в подписи, а не в suffix. Цена, отличная от краёв, — тег «до 5 000 ₽». -->
+7. Цена — sf-slider-range field label="Цена, ₽" lower-label="Цена от" upper-label="Цена до": в блоке class="measure-narrow" поля «от» и «до» встают под дорожкой в любой панели, и во весь экран телефона; единицу пишите в подписи, а не в suffix. Цена, отличная от краёв, — тег «до 5 000 ₽». -->
 <div data-sf-overlay-container data-sf-density="compact">
   <div class="flex flex-wrap gap-2 items-cross-center">
     <sf-input root-class="flex-1 min-w-0" input-type="search" icon-start="search" placeholder="Номер или покупатель" aria-label="Поиск по заказам"></sf-input>
@@ -132,7 +132,7 @@ description: "Отбор списка по нескольким признака
         <sf-radio name="delivery" value="any" label="Любая" checked></sf-radio>
         <sf-radio name="delivery" value="courier" label="Курьером"></sf-radio>
       </fieldset>
-      <sf-slider-range label="Цена, ₽" root-class="measure-narrow" min="0" max="20000" step="500" value="0,20000" field lower-label="Цена от" upper-label="Цена до" name="price"></sf-slider-range>
+      <div class="measure-narrow"><sf-slider-range label="Цена, ₽" min="0" max="20000" step="500" value="0,20000" field lower-label="Цена от" upper-label="Цена до" name="price"></sf-slider-range></div>
       <div class="flex flex-wrap gap-2">
         <sf-button id="filters-apply" text="Показать 3 заказа"></sf-button>
         <sf-button id="filters-clear" appearance="ghost" scheme="on-surface" text="Сбросить"></sf-button>

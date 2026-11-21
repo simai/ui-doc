@@ -25,7 +25,9 @@
         <sf-radio name="delivery" value="courier" label="Курьером"></sf-radio>
         <sf-radio name="delivery" value="pickup" label="Самовывоз"></sf-radio>
       </fieldset>
-      <sf-slider-range id="filters-price" root-class="measure-narrow" label="Цена, ₽" min="0" max="20000" step="500" value="0,20000" field lower-label="Цена от" upper-label="Цена до" name="price"></sf-slider-range>
+      <div class="measure-narrow">
+        <sf-slider-range id="filters-price" label="Цена, ₽" min="0" max="20000" step="500" value="0,20000" field lower-label="Цена от" upper-label="Цена до" name="price"></sf-slider-range>
+      </div>
       <div class="flex flex-wrap gap-2">
         <sf-button id="filters-apply" text="Показать заказы"></sf-button>
         <sf-button id="filters-clear" appearance="ghost" scheme="on-surface" text="Сбросить"></sf-button>
