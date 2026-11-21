@@ -678,6 +678,14 @@ id?}` значит «перестать ждать», а `wait` принимае
 | событие `sf-file-upload-retry` | `sf-file-upload:retry` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-file-upload-attach` | `sf-file-upload:select` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
+#### `<sf-form>`
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `groups="layout"` | `groups="structure"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `fields[].width="short"` | `fields[].width="s"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `fields[].width="medium"` | `fields[].width="m"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+
 #### `<sf-gallery>`
 
 | Имя | Прежнее имя | Состояние | Убирается после |

@@ -3895,10 +3895,6 @@
       "to": "ru/components/tools/swiper"
     },
     {
-      "from": "ru/components/feedback/progress-ring",
-      "to": "ru/smart/feedback/progress-ring"
-    },
-    {
       "from": "ru/pro/chat/thread-list",
       "to": "ru/pro/chat/chat-threads"
     },

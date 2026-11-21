@@ -214,6 +214,13 @@
         "sf-progress-bar"
       ]
     },
+    "components/feedback/progress-ring.md": {
+      "kind": "component",
+      "component": "progress-ring",
+      "blocks": [
+        "sf-progress-ring"
+      ]
+    },
     "components/feedback/progress-scale.md": {
       "kind": "component",
       "component": "progress-scale",
@@ -523,6 +530,10 @@
       "kind": "smart"
     },
     "smart/content/tags.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/content/tag-group.md": {
       "kind": "smart",
       "standard": 3
     },
@@ -1991,6 +2002,18 @@
       "standard": 3
     },
     "smart/actions/confirm-change.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/actions/bulk-actions.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/forms/form.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/navigation/display-settings.md": {
       "kind": "smart",
       "standard": 3
     },
