@@ -98,21 +98,18 @@ profile: reference
 нижнем конечном углу кнопку, показывает её после прокрутки страницы больше
 чем на 200 пикселей и по нажатию возвращает страницу к началу (без анимации
 при системной настройке уменьшения движения). Параметры: `icon` (по
-умолчанию `chevron_left`, повёрнутая стрелка), `size`, `type`, `scheme`;
-`attrs` переносятся на кнопку. Задайте кнопке `aria-label`, например «Наверх».
-Событий компонент не отправляет.
+умолчанию `arrow_upward`, стрелка вверх), `size`, `type`, `scheme`;
+`attrs` переносятся на кнопку. Без `aria-label` кнопка называется словом
+«Наверх» на языке страницы. Событий компонент не отправляет.
 
 `SF.Loader` появляется к событию `sf-loader-init` на `window`;
 `SF.Loader.ready('Fab', callback)` передаёт класс, когда он зарегистрирован.
+Прокрутите текст в примере: кнопка появится в его нижнем углу. Код — на
+вкладке JavaScript; вторая его часть нужна только рамке документации,
+которая сама не прокручивается.
 
-```js
-const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener('sf-loader-init', run, {once: true}));
-
-whenLoader(() => SF.Loader.ready('Fab', (Fab) => {
-  const fab = new Fab({attrs: {'aria-label': 'Наверх'}});
-  document.body.append(fab.render());
-}));
-```
+:::example {id="components/fab/back-to-top" label="Кнопка «Наверх»"}
+:::
 
 ## Классы
 
