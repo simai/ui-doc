@@ -172,6 +172,10 @@ const initialize = async () => {
       return {answer: 'unavailable', reason: 'unknown-intent'};
     },
   });
+  // The star asks; the page keeps favourites and answers by setting favourite.
+  view.addEventListener('sf-property-view-favourite', (event) => {
+    view.favourite = Boolean(event.detail.favourite);
+  });
   view.addEventListener('sf-property-view-close', (event) => {
     if (event.detail.unsaved_fields > 0 && !window.confirm('Закрыть? Введённое не будет сохранено.')) return;
     view.hidden = true;
