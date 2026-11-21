@@ -2,7 +2,9 @@
 // button counts what it will show before it is pressed, the chosen filters
 // stay above the list as tags that remove one each, and «Сбросить» clears
 // them all. Nothing is applied until «Показать». The price is a range: in a
-// narrow panel the slider puts its two boxes «от» and «до» under the track.
+// panel the slider puts its two boxes «от» and «до» under the track
+// (narrower than 26rem). measure-narrow keeps it that narrow in a panel as
+// wide as a phone too, so the boxes stay under the track on every screen.
 const orders = [
   {id: 'o1', text: 'Заказ 1042 · Анна Белова', supporting: '3 490 ₽ · Курьером', icon: 'receipt_long', status: 'new', delivery: 'courier', price: 3490},
   {id: 'o2', text: 'Заказ 1041 · Пётр Ильин', supporting: '12 900 ₽ · Самовывоз', icon: 'receipt_long', status: 'paid', delivery: 'pickup', price: 12900},
