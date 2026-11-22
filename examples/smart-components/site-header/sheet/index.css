@@ -1,0 +1,4 @@
+/* Место под открытую панель в рамке примера. */
+.page-site-header-room {
+  min-block-size: var(--sf-g2);
+}

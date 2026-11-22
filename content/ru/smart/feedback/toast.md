@@ -96,6 +96,12 @@ toast.onAction((action) => {
 toast.onClose(() => console.log('Сообщение закрыто'));
 ```
 
+В примере «Вернуть» возвращает удалённый файл в список, пока сообщение на
+экране.
+
+:::example {id="smart-components/toast/undo" label="Отмена удаления" preview=sandbox log="sf-toast-action sf-toast-close" log_console=true log_open=true}
+:::
+
 `closable="false"` убирает кнопку закрытия; закрыть такое сообщение может
 только таймер или метод `close()`.
 

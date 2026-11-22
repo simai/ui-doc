@@ -13,6 +13,10 @@ description: "Показывает долю выполненного кольц�
 [Прогресс](/ru/smart/feedback/progress-bar/), а там, где сказать можно только
 «идёт работа», — [Спиннер](/ru/smart/feedback/spinner/).
 
+То же на классах — [Кольцо прогресса](/ru/components/feedback/progress-ring/):
+элемент строится на классах этого компонента; классы годятся для статической
+разметки без JavaScript.
+
 ## Пример
 
 :::example {id="smart-components/progress-ring/overview" label="Загрузка файлов"}
@@ -109,6 +113,9 @@ for (const [index, file] of files.entries()) {
 ring.setAttribute('status', 'success');
 ring.setAttribute('value-text', 'Файлы загружены');
 ```
+
+:::example {id="smart-components/progress-ring/upload" label="Файл за файлом" preview=sandbox}
+:::
 
 ### Кольцо вокруг картинки
 

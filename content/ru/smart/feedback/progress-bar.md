@@ -127,6 +127,12 @@ upload.addEventListener('load', () => {
 });
 ```
 
+В примере загрузка ненастоящая: она так же сообщает `progress` и `load`, а
+полоса получает их через `chunk()`.
+
+:::example {id="smart-components/progress-bar/upload" label="Ход загрузки" preview=sandbox}
+:::
+
 ## Доступность
 
 - С `meter` полоса — `role="meter"`: экранный диктор читает её как объём.

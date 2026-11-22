@@ -1,0 +1,12 @@
+<div class="flex flex-col gap-2">
+  <div class="flex flex-wrap gap-2">
+    <sf-button id="accordion-open-price" text="Открыть «Цены»" appearance="outline"></sf-button>
+    <sf-button id="accordion-toggle-stock" text="Переключить «Склад»" appearance="outline"></sf-button>
+  </div>
+  <sf-accordion id="accordion-from-code" items='[
+    {"id":"main","title":"Основное","content":"Название, описание и раздел каталога.","open":true},
+    {"id":"price","title":"Цены","content":"Базовая цена, скидка и валюта."},
+    {"id":"stock","title":"Склад","content":"Остаток, резерв и место хранения."}
+  ]'></sf-accordion>
+  <p class="m-0 text-1/2 color-on-surface-variant" id="accordion-from-code-state" role="status">Адрес секции: #main</p>
+</div>

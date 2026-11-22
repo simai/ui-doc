@@ -118,6 +118,9 @@ alert.onClose(() => saveDismissed('delivery-warning'));
 `onAction(handler)` передаёт обработчику значение действия, `detail` и само
 событие; `onClose(handler)` — `detail` и событие.
 
+:::example {id="smart-components/alert/actions" label="Действие и закрытие" preview=sandbox log="sf-alert-action sf-alert-close" log_open=true}
+:::
+
 ### Создание из скрипта
 
 ```js

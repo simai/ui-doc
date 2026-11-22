@@ -1,0 +1,12 @@
+<div class="flex flex-col gap-2 p-3 radius-3 bg-surface-container max-w-measure-52">
+  <p class="m-0 text-1/2 color-on-surface-variant">Сообщение от бота поддержки</p>
+  <p class="m-0">Оцените, пожалуйста, ответ оператора.</p>
+  <sf-form id="form-survey" label="Оценка ответа" apply="answer" size="1/2">
+    <script type="application/json" data-sf-settings>
+      {"fields": [
+        {"key": "score", "label": "Оценка", "propertyType": "choice", "required": true,
+         "options": [{"value": "5", "label": "Отлично"}, {"value": "4", "label": "Хорошо"}, {"value": "2", "label": "Плохо"}]},
+        {"key": "comment", "label": "Комментарий", "propertyType": "string"}]}
+    </script>
+  </sf-form>
+</div>

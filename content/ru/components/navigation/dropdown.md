@@ -246,11 +246,8 @@ profile: reference
 `item`, `root` и `multiple`. Снятие тега крестиком отправляет то же событие
 с пустыми `value`, `label` и `item: null`.
 
-```js
-document.querySelector('.sf-dropdown').addEventListener('change', (event) => {
-  console.log(event.detail.values);
-});
-```
+:::example {id="components/dropdown/change" label="Город и срок доставки" preview=sandbox log="change" log_open=true}
+:::
 
 ## Классы
 

@@ -99,10 +99,8 @@ description: "Показывает известный ход процесса ш
 Меняйте `value`: шкала обновляется без перерисовки. Текущее значение
 читайте из `value`.
 
-```js
-const scale = document.querySelector('sf-progress-scale');
-scale.setAttribute('value', String(completedSteps * 20));
-```
+:::example {id="smart-components/progress-scale/steps" label="Шаги профиля" preview=sandbox}
+:::
 
 ## Доступность
 

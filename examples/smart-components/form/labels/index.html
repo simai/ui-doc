@@ -1,0 +1,24 @@
+<div class="flex flex-col gap-4">
+  <div class="flex flex-col gap-2">
+    <span class="text-1/2 color-on-surface-variant">top</span>
+    <sf-form label="Профиль" labels="top">
+      <script type="application/json" data-sf-settings>
+        {"fields": [
+          {"key": "name", "label": "Имя", "propertyType": "string", "required": true},
+          {"key": "email", "label": "Почта", "propertyType": "string", "hint": "На неё придёт письмо для входа"}],
+         "value": {"name": "Анна Ким", "email": "anna@example.ru"}}
+      </script>
+    </sf-form>
+  </div>
+  <div class="flex flex-col gap-2">
+    <span class="text-1/2 color-on-surface-variant">start</span>
+    <sf-form label="Профиль" labels="start">
+      <script type="application/json" data-sf-settings>
+        {"fields": [
+          {"key": "name", "label": "Имя", "propertyType": "string", "required": true},
+          {"key": "email", "label": "Почта", "propertyType": "string", "hint": "На неё придёт письмо для входа"}],
+         "value": {"name": "Анна Ким", "email": "anna@example.ru"}}
+      </script>
+    </sf-form>
+  </div>
+</div>

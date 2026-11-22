@@ -1,0 +1,11 @@
+<sf-form id="form-delivery" label="Доставка">
+  <script type="application/json" data-sf-settings>
+    {"fields": [
+      {"key": "delivery", "label": "Доставка", "propertyType": "choice", "required": true,
+       "options": [{"value": "pickup", "label": "Самовывоз"}, {"value": "courier", "label": "Курьером"}]},
+      {"key": "address", "label": "Адрес", "propertyType": "string",
+       "when": {"visible": {"field": "delivery", "op": "eq", "value": "courier"},
+                "required": {"field": "delivery", "op": "eq", "value": "courier"}}}],
+     "value": {"delivery": "pickup"}}
+  </script>
+</sf-form>

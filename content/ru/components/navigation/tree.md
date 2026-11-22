@@ -229,15 +229,11 @@ Enter раскрывает ветвь или активирует лист; пр
 `sf-loader-init` на `window`, а `SF.Loader.ready('Tree', callback)` вызывает
 `callback`, когда скрипт загружен.
 
-```js
-const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener('sf-loader-init', run, {once: true}));
+В примере кнопки раскрывают и сворачивают ветвь из кода, а Enter на файле
+отправляет `sf-tree-open`, и страница называет открытый файл.
 
-whenLoader(() => SF.Loader.ready('Tree', () => {
-  const tree = document.querySelector('#files');
-  tree.addEventListener('sf-tree-open', (event) => console.log(event.detail.value));
-  SF.Tree.open(tree.querySelector('.sf-tree-item'));
-}));
-```
+:::example {id="components/tree/open" label="Дерево из кода" preview=sandbox log="sf-tree-toggle sf-tree-open" log_open=true}
+:::
 
 ## Классы
 

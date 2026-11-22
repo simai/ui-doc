@@ -124,6 +124,12 @@ crumbs.onItemClick((item) => {
 });
 ```
 
+В примере пункты пути заданы через `value` без `href`, а маленький роутер
+страницы показывает выбранный раздел без перезагрузки.
+
+:::example {id="smart-components/breadcrumbs/router" label="Переход без перезагрузки" preview=sandbox log="sf-breadcrumbs-press" log_open=false}
+:::
+
 ## Доступность
 
 - Корень — ориентир `nav` с доступным именем. На русской странице имя по

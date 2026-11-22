@@ -193,11 +193,10 @@ Tab или нажмите на него.
 :::example {id="components/quantity/reset" label="Сброс формы"}
 :::
 
-```js
-document.querySelector('input[name="places"]').addEventListener('change', (event) => {
-  updateTotal(event.target.value);
-});
-```
+В примере страница пересчитывает сумму заказа по событию `change`.
+
+:::example {id="components/quantity/total" label="Сумма по количеству" preview=sandbox log="change" log_open=false}
+:::
 
 Компонент регистрирует класс `Quantity`. `SF.Loader` появляется к событию
 `sf-loader-init` на `window`; `SF.Loader.ready('Quantity', callback)` передаёт

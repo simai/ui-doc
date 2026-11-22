@@ -256,10 +256,11 @@ basis-60` растёт и начинает с доли строки. Кнопк�
 подсказки возвращает приложение. После изменения `value` поле получает
 всплывающее событие `input`.
 
-```js
-const field = document.querySelector('input[name="email"]');
-SF.Input.setState(field, {invalid: true, errorMessage: 'Укажите рабочую почту'});
-```
+В примере страница проверяет адрес и показывает ошибку в подсказке поля, а
+вторая кнопка меняет значение из кода.
+
+:::example {id="components/inputs/set-state" label="Состояние поля из кода" preview=sandbox log="input" log_open=false}
+:::
 
 Функция возвращает `false`, если внутри оболочки нет input.
 

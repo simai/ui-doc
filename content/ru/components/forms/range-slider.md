@@ -176,10 +176,11 @@ profile: reference
 | `sf-range-slider-set`, `sf-range-slider-change` | значение установлено |
 | `change` | значение установил человек; `setValue` его не создаёт |
 
-```js
-const slider = document.querySelector('.sf-range-slider');
-slider.addEventListener('change', (event) => applyFilter(event.detail.value));
-```
+В примере страница фильтрует проекты по бюджету, когда человек отпускает
+ручку.
+
+:::example {id="components/range-slider/change" label="Фильтр по бюджету" preview=sandbox log="change sf-range-slider-end" log_open=false}
+:::
 
 `SF.RangeSlider` управляет слайдером из кода:
 

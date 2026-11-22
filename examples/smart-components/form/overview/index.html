@@ -1,0 +1,16 @@
+<div class="flex flex-col gap-2">
+  <sf-form id="form-button" label="Кнопка в письме">
+    <script type="application/json" data-sf-settings>
+      {"groups": [{"key": "content", "label": "Содержимое"}, {"key": "look", "label": "Оформление"}],
+       "fields": [
+         {"key": "text", "label": "Текст", "propertyType": "string", "required": true, "group": "content", "hint": "Не длиннее 30 знаков"},
+         {"key": "url", "label": "Ссылка", "propertyType": "string", "required": true, "group": "content"},
+         {"key": "tone", "label": "Тон", "propertyType": "choice", "width": "medium", "group": "look",
+          "options": [{"value": "accent", "label": "Акцент"}, {"value": "quiet", "label": "Тихая"}]},
+         {"key": "radius", "label": "Скругление, px", "propertyType": "number", "decimals": 0, "width": "short", "min": 0, "max": 24,
+          "help": "Только для залитой кнопки", "group": "look"}],
+       "value": {"text": "Подробнее", "url": "https://simai.io", "tone": "accent", "radius": 8}}
+    </script>
+  </sf-form>
+  <p class="m-0 text-1/2 color-on-surface-variant" id="form-button-saved" role="status"></p>
+</div>

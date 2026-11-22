@@ -92,13 +92,8 @@ description: "Показывает набор материалов слайде�
 `event.detail` приходят `current` и `total`, а у `change` ещё `previous` и
 `from` — откуда пришла смена: `inline`, `lightbox` или `api`.
 
-```js
-const gallery = document.querySelector('sf-gallery');
-gallery.addEventListener('change', (event) => {
-  counter.textContent = `${event.detail.current} из ${event.detail.total}`;
-});
-gallery.open(3);
-```
+:::example {id="components/gallery/counter" label="Счётчик материалов" preview=sandbox log="change sf-gallery-opened sf-gallery-closed" log_open=false}
+:::
 
 Вложенные слайдеры не хранят своего положения: не исправляйте его через их
 API, а вызывайте методы галереи. `getInlineSlider()`, `getLightboxSlider()`
@@ -119,6 +114,12 @@ const viewer = SF.Gallery.view([
 ], {start: 1, opener: document.activeElement});
 viewer.next();
 ```
+
+В примере ссылки на файлы открывают просмотр с нужного материала, а фокус
+после закрытия возвращается на ссылку.
+
+:::example {id="components/gallery/viewer" label="Просмотр списка файлов" preview=sandbox}
+:::
 
 `SF.Gallery.view(items, options)` открывает просмотр (или показывает новые
 материалы в открытом) и возвращает `{close(), goTo(n), next(), prev(),

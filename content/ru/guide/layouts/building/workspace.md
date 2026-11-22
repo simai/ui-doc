@@ -111,3 +111,11 @@ workspace.layout;         // 'narrow', 'split' или 'wide'
 - `sf-workspace-view` — `detail: {view}`, когда изменился показанный вид;
 - `sf-workspace-panel` — `detail: {open}`, когда панель открылась или
   закрылась, но не когда она только перешла из колонки в положение поверх.
+
+В примере кнопки вызывают `show()` и `panel()`, строка под рабочей областью
+читает `view`, `panelOpen` и `layout`, журнал показывает события. Сузьте
+пример кнопкой размера: на узкой ширине виден один экран, а панель выезжает
+поверх.
+
+:::example {id="guide/workspace/script" label="Рабочая область из скрипта" preview=sandbox log="sf-workspace-view sf-workspace-panel" log_open=true}
+:::

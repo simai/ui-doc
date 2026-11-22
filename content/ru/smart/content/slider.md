@@ -156,13 +156,8 @@ SIMAI Framework: цветовые роли, отступы и радиусы з�
 `realIndex` — номер слайда без учёта копий, которые добавляет `loop`.
 `refresh()` пересчитывает раскладку после изменения размеров контейнера.
 
-```js
-const slider = document.querySelector('sf-slider');
-slider.addEventListener('change', (event) => {
-  counter.textContent = `${event.detail.realIndex + 1} из 3`;
-});
-slider.slideNext();
-```
+:::example {id="smart-components/slider/from-code" label="Листание из кода" preview=sandbox log="change" log_open=false}
+:::
 
 ## Доступность
 

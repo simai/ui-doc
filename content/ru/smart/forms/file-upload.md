@@ -275,6 +275,13 @@ async function store(item) {
 повтора называет файл: человек читает, почему не получилось, и нажимает
 «Повторить», чтобы отправить тот же файл ещё раз.
 
+В примере у рамки документации нет IndexedDB, поэтому `put()` держит файлы
+в памяти; остальное — как в коде выше. Включите «Хранилище переполнено»,
+выберите файл, затем выключите переключатель и нажмите «Повторить».
+
+:::example {id="smart-components/file-upload/browser-import" label="Импорт без сервера" preview=sandbox log="sf-file-upload-attached sf-file-upload-retry sf-file-upload-detach" log_open=true}
+:::
+
 ## Доступность
 
 - Зона — кнопка с одной остановкой `Tab`; `Enter` или `Space` открывают

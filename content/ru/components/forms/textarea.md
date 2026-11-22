@@ -250,10 +250,11 @@ profile: reference
 и прежний текст подсказки возвращает приложение. После изменения `value`
 поле получает событие `input`.
 
-```js
-const field = document.querySelector('textarea[name="comment"]');
-SF.Textarea.setState(field, {error: true, errorMessage: 'Добавьте не менее десяти символов'});
-```
+В примере страница проверяет длину комментария при отправке и снимает
+ошибку, когда текста становится достаточно.
+
+:::example {id="components/textarea/set-state" label="Ошибка из кода" preview=sandbox}
+:::
 
 Функция возвращает `false`, если внутри оболочки нет `<textarea>`.
 

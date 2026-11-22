@@ -43,9 +43,15 @@ Loader: функции темы появляются вместе с `SF.Loader`
 
 ## Пример
 
-Тему этой документации ведёт сам сайт, поэтому в примерах Loader темой не
-управляет. Переключатель на классах, который работает на любой странице с
-Loader:
+Тему этой документации ведёт сам сайт, а в примере ниже Loader управляет
+темой своей рамки: кнопки вызывают `setTheme` и `changeTheme`, строка под
+ними читает `theme` и `themePreference`, журнал показывает
+`sf-theme-change`. Рамка без cookie, поэтому выбор держится до перезагрузки.
+
+:::example {id="guide/functions/theme" label="Тема из скрипта" theme_switch=true log_console=true}
+:::
+
+Переключатель на классах, который работает на любой странице с Loader:
 
 ```html
 <button type="button" class="sf-theme-button" data-theme="system">Как в системе</button>
