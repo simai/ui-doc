@@ -1,12 +1,118 @@
-<div class="flex flex-col gap-3">
-  <div class="flex flex-wrap items-cross-center content-main-between gap-2 p-2 radius-2 bg-surface-container">
-    <span class="text-2">Городская библиотека</span>
+<div class="flex flex-col gap-4 query-container">
+  <div class="p-1 bg-surface-container border-bottom-1 border-outline-variant">
     <sf-display-settings label="Версия для слабовидящих"></sf-display-settings>
   </div>
-  <div class="flex flex-col gap-2">
-    <h2 class="text-3 m-0">Часы работы</h2>
-    <p class="m-0">Читальный зал открыт по будням с 10 до 20 часов, в субботу — с 11 до 17. Книги выдают по <a href="#library-card">читательскому билету</a>.</p>
-    <p class="m-0" id="library-card">Билет оформляют за пять минут по паспорту.</p>
-    <p class="m-0 text-1/2 color-on-surface-variant" id="display-settings-said" role="status"></p>
+
+  <sf-header-site>
+    <a slot="brand" href="#library-top"><span class="weight-medium">Библиотека на Садовой</span></a>
+    <nav aria-label="Разделы сайта">
+      <a href="#library-news">Новости</a>
+      <a href="#library-events">Мероприятия</a>
+      <a href="#library-hours">Часы работы</a>
+      <a href="#library-form">Запись</a>
+    </nav>
+  </sf-header-site>
+
+  <sf-breadcrumbs id="library-top" aria-label="Путь к странице" items='[{"label":"Главная","href":"#library-top"},{"label":"Читателям","href":"#library-news"},{"label":"Весенняя программа"}]'></sf-breadcrumbs>
+
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-4 items-center">
+    <div class="flex flex-col gap-2 min-w-0">
+      <h2 class="text-5 m-0">Весенняя программа библиотеки</h2>
+      <p class="text-2 m-0 color-on-surface-variant">Лекции, клубы и мастерские для взрослых и детей. Вход свободный, на мастерские — по записи.</p>
+      <div class="flex flex-wrap gap-1 items-center">
+        <sf-button appearance="default" scheme="primary" text="Записаться" icon-start="edit_calendar"></sf-button>
+        <sf-button appearance="outline" text="Все мероприятия"></sf-button>
+        <sf-button appearance="ghost" text="Скачать афишу" icon-start="download"></sf-button>
+        <sf-button-icon icon="share" aria-label="Поделиться"></sf-button-icon>
+        <sf-button appearance="default" scheme="primary" text="Мест нет" disabled></sf-button>
+      </div>
+    </div>
+    <img class="w-full h-auto radius-surface" width="320" height="180" alt="Читальный зал: стеллажи с книгами и лампа" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23f3c86b'/%3E%3Crect y='120' width='320' height='60' fill='%238a5a2b'/%3E%3Crect x='20' y='20' width='60' height='100' fill='%232e6bd6'/%3E%3Crect x='90' y='20' width='60' height='100' fill='%23d63c5a'/%3E%3Crect x='160' y='20' width='60' height='100' fill='%232e9e6b'/%3E%3Crect x='230' y='20' width='70' height='100' fill='%237a4bd6'/%3E%3Ccircle cx='260' cy='150' r='14' fill='%23fff3c4'/%3E%3C/svg%3E">
   </div>
+
+  <sf-alert status="info" heading="С 1 марта читальный зал открыт до 21:00" supporting-text="По пятницам — до 19:00, в последний четверг месяца санитарный день."></sf-alert>
+
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-4">
+    <div class="flex flex-col gap-2 min-w-0" id="library-news">
+      <h3 class="text-3 m-0">Клуб «Читаем вслух» набирает вторую группу</h3>
+      <p class="m-0 text-1/2 color-on-surface-variant">12 марта · 3 минуты чтения</p>
+      <p class="m-0">Встречи проходят по субботам в 12:00 в малом зале; книги на сезон выбирают вместе. Расписание — в разделе <a href="#library-events">«Мероприятия»</a>.</p>
+      <ul class="m-0">
+        <li>до 12 человек в группе;</li>
+        <li>книги выдаём на весь сезон;</li>
+        <li>для детей от 10 лет — с родителями.</li>
+      </ul>
+      <blockquote class="m-0 p-1 bg-surface-container border-inline-start-4 border-primary">«Библиотека — место, где тишину охраняют вместе». <span class="color-on-surface-variant">— из книги отзывов</span></blockquote>
+      <div class="flex flex-wrap gap-1">
+        <sf-badge appearance="tonal" scheme="primary" text="Клуб"></sf-badge>
+        <sf-badge appearance="tonal" scheme="tertiary" text="Новинка"></sf-badge>
+        <sf-badge appearance="tonal" status="success" text="Места есть"></sf-badge>
+        <sf-badge appearance="tonal" status="warning" text="Осталось 3"></sf-badge>
+        <sf-badge appearance="tonal" status="error" text="Отменено"></sf-badge>
+        <sf-tag kind="default" text="Классика"></sf-tag>
+      </div>
+    </div>
+    <div class="flex flex-col gap-2 min-w-0">
+      <sf-alert status="success" heading="Заявка принята" supporting-text="Письмо с подтверждением придёт в течение часа."></sf-alert>
+      <sf-alert status="warning" heading="Верните книги до 30 марта" supporting-text="После срока начисляется пеня 5 ₽ в день."></sf-alert>
+      <sf-alert status="error" heading="Мастерская 15 марта отменена" supporting-text="Новую дату сообщим письмом."></sf-alert>
+      <div class="flex flex-wrap gap-2 items-center">
+        <sf-icon icon="menu_book" label="Книги" size="2"></sf-icon>
+        <sf-icon icon="event" label="Афиша" size="2"></sf-icon>
+        <sf-icon icon="accessible" label="Доступная среда" size="2"></sf-icon>
+        <sf-icon icon="favorite" filled label="Избранное" size="2"></sf-icon>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-col-1 cq-sm:grid-col-2 gap-2" id="library-events">
+    <article class="sf-card">
+      <img class="w-full h-auto radius-surface" width="320" height="180" alt="Обложки книг на полке" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23cfe3ff'/%3E%3Crect x='30' y='30' width='40' height='130' fill='%23d63c5a'/%3E%3Crect x='75' y='45' width='40' height='115' fill='%23f3a33b'/%3E%3Crect x='120' y='25' width='40' height='135' fill='%232e9e6b'/%3E%3Crect x='165' y='55' width='40' height='105' fill='%237a4bd6'/%3E%3Crect x='210' y='35' width='40' height='125' fill='%232e6bd6'/%3E%3C/svg%3E">
+      <h4><a href="#library-event-maps">Лекция «Как читать старые карты»</a></h4>
+      <p class="color-on-surface-variant">14 марта, 18:30, большой зал.</p>
+    </article>
+    <article class="sf-card">
+      <img class="w-full h-auto radius-surface" width="320" height="180" alt="Шахматная доска" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23e8e2d4'/%3E%3Cg fill='%23333'%3E%3Crect x='80' y='20' width='35' height='35'/%3E%3Crect x='150' y='20' width='35' height='35'/%3E%3Crect x='115' y='55' width='35' height='35'/%3E%3Crect x='185' y='55' width='35' height='35'/%3E%3Crect x='80' y='90' width='35' height='35'/%3E%3Crect x='150' y='90' width='35' height='35'/%3E%3Crect x='115' y='125' width='35' height='35'/%3E%3Crect x='185' y='125' width='35' height='35'/%3E%3C/g%3E%3C/svg%3E">
+      <h4><a href="#library-event-chess">Шахматный клуб</a></h4>
+      <p class="color-on-surface-variant">Каждый вторник, 17:00, малый зал.</p>
+    </article>
+  </div>
+
+  <div class="overflow-x-auto" id="library-hours">
+    <table class="border-collapse w-full">
+      <thead>
+        <tr><th scope="col" class="p-1 text-start color-on-surface-variant">Отдел</th><th scope="col" class="p-1 text-start color-on-surface-variant">Будни</th><th scope="col" class="p-1 text-start color-on-surface-variant">Суббота</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="p-1">Абонемент</td><td class="p-1">10:00–20:00</td><td class="p-1">11:00–17:00</td></tr>
+        <tr><td class="p-1">Читальный зал</td><td class="p-1">10:00–21:00</td><td class="p-1">11:00–18:00</td></tr>
+        <tr><td class="p-1">Архив</td><td class="p-1">по записи</td><td class="p-1">закрыт</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <form class="grid grid-col-1 cq-md:grid-col-2 gap-2" id="library-form" onsubmit="return false">
+    <sf-input label="Имя и фамилия" value="Мария Иванова"></sf-input>
+    <sf-input label="Телефон" placeholder="+7 900 000-00-00"></sf-input>
+    <sf-input label="Почта" input-type="email" value="maria@" invalid error-message="Введите адрес целиком, например maria@example.com"></sf-input>
+    <sf-dropdown label="Мастерская" placeholder="Выберите мастерскую">
+      <sf-list-item value="comics" text="Комикс для детей"></sf-list-item>
+      <sf-list-item value="maps" text="Старые карты"></sf-list-item>
+    </sf-dropdown>
+    <div class="flex flex-col gap-1">
+      <sf-checkbox label="Согласен с правилами библиотеки" checked></sf-checkbox>
+      <sf-switch label="Напомнить за день" checked></sf-switch>
+    </div>
+    <div class="flex flex-col gap-1" role="radiogroup" aria-label="Время">
+      <sf-radio name="library-time" value="am" label="Утро, 11:00" checked></sf-radio>
+      <sf-radio name="library-time" value="pm" label="Вечер, 18:00"></sf-radio>
+    </div>
+  </form>
+
+  <pre class="m-0 p-1 bg-surface-container radius-surface overflow-x-auto text-1/2"><code>&lt;script src="https://library.example/afisha.js"&gt;&lt;/script&gt;</code></pre>
+
+  <footer class="p-2 bg-surface-container color-on-surface-variant">
+    <p class="m-0">Библиотека на Садовой · ул. Садовая, 12 · <a href="#library-phone">+7 (495) 000-00-00</a></p>
+    <p class="m-0 text-1/2" id="display-settings-said" role="status"></p>
+  </footer>
 </div>
