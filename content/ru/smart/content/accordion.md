@@ -145,6 +145,14 @@ faq.addEventListener('sf-accordion-toggle', (event) => {
 faq.open(location.hash.slice(1));
 ```
 
+В примере кнопки вызывают `open()` и `toggle()`, а строка под секциями
+показывает адрес открытой секции: у рамки примера своего адреса нет, и
+браузер не даёт ей `replaceState`. Журнал показывает, кто открыл секцию:
+`user` или `method`.
+
+:::example {id="smart-components/accordion/from-code" label="Секции из кода" preview=sandbox log="sf-accordion-toggle" log_open=true}
+:::
+
 ## Доступность
 
 - Шапка каждой секции — кнопка внутри заголовка уровня `heading-level`

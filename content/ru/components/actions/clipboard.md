@@ -141,11 +141,11 @@ profile: reference
 | `sf:copy-success` | значение записано в буфер | `method` — `native` или `legacy`; `text` — скопированный текст |
 | `sf:copy-error` | значение не записано | `code` — `missing_source`, `missing_target`, `ambiguous_source`, `empty_source` или `denied` (браузер не дал записать) |
 
-```js
-document.addEventListener('sf:copy-success', (event) => {
-  console.log('Скопировано:', event.detail.text);
-});
-```
+В примере страница слушает оба события и пишет под кнопкой, что
+скопировано или почему не получилось.
+
+:::example {id="components/clipboard/events" label="События копирования" preview=sandbox log="sf:copy-success sf:copy-error" log_open=true}
+:::
 
 Компонент регистрирует класс `Copy`, который собирает кнопку из параметров
 (`text`, `copy`, `done`, `error`, `label`, `size`, `type`, `scheme`).

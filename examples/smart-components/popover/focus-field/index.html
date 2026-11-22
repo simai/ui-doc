@@ -1,0 +1,14 @@
+<div class="flex flex-col gap-2 items-cross-start">
+  <sf-popover id="popover-focus-field" label="Поиск по задачам" placement="bottom-start">
+    <sf-button slot="trigger" appearance="outline" scheme="on-surface" icon-start="search" text="Найти задачу"></sf-button>
+    <div slot="content" class="flex flex-col gap-1 p-2">
+      <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col"><span class="sf-input-label flex"><span class="sf-input-text">Слово из названия</span></span><span class="sf-input-field items-cross-center transition flex"><input type="search" name="query"></span></label>
+    </div>
+  </sf-popover>
+  <ul class="flex flex-col gap-1/2 m-0 p-inline-start-3" id="popover-focus-list">
+    <li>Подготовить договор с поставщиком</li>
+    <li>Согласовать макет главной страницы</li>
+    <li>Перенести архив заказов</li>
+    <li>Обновить прайс-лист</li>
+  </ul>
+</div>

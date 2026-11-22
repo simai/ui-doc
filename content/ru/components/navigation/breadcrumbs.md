@@ -149,11 +149,8 @@ profile: reference
 `preventDefault()` оставляет путь свёрнутым, например чтобы показать скрытые
 уровни в своём меню.
 
-```js
-document.querySelector('.sf-breadcrumbs').addEventListener('sf-breadcrumb-click', (event) => {
-  console.log(event.detail.item.hiddenItems.map((item) => item.textContent.trim()));
-});
-```
+:::example {id="components/breadcrumbs/hidden-items" label="Скрытые уровни" preview=sandbox log="sf-breadcrumb-click" log_open=true}
+:::
 
 ## Классы
 

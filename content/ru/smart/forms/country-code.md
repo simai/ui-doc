@@ -181,6 +181,9 @@ phone.addEventListener('change', () => {
 phone.setState({iso2: 'KZ'});
 ```
 
+:::example {id="components/country-code/smart-state" label="Номер и страна из кода" preview=sandbox log="change" log_open=false}
+:::
+
 ## Доступность
 
 - Задайте видимую подпись в `label`: компонент связывает её с полем номера.

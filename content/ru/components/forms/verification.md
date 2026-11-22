@@ -145,11 +145,8 @@ profile: reference
 `verification:complete`; `detail.value` — введённый код. Форму компонент не
 отправляет: это решает приложение.
 
-```js
-document.addEventListener('verification:complete', (event) => {
-  checkCode(event.detail.value);
-});
-```
+:::example {id="components/verification/complete" label="Проверка кода" preview=sandbox log="verification:complete" log_open=true}
+:::
 
 `SF.Verification` даёт три функции; `target` — оболочка или любой элемент
 внутри неё:

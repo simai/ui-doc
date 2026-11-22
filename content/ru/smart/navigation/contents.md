@@ -224,6 +224,13 @@ contents.addEventListener('sf-contents-change', ({detail}) => {
 });
 ```
 
+В примере разделы прокручиваются в своём блоке, а строка под ним собирает
+прочитанные разделы по `sf-contents-change` — так их получила бы
+аналитика.
+
+:::example {id="smart-components/contents/change" label="Смена раздела" preview=sandbox log="sf-contents-change" log_open=false}
+:::
+
 ### Переход к разделу и адрес
 
 Выбранная ссылка плавно прокручивает страницу к разделу (без плавности, если

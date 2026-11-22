@@ -174,13 +174,8 @@ profile: reference
 `SF.Loader.ready('Tabs', callback)` вызывает `callback`, когда скрипт
 загружен.
 
-```js
-const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener('sf-loader-init', run, {once: true}));
-
-whenLoader(() => SF.Loader.ready('Tabs', () => {
-  SF.Tabs.activate(document.querySelector('#project-tabs'), 2);
-}));
-```
+:::example {id="components/tabs/activate" label="Вкладка из кода" preview=sandbox}
+:::
 
 ## Классы
 

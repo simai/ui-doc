@@ -1,0 +1,7 @@
+/* Рамка рабочей области: её высота — место под список, разговор и панель. */
+.page-workspace-frame {
+  block-size: var(--sf-g0);
+  border: var(--sf-px) solid var(--sf-outline-variant);
+  border-radius: var(--sf-radius--ui);
+  overflow: hidden;
+}

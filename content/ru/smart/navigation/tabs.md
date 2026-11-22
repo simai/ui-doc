@@ -280,17 +280,20 @@ tabs.setItems([
 ### Переключение из кода
 
 `goTo(index)` открывает вкладку по номеру в объявленном списке, считая с нуля, — и после того, как человек переставил вкладки; на недоступную вкладку он не переключает.
-При переключении элемент отправляет всплывающее событие `sf-tabs-change` с
+Он отвечает исходом — `{outcome: 'applied'}` или `{outcome: 'refused', reason}`
+— и события не отправляет: `sf-tabs-change` сообщает о том, что сделал
+человек. Когда вкладку переключает человек, элемент отправляет всплывающее
+событие `sf-tabs-change` с
 `detail.previous`, `detail.current`, `detail.item` и `detail.items`.
 `previous` и `current` — номера в объявленном списке, `item` — пункт
 целиком, с `key`, `label` и `count`. `onTabChange(handler)` подписывается на
 событие и передаёт обработчику номер новой вкладки первым аргументом.
 
-```js
-const tabs = document.querySelector('sf-tabs');
-tabs.onTabChange((current) => console.log('Открыта вкладка', current));
-tabs.goTo(2);
-```
+В примере кнопка вызывает `goTo(2)` и показывает его исход, а щелчок по
+вкладке приходит в `onTabChange`.
+
+:::example {id="components/tabs/smart-go-to" label="Вкладка из кода" preview=sandbox log="sf-tabs-change" log_open=true}
+:::
 
 Если вкладку нужно хранить не в `#`, а в параметре адреса, её пишут в
 адрес по `key` и читают обратно. Стрелки переключают вкладки на каждое

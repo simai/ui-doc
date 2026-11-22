@@ -1,0 +1,11 @@
+<div class="flex flex-col gap-2">
+  <sf-gallery id="gallery-counter" title="Галерея проекта" text="Выбранное изображение" thumbs="false" dots="true">
+    <figure slot="slide"><img src="assets/place-01-16x9-label.svg" alt="Холмы и солнце над долиной"><figcaption>Долина</figcaption></figure>
+    <figure slot="slide"><img src="assets/place-02-16x9-label.svg" alt="Город у подножия холмов"><figcaption>Город</figcaption></figure>
+    <figure slot="slide"><img src="assets/place-03-16x9-label.svg" alt="Озеро между холмами"><figcaption>Озеро</figcaption></figure>
+  </sf-gallery>
+  <div class="flex flex-wrap gap-2 items-cross-center">
+    <sf-button id="gallery-counter-open" text="Открыть озеро" appearance="outline"></sf-button>
+    <span id="gallery-counter-value" role="status">1 из 3</span>
+  </div>
+</div>

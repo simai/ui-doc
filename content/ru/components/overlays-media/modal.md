@@ -165,11 +165,12 @@ const modal = new Modal({
 `modal:before-content-upload` и `modal:after-content-upload` — вокруг загрузки
 содержимого. `detail` несёт `modal`, `id` и `isOpen`.
 
-```js
-document.addEventListener('modal:before-close', (event) => {
-  if (event.detail.id === 'edit-profile' && formHasChanges()) event.preventDefault();
-});
-```
+В примере окно профиля не закрывается крестиком, клавишей Escape или
+щелчком по затемнению, пока имя изменено и не сохранено: страница отменяет
+`modal:before-close`.
+
+:::example {id="components/modal/before-close" label="Окно с несохранёнными правками" preview=sandbox log="modal:before-close modal:after-close" log_open=true}
+:::
 
 ## Классы
 

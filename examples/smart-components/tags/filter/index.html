@@ -1,0 +1,15 @@
+<div class="flex flex-col gap-2">
+  <div class="filters flex flex-wrap gap-1/2" role="group" aria-label="Темы статей">
+    <sf-tag kind="checkbox" text="Дизайн"></sf-tag>
+    <sf-tag kind="checkbox" text="Разработка"></sf-tag>
+    <sf-tag kind="checkbox" text="Доступность"></sf-tag>
+  </div>
+  <ul class="flex flex-col gap-1/2 m-0 p-inline-start-3" id="tags-filter-list">
+    <li data-topic="Дизайн">Сетка и отступы в карточках</li>
+    <li data-topic="Разработка">Подключение Framework через npm</li>
+    <li data-topic="Доступность">Фокус в окнах и панелях</li>
+    <li data-topic="Дизайн">Цвета статусов в таблице</li>
+    <li data-topic="Разработка">Свой шаблон смарт-компонента</li>
+  </ul>
+  <p class="m-0 text-1/2 color-on-surface-variant" id="tags-filter-state" role="status">Показаны все статьи: 5</p>
+</div>

@@ -92,6 +92,13 @@ composer.addEventListener('sf-chat-composer-detach', (event) => remove(event.det
 composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 ```
 
+В примере хост «отправляет» сообщение после короткой паузы, показывает его
+над полем и вызывает `clear()`; прикреплённые файлы он так же «загружает» и
+возвращает чипами.
+
+:::example {id="smart-components/chat-composer/send" label="Отправка и очистка" preview=sandbox log="sf-chat-composer-submit sf-chat-composer-attach sf-chat-composer-detach" log_open=true}
+:::
+
 ### Счётчик знаков
 
 После 80 % от `maxlength` под полем появляется счётчик знаков; сверх предела

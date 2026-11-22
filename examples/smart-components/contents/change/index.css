@@ -1,0 +1,28 @@
+/* Разделы прокручиваются в своём блоке: в рамке документации окно примера
+   не прокручивается, а оглавление следит за ближайшим прокручиваемым предком.
+   Оглавление стоит в начале строки; на узкой ширине оно переносится над
+   статьёй. */
+.page-contents-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--sf-space-3);
+  block-size: var(--sf-g0);
+  overflow: auto;
+  padding-inline: var(--sf-space-2);
+  border: var(--sf-px) solid var(--sf-outline-variant);
+  border-radius: var(--sf-radius--ui);
+}
+.page-contents-article {
+  flex: 1 1 var(--sf-g0);
+  min-inline-size: 0;
+}
+.page-contents-box > aside {
+  flex: 0 0 auto;
+}
+.page-contents-article h2 {
+  margin-block: var(--sf-space-2) var(--sf-space-1);
+}
+.page-contents-article p {
+  margin-block: 0 var(--sf-space-1);
+}
