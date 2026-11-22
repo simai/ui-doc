@@ -1,0 +1,20 @@
+<div class="flex flex-col gap-4">
+  <div class="flex flex-col gap-2">
+    <span class="text-1/2 color-on-surface-variant">selection="one"</span>
+    <sf-tag-group id="tag-group-show" selection="one" aria-label="Показать">
+      <sf-tag kind="checkbox" key="all" text="Все"></sf-tag>
+      <sf-tag kind="checkbox" key="new" text="Новые" active></sf-tag>
+      <sf-tag kind="checkbox" key="mine" text="Мои"></sf-tag>
+    </sf-tag-group>
+  </div>
+  <div class="flex flex-col gap-2">
+    <span class="text-1/2 color-on-surface-variant">selection="many"</span>
+    <sf-tag-group id="tag-group-status" selection="many" aria-label="Статус заказа">
+      <sf-tag kind="checkbox" key="paid" text="Оплачен" active></sf-tag>
+      <sf-tag kind="checkbox" key="sent" text="Отправлен"></sf-tag>
+      <sf-tag kind="checkbox" key="done" text="Доставлен"></sf-tag>
+      <sf-tag kind="checkbox" key="back" text="Возврат"></sf-tag>
+    </sf-tag-group>
+  </div>
+  <p class="m-0 text-1/2 color-on-surface-variant" id="tag-group-chosen" role="status"></p>
+</div>

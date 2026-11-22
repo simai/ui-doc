@@ -51,6 +51,7 @@
         "badges",
         "dot",
         "progress-bar",
+        "progress-ring",
         "progress-scale",
         "spinner",
         "skeleton",
@@ -115,7 +116,8 @@
         "download-file",
         "copy-button",
         "confirm",
-        "confirm-change"
+        "confirm-change",
+        "bulk-actions"
       ]
     },
     "forms": {
@@ -136,7 +138,8 @@
         "code-input",
         "file-upload",
         "image-field",
-        "color"
+        "color",
+        "form"
       ]
     },
     "navigation": {
@@ -153,7 +156,8 @@
         "dropdown",
         "context-menu",
         "settings",
-        "language"
+        "language",
+        "display-settings"
       ]
     },
     "feedback": {
@@ -182,6 +186,7 @@
         "avatars",
         "icons",
         "tags",
+        "tag-group",
         "list-item",
         "list",
         "list-feed",

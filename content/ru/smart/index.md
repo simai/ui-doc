@@ -17,6 +17,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Кнопка копирования](/ru/smart/actions/copy-button/)
 - [Подтверждение](/ru/smart/actions/confirm/)
 - [Подтверждение изменения](/ru/smart/actions/confirm-change/)
+- [Групповые действия](/ru/smart/actions/bulk-actions/) — Полоса у списка, пока в нём что-то выбрано: «Выбрано N», действия над выбранными и итог.
 
 ## Формы и ввод
 
@@ -36,6 +37,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Цвет](/ru/smart/forms/color/)
 - [Загрузка файлов](/ru/smart/forms/file-upload/)
 - [Поле изображения](/ru/smart/forms/image-field/)
+- [Форма](/ru/smart/forms/form/) — Форма из описаний полей: подписи, ошибки, группы, кнопки, просмотр и ответ.
 
 ## Навигация
 
@@ -51,6 +53,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Контекстное меню](/ru/smart/navigation/context-menu/)
 - [Настройки](/ru/smart/navigation/settings/)
 - [Выбор языка](/ru/smart/navigation/language/)
+- [Настройки отображения](/ru/smart/navigation/display-settings/) — Размер текста, цветовая схема, интервалы, картинки и движение для всего сайта.
 
 ## Уведомления и состояния
 
@@ -75,6 +78,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Аватары](/ru/smart/content/avatars/)
 - [Иконки](/ru/smart/content/icons/)
 - [Теги](/ru/smart/content/tags/)
+- [Группа тегов](/ru/smart/content/tag-group/) — Ряд тегов с одним шагом Tab, «+N» в одну строку и выбором фильтров.
 - [Строка списка](/ru/smart/content/list-item/)
 - [Список](/ru/smart/content/list/)
 - [Лента](/ru/smart/content/list-feed/)
