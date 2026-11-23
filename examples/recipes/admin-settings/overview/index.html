@@ -1,0 +1,33 @@
+<div class="flex flex-col gap-2" data-sf-density="compact">
+  <sf-alert-bar id="admin-settings-bar" size="1/2">
+    <script type="application/json" data-sf-settings>
+      {"items": [{"id": "publish", "level": "info", "text": "Два изменения видят только администраторы: посетители увидят их после публикации.", "source": "Настройки сайта", "action": {"label": "Посмотреть", "href": "#publish"}, "acknowledge": {"label": "Опубликовать"}, "dismissible": false}]}
+    </script>
+  </sf-alert-bar>
+  <sf-header-page heading="Основное">
+    <sf-breadcrumbs slot="path" current="none" items='[{"label":"simai.ru","href":"#site"},{"label":"Настройки сайта","href":"#settings"}]'></sf-breadcrumbs>
+  </sf-header-page>
+  <p class="m-0 text-1/2 color-on-surface-variant">Изменения — для сайта <b>simai.ru</b>. Значение без пометки взято из «Все сайты».</p>
+  <sf-form id="admin-settings-form" label="Основное" labels="start" footer="sticky" guard>
+    <script type="application/json" data-sf-settings>
+      {"origin": {"own": "Своё для simai.ru", "above": "у всех сайтов"},
+       "fields": [
+         {"key": "name", "label": "Название сайта", "propertyType": "string", "required": true, "width": "medium", "hint": "Видно во вкладке браузера и в письмах."},
+         {"key": "from", "label": "Адрес отправителя", "propertyType": "email", "required": true, "width": "medium"},
+         {"key": "tz", "label": "Часовой пояс", "propertyType": "choice", "template": "dropdown", "width": "medium",
+          "options": [{"value": "msk", "label": "Москва, UTC+3"}, {"value": "ekb", "label": "Екатеринбург, UTC+5"}, {"value": "nsk", "label": "Новосибирск, UTC+7"}],
+          "origin": {"value": "msk"}},
+         {"key": "lang", "label": "Язык сайта", "propertyType": "choice", "template": "dropdown", "width": "medium",
+          "options": [{"value": "ru", "label": "Русский"}, {"value": "en", "label": "English"}],
+          "origin": {"locked": true, "reason": "Закрыто на уровне «Все сайты»: менять может администратор установки."}},
+         {"key": "maint", "label": "Режим обслуживания", "propertyType": "boolean", "hint": "Посетители видят «Идут работы», администраторы — сайт как есть."}],
+       "value": {"name": "SIMAI", "from": "noreply@simai.ru", "tz": "ekb", "lang": "ru", "maint": false}}
+    </script>
+  </sf-form>
+  <sf-modal id="admin-settings-publish" heading="Опубликовать изменения?">
+    <div slot="content">
+      <sf-confirm-change id="admin-settings-change" heading="Что увидят посетители" change-id="publish" accept-text="Опубликовать" decline-text="Не сейчас"
+        changes='[{"label":"Название сайта","before":"SIMAI","after":"SIMAI Group"},{"label":"Часовой пояс","before":"Москва, UTC+3","after":"Екатеринбург, UTC+5"}]'></sf-confirm-change>
+    </div>
+  </sf-modal>
+</div>

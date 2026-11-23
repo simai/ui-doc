@@ -1,0 +1,39 @@
+<div class="flex flex-col gap-3 max-w-h0" data-sf-density="compact">
+  <sf-header-page heading="Профиль"></sf-header-page>
+  <section class="flex flex-col gap-2" aria-labelledby="profile-data">
+    <h2 id="profile-data" class="m-0 text-1 weight-medium">Данные</h2>
+    <sf-form id="profile-form" label="Данные" labels="start" guard>
+      <script type="application/json" data-sf-settings>
+        {"fields": [
+           {"key": "name", "label": "Имя", "propertyType": "string", "required": true, "width": "medium"},
+           {"key": "mail", "label": "Почта", "propertyType": "email", "required": true, "width": "medium", "hint": "Сюда приходят срочные уведомления и письма для входа."},
+           {"key": "phone", "label": "Телефон", "propertyType": "phone", "width": "medium", "defaultCountry": "RU"}],
+         "value": {"name": "Анна Котова", "mail": "anna@example.ru", "phone": ""}}
+      </script>
+    </sf-form>
+  </section>
+  <section class="flex flex-col gap-2" aria-labelledby="profile-look">
+    <h2 id="profile-look" class="m-0 text-1 weight-medium">Вид</h2>
+    <sf-form id="profile-look-form" label="Вид" labels="start" apply="instant">
+      <script type="application/json" data-sf-settings>
+        {"fields": [
+           {"key": "theme", "label": "Тема", "propertyType": "choice", "template": "buttons",
+            "options": [{"value": "light", "label": "Светлая"}, {"value": "dark", "label": "Тёмная"}, {"value": "system", "label": "Как в системе"}]},
+           {"key": "dense", "label": "Плотные таблицы", "propertyType": "boolean", "hint": "Строки 32 вместо 40."}],
+         "value": {"theme": "system", "dense": true}}
+      </script>
+    </sf-form>
+    <p class="m-0 text-1/2 color-on-surface-variant" id="profile-look-state" role="status">Применяется сразу.</p>
+  </section>
+  <section class="flex flex-col gap-2" aria-labelledby="profile-sign-in">
+    <h2 id="profile-sign-in" class="m-0 text-1 weight-medium">Вход и безопасность</h2>
+    <div class="flex flex-wrap items-center justify-between gap-2">
+      <p class="m-0"><b>Пароль</b><br><span class="text-1/2 color-on-surface-variant">Изменён 12 сентября.</span></p>
+      <sf-button appearance="outline" text="Сменить пароль" id="profile-password"></sf-button>
+    </div>
+    <div class="flex flex-wrap items-center justify-between gap-2" id="profile-sessions-row">
+      <p class="m-0"><b>Активные сеансы</b><br><span class="text-1/2 color-on-surface-variant">3 устройства: этот Chrome, Safari на iPhone, Firefox на Windows.</span></p>
+      <sf-button appearance="outline" status="danger" text="Выйти на других" id="profile-sign-out"></sf-button>
+    </div>
+  </section>
+</div>

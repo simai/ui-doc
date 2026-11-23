@@ -1,0 +1,15 @@
+<div class="flex flex-col gap-2" data-sf-density="compact">
+  <sf-alert-bar size="1/2">
+    <script type="application/json" data-sf-settings>
+      {"items": [{"id": "rights", "level": "info", "text": "Только чтение: менять настройки сайта может администратор сайта.", "source": "Права", "dismissible": false}]}
+    </script>
+  </sf-alert-bar>
+  <sf-form label="Почта" labels="start" readonly readonly-reason="Менять настройки сайта может администратор сайта.">
+    <script type="application/json" data-sf-settings>
+      {"fields": [
+         {"key": "from", "label": "Адрес отправителя", "propertyType": "email", "width": "medium"},
+         {"key": "signature", "label": "Подпись в письмах", "propertyType": "text"}],
+       "value": {"from": "noreply@simai.ru", "signature": "Команда SIMAI"}}
+    </script>
+  </sf-form>
+</div>
