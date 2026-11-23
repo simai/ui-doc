@@ -15,10 +15,12 @@ const askDanger = async () => {
       consequence="Режим обслуживания включится: посетители увидят «Идут работы»." accept-text="Сохранить" decline-text="Отмена"></sf-confirm></div></sf-modal>`;
   document.body.append(box);
   const modal = box.firstElementChild;
+  // Taken before open(): the window moves its content to the end of the page.
+  const confirm = modal.querySelector('sf-confirm');
   await window.SF.whenDefined(['modal', 'confirm']);
   modal.open();
   const accepted = await new Promise((resolve) => {
-    modal.querySelector('sf-confirm').addEventListener('sf-confirm-answer', (event) => resolve(Boolean(event.detail?.accepted)), {once: true});
+    confirm.addEventListener('sf-confirm-answer', (event) => resolve(Boolean(event.detail?.accepted)), {once: true});
     modal.addEventListener('sf-modal-close', () => resolve(false), {once: true});
   });
   modal.close();

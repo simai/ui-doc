@@ -7,7 +7,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const start = async () => {
   const SF = await sfReady();
-  await SF.whenDefined(['form', 'confirm']);
+  await SF.whenDefined(['form', 'button']);
   const form = document.querySelector('#profile-form');
   const look = document.querySelector('#profile-look-form');
   const lookState = document.querySelector('#profile-look-state');
