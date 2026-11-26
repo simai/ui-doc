@@ -66,7 +66,7 @@ const PACKAGES = [
         'revision' => 'cfaab360bb397013e3eadec139b60b9d9b9f14e4',
         'path' => 'components',
         'archive_sha256' => 'f7a75b0ce411f6868052898de1549f07399475e2340dc1cc5e5ec5941a857b5e',
-        'builder' => '524bf464a36aaac1029161c650218b3e43e88a1f',
+        'builder' => '58fc73027f3b40a9f6fcc82f67e89542e4f1fb05',
     ],
     // The Admin set (simai/ui-admin, release admin-45b580402884, 1.2.2): the
     // administration components sf-admin-menu, sf-admin-shell,
@@ -77,7 +77,16 @@ const PACKAGES = [
         'revision' => '45b580402884bd9d7e067d95629303b8df2a2f8a',
         'path' => 'package',
         'archive_sha256' => 'f9cafa030d548df97daedf4ed1aab52caddc50455c26d4113c82f94fb74add70',
-        'builder' => '524bf464a36aaac1029161c650218b3e43e88a1f',
+        'builder' => '58fc73027f3b40a9f6fcc82f67e89542e4f1fb05',
+    ],
+    // The Editor set (simai/ui-editor, release editor-57f16aec0183, 1.5.2): the
+    // page editor sf-editor left Pro for it.
+    'editor' => [
+        'repository' => 'simai/ui-editor',
+        'revision' => '57f16aec0183562700b70328dea21104400f02aa',
+        'path' => 'package',
+        'archive_sha256' => '5a35cef807fbffe07f1ad2de0f1e828e485533db7ed541e28934b152a1f6a027',
+        'builder' => '58fc73027f3b40a9f6fcc82f67e89542e4f1fb05',
     ],
 ];
 

@@ -577,7 +577,7 @@ Framework на ревизии, которую закрепляет `components/f
 
    Сборщик стоит на коммите, которым собран пакет (поле сборщика в его
    квитанции); он может быть новее сборщика выпуска Framework. Для этого
-   пакета — `git -C <ui-builder> checkout 524bf464a36aaac1029161c650218b3e43e88a1f`.
+   пакета — `git -C <ui-builder> checkout 58fc73027f3b40a9f6fcc82f67e89542e4f1fb05`.
 
    ```bash
    git clone https://github.com/simai/ui-pro.git

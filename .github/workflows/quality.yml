@@ -17,7 +17,7 @@ permissions:
 #
 # The checks read git objects of the sibling repositories at those pins, beside
 # this checkout: ../ui, ../ui-source, ../ui-builder and each package repository
-# (../ui-pro, ../ui-admin: <NAME>_CHECKOUT), the layout the scripts default to. actions/checkout cannot write outside the workspace,
+# (../ui-pro, ../ui-admin, ../ui-editor: <NAME>_CHECKOUT), the layout the scripts default to. actions/checkout cannot write outside the workspace,
 # so they are plain full clones.
 #
 # On main (a push or a manual run, never a pull request) the verified site is
@@ -104,26 +104,24 @@ jobs:
           # The waves are built under RUNNER_TEMP, a path without symlinks: the
           # builder matches the shared runtime modules by path, and a symlinked
           # temporary directory (macOS /var) bundles them instead.
-          # Two waves, compared (`verify package`), then the receipt beside
-          # the archive in the workspace: `sf-build package` would also lay the
-          # output, which builder 524bf46 refuses for a set (its passport
-          # set.json lies beside smart/). Docara reads the archive beside the
-          # receipt.
+          # `sf-build package` builds two waves, compares them and lays the
+          # output with its receipt and archive in --out (a set with its
+          # passport set.json beside smart/, ui-builder 58fc730). Docara reads
+          # the archive beside the receipt.
           cd "$RUNNER_TEMP"
           receipts=""
           for name in $PACKAGE_NAMES; do
             prefix="$(echo "$name" | tr 'a-z-' 'A-Z_')"
             out="$RUNNER_TEMP/packages/$name"
-            node "$FRAMEWORK_PARENT/ui-builder/bin/sf-build.js" verify package \
+            node "$FRAMEWORK_PARENT/ui-builder/bin/sf-build.js" package \
               --name "$name" \
               --package-root "$FRAMEWORK_PARENT/$(printenv "${prefix}_CHECKOUT")/$(printenv "${prefix}_PATH")" \
               --package-revision "$(printenv "${prefix}_REVISION")" \
               --package-repository "$(printenv "${prefix}_REPOSITORY")" \
               --ui-source "$(printenv "${prefix}_SOURCE_ROOT")" \
               --ui "$DOCARA_SIMAI_UI_ROOT" \
-              --workspace "$out"
-            node "$FRAMEWORK_PARENT/ui-builder/bin/sf-build.js" receipt \
-              --report "$out/report.json" --ui "$DOCARA_SIMAI_UI_ROOT"
+              --workspace "$RUNNER_TEMP/waves/$name" \
+              --out "$out" --replace-out
             actual="$(node -p 'require(process.argv[1]).output.archive_sha256' "$out/package-receipt.json")"
             if [ "$actual" != "$(printenv "${prefix}_ARCHIVE_SHA256")" ]; then
               echo "::error::$name archive $actual is not the pinned $(printenv "${prefix}_ARCHIVE_SHA256")"

@@ -4492,7 +4492,7 @@
                 },
                 "builder": {
                     "repository": "simai/ui-builder",
-                    "revision": "524bf464a36aaac1029161c650218b3e43e88a1f"
+                    "revision": "58fc73027f3b40a9f6fcc82f67e89542e4f1fb05"
                 },
                 "manifest_sha256": "0bf2aba25ec404c422ce169b84f238d0ba179b6a55e71289cb6b960457717c39",
                 "archive_sha256": "f9cafa030d548df97daedf4ed1aab52caddc50455c26d4113c82f94fb74add70"
@@ -4554,6 +4554,53 @@
                 }
             }
         },
+        "editor": {
+            "schema": "docara.framework_package_projection",
+            "schema_version": 2,
+            "package": "editor",
+            "requires": "ui-73df5d1b4d4c",
+            "mount": "_docara/framework-packages/editor/57f16aec0183562700b70328dea21104400f02aa",
+            "receipt": {
+                "schema": "simai.framework.product-package-receipt",
+                "schema_version": 1,
+                "package_source": {
+                    "repository": "simai/ui-editor",
+                    "revision": "57f16aec0183562700b70328dea21104400f02aa",
+                    "path": "package",
+                    "tree": "f36ad6317e7ae7c61fa224d4b494c90bd83583c4"
+                },
+                "framework_source": {
+                    "repository": "simai/ui-source",
+                    "revision": "5e30b946fd0e620a4d00ab771af143dc286be1b8"
+                },
+                "builder": {
+                    "repository": "simai/ui-builder",
+                    "revision": "58fc73027f3b40a9f6fcc82f67e89542e4f1fb05"
+                },
+                "manifest_sha256": "b1d5825dbde6f4247cf74d40e960341ccb774abdd00a5042826394ec166eb5fd",
+                "archive_sha256": "5a35cef807fbffe07f1ad2de0f1e828e485533db7ed541e28934b152a1f6a027"
+            },
+            "files": {
+                "set.json": {
+                    "sha256": "06d7d002e02b806a40435153f6739a815e8fc44e291910a5c0c4cd7ee61e2a3d"
+                },
+                "smart/editor/css/editor.css": {
+                    "sha256": "873e15cb11a69c12b6018c7167d31d680835be5d2a0f4fceacf678e2dc2de419"
+                },
+                "smart/editor/css/editor.min.css": {
+                    "sha256": "fd691ff5942451074cbc93e9a95cfaf528c2be059d75856207f5861183e10845"
+                },
+                "smart/editor/js/editor.js": {
+                    "sha256": "c21aec422134d16ce40186eeb42c0dca2e1f66bd1c9c1b3d9637822bd636d84f"
+                },
+                "smart/editor/js/editor.min.js": {
+                    "sha256": "37338b5c80b195ccacb6d13b618d50af13e38738493b07f7910df9efc0382293"
+                },
+                "smart/rule.js": {
+                    "sha256": "00031b84fe91208f78f837a0616629683f8f936a0daddbd295f7b049b525d08a"
+                }
+            }
+        },
         "pro": {
             "schema": "docara.framework_package_projection",
             "schema_version": 2,
@@ -4575,7 +4622,7 @@
                 },
                 "builder": {
                     "repository": "simai/ui-builder",
-                    "revision": "524bf464a36aaac1029161c650218b3e43e88a1f"
+                    "revision": "58fc73027f3b40a9f6fcc82f67e89542e4f1fb05"
                 },
                 "manifest_sha256": "a7e9050ffcd0ec6a4e84cac77c7001f6dc262a6144cd146ede3900aa20c3f3e3",
                 "archive_sha256": "f7a75b0ce411f6868052898de1549f07399475e2340dc1cc5e5ec5941a857b5e"

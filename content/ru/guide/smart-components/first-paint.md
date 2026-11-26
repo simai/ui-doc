@@ -220,7 +220,7 @@ node scripts/snapshot-first-paint.mjs <папка сборки> --check
 | `line` | `<sf-breadcrumbs>`, `<sf-list-item>`, `<sf-tree-item>` |
 | `none` | `<sf-admin-activity>`, `<sf-admin-notifications>`, `<sf-admin-shell>`, `<sf-avatar>`, `<sf-avatar-group>`, `<sf-badge>`, `<sf-bulk-actions>`, `<sf-button>`, `<sf-button-close>`, `<sf-button-copy>`, `<sf-button-icon>`, `<sf-change>`, `<sf-checkbox>`, `<sf-confirm>`, `<sf-confirm-change>`, `<sf-display-settings>`, `<sf-drawer>`, `<sf-dropdown>`, `<sf-editor-overlay>`, `<sf-file-download>`, `<sf-form>`, `<sf-help-mark>`, `<sf-icon>`, `<sf-input-choice>`, `<sf-list-attention>`, `<sf-list-description>`, `<sf-list-feed>`, `<sf-list-timeline>`, `<sf-menu-context>`, `<sf-message-log>`, `<sf-modal>`, `<sf-popover>`, `<sf-progress-bar>`, `<sf-progress-ring>`, `<sf-progress-run>`, `<sf-progress-scale>`, `<sf-radio>`, `<sf-reference-link>`, `<sf-resizer>`, `<sf-search>`, `<sf-segmented>`, `<sf-skeleton>`, `<sf-sortable>`, `<sf-spinner>`, `<sf-switch>`, `<sf-tag>`, `<sf-tag-group>`, `<sf-time>`, `<sf-toast>`, `<sf-tooltip>` |
 
-Формы не объявляют: `<sf-chat-composer>`, `<sf-chat-interlocutor>`, `<sf-chat-message>`, `<sf-chat-window>`, `<sf-editor-content>`, `<sf-mail-canvas>`, `<sf-mail-inspector>`, `<sf-mail-letters>`, `<sf-mail-library>`, `<sf-mail-structure>`.
+Формы не объявляют: `<sf-chat-composer>`, `<sf-chat-interlocutor>`, `<sf-chat-message>`, `<sf-chat-window>`, `<sf-editor>`, `<sf-editor-content>`, `<sf-mail-canvas>`, `<sf-mail-inspector>`, `<sf-mail-letters>`, `<sf-mail-library>`, `<sf-mail-structure>`.
 
 ## Первый кадр сборки
 

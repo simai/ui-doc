@@ -32,9 +32,9 @@ const packageRoots = [
   ...(process.env.SIMAI_UI_PACKAGE_ROOTS || '').split(':').filter(Boolean),
 ];
 if (packageRoots.length === 0) {
-  // The package sources beside this checkout, as CI clones them: Pro and the
-  // Admin set (sf-admin-menu left Pro for it).
-  for (const candidate of ['../ui-pro/components', '../ui-admin/package']) {
+  // The package sources beside this checkout, as CI clones them: Pro, the
+  // Admin set (sf-admin-menu left Pro for it) and the Editor set (sf-editor).
+  for (const candidate of ['../ui-pro/components', '../ui-admin/package', '../ui-editor/package']) {
     const beside = found(path.resolve(projectRoot, candidate), 'src/smart');
     if (beside) packageRoots.push(beside);
   }
