@@ -42,7 +42,7 @@ description: "Набор автора блока: шаблон, генерато
 лежат в `src/core/kits/block/` и входят в поставку целиком: `distr/core/kits/block/sample-quote/` и
 `distr/core/kits/block/sample-cards/` в пакете `@simai-studio/ui`. Хост может
 загрузить их с CDN, например
-`https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261121.928/distr/core/kits/block/sample-quote/type.json`.
+`https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261125.1855/distr/core/kits/block/sample-quote/type.json`.
 
 ## Быстрый старт
 

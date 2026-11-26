@@ -114,11 +114,18 @@ $translateFile=static function(string $path,string $content) use ($translate,$tr
 // The home page showcase (examples/home/showcase): tabs of the admin, the chat
 // and the editor. The admin is the page above in a frame; the chat and the
 // editor come from the same product package and are made when their tab opens.
-$proMount=$lock['package_projections']['pro']['mount'] ?? null;
-if (!is_string($proMount) || preg_match('~\A_docara/framework-packages/pro/[0-9a-f]{40}\z~', $proMount) !== 1) throw new RuntimeException('Admin demonstration: package mount missing from the lock');
+// The administration components (sf-admin-menu) come from the Admin set, the
+// rest from Pro: the page declares both, a set by its base alone (the
+// Loader's set form), as the documentation pages do.
+$packageBoot=[];
+foreach (['pro','admin'] as $packageName) {
+    $mount=$lock['package_projections'][$packageName]['mount'] ?? null;
+    if (!is_string($mount) || preg_match('~\A_docara/framework-packages/'.$packageName.'/[0-9a-f]{40}\z~', $mount) !== 1) throw new RuntimeException('Admin demonstration: package '.$packageName.' mount missing from the lock');
+    $packageBoot[$packageName]=isset($lock['package_projections'][$packageName]['files']['set.json']) ? $base.$mount.'/smart' : ['base'=>$base.$mount.'/smart'];
+}
 // Icons from the runtime's own icon font: the menu and the list use many more
 // glyphs than the documentation's subset carries.
-$adminBoot=['theme'=>false,'icons'=>['enabled'=>true,'accumulate'=>false],'smart'=>['base'=>true],'minified'=>false,'packages'=>['pro'=>['base'=>$base.$proMount.'/smart']]];
+$adminBoot=['theme'=>false,'icons'=>['enabled'=>true,'accumulate'=>false],'smart'=>['base'=>true],'minified'=>false,'packages'=>$packageBoot];
 $themeFirst='<script>(function(){var d=window.matchMedia("(prefers-color-scheme: dark)").matches;try{if(parent!==window)d=parent.document.documentElement.classList.contains("theme-dark");}catch(e){}document.documentElement.classList.toggle("theme-dark",d);document.documentElement.classList.toggle("theme-light",!d);})();</script>';
 $themeSync='<script>function syncTheme(){if(parent===window)return;try{var d=parent.document.documentElement.classList.contains("theme-dark");document.documentElement.classList.toggle("theme-dark",d);document.documentElement.classList.toggle("theme-light",!d);}catch(e){}}try{if(parent!==window)new MutationObserver(syncTheme).observe(parent.document.documentElement,{attributes:true,attributeFilter:["class"]});}catch(e){}</script>';
 $boot='<script>window.sfPath='.json_encode($core,JSON_UNESCAPED_SLASHES).';window.sfSmartPath='.json_encode($base.'_docara/framework-runtime',JSON_UNESCAPED_SLASHES).';window.SF_BOOT_CONFIG='.json_encode($adminBoot,JSON_UNESCAPED_SLASHES).';</script>';

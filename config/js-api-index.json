@@ -363,6 +363,21 @@
     "SF.Gallery": {
       "page": "/ru/smart/content/gallery/#просмотр-без-галереи",
       "label": "Галерея"
+    },
+    "SF.device": {
+      "text": "Раскладка места компонента (телефон или компьютер) и указатель страницы; отбор пунктов по отметке devices.",
+      "page": "/ru/guide/functions/screen/device/",
+      "label": "Устройство: раскладка и указатель"
+    },
+    "SF.longPress": {
+      "text": "Долгое нажатие пальцем, общее для списков, карточек и досок.",
+      "page": "/ru/guide/functions/screen/long-press/",
+      "label": "Долгое нажатие"
+    },
+    "SF.FragmentRefresh": {
+      "text": "Обновляет один блок страницы по его ссылкам и формам, не загружая страницу целиком.",
+      "page": "/ru/guide/layouts/building/block-refresh/",
+      "label": "Обновление блока"
     }
   }
 }

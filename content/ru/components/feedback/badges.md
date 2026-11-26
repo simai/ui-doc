@@ -6,7 +6,7 @@ profile: reference
 
 # Бейджи
 
-:badge[sf-badge]{variant=outline scheme=on-surface size=1/2} :badge[1.13.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-badge]{variant=outline scheme=on-surface size=1/2} :badge[1.14.0]{variant=outline scheme=on-surface size=1/2}
 
 Бейдж показывает короткий статус, категорию или счётчик рядом с объектом. Он
 дополняет основное содержимое и не заменяет кнопку, фильтр или
@@ -242,8 +242,8 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-badge-background-color` | Заливка бейджа. | `var(--sf-surface-container)`; зависит от вида, схемы, статуса |
-| `--sf-badge-color` | Цвет текста и иконки. | `var(--sf-on-surface)`; зависит от вида, схемы, статуса |
+| `--sf-badge-background-color` | Заливка бейджа; она сильнее и класса оттенка sf-badge--<оттенок> (класс рисует тон 50 на шаге заливки 24). | `var(--sf-surface-container)`; зависит от вида, схемы, статуса, hue |
+| `--sf-badge-color` | Цвет текста и значка; он сильнее и класса оттенка sf-badge--<оттенок> (класс рисует --sf-on-surface). | `var(--sf-on-surface)`; зависит от вида, схемы, статуса, hue |
 | `--sf-badge-border-color` | Цвет рамки; виден, когда задана толщина рамки. В покое по умолчанию — графический цвет тонального края: он рисуется только там, где край просит место (инверсное место), а при толщине по умолчанию 0 не виден. | `var(--sf-on-neutral-container-graphic)`; зависит от вида, схемы, статуса |
 | `--sf-badge-border-width` | Толщина рамки со всех сторон, длина. Рамка рисуется внутри размера бейджа: отступ уступает ей свою ширину, поэтому бейдж одного размера одной высоты с рамкой и без неё. | `0`; зависит от вида |
 | `--sf-badge-radius` | Скругление углов. | `var(--sf-radius-circle)` |

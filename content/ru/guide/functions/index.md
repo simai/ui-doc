@@ -52,6 +52,8 @@ HTML и надеть маску на поле.
 - [Контрольные точки](/ru/guide/functions/screen/breakpoints/) — `SF.breakpoints`
 - [Положение чтения](/ru/guide/functions/screen/reading-position/) — `SF.readingPosition`
 - [Привязка к якорю](/ru/guide/functions/screen/position/) — `SF.Position`
+- [Устройство: раскладка и указатель](/ru/guide/functions/screen/device/) — `SF.device`
+- [Долгое нажатие](/ru/guide/functions/screen/long-press/) — `SF.longPress`
 
 ## Выбор человека
 

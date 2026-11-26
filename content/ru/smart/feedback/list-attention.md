@@ -190,12 +190,12 @@ list.addEventListener('sf-list-attention-apply', async (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-list-attention>`, контракт `smart.list-attention` версии `1.4.5` |
-| Поставка | выпуск Framework `ui-9ceecc24c988` |
+| Поставка | выпуск Framework `ui-73df5d1b4d4c` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: Tab проходит по ссылке объекта, действию и «⋯» каждого пункта по порядку, затем по «Проверить снова» и «Все проблемы» внизу; Enter переходит по ссылке, Enter или пробел нажимает кнопку; В меню «⋯» стрелки двигают выбор, Enter выбирает, Escape закрывает и возвращает фокус. |
-| Источник | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/smart/list-attention` |
-| Правило классов | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/rule/rule.json#name=cl-list-attention` |
+| Источник | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/smart/list-attention` |
+| Правило классов | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/rule/rule.json#name=cl-list-attention` |
 
 ## См. также
 

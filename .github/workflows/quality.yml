@@ -10,14 +10,14 @@ on:
 permissions:
   contents: read
 
-# The site is checked against the exact Framework release and product package
+# The site is checked against the exact Framework release and product packages
 # it pins in scripts/materialize-framework-runtime.php. The pins are read from
 # that file (scripts/print-framework-pins.php), never repeated here, so a repin
 # commit is the whole change CI needs.
 #
 # The checks read git objects of the sibling repositories at those pins, beside
-# this checkout: ../ui, ../ui-source, ../ui-builder and the package repository
-# (../ui-pro, PRO_CHECKOUT), the layout the scripts default to. actions/checkout cannot write outside the workspace,
+# this checkout: ../ui, ../ui-source, ../ui-builder and each package repository
+# (../ui-pro, ../ui-admin, ../ui-editor: <NAME>_CHECKOUT), the layout the scripts default to. actions/checkout cannot write outside the workspace,
 # so they are plain full clones.
 #
 # On main (a push or a manual run, never a pull request) the verified site is
@@ -74,56 +74,70 @@ jobs:
           git -C "$parent/ui" cat-file -e "$UI_RUNTIME_REVISION^{commit}"
           clone simai/ui-source ui-source "$SOURCE_REVISION"
           clone simai/ui-builder ui-builder "$PRO_BUILDER"
-          # The package repository, fully, at the package lock's revision.
-          clone "$PRO_REPOSITORY" "$PRO_CHECKOUT" "$PRO_REVISION"
-          # The package is built over the ui-source revision its own
-          # components/framework.lock.json names; when that is not the
-          # release's source, it gets a checkout of its own.
-          package_source="$(node -p 'require(process.argv[1]).source.revision' "$parent/$PRO_CHECKOUT/$PRO_PATH/framework.lock.json")"
-          if [ "$package_source" = "$SOURCE_REVISION" ]; then
-            package_source_root="$parent/ui-source"
-          else
-            clone simai/ui-source ui-source-package "$package_source"
-            package_source_root="$parent/ui-source-package"
-          fi
+          # Each package repository, fully, at its package lock's revision.
+          # A package is built over the ui-source revision its own
+          # <path>/framework.lock.json names; when that is not the release's
+          # source, it gets a checkout of its own.
+          for name in $PACKAGE_NAMES; do
+            prefix="$(echo "$name" | tr 'a-z-' 'A-Z_')"
+            repository="$(printenv "${prefix}_REPOSITORY")"
+            checkout="$(printenv "${prefix}_CHECKOUT")"
+            clone "$repository" "$checkout" "$(printenv "${prefix}_REVISION")"
+            package_source="$(node -p 'require(process.argv[1]).source.revision' "$parent/$checkout/$(printenv "${prefix}_PATH")/framework.lock.json")"
+            if [ "$package_source" = "$SOURCE_REVISION" ]; then
+              package_source_root="$parent/ui-source"
+            else
+              [ -d "$parent/ui-source-$package_source" ] || clone simai/ui-source "ui-source-$package_source" "$package_source"
+              package_source_root="$parent/ui-source-$package_source"
+            fi
+            echo "${prefix}_SOURCE_ROOT=$package_source_root" >> "$GITHUB_ENV"
+          done
           {
             echo "FRAMEWORK_PARENT=$parent"
             echo "DOCARA_SIMAI_UI_ROOT=$parent/ui"
-            echo "PRO_SOURCE_ROOT=$package_source_root"
           } >> "$GITHUB_ENV"
       - name: Install ui-builder
         run: yarn --cwd "$FRAMEWORK_PARENT/ui-builder" install --frozen-lockfile --non-interactive --silent
-      - name: Build the Pro package at its pin
+      - name: Build the product packages at their pins
         run: |
           set -euo pipefail
           # The waves are built under RUNNER_TEMP, a path without symlinks: the
           # builder matches the shared runtime modules by path, and a symlinked
           # temporary directory (macOS /var) bundles them instead.
-          out="$RUNNER_TEMP/pro-package"
+          # `sf-build package` builds two waves, compares them and lays the
+          # output with its receipt and archive in --out (a set with its
+          # passport set.json beside smart/, ui-builder 58fc730). Docara reads
+          # the archive beside the receipt.
           cd "$RUNNER_TEMP"
-          node "$FRAMEWORK_PARENT/ui-builder/bin/sf-build.js" package \
-            --name pro \
-            --package-root "$FRAMEWORK_PARENT/$PRO_CHECKOUT/$PRO_PATH" \
-            --package-revision "$PRO_REVISION" \
-            --package-repository "$PRO_REPOSITORY" \
-            --ui-source "$PRO_SOURCE_ROOT" \
-            --ui "$DOCARA_SIMAI_UI_ROOT" \
-            --workspace "$RUNNER_TEMP/pro-waves" \
-            --out "$out" --replace-out
-          actual="$(node -p 'require(process.argv[1]).output.archive_sha256' "$out/package-receipt.json")"
-          if [ "$actual" != "$PRO_ARCHIVE_SHA256" ]; then
-            echo "::error::pro archive $actual is not the pinned $PRO_ARCHIVE_SHA256"
-            exit 1
-          fi
-          echo "PRO_RECEIPT=$out/package-receipt.json" >> "$GITHUB_ENV"
-      # A digest that differs from the pin leaves the built package for a diff
+          receipts=""
+          for name in $PACKAGE_NAMES; do
+            prefix="$(echo "$name" | tr 'a-z-' 'A-Z_')"
+            out="$RUNNER_TEMP/packages/$name"
+            node "$FRAMEWORK_PARENT/ui-builder/bin/sf-build.js" package \
+              --name "$name" \
+              --package-root "$FRAMEWORK_PARENT/$(printenv "${prefix}_CHECKOUT")/$(printenv "${prefix}_PATH")" \
+              --package-revision "$(printenv "${prefix}_REVISION")" \
+              --package-repository "$(printenv "${prefix}_REPOSITORY")" \
+              --ui-source "$(printenv "${prefix}_SOURCE_ROOT")" \
+              --ui "$DOCARA_SIMAI_UI_ROOT" \
+              --workspace "$RUNNER_TEMP/waves/$name" \
+              --out "$out" --replace-out
+            actual="$(node -p 'require(process.argv[1]).output.archive_sha256' "$out/package-receipt.json")"
+            if [ "$actual" != "$(printenv "${prefix}_ARCHIVE_SHA256")" ]; then
+              echo "::error::$name archive $actual is not the pinned $(printenv "${prefix}_ARCHIVE_SHA256")"
+              exit 1
+            fi
+            receipts="$receipts --receipt=$out/package-receipt.json"
+          done
+          echo "PACKAGE_RECEIPTS=${receipts# }" >> "$GITHUB_ENV"
+      # A digest that differs from the pin leaves the built packages for a diff
       # against a local build of the same pins.
-      - name: Keep the Pro package for comparison
+      - name: Keep the product packages for comparison
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
-          name: pro-package
-          path: ${{ runner.temp }}/pro-package
+          name: product-packages
+          path: ${{ runner.temp }}/packages
           retention-days: 7
       # composer.lock pins the exact published Docara release revision so the
       # documentation build remains reproducible.
@@ -134,7 +148,8 @@ jobs:
       # The runtime lives inside vendor/simai/docara: materialize after every
       # composer install.
       - name: Materialize the pinned Framework runtime
-        run: php scripts/materialize-framework-runtime.php "$DOCARA_SIMAI_UI_ROOT" --receipt="$PRO_RECEIPT"
+        # PACKAGE_RECEIPTS is a list of --receipt= arguments, split on purpose.
+        run: php scripts/materialize-framework-runtime.php "$DOCARA_SIMAI_UI_ROOT" $PACKAGE_RECEIPTS
       # SIMAI_UI_SOURCE_ROOT stays unset for docs:check: with it the composition
       # audit also reads its recipe candidate at a ui-source commit older than
       # the public snapshot, which only the private ui-source-history holds.

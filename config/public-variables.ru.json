@@ -365,6 +365,11 @@
     "The ring's box: the control height of its size unless this is set.": "Рамка кольца: высота элемента управления его размера, если переменная не задана.",
     "The width of the line; a bare 0 is valid.": "Толщина линии; можно задать и голый 0.",
     "Space between the line and what stands in the middle; a bare 0 is valid.": "Зазор между линией и тем, что стоит в середине; можно задать и голый 0.",
-    "The percentage in the middle.": "Процент в середине."
+    "The percentage in the middle.": "Процент в середине.",
+    "The badge's fill; it wins over a hue class sf-badge--<hue> too (C411: the class draws tone 50 at the fill step 24).": "Заливка бейджа; она сильнее и класса оттенка sf-badge--<оттенок> (класс рисует тон 50 на шаге заливки 24).",
+    "The text and icon colour; it wins over a hue class sf-badge--<hue> too (C411: the class draws --sf-on-surface).": "Цвет текста и значка; он сильнее и класса оттенка sf-badge--<оттенок> (класс рисует --sf-on-surface).",
+    "How far the arrows over a picture stand in from its edges (--sf-space-2 since component.slider 2.0.0).": "Насколько стрелки над картинкой отступают от её краёв (--sf-space-2 начиная с component.slider 2.0.0).",
+    "How far the position and the pause button stand above the picture's bottom edge when they stand inside it (data-indicator=\"inside\", owner decision C398; component.slider 2.2.0). Under the picture the block's gap, --sf-slider-gap, is that distance.": "Насколько указатель позиции и кнопка паузы поднимаются над нижним краем картинки, когда стоят внутри неё (data-indicator=\"inside\", component.slider 2.2.0). Под картинкой это расстояние — промежуток блока, --sf-slider-gap.",
+    "The ink of the position inside the picture (data-indicator=\"inside\", owner decision C398), set by hand; unset, the slider measures the picture and takes --sf-on-surface-media or --sf-surface-media-active (component.slider 2.1.0).": "Цвет указателя позиции внутри картинки (data-indicator=\"inside\"), заданный вручную; если он не задан, слайдер измеряет картинку и берёт --sf-on-surface-media или --sf-surface-media-active (component.slider 2.1.0)."
   }
 }

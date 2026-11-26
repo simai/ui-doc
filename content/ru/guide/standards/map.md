@@ -19,12 +19,12 @@ description: "Карта стандартов показывает все ста
 |:---|:---|:---|:---|:---|:---|
 | 1 | Standard Contract | `standard-contract` | 1.0.0 | Форму любого стандарта | — |
 | 2 | Recipe | `simai.composition-recipe` | 1.1.0 | Правила сборки документа страницы | Standard Contract |
-| 2 | Манифест смарт-компонента | `simai.smart-component-manifest` | 2.5.0 | Контракт одного компонента | Standard Contract |
+| 2 | Манифест смарт-компонента | `simai.smart-component-manifest` | 2.6.0 | Контракт одного компонента | Standard Contract |
 | 3 | Составной компонент | `simai.composite-component` | 1.0.3 | Внешнюю сторону составного компонента | Recipe, манифест |
-| 3 | Пакет компонентов | `simai.component-package` | 1.1.2 | Пакет смарт-компонентов владельца: устройство, сборку, квитанцию, поставку и подключение | манифест (`uses`); ссылается на составной, динамический составной, порт хоста, жизненный цикл изменений |
+| 3 | Пакет компонентов | `simai.component-package` | 1.1.3 | Пакет смарт-компонентов владельца: устройство, сборку, квитанцию, поставку и подключение | манифест (`uses`); ссылается на составной, динамический составной, порт хоста, жизненный цикл изменений |
 | 4 | Динамический составной компонент | `simai.dynamic-composite-component` | 1.0.3 | Поведение составного компонента на стыке с приложением | наследует уровень 3 |
-| 4 | Порт хоста | `simai.composite-host-port` | 1.0.4 | Сам стык: объявленный и версионированный порт | наследует динамический |
-| 5 | Фрагмент интерфейса | `simai.interface-fragment` | 1.0.2 | Составной компонент в области страницы рядом с другими: описание фрагмента, типы значений страницы, навигацию по областям | наследует порт хоста |
+| 4 | Порт хоста | `simai.composite-host-port` | 1.0.5 | Сам стык: объявленный и версионированный порт | наследует динамический |
+| 5 | Фрагмент интерфейса | `simai.interface-fragment` | 1.1.0 | Составной компонент в области страницы рядом с другими: описание фрагмента, типы значений страницы, навигацию по областям | наследует порт хоста |
 | сквозной | Жизненный цикл изменений | `simai.change-lifecycle` | 1.0.1 | Как публичное имя уходит из Framework | схема журнала, политика сроков |
 | сквозной | Правила взаимодействия | `simai.interaction-rules` | 1.0.0 | Как любой смарт-компонент загружается, говорит с соседями и рисует | — |
 | сквозной | Разработка с ИИ | `simai.ai-development` | 1.0.0 | Как ИИ-агент разрабатывает на Framework и вместе с ним: контракты, публичная поверхность, выпуски, проверка и приёмка | — |
@@ -42,6 +42,11 @@ Recipe и вышел изданием 1.0.3. Динамический соста
 1.2.0, которая принимает тип значения по имени без версии, и требование
 `closed-value-types` называет типы без версии; остальные требования те же
 (см. [Фрагмент интерфейса](#фрагмент-интерфейса-simai-interface-fragment)).
+Порт хоста 1.0.5 закрепляет схему объявления порта 1.3.0 с теми же
+требованиями, а пакет компонентов 1.1.3 переиздан, потому что ссылается на
+это издание. Фрагмент интерфейса 1.1.0 добавляет обновляемый блок —
+серверную разметку в области содержимого, которую обновляет ядро
+(`refreshable-block`, см. [Обновление блока](/ru/guide/layouts/building/block-refresh/)).
 Прежние издания хранятся в истории исходников Framework
 (`contracts/standards/history/`).
 
@@ -92,23 +97,23 @@ Recipe и вышел изданием 1.0.3. Динамический соста
 |:---|:---|
 | Схема конверта Standard Contract | [`/ai/standards/standard-contract/1.0.0/standard.schema.json`](/ai/standards/standard-contract/1.0.0/standard.schema.json) |
 | Комплект Recipe | [`/ai/standards/composition-recipe/1.1.0/`](/ai/standards/composition-recipe/1.1.0/README.md) |
-| Схема манифеста смарт-компонента | [`/ai/standards/smart-component-manifest/2.5.0/manifest.schema.json`](/ai/standards/smart-component-manifest/2.5.0/manifest.schema.json) |
+| Схема манифеста смарт-компонента | [`/ai/standards/smart-component-manifest/2.6.0/manifest.schema.json`](/ai/standards/smart-component-manifest/2.6.0/manifest.schema.json) |
 | Конверт составного компонента | [`/ai/standards/simai.composite-component/1.0.3/standard.json`](/ai/standards/simai.composite-component/1.0.3/standard.json) |
 | Конверт динамического составного компонента | [`/ai/standards/simai.dynamic-composite-component/1.0.3/standard.json`](/ai/standards/simai.dynamic-composite-component/1.0.3/standard.json) |
-| Конверт порта хоста | [`/ai/standards/simai.composite-host-port/1.0.4/standard.json`](/ai/standards/simai.composite-host-port/1.0.4/standard.json) |
+| Конверт порта хоста | [`/ai/standards/simai.composite-host-port/1.0.5/standard.json`](/ai/standards/simai.composite-host-port/1.0.5/standard.json) |
 | Схема объявления порта | [`/ai/standards/composite-host-port-schema/1.0.0/port.schema.json`](/ai/standards/composite-host-port-schema/1.0.0/port.schema.json) |
-| Конверт фрагмента интерфейса | [`/ai/standards/simai.interface-fragment/1.0.2/standard.json`](/ai/standards/simai.interface-fragment/1.0.2/standard.json) |
+| Конверт фрагмента интерфейса | [`/ai/standards/simai.interface-fragment/1.1.0/standard.json`](/ai/standards/simai.interface-fragment/1.1.0/standard.json) |
 | Схема описания фрагмента | [`/ai/standards/interface-fragment-schema/1.2.0/descriptor.schema.json`](/ai/standards/interface-fragment-schema/1.2.0/descriptor.schema.json) |
 | Конверт правил взаимодействия | [`/ai/standards/simai.interaction-rules/1.0.0/standard.json`](/ai/standards/simai.interaction-rules/1.0.0/standard.json) |
 | Конверт разработки с ИИ | [`/ai/standards/simai.ai-development/1.0.0/standard.json`](/ai/standards/simai.ai-development/1.0.0/standard.json) |
 | Конверт фонового эффекта | [`/ai/standards/simai.effect/1.4.0/standard.json`](/ai/standards/simai.effect/1.4.0/standard.json) |
 | Схема манифеста эффекта | [`/ai/standards/effect-schema/1.3.0/effect.schema.json`](/ai/standards/effect-schema/1.3.0/effect.schema.json) |
 | Конверт жизненного цикла изменений | [`/ai/standards/simai.change-lifecycle/1.0.1/standard.json`](/ai/standards/simai.change-lifecycle/1.0.1/standard.json) |
-| Конверт пакета компонентов | [`/ai/standards/simai.component-package/1.1.2/standard.json`](/ai/standards/simai.component-package/1.1.2/standard.json) |
+| Конверт пакета компонентов | [`/ai/standards/simai.component-package/1.1.3/standard.json`](/ai/standards/simai.component-package/1.1.3/standard.json) |
 | Порты и наборы проверок | `/ai/ports/<порт>/<версия>/port.json` и набор `kit/` рядом — каждая версия каждого порта, например [`simai.dataview-port/1.9.0`](/ai/ports/simai.dataview-port/1.9.0/port.json) |
 
 Копии берутся из закреплённого выпуска при каждой сборке сайта: схема
-манифеста — действующее издание 2.5.0, порты — все версии, которые
+манифеста — действующее издание 2.6.0, порты — все версии, которые
 поставляет выпуск.
 
 Версии стандартов, форматов и портов руководство называет только в этих
@@ -329,6 +334,8 @@ Document описаны в [Три представления страницы: 
 | `shareable-state-in-the-address` | обязательно | Состояние, которым делятся или к которому возвращаются, живёт в адресе под ключами из `url_state`; двум фрагментам страницы один ключ не принадлежит |
 | `region-navigation` | обязательно | Ссылка внутри оболочки меняет область содержимого, а не страницу: заголовок запроса области, замена на месте со скелетоном только в этой области, адрес в истории, «Назад» и «Вперёд» с возвратом прокрутки, фокус на новом заголовке |
 | `full-load-fallback` | обязательно | Если ревизия оболочки другая, ссылка просит полную загрузку, адрес на другом источнике или ответ области не такой, как объявлено, страница загружается целиком; наполовину заменённая страница не остаётся |
+| `refreshable-block` | обязательно | Обновляемый блок — именованная часть области содержимого в разметке, без своего кода продукта (`data-sf-fragment`, `data-sf-fragment-keys`, `data-sf-fragment-mode`, `data-sf-fragment-contract`); его ссылки и формы остаются `<a href>` и `<form method=get>` и без JavaScript загружают страницу с его параметрами |
+| `block-refresh` | обязательно | Блок обновляется запросом `GET` с заголовками `X-SIMAI-Fragment`; ответ сначала проверяется целиком и рисуется одним шагом, затем записывается адрес; сбой показывает ошибку с повтором в блоке, чужой ответ ведёт к полной загрузке ([Обновление блока](/ru/guide/layouts/building/block-refresh/)) |
 | `assets-once` | обязательно | Область приносит ресурсы своих фрагментов; ресурс, который уже есть на странице, повторно не запрашивается |
 | `release-on-leave` | обязательно | Фрагмент, ушедший при замене области, отключается: маршруты, слушатели и таймеры освобождаются |
 | `budget-declared` | обязательно | Фрагмент объявляет бюджет — килобайты сверх общей основы и миллисекунды до первого ответа; бюджет измеряют проверки пакета, превышение не проходит гейт |
@@ -337,7 +344,7 @@ Document описаны в [Три представления страницы: 
 Проверка ручная: автор фрагмента показывает, чем выполнено каждое
 требование. Форму описания и значения проверяет Framework
 (`SF.Composition.checkFragmentDescriptor` по закреплённой схеме описания
-1.2.0 и проверки типов значений). Маршруты между фрагментами задаёт комплект
+1.3.0 и проверки типов значений). Маршруты между фрагментами задаёт комплект
 Composition Routing 1.1.0: он сравнивает типы по имени без версии и записывает
 обе формы имён в контрольном примере `fixtures/value-type-names.json`.
 
@@ -468,7 +475,7 @@ Framework (`contracts/standards/simai.component-package/<версия>/`).
 Стандарт не наследует ни одного требования (`extends` у него нет): он
 относится к отдельному виду — пакету компонентов.
 
-**Издание.** Действующее издание — 1.1.2. Стандарт закрепляет схему
+**Издание.** Действующее издание — 1.1.3. Стандарт закрепляет схему
 манифеста 2.5.0, поэтому манифест компонента пакета объявляет те же поля, что и
 компоненты Framework, в том числе `presentation.skeleton` и персональный вид,
 и ссылается по хешу на стандарты, на которые опирается (см. [Переиздания без новых требований](#уровни-стандартов)).

@@ -6,7 +6,7 @@ profile: reference
 
 # Меню
 
-:badge[sf-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.10.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-menu]{variant=outline scheme=on-surface size=1/2} :badge[1.10.5]{variant=outline scheme=on-surface size=1/2}
 
 Меню ведёт по разделам сайта, раздела или личного кабинета и раскрывает
 группы вложенных разделов. Один компонент показывается вертикально в боковой
@@ -71,7 +71,8 @@ profile: reference
 
 `sf-menu--navigation` на корневом списке — разделы сайта, как их рисует
 шапка: строки без рамки и заливки, под указателем — лёгкая заливка
-состояния (`--sf-surface-state-hover`, при нажатии `-active`);
+состояния `--sf-surface-state-select` (8 %, одна заливка наведения у всех
+списков и меню), при нажатии `--sf-surface-state-active`;
 открытая ветка не заливается — её показывает открытый список. Текущая
 страница (`aria-current="page"` или `"true"` на пункте или ссылке) — плашка
 навигации: `--sf-primary-container-active` (основной цвет, 20 % в светлой теме

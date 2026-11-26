@@ -73,7 +73,8 @@ description: "Полный список переменных, которые о�
 | `--sf-on-surface-icon` | `light-dark(var(--sf-neutral-25), var(--sf-neutral-80))` · `var(--sf-on-surface-media)` · `var(--sf-on-surface)` |
 | `--sf-on-surface-inverse` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-10))` |
 | `--sf-on-surface-inverse-fixed` | `var(--sf-neutral-90)` |
-| `--sf-on-surface-media` | `var(--sf-white)` |
+| `--sf-on-surface-media` | `var(--sf-white)` · `var(--sf-scheme-ground)` |
+| `--sf-on-surface-not-set` | `light-dark(var(--sf-neutral-10--alfa-64), var(--sf-neutral-90--alfa-64))` · `var(--sf-white--alfa-80)` |
 | `--sf-on-surface-popup-nested-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` · `var(--sf-on-surface)` |
 | `--sf-on-surface-popup-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` · `var(--sf-on-surface)` |
 | `--sf-on-surface-raised-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` · `var(--sf-on-surface)` |
@@ -91,14 +92,15 @@ description: "Полный список переменных, которые о�
 | `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` · `var(--sf-white--alfa-12)` |
 | `--sf-surface-container-active` | `light-dark(var(--sf-neutral-50--alfa-20), var(--sf-neutral-90--alfa-20))` · `var(--sf-white--alfa-20)` |
 | `--sf-surface-container-hover` | `light-dark(var(--sf-neutral-50--alfa-16), var(--sf-neutral-90--alfa-16))` · `var(--sf-white--alfa-16)` |
+| `--sf-surface-container-low` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
 | `--sf-surface-container-strong` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
 | `--sf-surface-disabled` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` · `var(--sf-white--alfa-8)` |
 | `--sf-surface-inverse` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-90))` |
 | `--sf-surface-inverse-fixed` | `var(--sf-neutral-20)` |
 | `--sf-surface-inverse-hover` | `light-dark(var(--sf-neutral-25), var(--sf-neutral-85))` |
-| `--sf-surface-media` | `var(--sf-black--alfa-64)` · `var(--sf-black--alfa-80)` |
-| `--sf-surface-media-active` | `var(--sf-black--alfa-80)` · `var(--sf-black)` |
-| `--sf-surface-media-hover` | `var(--sf-black--alfa-80)` · `var(--sf-black)` |
+| `--sf-surface-media` | `var(--sf-black--alfa-64)` · `var(--sf-scheme-text)` · `var(--sf-black--alfa-80)` |
+| `--sf-surface-media-active` | `var(--sf-black--alfa-80)` · `color-mix(in srgb, var(--sf-scheme-text), var(--sf-scheme-ground) 12%)` · `var(--sf-black)` |
+| `--sf-surface-media-hover` | `var(--sf-black--alfa-80)` · `color-mix(in srgb, var(--sf-scheme-text), var(--sf-scheme-ground) 8%)` · `var(--sf-black)` |
 | `--sf-surface-overlay--blur` | `var(--sf-d6)` · `var(--sf-blur-none)` |
 | `--sf-surface-page` | `light-dark(var(--sf-white), var(--sf-neutral-5))` · `var(--sf-scheme-ground)` |
 | `--sf-surface-place` | `var(--sf-surface-page)` · `var(--sf-surface-media)` |
@@ -112,7 +114,7 @@ description: "Полный список переменных, которые о�
 | `--sf-surface-state-hover` | `light-dark(var(--sf-neutral-50--alfa-4), var(--sf-neutral-90--alfa-4))` · `var(--sf-white--alfa-4)` |
 | `--sf-surface-state-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` · `var(--sf-white--alfa-8)` |
 | `--sf-surface-underlay` | `initial` |
-| `--sf-surface-veil` | `light-dark(var(--sf-black--alfa-8), var(--sf-white--alfa-8))` |
+| `--sf-surface-veil` | `light-dark(var(--sf-black--alfa-8), var(--sf-white--alfa-8))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-ground) 64%)` |
 | `--sf-surface-well` | `light-dark(var(--sf-neutral-95), var(--sf-neutral-5))` |
 
 ### Цвет: акцентные роли
@@ -233,52 +235,52 @@ description: "Полный список переменных, которые о�
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
 | `--sf-chart-1` | `light-dark(var(--sf-blue-50), var(--sf-blue-60))` |
-| `--sf-chart-1-fill` | `light-dark(var(--sf-blue-50--alfa-12), var(--sf-blue-50--alfa-24))` |
-| `--sf-chart-1-fill-active` | `light-dark(var(--sf-blue-50--alfa-20), var(--sf-blue-50--alfa-32))` |
-| `--sf-chart-1-fill-hover` | `light-dark(var(--sf-blue-50--alfa-16), var(--sf-blue-50--alfa-28))` |
+| `--sf-chart-1-fill` | `light-dark(var(--sf-blue-50--alfa-12), var(--sf-blue-50--alfa-24))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 12%)` |
+| `--sf-chart-1-fill-active` | `light-dark(var(--sf-blue-50--alfa-20), var(--sf-blue-50--alfa-32))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 20%)` |
+| `--sf-chart-1-fill-hover` | `light-dark(var(--sf-blue-50--alfa-16), var(--sf-blue-50--alfa-28))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 16%)` |
 | `--sf-chart-2` | `light-dark(var(--sf-amber-50), var(--sf-amber-60))` |
-| `--sf-chart-2-fill` | `light-dark(var(--sf-amber-50--alfa-12), var(--sf-amber-50--alfa-24))` |
-| `--sf-chart-2-fill-active` | `light-dark(var(--sf-amber-50--alfa-20), var(--sf-amber-50--alfa-32))` |
-| `--sf-chart-2-fill-hover` | `light-dark(var(--sf-amber-50--alfa-16), var(--sf-amber-50--alfa-28))` |
+| `--sf-chart-2-fill` | `light-dark(var(--sf-amber-50--alfa-12), var(--sf-amber-50--alfa-24))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 24%)` |
+| `--sf-chart-2-fill-active` | `light-dark(var(--sf-amber-50--alfa-20), var(--sf-amber-50--alfa-32))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 32%)` |
+| `--sf-chart-2-fill-hover` | `light-dark(var(--sf-amber-50--alfa-16), var(--sf-amber-50--alfa-28))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 28%)` |
 | `--sf-chart-3` | `light-dark(var(--sf-teal-30), var(--sf-teal-85))` |
-| `--sf-chart-3-fill` | `light-dark(var(--sf-teal-50--alfa-12), var(--sf-teal-50--alfa-24))` |
-| `--sf-chart-3-fill-active` | `light-dark(var(--sf-teal-50--alfa-20), var(--sf-teal-50--alfa-32))` |
-| `--sf-chart-3-fill-hover` | `light-dark(var(--sf-teal-50--alfa-16), var(--sf-teal-50--alfa-28))` |
+| `--sf-chart-3-fill` | `light-dark(var(--sf-teal-50--alfa-12), var(--sf-teal-50--alfa-24))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 12%)` |
+| `--sf-chart-3-fill-active` | `light-dark(var(--sf-teal-50--alfa-20), var(--sf-teal-50--alfa-32))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 20%)` |
+| `--sf-chart-3-fill-hover` | `light-dark(var(--sf-teal-50--alfa-16), var(--sf-teal-50--alfa-28))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 16%)` |
 | `--sf-chart-4` | `light-dark(var(--sf-violet-30), var(--sf-violet-85))` |
-| `--sf-chart-4-fill` | `light-dark(var(--sf-violet-50--alfa-12), var(--sf-violet-50--alfa-24))` |
-| `--sf-chart-4-fill-active` | `light-dark(var(--sf-violet-50--alfa-20), var(--sf-violet-50--alfa-32))` |
-| `--sf-chart-4-fill-hover` | `light-dark(var(--sf-violet-50--alfa-16), var(--sf-violet-50--alfa-28))` |
+| `--sf-chart-4-fill` | `light-dark(var(--sf-violet-50--alfa-12), var(--sf-violet-50--alfa-24))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 24%)` |
+| `--sf-chart-4-fill-active` | `light-dark(var(--sf-violet-50--alfa-20), var(--sf-violet-50--alfa-32))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 32%)` |
+| `--sf-chart-4-fill-hover` | `light-dark(var(--sf-violet-50--alfa-16), var(--sf-violet-50--alfa-28))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 28%)` |
 | `--sf-chart-5` | `light-dark(var(--sf-yellow-30), var(--sf-yellow-85))` |
-| `--sf-chart-5-fill` | `light-dark(var(--sf-yellow-50--alfa-12), var(--sf-yellow-50--alfa-24))` |
-| `--sf-chart-5-fill-active` | `light-dark(var(--sf-yellow-50--alfa-20), var(--sf-yellow-50--alfa-32))` |
-| `--sf-chart-5-fill-hover` | `light-dark(var(--sf-yellow-50--alfa-16), var(--sf-yellow-50--alfa-28))` |
+| `--sf-chart-5-fill` | `light-dark(var(--sf-yellow-50--alfa-12), var(--sf-yellow-50--alfa-24))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 12%)` |
+| `--sf-chart-5-fill-active` | `light-dark(var(--sf-yellow-50--alfa-20), var(--sf-yellow-50--alfa-32))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 20%)` |
+| `--sf-chart-5-fill-hover` | `light-dark(var(--sf-yellow-50--alfa-16), var(--sf-yellow-50--alfa-28))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 16%)` |
 | `--sf-chart-6` | `light-dark(var(--sf-pink-50), var(--sf-pink-60))` |
-| `--sf-chart-6-fill` | `light-dark(var(--sf-pink-50--alfa-12), var(--sf-pink-50--alfa-24))` |
-| `--sf-chart-6-fill-active` | `light-dark(var(--sf-pink-50--alfa-20), var(--sf-pink-50--alfa-32))` |
-| `--sf-chart-6-fill-hover` | `light-dark(var(--sf-pink-50--alfa-16), var(--sf-pink-50--alfa-28))` |
+| `--sf-chart-6-fill` | `light-dark(var(--sf-pink-50--alfa-12), var(--sf-pink-50--alfa-24))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 24%)` |
+| `--sf-chart-6-fill-active` | `light-dark(var(--sf-pink-50--alfa-20), var(--sf-pink-50--alfa-32))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 32%)` |
+| `--sf-chart-6-fill-hover` | `light-dark(var(--sf-pink-50--alfa-16), var(--sf-pink-50--alfa-28))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 28%)` |
 | `--sf-chart-7` | `light-dark(var(--sf-green-50), var(--sf-green-60))` |
-| `--sf-chart-7-fill` | `light-dark(var(--sf-green-50--alfa-12), var(--sf-green-50--alfa-24))` |
-| `--sf-chart-7-fill-active` | `light-dark(var(--sf-green-50--alfa-20), var(--sf-green-50--alfa-32))` |
-| `--sf-chart-7-fill-hover` | `light-dark(var(--sf-green-50--alfa-16), var(--sf-green-50--alfa-28))` |
+| `--sf-chart-7-fill` | `light-dark(var(--sf-green-50--alfa-12), var(--sf-green-50--alfa-24))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 12%)` |
+| `--sf-chart-7-fill-active` | `light-dark(var(--sf-green-50--alfa-20), var(--sf-green-50--alfa-32))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 20%)` |
+| `--sf-chart-7-fill-hover` | `light-dark(var(--sf-green-50--alfa-16), var(--sf-green-50--alfa-28))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 16%)` |
 | `--sf-chart-8` | `light-dark(var(--sf-red-30), var(--sf-red-85))` |
-| `--sf-chart-8-fill` | `light-dark(var(--sf-red-50--alfa-12), var(--sf-red-50--alfa-24))` |
-| `--sf-chart-8-fill-active` | `light-dark(var(--sf-red-50--alfa-20), var(--sf-red-50--alfa-32))` |
-| `--sf-chart-8-fill-hover` | `light-dark(var(--sf-red-50--alfa-16), var(--sf-red-50--alfa-28))` |
+| `--sf-chart-8-fill` | `light-dark(var(--sf-red-50--alfa-12), var(--sf-red-50--alfa-24))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 24%)` |
+| `--sf-chart-8-fill-active` | `light-dark(var(--sf-red-50--alfa-20), var(--sf-red-50--alfa-32))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 32%)` |
+| `--sf-chart-8-fill-hover` | `light-dark(var(--sf-red-50--alfa-16), var(--sf-red-50--alfa-28))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 28%)` |
 | `--sf-chart-brand` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
-| `--sf-chart-brand-fill` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` |
-| `--sf-chart-brand-fill-active` | `light-dark(var(--sf-primary-50--alfa-20), var(--sf-primary-50--alfa-32))` |
-| `--sf-chart-brand-fill-hover` | `light-dark(var(--sf-primary-50--alfa-16), var(--sf-primary-50--alfa-28))` |
+| `--sf-chart-brand-fill` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 12%)` |
+| `--sf-chart-brand-fill-active` | `light-dark(var(--sf-primary-50--alfa-20), var(--sf-primary-50--alfa-32))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 20%)` |
+| `--sf-chart-brand-fill-hover` | `light-dark(var(--sf-primary-50--alfa-16), var(--sf-primary-50--alfa-28))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 16%)` |
 | `--sf-chart-cool-1` | `light-dark(var(--sf-blue-30), var(--sf-blue-85))` |
 | `--sf-chart-cool-2` | `light-dark(var(--sf-teal-30), var(--sf-teal-85))` |
 | `--sf-chart-cool-3` | `light-dark(var(--sf-violet-50), var(--sf-violet-60))` |
 | `--sf-chart-cool-4` | `light-dark(var(--sf-cyan-50), var(--sf-cyan-60))` |
 | `--sf-chart-cool-5` | `light-dark(var(--sf-indigo-40), var(--sf-indigo-70))` |
 | `--sf-chart-cool-6` | `light-dark(var(--sf-green-50), var(--sf-green-60))` |
-| `--sf-chart-diverging-bad` | `light-dark(var(--sf-red-30), var(--sf-red-80))` |
-| `--sf-chart-diverging-good` | `light-dark(var(--sf-blue-30), var(--sf-blue-80))` |
-| `--sf-chart-diverging-high` | `light-dark(var(--sf-teal-30), var(--sf-teal-80))` |
-| `--sf-chart-diverging-low` | `light-dark(var(--sf-purple-30), var(--sf-purple-80))` |
-| `--sf-chart-midpoint` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-20))` |
+| `--sf-chart-diverging-bad` | `light-dark(var(--sf-red-30), var(--sf-red-80))` · `var(--sf-scheme-text)` |
+| `--sf-chart-diverging-good` | `light-dark(var(--sf-blue-30), var(--sf-blue-80))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 64%)` |
+| `--sf-chart-diverging-high` | `light-dark(var(--sf-teal-30), var(--sf-teal-80))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 64%)` |
+| `--sf-chart-diverging-low` | `light-dark(var(--sf-purple-30), var(--sf-purple-80))` · `var(--sf-scheme-text)` |
+| `--sf-chart-midpoint` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-20))` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-text) 12%)` |
 | `--sf-chart-warm-1` | `light-dark(var(--sf-red-30), var(--sf-red-85))` |
 | `--sf-chart-warm-2` | `light-dark(var(--sf-orange-50), var(--sf-orange-60))` |
 | `--sf-chart-warm-3` | `light-dark(var(--sf-amber-40), var(--sf-amber-80))` |
@@ -540,16 +542,16 @@ description: "Полный список переменных, которые о�
 | `--sf-radius-square` | `0` |
 | `--sf-scrim-color` | `var(--sf-black--alfa-64)` |
 | `--sf-scrim-control` | `var(--sf-surface-media)` |
-| `--sf-scrim-control-state-active` | `var(--sf-white--alfa-12)` |
-| `--sf-scrim-control-state-hover` | `var(--sf-white--alfa-8)` |
+| `--sf-scrim-control-state-active` | `var(--sf-white--alfa-12)` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-ground) 12%)` |
+| `--sf-scrim-control-state-hover` | `var(--sf-white--alfa-8)` · `color-mix(in srgb, var(--sf-transparent), var(--sf-scheme-ground) 8%)` |
 | `--sf-scrim-opacity` | `1` |
 | `--sf-shadow--alfa` | `1` |
 | `--sf-shadow-ambient-color` | `light-dark(var(--sf-black--alfa-8), var(--sf-transparent))` |
 | `--sf-shadow-flat` | `none` |
 | `--sf-shadow-key-color` | `light-dark(var(--sf-black--alfa-16), var(--sf-black--alfa-28))` |
-| `--sf-shadow-modal` | `0 var(--sf-a4) var(--sf-a8) var(--sf-shadow-key-color), 0 var(--sf-b6) var(--sf-c6) var(--sf-shadow-ambient-color)` |
-| `--sf-shadow-overlay` | `0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color), 0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color)` |
-| `--sf-shadow-overlay-filter` | `drop-shadow(0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color)) drop-shadow(0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color))` |
+| `--sf-shadow-modal` | `0 var(--sf-a4) var(--sf-a8) var(--sf-shadow-key-color), 0 var(--sf-b6) var(--sf-c6) var(--sf-shadow-ambient-color)` · `0 0 0 var(--sf-px) var(--sf-scheme-text), 0 var(--sf-a4) var(--sf-a8) var(--sf-shadow-key-color), 0 var(--sf-b6) var(--sf-c6) var(--sf-shadow-ambient-color)` |
+| `--sf-shadow-overlay` | `0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color), 0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color)` · `0 0 0 var(--sf-px) var(--sf-scheme-text), 0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color), 0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color)` |
+| `--sf-shadow-overlay-filter` | `drop-shadow(0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color)) drop-shadow(0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color))` · `drop-shadow(var(--sf-px) 0 0 var(--sf-scheme-text)) drop-shadow(calc(-1 * var(--sf-px)) 0 0 var(--sf-scheme-text)) drop-shadow(0 var(--sf-px) 0 var(--sf-scheme-text)) drop-shadow(0 calc(-1 * var(--sf-px)) 0 var(--sf-scheme-text)) drop-shadow(0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color)) drop-shadow(0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color))` |
 | `--sf-shadow-raised` | `0 var(--sf-px) var(--sf-a2) var(--sf-shadow-key-color), 0 var(--sf-a2) var(--sf-a8) var(--sf-shadow-ambient-color)` |
 
 ### Движение
@@ -728,6 +730,8 @@ description: "Полный список переменных, которые о�
 | `--sf-avatar--box-line` | `var(--sf-text-height-1)` · `var(--sf-text-height-1\/4)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1\/2)` · `var(--sf-text-height-2)` · `var(--sf-text-height-3)` |
 | `--sf-avatar--card-heading` | `0` · `1` |
 | `--sf-avatar--card-row` | `0` · `1` |
+| `--sf-button-icon--box-line` | `var(--sf-text-height-1)` · `var(--sf-text-height-1\/3)` · `var(--sf-text-height-1\/2)` · `var(--sf-text-height-2)` · `var(--sf-text-height-3)` |
+| `--sf-button-icon--box-step` | `var(--sf-ui-1--space-y-tightness-default)` · `var(--sf-ui-1\/3--space-y-tightness-default)` · `var(--sf-ui-1\/2--space-y-tightness-default)` · `var(--sf-ui-2--space-y-tightness-default)` · `var(--sf-ui-3--space-y-tightness-default)` · `var(--sf-ui-1--space-y-tightness-low)` · `var(--sf-ui-2--space-y-tightness-low)` · `var(--sf-ui-3--space-y-tightness-low)` · `var(--sf-ui-1--space-y-tightness-high)` · `var(--sf-ui-2--space-y-tightness-high)` · `var(--sf-ui-3--space-y-tightness-high)` · `var(--sf-ui-1--space-y-tightness-highest)` · `var(--sf-ui-2--space-y-tightness-highest)` · `var(--sf-ui-3--space-y-tightness-highest)` |
 | `--sf-color--alfa` | `1` |
 | `--sf-current` | `currentColor` |
 | `--sf-decoration--alfa` | `1` |
@@ -883,7 +887,7 @@ description: "Полный список переменных, которые о�
 | `--sf-page-header--box-line` | `max(var(--sf-heading-4--height), var(--sf-ui-1\/2--control-height))` · `max(calc(var(--sf-heading-4--height) + var(--sf-text-height-1\/3)), var(--sf-ui-1\/2--control-height))` |
 | `--sf-page-header--box-media` | `calc(var(--sf-px) * 0)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-1--control-height)` · `var(--sf-ui-2--control-height)` |
 | `--sf-page-header--box-pad` | `calc(var(--sf-px) * 0)` · `calc(var(--sf-space-1) + var(--sf-space-2))` · `var(--sf-space-1)` |
-| `--sf-page-header--box-path` | `calc(var(--sf-px) * 0)` · `calc(var(--sf-ui-1\/3--control-height) + var(--sf-page-header-gap, var(--sf-space-1\/2)))` |
+| `--sf-page-header--box-path` | `calc(var(--sf-px) * 0)` · `calc(var(--sf-ui-1\/3--control-height) + var(--sf-page-header-gap, var(--sf-space-1\/2)))` · `calc(var(--sf-ui-1\/2--control-height) + var(--sf-page-header-gap, var(--sf-space-1\/2)))` |
 | `--sf-page-header--box-tabs` | `calc(var(--sf-px) * 0)` · `calc(var(--sf-page-header-gap, var(--sf-space-1\/2)) + var(--sf-page-header--box-tabs-strip))` |
 | `--sf-page-header--box-tabs-strip` | `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` |
 | `--sf-paper` | `var(--sf-white)` · `var(--sf-scheme-ground)` |
@@ -951,6 +955,8 @@ description: "Полный список переменных, которые о�
 | `--sf-skeleton-line` | `var(--sf-text-height-1)` |
 | `--sf-skeleton-row` | `calc(var(--sf-text-height-1) + 2 * var(--sf-space-1))` |
 | `--sf-skeleton-row-bar` | `calc(var(--sf-text-size-1) * 0.727)` · `round(nearest, calc(var(--sf-text-size-1) * 0.727), var(--sf-a2))` |
+| `--sf-slider--box-bar` | `0px` · `calc(var(--sf-space-1) + var(--sf-ui-1\/3--control-height))` · `calc(var(--sf-space-1) + var(--sf-ui-1--control-height))` |
+| `--sf-slider--box-thumbs` | `0px` · `calc(var(--sf-space-1) + var(--sf-d2))` |
 | `--sf-slider--peek` | `1.15` · `2.2` |
 | `--sf-tag--box-control` | `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-1\/3--control-height)` · `var(--sf-ui-1--control-height)` · `var(--sf-ui-2--control-height)` · `var(--sf-ui-3--control-height)` · `var(--sf-text-height-1\/2)` · `var(--sf-text-height-1)` · `var(--sf-text-height-2)` · `var(--sf-c2)` |
 | `--sf-tag--box-cross` | `var(--sf-micro--cross-1\/2)` · `var(--sf-micro--cross-1\/3)` · `var(--sf-micro--cross-1)` · `var(--sf-micro--cross-2)` · `var(--sf-micro--cross-3)` |

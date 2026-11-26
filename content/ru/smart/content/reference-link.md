@@ -5,7 +5,7 @@ description: "Ведёт на реальный адрес и показывае�
 
 # Справочная ссылка
 
-:badge[sf-reference-link]{variant=outline scheme=on-surface size=1/2} :badge[1.3.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-reference-link]{variant=outline scheme=on-surface size=1/2} :badge[1.3.6]{variant=outline scheme=on-surface size=1/2}
 
 Справочная ссылка ведёт на реальный адрес и показывает рядом короткую справку:
 путь, источник, номер документа. Берите её, когда читателю важно видеть, куда
@@ -156,13 +156,13 @@ JavaScript.
 
 | | |
 |:---|:---|
-| Тег | `<sf-reference-link>`, контракт `smart.reference-link` версии `1.3.4` |
-| Поставка | выпуск Framework `ui-9ceecc24c988` |
+| Тег | `<sf-reference-link>`, контракт `smart.reference-link` версии `1.3.6` |
+| Поставка | выпуск Framework `ui-73df5d1b4d4c` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как ссылка; желательна подпись или `aria-label`; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/smart/reference-link` |
-| Правило классов | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/rule/rule.json#name=cl-reference-link` |
+| Источник | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/smart/reference-link` |
+| Правило классов | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/rule/rule.json#name=cl-reference-link` |
 
 ## См. также
 

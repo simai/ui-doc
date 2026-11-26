@@ -5,7 +5,7 @@ description: "Кнопка и панель, в которой человек в�
 
 # Настройки отображения
 
-:badge[sf-display-settings]{variant=outline scheme=on-surface size=1/2} :badge[1.1.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-display-settings]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Настройки отображения дают посетителю сайта крупнее текст, другую цветовую
 схему, шире интервалы, картинки серыми или скрытыми и остановку движения —
@@ -170,13 +170,13 @@ panel.addEventListener('sf-display-settings-change', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-display-settings>`, контракт `smart.display-settings` версии `1.1.5` |
-| Поставка | выпуск Framework `ui-9ceecc24c988` |
+| Тег | `<sf-display-settings>`, контракт `smart.display-settings` версии `1.3.0` |
+| Поставка | выпуск Framework `ui-73df5d1b4d4c` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; нужна подпись или `aria-label`; с клавиатуры: Tab доходит до кнопки и каждой кнопки панели; Enter или пробел нажимает её; Escape в открытой панели вида `disclosure` закрывает её и возвращает фокус на кнопку. |
-| Источник | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/smart/display-settings` |
-| Правило классов | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/rule/rule.json#name=cl-display-settings` |
+| Источник | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/smart/display-settings` |
+| Правило классов | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/rule/rule.json#name=cl-display-settings` |
 
 ## См. также
 

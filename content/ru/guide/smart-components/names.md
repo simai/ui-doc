@@ -343,7 +343,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 ### Прежние имена по компонентам
 
-Раздел собран из манифестов выпуска `ui-9ceecc24c988` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
+Раздел собран из манифестов выпуска `ui-73df5d1b4d4c` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
 
 #### `<sf-accordion>`
 
@@ -355,8 +355,6 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| событие `sf-admin-menu-query` | `sf-admin-menu-search` | работает как псевдоним | — |
-| событие `sf-admin-menu-reset` | `sf-admin-menu-settings-reset` | работает как псевдоним | — |
 | событие `sf-admin-menu-refresh` | `sf-admin-menu-intent` | работает как псевдоним | — |
 
 #### `<sf-alert>`
@@ -597,6 +595,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `size="1/2"` | `size="1/3"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `size="2"` | `size="3"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `appearance="bordered"` | `appearance="outlined"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `appearance=band fill="--sf-surface-container-low (8)"` | `appearance=band fill="--sf-surface-container (12)"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | событие `change` | `sf-dropdown:change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-field-reset` | `sf-field:reset` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
@@ -882,6 +881,12 @@ id?}` значит «перестать ждать», а `wait` принимае
 |:---|:---|:---|:---|
 | `data-sf-density` | `size` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 
+#### `<sf-list-description>`
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `.sf-list-description-empty in --sf-on-surface-not-set` | `.sf-list-description-empty in the label's colour` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+
 #### `<sf-list-item>`
 
 | Имя | Прежнее имя | Состояние | Убирается после |
@@ -1026,6 +1031,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 |:---|:---|:---|:---|
 | `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="(no status)"` | `status="primary"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 
 #### `<sf-progress-run>`
 
@@ -1063,6 +1069,12 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `height` | `spacing` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | событие `change` | `sf-button-group-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `spacing` | `tightness` | работает как псевдоним | — |
+
+#### `<sf-settings>`
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `head = search (48 / 40 / 40), close in the checks' column` | `head 45 / 41 / 37, close 8 px past the checks` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 
 #### `<sf-skeleton>`
 

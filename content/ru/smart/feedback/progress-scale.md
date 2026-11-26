@@ -5,7 +5,7 @@ description: "Показывает известный ход процесса ш
 
 # Шкала прогресса
 
-:badge[sf-progress-scale]{variant=outline scheme=on-surface size=1/2} :badge[1.4.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-scale]{variant=outline scheme=on-surface size=1/2} :badge[1.4.3]{variant=outline scheme=on-surface size=1/2}
 
 Шкала прогресса показывает известную долю выполненного десятью делениями,
 а с `steps` — уровень из 2–10 делений.
@@ -159,13 +159,13 @@ description: "Показывает известный ход процесса ш
 
 | | |
 |:---|:---|
-| Тег | `<sf-progress-scale>`, контракт `smart.progress-scale` версии `1.4.2` |
-| Поставка | выпуск Framework `ui-9ceecc24c988` |
+| Тег | `<sf-progress-scale>`, контракт `smart.progress-scale` версии `1.4.3` |
+| Поставка | выпуск Framework `ui-73df5d1b4d4c` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как индикатор прогресса; нужна подпись или `aria-label`. |
-| Источник | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/smart/progress-scale` |
-| Правило классов | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/rule/rule.json#name=cl-progress-scale` |
+| Источник | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/smart/progress-scale` |
+| Правило классов | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/rule/rule.json#name=cl-progress-scale` |
 
 ## См. также
 

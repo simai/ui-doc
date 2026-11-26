@@ -40,11 +40,11 @@ declare(strict_types=1);
  * into a Docara checkout, which never carries package bytes.
  */
 
-const UI_METADATA_REVISION = 'a5dd8d224895d24812f278734e86daf337bad93a';
-const UI_RUNTIME_REVISION = '9ceecc24c988209abc7d09e22522eeb7b73f485e';
-const SOURCE_REVISION = 'e7ea89e07a3a6494cd2e6d4b4dd2dfa3a4d560cf';
-const BUILDER_REVISION = '0ec5196b35aea0251abed7af4c60f498e1a3e411';
-const RELEASE_LOCK = 'contracts/releases/ui-9ceecc24c988.lock.json';
+const UI_METADATA_REVISION = 'b209ab955296b2476480e4d1ab82db164dfca6ad';
+const UI_RUNTIME_REVISION = '73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb';
+const SOURCE_REVISION = '5e30b946fd0e620a4d00ab771af143dc286be1b8';
+const BUILDER_REVISION = '524bf464a36aaac1029161c650218b3e43e88a1f';
+const RELEASE_LOCK = 'contracts/releases/ui-73df5d1b4d4c.lock.json';
 // The release on npm, the form the guide's CDN snippets use
 // (https://cdn.jsdelivr.net/npm/<package>@<version>/distr/...). The version is
 // derived from the release commit, never chosen: 5.<yyyymmdd>.<hhmm> of its
@@ -52,7 +52,7 @@ const RELEASE_LOCK = 'contracts/releases/ui-9ceecc24c988.lock.json';
 // the commit. scripts/sync-framework-documentation-versions.php checks the
 // version against UI_RUNTIME_REVISION and moves the snippets with it.
 const NPM_PACKAGE = '@simai-studio/ui';
-const NPM_VERSION = '5.20261121.928';
+const NPM_VERSION = '5.20261125.1855';
 // Product component packages, each taken by its package receipt. The build is
 // reproducible, so the archive digest names the exact bytes. A package names
 // the ui-builder commit that built it: it may be newer than the one the
@@ -63,10 +63,30 @@ const NPM_VERSION = '5.20261121.928';
 const PACKAGES = [
     'pro' => [
         'repository' => 'simai/ui-pro',
-        'revision' => 'f6c43828e5f22e65bc377806473007f01a0a51b8',
+        'revision' => 'cfaab360bb397013e3eadec139b60b9d9b9f14e4',
         'path' => 'components',
-        'archive_sha256' => 'c95a49a5a7d8aaeb1d6196f85c0a6cebe6bf607840b13069c8bf04037cc6b49b',
-        'builder' => '0ec5196b35aea0251abed7af4c60f498e1a3e411',
+        'archive_sha256' => 'f7a75b0ce411f6868052898de1549f07399475e2340dc1cc5e5ec5941a857b5e',
+        'builder' => '58fc73027f3b40a9f6fcc82f67e89542e4f1fb05',
+    ],
+    // The Admin set (simai/ui-admin, release admin-45b580402884, 1.2.2): the
+    // administration components sf-admin-menu, sf-admin-shell,
+    // sf-admin-notifications and sf-admin-activity left Pro for it. A set is a
+    // package with its passport (set.json) beside smart/.
+    'admin' => [
+        'repository' => 'simai/ui-admin',
+        'revision' => '45b580402884bd9d7e067d95629303b8df2a2f8a',
+        'path' => 'package',
+        'archive_sha256' => 'f9cafa030d548df97daedf4ed1aab52caddc50455c26d4113c82f94fb74add70',
+        'builder' => '58fc73027f3b40a9f6fcc82f67e89542e4f1fb05',
+    ],
+    // The Editor set (simai/ui-editor, release editor-57f16aec0183, 1.5.2): the
+    // page editor sf-editor left Pro for it.
+    'editor' => [
+        'repository' => 'simai/ui-editor',
+        'revision' => '57f16aec0183562700b70328dea21104400f02aa',
+        'path' => 'package',
+        'archive_sha256' => '5a35cef807fbffe07f1ad2de0f1e828e485533db7ed541e28934b152a1f6a027',
+        'builder' => '58fc73027f3b40a9f6fcc82f67e89542e4f1fb05',
     ],
 ];
 

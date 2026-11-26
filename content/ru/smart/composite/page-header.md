@@ -5,7 +5,7 @@ description: "Голова рабочей страницы приложения:
 
 # Шапка страницы
 
-:badge[sf-header-page]{variant=outline scheme=on-surface size=1/2} :badge[1.11.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-header-page]{variant=outline scheme=on-surface size=1/2} :badge[1.12.0]{variant=outline scheme=on-surface size=1/2}
 
 Шапка страницы — голова рабочей страницы приложения: путь, заголовок, звезда
 избранного, действия страницы и её вкладки. У приложения с боковым меню —
@@ -242,13 +242,13 @@ description: "Голова рабочей страницы приложения:
 
 | | |
 |:---|:---|
-| Тег | `<sf-header-page>`, контракт `smart.header-page` версии `1.11.2` |
-| Поставка | выпуск Framework `ui-9ceecc24c988` |
+| Тег | `<sf-header-page>`, контракт `smart.header-page` версии `1.12.0` |
+| Поставка | выпуск Framework `ui-73df5d1b4d4c` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; название компонент ставит сам; с клавиатуры: `Tab` доходит до звезды и действий; `Enter` или `Пробел` ставят и снимают звезду. |
-| Источник | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/smart/header-page` |
-| Правило классов | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/rule/rule.json#name=cl-header-page` |
+| Источник | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/smart/header-page` |
+| Правило классов | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/rule/rule.json#name=cl-header-page` |
 
 ## См. также
 

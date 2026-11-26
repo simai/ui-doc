@@ -1,21 +1,8 @@
-<sf-admin-menu
-  aria-label="Разделы администрирования"
-  brand="SIMAI"
-  persistence-mode="external"
-  searchable
-  collapsible>
-  <sf-admin-menu-item item-id="dashboard" label="Обзор" href="#dashboard" left-icon="dashboard" current>
-  </sf-admin-menu-item>
-  <sf-admin-menu-item item-id="content" label="Контент" left-icon="description">
-    <sf-admin-menu-item item-id="content.pages" label="Страницы">
-      <sf-admin-menu-item item-id="content.pages.catalog" label="Каталог">
-        <sf-admin-menu-item item-id="content.pages.catalog.products" label="Товары" href="#products" badge="12">
-        </sf-admin-menu-item>
-      </sf-admin-menu-item>
-    </sf-admin-menu-item>
-    <sf-admin-menu-item item-id="content.media" label="Медиафайлы" href="#media">
-    </sf-admin-menu-item>
-  </sf-admin-menu-item>
-  <sf-admin-menu-item item-id="settings" label="Настройки" href="#settings" left-icon="settings" slot="bottom">
-  </sf-admin-menu-item>
-</sf-admin-menu>
+<script src="assets/admin-demo.js"></script>
+<div class="page-menu">
+  <sf-admin-menu id="menu" aria-label="Меню" expected-columns="2" current="srv.dns"></sf-admin-menu>
+  <div class="page-content">
+    <p class="page-title">DNS-зоны</p>
+    <p class="m-0 color-on-surface-variant">Нажмите раздел на рейке, откройте поиск значком лупы или клавишами ⌘K, отметьте строку звездой, переключите сервер в квадрате сверху, откройте профиль внизу. Журнал под примером показывает, что меню спросило у хоста.</p>
+  </div>
+</div>

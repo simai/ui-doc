@@ -6,7 +6,7 @@ profile: reference
 
 # Календарь
 
-:badge[sf-datepicker]{variant=outline scheme=on-surface size=1/2} :badge[1.12.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-datepicker]{variant=outline scheme=on-surface size=1/2} :badge[1.12.1]{variant=outline scheme=on-surface size=1/2}
 
 Календарь показывает дни месяца, выбранную дату или период. Поведения у
 классов нет: перелистывание, выбор даты и

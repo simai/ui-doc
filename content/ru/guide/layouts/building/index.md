@@ -30,4 +30,5 @@ description: "Макет делит страницу на три уровня о
 - [Фрагменты интерфейса](/ru/guide/layouts/building/interface-fragments/)
 - [Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/)
 - [Рабочая область](/ru/guide/layouts/building/workspace/)
+- [Обновление блока](/ru/guide/layouts/building/block-refresh/)
 - [Фоновые эффекты](/ru/guide/layouts/building/background-effects/)

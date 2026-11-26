@@ -5,7 +5,7 @@ description: "Рисует поверхность короткой подска�
 
 # Подсказка
 
-:badge[sf-tooltip]{variant=outline scheme=on-surface size=1/2} :badge[1.5.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tooltip]{variant=outline scheme=on-surface size=1/2} :badge[1.5.5]{variant=outline scheme=on-surface size=1/2}
 
 Подсказка показывает короткий текст рядом с элементом: значение ручки
 слайдера, пояснение к числу, сочетание клавиш. Сама она не следит, на что
@@ -124,13 +124,13 @@ description: "Рисует поверхность короткой подска�
 
 | | |
 |:---|:---|
-| Тег | `<sf-tooltip>`, контракт `smart.tooltip` версии `1.5.3` |
-| Поставка | выпуск Framework `ui-9ceecc24c988` |
+| Тег | `<sf-tooltip>`, контракт `smart.tooltip` версии `1.5.5` |
+| Поставка | выпуск Framework `ui-73df5d1b4d4c` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Выпущен; используется в продуктах. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как подсказка; название компонент ставит сам; с клавиатуры: `Esc` закрывает открытую подсказку, фокус остаётся на месте. |
-| Источник | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/smart/tooltip` |
-| Правило классов | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/rule/rule.json#name=cl-tooltip` |
+| Источник | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/smart/tooltip` |
+| Правило классов | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/rule/rule.json#name=cl-tooltip` |
 
 ## См. также
 

@@ -5,7 +5,7 @@ description: "Готовое письмо в рамке, которая ниче
 
 # Холст письма
 
-:badge[sf-mail-canvas]{variant=outline scheme=on-surface size=1/2} :badge[1.1.8]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-canvas]{variant=outline scheme=on-surface size=1/2} :badge[1.1.9]{variant=outline scheme=on-surface size=1/2}
 
 Холст показывает письмо в редакторе писем таким, каким его получат: готовое
 письмо в рамке, которая ничего не запускает, переключатель ширины над ним,
@@ -234,9 +234,9 @@ Tab не входят. Клавиши дерева и панели — у `sf-ed
 
 | | |
 |:---|:---|
-| Тег | `<sf-mail-canvas>`, контракт `smart.mail-canvas` версии `1.1.8` |
+| Тег | `<sf-mail-canvas>`, контракт `smart.mail-canvas` версии `1.1.9` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: `Tab`, `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Esc`. |
-| Источник | `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/mail-canvas` |
-| Правило классов | `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/mail-canvas/rule.js#name=cl-mail-canvas` |
+| Источник | `simai/ui-pro@cfaab360bb397013e3eadec139b60b9d9b9f14e4:components/src/smart/mail-canvas` |
+| Правило классов | `simai/ui-pro@cfaab360bb397013e3eadec139b60b9d9b9f14e4:components/src/smart/mail-canvas/rule.js#name=cl-mail-canvas` |

@@ -26,7 +26,7 @@ API компонента (`SF.Input`, `SF.Tabs` и другие) описан н
 
 ## Имена по уровням
 
-Раздел собран из контракта выпуска `ui-9ceecc24c988` (`core/contracts/public-js-api.json`) и обновляется вместе с выпуском.
+Раздел собран из контракта выпуска `ui-73df5d1b4d4c` (`core/contracts/public-js-api.json`) и обновляется вместе с выпуском.
 
 ### Ядро
 
@@ -42,13 +42,16 @@ API компонента (`SF.Input`, `SF.Tabs` и другие) описан н
 | `SF.copyFeedback` | Отклик копирования для своей кнопки: галочка, «Скопировано» для диктора, подсказка при отказе. | [Копирование текста](/ru/guide/functions/actions/copy-text/) |
 | `SF.copyText` | Кладёт текст в буфер обмена. | [Копирование текста](/ru/guide/functions/actions/copy-text/) |
 | `SF.deprecations` | Прежние имена, которые ещё принимаются, и чем их заменить. | [Жизненный цикл изменений](/ru/guide/connection/change-lifecycle/) |
+| `SF.device` | Раскладка места компонента (телефон или компьютер) и указатель страницы; отбор пунктов по отметке devices. | [Устройство: раскладка и указатель](/ru/guide/functions/screen/device/) |
 | `SF.displaySettings` | Размер текста, цветовая схема, интервалы и движение, которые человек выбрал для сайта. | [Настройки отображения](/ru/guide/functions/person/display-settings/) |
 | `SF.EarlyPort` | Порты, объявленные в разметке: первый запрос до кода компонента. | [Данные с сервера](/ru/guide/smart-components/data/) |
 | `SF.Effects` | Прежнее имя движка фоновых эффектов; новое — `SF.package('effects')`. | [Фоновые эффекты](/ru/guide/layouts/building/background-effects/) |
 | `SF.format` | Даты, дни, числа и размеры файлов на языке страницы. | [Даты, числа и размеры](/ru/guide/functions/text/format/) |
+| `SF.FragmentRefresh` | Обновляет один блок страницы по его ссылкам и формам, не загружая страницу целиком. | [Обновление блока](/ru/guide/layouts/building/block-refresh/) |
 | `SF.icons` | Список значков, из которых выбирает человек. | [Значки на выбор](/ru/guide/functions/person/icons/) |
 | `SF.language` | Язык всей страницы и слова, добавленные для компонентов. | [Язык страницы](/ru/guide/functions/text/language/) |
 | `SF.loadRuntime` | Загружает общую среду смарт-компонентов; её вызывает Loader. | [Загрузка и общая среда](/ru/guide/smart-components/runtime/) |
+| `SF.longPress` | Долгое нажатие пальцем, общее для списков, карточек и досок. | [Долгое нажатие](/ru/guide/functions/screen/long-press/) |
 | `SF.Mask` | Маска ввода у поля и форматирование значения по маске. | [Маска поля](/ru/guide/functions/text/mask/) |
 | `SF.menu` | Открывает одно меню действий страницы у кнопки или в точке и отвечает выбранной строкой. | [Контекстное меню](/ru/smart/navigation/context-menu/#одно-меню-страницы) |
 | `SF.notifications` | Настройки области уведомлений и показанные сообщения. | [Уведомления](/ru/guide/functions/actions/notify/) |

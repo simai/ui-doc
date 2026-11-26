@@ -6,7 +6,7 @@ profile: reference
 
 # Кольцо прогресса
 
-:badge[sf-progress-ring]{variant=outline scheme=on-surface size=1/2} :badge[1.7.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-ring]{variant=outline scheme=on-surface size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
 
 Кольцо прогресса показывает значение от 0 до 100 кольцом размером с
 элемент управления: в панели инструментов, в строке списка, вокруг аватара.
@@ -158,6 +158,7 @@ profile: reference
 | `--sf-progress-ring--step-line-width` | `var(--sf-a2)` | `--sf-progress-ring--line-width` |
 | `--sf-progress-ring--step-size` | `var(--sf-ui-1--control-height)` | `--sf-progress-ring--size` |
 | `--sf-progress-ring--track` | `var(--sf-progress-ring-track-color, var(--sf-surface-container))` | `background` |
+| `--sf-progress-ring--value` | `var(--sf-progress-ring-value, 0)` | `background` |
 
 ## См. также
 

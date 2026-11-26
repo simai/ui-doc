@@ -33,6 +33,14 @@ description: "Ограничивает ширину текстового бло�
 | `measure` | `max-width: var(--sf-measure-80)` | — |
 | `measure-wide` | `max-width: var(--sf-measure-96)` | — |
 | `measure-narrow` | `max-width: var(--sf-measure-52)` | — |
+| `measure-20` | `max-width: var(--sf-measure-20)` | — |
+| `measure-28` | `max-width: var(--sf-measure-28)` | — |
+| `measure-36` | `max-width: var(--sf-measure-36)` | — |
+| `measure-44` | `max-width: var(--sf-measure-44)` | — |
+| `measure-52` | `max-width: var(--sf-measure-52)` | — |
+| `measure-64` | `max-width: var(--sf-measure-64)` | — |
+| `measure-80` | `max-width: var(--sf-measure-80)` | — |
+| `measure-96` | `max-width: var(--sf-measure-96)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:measure`.
 
@@ -47,6 +55,11 @@ description: "Ограничивает ширину текстового бло�
 | `--sf-measure-80` | `calc(80 * var(--sf-measure--char))` |
 | `--sf-measure-96` | `calc(96 * var(--sf-measure--char))` |
 | `--sf-measure-52` | `calc(52 * var(--sf-measure--char))` |
+| `--sf-measure-20` | `calc(20 * var(--sf-measure--char))` |
+| `--sf-measure-28` | `calc(28 * var(--sf-measure--char))` |
+| `--sf-measure-36` | `calc(36 * var(--sf-measure--char))` |
+| `--sf-measure-44` | `calc(44 * var(--sf-measure--char))` |
+| `--sf-measure-64` | `calc(64 * var(--sf-measure--char))` |
 
 ## Применение
 
