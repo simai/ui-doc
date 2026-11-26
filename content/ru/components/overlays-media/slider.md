@@ -122,6 +122,12 @@ profile: reference
 задают цвет без измерения, а переменная `--sf-slider-indicator-ink` сильнее
 всех значений.
 
+У [Слайдера контента](/ru/smart/content/slider/) то же задают атрибуты
+`indicator="inside"` и `indicator-ink`; так собран пример.
+
+:::example {id="components/slider/inside" label="Точки поверх картинки"}
+:::
+
 ### Повтор
 
 По умолчанию слайдер останавливается на первом и последнем слайде.
