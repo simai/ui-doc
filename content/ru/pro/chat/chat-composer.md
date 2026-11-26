@@ -5,7 +5,7 @@ description: "Поле вопроса и файлов чата: Enter отпра
 
 # Поле чата
 
-:badge[sf-chat-composer]{variant=outline scheme=on-surface size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-composer]{variant=outline scheme=on-surface size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-composer>` — поле вопроса и файлов чата: текст растёт до восьми
 строк, Enter отправляет, Shift+Enter переносит строку. Файлы поле только
@@ -123,7 +123,7 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 ## Справочник API
 
-Раздел собран из манифеста компонента пакета `pro` выпуска `pro-f6c43828e5f2` над выпуском Framework `ui-9ceecc24c988` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента пакета `pro` выпуска `pro-cfaab360bb39` над выпуском Framework `ui-73df5d1b4d4c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -131,7 +131,7 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 |:---|:---|
 | Тег | `<sf-chat-composer>` |
 | Назначение | Место, где пишут вопрос и добавляют файлы: Enter отправляет, Shift+Enter переносит строку, набор через IME никогда не прерывается, кнопка отправки на время ожидания ответа становится «остановить ожидание», а файлы только сообщаются — загружает их приложение; их плашки приходят обратно через `files`. |
-| Контракт | `smart.chat-composer`, версия `1.3.0` |
+| Контракт | `smart.chat-composer`, версия `1.4.1` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -184,8 +184,8 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 ### Источник
 
-- `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/chat-composer`
-- `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/chat-composer/rule.js#name=cl-chat-composer`
+- `simai/ui-pro@cfaab360bb397013e3eadec139b60b9d9b9f14e4:components/src/smart/chat-composer`
+- `simai/ui-pro@cfaab360bb397013e3eadec139b60b9d9b9f14e4:components/src/smart/chat-composer/rule.js#name=cl-chat-composer`
 
 ## См. также
 

@@ -5,7 +5,7 @@ description: "Факты парами «подпись — значение»: �
 
 # Список сведений
 
-:badge[sf-list-description]{variant=outline scheme=on-surface size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-description]{variant=outline scheme=on-surface size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Показывает факты парами «подпись — значение»: сводку сайта, сведения о
 сервере, шапку записи, параметры задания, данные лицензии. Значение может
@@ -190,13 +190,13 @@ facts.addEventListener('sf-list-description-navigate', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list-description>`, контракт `smart.list-description` версии `1.4.0` |
-| Поставка | выпуск Framework `ui-9ceecc24c988` |
+| Тег | `<sf-list-description>`, контракт `smart.list-description` версии `1.4.1` |
+| Поставка | выпуск Framework `ui-73df5d1b4d4c` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; желательна подпись или `aria-label`; с клавиатуры: Tab проходит в порядке чтения по действию каждого раздела, каждой метке справки, каждой ссылке значения, каждой кнопке копирования, действию каждого пункта и, с `overflow="truncate"`, по каждому обрезанному значению; Enter переходит по ссылке, копирует или выполняет действие. |
-| Источник | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/smart/list-description` |
-| Правило классов | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/rule/rule.json#name=cl-list-description` |
+| Источник | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/smart/list-description` |
+| Правило классов | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/rule/rule.json#name=cl-list-description` |
 
 ## См. также
 

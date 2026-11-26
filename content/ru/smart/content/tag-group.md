@@ -5,7 +5,7 @@ description: "Ряд тегов с одним шагом Tab, стрелками
 
 # Группа тегов
 
-:badge[sf-tag-group]{variant=outline scheme=on-surface size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tag-group]{variant=outline scheme=on-surface size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
 
 Группа тегов собирает ряд [тегов](/ru/smart/content/tags/): выбранные
 значения, которые можно убрать, фильтры над списком, теги в ячейке таблицы
@@ -112,7 +112,9 @@ group.addEventListener('sf-tag-close', (event) => event.target.remove());
 |:---|:---|:---|:---|:---|
 | `layout` | строка | `row` | `row`, `wrap` | `row` — одна строка: фильтры, ячейка таблицы, карточка; теги, которые не поместились, уходят из строки, и «+N» открывает их во всплывающей панели; `wrap` — ряд переносится, все теги на виду (форма). |
 | `selection` | строка | `none` | `none`, `one`, `many` | Для тегов-фильтров (`kind="checkbox"`): `none` — каждый тег сам по себе; `one` — выбран один тег (выбор тега снимает выбор с остальных, выбранный можно снять); `many` — выбирается любой набор. При `one` и `many` группа сообщает выбор событием `sf-tag-group-select`. |
-| `aria-label` | строка | пусто | — | — |
+| `selected` | строка | пусто | — | Ключ выбранного тега (его `key`, иначе текст); при `selection="many"` — первого выбранного. Запись выбирает этот тег и снимает выбор с остальных. |
+| `aria-label` | строка | пусто | — | Доступное имя ряда, которое произносится вместе со списком: что это за теги — «Города» или «Фильтры». Рекомендуется; вместо него `aria-labelledby` берёт имя из заголовка. |
+| `selected-ids` | список | `[]` | — | Ключи выбранных тегов в порядке ряда. Запись выбирает эти теги и снимает выбор с остальных (при `selection="one"` — только первый). |
 
 #### Общие для всех компонентов
 
@@ -140,13 +142,13 @@ group.addEventListener('sf-tag-close', (event) => event.target.remove());
 
 | | |
 |:---|:---|
-| Тег | `<sf-tag-group>`, контракт `smart.tag-group` версии `1.1.0` |
-| Поставка | выпуск Framework `ui-9ceecc24c988` |
+| Тег | `<sf-tag-group>`, контракт `smart.tag-group` версии `1.2.1` |
+| Поставка | выпуск Framework `ui-73df5d1b4d4c` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как список; желательна подпись или `aria-label`; с клавиатуры: Tab попадает в ряд один раз; стрелки влево и вправо ходят по тегам и «+N», Home и End — к концам ряда; Delete или Backspace убирает тег, на котором стоит фокус, если его можно убрать; фокус переходит к соседу; Enter или пробел на «+N» открывает скрытые теги; Escape закрывает их. |
-| Источник | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/smart/tag-group` |
-| Правило классов | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/rule/rule.json#name=cl-tag-group` |
+| Источник | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/smart/tag-group` |
+| Правило классов | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/rule/rule.json#name=cl-tag-group` |
 
 ## См. также
 

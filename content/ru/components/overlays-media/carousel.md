@@ -6,7 +6,7 @@ profile: reference
 
 # Карусель
 
-:badge[sf-carousel]{variant=outline scheme=on-surface size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-carousel]{variant=outline scheme=on-surface size=1/2} :badge[1.6.1]{variant=outline scheme=on-surface size=1/2}
 
 `sf-carousel` — прежнее имя [слайдера контента](/ru/components/overlays-media/slider/).
 Во Framework теперь один слайдер: `sf-slider`. Карусель работает до
@@ -61,6 +61,7 @@ profile: reference
 | `--sf-carousel-control--background-color` | `var(--sf-surface-media)` | `background-color` |
 | `--sf-carousel-control--color` | `var(--sf-on-surface-media)` | `color` |
 | `--sf-carousel-control--radius` | `var(--sf-radius-rounded)` | `border-radius` |
+| `--sf-carousel-control--state` | не задана; задают модификаторы, например `:root:not([data-sf-scheme]) :is(.sf-carousel-switch:not(.sf-carousel-switch--primary), .sf-carousel-rotation):hover`: `var(--sf-scrim-control-state-hover)` | `background-image` |
 | `--sf-carousel-pagination--backdrop` | не задана; задают модификаторы, например `.sf-carousel-pagination--primary`: `none` | `backdrop-filter` |
 | `--sf-carousel-pagination--background-color` | `var(--sf-surface-media)` | `background-color` |
 | `--sf-carousel-pagination--radius` | `var(--sf-radius-rounded)` | `border-radius` |

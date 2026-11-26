@@ -39,7 +39,10 @@
   },
   "skip": {
     "message-log": "Dated alias of sf-list-feed until 2027-01-01: the page is a short note that points to the feed (D10, register RG-S2-52); the name table lives in the «Прежние имена» guide.",
-    "theme-generator": "Leaving until 2027-01-01 (C84): sf-input-color variant=\"brand\" and variant=\"theme\" replace it; its page folded into smart/forms/color.md (DEV decision 2026-11-15), the old address redirects there. Its former names stay in the «Прежние имена» guide."
+    "theme-generator": "Leaving until 2027-01-01 (C84): sf-input-color variant=\"brand\" and variant=\"theme\" replace it; its page folded into smart/forms/color.md (DEV decision 2026-11-15), the old address redirects there. Its former names stay in the «Прежние имена» guide.",
+    "admin-activity": "A component of the Admin set (simai/ui-admin, package admin) that the docs do not show: the admin shell and its parts are documented with the set in simai/ui-admin; this site documents sf-admin-menu, whose page and examples it keeps.",
+    "admin-notifications": "A component of the Admin set (simai/ui-admin, package admin) that the docs do not show: the admin shell and its parts are documented with the set in simai/ui-admin; this site documents sf-admin-menu, whose page and examples it keeps.",
+    "admin-shell": "A component of the Admin set (simai/ui-admin, package admin) that the docs do not show: the admin shell and its parts are documented with the set in simai/ui-admin; this site documents sf-admin-menu, whose page and examples it keeps."
   },
   "suppress": {
     "popover": {

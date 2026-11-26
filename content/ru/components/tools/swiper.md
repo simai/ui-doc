@@ -130,7 +130,7 @@ swiper.on('slideChange', (instance) => console.log(instance.activeIndex));
 | Что | Классы |
 |:---|:---|
 | Блок | `swiper` |
-| Части | `swiper-button-disabled`, `swiper-dragging`, `swiper-slide`, `swiper-touch`, `swiper-wrapper` |
+| Части | `swiper-button-disabled`, `swiper-css-mode`, `swiper-dragging`, `swiper-mouse-drag`, `swiper-slide`, `swiper-touch`, `swiper-wrapper` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

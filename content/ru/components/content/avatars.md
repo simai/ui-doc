@@ -6,7 +6,7 @@ profile: reference
 
 # Аватары
 
-:badge[sf-avatar]{variant=outline scheme=on-surface size=1/2} :badge[1.12.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-avatar]{variant=outline scheme=on-surface size=1/2} :badge[1.12.2]{variant=outline scheme=on-surface size=1/2}
 
 Аватар помогает быстро узнать человека, организацию или системный объект по
 фотографии, инициалам или значку. Он представляет идентичность, а не

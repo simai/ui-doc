@@ -153,5 +153,5 @@ library.addEventListener('sf-mail-library-replace', (event) => {
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | Доступность | Читается как группа; название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/mail-library` |
-| Правило классов | `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/mail-library/rule.js#name=cl-mail-library` |
+| Источник | `simai/ui-pro@cfaab360bb397013e3eadec139b60b9d9b9f14e4:components/src/smart/mail-library` |
+| Правило классов | `simai/ui-pro@cfaab360bb397013e3eadec139b60b9d9b9f14e4:components/src/smart/mail-library/rule.js#name=cl-mail-library` |

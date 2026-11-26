@@ -5,7 +5,7 @@ description: "Одно сообщение чата: ответ помощник�
 
 # Сообщение чата
 
-:badge[sf-chat-message]{variant=outline scheme=on-surface size=1/2} :badge[1.9.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-message]{variant=outline scheme=on-surface size=1/2} :badge[1.9.4]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-message>` рисует одно сообщение чата: ответ помощника с разметкой,
 источниками, отметкой проверки и оценкой, вопрос человека с файлами, а по
@@ -153,7 +153,7 @@ log.renderMessage = (message, {view}) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента пакета `pro` выпуска `pro-f6c43828e5f2` над выпуском Framework `ui-9ceecc24c988` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента пакета `pro` выпуска `pro-cfaab360bb39` над выпуском Framework `ui-73df5d1b4d4c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -161,7 +161,7 @@ log.renderMessage = (message, {view}) => {
 |:---|:---|
 | Тег | `<sf-chat-message>` |
 | Назначение | Одно сообщение чата: ответ помощника с разметкой, источниками, отметкой проверки, заметками, предложением изменения, оценкой и уточнением задачи — или его ожидание; вопрос человека с файлами; а по шаблону `person` — сообщение разговора людей. Сообщение сообщает, что сделал человек; что это значит, решает приложение. |
-| Контракт | `smart.chat-message`, версия `1.9.3` |
+| Контракт | `smart.chat-message`, версия `1.9.4` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -215,8 +215,8 @@ log.renderMessage = (message, {view}) => {
 
 ### Источник
 
-- `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/chat-message`
-- `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/chat-message/rule.js#name=cl-chat-message`
+- `simai/ui-pro@cfaab360bb397013e3eadec139b60b9d9b9f14e4:components/src/smart/chat-message`
+- `simai/ui-pro@cfaab360bb397013e3eadec139b60b9d9b9f14e4:components/src/smart/chat-message/rule.js#name=cl-chat-message`
 
 ## См. также
 

@@ -5,7 +5,7 @@ description: "Кнопка с именем текущего собеседник
 
 # Выбор собеседника
 
-:badge[sf-chat-interlocutor]{variant=outline scheme=on-surface size=1/2} :badge[1.0.12]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-interlocutor]{variant=outline scheme=on-surface size=1/2} :badge[1.0.13]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-interlocutor>` показывает, с кем разговор, и даёт выбрать другого
 собеседника. Список собеседников — серверный: элемент только показывает его и
@@ -100,7 +100,7 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента пакета `pro` выпуска `pro-f6c43828e5f2` над выпуском Framework `ui-9ceecc24c988` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента пакета `pro` выпуска `pro-cfaab360bb39` над выпуском Framework `ui-73df5d1b4d4c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -108,7 +108,7 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 |:---|:---|
 | Тег | `<sf-chat-interlocutor>` |
 | Назначение | С кем разговор: собеседники сервера в контекстном меню SIMAI Framework, текущий отмечен, а выбор другого сообщается приложению, чтобы оно начало новый разговор. Один собеседник — это имя, а не выбор. |
-| Контракт | `smart.chat-interlocutor`, версия `1.0.12` |
+| Контракт | `smart.chat-interlocutor`, версия `1.0.13` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -147,8 +147,8 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/chat-interlocutor`
-- `simai/ui-pro@f6c43828e5f22e65bc377806473007f01a0a51b8:components/src/smart/chat-interlocutor/rule.js#name=cl-chat-interlocutor`
+- `simai/ui-pro@cfaab360bb397013e3eadec139b60b9d9b9f14e4:components/src/smart/chat-interlocutor`
+- `simai/ui-pro@cfaab360bb397013e3eadec139b60b9d9b9f14e4:components/src/smart/chat-interlocutor/rule.js#name=cl-chat-interlocutor`
 
 ## См. также
 

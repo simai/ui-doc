@@ -57,6 +57,11 @@ description: "Меняет отображение, направление, ко�
 | `cq-sm:col-span-{значение}` (`.cq-sm:col-span-{значение}.cq-sm:col-span-{значение}`) | `grid-column: span {значение} / span {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-sm:col-span-full` (`.cq-sm:col-span-full.cq-sm:col-span-full`) | `grid-column: 1 / -1` | — |
 | `cq-sm:col-auto` (`.cq-sm:col-auto.cq-sm:col-auto`) | `grid-column: auto` | — |
+| `cq-sm:col-start-{значение}` (`.cq-sm:col-start-{значение}.cq-sm:col-start-{значение}`) | `grid-column-start: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `auto` |
+| `cq-sm:order-{значение}` (`.cq-sm:order-{значение}.cq-sm:order-{значение}`) | `order: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
+| `cq-sm:order-first` (`.cq-sm:order-first.cq-sm:order-first`) | `order: -9999` | — |
+| `cq-sm:order-last` (`.cq-sm:order-last.cq-sm:order-last`) | `order: 9999` | — |
+| `cq-sm:order-none` (`.cq-sm:order-none.cq-sm:order-none`) | `order: 0` | — |
 | `cq-sm:content-main-start` (`.cq-sm:content-main-start.cq-sm:content-main-start`) | `justify-content: flex-start` | — |
 | `cq-sm:content-main-end` (`.cq-sm:content-main-end.cq-sm:content-main-end`) | `justify-content: flex-end` | — |
 | `cq-sm:content-main-center` (`.cq-sm:content-main-center.cq-sm:content-main-center`) | `justify-content: center` | — |
@@ -85,6 +90,11 @@ description: "Меняет отображение, направление, ко�
 | `cq-sm/sidebar:col-span-{значение}` (`.cq-sm/sidebar:col-span-{значение}.cq-sm/sidebar:col-span-{значение}`) | `grid-column: span {значение} / span {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-sm/sidebar:col-span-full` (`.cq-sm/sidebar:col-span-full.cq-sm/sidebar:col-span-full`) | `grid-column: 1 / -1` | — |
 | `cq-sm/sidebar:col-auto` (`.cq-sm/sidebar:col-auto.cq-sm/sidebar:col-auto`) | `grid-column: auto` | — |
+| `cq-sm/sidebar:col-start-{значение}` (`.cq-sm/sidebar:col-start-{значение}.cq-sm/sidebar:col-start-{значение}`) | `grid-column-start: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `auto` |
+| `cq-sm/sidebar:order-{значение}` (`.cq-sm/sidebar:order-{значение}.cq-sm/sidebar:order-{значение}`) | `order: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
+| `cq-sm/sidebar:order-first` (`.cq-sm/sidebar:order-first.cq-sm/sidebar:order-first`) | `order: -9999` | — |
+| `cq-sm/sidebar:order-last` (`.cq-sm/sidebar:order-last.cq-sm/sidebar:order-last`) | `order: 9999` | — |
+| `cq-sm/sidebar:order-none` (`.cq-sm/sidebar:order-none.cq-sm/sidebar:order-none`) | `order: 0` | — |
 | `cq-sm/sidebar:content-main-start` (`.cq-sm/sidebar:content-main-start.cq-sm/sidebar:content-main-start`) | `justify-content: flex-start` | — |
 | `cq-sm/sidebar:content-main-end` (`.cq-sm/sidebar:content-main-end.cq-sm/sidebar:content-main-end`) | `justify-content: flex-end` | — |
 | `cq-sm/sidebar:content-main-center` (`.cq-sm/sidebar:content-main-center.cq-sm/sidebar:content-main-center`) | `justify-content: center` | — |
@@ -113,6 +123,11 @@ description: "Меняет отображение, направление, ко�
 | `cq-md:col-span-{значение}` (`.cq-md:col-span-{значение}.cq-md:col-span-{значение}`) | `grid-column: span {значение} / span {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-md:col-span-full` (`.cq-md:col-span-full.cq-md:col-span-full`) | `grid-column: 1 / -1` | — |
 | `cq-md:col-auto` (`.cq-md:col-auto.cq-md:col-auto`) | `grid-column: auto` | — |
+| `cq-md:col-start-{значение}` (`.cq-md:col-start-{значение}.cq-md:col-start-{значение}`) | `grid-column-start: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `auto` |
+| `cq-md:order-{значение}` (`.cq-md:order-{значение}.cq-md:order-{значение}`) | `order: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
+| `cq-md:order-first` (`.cq-md:order-first.cq-md:order-first`) | `order: -9999` | — |
+| `cq-md:order-last` (`.cq-md:order-last.cq-md:order-last`) | `order: 9999` | — |
+| `cq-md:order-none` (`.cq-md:order-none.cq-md:order-none`) | `order: 0` | — |
 | `cq-md:content-main-start` (`.cq-md:content-main-start.cq-md:content-main-start`) | `justify-content: flex-start` | — |
 | `cq-md:content-main-end` (`.cq-md:content-main-end.cq-md:content-main-end`) | `justify-content: flex-end` | — |
 | `cq-md:content-main-center` (`.cq-md:content-main-center.cq-md:content-main-center`) | `justify-content: center` | — |
@@ -141,6 +156,11 @@ description: "Меняет отображение, направление, ко�
 | `cq-md/sidebar:col-span-{значение}` (`.cq-md/sidebar:col-span-{значение}.cq-md/sidebar:col-span-{значение}`) | `grid-column: span {значение} / span {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-md/sidebar:col-span-full` (`.cq-md/sidebar:col-span-full.cq-md/sidebar:col-span-full`) | `grid-column: 1 / -1` | — |
 | `cq-md/sidebar:col-auto` (`.cq-md/sidebar:col-auto.cq-md/sidebar:col-auto`) | `grid-column: auto` | — |
+| `cq-md/sidebar:col-start-{значение}` (`.cq-md/sidebar:col-start-{значение}.cq-md/sidebar:col-start-{значение}`) | `grid-column-start: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `auto` |
+| `cq-md/sidebar:order-{значение}` (`.cq-md/sidebar:order-{значение}.cq-md/sidebar:order-{значение}`) | `order: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
+| `cq-md/sidebar:order-first` (`.cq-md/sidebar:order-first.cq-md/sidebar:order-first`) | `order: -9999` | — |
+| `cq-md/sidebar:order-last` (`.cq-md/sidebar:order-last.cq-md/sidebar:order-last`) | `order: 9999` | — |
+| `cq-md/sidebar:order-none` (`.cq-md/sidebar:order-none.cq-md/sidebar:order-none`) | `order: 0` | — |
 | `cq-md/sidebar:content-main-start` (`.cq-md/sidebar:content-main-start.cq-md/sidebar:content-main-start`) | `justify-content: flex-start` | — |
 | `cq-md/sidebar:content-main-end` (`.cq-md/sidebar:content-main-end.cq-md/sidebar:content-main-end`) | `justify-content: flex-end` | — |
 | `cq-md/sidebar:content-main-center` (`.cq-md/sidebar:content-main-center.cq-md/sidebar:content-main-center`) | `justify-content: center` | — |
@@ -169,6 +189,11 @@ description: "Меняет отображение, направление, ко�
 | `cq-lg:col-span-{значение}` (`.cq-lg:col-span-{значение}.cq-lg:col-span-{значение}`) | `grid-column: span {значение} / span {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-lg:col-span-full` (`.cq-lg:col-span-full.cq-lg:col-span-full`) | `grid-column: 1 / -1` | — |
 | `cq-lg:col-auto` (`.cq-lg:col-auto.cq-lg:col-auto`) | `grid-column: auto` | — |
+| `cq-lg:col-start-{значение}` (`.cq-lg:col-start-{значение}.cq-lg:col-start-{значение}`) | `grid-column-start: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `auto` |
+| `cq-lg:order-{значение}` (`.cq-lg:order-{значение}.cq-lg:order-{значение}`) | `order: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
+| `cq-lg:order-first` (`.cq-lg:order-first.cq-lg:order-first`) | `order: -9999` | — |
+| `cq-lg:order-last` (`.cq-lg:order-last.cq-lg:order-last`) | `order: 9999` | — |
+| `cq-lg:order-none` (`.cq-lg:order-none.cq-lg:order-none`) | `order: 0` | — |
 | `cq-lg:content-main-start` (`.cq-lg:content-main-start.cq-lg:content-main-start`) | `justify-content: flex-start` | — |
 | `cq-lg:content-main-end` (`.cq-lg:content-main-end.cq-lg:content-main-end`) | `justify-content: flex-end` | — |
 | `cq-lg:content-main-center` (`.cq-lg:content-main-center.cq-lg:content-main-center`) | `justify-content: center` | — |
@@ -197,6 +222,11 @@ description: "Меняет отображение, направление, ко�
 | `cq-lg/sidebar:col-span-{значение}` (`.cq-lg/sidebar:col-span-{значение}.cq-lg/sidebar:col-span-{значение}`) | `grid-column: span {значение} / span {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-lg/sidebar:col-span-full` (`.cq-lg/sidebar:col-span-full.cq-lg/sidebar:col-span-full`) | `grid-column: 1 / -1` | — |
 | `cq-lg/sidebar:col-auto` (`.cq-lg/sidebar:col-auto.cq-lg/sidebar:col-auto`) | `grid-column: auto` | — |
+| `cq-lg/sidebar:col-start-{значение}` (`.cq-lg/sidebar:col-start-{значение}.cq-lg/sidebar:col-start-{значение}`) | `grid-column-start: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `auto` |
+| `cq-lg/sidebar:order-{значение}` (`.cq-lg/sidebar:order-{значение}.cq-lg/sidebar:order-{значение}`) | `order: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
+| `cq-lg/sidebar:order-first` (`.cq-lg/sidebar:order-first.cq-lg/sidebar:order-first`) | `order: -9999` | — |
+| `cq-lg/sidebar:order-last` (`.cq-lg/sidebar:order-last.cq-lg/sidebar:order-last`) | `order: 9999` | — |
+| `cq-lg/sidebar:order-none` (`.cq-lg/sidebar:order-none.cq-lg/sidebar:order-none`) | `order: 0` | — |
 | `cq-lg/sidebar:content-main-start` (`.cq-lg/sidebar:content-main-start.cq-lg/sidebar:content-main-start`) | `justify-content: flex-start` | — |
 | `cq-lg/sidebar:content-main-end` (`.cq-lg/sidebar:content-main-end.cq-lg/sidebar:content-main-end`) | `justify-content: flex-end` | — |
 | `cq-lg/sidebar:content-main-center` (`.cq-lg/sidebar:content-main-center.cq-lg/sidebar:content-main-center`) | `justify-content: center` | — |
@@ -225,6 +255,11 @@ description: "Меняет отображение, направление, ко�
 | `cq-xl:col-span-{значение}` (`.cq-xl:col-span-{значение}.cq-xl:col-span-{значение}`) | `grid-column: span {значение} / span {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-xl:col-span-full` (`.cq-xl:col-span-full.cq-xl:col-span-full`) | `grid-column: 1 / -1` | — |
 | `cq-xl:col-auto` (`.cq-xl:col-auto.cq-xl:col-auto`) | `grid-column: auto` | — |
+| `cq-xl:col-start-{значение}` (`.cq-xl:col-start-{значение}.cq-xl:col-start-{значение}`) | `grid-column-start: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `auto` |
+| `cq-xl:order-{значение}` (`.cq-xl:order-{значение}.cq-xl:order-{значение}`) | `order: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
+| `cq-xl:order-first` (`.cq-xl:order-first.cq-xl:order-first`) | `order: -9999` | — |
+| `cq-xl:order-last` (`.cq-xl:order-last.cq-xl:order-last`) | `order: 9999` | — |
+| `cq-xl:order-none` (`.cq-xl:order-none.cq-xl:order-none`) | `order: 0` | — |
 | `cq-xl:content-main-start` (`.cq-xl:content-main-start.cq-xl:content-main-start`) | `justify-content: flex-start` | — |
 | `cq-xl:content-main-end` (`.cq-xl:content-main-end.cq-xl:content-main-end`) | `justify-content: flex-end` | — |
 | `cq-xl:content-main-center` (`.cq-xl:content-main-center.cq-xl:content-main-center`) | `justify-content: center` | — |
@@ -253,6 +288,11 @@ description: "Меняет отображение, направление, ко�
 | `cq-xl/sidebar:col-span-{значение}` (`.cq-xl/sidebar:col-span-{значение}.cq-xl/sidebar:col-span-{значение}`) | `grid-column: span {значение} / span {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-xl/sidebar:col-span-full` (`.cq-xl/sidebar:col-span-full.cq-xl/sidebar:col-span-full`) | `grid-column: 1 / -1` | — |
 | `cq-xl/sidebar:col-auto` (`.cq-xl/sidebar:col-auto.cq-xl/sidebar:col-auto`) | `grid-column: auto` | — |
+| `cq-xl/sidebar:col-start-{значение}` (`.cq-xl/sidebar:col-start-{значение}.cq-xl/sidebar:col-start-{значение}`) | `grid-column-start: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `auto` |
+| `cq-xl/sidebar:order-{значение}` (`.cq-xl/sidebar:order-{значение}.cq-xl/sidebar:order-{значение}`) | `order: {значение}` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
+| `cq-xl/sidebar:order-first` (`.cq-xl/sidebar:order-first.cq-xl/sidebar:order-first`) | `order: -9999` | — |
+| `cq-xl/sidebar:order-last` (`.cq-xl/sidebar:order-last.cq-xl/sidebar:order-last`) | `order: 9999` | — |
+| `cq-xl/sidebar:order-none` (`.cq-xl/sidebar:order-none.cq-xl/sidebar:order-none`) | `order: 0` | — |
 | `cq-xl/sidebar:content-main-start` (`.cq-xl/sidebar:content-main-start.cq-xl/sidebar:content-main-start`) | `justify-content: flex-start` | — |
 | `cq-xl/sidebar:content-main-end` (`.cq-xl/sidebar:content-main-end.cq-xl/sidebar:content-main-end`) | `justify-content: flex-end` | — |
 | `cq-xl/sidebar:content-main-center` (`.cq-xl/sidebar:content-main-center.cq-xl/sidebar:content-main-center`) | `justify-content: center` | — |

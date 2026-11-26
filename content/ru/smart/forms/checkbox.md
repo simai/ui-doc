@@ -5,7 +5,7 @@ description: "Даёт отметить один или несколько не�
 
 # Флажок
 
-:badge[sf-checkbox]{variant=outline scheme=on-surface size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-checkbox]{variant=outline scheme=on-surface size=1/2} :badge[1.6.2]{variant=outline scheme=on-surface size=1/2}
 
 Флажок даёт независимый выбор: каждый вариант отмечают или снимают отдельно от
 остальных. Для одного варианта из нескольких берите
@@ -230,13 +230,13 @@ terms.setChecked(false);
 
 | | |
 |:---|:---|
-| Тег | `<sf-checkbox>`, контракт `smart.checkbox` версии `1.6.0` |
-| Поставка | выпуск Framework `ui-9ceecc24c988` |
+| Тег | `<sf-checkbox>`, контракт `smart.checkbox` версии `1.6.2` |
+| Поставка | выпуск Framework `ui-73df5d1b4d4c` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как флажок; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Пробел`. |
-| Источник | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/smart/checkbox` |
-| Правило классов | `simai/ui@9ceecc24c988209abc7d09e22522eeb7b73f485e:distr/rule/rule.json#name=cl-checkbox` |
+| Источник | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/smart/checkbox` |
+| Правило классов | `simai/ui@73df5d1b4d4c82d674dfa2c7fb4e41f49a6b47eb:distr/rule/rule.json#name=cl-checkbox` |
 
 ## См. также
 

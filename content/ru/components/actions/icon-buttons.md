@@ -6,7 +6,7 @@ profile: reference
 
 # Кнопки с иконкой
 
-:badge[sf-icon-button]{variant=outline scheme=on-surface size=1/2} :badge[1.20.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-icon-button]{variant=outline scheme=on-surface size=1/2} :badge[1.20.4]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка с иконкой запускает действие без видимой подписи: редактировать,
 удалить, открыть настройки. Берите её, когда иконка общепринята и места мало;
@@ -314,7 +314,8 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 | `--sf-icon-button--box-shadow` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button.sf-icon-button.sf-icon-button.sf-icon-button.sf-icon-button--toggle:is(.sf-icon-button--pressed, [aria-pressed=true]):not(:disabled):not([aria-disabled=true]):not(.disabled)`: `inset 0 0 0 var(--sf-px) var(--sf-primary)` | `box-shadow` |
 | `--sf-icon-button--focus-ink` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button--default.sf-icon-button--primary:where(:not(.sf-icon-button--close))`: `var(--sf-on-primary)` | `--sf-icon-button--focus-inset` |
 | `--sf-icon-button--focus-inset` | не задана; задают модификаторы, например `.sf-icon-button:not(:disabled):not(.disabled).focus-visible`: `inset 0 0 0 var(--sf-focus--offset) var(--sf-icon-button--focus-ink, transparent)` | `box-shadow` |
-| `--sf-icon-button--on-place-ink` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button--default:is(.sf-icon-button--on-surface, .sf-icon-button--on-surface-variant, .sf-icon-button--secondary).sf-icon-button--icon`: `color-mix(in srgb, var(--sf-on-primary), var(--sf-place--ink) 0%)` | `--sf-icon--color` |
+| `--sf-icon-button--join-ink` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button--default.sf-icon-button--primary`: `var(--sf-icon-button-color, var(--sf-on-primary))` | `border-inline-end-color` |
+| `--sf-icon-button--on-place-ink` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button--default:is(.sf-icon-button--on-surface, .sf-icon-button--on-surface-variant, .sf-icon-button--secondary).sf-icon-button--icon`: `color-mix(in srgb, var(--sf-on-primary), var(--sf-place--ink) 0%)` | `--sf-icon--color`, `--sf-icon-button--join-ink` |
 | `--sf-icon-button--padding-bottom` | не задана; задают модификаторы, например `.sf-icon-button--size-1`: `var(--sf-icon-button-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-bottom` |
 | `--sf-icon-button--padding-inline-end` | не задана; задают модификаторы, например `.sf-icon-button--size-1`: `var(--sf-icon-button-padding-inline, var(--sf-ui-1--space-y-tightness-default))` | `padding-inline-end` |
 | `--sf-icon-button--padding-inline-start` | не задана; задают модификаторы, например `.sf-icon-button--size-1`: `var(--sf-icon-button-padding-inline, var(--sf-ui-1--space-y-tightness-default))` | `padding-inline-start` |
