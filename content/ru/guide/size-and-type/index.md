@@ -33,6 +33,8 @@ description: "Эта часть описывает все величины SIMAI
   [Текст по умолчанию](/ru/guide/size-and-type/default-text/)
 - [Границы, скругления и высота](/ru/guide/size-and-type/borders-and-radii/)
 - [Фокус](/ru/guide/size-and-type/focus/)
+- [Сенсорные экраны](/ru/guide/size-and-type/touch-screens/) — раскладка и указатель,
+  жесты, пункты для телефона и цель нажатия 44 px
 - [Направление текста](/ru/guide/size-and-type/directions/)
 - [Язык интерфейса](/ru/guide/size-and-type/language/) и
   [Стандарт файла языка](/ru/guide/size-and-type/language-file/)

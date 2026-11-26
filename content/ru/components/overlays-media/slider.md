@@ -6,7 +6,7 @@ profile: reference
 
 # Слайдер контента
 
-:badge[sf-slider]{variant=outline scheme=on-surface size=1/2} :badge[1.4.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-slider]{variant=outline scheme=on-surface size=1/2} :badge[2.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Слайдер контента показывает изображения, карточки или другие равноправные
 слайды по одному и листает их стрелками и точками.
@@ -100,6 +100,27 @@ profile: reference
 
 :::example {id="components/slider/dots" label="Точки на плашке и под карточками"}
 :::
+
+### Положение внутри картинки
+
+`data-indicator="inside"` • [Слайдер контента](/ru/smart/content/slider/)
+
+У слайдера картинок и первого экрана атрибут `data-indicator="inside"` на
+блоке ставит точки (`sf-slider-dots--bare`) и кнопку паузы поверх нижней части
+картинки, на `--sf-slider-dots-offset-block` выше её края (по умолчанию
+`--sf-space-2`), без подложки и затемнения; точки и кнопка стоят на одной
+линии, счётчик «2 / 12» — в конечном углу. Без атрибута положение стоит под
+картинкой. Слайдер карточек (`sf-slider--content`) и слайдер с миниатюрами
+держат его под картинкой всегда.
+
+Цвет точек слайдер выбирает сам: при каждой смене слайда, загрузке картинки и
+изменении размера он измеряет полосу картинки под точками и берёт светлый цвет
+`--sf-on-surface-media` или тёмный `--sf-surface-media-active` — тот, что
+заметнее. Где картинку нельзя измерить (с другого сайта без CORS, видео,
+фоновое изображение) или полоса слишком пёстрая, точки светлые с кольцом
+1 px тёмного цвета. `data-indicator-ink="light"`, `"dark"` или `"outline"`
+задают цвет без измерения, а переменная `--sf-slider-indicator-ink` сильнее
+всех значений.
 
 ### Повтор
 
@@ -201,7 +222,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-slider` |
-| Части | `sf-slider-arrows`, `sf-slider-arrows--dark`, `sf-slider-arrows--light`, `sf-slider-arrows--plate`, `sf-slider-button-next`, `sf-slider-button-prev`, `sf-slider-controls`, `sf-slider-dots`, `sf-slider-dots--bare`, `sf-slider-dots--clear`, `sf-slider-dots--count`, `sf-slider-dots--dark`, `sf-slider-dots--framed`, `sf-slider-dots--light`, `sf-slider-dots--plate`, `sf-slider-dots--primary`, `sf-slider-dots--size-1`, `sf-slider-dots--size-2`, `sf-slider-dots-dot`, `sf-slider-main`, `sf-slider-pagination`, `sf-slider-rotation-place`, `sf-slider-slide`, `sf-slider-thumbnail`, `sf-slider-thumbnails` |
+| Части | `sf-slider-arrows`, `sf-slider-arrows--dark`, `sf-slider-arrows--light`, `sf-slider-arrows--plate`, `sf-slider-button-next`, `sf-slider-button-prev`, `sf-slider-controls`, `sf-slider-dots`, `sf-slider-dots--bare`, `sf-slider-dots--clear`, `sf-slider-dots--count`, `sf-slider-dots--dark`, `sf-slider-dots--framed`, `sf-slider-dots--light`, `sf-slider-dots--plate`, `sf-slider-dots--primary`, `sf-slider-dots--size-1`, `sf-slider-dots--size-2`, `sf-slider-dots--timed`, `sf-slider-dots-current`, `sf-slider-dots-dot`, `sf-slider-dots-total`, `sf-slider-main`, `sf-slider-pagination`, `sf-slider-rotation-place`, `sf-slider-slide`, `sf-slider-thumbnail`, `sf-slider-thumbnails` |
 | Модификаторы | `sf-slider--content` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -215,10 +236,11 @@ profile: reference
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
 | `--sf-slider-gap` | Расстояние между слайдами, кнопками управления и миниатюрами. | `var(--sf-space-1)` |
-| `--sf-slider-arrow-offset-inline` | Насколько стрелки отстоят от краёв. | `var(--sf-space-1)` |
-| `--sf-slider-dots-offset-block` | Насколько точки отстоят от нижнего края. | `var(--sf-space-1)` |
+| `--sf-slider-arrow-offset-inline` | Насколько стрелки над картинкой отступают от её краёв (--sf-space-2 начиная с component.slider 2.0.0). | `var(--sf-space-2)` |
+| `--sf-slider-dots-offset-block` | Насколько указатель позиции и кнопка паузы поднимаются над нижним краем картинки, когда стоят внутри неё (data-indicator="inside", component.slider 2.2.0). Под картинкой это расстояние — промежуток блока, --sf-slider-gap. | `var(--sf-space-2)` |
 | `--sf-slider-thumbnail-size` | Сторона миниатюры. | `var(--sf-d2)` |
 | `--sf-slider-thumbnail-radius` | Углы миниатюры. | `var(--sf-radius--ui)` |
+| `--sf-slider-indicator-ink` | Цвет указателя позиции внутри картинки (data-indicator="inside"), заданный вручную; если он не задан, слайдер измеряет картинку и берёт --sf-on-surface-media или --sf-surface-media-active (component.slider 2.1.0). | `var(--sf-on-surface-media)`; зависит от indicator-ink, the measured picture |
 
 ```css
 .sf-slider {
@@ -244,22 +266,28 @@ profile: reference
 | `--sf-slider-dots--border-start-end-radius` | не задана; задают модификаторы, например `.sf-slider-dots--framed`: `var(--sf-radius-3)` | `border-start-end-radius` |
 | `--sf-slider-dots--border-start-start-radius` | не задана; задают модификаторы, например `.sf-slider-dots--framed`: `var(--sf-radius-3)` | `border-start-start-radius` |
 | `--sf-slider-dots--box-shadow` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--clear.sf-slider-dots--framed.sf-slider-dots--dark`: `var(--sf-shadow-raised)` | `box-shadow` |
+| `--sf-slider-dots--fill-color` | не задана; задают модификаторы, например `.sf-slider[data-indicator=inside]:not(.sf-slider--content):not(:has(> .sf-slider-thumbnails)) .sf-slider-dots--timed.sf-slider-dots--bare`: `var(--sf-slider-indicator-ink, var(--sf-slider-indicator--ink))` | `background-color` |
 | `--sf-slider-dots--gap` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-space-1/3)` | `gap`, `width`, `outline` |
 | `--sf-slider-dots--padding-bottom` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-ui-1--space-y)` | `padding-bottom` |
 | `--sf-slider-dots--padding-inline-end` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-ui-1--space-y)` | `padding-inline-end` |
 | `--sf-slider-dots--padding-inline-start` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-ui-1--space-y)` | `padding-inline-start` |
 | `--sf-slider-dots--padding-top` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-ui-1--space-y)` | `padding-top` |
-| `--sf-slider-dots-dot--active-color` | не задана; задают модификаторы, например `.sf-slider-dots:is(.sf-slider-dots--plate, .sf-slider-dots--bare)`: `var(--sf-primary)` | `--sf-slider-dots-dot--background-color`, `color` |
+| `--sf-slider-dots-dot--active-color` | не задана; задают модификаторы, например `.sf-slider-dots:is(.sf-slider-dots--plate, .sf-slider-dots--bare)`: `var(--sf-primary)` | `--sf-slider-dots-dot--background-color`, `--sf-slider-dots--fill-color`, `color` |
 | `--sf-slider-dots-dot--active-width` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-c2)` | `width` |
 | `--sf-slider-dots-dot--background-color` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `transparent` | `background-color` |
 | `--sf-slider-dots-dot--border-end-end-radius` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `var(--sf-radius-circle)` | `border-end-end-radius` |
 | `--sf-slider-dots-dot--border-end-start-radius` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `var(--sf-radius-circle)` | `border-end-start-radius` |
 | `--sf-slider-dots-dot--border-start-end-radius` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `var(--sf-radius-circle)` | `border-start-end-radius` |
 | `--sf-slider-dots-dot--border-start-start-radius` | не задана; задают модификаторы, например `.sf-slider-dots .sf-slider-dots-dot`: `var(--sf-radius-circle)` | `border-start-start-radius` |
-| `--sf-slider-dots-dot--color` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-on-surface)` | `--sf-slider-dots-dot--background-color`, `color` |
-| `--sf-slider-dots-dot--height` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-a8)` | `padding-top`, `padding-bottom`, `height` |
-| `--sf-slider-dots-dot--target-size` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-ui-1/3--control-height)` | `padding-inline-start`, `padding-top`, `padding-inline-end`, `padding-bottom`, `height`, `min-height`, `min-block-size` |
+| `--sf-slider-dots-dot--color` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-on-surface)` | `--sf-slider-dots-dot--background-color`, `--sf-slider-dots--fill-color`, `--sf-slider-dots-dot--active-color`, `color` |
+| `--sf-slider-dots-dot--height` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-a8)` | `padding-top`, `padding-bottom`, `height`, `inline-size` |
+| `--sf-slider-dots-dot--target-size` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-ui-1/3--control-height)` | `padding-inline-start`, `padding-top`, `padding-inline-end`, `padding-bottom`, `height`, `margin-bottom`, `margin-block-end`, `min-height`, `min-block-size` |
 | `--sf-slider-dots-dot--width` | не задана; задают модификаторы, например `.sf-slider-dots`: `var(--sf-a8)` | `padding-inline-start`, `padding-inline-end`, `width` |
+| `--sf-slider-indicator--dot-opacity` | не задана; задают модификаторы, например `.sf-slider[data-indicator=inside]:not(.sf-slider--content):not(:has(> .sf-slider-thumbnails))`: `var(--sf-opacity-80)` | `opacity` |
+| `--sf-slider-indicator--ink` | не задана; задают модификаторы, например `.sf-slider[data-indicator=inside]:not(.sf-slider--content):not(:has(> .sf-slider-thumbnails))`: `var(--sf-slider-indicator--ink-light)` | `--sf-slider-dots-dot--color`, `--sf-slider-dots-dot--active-color`, `--sf-slider-dots--fill-color`, `--sf-slider-indicator--ring`, `--sf-slider-indicator--ink` |
+| `--sf-slider-indicator--ink-dark` | не задана; задают модификаторы, например `.sf-slider[data-indicator=inside]:not(.sf-slider--content):not(:has(> .sf-slider-thumbnails))`: `var(--sf-surface-media-active)` | `--sf-slider-indicator--ring`, `--sf-slider-indicator--ink` |
+| `--sf-slider-indicator--ink-light` | не задана; задают модификаторы, например `.sf-slider[data-indicator=inside]:not(.sf-slider--content):not(:has(> .sf-slider-thumbnails))`: `var(--sf-on-surface-media)` | `--sf-slider-indicator--ink` |
+| `--sf-slider-indicator--ring` | не задана; задают модификаторы, например `.sf-slider[data-indicator=inside]:not(.sf-slider--content):not(:has(> .sf-slider-thumbnails))`: `var(--sf-slider-indicator--ink-dark)` | `box-shadow`, `text-shadow` |
 | `--sf-slider-thumbnails--space-between` | `var(--sf-space-1/2)` | — |
 
 ## См. также
